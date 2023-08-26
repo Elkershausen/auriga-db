@@ -1,7 +1,5 @@
 //item_db.txtへオーバーライド
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript}
-//--1000--
-1681,Unknown_Item,新芽の猫じゃらし,5,,,0,30,,1,0,33040,2,2,1,1,100,0,{},{ bonus bUnbreakableWeapon,0; }
 //-- 4000 --
 4276,card,ロードオブデスカード,6,,10,10,,,,,,,2,,,,,{/*異境の統轄者セット*/},{ if(equippeditem(311439) == 0) { bonus2 bWeaponComaRace2,Rct_NonBoss,1; bonus2 bAddEff,Eff_Stun,1000; bonus2 bAddEff,Eff_Curse,1000; bonus2 bAddEff,Eff_Silence,1000; bonus2 bAddEff,Eff_Poison,1000; bonus2 bAddEff,Eff_Bleed,1000; end; } bonus2 bWeaponComaRace2,Rct_NonBoss,1; bonus2 bAddEff,Eff_Stun,10000; bonus2 bAddEff,Eff_Curse,10000; bonus2 bAddEff,Eff_Silence,10000; bonus2 bAddEff,Eff_Poison,10000; bonus2 bAddEff,Eff_Bleed,10000; bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; },{}
 4323,Hatii_Bebe_Card,ハティーベベカード,6,20,,10,,,,,,,2,,,,,{},{ if((equippeditem(4324)==0) || (equippeditem(300400)==0)) { bonus3 bAutoSpell,15,3,500; end; } bonus3 bAutoSpell,15,3,3000; }
