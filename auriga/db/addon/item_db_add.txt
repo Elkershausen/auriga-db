@@ -718,48 +718,53 @@
 300108,card,下水ヴェネヌムカード,6,,10,10,,,,,,,136,,,,,{},{ skill "HW_NAPALMVULCAN",3; },{}
 300109,card,下水クランプカード,6,,10,10,,,,,,,4,,,,,{},{ bonus bMatk,3*(readparam(bInt)/10); bonus bFlee,3*readparam(bInt); if(readparam(bInt) >= 125){ bonus bMatk,50; bonus bFlee,25; } bonus bMatk,3*(readparam(bAgi)/10); bonus bMaxHPRate,readparam(bAgi); if(readparam(bAgi) >= 125){ bonus bMatk,50; bonus bMaxHPRate,5; }},{}
 300110,card,下水ウォーターフォールカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; skill "SA_FROSTWEAPON",1; },{}
-300111,card,エリートベラレカード,6,,10,10,,,,,,,64,,,,,{},{vbonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"GS_FULLBUSTER",readparam(11); if(Job == Job_Rebellion){ bonus2 bAddSkillDamageRate,"GS_FULLBUSTER",readparam(11); } if(getequiprefinerycnt(6) >= 9){ bonus2 bAddSkillDamageRate,"GS_FULLBUSTER",getequiprefinerycnt(6); }},{}
-300112,card,魔力中毒ドロールカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300113,card,解放された魔力カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300114,card,魔力中毒プラガカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300115,card,魔力中毒サナレカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300116,card,強力な魔力カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300117,card,鋭い魔力カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300118,card,熱湯フェンカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300119,card,熱湯ソードフィッシュカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300120,card,熱湯ピラニアカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300121,card,熱湯マルクカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300122,card,イエローピタヤカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300123,card,パープルピタヤカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300124,card,ブルーピタヤカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300125,card,グリーンピタヤカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300131,card,正義のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300132,card,星のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300133,card,節制のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300134,card,戦車のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300135,card,死神のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300136,card,恋人のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300137,card,王女メアカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300138,card,半龍王女メアカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300139,card,封印された月夜花カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300140,card,深海のスロフォカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300141,card,深海のオボンヌカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300142,card,深海のデビアスカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300143,card,深海のマルスカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300144,card,深海の半漁人カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300145,card,深海の魔女カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300146,card,深海のセドラカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300147,card,深海のソードフィッシュカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300148,card,深海のストラウフカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300149,card,深海のフェンカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300150,card,深海のキングドラモカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300151,card,深海のクラーケンカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300163,card,皇帝のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300164,card,力のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300165,card,悪魔のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300166,card,月のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300167,card,運命の輪のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300168,card,世界のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+300111,card,エリートベラレカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"GS_FULLBUSTER",readparam(11); if(Job == Job_Rebellion){ bonus2 bAddSkillDamageRate,"GS_FULLBUSTER",readparam(11); } if(getequiprefinerycnt(6) >= 9){ bonus2 bAddSkillDamageRate,"GS_FULLBUSTER",getequiprefinerycnt(6); }},{}
+300112,card,魔力中毒ドロールカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bResEff,Eff_Freeze,500; },{}
+300113,card,解放された魔力カード,6,,10,10,,,,,,,136,,,,,{},{ bonus3 bAddMonsterDropItem,990,Rct_Boss,100; bonus3 bAddMonsterDropItem,990,Rct_NonBoss,100; bonus3 bAddMonsterDropItem,991,Rct_Boss,100; bonus3 bAddMonsterDropItem,991,Rct_NonBoss,100; bonus3 bAddMonsterDropItem,992,Rct_Boss,100; bonus3 bAddMonsterDropItem,992,Rct_NonBoss,100; bonus3 bAddMonsterDropItem,993,Rct_Boss,100; bonus3 bAddMonsterDropItem,993,Rct_NonBoss,100;},{}
+300114,card,魔力中毒プラガカード,6,,10,10,,,,,,,2,,,,,{},{bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(((getequipid(4) >= 1800) && (getequipid(4) <= 1899)) || ((getequipid(4) >= 560000) && (getequipid(4) <= 560099))){ bonus bHit,15; bonus bAspd,3; if(getequiprefinerycnt(4) >=10){ bonus bBaseAtk,100; }}},{}
+//武器種を返す関数があればいいけど武器ID範囲を指定しても動作する
+300115,card,魔力中毒サナレカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Angel,15; bonus2 bAddRace,Ele_Neutral,15; },{}
+300116,card,強力な魔力カード,6,,10,10,,,,,,,2,,,,,{/*第2魔力発電所 if(readmap(ba_pw03_j)){ bonus2 bAddRace,Rct_Boss,30; bonus2 bAddRace,Rct_NonBoss,30; bonus2 bMagicAddRace,Rct_Boss,30; bonus2 bMagicAddRace,Rct_NonBoss,30; }*/},{},{}
+//指定マップで効果発生(追加ダメージ等) if(readmap(ba_pw03_j)){} のようなマップ指定関数
+300117,card,鋭い魔力カード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bResEff,Eff_Blind,2000; bonus2 bResEff,Eff_Stone,2000; },{}
+300118,card,熱湯フェンカード,6,,10,10,,,,,,,2,,,,,{/*大浴場メディタティオ if(readmap(ba_bath)){ bonus2 bAddRace,Rct_Boss,30; bonus2 bAddRace,Rct_NonBoss,30; onus2 bMagicAddRace,Rct_Boss,30; bonus2 bMagicAddRace,Rct_NonBoss,30; }*/},{},{}
+//指定マップで効果発生(追加ダメージ等) if(readmap(ba_bath)){} のようなマップ指定関数
+300119,card,熱湯ソードフィッシュカード,6,,10,10,,,,,,,32,,,,,{},{ bonus2 bAddSize,Size_Big,10; bonus2 bMagicAddSize,Size_Big,10; if(getequiprefinerycnt(3) >= 7){ bonus2 bSubSize,Size_Big,30; bonus2 bMagicSubSize,Size_Big,30; }},{}
+300120,card,熱湯ピラニアカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bMagicAddRace,Rct_Fish,getequiprefinerycnt(2); if(getequiprefinerycnt(2) >= 9){ bonus2 bAddRace,Rct_Fish,10; bonus2 bMagicAddRace,Rct_Fish,10; }},{}
+300121,card,熱湯マルクカード,6,,10,10,,,,,,,769,,,,,{/*4次職ステータス*/},{ /*if(readparam(Sta) >= 50){ bonus2 bResEff,Eff_Freeze,2500; } if(readparam(Wis) >= 50){ bonus2 bResEff,Eff_Freeze,2500; }*/ },{}
+300122,card,イエローピタヤカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Insect,15; bonus2 bAddEle,Ele_Holy,15; },{}
+300123,card,パープルピタヤカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(((getequipid(4) >= 13300) && (getequipid(4) <= 13349)) || ((getequipid(4) >= 650000) && (getequipid(4) <= 650099))){ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; if(getequiprefinerycnt(4) >=10){ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; }}},{}
+//武器種を返す関数があればいいけど武器ID範囲を指定しても動作する
+300124,card,ブルーピタヤカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bIgnoreMDefRace,Rct_Boss,25; bonus2 bIgnoreMDefRace,Rct_NonBoss,25; },{}
+300125,card,グリーンピタヤカード,6,,10,10,,,,,,,2,,,,,{},{ bonus bBaseAtk,5; bonus2 bAddEff,Eff_Stone,100; },{}
+//300131,card,正義のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+//300132,card,星のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+//300133,card,節制のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+//300134,card,戦車のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+//300135,card,死神のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+//300136,card,恋人のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+300137,card,王女メアカード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bAddEleMagicDamageRate,Ele_Fire,50; bonus2 bAddEleMagicDamageRate,Ele_Water,50; bonus2 bAddEleMagicDamageRate,Ele_Wind,50; bonus2 bAddEleMagicDamageRate,Ele_Earth,50; },{}
+300138,card,半龍王女メアカード,6,,10,10,,,,,,,769,,,,,{},{/* //固定詠唱 -1秒　未実装 */},{}
+300139,card,封印された月夜花カード,6,,10,10,,,,,,,64,,,,,{/*起源の王セット整理必要*/},{ bonus bSpeedRate,25; bonus bHit,-50; if(equippeditem(22132)){ skill "AL_HEAL",5; if(readparam(11)<= 99){ bonus bMatk,3*getequiprefinerycnt(); bonus bMdef,3*getequiprefinerycnt(); } if(readparam(11)>= 100){ bonus bMatk,10*getequiprefinerycnt(); bonus bMdef,6*getequiprefinerycnt(); }}if(equippeditem(470047)){ skill "AL_HEAL",10; if(readparam(11)<= 99){ bonus bMatk,5*getequiprefinerycnt(); bonus bMdef,5*getequiprefinerycnt(); } if(readparam(11)>= 100){ bonus bMatk,15*getequiprefinerycnt(); bonus bMdef,10*getequiprefinerycnt(); }}},{}
+300140,card,深海のスロフォカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Fish,15; bonus2 bMagicAddEle,Ele_Water,15; },{}
+300141,card,深海のオボンヌカード,6,,10,10,,,,,,,136,,,,,{},{ skill "PR_STRECOVERY",1; },{}
+300142,card,深海のデビアスカード,6,,10,10,,,,,,,2,,,,,{/*厄災の魔将セット整理必要*/},{ bonus2 bAddRace,Rct_Boss,2*((readparam(bStr) + readparam(bVit) + readparam(bDex))/25); bonus2 bAddRace,Rct_NonBoss,2*((readparam(bStr) + readparam(bVit) + readparam(bDex))/25); bonus2 bMagicAddRace,Rct_Boss,2*((readparam(bAgi) + readparam(bInt) + readparam(bLuk))/25); bonus2 bMagicAddRace,Rct_NonBoss,2*((readparam(bAgi) + readparam(bInt) + readparam(bLuk))/25); },{}
+300143,card,深海のマルスカード,6,,10,10,,,,,,,769,,,,,{},{ bonus bBaseAtk,10; bonus2 bAddEle,Ele_Water,5; if(getequiprefinerycnt(1) >= 9){ bonus2 bAddEle,Ele_Water,5; }},{}
+300144,card,深海の半漁人カード,6,,10,10,,,,,,,2,,,,,{/*紫色の深海洞窟 上層 紫色の深海洞窟 下層  if(readmap(iz_d04_i) || readmap(iz_d05_i)){ bonus2 bAddRace,Rct_Boss,30; bonus2 bAddRace,Rct_NonBoss,30; onus2 bMagicAddRace,Rct_Boss,30; bonus2 bMagicAddRace,Rct_NonBoss,30; }*/},{},{}
+//指定マップで効果発生(追加ダメージ等) if(readmap(readmap(iz_d04_i) || readmap(iz_d05_i)){} のようなマップ指定関数
+300145,card,深海の魔女カード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Water,100; bonus2 bSubEle,Ele_Water,50; bonus2 bResEff,Eff_Cold,10000; },{}
+300146,card,深海のセドラカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(((getequipid(4) >= 1900) && (getequipid(4) <= 1999)) || ((getequipid(4) >= 32100) && (getequipid(4) <= 32199)) || ((getequipid(4) >= 570000) && (getequipid(4) <= 570099)) || ((getequipid(4) >= 580000) && (getequipid(4) <= 580099))){ bonus bHit,15; bonus bAspd,3; if(getequiprefinerycnt(4) >=10){ bonus bBaseAtk,100; }}},{}
+300147,card,深海のソードフィッシュカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bIgnoreMdefRace,Rct_Boss,25; bonus2 bIgnoreMdefRace,Rct_NonBoss,25; },{}
+300148,card,深海のストラウフカード,6,,10,10,,,,,,,32,,,,,{/*300149*/},{ bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; bonus2 bSubRace,Rct_Fish,20; bonus2 bMagicSubRace,Rct_Fish,20; if(equippeditem(300149)){ bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; bonus2 bSubRace,Rct_Fish,10; bonus2 bMagicSubRace,Rct_Fish,10; }},{}
+300149,card,深海のフェンカード,6,,10,10,,,,,,,136,,,,,{/*300148*/},{ bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; },{}
+300150,card,深海のキングドラモカード,6,,10,10,,,,,,,769,,,,,{},{ bonus2 bSubEle,Ele_Water,10; if(getequiprefinerycnt(1) >= 8){ bonus bDef,50; bonus bMdef,10; }},{}
+300151,card,深海のクラーケンカード,6,,10,10,,,,,,,16,,,,,{/*厄災の魔将セット整理必要*/},{ bonus2 bAddRace,Rct_Plant,50; bonus2 bMagicAddRace,Rct_Fish,50; bonus2 bAddRace,Rct_Plant,50; bonus2 bMagicAddRace,Rct_Fish,50; bonus2 bAddEle,Ele_Water,50; bonus2 bMagicAddEle,Ele_Ghost,50; bonus2 bAddEle,Ele_Water,50; bonus2 bMagicAddEle,Ele_Ghost,50; },{}
+//300163,card,皇帝のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+//300164,card,力のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+//300165,card,悪魔のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+//300166,card,月のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+//300167,card,運命の輪のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
+//300168,card,世界のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
 300170,card,腐った木カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300171,card,グレイヴワームカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300172,card,ブレインサッカーカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
