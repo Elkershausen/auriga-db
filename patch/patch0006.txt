@@ -1,0 +1,63 @@
+fix
+//300142,card,深海のデビアスカード,6,,10,10,,,,,,,2,,,,,{/*厄災の魔将セット整理必要*/},{ bonus2 bAddRace,Rct_Boss,2*((readparam(bStr) + readparam(bVit) + readparam(bDex))/25); bonus2 bAddRace,Rct_NonBoss,2*((readparam(bStr) + readparam(bVit) + readparam(bDex))/25); bonus2 bMagicAddRace,Rct_Boss,2*((readparam(bAgi) + readparam(bInt) + readparam(bLuk))/25); bonus2 bMagicAddRace,Rct_NonBoss,2*((readparam(bAgi) + readparam(bInt) + readparam(bLuk))/25); },{}
+//300151,card,深海のクラーケンカード,6,,10,10,,,,,,,16,,,,,{/*厄災の魔将セット整理必要*/},{ bonus2 bAddRace,Rct_Plant,50; bonus2 bMagicAddRace,Rct_Fish,50; bonus2 bAddRace,Rct_Plant,50; bonus2 bMagicAddRace,Rct_Fish,50; bonus2 bAddEle,Ele_Water,50; bonus2 bMagicAddEle,Ele_Ghost,50; bonus2 bAddEle,Ele_Water,50; bonus2 bMagicAddEle,Ele_Ghost,50; },{}
+//300163,card,皇帝のカード(逆位置),6,,,,,,,,,,65535,,,,,{},{},{}
+//300164,card,力のカード(逆位置),6,,,,,,,,,,65535,,,,,{},{},{}
+//300165,card,悪魔のカード(逆位置),6,,,,,,,,,,65535,,,,,{},{},{}
+//300166,card,月のカード(逆位置),6,,,,,,,,,,65535,,,,,{},{},{}
+//300167,card,運命の輪のカード(逆位置),6,,,,,,,,,,65535,,,,,{},{},{}
+//300168,card,世界のカード(逆位置),6,,,,,,,,,,65535,,,,,{},{},{}
+//300238,card,真面目なビタタカード,6,,,,,,,,,,65535,,,,,{},{},{}
+//300239,card,無口なマヤーカード,6,,,,,,,,,,65535,,,,,{},{},{}
+//300282,card,隠者のカード(逆位置),6,,,,,,,,,,65535,,,,,{},{},{}
+//300284,card,法王のカード(逆位置),6,,,,,,,,,,65535,,,,,{},{},{}
+//310012,ench,死の欲動,6,,,,,,,,,,65535,,,,,{},{},{}
+//310075,ench,グリード詠唱 - 100%,6,,,,,,,,,,65535,,,,,{},{},{}
+//310192,ench,<Extreme>,6,,,,,,,,,,65535,,,,,{},{},{}
+//310193,ench,ノックバック無効,6,,,,,,,,,,65535,,,,,{},{},{}
+//310194,ench,Def + 50,6,,,,,,,,,,65535,,,,,{},{},{}
+//310195,ench,マグニフィカートLv5,6,,,,,,,,,,65535,,,,,{},{},{}
+//310196,ench,遠距離物理耐性 + 10%,6,,,,,,,,,,65535,,,,,{},{},{}
+//310269,ench,石化耐性,6,,,,,,,,,,65535,,,,,{},{},{}
+//310270,ench,T-PowerBoost,6,,,,,,,,,,65535,,,,,{},{},{}
+//310271,ench,T-MagicBoost,6,,,,,,,,,,65535,,,,,{},{},{}
+//310272,ench,T-Assault,6,,,,,,,,,,65535,,,,,{},{},{}
+//310273,ench,T-Electricity,6,,,,,,,,,,65535,,,,,{},{},{}
+//310310,ench,潜在解放(ルーンナイト),6,,,,,,,,,,65535,,,,,{},{},{}
+//310311,ench,潜在解放(ロイヤルガード),6,,,,,,,,,,65535,,,,,{},{},{}
+//310312,ench,潜在解放(ソーサラー),6,,,,,,,,,,65535,,,,,{},{},{}
+//310313,ench,潜在解放(アークビショップ),6,,,,,,,,,,65535,,,,,{},{},{}
+//310314,ench,潜在解放(修羅),6,,,,,,,,,,65535,,,,,{},{},{}
+//310315,ench,潜在解放(シャドウチェイサー),6,,,,,,,,,,65535,,,,,{},{},{}
+//310316,ench,潜在解放(メカニック),6,,,,,,,,,,65535,,,,,{},{},{}
+//310317,ench,潜在解放(ジェネティック),6,,,,,,,,,,65535,,,,,{},{},{}
+//310318,ench,必中攻撃 + 25%,6,,,,,,,,,,65535,,,,,{},{},{}
+//310319,ench,Hit + 100,6,,,,,,,,,,65535,,,,,{},{},{}
+//310320,ench,念属性付与(鎧),6,,,,,,,,,,65535,,,,,{},{},{}
+//310321,ench,シンソウの王,6,,,,,,,,,,65535,,,,,{},{},{}
+//310331,ench,潜在解放(ウォーロック),6,,,,,,,,,,65535,,,,,{},{},{}
+//310332,ench,潜在解放(ギロチンクロス),6,,,,,,,,,,65535,,,,,{},{},{}
+//310333,ench,潜在解放(ミンストレル),6,,,,,,,,,,65535,,,,,{},{},{}
+//310334,ench,潜在解放(レンジャー),6,,,,,,,,,,65535,,,,,{},{},{}
+//310335,ench,潜在解放(ワンダラー),6,,,,,,,,,,65535,,,,,{},{},{}
+//311074,ench,英雄の凱歌,6,,,,,,,,,,65535,,,,,{},{},{}
+//311075,ench,厄災の魔将,6,,,,,,,,,,65535,,,,,{},{},{}
+
+add
+300335,card,封印された女王スカラバカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddGroup,11,10; if(equippeditem(19023)){ bonus2 bAddGroup,11,10; } if(equippeditem(311075)){ bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; }},{}
+300337,card,封印された女帝スカラバカード,6,,10,10,,,,,,,769,,,,,{},{ bonus bInt,1; bonus2 bSubRace,Rct_Insect,3; bonus2 bMagicSubRace,Rct_Insect,3; bonus2 bSubRace,Rct_Insect,2*getequiprefinerycnt(1); bonus2 bMagicSubRace,Rct_Insect,2*getequiprefinerycnt(1); if(equippeditem(311075) || equippeditem(19023)){ bonus2 bResEff, Eff_Confusion,10000; }},{}
+300343,card,封印されたタイムホルダーカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bUseSPRate,10; if(equippeditem(311075)){ bonus bMatk,readparam(11)/2; }},{}
+300344,card,封印されたボミカード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Water,15; bonus2 bSubEle,Ele_Water,25; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; }},{}
+300345,card,封印された怒りの月夜花カード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bMaxSPRate,-50; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Brute,20; bonus2 bMagicAddRace,Rct_Demon,20; }},{}
+300346,card,封印された怒りのドラキュラカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bResEff,Eff_Curse,3000; bonus2 bResEff,Eff_Fear,3000; if(equippeditem(28510)){ bonus bAspdAddRate,5; } if(equippeditem(311075)){ bonus bAspd,1; }},{}
+300348,card,封印されたアメンホテプカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bMagicAddRace,Rct_Demon,5; bonus2 bMagicAddRace,Rct_Undead,5; bonus2 bMagicAddEle,Ele_Dark,5; bonus2 bMagicAddEle,Ele_Undead,5; if(equippeditem(450162)){ bonus2 bAddEleMagicDamageRate,Ele_Holy,5; bonus2 bResEff,Eff_Freeze,10000; skill "AB_JUDEX",1; }if(equippeditem(450181)){ bonus2 bAddEleMagicDamageRate,Ele_Holy,15; bonus2 bResEff,Eff_Freeze,10000; skill "AB_JUDEX",getequiprefinerycnt(2); } if(equippeditem(311075)){ bonus bMaxHPRate,25; bonus2 bMagicAddRace,Rct_Demon,10; bonus2 bMagicAddRace,Rct_Undead,10; bonus2 bMagicAddEle,Ele_Dark,10; bonus2 bMagicAddEle,Ele_Undead,10; }},{}
+300349,card,封印された古のタオグンカカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bMaxHPRate,5+(2*getequiprefinerycnt(2)); if(equippeditem(311075)){ bonus bMaxHPRate,25; }},{}
+300350,card,封印された輝くベアドールカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bMaxHPRate,-50; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Boss,20; bonus2 bMagicAddRace,Rct_NonBoss,20; }},{}
+300351,card,封印された古のウータンガードカード,6,,10,10,,,,,,,64,,,,,{},{ bonus bMaxHPRate,5; bonus bMaxSPRate,5; bonus2 bAddSkillDamageRate,"ASC_BREAKER",15; bonus2 bAddSkillDamageRate,"ASC_METEORASSAULT",15; if(equippeditem(311075)){ bonus bMaxHPRate,5; bonus bMaxSPRate,5; bonus bSkillDelayRate,getskilllv("ASC_BREAKER")/3; bonus bSkillDelayRate,getskilllv("ASC_METEORASSAULT")/3; }},{}
+300352,card,封印された覚醒クトルラナックスカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bMagicAddRace,Rct_Formless,5; bonus2 bMagicAddRace,Rct_Demon,5; bonus2 bMagicAddEle,Ele_Fire,5; bonus2 bMagicAddEle,Ele_Neutral,5; if(equippeditem(311075)){ bonus bMaxHPRate,25; bonus2 bMagicAddRace,Rct_Formless,10; bonus2 bMagicAddRace,Rct_Demon,10; bonus2 bMagicAddEle,Ele_Fire,10; bonus2 bMagicAddEle,Ele_Neutral,10; }},{}
+300353,card,封印された混沌のバフォメットカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bMaxHPRate,-50; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Undead,20; bonus2 bMagicAddRace,Rct_Insect,20; }},{}
+300354,card,封印された深海のクラーケンカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddRace,Rct_Plan,5; bonus2 bMagicAddRace,Rct_Plan,5; bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; bonus2 bAddEle,Ele_Water,5; bonus2 bMagicAddEle,Ele_Water,5; bonus2 bAddEle,Ele_Ghost,5; bonus2 bMagicAddEle,Ele_Ghost,5; if(equippeditem(311075)){ bonus bMaxHPRate,25; bonus2 bAddRace,Rct_Plan,10; bonus2 bMagicAddRace,Rct_Plan,10; bonus2 bAddRace,Rct_Fish,10; bonus2 bMagicAddRace,Rct_Fish,10; bonus2 bAddEle,Ele_Water,10; bonus2 bMagicAddEle,Ele_Water,10; bonus2 bAddEle,Ele_Ghost,10; bonus2 bMagicAddEle,Ele_Ghost,10; }},{}
+300355,card,封印された不吉なタートルGカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bMaxSPRate,-50; if(equippeditem(311075)){ bonus2 bAddRace,Rct_Formless,20; bonus2 bAddRace,Rct_Brute,20; }},{}
+
+410247,head,ライトニングサベージ,4,,10,100,0:0,0:0,,1,2074075135,2,512,,100,2403,0,{},{ bonus bBaseAtk,readparam(11); bonus bMatk,readparam(11); if(equippeditem(311075)){ bonus2 bAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; }},{}
+480188,robe,ヴァルキリーカースブライト,4,,10,400,0:0,38:0,,1,2074075135,2,4,,100,131,1,{},{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus bMaxHPRate,2*getequiprefinerycnt(5); bonus bMaxSPRate,2*getequiprefinerycnt(5); bonus2 bSubEle,Ele_Ghost,7*getequiprefinerycnt(5); if(getequiprefinerycnt(5) >= 7){ bonus bAllStatus,10; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; } if(getequiprefinerycnt(5) >= 9){ bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus bDefRatioAtkRace,Rct_Boss; bonus bDefRatioAtkRace,Rct_NonBoss; } if(equippeditem(311074)){ bonus bAspdAddRate,20; } if(equippeditem(311075)){ bonus bSkillDelayRate,-25; }},{}
