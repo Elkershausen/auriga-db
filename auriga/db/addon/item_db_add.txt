@@ -737,55 +737,40 @@
 //武器種を返す関数があればいいけど武器ID範囲を指定しても動作する
 300124,card,ブルーピタヤカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bIgnoreMDefRace,Rct_Boss,25; bonus2 bIgnoreMDefRace,Rct_NonBoss,25; },{}
 300125,card,グリーンピタヤカード,6,,10,10,,,,,,,2,,,,,{},{ bonus bBaseAtk,5; bonus2 bAddEff,Eff_Stone,100; },{}
-//300131,card,正義のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-//300132,card,星のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-//300133,card,節制のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-//300134,card,戦車のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-//300135,card,死神のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-//300136,card,恋人のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
 300137,card,王女メアカード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bAddEleMagicDamageRate,Ele_Fire,50; bonus2 bAddEleMagicDamageRate,Ele_Water,50; bonus2 bAddEleMagicDamageRate,Ele_Wind,50; bonus2 bAddEleMagicDamageRate,Ele_Earth,50; },{}
 300138,card,半龍王女メアカード,6,,10,10,,,,,,,769,,,,,{},{/* //固定詠唱 -1秒　未実装 */},{}
 300139,card,封印された月夜花カード,6,,10,10,,,,,,,64,,,,,{/*起源の王セット整理必要*/},{ bonus bSpeedRate,25; bonus bHit,-50; if(equippeditem(22132)){ skill "AL_HEAL",5; if(readparam(11)<= 99){ bonus bMatk,3*getequiprefinerycnt(); bonus bMdef,3*getequiprefinerycnt(); } if(readparam(11)>= 100){ bonus bMatk,10*getequiprefinerycnt(); bonus bMdef,6*getequiprefinerycnt(); }}if(equippeditem(470047)){ skill "AL_HEAL",10; if(readparam(11)<= 99){ bonus bMatk,5*getequiprefinerycnt(); bonus bMdef,5*getequiprefinerycnt(); } if(readparam(11)>= 100){ bonus bMatk,15*getequiprefinerycnt(); bonus bMdef,10*getequiprefinerycnt(); }}},{}
 300140,card,深海のスロフォカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Fish,15; bonus2 bMagicAddEle,Ele_Water,15; },{}
 300141,card,深海のオボンヌカード,6,,10,10,,,,,,,136,,,,,{},{ skill "PR_STRECOVERY",1; },{}
-300142,card,深海のデビアスカード,6,,10,10,,,,,,,2,,,,,{/*厄災の魔将セット整理必要*/},{ bonus2 bAddRace,Rct_Boss,2*((readparam(bStr) + readparam(bVit) + readparam(bDex))/25); bonus2 bAddRace,Rct_NonBoss,2*((readparam(bStr) + readparam(bVit) + readparam(bDex))/25); bonus2 bMagicAddRace,Rct_Boss,2*((readparam(bAgi) + readparam(bInt) + readparam(bLuk))/25); bonus2 bMagicAddRace,Rct_NonBoss,2*((readparam(bAgi) + readparam(bInt) + readparam(bLuk))/25); },{}
 300143,card,深海のマルスカード,6,,10,10,,,,,,,769,,,,,{},{ bonus bBaseAtk,10; bonus2 bAddEle,Ele_Water,5; if(getequiprefinerycnt(1) >= 9){ bonus2 bAddEle,Ele_Water,5; }},{}
 300144,card,深海の半漁人カード,6,,10,10,,,,,,,2,,,,,{/*紫色の深海洞窟 上層 紫色の深海洞窟 下層  if(readmap(iz_d04_i) || readmap(iz_d05_i)){ bonus2 bAddRace,Rct_Boss,30; bonus2 bAddRace,Rct_NonBoss,30; onus2 bMagicAddRace,Rct_Boss,30; bonus2 bMagicAddRace,Rct_NonBoss,30; }*/},{},{}
-//指定マップで効果発生(追加ダメージ等) if(readmap(readmap(iz_d04_i) || readmap(iz_d05_i)){} のようなマップ指定関数
 300145,card,深海の魔女カード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Water,100; bonus2 bSubEle,Ele_Water,50; bonus2 bResEff,Eff_Cold,10000; },{}
 300146,card,深海のセドラカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(((getequipid(4) >= 1900) && (getequipid(4) <= 1999)) || ((getequipid(4) >= 32100) && (getequipid(4) <= 32199)) || ((getequipid(4) >= 570000) && (getequipid(4) <= 570099)) || ((getequipid(4) >= 580000) && (getequipid(4) <= 580099))){ bonus bHit,15; bonus bAspd,3; if(getequiprefinerycnt(4) >=10){ bonus bBaseAtk,100; }}},{}
 300147,card,深海のソードフィッシュカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bIgnoreMdefRace,Rct_Boss,25; bonus2 bIgnoreMdefRace,Rct_NonBoss,25; },{}
 300148,card,深海のストラウフカード,6,,10,10,,,,,,,32,,,,,{/*300149*/},{ bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; bonus2 bSubRace,Rct_Fish,20; bonus2 bMagicSubRace,Rct_Fish,20; if(equippeditem(300149)){ bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; bonus2 bSubRace,Rct_Fish,10; bonus2 bMagicSubRace,Rct_Fish,10; }},{}
 300149,card,深海のフェンカード,6,,10,10,,,,,,,136,,,,,{/*300148*/},{ bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; },{}
 300150,card,深海のキングドラモカード,6,,10,10,,,,,,,769,,,,,{},{ bonus2 bSubEle,Ele_Water,10; if(getequiprefinerycnt(1) >= 8){ bonus bDef,50; bonus bMdef,10; }},{}
-300151,card,深海のクラーケンカード,6,,10,10,,,,,,,16,,,,,{/*厄災の魔将セット整理必要*/},{ bonus2 bAddRace,Rct_Plant,50; bonus2 bMagicAddRace,Rct_Fish,50; bonus2 bAddRace,Rct_Plant,50; bonus2 bMagicAddRace,Rct_Fish,50; bonus2 bAddEle,Ele_Water,50; bonus2 bMagicAddEle,Ele_Ghost,50; bonus2 bAddEle,Ele_Water,50; bonus2 bMagicAddEle,Ele_Ghost,50; },{}
-//300163,card,皇帝のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-//300164,card,力のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-//300165,card,悪魔のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-//300166,card,月のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-//300167,card,運命の輪のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-//300168,card,世界のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300170,card,腐った木カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300171,card,グレイヴワームカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300172,card,ブレインサッカーカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300173,card,モスキロカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300174,card,溶解したポリンカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300175,card,得体の知れない生命体カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300177,card,真夜中のアルヒカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300178,card,真夜中のアネモスカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300179,card,真夜中のカネイリーカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300180,card,真夜中のコスルリースカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300181,card,真夜中のスニキカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300182,card,真夜中のフェモンカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300183,card,真夜中のオルドルカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300184,card,真夜中のハゼカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300185,card,真夜中の黒魔カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300186,card,真夜中のイフォドスカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300187,card,真夜中のユメヒメカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300188,card,真夜中のレチェニエカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300189,card,真夜中のジューカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300190,card,真夜中のカナビアンカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300191,card,真夜中のディワイカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
+300170,card,腐った木カード,6,,10,10,,,,,,,136,,,,,{},{},{}
+300171,card,グレイヴワームカード,6,,10,10,,,,,,,769,,,,,{},{},{}
+300172,card,ブレインサッカーカード,6,,10,10,,,,,,,16,,,,,{},{},{}
+300173,card,モスキロカード,6,,10,10,,,,,,,2,,,,,{},{},{}
+300174,card,溶解したポリンカード,6,,10,10,,,,,,,16,,,,,{},{},{}
+300175,card,得体の知れない生命体カード,6,,10,10,,,,,,,64,,,,,{},{},{}
+300177,card,真夜中のアルヒカード,6,,10,10,,,,,,,136,,,,,{},{},{}
+300178,card,真夜中のアネモスカード,6,,10,10,,,,,,,64,,,,,{},{},{}
+300179,card,真夜中のカネイリーカード,6,,10,10,,,,,,,769,,,,,{},{},{}
+300180,card,真夜中のコスルリースカード,6,,10,10,,,,,,,136,,,,,{},{},{}
+300181,card,真夜中のスニキカード,6,,10,10,,,,,,,136,,,,,{},{},{}
+300182,card,真夜中のフェモンカード,6,,10,10,,,,,,,136,,,,,{},{},{}
+300183,card,真夜中のオルドルカード,6,,10,10,,,,,,,136,,,,,{},{},{}
+300184,card,真夜中のハゼカード,6,,10,10,,,,,,,64,,,,,{},{},{}
+300185,card,真夜中の黒魔カード,6,,10,10,,,,,,,136,,,,,{},{},{}
+300186,card,真夜中のイフォドスカード,6,,10,10,,,,,,,136,,,,,{},{},{}
+300187,card,真夜中のユメヒメカード,6,,10,10,,,,,,,4,,,,,{},{},{}
+300188,card,真夜中のレチェニエカード,6,,10,10,,,,,,,2,,,,,{},{},{}
+300189,card,真夜中のジューカード,6,,10,10,,,,,,,64,,,,,{},{},{}
+300190,card,真夜中のカナビアンカード,6,,10,10,,,,,,,64,,,,,{},{},{}
+300191,card,真夜中のディワイカード,6,,10,10,,,,,,,16,,,,,{},{},{}
 300211,card,アッシュトードカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300212,card,ラケソンカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300213,card,ヴァルティカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
@@ -813,8 +798,6 @@
 300235,card,ぐにゃぐにゃした蟻の卵カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300236,card,度胸のあるガイアスカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300237,card,度胸のあるファミリアーカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300238,card,真面目なビタタカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300239,card,無口なマヤーカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300240,card,ガンキャンカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300241,card,ブルータルマーダーカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300242,card,ゴーストキューブカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
@@ -853,9 +836,7 @@
 300279,card,ブックオブデスカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300280,card,破損したタナトスの記憶カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300281,card,R001-ベスティアカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300282,card,隠者のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
 300283,card,愚者のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
-300284,card,法王のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
 300285,card,吊るされた男のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
 300286,card,女教皇のカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300287,card,女教皇のカード(逆位置),6,,10,10,,,,,,,65535,,,,,{},{},{}
@@ -890,24 +871,24 @@
 300331,card,封印されたイフリートカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300332,card,封印されたグルームアンダーナイトカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300334,card,封印された堕ちた大神官ヒバムカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300335,card,封印された女王スカラバカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300337,card,封印された女帝スカラバカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
+300335,card,封印された女王スカラバカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddGroup,11,10; if(equippeditem(19023)){ bonus2 bAddGroup,11,10; } if(equippeditem(311075)){ bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; }},{}
+300337,card,封印された女帝スカラバカード,6,,10,10,,,,,,,769,,,,,{},{ bonus bInt,1; bonus2 bSubRace,Rct_Insect,3; bonus2 bMagicSubRace,Rct_Insect,3; bonus2 bSubRace,Rct_Insect,2*getequiprefinerycnt(1); bonus2 bMagicSubRace,Rct_Insect,2*getequiprefinerycnt(1); if(equippeditem(311075) || equippeditem(19023)){ bonus2 bResEff, Eff_Confusion,10000; }},{}
 300338,card,封印された魔剣士タナトスの思念体カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300339,card,封印された汚染されたダークロードカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300340,card,封印された汚染されたブリナラネアカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300341,card,封印された硬化ムスペルスコールカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300343,card,封印されたタイムホルダーカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300344,card,封印されたボミカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300345,card,封印された怒りの月夜花カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300346,card,封印された怒りのドラキュラカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300348,card,封印されたアメンホテプカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300349,card,封印された古のタオグンカカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300350,card,封印された輝くベアドールカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300351,card,封印された古のウータンガードカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300352,card,封印された覚醒クトルラナックスカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300353,card,封印された混沌のバフォメットカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300354,card,封印された深海のクラーケンカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-300355,card,封印された不吉なタートルGカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
+300343,card,封印されたタイムホルダーカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bUseSPRate,10; if(equippeditem(311075)){ bonus bMatk,readparam(11)/2; }},{}
+300344,card,封印されたボミカード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Water,15; bonus2 bSubEle,Ele_Water,25; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; }},{}
+300345,card,封印された怒りの月夜花カード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bMaxSPRate,-50; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Brute,20; bonus2 bMagicAddRace,Rct_Demon,20; }},{}
+300346,card,封印された怒りのドラキュラカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bResEff,Eff_Curse,3000; bonus2 bResEff,Eff_Fear,3000; if(equippeditem(28510)){ bonus bAspdAddRate,5; } if(equippeditem(311075)){ bonus bAspd,1; }},{}
+300348,card,封印されたアメンホテプカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bMagicAddRace,Rct_Demon,5; bonus2 bMagicAddRace,Rct_Undead,5; bonus2 bMagicAddEle,Ele_Dark,5; bonus2 bMagicAddEle,Ele_Undead,5; if(equippeditem(450162)){ bonus2 bAddEleMagicDamageRate,Ele_Holy,5; bonus2 bResEff,Eff_Freeze,10000; skill "AB_JUDEX",1; }if(equippeditem(450181)){ bonus2 bAddEleMagicDamageRate,Ele_Holy,15; bonus2 bResEff,Eff_Freeze,10000; skill "AB_JUDEX",getequiprefinerycnt(2); } if(equippeditem(311075)){ bonus bMaxHPRate,25; bonus2 bMagicAddRace,Rct_Demon,10; bonus2 bMagicAddRace,Rct_Undead,10; bonus2 bMagicAddEle,Ele_Dark,10; bonus2 bMagicAddEle,Ele_Undead,10; }},{}
+300349,card,封印された古のタオグンカカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bMaxHPRate,5+(2*getequiprefinerycnt(2)); if(equippeditem(311075)){ bonus bMaxHPRate,25; }},{}
+300350,card,封印された輝くベアドールカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bMaxHPRate,-50; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Boss,20; bonus2 bMagicAddRace,Rct_NonBoss,20; }},{}
+300351,card,封印された古のウータンガードカード,6,,10,10,,,,,,,64,,,,,{},{ bonus bMaxHPRate,5; bonus bMaxSPRate,5; bonus2 bAddSkillDamageRate,"ASC_BREAKER",15; bonus2 bAddSkillDamageRate,"ASC_METEORASSAULT",15; if(equippeditem(311075)){ bonus bMaxHPRate,5; bonus bMaxSPRate,5; bonus bSkillDelayRate,getskilllv("ASC_BREAKER")/3; bonus bSkillDelayRate,getskilllv("ASC_METEORASSAULT")/3; }},{}
+300352,card,封印された覚醒クトルラナックスカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bMagicAddRace,Rct_Formless,5; bonus2 bMagicAddRace,Rct_Demon,5; bonus2 bMagicAddEle,Ele_Fire,5; bonus2 bMagicAddEle,Ele_Neutral,5; if(equippeditem(311075)){ bonus bMaxHPRate,25; bonus2 bMagicAddRace,Rct_Formless,10; bonus2 bMagicAddRace,Rct_Demon,10; bonus2 bMagicAddEle,Ele_Fire,10; bonus2 bMagicAddEle,Ele_Neutral,10; }},{}
+300353,card,封印された混沌のバフォメットカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bMaxHPRate,-50; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Undead,20; bonus2 bMagicAddRace,Rct_Insect,20; }},{}
+300354,card,封印された深海のクラーケンカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddRace,Rct_Plan,5; bonus2 bMagicAddRace,Rct_Plan,5; bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; bonus2 bAddEle,Ele_Water,5; bonus2 bMagicAddEle,Ele_Water,5; bonus2 bAddEle,Ele_Ghost,5; bonus2 bMagicAddEle,Ele_Ghost,5; if(equippeditem(311075)){ bonus bMaxHPRate,25; bonus2 bAddRace,Rct_Plan,10; bonus2 bMagicAddRace,Rct_Plan,10; bonus2 bAddRace,Rct_Fish,10; bonus2 bMagicAddRace,Rct_Fish,10; bonus2 bAddEle,Ele_Water,10; bonus2 bMagicAddEle,Ele_Water,10; bonus2 bAddEle,Ele_Ghost,10; bonus2 bMagicAddEle,Ele_Ghost,10; }},{}
+300355,card,封印された不吉なタートルGカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bMaxSPRate,-50; if(equippeditem(311075)){ bonus2 bAddRace,Rct_Formless,20; bonus2 bAddRace,Rct_Brute,20; }},{}
 300356,card,アグネス・レベンブルグ(サイン入り)カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300357,card,ポー・リハルト(サイン入り)カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300358,card,アイザック・ウィグナー(サイン入り)カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
@@ -944,8 +925,6 @@
 300451,card,キャサリン・ゲオルグ(サイン入り)カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300452,card,フリードリヒ・ハイネン(サイン入り)カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 300453,card,クロネカー・ハイネン(サイン入り)カード,6,,10,10,,,,,,,65535,,,,,{},{},{}
-310012,ench,死の欲動,6,,,,,,,,,,65535,,,,,{},{},{}
-310075,ench,グリード詠唱 - 100%,6,,,,,,,,,,65535,,,,,{},{},{}
 310082,ench,Q-Normal,6,,,,,,,,,,65535,,,,,{},{},{}
 310083,ench,Q-Boss,6,,,,,,,,,,65535,,,,,{},{},{}
 310084,ench,B-Vit,6,,,,,,,,,,65535,,,,,{},{},{}
@@ -1023,37 +1002,10 @@
 310164,ench,L-PotionPitcher3,6,,,,,,,,,,65535,,,,,{},{},{}
 310165,ench,L-MagicPower5,6,,,,,,,,,,65535,,,,,{},{},{}
 310166,ench,L-Gloria1,6,,,,,,,,,,65535,,,,,{},{},{}
-310192,ench,<Extreme>,6,,,,,,,,,,65535,,,,,{},{},{}
-310193,ench,ノックバック無効,6,,,,,,,,,,65535,,,,,{},{},{}
-310194,ench,Def + 50,6,,,,,,,,,,65535,,,,,{},{},{}
-310195,ench,マグニフィカートLv5,6,,,,,,,,,,65535,,,,,{},{},{}
-310196,ench,遠距離物理耐性 + 10%,6,,,,,,,,,,65535,,,,,{},{},{}
 310197,ench,天地崩壊,6,,,,,,,,,,65535,,,,,{},{},{}
 310198,ench,断撃,6,,,,,,,,,,65535,,,,,{},{},{}
 310203,ench,斬魔,6,,,,,,,,,,65535,,,,,{},{},{}
-310269,ench,石化耐性,6,,,,,,,,,,65535,,,,,{},{},{}
-310270,ench,T-PowerBoost,6,,,,,,,,,,65535,,,,,{},{},{}
-310271,ench,T-MagicBoost,6,,,,,,,,,,65535,,,,,{},{},{}
-310272,ench,T-Assault,6,,,,,,,,,,65535,,,,,{},{},{}
-310273,ench,T-Electricity,6,,,,,,,,,,65535,,,,,{},{},{}
-310310,ench,潜在解放(ルーンナイト),6,,,,,,,,,,65535,,,,,{},{},{}
-310311,ench,潜在解放(ロイヤルガード),6,,,,,,,,,,65535,,,,,{},{},{}
-310312,ench,潜在解放(ソーサラー),6,,,,,,,,,,65535,,,,,{},{},{}
-310313,ench,潜在解放(アークビショップ),6,,,,,,,,,,65535,,,,,{},{},{}
-310314,ench,潜在解放(修羅),6,,,,,,,,,,65535,,,,,{},{},{}
-310315,ench,潜在解放(シャドウチェイサー),6,,,,,,,,,,65535,,,,,{},{},{}
-310316,ench,潜在解放(メカニック),6,,,,,,,,,,65535,,,,,{},{},{}
-310317,ench,潜在解放(ジェネティック),6,,,,,,,,,,65535,,,,,{},{},{}
-310318,ench,必中攻撃 + 25%,6,,,,,,,,,,65535,,,,,{},{},{}
-310319,ench,Hit + 100,6,,,,,,,,,,65535,,,,,{},{},{}
-310320,ench,念属性付与(鎧),6,,,,,,,,,,65535,,,,,{},{},{}
-310321,ench,シンソウの王,6,,,,,,,,,,65535,,,,,{},{},{}
 310323,ench,超越,6,,,,,,,,,,65535,,,,,{},{},{}
-310331,ench,潜在解放(ウォーロック),6,,,,,,,,,,65535,,,,,{},{},{}
-310332,ench,潜在解放(ギロチンクロス),6,,,,,,,,,,65535,,,,,{},{},{}
-310333,ench,潜在解放(ミンストレル),6,,,,,,,,,,65535,,,,,{},{},{}
-310334,ench,潜在解放(レンジャー),6,,,,,,,,,,65535,,,,,{},{},{}
-310335,ench,潜在解放(ワンダラー),6,,,,,,,,,,65535,,,,,{},{},{}
 310336,ench,サイトLv1,6,,,,,,,,,,65535,,,,,{},{},{}
 310337,ench,透視,6,,,,,,,,,,65535,,,,,{},{},{}
 310478,ench,ウルフオーブ(Str + 7),6,,,,,,,,,,65535,,,,,{},{},{}
@@ -1114,8 +1066,6 @@
 311071,card,封印されたヴェルゼブブカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 311072,ench,起源の王,6,,,,,,,,,,65535,,,,,{},{},{}
 311073,ench,豊穣の女神,6,,,,,,,,,,65535,,,,,{},{},{}
-311074,ench,英雄の凱歌,6,,,,,,,,,,65535,,,,,{},{},{}
-311075,ench,厄災の魔将,6,,,,,,,,,,65535,,,,,{},{},{}
 311284,ench,極限の魔力,6,,,,,,,,,,65535,,,,,{},{},{}
 311365,ench,王家の栄光,6,,,,,,,,,,65535,,,,,{},{},{}
 311366,ench,移動速度増加,6,,,,,,,,,,65535,,,,,{},{},{}
