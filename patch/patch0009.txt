@@ -1,0 +1,9 @@
+fix
+300005,card,アビスマンカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"WZ_HEAVENDRIVE",BaseLevel*5; },{}
+300121,card,熱湯マルクカード,6,,10,10,,,,,,,769,,,,,{/*4次職ステータス*/},{ /*if(readparam(bSta) >= 50){ bonus2 bResEff,Eff_Freeze,2500; } if(readparam(Wis) >= 50){ bonus2 bResEff,Eff_Freeze,2500; }*/ },{}
+
+add
+4145,Berzebub_Card,ヴェルゼブブカード,6,20,,10,,,,,,,136,,,,,{},{ bonus bCastRate,-30; if(equippeditem(311073)){ bonus2 bMagicAddRace,Rct_Boss,readparam(bLuk)/10; bonus2 bMagicAddRace,Rct_NonBoss,readparam(bLuk)/10; if(readparam(bLuk) >= 130){ bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; skill "PF_HPCONVERSION",3; }}},{}
+4425,Atroce_Card,アトロスカード,6,20,,10,,,,,,,2,,,,,{},{ bonus bBaseAtk,25; bonus3 bAutoActiveWeapon,4425,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus bAspdAddRate,100; } if(equippeditem(311073)){ bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; bonus3 bAutoActiveWeapon,4425,100,30000; if(checkactiveitem()) { misceffect 220,""; bonus bAspdAddRate,100; }}},{}
+4430,Ifrit_Card,イフリートカード,6,20,,10,,,,,,,136,,,,,{},{ bonus bBaseAtk,JobLevel/10; bonus bCritical,JobLevel/10; bonus bHit,JobLevel/10; bonus3 bRevAutoSelfSpell,653,10,300; if(equippeditem(311073)){ bonus3 bAutoSpell,"NPC_EARTHQUAKE",6,100; bonus bBaseAtk,JobLevel; bonus bHit,JobLevel; bonus bCritical,JobLevel; }},{}
+
