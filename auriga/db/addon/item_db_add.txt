@@ -13,12 +13,14 @@
 4142,Doppelganger_Card,ドッペルゲンガーカード,6,20,,10,,,,,,,2,,,,,{},{ bonus bAspdAddRate,10; if(equippeditem(311072)){ bonus bAddShortWeaponDamage,20; }},{}
 4143,Orc_Hero_Card,オークヒーローカード,6,20,,10,,,,,,,769,,,,,{},{ bonus bVit,3; bonus2 bResEff,Eff_Stun,10000; if(equippeditem(311072)){ bonus bFlee2,5; bonus2 bSubSkillDamageRate,"NPC_CRITICALSLASH",100; }},{}
 4144,Osiris_Card,オシリスカード,6,20,,10,,,,,,,136,,,,,{},{ bonus bRestartFullRecover,0; if(equippeditem(311072)){ bonus2 bSPDrainValue,100,2; skill "WZ_QUAGMIRE",5; }},{}
+4145,Berzebub_Card,ヴェルゼブブカード,6,20,,10,,,,,,,136,,,,,{},{ bonus bCastRate,-30; if(equippeditem(311073)){ bonus2 bMagicAddRace,Rct_Boss,readparam(bLuk)/10; bonus2 bMagicAddRace,Rct_NonBoss,readparam(bLuk)/10; if(readparam(bLuk) >= 130){ bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; skill "PF_HPCONVERSION",3; }}},{}
 4146,Maya_Card,マヤーカード,6,20,,10,,,,,,,32,,,,,{},{ bonus bMagicDamageReturn,50; if(equippeditem(311072)){ bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus3 bRevAutoActiveMagic,4146,500,2000;  if(checkactiveitem()) { misceffect 220,""; bonus2 bHPRatePenaltyTime,1000,-25; }}},{}
 4147,Baphomet_Card,バフォメットカード,6,20,,10,,,,,,,2,,,,,{},{ bonus bHit,-10; bonus bSplashRange,1; if(equippeditem(311072)){ bonus3 bAutoActiveWeapon,4147,500,5000; if(checkactiveitem()) { misceffect 220,""; bonus2 bHPDrainRate,100,1; }}},{}
-
 4276,card,ロードオブデスカード,6,,10,10,,,,,,,2,,,,,{/*異境の統轄者セット*/},{ if(equippeditem(311439) == 0) { bonus2 bWeaponComaRace2,Rct_NonBoss,1; bonus2 bAddEff,Eff_Stun,1000; bonus2 bAddEff,Eff_Curse,1000; bonus2 bAddEff,Eff_Silence,1000; bonus2 bAddEff,Eff_Poison,1000; bonus2 bAddEff,Eff_Bleed,1000; end; } bonus2 bWeaponComaRace2,Rct_NonBoss,1; bonus2 bAddEff,Eff_Stun,10000; bonus2 bAddEff,Eff_Curse,10000; bonus2 bAddEff,Eff_Silence,10000; bonus2 bAddEff,Eff_Poison,10000; bonus2 bAddEff,Eff_Bleed,10000; bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; },{}
 4323,Hatii_Bebe_Card,ハティーベベカード,6,20,,10,,,,,,,2,,,,,{},{ if((equippeditem(4324)==0) || (equippeditem(300400)==0)) { bonus3 bAutoSpell,15,3,500; end; } bonus3 bAutoSpell,15,3,3000; }
 4419,card,クトルラナックスカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddEle,Ele_Fire,50; if(equippeditem(15421)) { bonus2 bResEff,Eff_Freeze,10000; bonus3 bRevAutoActiveWeapon,4481,2000,3000; if(checkactiveitem()){ sc_end SC_FROSTMISTY; sc_end SC_DIAMONDDUST; bonus2 bSubEle,Ele_Water,100; bonus2 bAddEle,Ele_Fire,getequiprefinerycnt(2)*3; }} else { bonus3 bRevAutoSpell,88,10,300; } if(equippeditem(450158)) { bonus2 bResEff,Eff_Freeze,10000; bonus3 bRevAutoActiveWeapon,4481,2000,3000; if(checkactiveitem()){ sc_end SC_FROSTMISTY; sc_end SC_DIAMONDDUST; bonus2 bSubEle,Ele_Water,100; bonus2 bAddEle,Ele_Fire,getequiprefinerycnt(2)*8; }} else { bonus3 bRevAutoSpell,88,10,300; } if(equippeditem(311073)) { bonus bMaxHPRate,50; skill "SA_FROSTWEAPON",5; } },{}
+4425,Atroce_Card,アトロスカード,6,20,,10,,,,,,,2,,,,,{},{ bonus bBaseAtk,25; bonus3 bAutoActiveWeapon,4425,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus bAspdAddRate,100; } if(equippeditem(311073)){ bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; bonus3 bAutoActiveWeapon,4425,100,30000; if(checkactiveitem()) { misceffect 220,""; bonus bAspdAddRate,100; }}},{}
+4430,Ifrit_Card,イフリートカード,6,20,,10,,,,,,,136,,,,,{},{ bonus bBaseAtk,JobLevel/10; bonus bCritical,JobLevel/10; bonus bHit,JobLevel/10; bonus3 bRevAutoSelfSpell,653,10,300; if(equippeditem(311073)){ bonus3 bAutoSpell,"NPC_EARTHQUAKE",6,100; bonus bBaseAtk,JobLevel; bonus bHit,JobLevel; bonus bCritical,JobLevel; }},{}
 4481,card,封印されたクトルラナックスカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddEle,Ele_Fire,15; if(equippeditem(15421)) { bonus2 bResEff,Eff_Freeze,10000; bonus3 bRevAutoActiveWeapon,4481,2000,3000; if(checkactiveitem()){ sc_end SC_FROSTMISTY; sc_end SC_DIAMONDDUST; bonus2 bSubEle,Ele_Water,100; bonus2 bAddEle,Ele_Fire,getequiprefinerycnt(2)*3; }} else { bonus3 bRevAutoSpell,88,10,300; } if(equippeditem(450158)) { bonus2 bResEff,Eff_Freeze,10000; bonus3 bRevAutoActiveWeapon,4481,2000,3000; if(checkactiveitem()){ sc_end SC_FROSTMISTY; sc_end SC_DIAMONDDUST; bonus2 bSubEle,Ele_Water,100; bonus2 bAddEle,Ele_Fire,getequiprefinerycnt(2)*8; }} else { bonus3 bRevAutoSpell,88,10,300; } if(equippeditem(311073)) { bonus bMaxHPRate,50; skill "SA_FROSTWEAPON",5; } },{}
 4488,card,封印されたダークロードカード,6,,10,10,,,,,,,64,,,,,{},{ bonus3 bRevAutoSpell,83,5,1000; if(equippeditem(4169)) { bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus bCastRate,-5; } if(equippeditem(311439)) { bonus2 bAddSkillDamageRate,"WZ_METEOR",20; } if(equippeditem(22203)) { skill "SA_VOLCANO",1; if(readparam(11) <= 99) { if(getequiprefinerycnt(6) >= 1) { bonus3 bRevAutoActiveWeapon,4408,500,15000; if(checkactiveitem()) { bonus2 bAddEleWeaponDamageRate,Ele_Fire,getequiprefinerycnt(6)*2; }}} if(readparam(11) >= 100) { if(getequiprefinerycnt(6) >= 1) { bonus3 bRevAutoActiveWeapon,4408,500,15000; if(checkactiveitem()) { bonus2 bAddEleWeaponDamageRate,Ele_Fire,getequiprefinerycnt(6)*5; }}}} if(equippeditem(22245)) { skill "SA_VOLCANO",1; if(readparam(11) <= 99) { if(getequiprefinerycnt(6) >= 1) { bonus3 bRevAutoActiveWeapon,4408,500,15000; if(checkactiveitem()) { bonus2 bAddEleWeaponDamageRate,Ele_Fire,getequiprefinerycnt(6)*5; }}} if(readparam(11) >= 100) { if(getequiprefinerycnt(6) >= 1) { bonus3 bRevAutoActiveWeapon,4408,500,15000; if(checkactiveitem()) { bonus2 bAddEleWeaponDamageRate,Ele_Fire,getequiprefinerycnt(6)*10; }}}}},{}
 
@@ -28,6 +30,7 @@
 4954,card,木ドロップ,6,20,,10,,,,,,,136,,,,,{},{ bonus2 bAddEle,Ele_Earth,2; bonus2 bAddEleMagicDamageRate,Ele_Earth,2; bonus2 bSubEle,Ele_Earth,1; },{}
 4955,card,光ドロップ,6,20,,10,,,,,,,136,,,,,{},{ bonus2 bAddEle,Ele_Holy,2; bonus2 bAddEleMagicDamageRate,Ele_Holy,2; bonus2 bSubEle,Ele_Holy,1; },{}
 4956,card,回復ドロップ,6,20,,10,,,,,,,136,,,,,{},{ callfunc "ItemdbAlmightyHeal",0x7F,2; callfunc "ItemdbAlmightySubHeal",0x7F,2; bonus2 bItemHealRate,1,2; bonus2 bItemHealRate,2,2; },{}
+4425,Atroce_Card,アトロスカード,6,20,,10,,,,,,,2,,,,,{},{ bonus bBaseAtk,25; bonus3 bAutoActiveWeapon,4425,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus bAspdAddRate,100; } if(equippeditem(311073)){ bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; bonus3 bAutoActiveWeapon,4425,100,30000; if(checkactiveitem()) { misceffect 220,""; bonus bAspdAddRate,100; }}},{}
 
 //-- 9000 --
 9103,pet,ウィローの卵,4,20,,0,,,,,,,,,,,,{},{},{}
@@ -690,7 +693,7 @@
 300002,card,トキシャスカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; skill "ASC_EDP",1; },{}
 300003,card,ホワイトポルセリオカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddSkillDamageRate,"WL_EARTHSTRAIN",50; },{}
 300004,card,ネオミネラルカード,6,,10,10,,,,,,,2,,,,,{/*mob_group 定義必要*/},{/*bonus2 bAddGroup,n,30; bonus2 bMagicAddGroup,n,30;*/},{}
-300005,card,アビスマンカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"WZ_HEAVENDRIVE",readparam(BaseLevel)*5; },{}
+300005,card,アビスマンカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"WZ_HEAVENDRIVE",BaseLevel*5; },{}
 300006,card,ジュエリーアントカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bAddShortWeaponDamage,5; if(getequiprefinerycnt()>=8){ bonus bAddShortWeaponDamage,10; } },{}
 300007,card,ジュゴリアントカード,6,,10,10,,,,,,,769,,,,,{/*異境の統轄者セット*/},{ bonus bFlee,10*getequiprefinerycnt(1); if(equippeditem(311439)) { skill "RA_CAMOUFLAGE",5; }},{ if(equippeditem(311439)) { sc_end SC_CAMOUFLAGE; }}
 300008,card,エンジェゴルトカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bMagicAddRace,Rct_Demon,getequiprefinerycnt(2); if(getequiprefinerycnt(2)>=9) { bonus2 bMagicAddRace,Rct_Demon,10; }},{}
@@ -759,7 +762,7 @@
 //指定マップで効果発生(追加ダメージ等) if(readmap(ba_bath)){} のようなマップ指定関数
 300119,card,熱湯ソードフィッシュカード,6,,10,10,,,,,,,32,,,,,{},{ bonus2 bAddSize,Size_Big,10; bonus2 bMagicAddSize,Size_Big,10; if(getequiprefinerycnt(3) >= 7){ bonus2 bSubSize,Size_Big,30; bonus2 bMagicSubSize,Size_Big,30; }},{}
 300120,card,熱湯ピラニアカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bMagicAddRace,Rct_Fish,getequiprefinerycnt(2); if(getequiprefinerycnt(2) >= 9){ bonus2 bAddRace,Rct_Fish,10; bonus2 bMagicAddRace,Rct_Fish,10; }},{}
-300121,card,熱湯マルクカード,6,,10,10,,,,,,,769,,,,,{/*4次職ステータス*/},{ /*if(readparam(Sta) >= 50){ bonus2 bResEff,Eff_Freeze,2500; } if(readparam(Wis) >= 50){ bonus2 bResEff,Eff_Freeze,2500; }*/ },{}
+300121,card,熱湯マルクカード,6,,10,10,,,,,,,769,,,,,{/*4次職ステータス*/},{ /*if(readparam(bSta) >= 50){ bonus2 bResEff,Eff_Freeze,2500; } if(readparam(Wis) >= 50){ bonus2 bResEff,Eff_Freeze,2500; }*/ },{}
 300122,card,イエローピタヤカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Insect,15; bonus2 bAddEle,Ele_Holy,15; },{}
 300123,card,パープルピタヤカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(((getequipid(4) >= 13300) && (getequipid(4) <= 13349)) || ((getequipid(4) >= 650000) && (getequipid(4) <= 650099))){ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; if(getequiprefinerycnt(4) >=10){ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; }}},{}
 //武器種を返す関数があればいいけど武器ID範囲を指定しても動作する
@@ -1093,7 +1096,7 @@
 311070,ench,レジストウォーター,6,,,,,,,,,,65535,,,,,{},{},{}
 311071,card,封印されたヴェルゼブブカード,6,,10,10,,,,,,,65535,,,,,{},{},{}
 311072,ench,起源の王,6,,,,,,,,,,65535,,,,,{},{},{}
-311073,ench,豊穣の女神,6,,,,,,,,,,65535,,,,,{},{},{}
+//311073,ench,豊穣の女神,6,,,,,,,,,,65535,,,,,{},{},{}
 311284,ench,極限の魔力,6,,,,,,,,,,65535,,,,,{},{},{}
 311365,ench,王家の栄光,6,,,,,,,,,,65535,,,,,{},{},{}
 311366,ench,移動速度増加,6,,,,,,,,,,65535,,,,,{},{},{}
