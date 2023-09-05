@@ -1,3 +1,9 @@
+2023-09-05	patch0011
+0905実装アイテムの基本db実装
+item_db_add.txt item_db2_add.txt item_cardtype.txt
+衣装装備 実装済み エラーなく利用可能
+衣装装備はテスト環境のアップデート、hateffectはstatus.h const.txt 更新必要です
+
 2023-09-04	patch0010
 豊穣の女神 セット残り実装
 4441 311071 300334 セット効果の条件多く煩雑で正確な実装が難しいため保留
