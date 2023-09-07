@@ -1,0 +1,111 @@
+11548,consum,コロッセオアイス,2,,30,30,,,,,2074075135,2,,,1,,,{ percentheal 5,5; },{},{}
+12674,consum,コロッセオアイスの箱(50個),2,,1500,1500,,,,,2074075135,2,,,1,,,{ getitem2 11548,50,1,0,0,0,0,0,0,259200; },{},{}
+12675,consum,コロッセオアイスの箱(150個),2,,4500,4500,,,,,2074075135,2,,,1,,,{ getitem2 11548,150,1,0,0,0,0,0,0,259200; },{},{}
+
+15843,cos,[衣装] 熱賛のディナー,4,,10,0,,,,0,2074075135,2,1024,,1,2024,0,{},{},{}
+
+300230,card,真面目なアンドレカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Insect,15; bonus2 bAddEle,Ele_Earth,15; },{}
+300231,card,真面目な兵隊アンドレカード,6,,10,10,,,,,,,2,,,,,{},{/*認識の庭 ant_d02_i ant_d02_i_q のmobダメージ+30%*/},{}
+300232,card,真面目なアンドレの幼虫カード,6,,10,10,,,,,,,64,,,,,{},{ bonus3 bRevAutoSpell,"NPC_WIDEBLEEDING",2,100; if(equippeditem(300235)){ bonus2 bSubEle,Ele_Neutral,5; bonus3 bRevAutoSpell,"NPC_WIDEBLEEDING",2,300; }},{}
+300233,card,真面目なデニーロカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddEffMagic,Eff_Sleep,100; },{}
+300234,card,真面目なピエールカード,6,,10,10,,,,,,,769,,,,,{},{ bonus2 bAddEle,Ele_Earth,5; if(getequiprefinerycnt() >= 9){ bonus2 bAddEle,Ele_Earth,5; } },{}
+300235,card,ぐにゃぐにゃした蟻の卵カード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bSubEle,Ele_Neutral,15; bonus2 bMagicAddEle,Ele_Ghost,3*getequiprefinerycnt(); },{}
+300236,card,度胸のあるガイアスカード,6,,10,10,,,,,,,769,,,,,{},{ bonus2 bSubEle,Ele_Ghost,10; bonus2 bResEff,Eff_Confusion,10000; },{}
+300237,card,度胸のあるファミリアーカード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bSubEle,Ele_Neutral,15; bonus2 bSubEle,Ele_Ghost,15; },{}
+300240,card,ガンキャンカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddCastRate,"LK_SPIRALPIERCE",-50; },{}
+300241,card,ブルータルマーダーカード,6,,10,10,,,,,,,64,,,,,{},{ bonus bCritical,20; if(readparam(bLuk)){ bonus bAddCriticalDamage,10; } },{}
+300242,card,ゴーストキューブカード,6,,10,10,,,,,,,136,,,,,{},{ bonus3 bRevAutoSpell,"AL_DECAGI",5,100; if(equippeditem(300243)){ bonus bMaxHP,5000; } },{}
+300243,card,ルードガルカード,6,,10,10,,,,,,,136,,,,,{},{ bonus3 bRevAutoSpell,"MG_STONECURSE",5,100; },{}
+300244,card,ディスガイザーカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddEff,Eff_Silence,100+(readparam(bInt)/10)*100; if(readparam(bInt) >= 130){ bonus2 bAddEff,Eff_Silence,600; } },{}
+300245,card,ブルームーンロリルリカード,6,,10,10,,,,,,,16,,,,,{},{ bonus3 bAutoSelfSpell,"AB_HIGHNESSHEAL",3,500; },{}
+300246,card,グロートカード,6,,10,10,,,,,,,1,,,,,{},{ bonus bMdef,10-getequiprefinerycnt(); },{}
+300247,card,ピエロゾイストカード,6,,10,10,,,,,,,2,,,,,{/*物理・魔法攻撃時 ニブルヘイムダンジョン(崩れたオペラハウス) 与えるダメージ+30%*/},{},{}
+
+300249,card,ジャイアント・カプトゥカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bMagicAddRace,Rct_Insect,1; if(getequiprefinerycnt() >= 9){ bonus2 bMagicAddRace,Rct_Insect,10; } },{}
+300250,card,ドローリアンカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddEle,Ele_Poison,3; },{}
+300251,card,プラガリオンカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus3 bAutoActiveWeapon,30251,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddEle,Ele_Wind,20; } },{}
+300252,card,デッドレカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddCastRate,"WL_HELLINFERNO",-50; },{}
+300253,card,ヴェネディカード,6,,10,10,,,,,,,2,,,,,{/*物理・魔法攻撃時 廃棄実験体遊技場ルドゥス4階 与えるダメージ+30%*/},{},{}
+300254,card,変異キメラアミテラカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bDef,30+readparam(bVit)/10; },{}
+300255,card,変異キメラリートゥスカード,6,,10,10,,,,,,,136,,,,,{},{ skill "ECL_SEQUOIADUST",1; },{}
+300256,card,変異キメラフィリアカード,6,,10,10,,,,,,,64,,,,,{},{ bonus bAddLongWeaponDamage,5; if(getequiprefinerycnt() >= 8){ bonus bAspdAddRate,10; } },{}
+300257,card,変異キメラヴァニラクスカード,6,,10,10,,,,,,,2,,,,,{/*物理・魔法攻撃時 廃棄実験所アミシティア 01 廃棄実験所アミシティア 02 与えるダメージ+30%*/},{},{}
+300258,card,変異キメララーヴァカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddEffMagic,Eff_Burning,100; },{}
+300259,card,変異キメラフルゴルカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; bonus3 bAutoActiveWeapon,300259,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddEleWeaponDamageRate,Ele_Holy,10; } },{}
+300260,card,変異キメラナペオカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bSubEle,Ele_Wind,5; bonus2 bResEff,Eff_Silence,10000; },{}
+300261,card,変異キメラガレンシスカード,6,,10,10,,,,,,,769,,,,,{},{ skill "MO_TRIPLEATTACK",getequiprefinerycnt(); },{}
+300262,card,変異キメラ・ザ・ワンカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddRace,Rct_Formless,40; bonus2 bAddRace,Rct_Dragon,40; bonus2 bAddEle,Ele_Fire,40; bonus2 bAddEle,Ele_Poison,40; if(equippeditem(311883)){ bonus bMaxHPrate,50; skill "GC_VENOMIMPRESS",3; } },{}
+300267,card,クロウバロンカード,6,,10,10,,,,,,,136,,,,,{},{ skill "HW_MAGICPOWER",1; if(equippeditem(300268)){ bonus2 bAddSkillDamageRate,"MG_FIREBOLT",50; bonus2 bAddSkillDamageRate,"MG_LIGHTNINGBOLT",50; bonus2 bAddSkillDamageRate,"MG_LIGHTNINGBOLT",50; } },{}
+300268,card,クロウデュークカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddCastRate,"PF_DOUBLECASTING",-100; },{}
+300269,card,エルディストカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Fire,getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddEleMagicDamageRate,Ele_Fire,10; } },{}
+300270,card,共感する者カード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; bonus3 bAutoActiveWeapon,30270,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddEleWeaponDamageRate,Ele_Water,10; } },{}
+300271,card,幸福を与える者カード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; bonus3 bAutoActiveWeapon,30271,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddEleWeaponDamageRate,Ele_Earth,10; } },{}
+300272,card,祈る者カード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; bonus3 bAutoActiveWeapon,30272,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddEleWeaponDamageRate,Ele_Fire,10; } },{}
+300273,card,微笑む者カード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; bonus3 bAutoActiveWeapon,30273,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddEleWeaponDamageRate,Ele_Wind,10; } },{}
+300274,card,タナトスの記憶(憤怒)カード,6,,10,10,,,,,,,4,,,,,{},{ bonus bAgi,3*getequiprefinerycnt(); bonus2 bSubEle,Ele_Wind,3; },{}
+300275,card,タナトスの記憶(恐怖)カード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bMagicAddRace,Rct_Angel,4; },{}
+300276,card,タナトスの記憶(後悔)カード,6,,10,10,,,,,,,4,,,,,{},{ bonus bInt,3*getequiprefinerycnt(); bonus2 bSubEle,Ele_Dark,3; },{}
+300277,card,タナトスの記憶(怨望)カード,6,,10,10,,,,,,,2,,,,,{},{ bonus3 bAutoSpell,"GC_DARKCROW",3,100; bonus bBaseAtk,10*getequiprefinerycnt(); bonus bMatk,10*getequiprefinerycnt(); },{}
+300278,card,ヴォイドミミックカード,6,,10,10,,,,,,,769,,,,,{},{ if(readparam(bAgi) >= 90){ bonus2 bResEff,Eff_Stun,3000; bonus2 bResEff,Eff_Silence,3000; } bonus bBaseAtk,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 9){ bonus2 bAddRace,Rct_Boss,2; bonus2 bAddRace,Rct_NonBoss,2; } },{}
+300279,card,ブックオブデスカード,6,,10,10,,,,,,,769,,,,,{},{ skill "MC_IDENTIFY",1; },{}
+
+310648,ench,Extra Agi,6,,,,,,,,,,65535,,,,,{},{ bonus bPerfectHitAddRate,readparam(bAgi)/10; },{}
+310649,ench,Extra Vit,6,,,,,,,,,,65535,,,,,{},{ callfunc "ItemdbAlmightySubHeal",0x7F,5; bonus2 bItemHealRate,1,1; if(readparam(bVit) >= 110){ callfunc "ItemdbAlmightySubHeal",0x7F,5; bonus2 bItemHealRate,1,5; }},{}
+310650,ench,Extra Int,6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,readparam(bInt)/10; bonus2 bMagicAddRace,Rct_NonBoss,readparam(bInt)/10; },{}
+310651,ench,Extra Dex,6,,,,,,,,,,65535,,,,,{},{ bonus bAddLongWeaponDamage,readparam(bDex)/10; },{}
+310652,ench,Extra Luk,6,,,,,,,,,,65535,,,,,{},{ bonus bAddCriticalDamage,readparam(bLuk)/10; if(readparam(bLuk) >= 110){ bonus bAddCriticalDamage,5; }},{}
+
+311065,ench,レジストポイズン,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Poison,70; },{}
+311066,ench,レジストセイント,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Holy,70; },{}
+311067,ench,レジストダークネス,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Dark,70; },{}
+311068,ench,レジストテレキネシス,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Ghost,70; },{}
+311069,ench,レジストアンデッド,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Undead,70; },{}
+311070,ench,レジストウォーター,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Water,70; },{}
+
+311284,ench,極限の魔力,6,,,,,,,,,,65535,,,,,{},{ bonus2 bHPRatePenaltyTime,1000,1; if(equippeditem(511043)){ bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",50; } if(equippeditem(511044)){ bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",50; } if(equippeditem(610029)){ bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10; } if(equippeditem(311422)){ bonus bMaxHP,50*Baselevel; bonus bMaxSP,5*Baselevel;} if(equippeditem(420210)){ bonus2 bSubEle,Ele_Dark,5; bonus2 bSubEle,Eff_Poison,5; bonus2 bSubRace,Rct_Playe,5; bonus2 bMagicSubRace,Rct_Playe,5; } if(equippeditem(420211)){ bonus2 bSubEle,Ele_Dark,5; bonus2 bSubEle,Eff_Poison,5; bonus2 bSubRace,Rct_Playe,5; bonus2 bMagicSubRace,Rct_Playe,5; }},{}
+311365,ench,王家の栄光,6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddEnemy,Ele_Neutral,15; bonus2 bAddEnemy,Ele_Earth,15; bonus2 bAddEnemy,Ele_Wind,15; bonus2 bAddEnemy,Ele_Holy,15; bonus2 bAddEnemy,Ele_Ghost,15;bonus2 bAddEnemy,Ele_Water,15; bonus2 bAddEnemy,Ele_Fire,15; bonus2 bAddEnemy,Ele_Poison,15; bonus2 bAddEnemy,Ele_Dark,15; bonus2 bAddEnemy,Ele_Undead,15; if(equippeditem(470180)){ bonus bMaxHPRate,40; bonus2 bAddRace,Rct_Boss,30; bonus2 bAddRace,Rct_NonBoss,30; bonus2 bMagicAddRace,Rct_Boss,30; bonus2 bMagicAddRace,Rct_NonBoss,30; } if(equippeditem(490206) == 0) bonus4 bAutoActiveItem,311365,100,20000,EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { sc_start SC_NAUTHIZ,20000,0; end; } if(equippeditem(490206)){ bonus2 bAddEnemy,Ele_Neutral,15; bonus2 bAddEnemy,Ele_Earth,15; bonus2 bAddEnemy,Ele_Wind,15; bonus2 bAddEnemy,Ele_Holy,15; bonus2 bAddEnemy,Ele_Ghost,15;bonus2 bAddEnemy,Ele_Water,15; bonus2 bAddEnemy,Ele_Fire,15; bonus2 bAddEnemy,Ele_Poison,15; bonus2 bAddEnemy,Ele_Dark,15; bonus2 bAddEnemy,Ele_Undead,15; bonus4 bAutoActiveItem,311365,300,20000,EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { sc_start SC_NAUTHIZ,20000,0; }}},{}
+
+311366,ench,移動速度増加,6,,,,,,,,,,65535,,,,,{},{ bonus bSpeedRate,25; },{}
+311383,ench,気功Lv2,6,,,,,,,,,,65535,,,,,{},{ skill "MO_CALLSPIRITS",2; },{}
+311405,ench,火属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Fire,5; },{}
+311408,ench,地属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Earth,5; },{}
+311410,ench,聖属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Holy,5; },{}
+311411,ench,闇属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Dark,5; },{}
+311412,ench,念属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Ghost,5; },{}
+311413,ench,毒属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Poison,5; },{}
+311415,ench,エナジーコートLv1,6,,,,,,,,,,65535,,,,,{},{ skill "MG_ENERGYCOAT",1; },{}
+311416,ench,オーディンの力Lv2,6,,,,,,,,,,65535,,,,,{},{ skill "ALL_ODINS_POWER",2; },{}
+311419,ench,マグナムブレイクLv5,6,,,,,,,,,,65535,,,,,{},{ skill "SM_MAGNUM",5;},{}
+311420,ench,固定詠唱時間 - 70%,6,,,,,,,,,,65535,,,,,{},{ bonus2 bFixCastrate,-50,0; },{}
+311421,ench,詠唱時間 - 15%,6,,,,,,,,,,65535,,,,,{},{ bonus bCastRate,-15; },{}
+311422,ench,攻撃速度 + 15%,6,,,,,,,,,,65535,,,,,{},{ bonus bAspdAddRate,15; },{}
+
+311442,ench,完熟,6,,,,,,,,,,65535,,,,,{},{ bonus bBaseAtk,20*getequiprefinerycnt(); bonus bMatk,20*getequiprefinerycnt(); bonus bDef,30*getequiprefinerycnt(); bonus bMdef,3*getequiprefinerycnt(); if(equippeditem(311284)){ bonus bMaxHP,50*getequiprefinerycnt(); bonus bMaxSP,5*getequiprefinerycnt(); } if(equippeditem(300410)){ bonus2 bAddRace,Rct_Boss,20; bonus2 bAddRace,Rct_NonBoss,20; } if(equippeditem(300411)){ bonus2 bMagicAddRace,Rct_Boss,20; bonus2 bMagicAddRace,Rct_NonBoss,20; }},{}
+311459,ench,花火玉,6,,,,,,,,,,65535,,,,,{},{/*hateffect*/},{}
+311882,ench,スキル石(速度増加Lv10),6,,,,,,,,,,65535,,,,,{},{ skill "AL_INCAGI",10; },{}
+311883,ench,知識の探求者,6,,,,,,,,,,65535,,,,,{/*300078*/},{ bonus bDef,50; bonus bMdef,50; if(equippeditem(27146)) { bonus2 bAddEleWeaponDamageRate,Ele_Neutral,10; } if(equippeditem(27305)) { bonus bAddLongWeaponDamage,10; bonus2 bAddSkillDamageRate,NC_COLDSLOWER,3; bonus2 bAddSkillDamageRate,NC_FLAMELAUNCHER,3; }if(equippeditem(27318)) { bonus bPerfectHitAddRate,10; bonus2 bSubEle,Ele_Water,15; } if(equippeditem(300079)) { bonus bMaxHPRate,15;  bonus2 bSubEle,Ele_Wind,15; } if(equippeditem(27143)) { bonus bMaxHPRate,15; skill "SO_CLOUD_KILL",5; }if(equippeditem(271411)) { bonus2 bSubEle,Ele_Nutral,20; skill "ASC_METEORASSAULT",10; } if(equippeditem(300099)) { bonus2 bSubEle,Ele_Nutral,20; skill "GN_BLOOD_SUCKER",5; } if(equippeditem(300107)) { bonus2 bHPDrainRate,200,500; bonus2 bSubEle,Ele_Nutral,20; } if(equippeditem(300078)) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillCoolDown,"RL_HAMMER_OF_GOD",-30000; } if(equippeditem(27092)) { bonus2 bAddSkillDamageRate,"NC_VULCANARM",3*readparam(11); bonus2 bAddSkillDamageRate,"NC_BOOSTKNUCKLE",3*readparam(11); } if(equippeditem(27319)) { skill "LG_TRAMPLE",3; }},{}if(equippeditem(27089)) { bonus2 bFixCastRate,-70000; bonus2 bIgnoreMDefRace,Rct_Boss,50; bonus2 bIgnoreMDefRace,Rct_NonBoss,50; } if(equippeditem(300281)) { bonus bMaxHPRate,50; skill "BS_OVERTHRUST",5; } if(equippeditem(300100)) { bonus bMaxHPRate,50; bonus2 bAddRevEff,Eff_Confusion,500; bonus2 bAddRevEff,Eff_Sleep,500; bonus2 bAddRevEff,Eff_Silence,500; bonus2 bAddRevEff,Eff_Curse,500; } if(equippeditem(300080)) { bonus bMaxHPRate,50; SKILL "WL_CRIMSONROCK",5: } if(equippeditem(490340)) { bonus2 bAddRace,Rct_Boss,30; bonus2 bAddRace,Rct_NonBoss,30; bonus2 bMagicAddEle,Rct_Boss,30; bonus2 bMagicAddEle,Rct_NonBoss,30; skill "MO_CALLSPIRITS",2;} if(equippeditem(300262)) { bonus bMaxHPRate,50; skill "GC_VENOMIMPRESS",3; } if(equippeditem(480319)) { bonus bAspdAddRate,30; }},{}
+311884,ench,暗黒耐性,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Blind,10000; },{}
+311885,ench,出血耐性,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Bleed,10000; },{}
+311886,ench,沈黙耐性,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Silence,10000; },{}
+311887,ench,毒耐性,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Poison,10000; },{}
+311888,ench,発火耐性,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Burning,10000;},{}
+311889,ench,呪い耐性,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Curse,10000;},{}
+311890,ench,限界突破,6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddSkillCoolDown,"EVT_FULL_THROTTLE",-600000; },{}
+
+311905,ench,氷結耐性,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Frostmisty,10000; },{}
+311907,ench,冷凍耐性,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Cold,10000; },{}
+311909,ench,不滅なる利益者,6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,31909,50,10000; bonus3 bAutoActiveMagic,311909,50,10000; if(checkactiveitem(311909)){ bonus2 bHPRatePenaltyTime,10000,10; }},{}
+312023,ench,MaxSP + 15%,6,,,,,,,,,,65535,,,,,{},{ bonus bMaxSPRate,15; },{}
+312032,ench,Cri + 25,6,,,,,,,,,,65535,,,,,{},{ bonus bCritical,25;},{}
+
+410210,head,リトルアビスドラゴン,4,,10,100,0:0,2:0,,0,2074075135,2,512,,100,2316,0,{},{ bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; if(equippeditem(311284)){ bonus2 bSubEle,Ele_Dark,5; bonus2 bSubEle,Ele_Poison,5; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; }},{}
+410211,head,リトルアビスドラゴン,4,,10,100,0:0,2:0,,1,2074075135,2,512,,100,2316,0,{},{ bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; if(equippeditem(311284)){ bonus2 bSubEle,Ele_Dark,5; bonus2 bSubEle,Ele_Poison,5; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; }},{}
+
+450208,armor,パラケルススコート,4,,10,1000,0:0,100:0,,1,2074075135,2,16,,100,,1,{},{ bonus bMaxHPRate,10; bonus bMaxSPRate,10; if(getskilllv("GN_CARTBOOST")>=5){ bonus bMaxHP,50*getskilllv("GN_CARTBOOST"); } if(getskilllv("GN_CRAZYWEED")>=5){ bonus2 bAddRace,Rct_Boss,7*getskilllv("GN_CRAZYWEED"); bonus2 bAddRace,Rct_NonBoss,7*getskilllv("GN_CRAZYWEED"); }if(getskilllv("GN_FIRE_EXPANSION")>=5){ bonus2 bAddSkillDamageRate,"GN_CARTCANNON",2*getskilllv("GN_FIRE_EXPANSION"); bonus2 bAddSkillDamageRate,"GN_CARTBOOST",2*getskilllv("GN_FIRE_EXPANSION"); } if(getequiprefinerycnt() >= 5){ bonus bDef,150; bonus bMdef,15; } if(getequiprefinerycnt() >= 7){ bonus bDef,150; bonus bMdef,15; } if(getequiprefinerycnt() >= 10){ bonus bAddLongWeaponDamage,15; bonus bAddShortWeaponDamage,15; bonus bUnbreakableArmor,0; }},{}
+
+470180,shoes,スターリースカイ・ツインプライム,4,,10,600,0:0,20:15,,1,2074075135,2,64,,100,,1,{},{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5;bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus bSkillDelayRate,-4*getequiprefinerycnt(6); if(getequiprefinerycnt(6) >= 7){ bonus bAllStatus,15; bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; }if(getequiprefinerycnt(6) >= 9){ bonus bAllStatus,25; bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; bonus2 bMagicAddRace,Rct_Boss,25; bonus2 bMagicAddRace,Rct_NonBoss,25; } if(equippeditem(311365)){ bonus bMaxHPRate,40; bonus bAllStatus,40; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; }},{}
+
+510043,weapon,覚醒栄光を讃えし王剣,5,,10,600,120:0,0:0,1,1,673144448,2,2,4,130,1,1,{},{ bonus2 bAddSize,Size_Small,6*getequiprefinerycnt(4); bonus2 bMagicAddSize,Size_Small,6*getequiprefinerycnt(4); bonus2 bAddSize,Size_Medium,6*getequiprefinerycnt(4); bonus2 bMagicAddSize,Size_Medium,6*getequiprefinerycnt(4); bonus2 bAddSize,Size_Big,6*getequiprefinerycnt(4); bonus2 bMagicAddSize,Size_Big,6*getequiprefinerycnt(4); if(getequiprefinerycnt(4) >= 9){ bonus bNoSizeFix,0; }if(equippeditem(510044)){ bonus bPerfectHitAddRate,100; bonus2 bSubRace,Rct_Player,20; bonus2 bMagicSubRace,Rct_Player,20; }},{}
+510044,weapon,覚醒破滅を纏いし業剣,5,,10,600,120:0,0:0,1,1,673144448,2,2,4,130,1,1,{},{ bonus2 bAddEle,Ele_Neutral,6*getequiprefinerycnt(4); bonus2 bMagicAddEle,Ele_Neutral,6*getequiprefinerycnt(4); bonus2 bAddEle,Ele_Wind,6*getequiprefinerycnt(4); bonus2 bMagicAddEle,Ele_Wind,6*getequiprefinerycnt(4); bonus2 bAddEle,Ele_Holy,6*getequiprefinerycnt(4); bonus2 bMagicAddEle,Ele_Holy,6*getequiprefinerycnt(4); bonus2 bAddEle,Ele_Earth,6*getequiprefinerycnt(4); bonus2 bMagicAddEle,Ele_Earth,6*getequiprefinerycnt(4); bonus2 bAddEle,Ele_Ghost,6*getequiprefinerycnt(4); bonus2 bMagicAddEle,Ele_Ghost,6*getequiprefinerycnt(4); bonus2 bAddEle,Ele_Water,6*getequiprefinerycnt(4); bonus2 bMagicAddEle,Ele_Water,6*getequiprefinerycnt(4); bonus2 bAddEle,Ele_Fire,6*getequiprefinerycnt(4); bonus2 bMagicAddEle,Ele_Fire,6*getequiprefinerycnt(4); bonus2 bAddEle,Ele_Poison,6*getequiprefinerycnt(4); bonus2 bMagicAddEle,Ele_Poison,6*getequiprefinerycnt(4); bonus2 bAddEle,Ele_Dark,6*getequiprefinerycnt(4); bonus2 bMagicAddEle,Ele_Dark,6*getequiprefinerycnt(4); bonus2 bAddEle,Ele_Undead,6*getequiprefinerycnt(4); bonus2 bMagicAddEle,Ele_Undead,6*getequiprefinerycnt(4); if(getequiprefinerycnt(4) >= 9){ bonus2 bAddSkillCoolDown,"GC_DARKCROW",-30000; }},{}
+
+610029,weapon,覚醒古王の双刃,9,,10,1200,240:0,0:0,1,1,4096,2,34,4,130,16,1,{},{ bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus2 bSubSkillDamageRate,"GC_CROSSIMPACT",Baselevel; bonus2 bSubSkillDamageRate,"GC_CROSSRIPPERSLASHER",Baselevel; bonus2 bSubSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel; if(getequiprefinerycnt(4) >= 7){ bonus2 bSubSkillDamageRate,"GC_CROSSIMPACT",Baselevel; bonus2 bSubSkillDamageRate,"GC_CROSSRIPPERSLASHER",Baselevel; bonus2 bSubSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel; } if(getequiprefinerycnt(4) >= 9){ bonus2 bSubSkillDamageRate,"GC_CROSSIMPACT",Baselevel; bonus2 bSubSkillDamageRate,"GC_CROSSRIPPERSLASHER",Baselevel; bonus2 bSubSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel; } if(getequiprefinerycnt(4) >= 10){ bonus bDefRatioAtkRace,Rct_Boss; bonus bDefRatioAtkRace,Rct_NonBoss; bonus2 bAddSkillCoolDown,"GC_ROLLINGCUTTER",-200; }},{}
