@@ -1,0 +1,47 @@
+29371,Unknown_Item,真理の解放,6,,,0,,,,,,2,65535,,1,,,{},{ bonus3 bAutoActiveMagic,29371,100,10000; if(equippeditem(310655)){ bonus3 bAutoActiveMagic,29371,200,10000; } }
+29436,Unknown_Item,覇王,6,,,0,,,,,,2,65535,,1,,,{},{ bonus4 bAutoActiveItem,29436,100,5000,EAS_WEAPON; if(equippeditem(310655)){ bonus4 bAutoActiveItem,29436,200,5000,EAS_WEAPON; } }
+29509,Unknown_Item,豪傑,6,,,0,,,,,,2,65535,,1,,,{},{ bonus4 bAutoActiveItem,29509,100,10000,EAS_WEAPON; if(equippeditem(310655)){ bonus4 bAutoActiveItem,29509,200,10000,EAS_WEAPON; } }
+
+310198,ench,断撃,6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,4*getequiprefinerycnt(); if(equippeditem(4706)){ bonus2 bIgnoreDefRace,Rct_Boss,100; bonus2 bIgnoreDefRace,Rct_NonBoss,100; } }
+310203,ench,斬魔,6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,4*getequiprefinerycnt(); if(equippeditem(4716)){ bonus2 bIgnoreMdefRace,Rct_Boss,100; bonus2 bIgnoreMdefRace,Rct_NonBoss,100; } }
+310323,ench,超越,6,,,,,,,,,,65535,,,,,{},{ bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; bonus bMaxHP,20*Baselevel; bonus bMaxSP,2*Baselevel; }
+310336,ench,サイトLv1,6,,,,,,,,,,65535,,,,,{},{ skill "MG_SIGHT",1; }
+310337,ench,透視,6,,,,,,,,,,65535,,,,,{},{ /* sc_start SC_SIGHT,1800000,0; */ }
+
+310478,ench,ウルフオーブ(Str + 7),6,,,,,,,,,,65535,,,,,{},{ bonus bStr,7; if(equippeditem(400409)){ bonus bStr,15; } }
+310479,ench,ウルフオーブ(Dex + 7),6,,,,,,,,,,65535,,,,,{},{ bonus bDex,7; if(equippeditem(400409)){ bonus bDex,15; } }
+310480,ench,ウルフオーブ(Agi + 7),6,,,,,,,,,,65535,,,,,{},{ bonus bAgi,7; if(equippeditem(400409)){ bonus bAgi,15; } }
+310481,ench,ウルフオーブ(Int + 7),6,,,,,,,,,,65535,,,,,{},{ bonus bInt,7; if(equippeditem(400409)){ bonus bInt,15; } }
+310482,ench,ウルフオーブ(Vit + 7),6,,,,,,,,,,65535,,,,,{},{ bonus bVit,7; if(equippeditem(400409)){ bonus bVit,15; } }
+310483,ench,ウルフオーブ(Luk + 7),6,,,,,,,,,,65535,,,,,{},{ bonus bLuk,7; if(equippeditem(400409)){ bonus bLuk,15; } }
+310484,ench,ウルフオーブ(Pow + 3),6,,,,,,,,,,65535,,,,,{},{ /*bonus bPow,3; if(equippeditem(400409)){ bonus bPow,15; }*/ }
+310485,ench,ウルフオーブ(Con + 3),6,,,,,,,,,,65535,,,,,{},{ /*bonus bCon,3; if(equippeditem(400409)){ bonus bCon,15; }*/ }
+310486,ench,ウルフオーブ(Wis + 3),6,,,,,,,,,,65535,,,,,{},{ /*bonus bWis,3; if(equippeditem(400409)){ bonus bWis,15; }*/ }
+310487,ench,ウルフオーブ(Spl + 3),6,,,,,,,,,,65535,,,,,{},{ /*bonus bSpl,3; if(equippeditem(400409)){ bonus bSpl,15; }*/ }
+310488,ench,ウルフオーブ(Sta + 3),6,,,,,,,,,,65535,,,,,{},{ /*bonus bSta,3; if(equippeditem(400409)){ bonus bSta,15; }*/ }
+310489,ench,ウルフオーブ(Crt + 3),6,,,,,,,,,,65535,,,,,{},{ /*bonus bCrt,3; if(equippeditem(400409)){ bonus bCrt,15; }*/ }
+310496,ench,ウルフオーブ(Def + 300),6,,,,,,,,,,65535,,,,,{},{ bonus bDef,300; if(equippeditem(400409)){ bonus bDef,300; } }
+310497,ench,ウルフオーブ(Mdef + 30),6,,,,,,,,,,65535,,,,,{},{ bonus bMdef,30; if(equippeditem(400409)){ bonus bMdef,30; } }
+310506,ench,ウルフオーブ(Def50%無視),6,,,,,,,,,,65535,,,,,{},{ bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; if(equippeditem(400409)){ bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; } }
+310507,ench,ウルフオーブ(Mdef50%無視),6,,,,,,,,,,65535,,,,,{},{ bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; if(equippeditem(400409)){ bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+310515,ench,ウルフオーブ(スキルディレイ - 15%),6,,,,,,,,,,65535,,,,,{},{ bonus bSkillDelayRate,-15; if(equippeditem(400409)){ bonus bSkillDelayRate,-15; } }
+310567,ench,ウルフオーブ(攻撃速度 + 10%),6,,,,,,,,,,65535,,,,,{},{ bonus bAspdRate,10; if(equippeditem(400409)){ bonus bAspdRate,10; } }
+310568,ench,ウルフオーブ(詠唱時間 - 15%),6,,,,,,,,,,65535,,,,,{},{ bonus bCastrate,-15; if(equippeditem(400409)){ bonus bCastrate,-15; } }
+310571,ench,ウルフオーブ(完全回避 + 25),6,,,,,,,,,,65535,,,,,{},{ bonus bFlee2,25; if(equippeditem(400409)){ bonus bMaxHPrate,10; bonus bMaxSPrate,10; } }
+310572,ench,ウルフオーブ(詠唱妨害不可),6,,,,,,,,,,65535,,,,,{},{ bonus bNoCastCancel,0; if(equippeditem(400409)){ bonus bMaxHPrate,10; bonus bMaxSPrate,10; } }
+310597,ench,ウルフオーブ(物理：ダメージ + 20%),6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddRace,Rct_Boss,20; bonus2 bAddRace,Rct_NonBoss,20; if(equippeditem(400409)){ bonus bBaseAtk,Baselevel; } }
+310598,ench,ウルフオーブ(魔法：ダメージ + 20%),6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,20; bonus2 bMagicAddRace,Rct_NonBoss,20; if(equippeditem(400409)){ bonus bMatk,Baselevel; } }
+310600,ench,ウルフオーブ(固定詠唱時間 - 50%),6,,,,,,,,,,65535,,,,,{},{ bonus2 bFixCastrate,-50,0; if(equippeditem(400409)){ bonus2 bFixCastrate,-100,0; } }
+
+310655,ench,森羅万象,6,,,0,,,,,,,65535,,,,,{},{ bonus2 bAddSize,Size_Small,15; bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Big,15; bonus2 bMagicAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Medium,15; bonus2 bMagicAddSize,Size_Big,15; }
+310758,ench,プレイヤー耐性13,6,,,0,,,,,,,65535,,,,,{},{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; }
+310759,ench,アレス,6,,,0,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Neutral,5; bonus2 bSubEle,Ele_Water,5; bonus2 bSubEle,Ele_Earth,5; bonus2 bSubEle,Ele_Fire,5; bonus2 bSubEle,Ele_Wind,5; bonus2 bSubEle,Ele_Poison,5; bonus2 bSubEle,Ele_Holy,5; bonus2 bSubEle,Ele_Dark,5; bonus2 bSubEle,Ele_Ghost,5; bonus2 bSubEle,Ele_Undead,5; }
+310760,ench,王の神威,6,,,0,,,,,,,65535,,,,,{},{ bonus bMaxHP,25*Baselevel; }
+310850,ench,揚花火,6,,,0,,,,,,,65535,,,,,{},{ hateffect 51,TRUE; },{ hateffect 51,FALSE; }
+
+490119,acc,アルファコア,4,,10,1500,,,,0,2074075135,2,8,,150,,0,{},{ skill "ECL_SNOWFLIP",1; skill "ECL_PEONYMAMY",1; skill "ECL_SADAGUI",1; skill "ECL_SEQUOIADUST",1; if(equippeditem(310655)){ bonus bAllStatus,10; bonus bAspdRate,10; } }
+490142,acc,オメガコア,4,,10,500,,,,0,2074075135,2,128,,100,,0,{},{ bonus bAspdAddRate,10; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(equippeditem(310655)){ bonus bAllStatus,10; bonus bSkillDelayRate,-15; } }
+490143,acc,オメガコア,4,,10,500,0:0,1:0,,1,2074075135,2,128,,100,,0,{},{ bonus bAspdAddRate,10; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(equippeditem(310655)){ bonus bAllStatus,10; bonus bSkillDelayRate,-15; } }
+
+item_db2_add.txt
+310850,0,22,1,1,1,1,1,0,0,0,0,0	//揚花火
