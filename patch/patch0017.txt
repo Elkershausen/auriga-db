@@ -1,0 +1,57 @@
+fix
+300114,card,魔力中毒プラガカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(getlook(2)==12){ bonus bHit,15; bonus bAspd,3; if(getequiprefinerycnt(4) >=10){ bonus bBaseAtk,100; } } }
+300123,card,パープルピタヤカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(getlook(2)==22){ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; if(getequiprefinerycnt(4) >=10){ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } } }
+
+add
+310942,ench,潜在覚醒(ジャックフロスト),6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveMagic,310942,1000,10000; if(checkactiveitem()) { misceffect 104,""; bonus2 bAddSpCost,"WL_JACKFROST",-119; } }
+310944,ench,潜在覚醒(サモンベントス),6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddFixCastRate,"SO_SUMMON_VENTUS",-100; }
+310948,ench,潜在覚醒(アローストーム),6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310948,1000,10000; if(checkactiveitem()) { misceffect 104,""; bonus2 bAddSpCost,"RA_ARROWSTORM",-47; } }
+310950,ench,潜在覚醒(シビアレインストーム),6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddFixCastRate,"WM_SEVERE_RAINSTORM",-100; }
+310952,ench,潜在覚醒(ジュデックス),6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveMagic,310952,1000,10000; if(checkactiveitem()) { misceffect 104,""; bonus2 bAddSpCost,"AB_JUDEX",-48; } }
+310954,ench,潜在覚醒(イグニッションブレイク),6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310954,1000,10000; if(checkactiveitem()) { misceffect 104,""; bonus2 bAddSpCost,"RK_IGNITIONBREAK",-54; } }
+310957,ench,潜在覚醒(獅子吼),6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310957,1000,10000; if(checkactiveitem()) { misceffect 104,""; bonus2 bAddSpCost,"SR_HOWLINGOFLION",-119; } }
+310959,ench,潜在覚醒(アームズキャノン),6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310959,1000,10000; if(checkactiveitem()) { misceffect 104,""; bonus2 bAddSpCost,"NC_ARMSCANNON",-59; } }
+310961,ench,潜在覚醒(クレイジーウィード),6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310961,1000,10000; if(checkactiveitem()) { misceffect 104,""; bonus2 bAddSpCost,"GN_CRAZYWEED",-59; } }
+310971,ench,潜在覚醒(バニシングバスター),6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310971,1000,10000; if(checkactiveitem()) { misceffect 104,""; bonus2 bAddSpCost,"RL_BANISHING_BUSTER",-74; } }
+310973,ench,潜在覚醒(満月脚),6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310973,1000,10000; if(checkactiveitem()) { misceffect 104,""; bonus2 bAddSpCost,"SJ_FULLMOONKICK",-79; } }
+310976,ench,潜在覚醒(エスハ),6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddFixCastRate,"SP_SHA",-100; }
+310978,ench,潜在覚醒(大トロ),6,,,,,,,,,,65535,,,,,{},{ bonus4 bAutoActiveSkill,"SU_TUNABELLY",310978,1000,30000; if(checkactiveitem()) { misceffect 104,""; bonus2 bAddSpCost,"SU_TUNABELLY",-59; } }
+310979,ench,潜在覚醒(サベージの魂),6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310979,1000,10000; if(checkactiveitem()) { misceffect 104,""; bonus2 bAddSpCost,"SU_SVG_SPIRIT",-59; } }
+
+311891,ench,潜在解放(アークメイジI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311892,ench,潜在解放(アビスチェイサーI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311893,ench,潜在解放(インクイジターI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311894,ench,潜在解放(インペリアルガードI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311895,ench,潜在解放(ウィンドホークI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311896,ench,潜在解放(エレメンタルマスターI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311897,ench,潜在解放(カーディナルI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311898,ench,潜在解放(シャドウクロスI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311899,ench,潜在解放(ドラゴンナイトI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311900,ench,潜在解放(トルバドゥールI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311901,ench,潜在解放(トルヴェールI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311902,ench,潜在解放(バイオロI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+311903,ench,潜在解放(マイスターI),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+
+312031,ench,潜在解放(アークメイジII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+
+312033,ench,潜在解放(アビスチェイサーII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+312035,ench,潜在解放(インペリアルガードII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+312036,ench,潜在解放(ウィンドホークII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+312037,ench,潜在解放(エレメンタルマスターII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+312038,ench,潜在解放(カーディナルII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+312039,ench,潜在解放(シャドウクロスII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+312040,ench,潜在解放(ドラゴンナイトII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+312043,ench,潜在解放(バイオロII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+312300,ench,潜在解放(ドラゴンナイトIII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+312304,ench,潜在解放(カーディナルIII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+312305,ench,悠遠なる天上の都,6,,,,,,,,,,65535,,,,,{ /*bonus3 bAutoActiveWeapon,312305,100,10000; if(checkactiveitem()) { misceffect 220,""; sc_start EFST_EP16_DEF } if(equippeditem(27127)){ bonus3 bAutoActiveWeapon,312305,200,10000; if(checkactiveitem()) { misceffect 220,""; sc_start EFST_EP16_DEF } }*/ },{ bonus2 bAddSize,Size_Small,15; bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Big,15; bonus2 bMagicAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Medium,15; bonus2 bMagicAddSize,Size_Big,15; if(equippeditem(27128)){ bonus2 bHPDrainRate,300,2; } }
+312395,ench,ウルの加護,6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{ bonus2 bAddEle,Ele_Neutral,15; bonus2 bAddEle,Ele_Water,15; bonus2 bAddEle,Ele_Earth,15; bonus2 bAddEle,Ele_Fire,15; bonus2 bAddEle,Ele_Wind,15; bonus2 bAddEle,Ele_Poison,15; bonus2 bAddEle,Ele_Holy,15; bonus2 bAddEle,Ele_Dark,15; bonus2 bAddEle,Ele_Ghost,15; bonus2 bAddEle,Ele_Undead,15; bonus2 bMagicAddEle,Ele_Neutral,15; bonus2 bMagicAddEle,Ele_Water,15; bonus2 bMagicAddEle,Ele_Earth,15; bonus2 bMagicAddEle,Ele_Fire,15; bonus2 bMagicAddEle,Ele_Wind,15; bonus2 bMagicAddEle,Ele_Poison,15; bonus2 bMagicAddEle,Ele_Holy,15; bonus2 bMagicAddEle,Ele_Dark,15; bonus2 bMagicAddEle,Ele_Ghost,15; bonus2 bMagicAddEle,Ele_Undead,15; }
+312417,ench,増幅された怨望,6,,,,,,,,,,65535,,,,,{ /*セット効果は個別に記述*/ },{ bonus bAspdAddRate,10; }
+312418,ench,祈りの晩鐘,6,,,,,,,,,,65535,,,,,{ /*セット効果は個別に記述*/ },{ bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; }
+312419,ench,百射皆中,6,,,,,,,,,,65535,,,,,{},{ bonus bPerfectHitAddRate,100; }
+312420,ench,再生の炎,6,,,,,,,,,,65535,,,,,{ /* EFST_ULTIMATE_S */ },{ /* bonus3 bAutoActiveWeapon,312420,100,60000; if(checkactiveitem()) { misceffect 220,""; } bonus3 bAutoActiveMagic,312420,100,60000; if(checkactiveitem()) { misceffect 220,""; } */ }
+312421,ench,最果ての支配者,6,,,,,,,,,,65535,,,,,{ /*セット効果は個別に記述*/ },{ bonus bHPGainValue,100; bonus bSPGainValue,10; }
+312445,ench,オートスペル(チェーンライトニング),6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoSpell,"WL_CHAINLIGHTNING",5,100; }
+312446,ench,魔鉱,6,,,,,,,,,,65535,,,,,{},{ bonus bNoGemStone,0; }
+312473,ench,潜在解放(アークメイジIII),6,,,,,,,,,,65535,,,,,{ /*4次職*/ },{}
+312475,ench,無念無想,6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,312475,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus bAddCriticalDamage,100; } }
