@@ -787,7 +787,7 @@
 300124,card,ブルーピタヤカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bIgnoreMDefRace,Rct_Boss,25; bonus2 bIgnoreMDefRace,Rct_NonBoss,25; }
 300125,card,グリーンピタヤカード,6,,10,10,,,,,,,2,,,,,{},{ bonus bBaseAtk,5; bonus2 bAddEff,Eff_Stone,100; }
 300137,card,王女メアカード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bAddEleMagicDamageRate,Ele_Fire,50; bonus2 bAddEleMagicDamageRate,Ele_Water,50; bonus2 bAddEleMagicDamageRate,Ele_Wind,50; bonus2 bAddEleMagicDamageRate,Ele_Earth,50; }
-300138,card,半龍王女メアカード,6,,10,10,,,,,,,769,,,,,{},{/* //固定詠唱 -1秒　未実装 */}
+300138,card,半龍王女メアカード,6,,10,10,,,,,,,769,,,,,{},{/* 固定詠唱 -1秒　未実装 */}
 300139,card,封印された月夜花カード,6,,10,10,,,,,,,64,,,,,{},{ bonus bSpeedRate,25; bonus bHit,-50; if(equippeditem(22132)){ skill "AL_HEAL",5; if(readparam(11)<= 99){ bonus bMatk,3*getequiprefinerycnt(); bonus bMdef,3*getequiprefinerycnt(); } if(readparam(11)>= 100){ bonus bMatk,10*getequiprefinerycnt(); bonus bMdef,6*getequiprefinerycnt(); }}if(equippeditem(470047)){ skill "AL_HEAL",10; if(readparam(11)<= 99){ bonus bMatk,5*getequiprefinerycnt(); bonus bMdef,5*getequiprefinerycnt(); } if(readparam(11)>= 100){ bonus bMatk,15*getequiprefinerycnt(); bonus bMdef,10*getequiprefinerycnt(); }} if(equippeditem(311072)){ bonus bMaxHPRate,20; bonus bAspdAddRate,3; }},{}
 300140,card,深海のスロフォカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Fish,15; bonus2 bMagicAddEle,Ele_Water,15; },{}
 300141,card,深海のオボンヌカード,6,,10,10,,,,,,,136,,,,,{},{ skill "PR_STRECOVERY",1; },{}
@@ -999,83 +999,83 @@
 300452,card,フリードリヒ・ハイネン(サイン入り)カード,6,,10,10,,,,,,,136,,,,,{},{ bonus bMaxHPrate,15; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; skill "HW_GANBANTEIN",1; },{}
 300453,card,クロネカー・ハイネン(サイン入り)カード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bHPRatePenaltyTime,1000,-1; bonus3 bAutoActiveWeapon,300451,100,30000; if(checkactiveitem()) { sc_start SC_ENERGYCOAT,30000,0; } bonus3 bAutoActiveMagic,300451,100,30000; if(checkactiveitem()) { sc_start SC_ENERGYCOAT,30000,0; } },{}
 310012,Unknown_Item,死の欲動,6,,,0,,,,,,2,65535,,1,,,{},{ bonus4 bAutoActiveItem,310012,100,10000,EAS_WEAPON; if(checkactiveitem()){ misceffect 220,""; active_montransform 1635; bonus bFlee,150; bonus bSkillDelayRate,-100; } if(equippeditem(310655)){ bonus4 bAutoActiveItem,310012,200,10000,EAS_WEAPON; if(checkactiveitem()){ misceffect 220,""; active_montransform 1635; bonus bFlee,150; bonus bSkillDelayRate,-100; } } }
-310082,ench,Q-Normal,6,,,,,,,,,,65535,,,,,{},{},{}
-310083,ench,Q-Boss,6,,,,,,,,,,65535,,,,,{},{},{}
-310084,ench,B-Vit,6,,,,,,,,,,65535,,,,,{},{},{}
-310085,ench,B-Luk,6,,,,,,,,,,65535,,,,,{},{},{}
-310086,ench,B-Str,6,,,,,,,,,,65535,,,,,{},{},{}
-310087,ench,B-Agi,6,,,,,,,,,,65535,,,,,{},{},{}
-310088,ench,B-Int,6,,,,,,,,,,65535,,,,,{},{},{}
-310089,ench,B-Dex,6,,,,,,,,,,65535,,,,,{},{},{}
-310090,ench,A-Reflect,6,,,,,,,,,,65535,,,,,{},{},{}
-310091,ench,A-SPCost,6,,,,,,,,,,65535,,,,,{},{},{}
-310092,ench,P-Petrifaction,6,,,,,,,,,,65535,,,,,{},{},{}
-310093,ench,P-Curse,6,,,,,,,,,,65535,,,,,{},{},{}
-310094,ench,P-Sleep,6,,,,,,,,,,65535,,,,,{},{},{}
-310095,ench,P-Confuse,6,,,,,,,,,,65535,,,,,{},{},{}
-310096,ench,P-Silence,6,,,,,,,,,,65535,,,,,{},{},{}
-310097,ench,P-Fear,6,,,,,,,,,,65535,,,,,{},{},{}
-310098,ench,P-Ignition,6,,,,,,,,,,65535,,,,,{},{},{}
-310099,ench,R-Saint,6,,,,,,,,,,65535,,,,,{},{},{}
-310100,ench,R-Undead,6,,,,,,,,,,65535,,,,,{},{},{}
-310101,ench,R-Darkness,6,,,,,,,,,,65535,,,,,{},{},{}
-310102,ench,R-Telekinesis,6,,,,,,,,,,65535,,,,,{},{},{}
-310103,ench,E-Saint,6,,,,,,,,,,65535,,,,,{},{},{}
-310104,ench,E-Undead,6,,,,,,,,,,65535,,,,,{},{},{}
-310105,ench,E-Darkness,6,,,,,,,,,,65535,,,,,{},{},{}
-310106,ench,E-Poison,6,,,,,,,,,,65535,,,,,{},{},{}
-310107,ench,G-Guided,6,,,,,,,,,,65535,,,,,{},{},{}
-310108,ench,G-Cri,6,,,,,,,,,,65535,,,,,{},{},{}
-310109,ench,U-PowerArmor,6,,,,,,,,,,65535,,,,,{},{},{}
-310110,ench,U-PowerLeg,6,,,,,,,,,,65535,,,,,{},{},{}
-310111,ench,U-PowerWing,6,,,,,,,,,,65535,,,,,{},{},{}
-310112,ench,U-PowerShield,6,,,,,,,,,,65535,,,,,{},{},{}
-310121,ench,S-UnlimitVital,6,,,,,,,,,,65535,,,,,{},{},{}
-310122,ench,S-SpellBuster,6,,,,,,,,,,65535,,,,,{},{},{}
-310123,ench,S-FiringShot,6,,,,,,,,,,65535,,,,,{},{},{}
-310124,ench,S-OverPower,6,,,,,,,,,,65535,,,,,{},{},{}
-310125,ench,S-FatalFlash,6,,,,,,,,,,65535,,,,,{},{},{}
-310126,ench,S-LuckyStrike,6,,,,,,,,,,65535,,,,,{},{},{}
-310127,ench,L-Sight1,6,,,,,,,,,,65535,,,,,{},{},{}
-310128,ench,L-Teleport1,6,,,,,,,,,,65535,,,,,{},{},{}
-310129,ench,L-SpellBreaker1,6,,,,,,,,,,65535,,,,,{},{},{}
-310130,ench,L-Steal1,6,,,,,,,,,,65535,,,,,{},{},{}
-310131,ench,L-SnowFlip1,6,,,,,,,,,,65535,,,,,{},{},{}
-310132,ench,L-PeonyMamy1,6,,,,,,,,,,65535,,,,,{},{},{}
-310133,ench,L-Sadagui1,6,,,,,,,,,,65535,,,,,{},{},{}
-310134,ench,L-SeuoiaDust1,6,,,,,,,,,,65535,,,,,{},{},{}
-310135,ench,L-Hiding1,6,,,,,,,,,,65535,,,,,{},{},{}
-310136,ench,L-Magnum3,6,,,,,,,,,,65535,,,,,{},{},{}
-310137,ench,L-FireBall3,6,,,,,,,,,,65535,,,,,{},{},{}
-310138,ench,L-Heal1,6,,,,,,,,,,65535,,,,,{},{},{}
-310139,ench,L-Cure1,6,,,,,,,,,,65535,,,,,{},{},{}
-310140,ench,L-Poison3,6,,,,,,,,,,65535,,,,,{},{},{}
-310141,ench,L-Detoxify1,6,,,,,,,,,,65535,,,,,{},{},{}
-310142,ench,L-ThrowStone1,6,,,,,,,,,,65535,,,,,{},{},{}
-310143,ench,L-AbsorbSpirits1,6,,,,,,,,,,65535,,,,,{},{},{}
-310144,ench,L-Bash3,6,,,,,,,,,,65535,,,,,{},{},{}
-310145,ench,L-Cloaking1,6,,,,,,,,,,65535,,,,,{},{},{}
-310146,ench,L-CastCancel1,6,,,,,,,,,,65535,,,,,{},{},{}
-310147,ench,L-FireBolt3,6,,,,,,,,,,65535,,,,,{},{},{}
-310148,ench,L-ColdBolt3,6,,,,,,,,,,65535,,,,,{},{},{}
-310149,ench,L-LightningBolt3,6,,,,,,,,,,65535,,,,,{},{},{}
-310150,ench,L-EarthSpike3,6,,,,,,,,,,65535,,,,,{},{},{}
-310151,ench,L-Angelus1,6,,,,,,,,,,65535,,,,,{},{},{}
-310152,ench,L-StoneCurse3,6,,,,,,,,,,65535,,,,,{},{},{}
-310153,ench,L-FrostDiver3,6,,,,,,,,,,65535,,,,,{},{},{}
-310154,ench,L-Meteor3,6,,,,,,,,,,65535,,,,,{},{},{}
-310155,ench,L-Estimation1,6,,,,,,,,,,65535,,,,,{},{},{}
-310156,ench,L-FrostNova2,6,,,,,,,,,,65535,,,,,{},{},{}
-310157,ench,L-DecAgi1,6,,,,,,,,,,65535,,,,,{},{},{}
-310158,ench,L-Identify1,6,,,,,,,,,,65535,,,,,{},{},{}
-310159,ench,L-Loud1,6,,,,,,,,,,65535,,,,,{},{},{}
-310160,ench,L-SoulStrike3,6,,,,,,,,,,65535,,,,,{},{},{}
-310161,ench,L-CallSpirits2,6,,,,,,,,,,65535,,,,,{},{},{}
-310162,ench,L-CloseConfine1,6,,,,,,,,,,65535,,,,,{},{},{}
-310163,ench,L-AutoGuard3,6,,,,,,,,,,65535,,,,,{},{},{}
-310164,ench,L-PotionPitcher3,6,,,,,,,,,,65535,,,,,{},{},{}
-310165,ench,L-MagicPower5,6,,,,,,,,,,65535,,,,,{},{},{}
-310166,ench,L-Gloria1,6,,,,,,,,,,65535,,,,,{},{},{}
+310082,ench,Q-Normal,6,,,,,,,,,,65535,,,,,{},{}
+310083,ench,Q-Boss,6,,,,,,,,,,65535,,,,,{},{}
+310084,ench,B-Vit,6,,,,,,,,,,65535,,,,,{},{ bonus bVit,1; if(getequiprefinerycnt() >= 6){ bonus bVit,2; } if(getequiprefinerycnt() >= 8){ bonus bVit,3; } if(equippeditem(400047)){ bonus bVit,6; } }
+310085,ench,B-Luk,6,,,,,,,,,,65535,,,,,{},{ bonus bLuk,1; if(getequiprefinerycnt() >= 6){ bonus bLuk,2; } if(getequiprefinerycnt() >= 8){ bonus bLuk,3; } if(equippeditem(400047)){ bonus bLuk,6; } }
+310086,ench,B-Str,6,,,,,,,,,,65535,,,,,{},{ bonus bStr,1; if(getequiprefinerycnt() >= 6){ bonus bStr,2; } if(getequiprefinerycnt() >= 8){ bonus bStr,3; } if(equippeditem(400047)){ bonus bStr,6; } }
+310087,ench,B-Agi,6,,,,,,,,,,65535,,,,,{},{ bonus bAgi,1; if(getequiprefinerycnt() >= 6){ bonus bAgi,2; } if(getequiprefinerycnt() >= 8){ bonus bAgi,3; } if(equippeditem(400047)){ bonus bAgi,6; } }
+310088,ench,B-Int,6,,,,,,,,,,65535,,,,,{},{ bonus bInt,1; if(getequiprefinerycnt() >= 6){ bonus bInt,2; } if(getequiprefinerycnt() >= 8){ bonus bInt,3; } if(equippeditem(400047)){ bonus bInt,6; } }
+310089,ench,B-Dex,6,,,,,,,,,,65535,,,,,{},{ bonus bDex,1; if(getequiprefinerycnt() >= 6){ bonus bDex,2; } if(getequiprefinerycnt() >= 8){ bonus bDex,3; } if(equippeditem(400047)){ bonus bDex,6; } }
+310090,ench,A-Reflect,6,,,,,,,,,,65535,,,,,{},{ bonus bShortWeaponDamageReturn,2; if(getequiprefinerycnt() >= 6){ bonus bShortWeaponDamageReturn,3; } if(getequiprefinerycnt() >= 8){ bonus bShortWeaponDamageReturn,5; } if(equippeditem(400047)){ bonus bShortWeaponDamageReturn,10; } }
+310091,ench,A-SPCost,6,,,,,,,,,,65535,,,,,{},{ bonus bUseSPrate,-1; if(getequiprefinerycnt() >= 6){ bonus bUseSPrate,-2; } if(getequiprefinerycnt() >= 8){ bonus bUseSPrate,-3; } if(equippeditem(400047)){ bonus bUseSPrate,-20; } }
+310092,ench,P-Petrifaction,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Stone,10000; if(equippeditem(400047)){ bonus bMaxHP,1000; } if(equippeditem(311436)){ bonus2 bSubEle,Ele_Earth,15; } }
+310093,ench,P-Curse,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Curse,10000; if(equippeditem(400047)){ bonus bMaxHPr,1000; } if(equippeditem(311436)){ bonus2 bSubEle,Ele_Dark,15; } }
+310094,ench,P-Sleep,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Sleep,10000; if(equippeditem(400047)){ bonus bMaxHPr,1000; } if(equippeditem(311436)){ bonus2 bSubEle,Ele_Ghost,15; } }
+310095,ench,P-Confuse,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Confusion,10000; if(equippeditem(400047)){ bonus bMaxHPr,1000; } if(equippeditem(311436)){ bonus2 bSubEle,Ele_Poison,15; } }
+310096,ench,P-Silence,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Silence,10000; if(equippeditem(400047)){ bonus bMaxHPr,1000; } if(equippeditem(311436)){ bonus2 bSubEle,Ele_Wind,15; } }
+310097,ench,P-Fear,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Fear,10000; if(equippeditem(400047)){ bonus bMaxHPr,1000; } if(equippeditem(311436)){ bonus2 bSubEle,Ele_Holy,15; } }
+310098,ench,P-Ignition,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Burning,10000; if(equippeditem(400047)){ bonus bMaxHPr,1000; } if(equippeditem(311436)){ bonus2 bSubEle,Ele_Fire,15; } }
+310099,ench,R-Saint,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Hply,25; bonus2 bSubEle,Ele_Dark,-25; if(getskilllv("CR_TRUST")>=1){ bonus2 bSubEle,Ele_Holy,-25; } if(equippeditem(310192)){ bonus2 bSubEle,Ele_Holy,25; } }
+310100,ench,R-Undead,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Undead,25; bonus2 bSubEle,Ele_Ghost,-25; if(equippeditem(310192)){ bonus2 bSubEle,Ele_Undead,25; } }
+310101,ench,R-Darkness,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Dark,25; bonus2 bSubEle,Ele_Holy,-25; if(equippeditem(310192)){ bonus2 bSubEle,Ele_Dark,-25; } }
+310102,ench,R-Telekinesis,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Ghost,25; bonus2 bSubEle,Ele_Undead,-25; if(equippeditem(310192)){ bonus2 bSubEle,Ele_Ghost,25; } }
+310103,ench,E-Saint,6,,,,,,,,,,65535,,,,,{},{ bonus bDefEle,Ele_Holy; if(equippeditem(400047)){ bonus2 bAddEle,Ele_Holy,10; bonus2 bMagicAddEle,Ele_Holy,10; } if(equippeditem(311436)){ bonus2 bAddEle,Ele_Holy,50; bonus2 bMagicAddEle,Ele_Holy,50; } }
+310104,ench,E-Undead,6,,,,,,,,,,65535,,,,,{},{ bonus bDefEle,Ele_Undead; if(equippeditem(400047)){ bonus2 bAddEle,Ele_Undead,10; bonus2 bMagicAddEle,Ele_Undead,10; } if(equippeditem(311436)){ bonus2 bAddEle,Ele_Undead,50; bonus2 bMagicAddEle,Ele_Undead,50; } }
+310105,ench,E-Darkness,6,,,,,,,,,,65535,,,,,{},{ bonus bDefEle,Ele_Dark; if(equippeditem(400047)){ bonus2 bAddEle,Ele_Dark,10; bonus2 bMagicAddEle,Ele_Undead,10; } if(equippeditem(311436)){ bonus2 bAddEle,Ele_Dark,50; bonus2 bMagicAddEle,Ele_Dark,50; } }
+310106,ench,E-Poison,6,,,,,,,,,,65535,,,,,{},{ bonus bDefEle,Ele_Poison; if(equippeditem(400047)){ bonus2 bAddEle,Ele_Poison,10; bonus2 bMagicAddEle,Ele_Poison,10; } if(equippeditem(311436)){ bonus2 bAddEle,Ele_Poison,50; bonus2 bMagicAddEle,Ele_Poison,50; } }
+310107,ench,G-Guided,6,,,,,,,,,,65535,,,,,{},{ bonus bPerfectHitAddRate,2; if(getequiprefinerycnt() >= 7){ bonus bPerfectHitAddRate,3; } if(getequiprefinerycnt() >= 9){ bonus bPerfectHitAddRate,5; } if(getequiprefinerycnt() >= 10){ bonus bPerfectHitAddRate,20; } if(equippeditem(400047)){ bonus bPerfectHitAddRate,20; } }
+310108,ench,G-Cri,6,,,,,,,,,,65535,,,,,{},{ bonus bCritical,2; if(getequiprefinerycnt() >= 7){ bonus bPerfectHitAddRate,3; } if(getequiprefinerycnt() >= 9){ bonus bCritical,5; } if(getequiprefinerycnt() >= 10){ bonus bCritical,20; } if(equippeditem(400047)){ bonus bPerfectHitAddRate,20; } if(equippeditem(311436)){ bonus bPerfectHitAddRate,30; } }
+310109,ench,U-PowerArmor,6,,,,,,,,,,65535,,,,,{},{}
+310110,ench,U-PowerLeg,6,,,,,,,,,,65535,,,,,{},{}
+310111,ench,U-PowerWing,6,,,,,,,,,,65535,,,,,{},{}
+310112,ench,U-PowerShield,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Neutral,10; bonus bAllStatus,2*getequiprefinerycnt(); }
+310121,ench,S-UnlimitVital,6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310121,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bVit,50; } bonus3 bAutoActiveMagic,310121,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bVit,50; } if(getequiprefinerycnt() >= 5){ bonus3 bAutoActiveWeapon,310121,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bVit,50; } bonus3 bAutoActiveMagic,310121,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bVit,50; } } if(getequiprefinerycnt() >= 10){ bonus bVit,50; } if(equippeditem(400047)){ bonus bCastrate,-20; } if(equippeditem(311436)){ bonus bVit,40; bonus bSkillDelayRate,-40; } }
+310122,ench,S-SpellBuster,6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310122,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bInt,50; } bonus3 bAutoActiveMagic,310122,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bInt,50; } if(getequiprefinerycnt() >= 5){ bonus3 bAutoActiveWeapon,310122,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bInt,50; } bonus3 bAutoActiveMagic,310122,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bInt,50; } } if(getequiprefinerycnt() >= 10){ bonus bInt,50; } if(equippeditem(400047)){ bonus bMaxHPrate,20; } if(equippeditem(311436)){ bonus bInt,40; bonus bSkillDelayRate,-40; } }
+310123,ench,S-FiringShot,6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310123,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bDex,50; } bonus3 bAutoActiveMagic,310123,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bDex,50; } if(getequiprefinerycnt() >= 5){ bonus3 bAutoActiveWeapon,310123,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bDex,50; } bonus3 bAutoActiveMagic,310123,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bDex,50; } } if(getequiprefinerycnt() >= 10){ bonus bDex,50; } if(equippeditem(400047)){ bonus bPerfectHitAddRate,20; } if(equippeditem(311436)){ bonus bDex,40; bonus bSkillDelayRate,-40; } }
+310124,ench,S-OverPower,6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310124,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bStr,50; } bonus3 bAutoActiveMagic,310124,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bStr,50; } if(getequiprefinerycnt() >= 5){ bonus3 bAutoActiveWeapon,310124,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bStr,50; } bonus3 bAutoActiveMagic,310124,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bStr,50; } } if(getequiprefinerycnt() >= 10){ bonus bStr,50; } if(equippeditem(400047)){ bonus bMaxHPRate,20; } if(equippeditem(311436)){ bonus bStr,40; bonus bSkillDelayRate,-40; } }
+310125,ench,S-FatalFlash,6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310125,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bAgi,50; } bonus3 bAutoActiveMagic,310125,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bAgi,50; } if(getequiprefinerycnt() >= 5){ bonus3 bAutoActiveWeapon,310125,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bAgi,50; } bonus3 bAutoActiveMagic,310125,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bAgi,50; } } if(getequiprefinerycnt() >= 10){ bonus bAgi,50; } if(equippeditem(400047)){ bonus bSkillDelayRate,-20; } if(equippeditem(311436)){ bonus bAgi,40; bonus bSkillDelayRate,-20; } }
+310126,ench,S-LuckyStrike,6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,310126,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bLuk,50; } bonus3 bAutoActiveMagic,310126,100,4000; if(checkactiveitem()) { misceffect 220,""; bonus bLuk,50; } if(getequiprefinerycnt() >= 5){ bonus3 bAutoActiveWeapon,310126,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bLuk,50; } bonus3 bAutoActiveMagic,310126,200,7000; if(checkactiveitem()) { misceffect 220,""; bonus bLuk,50; } } if(getequiprefinerycnt() >= 10){ bonus bLuk,50; } if(equippeditem(400047)){ bonus bFlee2,10; } if(equippeditem(311436)){ bonus bLuk,40; bonus bSkillDelayRate,-40; } }
+310127,ench,L-Sight1,6,,,,,,,,,,65535,,,,,{},{ skill "MG_SIGHT",1; }
+310128,ench,L-Teleport1,6,,,,,,,,,,65535,,,,,{},{ skill "AL_TELEPORT",1; }
+310129,ench,L-SpellBreaker1,6,,,,,,,,,,65535,,,,,{},{ skill "SA_SPELLBREAKER",1; }
+310130,ench,L-Steal1,6,,,,,,,,,,65535,,,,,{},{ skill "TF_STEAL",1; }
+310131,ench,L-SnowFlip1,6,,,,,,,,,,65535,,,,,{},{ skill "ECL_SNOWFLIP",1; }
+310132,ench,L-PeonyMamy1,6,,,,,,,,,,65535,,,,,{},{ skill "ECL_PEONYMAMY",1; }
+310133,ench,L-Sadagui1,6,,,,,,,,,,65535,,,,,{},{ skill "ECL_SADAGUI",1; }
+310134,ench,L-SeuoiaDust1,6,,,,,,,,,,65535,,,,,{},{ skill "ECL_SEQUOIADUST",1; }
+310135,ench,L-Hiding1,6,,,,,,,,,,65535,,,,,{},{ skill "TF_HIDING",1; }
+310136,ench,L-Magnum3,6,,,,,,,,,,65535,,,,,{},{ skill "SM_MAGNUM",3; }
+310137,ench,L-FireBall3,6,,,,,,,,,,65535,,,,,{},{ skill "MG_FIREBALL",3; }
+310138,ench,L-Heal1,6,,,,,,,,,,65535,,,,,{},{ skill "AL_HEAL",1; }
+310139,ench,L-Cure1,6,,,,,,,,,,65535,,,,,{},{ skill "AL_CURE",1; }
+310140,ench,L-Poison3,6,,,,,,,,,,65535,,,,,{},{ skill "TF_POISON",3; }
+310141,ench,L-Detoxify1,6,,,,,,,,,,65535,,,,,{},{ skill "TF_DETOXIFY",1; }
+310142,ench,L-ThrowStone1,6,,,,,,,,,,65535,,,,,{},{ skill "TF_THROWSTONE",1; }
+310143,ench,L-AbsorbSpirits1,6,,,,,,,,,,65535,,,,,{},{ skill "MO_ABSORBSPIRITS",1; }
+310144,ench,L-Bash3,6,,,,,,,,,,65535,,,,,{},{ skill "SM_BASH",3; }
+310145,ench,L-Cloaking1,6,,,,,,,,,,65535,,,,,{},{ skill "AS_CLOAKING",1; }
+310146,ench,L-CastCancel1,6,,,,,,,,,,65535,,,,,{},{}
+310147,ench,L-FireBolt3,6,,,,,,,,,,65535,,,,,{},{}
+310148,ench,L-ColdBolt3,6,,,,,,,,,,65535,,,,,{},{}
+310149,ench,L-LightningBolt3,6,,,,,,,,,,65535,,,,,{},{}
+310150,ench,L-EarthSpike3,6,,,,,,,,,,65535,,,,,{},{}
+310151,ench,L-Angelus1,6,,,,,,,,,,65535,,,,,{},{}
+310152,ench,L-StoneCurse3,6,,,,,,,,,,65535,,,,,{},{}
+310153,ench,L-FrostDiver3,6,,,,,,,,,,65535,,,,,{},{}
+310154,ench,L-Meteor3,6,,,,,,,,,,65535,,,,,{},{}
+310155,ench,L-Estimation1,6,,,,,,,,,,65535,,,,,{},{}
+310156,ench,L-FrostNova2,6,,,,,,,,,,65535,,,,,{},{}
+310157,ench,L-DecAgi1,6,,,,,,,,,,65535,,,,,{},{}
+310158,ench,L-Identify1,6,,,,,,,,,,65535,,,,,{},{}
+310159,ench,L-Loud1,6,,,,,,,,,,65535,,,,,{},{}
+310160,ench,L-SoulStrike3,6,,,,,,,,,,65535,,,,,{},{}
+310161,ench,L-CallSpirits2,6,,,,,,,,,,65535,,,,,{},{}
+310162,ench,L-CloseConfine1,6,,,,,,,,,,65535,,,,,{},{}
+310163,ench,L-AutoGuard3,6,,,,,,,,,,65535,,,,,{},{}
+310164,ench,L-PotionPitcher3,6,,,,,,,,,,65535,,,,,{},{}
+310165,ench,L-MagicPower5,6,,,,,,,,,,65535,,,,,{},{}
+310166,ench,L-Gloria1,6,,,,,,,,,,65535,,,,,{},{}
 310197,ench,天地崩壊,6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddSize,Size_Small,15; bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Big,15; bonus2 bMagicAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Medium,15; bonus2 bMagicAddSize,Size_Big,15; bonus3 bAutoActiveWeapon,310197,100,10000; if(checkactiveitem()) { misceffect 220,""; /*EFST_EP16_DEF = 873*/ } bonus3 bAutoActiveMagic,310197,100,10000; if(checkactiveitem()) { misceffect 220,""; /*EFST_EP16_DEF = 873*/ } },{}
 310198,ench,断撃,6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,4*getequiprefinerycnt(); if(equippeditem(4706)){ bonus2 bIgnoreDefRace,Rct_Boss,100; bonus2 bIgnoreDefRace,Rct_NonBoss,100; } }
 310203,ench,斬魔,6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,4*getequiprefinerycnt(); if(equippeditem(4716)){ bonus2 bIgnoreMdefRace,Rct_Boss,100; bonus2 bIgnoreMdefRace,Rct_NonBoss,100; } }
