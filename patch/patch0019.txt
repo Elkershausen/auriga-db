@@ -1,0 +1,34 @@
+add
+300318,card,封印されたイグニゼム=セニア（MVP）カード,6,,10,10,,,,,,,64,,,,,{},{ bonus bMaxHPRate,5; bonus bMaxSPRate,5; bonus2 bHPPenaltyTime,10000,-15; bonus2 bSPPenaltyTime,10000,-3; if(equippeditem(22178)){ bonus2 bHPPenaltyTime,10000,-1500; bonus2 bSPPenaltyTime,10000,-30; if(Baselevel <= 99){ bonus bStr,getequiprefinerycnt(); bonus bFlee,2*getequiprefinerycnt(); } if(Baselevel >= 100){ bonus bStr,4*getequiprefinerycnt(); bonus bFlee,5*getequiprefinerycnt(); } } if(equippeditem(29724)){ bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus2 bHPPenaltyTime,10000,-1500; bonus2 bSPPenaltyTime,10000,-30; } }
+
+310082,ench,Q-Normal,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubRace,Rct_NonBoss,2+getequiprefinerycnt()/3; bonus2 bMagicSubRace,Rct_NonBoss,2+getequiprefinerycnt()/3; if(equippeditem(400047)){ bonus2 bAddRace,Rct_NonBoss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; } }
+310083,ench,Q-Boss,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubRace,Rct_Boss,2; bonus2 bMagicSubRace,Rct_Boss,2; if(equippeditem(400047)){ bonus2 bAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_Boss,10; } }
+310109,ench,U-PowerArmor,6,,,,,,,,,,65535,,,,,{},{ if(equippeditem(29511) || equippeditem(311082) || equippeditem(311083)){ } else { bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Playe,7; bonus2 bMagicSubRace,Rct_Playe,7; bonus2 bAddRace,Rct_Boss,7*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,7*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,7*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,7*getequiprefinerycnt(); } }
+310110,ench,U-PowerLeg,6,,,,,,,,,,65535,,,,,{},{ if(equippeditem(29511) || equippeditem(311082) || equippeditem(311083)){ } else { bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Playe,10; bonus2 bMagicSubRace,Rct_Playe,10; bonus2 bAddRace,Rct_Boss,7*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,7*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,7*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,7*getequiprefinerycnt(); } }
+310111,ench,U-PowerWing,6,,,,,,,,,,65535,,,,,{},{ if(equippeditem(29511) || equippeditem(311082) || equippeditem(311083)){ } else { bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Playe,5; bonus2 bMagicSubRace,Rct_Playe,5; bonus2 bSubEle,Ele_Ghost,5*getequiprefinerycnt(); } }
+
+310146,ench,L-CastCancel1,6,,,,,,,,,,65535,,,,,{},{ skill "SA_CASTCANCEL",1; }
+310147,ench,L-FireBolt3,6,,,,,,,,,,65535,,,,,{},{ skill "MG_FIREBOLT",3; }
+310148,ench,L-ColdBolt3,6,,,,,,,,,,65535,,,,,{},{ skill "MG_COLDBOLT",3; }
+310149,ench,L-LightningBolt3,6,,,,,,,,,,65535,,,,,{},{ skill "MG_LIGHTNINGBOLT",3; }
+310150,ench,L-EarthSpike3,6,,,,,,,,,,65535,,,,,{},{ skill "WZ_EARTHSPIKE",3; }
+310151,ench,L-Angelus1,6,,,,,,,,,,65535,,,,,{},{ skill "AL_ANGELUS",1; }
+310152,ench,L-StoneCurse3,6,,,,,,,,,,65535,,,,,{},{ skill "MG_STONECURSE",1; }
+310153,ench,L-FrostDiver3,6,,,,,,,,,,65535,,,,,{},{ skill "MG_FROSTDIVER",3; }
+310154,ench,L-Meteor3,6,,,,,,,,,,65535,,,,,{},{ skill "WZ_METEOR",3; }
+310155,ench,L-Estimation1,6,,,,,,,,,,65535,,,,,{},{ skill "WZ_ESTIMATION",1; }
+310156,ench,L-FrostNova2,6,,,,,,,,,,65535,,,,,{},{ skill "WZ_FROSTNOVA",2; }
+310157,ench,L-DecAgi1,6,,,,,,,,,,65535,,,,,{},{ skill "AL_DECAGI",1; }
+310158,ench,L-Identify1,6,,,,,,,,,,65535,,,,,{},{ skill "MC_IDENTIFY",1; }
+310159,ench,L-Loud1,6,,,,,,,,,,65535,,,,,{},{ skill "MC_LOUD",1; }
+310160,ench,L-SoulStrike3,6,,,,,,,,,,65535,,,,,{},{ skill "MG_SOULSTRIKE",3; }
+310161,ench,L-CallSpirits2,6,,,,,,,,,,65535,,,,,{},{ skill "MO_CALLSPIRITS",2; }
+310162,ench,L-CloseConfine1,6,,,,,,,,,,65535,,,,,{},{ skill "RG_CLOSECONFINE",1; }
+310163,ench,L-AutoGuard3,6,,,,,,,,,,65535,,,,,{},{ skill "ML_AUTOGUARD",3; }
+310164,ench,L-PotionPitcher3,6,,,,,,,,,,65535,,,,,{},{ skill "AM_POTIONPITCHER",3; }
+310165,ench,L-MagicPower5,6,,,,,,,,,,65535,,,,,{},{ skill "HW_MAGICPOWER",5; }
+310166,ench,L-Gloria1,6,,,,,,,,,,65535,,,,,{},{ skill "PR_GLORIA",1; }
+
+310653,ench,Q-Range,6,,,,,,,,,,65535,,,,,{},{ bonus bLongAtkDef,5+(10*getequiprefinerycnt()/3); if(equippeditem(400047)){ bonus bAddLongWeaponDamage,10; } if( ( (Job == Job_Kagerou) || (Job == Job_Oboro) ) && (equippeditem(20900) ) ) { bonus bLongAtkDef,-35; } if( (Job == Job_Guillotine) && (equippeditem(20800) ) ){ bonus bLongAtkDef,-35; } if( (Job == Job_Ranger) && (equippeditem(20816) ) ){ bonus bLongAtkDef,-35; } }
+
+311436,ench,<Exam>,6,,,,,,,,,,65535,,,,,{},{ skill "MG_ENERGYCOAT",1; }
