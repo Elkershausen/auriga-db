@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# 全てのHTMLファイル
+*.html diff=sjis
+ 
+# 全てのtxtファイル
+*.txt diff=sjis
