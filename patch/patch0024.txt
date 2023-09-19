@@ -1,0 +1,55 @@
+classnum_db.txt	作成
+武器の固有攻撃グラフィックを表示するのに使うclassnumをiteminfoに反映させるために使います
+2023/08 あたりの実装データです
+item_dbの頭装備viewと同じ位置ですが武器は違う扱いです(武器種別の固有番号が同じdbの同じ位置で使われてますが別のものです)
+globalの武器分も入っています
+
+patch	20230919分
+400505#ストライプリボンハット#
+400506#アルタイルハット#
+490410#イントゥジアビス#
+312645#潜在解放(カーディナルIV)#
+312646#潜在解放(ウィンドホークIII)#
+312397#潜在解放(アビスチェイサーIII)#
+410190#[衣装] セイレン・ミニミー#
+101705#幻想叢書カード(セイレン)#
+1000952#クローバーの花の指輪#
+
+400505,head,ストライプリボンハット,4,,10,500,,10:0,,1,2088832,2,256,,200,2425,1,{ /* 4次職 bonus2 bAddSkillDamageRate,"CD_ARBITRIUM",Baselevel/10; bonus2 bAddSkillDamageRate,"CD_PNEUMATICUS_PROCELLA",Baselevel/10; bonus2 bAddSkillDamageRate,"CD_FRAMEN",Baselevel/10; bonus bSpl,3+getequiprefinerycnt(); */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; }
+
+400506,head,アルタイルハット,4,,10,500,,10:0,,1,2088832,2,256,,200,2426,1,{ /* 4次職 bonus2 bAddSkillDamageRate,"WH_HAWKBOOMERANG",Baselevel/10; bonus2 bAddSkillDamageRate,"WH_HAWKRUSH",Baselevel/10; bonus bCon,3+getequiprefinerycnt(); */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; }
+
+410190,cos,[衣装] セイレン・ミニミー,4,,10,0,,,,0,2074075135,2,2048,,1,2292,0,{},{}
+
+490410,acc,イントゥジアビス,4,,10,100,,,,1,2088832,2,136,,200,,0,{ /* 4次職 bonus2 bAddSkillDamageRate,アビス球体攻撃,Baselevel/10; bonus2 bAddSkillDamageRate,"ABC_ABYSS_SQUARE",Baselevel/10; bonus2 bAddSkillDamageRate,"ABC_ABYSS_STRIKE",Baselevel/10; */ },{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bPerfectHitAddRate,25; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; skill "MG_FIREWALL",10; }
+
+312397,ench,潜在解放(アビスチェイサーIII),6,,,,,,,,,,65535,,,,,{ /*4次職 if(equippeditem(29371)){ "ABC_ABYSS_SQUARE" 固定詠唱時間 - 1.5秒 } */ },{}
+312645,ench,潜在解放(カーディナルIV),6,,,,,,,,,,65535,,,,,{ /*4次職 if(equippeditem(29371)){ "CD_ARBITRIUM" 固定詠唱時間 - 1.5秒 } */ },{}
+312646,ench,潜在解放(ウィンドホークIII),6,,,,,,,,,,65535,,,,,{ /*4次職 if(equippeditem(29509)){ bonus4 bAutoActiveSkill,"WH_HAWKBOOMERANG",12646,100,20000; if(checkactiveitem()) { sc_start 631,20000,1; } if(equippeditem(29509)){ bonus4 bAutoActiveSkill,"WH_HAWKRUSH",12646,100,20000; if(checkactiveitem()) { sc_start 631,20000,1; } } [アンリミット]Lv5状態になる */ },{},{  sc_end 631; }
+
+101705,consum,幻想叢書カード(セイレン),2,,10,0,,,,,2074075135,2,,,1,,,{},{}
+1000952,item,クローバーの花の指輪,3,,10,0,,,,,,,,,,,,{},{}
+
+item_db2_add.txt
+312397,0,0,1,1,1,1,1,0,0,0,0,0	//潜在解放(アビスチェイサーIII)
+312645,0,0,1,1,1,1,1,0,0,0,0,0	//潜在解放(カーディナルIV)
+312646,0,0,1,1,1,1,1,0,0,0,0,0	//潜在解放(ウィンドホークIII)
+410190,0,0,1,0,0,1,1,0,0,0,0,0	//[衣装] セイレン・ミニミー
+101705,0,0,1,0,0,1,1,0,0,0,0,0	//幻想叢書カード(セイレン)
+1000952,0,0,1,0,0,1,1,0,0,0,0,0	//クローバーの花の指輪
+
+item_cardtype.txt
+312397,ench,潜在解放(アビスチェイサーIII),2
+312645,ench,潜在解放(カーディナルIV),2
+312646,ench,潜在解放(ウィンドホークIII),2
+
+patch	0024
+add
+400416,head,リス耳フード帽(アルビノ),4,,10,500,,10:0,,1,2088832,2,256,,200,2371,1,{ /* 4次職 bonus2 bAddSkillDamageRate,"CD_PETITIO",Baselevel/10; bonus2 bAddSkillDamageRate,"CD_EFFLIGO",Baselevel/10; bonus bPow,3+getequiprefinerycnt(); */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; }
+490336,acc,ディメンションリンケージストーン,4,,10,100,,,,1,1024,2,8,,100,,0,{},{ bonus bStr,20; bonus bMaxHPrate,15; bonus bAddLongWeaponDamage,10; bonus bPerfectHitAddRate,15; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillCoolDown,"NC_NEUTRALBARRIER",-5000; bonus2 bAddSkillDamageRate,"NC_ARMSCANNON",2*Baselevel/3; bonus2 bAddSkillDamageRate,"NC_COLDSLOWER",2*Baselevel/3; bonus2 bAddSkillDamageRate,"NC_FLAMELAUNCHER",2*Baselevel/3; }
+490337,acc,創星石のアミュレット,4,,10,100,,,,1,2074075135,2,8,,100,,0,{ /*bonus3 bAutoActiveWeapon,490337,100,1; if(checkactiveitem()) { misceffect 220,""; } bonus3 bAutoActiveMagic,490337,100,1; if(checkactiveitem()) { misceffect 220,""; } 23044 エルヴィラキャンディ 12677 エルヴィラキャンディ(YE) の再使用待機時間を解除する*/ },{ bonus bAspdAddRate,15; bonus bSkillDelayRate,-15; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; bonus bMaxHP,50*Baselevel; bonus bMaxSP,5*Baselevel; if(equippeditem(312305)){ bonus bPerfectHitAddRate,25; bonus2 bAddRace,Rct_Boss,Baselevel/5; bonus2 bAddRace,Rct_NonBoss,Baselevel/5; bonus2 bAddRace,Rct_Boss,Baselevel/5; bonus2 bAddRace,Rct_NonBoss,Baselevel/5; } }
+490359,acc,ロードオブエレメンタル,4,,10,100,,,,1,2088832,2,128,,200,,0,{ /* 4次職 bonus bSpl,3; bonus2 bAddSkillDamageRate,"EM_CONFLAGRATION",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_DIAMOND_STORM",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_LIGHTNING_LAND",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_TERRA_DRIVE",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_VENOM_SWAMP",Baselevel/10; */ },{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; skill "AL_CURE",1; bonus2 bAddFixCastRate,"SO_SUMMON_AQUA",-100; bonus2 bAddFixCastRate,"SO_SUMMON_TERA",-100; }
+312037,ench,潜在解放(エレメンタルマスターII),6,,,,,,,,,,65535,,,,,{ /*4次職 if(equippeditem(29371)){ bonus2 bAddSkillCoolDown,"EM_DIAMOND_STORM",-500; bonus2 bAddSkillCoolDown,"EM_TERRA_DRIVE",-500; } */ },{}
+312304,ench,潜在解放(カーディナルIII),6,,,,,,,,,,65535,,,,,{ /*4次職 if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"CD_EFFLIGO",-300; bonus2 bAddSkillCoolDown,"CD_PETITIO",-300; } */ },{}
+312305,ench,悠遠なる天上の都,6,,,,,,,,,,65535,,,,,{ /* 27127 古王グローザカード 27128 深層の古王グローザカード 神力状態 EFST_EP16_DEF */ },{ bonus2 bAddSize,Size_Small,15; bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Big,15; bonus2 bMagicAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Medium,15; bonus2 bMagicAddSize,Size_Big,15; if(equippeditem(27128)){ bonus2 bHPDrainRate,300,2; } }
+450149,armor,アンティコンジャラースーツ,4,,10,1500,,50:10,,1,2074075135,2,16,,205,,1,{},{ bonus bMaxHPrate,25; bonus2 bSubRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; if(getequiprefinerycnt() >=7){ bonus bMdef,25; } if(getequiprefinerycnt() >=9){ bonus bMdef,25; } }
