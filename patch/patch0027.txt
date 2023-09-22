@@ -1,0 +1,67 @@
+
+27251,Unknown_Item,ブラック・カネイリーカード,6,,10,10,,,,,,,769,,,,,{},{ bonus bAspdAddRate,3; bonus3 bAutoSpell,"RG_STEALCOIN",5,300; if(equippeditem(27252) && equippeditem(27253)){ bonus bStr,5; bonus bAgi,5; bonus bMaxHPrate,10; bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; } }
+27252,Unknown_Item,ヒピア・スニキカード,6,,10,10,,,,,,,136,,,,,{},{ skill "BS_HAMMERFALL",3; }
+27253,Unknown_Item,ビリー・コスルリースカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"TF_POISON",2*Baselevel; }
+27254,Unknown_Item,フェモンカード,6,,10,10,,,,,,,32,,,,,{},{ bonus bMaxSP,100; bonus2 bAddSkillDamageRate,"MO_EXTREMITYFIST",10; bonus2 bAddCastRate,"MO_EXTREMITYFIST",-100; if(equippeditem(27255) && equippeditem(27256)){ bonus bMaxHPrate,15; bonus bMaxSPrate,15; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus bDefEle,Ele_Holy; } }
+27255,Unknown_Item,オルドルカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bMaxHP,400; bonus bMaxSP,50; bonus3 bAutoSpell,"WZ_STORMGUST",1,300; }
+27256,Unknown_Item,ブルート・ハゼカード,6,,10,10,,,,,,,136,,,,,{},{ bonus bBaseAtk,15; bonus2 bAddSkillDamageRate,"CR_GRANDCROSS",50; }
+27257,Unknown_Item,黒魔カード,6,,10,10,,,,,,,4,,,,,{},{ bonus bAspdAddRate,10; skill "NJ_UTSUSEMI",1; bonus2 bAddSkillCoolDown,"NJ_UTSUSEMI",30000; if(equippeditem(27258) && equippeditem(27259)){ bonus bAspd,2; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } }
+27258,Unknown_Item,イフォドスカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"KN_SPEARBOOMERANG",4*Baselevel; }
+27259,Unknown_Item,レチェニエカード,6,,10,10,,,,,,,136,,,,,{ /* アクセ左右の装備位置別のカード参照 bonus3 bAutoSelfSpell,"MG_SAFETYWALL",5,300; bonus3 bAutoSelfSpell,"AL_PNEUMA",1,300; */ },{}
+27260,Unknown_Item,ユメヒメカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"AC_SHOWER",2*Baselevel; if(equippeditem(27263)){ bonus bPerfectHitAddRate,10; } }
+27261,Unknown_Item,ジューカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Water,4; if(equippeditem(27262)){ bonus bDex,7; bonus2 bMagicAddRace,Rct_Boss,4; bonus2 bMagicAddRace,Rct_NonBoss,4; } }
+27262,Unknown_Item,ディワイカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Earth,4; }
+27263,Unknown_Item,フェイ・カナビアンカード,6,,10,10,,,,,,,4,,,,,{ /* "AM_ACIDTERROR" で受けるダメージ -50%*/ },{ bonus bAddLongWeaponDamage,5; }
+27264,Unknown_Item,魔神の信者カード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bCriticalRace,Rct_Formless,12; bonus2 bCriticalRace,Rct_Undead,12; bonus2 bCriticalRace,Rct_Demon,12; }
+27304,Unknown_Item,EA2Sカード,6,,10,10,,,,,,,136,,,,,{},{ bonus bAddLongWeaponDamage,3; bonus2 bSubEle,Ele_Wind,5; }
+
+200279#[2023年]究極精錬お楽しみチケットの箱#
+9132#深淵の騎士の卵#
+400396#妖魔のささやき#
+470192#フィフスエレメント#
+490243#リングオブシルバークロウ#
+490244#枢機卿の指輪#
+312038#潜在解放(カーディナルII)#
+
+200279,consum,[2023年]究極精錬お楽しみチケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,604800; getitem2 1001223,1,1,0,0,0,0,0,0,3628800; },{}
+
+9132,pet,深淵の騎士の卵,4,,,,,,,,,,,,,,,{},{}
+
+400396,head,妖魔のささやき,4,,10,500,,10:10,,1,2074075135,2,256,,100,2338,1,{},{ bonus bAspdAddRate,10; bonus2 bAddSkillDamageRate,"ASC_METEORASSAULT",Baselevel; if(getskilllv("GC_WEAPONCRUSH") >= 5){ bonus2 bAddEle,Ele_All,25; bonus2 bMagicAddEle,Ele_All,25; } if(getskilllv("GC_COUNTERSLASH") >= 10){ bonus bAtkRate,25; } if(getskilllv("GC_HALLUCINATIONWALK") >= 5){ bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; } bonus bSkillDelayRate,-3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7){ bonus2 bAddSkillDamageRate,"ASC_BREAKER",Baselevel; bonus2 bAddSkillDamageRate,"ASC_METEORASSAULT",Baselevel; } if(getequiprefinerycnt() >= 9){ bonus2 bAddSkillDamageRate,"ASC_BREAKER",Baselevel; bonus2 bAddSkillDamageRate,"ASC_METEORASSAULT",Baselevel; } }
+
+470192,shoes,フィフスエレメント,4,,10,400,,12:10,,1,2074075135,2,64,,100,,1,{},{ bonus bMaxHPrate,3; bonus bMaxSPrate,3; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; if(getskilllv("SO_VARETYR_SPEAR") >= 10){ bonus2 bAddFixCastRate,"SO_VARETYR_SPEAR",-100; bonus2 bAddSkillCoolDown,"SO_VARETYR_SPEAR",-25000; } bonus2 bMagicAddRace,Rct_Boss,10*getskilllv("SO_EL_SYMPATHY"); bonus2 bMagicAddRace,Rct_NonBoss,10*getskilllv("SO_EL_SYMPATHY"); if(getskilllv("SO_PSYCHIC_WAVE") >= 5){ bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; } bonus bInt,5*(getskilllv("SO_SUMMON_AGNI")+getskilllv("SO_SUMMON_AQUA")+getskilllv("SO_SUMMON_VENTUS")+getskilllv("SO_SUMMON_TERA")); bonus bMdef,4*(getskilllv("SO_SUMMON_AGNI")+getskilllv("SO_SUMMON_AQUA")+getskilllv("SO_SUMMON_VENTUS")+getskilllv("SO_SUMMON_TERA")); if(getequiprefinerycnt()>=5) { bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus bSkillDelayRate,-10; } if(getequiprefinerycnt()>=7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bSkillDelayRate,-10; } }
+
+490243,acc,リングオブシルバークロウ,4,,10,100,,,,1,2074075135,2,136,,100,,0,{},{ bonus bCritical,50; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus bAddCriticalDamage,Baselevel/5; }
+
+490244,acc,枢機卿の指輪,4,,10,100,,,,1,2088832,2,136,,200,,0,{ /* 4次職 bonus bSpl,3; bonus2 bAddSkillDamageRate,"CD_ARBITRIUM",Baselevel/10; bonus2 bAddSkillDamageRate,"CD_PNEUMATICUS_PROCELLA",Baselevel/10; bonus2 bAddSkillDamageRate,"CD_FRAMEN",1; */ },{}
+
+312038,ench,潜在解放(カーディナルII),6,,,,,,,,,,65535,,,,,{ /*4次職 if(equippeditem(29371)){ bonus2 bAddSkillCoolDown,"CD_ARBITRIUM",-500; } */ },{}
+
+23045#フリードリヒ監修・しぼりたてモンブラン#
+23079#双子姉妹のわがままイチゴケーキ#
+23259#王妃が愛した魅惑の極上カップケーキ#
+23260#ニーヒル御用達フルーツパフェ・極#
+100754#ポー秘蔵のやみつき絶品一口ケーキ#
+25291#最高級マロンの蜜漬け#
+420176#メモリアルクロース#
+
+23045,consum,フリードリヒ監修・しぼりたてモンブラン,2,,10,10,,,,,2074075135,2,,,1,,,{ percentheal 100,100; /* 60秒間魔法攻撃で与えるダメージ + 15% 再使用60秒 */ },{}
+
+23079,consum,双子姉妹のわがままイチゴケーキ,2,,10,10,,,,,2074075135,2,,,1,,,{ percentheal 100,100; sc_start 390,60000,1; /* 再使用60秒 */ },{}
+
+23259,consum,王妃が愛した魅惑の極上カップケーキ,2,,10,10,,,,,2074075135,2,,,1,,,{ percentheal 100,100; sc_start SC_ASSUMPTIO,60000,1; /* 再使用60秒 */ },{}
+
+23260,consum,ニーヒル御用達フルーツパフェ・極,2,,10,10,,,,,2074075135,2,,,1,,,{ percentheal 100,100; sc_start SC_MMDEF,60000,100; /* 再使用60秒 */ },{}
+
+100754,consum,ポー秘蔵のやみつき絶品一口ケーキ,2,,10,0,,,,,2074075135,2,,,1,,,{ percentheal 100,100; sc_start 54,60000,1; sc_start 55,60000,1; sc_start 56,60000,1; sc_start 57,60000,1; /* 再使用 60秒 */ },{}
+
+25291,item,最高級マロンの蜜漬け,3,,10,10,,,,,,,,,,,,{},{}
+
+420176,head,メモリアルクロース,4,,10,100,,,,0,2074075135,2,1,,100,2310,0,{},{ hateffect 178,TRUE; bonus bMaxHP,2000; bonus2 bAddSize,Size_Small,20; bonus2 bAddSize,Size_Medium,20; bonus2 bAddSize,Size_Big,20; bonus2 bMagicAddSize,Size_Small,20; bonus2 bMagicAddSize,Size_Medium,20; bonus2 bMagicAddSize,Size_Big,20; if(equippeditem(310075)){ skill "BS_GREED",1; } },{ hateffect 178,FALSE; }
+
+item_db2_add.txt
+23045,0,0,1,0,0,1,1,0,0,0,0,0	//フリードリヒ監修・しぼりたてモンブラン
+23079,0,0,1,0,0,1,1,0,0,0,0,0	//双子姉妹のわがままイチゴケーキ
+23259,0,0,1,0,0,1,1,0,0,0,0,0	//王妃が愛した魅惑の極上カップケーキ
+23260,0,0,1,0,0,1,1,0,0,0,0,0	//ニーヒル御用達フルーツパフェ・極
+25291,0,0,1,0,0,1,1,0,0,0,0,0	//最高級マロンの蜜漬け
