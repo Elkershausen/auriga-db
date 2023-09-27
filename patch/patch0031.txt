@@ -1,0 +1,143 @@
+23-09-26 patch
+101706,consum,幻想叢書カード(グラリン),2,,10,0,,,,,2074075135,2,,,1,,,{},{}
+410189,cos,[衣装] エンジェリング・ミニミー,4,,10,0,,,,0,2074075135,2,2048,,1,2291,0,{},{}
+410193,cos,[衣装] グラリン・ミニミー,4,,10,0,,,,0,2074075135,2,2048,,1,2293,0,{},{}
+1000950,item,小さなゼロピー,3,,10,0,,,,,,,,,,,,{},{}
+1000951,item,一口食べたリンゴ,3,,10,0,,,,,,,,,,,,{},{}
+
+
+item_db2_add.txt
+101706,0,0,1,0,0,1,1,0,0,0,0,0	//幻想叢書カード(グラリン)
+1000950,0,0,1,0,0,1,1,0,0,0,0,0	//小さなゼロピー
+1000951,0,0,1,0,0,1,1,0,0,0,0,0	//一口食べたリンゴ
+
+add
+27007,card,セリーヌ・キミカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bMagicAddRace,Rct_Boss,10; if(equippeditem(311383) == 0){ bonus4 bAutoSpell,"NPC_WIDECRITICALWOUND",1,100,EAS_ATTACK|EAS_MAGIC; } else { bonus2 bAddEleMagicDamageRate,Ele_Dark,20; bonus2 bAddEleMagicDamageRate,Ele_Undead,20; bonus4 bAutoSpell,"NPC_WIDECRITICALWOUND",1,500,EAS_ATTACK|EAS_MAGIC; } }
+27047,card,ヴァルゴの欠片,6,,10,10,,,,,,,769,,,,,{},{ bonus bMaxHPrate,2; bonus bMaxSPrate,2; }
+27089,card,T W Oカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bFixCastrate,-50,0; bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; if(equippeditem(311883)) { bonus2 bFixCastRate,-70,0; bonus2 bIgnoreMDefRace,Rct_Boss,50; bonus2 bIgnoreMDefRace,Rct_NonBoss,50; } }
+27092,card,チャールストン3号カード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddSkillDamageRate,"NC_FLAMELAUNCHER",70; bonus2 bAddSkillDamageRate,"NC_COLDSLOWER",70; bonus2 bAddSkillDamageRate,"NC_ARMSCANNON",70; bonus2 bAddCastRate,"NC_VULCANARM",-100; bonus2 bAddCastRate,"NC_BOOSTKNUCKLE",-100; if(equippeditem(311883)) { bonus2 bAddSkillDamageRate,"NC_VULCANARM",3*Baselevel; bonus2 bAddSkillDamageRate,"NC_BOOSTKNUCKLE",3*Baselevel; } }
+27126,card,ボイタタカード,6,,10,10,,,,,,,2,,,,,{},{ bonus bAspd,1; bonus2 bAddEleMagicDamageRate,Ele_Fire,20; bonus2 bAddEleMagicDamageRate,Ele_Wind,20; if(equippeditem(311439)) { bonus bAspd,1; bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; } }
+27141,card,イーブルカード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bSubEle,Ele_Fire,100; bonus2 bAddRevEff,Eff_Curse,2500; if(equippeditem(311883)) { bonus2 bSubEle,Ele_Nutral,20; skill "ASC_METEORASSAULT",10; } }
+27143,card,ヴェノムキメラカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddEle,Ele_Earth,50; bonus2 bAddEle,Ele_Poison,50; bonus2 bMagicAddEle,Ele_Earth,50; bonus2 bMagicAddEle,Ele_Poison,50; bonus2 bAddRace,Rct_Brute,50; bonus2 bAddRace,Rct_Insect,50; bonus2 bMagicAddRace,Rct_Brute,50; bonus2 bMagicAddRace,Rct_Insect,50; if(equippeditem(311883)) { bonus bMaxHPRate,50; skill "SO_CLOUD_KILL",5; } }
+27146,card,CUTIEカード,6,,10,10,,,,,,,34,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus3 bAutoActiveMagic,27146,1200,30000; if(checkactiveitem(27146)){ bonus bAspdAddRate,100; } if(equippeditem(311883)) { bonus2 bAddEleMagicDamageRate,Ele_Neutral,10; } }
+27157,card,ウッドゴブリンカード,6,,10,10,,,,,,,32,,,,,{},{ bonus bMdef,10; if(getequiprefinerycnt() >= 9){ bonus bMdef,10; } }
+27158,card,レスカード,6,,10,10,,,,,,,32,,,,,{},{ bonus2 bSubEle,Ele_Poison,20; bonus2 bSubSize,Size_Big,15; bonus2 bSubSize,Size_Medium,15; bonus2 bSubSize,Size_Small,15; bonus2 bMagicSubSize,Size_Big,15; bonus2 bMagicSubSize,Size_Medium,15; bonus2 bMagicSubSize,Size_Small,15; }
+27159,card,ウジャスカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bSubEle,Ele_Dark,5; bonus2 bResEff,Eff_Curse,10000; }
+27160,card,ババヤガカード,6,,10,10,,,,,,,2,,,,,{},{ bonus3 bAutoActiveMagic,27160,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bHPPenaltyTime,2000,-50; bonus2 bSPPenaltyTime,2000,-25; } }
+27161,card,マブカカード,6,,10,10,,,,,,,136,,,,,{},{ callfunc "ItemdbAlmightyHeal",0x7F,5; bonus2 bItemHealRate,1,5; bonus2 bSubEle,Ele_Undead,5; }
+27162,card,ゴピニクカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddEle,Ele_Wind,3*((readparam(bStr)+readparam(bInt)+readparam(bDex))/10); bonus2 bMagicAddEle,Ele_Wind,3*((readparam(bStr)+readparam(bInt)+readparam(bDex))/10); if(equippeditem(311439)) { bonus bMaxHPRate,50; skill "WZ_HEAVENDRIVE",5; } }
+27181,card,飛行船襲撃団カード,6,,10,10,,,,,,,4,,,,,{},{ bonus bLongAtkDef,10; if(getequiprefinerycnt()>=9) { bonus2 bSubEle,Ele_Neutral,20; } }
+27196,card,ニーヒル・M・ハイネンカード,6,,10,10,,,,,,,769,,,,,{},{ skill "MG_STONECURSE",getequiprefinerycnt(); }
+27197,card,アグネス・レベンブルグカード,6,,10,10,,,,,,,136,,,,,{},{ callfunc "ItemdbAlmightyHeal",0x7F,15; }
+27198,card,ユルゲン・ウィグナーカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; }
+27199,card,スピーカ・ネリウスカード,6,,10,10,,,,,,,64,,,,,{},{ bonus bMaxHPrate,10; if(getequiprefinerycnt()>=8) { bonus bSkillDelayRate,-10; } }
+27200,card,ニーヒルカード,6,,10,10,,,,,,,136,,,,,{},{ skill "WZ_HEAVENDRIVE",3; }
+27201,card,アグネスカード,6,,10,10,,,,,,,16,,,,,{},{ callfunc "ItemdbAlmightyHeal",0x7F,10; if(getequiprefinerycnt()>=8) { callfunc "ItemdbAlmightyHeal",0x7F,20; } }
+27202,card,ユルゲンカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddRevEff,Eff_Siren,300; }
+27203,card,スピーカカード,6,,10,10,,,,,,,4,,,,,{},{ bonus bSkillDelayRate,5; if(getequiprefinerycnt()>=8) { bonus bSkillDelayRate,5; } }
+27249,card,アルヒカード,6,,10,10,,,,,,,136,,,,,{},{ bonus bMatk,15; bonus3 bAutoSpell,"MG_THUNDERSTORM",5,1000; if(getskilllv("MG_THUNDERSTORM") >= 6){ bonus3 bAutoSpell2,"MG_THUNDERSTORM",getskilllv("MG_THUNDERSTORM"),1000; } if(equippeditem(27250)){ bonus bMaxHP,1000; bonus bMaxSP,100; bonus2 bExpRate,Rct_Boss,5; bonus2 bExpRate,Rct_NonBoss,5; } }
+27250,card,ディオ・アネモスカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"MG_THUNDERSTORM",2*Baselevel/3; }
+27251,card,ブラック・カネイリーカード,6,,10,10,,,,,,,769,,,,,{},{ bonus bAspdAddRate,3; bonus3 bAutoSpell,"RG_STEALCOIN",5,300; if(equippeditem(27252) && equippeditem(27253)){ bonus bStr,5; bonus bAgi,5; bonus bMaxHPrate,10; bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; } }
+27252,card,ヒピア・スニキカード,6,,10,10,,,,,,,136,,,,,{},{ skill "BS_HAMMERFALL",3; }
+27253,card,ビリー・コスルリースカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"TF_POISON",2*Baselevel; }
+27254,card,フェモンカード,6,,10,10,,,,,,,32,,,,,{},{ bonus bMaxSP,100; bonus2 bAddSkillDamageRate,"MO_EXTREMITYFIST",10; bonus2 bAddCastRate,"MO_EXTREMITYFIST",-100; if(equippeditem(27255) && equippeditem(27256)){ bonus bMaxHPrate,15; bonus bMaxSPrate,15; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus bDefEle,Ele_Holy; } }
+27255,card,オルドルカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bMaxHP,400; bonus bMaxSP,50; bonus3 bAutoSpell,"WZ_STORMGUST",1,300; }
+27256,card,ブルート・ハゼカード,6,,10,10,,,,,,,136,,,,,{},{ bonus bBaseAtk,15; bonus2 bAddSkillDamageRate,"CR_GRANDCROSS",50; }
+27257,card,黒魔カード,6,,10,10,,,,,,,4,,,,,{},{ bonus bAspdAddRate,10; skill "NJ_UTSUSEMI",1; bonus2 bAddSkillCoolDown,"NJ_UTSUSEMI",30000; if(equippeditem(27258) && equippeditem(27259)){ bonus bAspd,2; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } }
+27258,card,イフォドスカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"KN_SPEARBOOMERANG",4*Baselevel; }
+27259,card,レチェニエカード,6,,10,10,,,,,,,136,,,,,{ /* アクセ左右の装備位置別のカード参照 bonus3 bAutoSelfSpell,"MG_SAFETYWALL",5,300; bonus3 bAutoSelfSpell,"AL_PNEUMA",1,300; */ },{}
+27260,card,ユメヒメカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"AC_SHOWER",2*Baselevel; if(equippeditem(27263)){ bonus bPerfectHitAddRate,10; } }
+27261,card,ジューカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Water,4; if(equippeditem(27262)){ bonus bDex,7; bonus2 bMagicAddRace,Rct_Boss,4; bonus2 bMagicAddRace,Rct_NonBoss,4; } }
+27262,card,ディワイカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Earth,4; }
+27263,card,フェイ・カナビアンカード,6,,10,10,,,,,,,4,,,,,{ /* "AM_ACIDTERROR" で受けるダメージ -50%*/ },{ bonus bAddLongWeaponDamage,5; }
+27264,card,魔神の信者カード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bCriticalRace,Rct_Formless,12; bonus2 bCriticalRace,Rct_Undead,12; bonus2 bCriticalRace,Rct_Demon,12; }
+27304,card,EA2Sカード,6,,10,10,,,,,,,136,,,,,{},{ bonus bAddLongWeaponDamage,3; bonus2 bSubEle,Ele_Wind,5; }
+27305,card,EL-A17Tカード,6,,10,10,,,,,,,769,,,,,{/*知識の探求者*/},{ bonus2 bSubEle,Ele_Earth,10; bonus2 bSubEle,Ele_Holy,10; skill "BS_WEAPONPERFECT",2; bonus2 bAddSkillDamageRate,"NC_ARMSCANNON",10*getequiprefinerycnt(1); }
+27306,card,ハートハンター・ベラレカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"GS_SPREADATTACK",3*Baselevel; if(Job == Job_Rebellion){ bonus2 bAddSkillDamageRate,"GS_SPREADATTACK",2*Baselevel; if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"GS_SPREADATTACK",Baselevel; } } }
+27307,card,ハートハンター・Mベラレカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; if(Job == Rebellion){ bonus2 bAddSkillDamageRate,"GS_RAPIDSHOWER",Baselevel; bonus2 bAddSkillDamageRate,"GS_RAPIDSHOWER",Baselevel; if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"GS_RAPIDSHOWER",Baselevel; } } }
+27308,card,ハートハンター・サナレカード,6,,10,10,,,,,,,32,,,,,{},{ callfunc "ItemdbAlmightyHeal",0x7F,10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { callfunc "ItemdbAlmightyHeal",0x7F,10; } }
+27309,card,ハートハンター・Mサナレカード,6,,10,10,,,,,,,136,,,,,{},{ bonus bFlee2,5; callfunc "ItemdbAlmightySubHeal",0x7F,5; bonus2 bItemHealRate,1,5; }
+27310,card,プラガカード,6,,10,10,,,,,,,34,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; skill "SA_LIGHTNINGLOADER",1; }
+27311,card,変種プラガカード,6,,10,10,,,,,,,4,,,,,{},{ bonus bHit,5; bonus2 bAddEle,Ele_Wind,10; bonus2 bCriticalRace,Rct_Insect,15; bonus2 bCriticalRace,Rct_Demon,15; }
+27312,card,ドロールカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bMagicAddEle,Ele_Water,10; }
+27313,card,変種ドロールカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddEle,Ele_Water,3*getequiprefinerycnt(); }
+27314,card,ヴェネヌムカード,6,,10,10,,,,,,,136,,,,,{},{ bonus3 bAutoSpell,"HW_NAPALMVULCAN",3,2000; bonus bAspdAddRate,100; }
+27315,card,変種ヴェネヌムカード,6,,10,10,,,,,,,256,,,,,{},{ bonus2 bAddEle,Ele_Ghost,30; bonus2 bMagicAddEle,Ele_Ghost,30; bonus2 bIgnoreDefRace,Rct_Human,30; }
+27316,card,ツイン・カプトゥカード,6,,10,10,,,,,,,34,,,,,{},{ bonus bMatk,5; bonus2 bMagicAddSize,Size_Medium,8; }
+27317,card,変種ツイン・カプトゥカード,6,,10,10,,,,,,,136,,,,,{ /* 魔法攻撃で倒した時HP + 50 , SP + 5*/ },{ bonus2 bMagicAddRace,Rct_Boss,3; bonus2 bMagicAddRace,Rct_NonBoss,3; }
+27318,card,ミグエルカード,6,,10,10,,,,,,,769,,,,,{},{ bonus bAddLongWeaponDamage,10; skill "SM_ENDURE",5; if(Job == Job_Rebellion){ bonus2 bHPDrainRate,10000,1; } if(equippeditem(311883)){ bonus bPerfectHitAddRate,10; bonus2 bSubEle,Ele_Water,15; } }
+27319,card,R48-85-ベスティアカード,6,,10,10,,,,,,,136,,,,,{},{ bonus bSkillDelayRate,-30; if(equippeditem(19172)) { bonus bSkillDelayRate,30; } if(equippeditem(4403)) { bonus bSkillDelayRate,30; } if(equippeditem(300396)) { bonus bSkillDelayRate,5; } if(equippeditem(311887)) { skill "LG_TRAMPLE",3; } }
+27320,card,E-EA1Lカード,6,,10,10,,,,,,,2,,,,,{},{ if(getlook(2) == 11){ bonus bHit,-10-(getequiprefinerycnt()); bonus bCritical,10+getequiprefinerycnt(); bonus bAddCriticalDamage,10+getequiprefinerycnt(); } }
+27335,card,混沌のバフォメット.Jrカード,6,,10,10,,,,,,,769,,,,,{},{ skill "AL_TELEPORT",1; bonus bAgi,3*getequiprefinerycnt(); }
+27336,card,混沌のサイドワインダーカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; skill "MO_TRIPLEATTACK",5; if(getskilllv("MO_TRIPLEATTACK") >= 6){ skill "MO_TRIPLEATTACK",getskilllv("MO_TRIPLEATTACK"); } }
+27337,card,混沌のハンターフライカード,6,,10,10,,,,,,,4,,,,,{},{ bonus bBaseAtk,3*readparam(bStr)/10; bonus bMdef,readparam(bStr)/10; if(readparam(bStr) >= 125){ bonus bBaseAtk,50; bonus bMdef,5; } bonus bBaseAtk,3*readparam(bAgi)/10; bonus bMdef,readparam(bAgi)/10; if(readparam(bAgi) >= 125){ bonus bBaseAtk,50; bonus bMaxHPrate,5; } }
+27338,card,混沌のマンティスカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; if(equippeditem(27340)){ bonus bStr,10; } }
+27339,card,混沌のゴーストリングカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddEle,Ele_Ghost,50; }
+27340,card,混沌のキラーマンティスカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bBaseAtk,5*readparam(bStr)/10; if(readparam(bStr) >= 130 ){ bonus bBaseAtk,100; } }
+27341,card,混沌のポポリンカード,6,,10,10,,,,,,,136,,,,,{},{ skill "ECL_SADAGUI",1; }
+27342,card,混沌のステムワームカード,6,,10,10,,,,,,,2,,,,,{},{ bonus bMatk,5; bonus2 bMagicAddSize,Size_Small,8; }
+27347,card,硬化カホカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Formless,15; bonus2 bAddEle,Ele_Earth,15; }
+27348,card,硬化ラーヴァゴーレムカード,6,,10,10,,,,,,,2,,,,,{ /* 物理・魔法攻撃時 ノーグロード 3層 与えるダメージ + 30% */ },{}
+27349,card,硬化エクスプロージョンカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bAddLongWeaponDamage,5; if(getequiprefinerycnt() >= 8) { bonus bAddLongWeaponDamage,10; } }
+27350,card,硬化Sデリーターカード,6,,10,10,,,,,,,64,,,,,{ /* 物理攻撃でモンスターを倒した時 HP  SP + n */ },{ bonus bHPGainValue,400; }
+27351,card,硬化Gデリーターカード,6,,10,10,,,,,,,64,,,,,{ /* 物理攻撃でモンスターを倒した時 HP  SP + n */ },{ bonus bSPGainValue,20; }
+27352,card,硬化ナイトメアテラーカード,6,,10,10,,,,,,,769,,,,,{},{ if(readparam(bVit) >= 80 ){ bonus2 bResEff,Eff_Stone,5000; bonus2 bResEff,Eff_Sleep,5000; } bonus bMatk,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus2 bMagicAddRace,Rct_Boss,2; bonus2 bMagicAddRace,Rct_NonBoss,2; } }
+27353,card,硬化ブレイザーカード,6,,10,10,,,,,,,769,,,,,{},{ bonus2 bSubEle,Ele_Fire,10; if(getequiprefinerycnt() >= 8) { bonus bDef,50; bonus bMdef,10; } }
+27354,card,汚染されたレイドリックカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bIgnoreDefRace,Rct_Boss,25; bonus2 bIgnoreDefRace,Rct_NonBoss,25; }
+27355,card,汚染されたレイドリックAカード,6,,10,10,,,,,,,4,,,,,{},{ bonus bPerfectHitAddRate,10; }
+27356,card,アイスガーゴイルカード,6,,10,10,,,,,,,256,,,,,{},{ bonus bAspdAddRate,3; bonus2 bSubEle,Ele_Water,10; }
+27357,card,汚染されたスティングカード,6,,10,10,,,,,,,64,,,,,{},{ callfunc "ItemdbAlmightyHeal",0x7F,2*getequiprefinerycnt(); }
+27358,card,プリズンブレイカーカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Undead,15; bonus2 bAddEle,Ele_Undead,15; }
+27359,card,アイスゴーストカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; if(readparam(bDex) >= 125) { bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; } bonus2 bAddCastRate,"WL_SUMMONWB",-100; if(equippeditem(2049)){ bonus2 bAddCastRate,"HW_MAGICPOWER",-50; } }
+27360,card,フレイムゴーストカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; if(readparam(bInt) >= 125) { bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; } bonus2 bAddCastRate,"WL_SUMMONFB",-100; if(equippeditem(2049)){ bonus2 bAddCastRate,"HW_MAGICPOWER",-50; } }
+27361,card,汚染された彷徨う者カード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_NonBoss,25; }
+27381,card,呪殺のヒメルメズカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddRace,Rct_Undead,50; bonus2 bAddRace,Rct_Demon,50; bonus2 bAddEle,Ele_Dark,50; bonus2 bMagicAddEle,Ele_Dark,50; bonus2 bAddEle,Ele_Undead,50; bonus2 bMagicAddEle,Ele_Undead,50; if(equippeditem(311074)){ bonus2 bWeaponComaRace2,Rct_NonBoss,10; } }
+27382,card,堕落の魔眼カード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bPerfectHitAddRate,20; if(equippeditem(27383)){ bonus2 bAddRace,Rct_Boss,n; bonus2 bAddRace,Rct_NonBoss,15; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bSubEle,Ele_Dark,50; } if(equippeditem(311074) ==0){ bonus2 bAddEff,Eff_Sleep,100; bonus2 bAddEff,Eff_Stone,100; bonus2 bAddEff,Eff_Curse,100; } else { bonus2 bAddEff,Eff_Sleep,500; bonus2 bAddEff,Eff_Stone,500; bonus2 bAddEff,Eff_Curse,500; } }
+27383,card,呪殺のアムダライスカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddRace,Rct_Boss,6+getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,6+getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,6+getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,6+getequiprefinerycnt(); if(getequiprefinerycnt() >= 9){ bonus bMaxHPRate,50; } if(equippeditem(311074)){ bonus bMaxHPRate,50; bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; } }
+27384,card,変貌の白騎士カード,6,,10,10,,,,,,,2,,,,,{},{ bonus bAddShortWeaponDamage,5+Baselevel/20; }
+27385,card,変貌のカーリッツバーグカード,6,,10,10,,,,,,,769,,,,,{},{ bonus2 bFixCastrate,-50,0; if(getequiprefinerycnt() >= 9) {bonus2 bFixCastrate,-60,0;} }
+27386,card,呪われたレイドリックカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bIgnoreDefRace,Rct_Boss,25; bonus2 bIgnoreDefRace,Rct_NonBoss,25; }
+27387,card,呪われたレイドリックAカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bPerfectHitAddRate,10; }
+27388,card,呪われた執事カード,6,,10,10,,,,,,,2,,,,,{ /* SC_DPoison 対象にかける 未実装 */ },{ bonus bBaseAtk,5; }
+27389,card,ヴォルフカード,6,,10,10,,,,,,,136,,,,,{},{ skill "RG_COMPULSION",5; }
+27390,card,ヴォルフ・レベンブルグカード,6,,10,10,,,,,,,136,,,,,{},{ skill "MC_OVERCHARGE",10; }
+27391,card,ポーカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bBaseAtk,150; bonus3 bRevAutoActiveWeapon,27391,100-(getequiprefinerycnt()*10),1; if(checkactiveitem()) { percentheal -100,0; } }
+27392,card,ポー・リハルトカード,6,,10,10,,,,,,,32,,,,,{},{}
+27393,card,カトリンカード,6,,10,10,,,,,,,769,,,,,{},{ skill "WZ_VERMILION",getequiprefinerycnt(); }
+27394,card,カトリン・ウィグナーカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddSkillDamageRate,"WL_CHAINLIGHTNING",50; }
+27395,card,アイザックカード,6,,10,10,,,,,,,769,,,,,{},{ bonus2 bResEff,Eff_Fear,10000; }
+27396,card,アイザック・ウィグナーカード,6,,10,10,,,,,,,136,,,,,{},{}
+27397,ench,ニヒツ,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Neutral,15; if(equippeditem(4174)){ bonus2 bSubEle,Ele_Neutral,15; } }
+27398,ench,完全回避 + 25,6,,,,,,,,,,65535,,,,,{},{ bonus bFlee2,15; }
+27399,ench,神供,6,,,,,,,,,,65535,,,,,{},{ bonus bMaxHPrate,15; bonus2 bAddSkillDamageRate,"PA_SACRIFICE",Baselevel; }
+27400,ench,遠距離物理耐性 + 5%,6,,,,,,,,,,65535,,,,,{},{ bonus bLongAtkDef,5; }
+27401,ench,気奪Lv1,6,,,,,,,,,,65535,,,,,{},{ skill "MO_ABSORBSPIRITS",1; }
+
+28335,acc,火ドロップ,4,,10,50,,,,0,2074075135,2,136,,1,,0,{},{ bonus2 bAddEle,Ele_Fire,2; bonus2 bAddEleMagicDamageRate,Ele_Fire,2; bonus2 bSubEle,Ele_Fire,1; }
+28336,acc,水ドロップ,4,,10,50,,,,0,2074075135,2,136,,1,,0,{},{ bonus2 bAddEle,Ele_Water,2; bonus2 bAddEleMagicDamageRate,Ele_Water,2; bonus2 bSubEle,Ele_Water,1; }
+28337,acc,木ドロップ,4,,10,50,,,,0,2074075135,2,136,,1,,0,{},{ bonus2 bAddEle,Ele_Earth,2; bonus2 bAddEleMagicDamageRate,Ele_Earth,2; bonus2 bSubEle,Ele_Earth,1; }
+28338,acc,光ドロップ,4,,10,50,,,,0,2074075135,2,136,,1,,0,{},{ bonus2 bAddEle,Ele_Holy,2; bonus2 bAddEleMagicDamageRate,Ele_Holy,2; bonus2 bSubEle,Ele_Holy,1; }
+28339,acc,闇ドロップ,4,,10,50,,,,0,2074075135,2,136,,1,,0,{},{ bonus2 bAddEle,Ele_Dark,2; bonus2 bAddEleMagicDamageRate,Ele_Dark,2; bonus2 bSubEle,Ele_Dark,1; }
+28340,acc,回復ドロップ,4,,10,50,,,,0,2074075135,2,136,,1,,0,{},{ callfunc "ItemdbAlmightyHeal",0x7F,2; callfunc "ItemdbAlmightySubHeal",0x7F,2; bonus2 bItemHealRate,1,2; }
+
+29371,Unknown_Item,真理の解放,6,,,,,,,,,2,65535,,1,,,{},{ bonus3 bAutoActiveMagic,29371,100,10000; if(equippeditem(310655)){ bonus3 bAutoActiveMagic,29371,200,10000; } }
+29436,Unknown_Item,覇王,6,,,,,,,,,2,65535,,1,,,{},{ bonus4 bAutoActiveItem,29436,100,5000,EAS_WEAPON; if(equippeditem(310655)){ bonus4 bAutoActiveItem,29436,200,5000,EAS_WEAPON; } }
+29509,Unknown_Item,豪傑,6,,,,,,,,,2,65535,,1,,,{},{ bonus4 bAutoActiveItem,29509,100,10000,EAS_WEAPON; if(equippeditem(310655)){ bonus4 bAutoActiveItem,29509,200,10000,EAS_WEAPON; } }
+
+fix
+300078,card,スウィーティカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillDamageRate,"RL_MASS_SPIRAL",Baselevel; if(equippeditem(311439)) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillCoolDown,"RL_HAMMER_OF_GOD",-30000; } if(equippeditem(311883)) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillCoolDown,"RL_HAMMER_OF_GOD",-30000; } }
+
+300079,card,レッドペッパーカッパカード,6,,10,10,,,,,,,769,,,,,{ /*bonus2 bSubSkillDamageRate,"NPC_RAYOFGENESIS",50; */ },{ bonus2 bSubEle,Ele_Wind,10; bonus2 bSubEle,Ele_Holy,10; bonus2 bResEff,Eff_Silence,50; if(equippeditem(311883)){ bonus bMaxHPrate,15; bonus2 bSubEle,Ele_Wind,10; } }
+300080,card,レッドペッパーラムダカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddEle,Ele_Earth,3*(readparam(bStr) + readparam(bInt) + readparam(bDex))/10; bonus2 bMagicAddEle,Ele_Earth,3*(readparam(bStr) + readparam(bInt) + readparam(bDex))/10; if(equippeditem(311883)){ bonus bMaxHPRate,50; SKILL "WL_CRIMSONROCK",5; } }
+
+300099,card,シルヴァパピリアカード,6,,10,10,,,,,,,4,,,,,{ /* 猛毒状態付与未実装*/ },{ bonus2 bSubEle,Ele_Earth,100; if(equippeditem(311883)) { bonus2 bSubEle,Ele_Nutral,20; skill "GN_BLOOD_SUCKER",5; } }
+
+300100,card,グランパピリアカード,6,,10,10,,,,,,,16,,,,,{},{ callfunc "ItemdbAlmightySubHeal",0x7F,2*getequiprefinerycnt(); bonus2 bItemHealRate,1,2*getequiprefinerycnt(); if(equippeditem(311883)) { bonus bMaxHPRate,50; bonus2 bAddRevEff,Eff_Confusion,500; bonus2 bAddRevEff,Eff_Sleep,500; bonus2 bAddRevEff,Eff_Silence,500; bonus2 bAddRevEff,Eff_Curse,500; } }
+
+300101,card,故障した清掃型βカード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Medium,10; if(getequiprefinerycnt() >= 7){ bonus2 bSubSize,Size_Medium,30; bonus2 bMagicSubSize,Size_Medium,30; } }
+
+300262,card,変異キメラ・ザ・ワンカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddRace,Rct_Formless,40; bonus2 bAddRace,Rct_Dragon,40; bonus2 bAddEle,Ele_Fire,40; bonus2 bAddEle,Ele_Poison,40; if(equippeditem(311883)){ bonus bMaxHPrate,50; skill "GC_VENOMIMPRESS",3; } }
+
+300281,card,R001-ベスティアカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddRace,Rct_Boss,2*readparam(bStr); bonus2 bAddRace,Rct_NonBoss,2*readparam(bStr); if(readparam(bStr) >= 130){ bonus2 bAddRace,Rct_Boss,20; bonus2 bAddRace,Rct_NonBoss,20; } if(equippeditem(311883)){ bonus bMaxHPrate,50; skill "BS_OVERTHRUST",5; } }
+
+311883,ench,知識の探求者,6,,,,,,,,,,65535,,,,,{},{ bonus bDef,50; bonus bMdef,50; if(equippeditem(480319)) { bonus bAspdAddRate,30; } }
