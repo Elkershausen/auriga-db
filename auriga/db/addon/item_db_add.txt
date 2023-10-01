@@ -697,14 +697,14 @@
 29608,ench,アリエス,6,,,,,,,,,,65535,,,,,{},{ bonus bVit,3; if(Job == Job_RoyalGuard){ bonus bMaxHPrate,500*getequiprefinerycnt(); } if(equippeditem(19440)){ bonus bAspdAddRate,10; bonus bAddLongWeaponDamage,10; } }
 29609,ench,カプリコーン,6,,,,,,,,,,65535,,,,,{},{ bonus bDex,2; bonus2 bResEff,Eff_Confusion,10000; if(Job == Job_ShadowChaser) { bonus bFlee,5*getequiprefinerycnt(); } if(equippeditem(19441)){ bonus bDex,8; bonus bSPGainValue,20; } }
 29610,ench,パイシーズ,6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Fire,5; bonus2 bAddEleMagicDamageRate,Ele_Water,5; bonus2 bAddEleMagicDamageRate,Ele_Wind,5; bonus2 bAddEleMagicDamageRate,Ele_Earth,5; if(Job == Job_Sorcerer){ bonus bInt,getequiprefinerycnt(); bonus bMdef,getequiprefinerycnt(); } if(equippeditem(19442)){ bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus bCastrate,-20; } }
-29690,ench,火属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_FireWeapon,180000,1; }
-29691,ench,水属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_WaterWeapon,180000,1; }
-29692,ench,風属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_WindWeapon,180000,1; }
-29693,ench,地属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_GroundWeapon,180000,1; }
-29694,ench,聖属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_ASPERSIO,180000,1; }
-29695,ench,闇属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_DarkWeapon,180000,1; }
-29696,ench,念属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_TelekinesisWeapon,180000,1; }
-29697,ench,毒属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_PoisonWeapon,180000,1; }
+29690,ench,火属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_FireWeapon,10800000,1; }
+29691,ench,水属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_WaterWeapon,10800000,1; }
+29692,ench,風属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_WindWeapon,10800000,1; }
+29693,ench,地属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_GroundWeapon,10800000,1; }
+29694,ench,聖属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_ASPERSIO,10800000,1; }
+29695,ench,闇属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_DarkWeapon,10800000,1; }
+29696,ench,念属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_TelekinesisWeapon,10800000,1; }
+29697,ench,毒属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_PoisonWeapon,10800000,1; }
 29698,ench,リーサルフレーム(魔法),6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Formless,10; }
 29699,ench,リーサルビースト(魔法),6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Brute,10; }
 29700,ench,リーサルヒューマン(魔法),6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Human,10; }
