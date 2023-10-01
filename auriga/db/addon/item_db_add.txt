@@ -236,10 +236,10 @@
 17218,consum,ドーナツBOX(150個),,,4500,4500,,,,,2074075135,2,,,1,,,{ getitem2 12784,150,1,0,0,0,0,0,0,604800; },{}
 
 //-- 18000 --
-18005,ammo,アイスキャノンボール,19,20,,10,100,,,0,263168,2,32768,,,0,,{},{}
-18006,ammo,ライトニングキャノンボール,19,20,,10,100,,,0,263168,2,32768,,,0,,{},{}
-18007,ammo,ストーンキャノンボール,19,20,,10,100,,,0,263168,2,32768,,,0,,{},{}
-18008,ammo,フレアキャノンボール,19,20,,10,100,,,0,263168,2,32768,,,0,,{},{}
+18005,ammo,アイスキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{},{ bonus bAtkEle,Ele_Water; }
+18006,ammo,ライトニングキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{},{ bonus bAtkEle,Ele_Wind; }
+18007,ammo,ストーンキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{},{  bonus bAtkEle,Ele_Earth; }
+18008,ammo,フレアキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{},{  bonus bAtkEle,Ele_Fire; }
 18190,weapon,ボルトシューター,9,,10,900,160:170,,,3,2048,2,34,4,175,11,1,{},{ bonus2 bAddRace,Rct_Boss,60; bonus2 bAddRace,Rct_NonBoss,60; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"RA_AIMEDBOLT",30; } }
 18193,weapon,ラピッドファイア,8,20,,10,15,,5,1,1706056,2,34,1,4,11,1,{},{}
 18194,weapon,シャープスター,8,20,,10,15,,5,1,1706056,2,34,1,4,11,1,{},{}
@@ -502,10 +502,10 @@
 24777,shadow,[シャドウ] オルタネイトペンダント,4,,10,0,,,,0,2088832,2,1048576,,200,,1,{},{ bonus2 bAddRace,Rct_Boss,getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,getequiprefinerycnt(); }
 
 //-- 25000 --
-25058,ench,チャーム＜トゥインクル＞,6,,,,,,,,,,65535,,,,,{},{ misceffect 1086,"strcharinfo(0)"; },{ delmisceffect 1086,"strcharinfo(0)"; }
-25177,ench,チャーム＜シャドウ＞,6,,,,,,,,,,65535,,,,,{},{ misceffect 1004,"strcharinfo(0)"; },{ delmisceffect 1004,"strcharinfo(0)"; }
-25178,ench,チャーム＜ピンクグロー＞,6,,,,,,,,,,65535,,,,,{},{ hateffect 32,TRUE; },{ hateffect 32,FALSE; }
-25224,ench,チャーム＜ホワイトボディ＞,6,,,,,,,,,,65535,,,,,{},{ hateffect 22,TRUE; },{ hateffect 22,FALSE; }
+25058,ench,チャーム＜トゥインクル＞,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_LJOSALFAR,TRUE; },{ hateffect HAT_EF_LJOSALFAR,FALSE; }
+25177,ench,チャーム＜シャドウ＞,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_KAGEMUSYA,TRUE; },{ hateffect HAT_EF_KAGEMUSYA,FALSE; }
+25178,ench,チャーム＜ピンクグロー＞,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_CHERRYBLOSSOM,TRUE; },{ hateffect HAT_EF_CHERRYBLOSSOM,FALSE; }
+25224,ench,チャーム＜ホワイトボディ＞,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_WHITEBODY,TRUE; },{ hateffect HAT_EF_WHITEBODY,FALSE; }
 25232,item,安い潤滑油,3,,10,1,,,,,,,,,,,,{},{}
 25291,item,最高級マロンの蜜漬け,3,,10,10,,,,,,,,,,,,{},{}
 25585,item,大きな剣,2,,10,0,,,,,,,,,,,,{},{}
@@ -537,8 +537,8 @@
 25816,item,作動しないトラップ,3,,10,10,,,,,,,,,,,,{},{}
 25817,item,奇怪な石彫刻,3,,10,10,,,,,,,,,,,,{},{}
 25897,item,深海の魔女の冠,3,,10,10,,,,,,,,,,,,{},{}
-25911,ench,チャーム＜カース＞,6,,,,,,,,,,65535,,,,,{},{ misceffect 1085,"strcharinfo(0)"; },{ delmisceffect 1085,"strcharinfo(0)"; }
-25912,ench,チャーム＜スター＞,6,,,,,,,,,,65535,,,,,{},{ misceffect 1086,"strcharinfo(0)"; },{ delmisceffect 1086,"strcharinfo(0)"; }
+25911,ench,チャーム＜カース＞,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_Qscaraba,TRUE; },{ hateffect HAT_EF_Qscaraba,FALSE; }
+25912,ench,チャーム＜スター＞,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_ManyStars,TRUE; },{ hateffect HAT_EF_ManyStars,FALSE; }
 
 //-- 26000 --
 26162,weapon,ウェルディングワンド,5,,10,300,60:180,,,1,134217728,2,2,4,175,10,1,{ /* 魔法攻撃でモンスターを倒した時HP + 200 , SP + 20 */ },{ bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if(getequiprefinerycnt() >= 7) { bonus2 bAddEleMagicDamageRate,Ele_Fire,25; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleMagicDamageRate,Ele_Fire,25; } if(getequiprefinerycnt() >= 10) { } }
@@ -649,11 +649,11 @@
 27399,ench,神供,6,,,,,,,,,,65535,,,,,{},{ bonus bMaxHPrate,15; bonus2 bAddSkillDamageRate,"PA_SACRIFICE",Baselevel; }
 27400,ench,遠距離物理耐性 + 5%,6,,,,,,,,,,65535,,,,,{},{ bonus bLongAtkDef,5; }
 27401,ench,気奪Lv1,6,,,,,,,,,,65535,,,,,{},{ skill "MO_ABSORBSPIRITS",1; }
-27408,ench,イミューンファイア,6,,,,,,,,,,65535,,,,,{},{}
-27409,ench,イミューンウォーター,6,,,,,,,,,,65535,,,,,{},{}
-27410,ench,イミューンウィンド,6,,,,,,,,,,65535,,,,,{},{}
-27411,ench,イミューンアース,6,,,,,,,,,,65535,,,,,{},{}
-27412,ench,MaxHP + 15%,6,,,,,,,,,,65535,,,,,{},{}
+27408,ench,イミューンファイア,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Fire,100; }
+27409,ench,イミューンウォーター,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Water,100; }
+27410,ench,イミューンウィンド,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Wind,100; }
+27411,ench,イミューンアース,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Earth,100; }
+27412,ench,MaxHP + 15%,6,,,,,,,,,,65535,,,,,{},{ bonus bMaxHPrate,15; }
 
 //-- 28000 --
 28045,weapon,ナットブレイカー,9,,10,2800,150:250,,,3,4096,2,34,4,175,16,1,{},{ bonus2 bAddRace,Rct_Boss,60; bonus2 bAddRace,Rct_NonBoss,60; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",150; } }
@@ -673,56 +673,52 @@
 28776,weapon,ロイヤルマジシャンダガー,5,,10,600,120:120,,,1,131072,2,2,4,185,1,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SC_FEINTBOMB",Baselevel/2; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SC_FATALMENACE",Baselevel/2; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
 
 //-- 29000 --
-29041,ench,トゥインクル,6,,,,,,,,,,65535,,,,,{},{}
-29058,ench,龍飛流の幻珠,6,,,,,,,,,,65535,,,,,{},{}
-29059,ench,万波息笛の幻珠,6,,,,,,,,,,65535,,,,,{},{}
-29060,ench,宇宙根源の幻珠,6,,,,,,,,,,65535,,,,,{},{}
-29161,ench,ピンクグロー,6,,,,,,,,,,65535,,,,,{},{}
-29162,ench,シャドウ,6,,,,,,,,,,65535,,,,,{},{}
-29177,ench,夢の加護1,6,,,,,,,,,,65535,,,,,{},{}
-29178,ench,夢の加護2,6,,,,,,,,,,65535,,,,,{},{}
-29179,ench,夢の加護3,6,,,,,,,,,,65535,,,,,{},{}
-29180,ench,夢の加護4,6,,,,,,,,,,65535,,,,,{},{}
-29181,ench,夢の加護5,6,,,,,,,,,,65535,,,,,{},{}
-29206,ench,ブルズアイ,6,,,,,,,,,,65535,,,,,{},{}
-29207,ench,ライフドレイン,6,,,,,,,,,,65535,,,,,{},{}
-29224,ench,ホワイトボディ,6,,,,,,,,,,65535,,,,,{},{}
-29371,Unknown_Item,真理の解放,6,,,,,,,,,2,65535,,1,,,{},{ bonus3 bAutoActiveMagic,29371,100,10000; if(equippeditem(310655)){ bonus3 bAutoActiveMagic,29371,200,10000; } }
-29436,Unknown_Item,覇王,6,,,,,,,,,2,65535,,1,,,{},{ bonus4 bAutoActiveItem,29436,100,5000,EAS_WEAPON; if(equippeditem(310655)){ bonus4 bAutoActiveItem,29436,200,5000,EAS_WEAPON; } }
-29509,Unknown_Item,豪傑,6,,,,,,,,,2,65535,,1,,,{},{ bonus4 bAutoActiveItem,29509,100,10000,EAS_WEAPON; if(equippeditem(310655)){ bonus4 bAutoActiveItem,29509,200,10000,EAS_WEAPON; } }
-29585,ench,アルカナ,6,,,,,,,,,,65535,,,,,{},{}
-29587,ench,閃光,6,,,,,,,,,,65535,,,,,{},{}
-29588,ench,強剛,6,,,,,,,,,,65535,,,,,{},{}
-29589,ench,天弓,6,,,,,,,,,,65535,,,,,{},{}
-29590,ench,新暦,6,,,,,,,,,,65535,,,,,{},{}
-29591,ench,剛体,6,,,,,,,,,,65535,,,,,{},{}
-29592,ench,白雲,6,,,,,,,,,,65535,,,,,{},{}
-29593,ench,凍結耐性,6,,,,,,,,,,65535,,,,,{},{}
-29608,ench,アリエス,6,,,,,,,,,,65535,,,,,{},{}
-29609,ench,カプリコーン,6,,,,,,,,,,65535,,,,,{},{}
-29610,ench,パイシーズ,6,,,,,,,,,,65535,,,,,{},{}
-29690,ench,火属性付与(武器),6,,,,,,,,,,65535,,,,,{},{}
-29691,ench,水属性付与(武器),6,,,,,,,,,,65535,,,,,{},{}
-29692,ench,風属性付与(武器),6,,,,,,,,,,65535,,,,,{},{}
-29693,ench,地属性付与(武器),6,,,,,,,,,,65535,,,,,{},{}
-29694,ench,聖属性付与(武器),6,,,,,,,,,,65535,,,,,{},{}
-29695,ench,闇属性付与(武器),6,,,,,,,,,,65535,,,,,{},{}
-29696,ench,念属性付与(武器),6,,,,,,,,,,65535,,,,,{},{}
-29697,ench,毒属性付与(武器),6,,,,,,,,,,65535,,,,,{},{}
-29698,ench,リーサルフレーム(魔法),6,,,,,,,,,,65535,,,,,{},{}
-29699,ench,リーサルビースト(魔法),6,,,,,,,,,,65535,,,,,{},{}
-29700,ench,リーサルヒューマン(魔法),6,,,,,,,,,,65535,,,,,{},{}
-29701,ench,モータルウォーター(魔法),6,,,,,,,,,,65535,,,,,{},{}
-29702,ench,モータルイービル(魔法),6,,,,,,,,,,65535,,,,,{},{}
-29703,ench,モータルアンデッド(魔法),6,,,,,,,,,,65535,,,,,{},{}
-29704,ench,フェイタルスモール(魔法),6,,,,,,,,,,65535,,,,,{},{}
-29705,ench,フェイタルネメシス(魔法),6,,,,,,,,,,65535,,,,,{},{}
-29719,ench,エス,6,,,,,,,,,,65535,,,,,{},{}
-29720,ench,死霊,6,,,,,,,,,,65535,,,,,{},{}
-29721,ench,魂,6,,,,,,,,,,65535,,,,,{},{}
-29722,ench,カース,6,,,,,,,,,,65535,,,,,{},{}
-29723,ench,スター,6,,,,,,,,,,65535,,,,,{},{}
-29725,ench,ゾディアック,6,,,,,,,,,,65535,,,,,{},{}
+29041,ench,トゥインクル,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_LJOSALFAR,TRUE; },{ hateffect HAT_EF_LJOSALFAR,FALSE; }
+29058,ench,龍飛流の幻珠,6,,,,,,,,,,65535,,,,,{ /* 指定mobに与えるダメージ + 20%　*/ },{}
+29059,ench,万波息笛の幻珠,6,,,,,,,,,,65535,,,,,{ /* 指定mobに与えるダメージ + 20%　*/ },{}
+29060,ench,宇宙根源の幻珠,6,,,,,,,,,,65535,,,,,{ /* 指定mobに与えるダメージ + 20%　*/ },{}
+29161,ench,ピンクグロー,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_PINKBODY,TRUE; },{ hateffect HAT_EF_PINKBODY,FALSE; }
+29162,ench,シャドウ,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_KAGEMUSYA,TRUE; },{ hateffect HAT_EF_KAGEMUSYA,FALSE; }
+29177,ench,夢の加護1,6,,,,,,,,,,65535,,,,,{ /* 真昼の弦月 与えるダメージ + 5% 受けるダメージ - 5% */ },{}
+29178,ench,夢の加護2,6,,,,,,,,,,65535,,,,,{ /* 真昼の弦月 与えるダメージ + 10% 受けるダメージ - 10% */ },{}
+29179,ench,夢の加護3,6,,,,,,,,,,65535,,,,,{ /* 真昼の弦月 与えるダメージ + 20% 受けるダメージ - 20% */ },{}
+29180,ench,夢の加護4,6,,,,,,,,,,65535,,,,,{ /* 真昼の弦月 与えるダメージ + 30% 受けるダメージ - 30% */ },{}
+29181,ench,夢の加護5,6,,,,,,,,,,65535,,,,,{ /* 真昼の弦月 与えるダメージ + 40% 受けるダメージ - 40% */ },{}
+29206,ench,ブルズアイ,6,,,,,,,,,,65535,,,,,{},{ bonus bAddLongWeaponDamage,10; }
+29207,ench,ライフドレイン,6,,,,,,,,,,65535,,,,,{},{ bonus2 bHPDrainRate,3,15; }
+29224,ench,ホワイトボディ,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_WHITEBODY,TRUE; },{ hateffect HAT_EF_WHITEBODY,FALSE; }
+29587,ench,閃光,6,,,,,,,,,,65535,,,,,{},{ bonus bFlee2,getequiprefinerycnt(); if(equippeditem(4877)){ bonus bFlee,150;} }
+29588,ench,強剛,6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddRace,Rct_Boss,7*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,7*getequiprefinerycnt(); if(equippeditem(4875)){ bonus bPerfectHitAddRate,30; } }
+29589,ench,天弓,6,,,,,,,,,,65535,,,,,{},{ bonus bAddLongWeaponDamage,7*getequiprefinerycnt(); if(equippeditem(4879)){ bonus bSkillDelayRate,-30; } }
+29590,ench,新暦,6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,7*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,7*getequiprefinerycnt(); if(equippeditem(4876)){ bonus2 bFixCastrate,-70,0; } }
+29591,ench,剛体,6,,,,,,,,,,65535,,,,,{},{ bonus bMaxHPrate,5*getequiprefinerycnt(); if(equippeditem(4878)){ bonus bDef,500; bonus bMdef,50; } }
+29592,ench,白雲,6,,,,,,,,,,65535,,,,,{},{ bonus bAddCriticalDamage,7*getequiprefinerycnt(); if(equippeditem(4880)){ bonus bCritical,100;} }
+29593,ench,凍結耐性,6,,,,,,,,,,65535,,,,,{},{ bonus2 bResEff,Eff_Freeze,10000; }
+29608,ench,アリエス,6,,,,,,,,,,65535,,,,,{},{ bonus bVit,3; if(Job == Job_RoyalGuard){ bonus bMaxHPrate,500*getequiprefinerycnt(); } if(equippeditem(19440)){ bonus bAspdAddRate,10; bonus bAddLongWeaponDamage,10; } }
+29609,ench,カプリコーン,6,,,,,,,,,,65535,,,,,{},{ bonus bDex,2; bonus2 bResEff,Eff_Confusion,10000; if(Job == Job_ShadowChaser) { bonus bFlee,5*getequiprefinerycnt(); } if(equippeditem(19441)){ bonus bDex,8; bonus bSPGainValue,20; } }
+29610,ench,パイシーズ,6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Fire,5; bonus2 bAddEleMagicDamageRate,Ele_Water,5; bonus2 bAddEleMagicDamageRate,Ele_Wind,5; bonus2 bAddEleMagicDamageRate,Ele_Earth,5; if(Job == Job_Sorcerer){ bonus bInt,getequiprefinerycnt(); bonus bMdef,getequiprefinerycnt(); } if(equippeditem(19442)){ bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus bCastrate,-20; } }
+29690,ench,火属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_FireWeapon,180000,1; }
+29691,ench,水属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_WaterWeapon,180000,1; }
+29692,ench,風属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_WindWeapon,180000,1; }
+29693,ench,地属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_GroundWeapon,180000,1; }
+29694,ench,聖属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_ASPERSIO,180000,1; }
+29695,ench,闇属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_DarkWeapon,180000,1; }
+29696,ench,念属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_TelekinesisWeapon,180000,1; }
+29697,ench,毒属性付与(武器),6,,,,,,,,,,65535,,,,,{},{ sc_start SC_PoisonWeapon,180000,1; }
+29698,ench,リーサルフレーム(魔法),6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Formless,10; }
+29699,ench,リーサルビースト(魔法),6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Brute,10; }
+29700,ench,リーサルヒューマン(魔法),6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Human,10; }
+29701,ench,モータルウォーター(魔法),6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddEle,Ele_Water,10; }
+29702,ench,モータルイービル(魔法),6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddEle,Ele_Dark,10; }
+29703,ench,モータルアンデッド(魔法),6,,,,,,,,,,65535,,,,,{},{  bonus2 bMagicAddEle,Ele_Undead,10; }
+29704,ench,フェイタルスモール(魔法),6,,,,,,,,,,65535,,,,,{},{ bonus bMatk,5; bonus2 bAddSize,Size_Small,5; }
+29705,ench,フェイタルネメシス(魔法),6,,,,,,,,,,65535,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; }
+29719,ench,エス,6,,,0,,,,,,,65535,,,,,{ /* ソウルリーパー */ },{ /* if(Job == Job_Soulreaper) { bonus bMatk,50; bonus2 bAddSkillDamageRate,"SP_SHA",Baselevel/10; bonus2 bAddSkillDamageRate,"SP_SPA",Baselevel/10; bonus2 bAddSkillDamageRate,"SP_SWHOO",Baselevel/10; } */ }
+29720,ench,死霊,6,,,0,,,,,,,65535,,,,,{ /* ソウルリーパー */ },{ /* if(Job == Job_Soulreaper) { bonus bMatk,50; bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",Baselevel/10; } */ }
+29721,ench,魂,6,,,0,,,,,,,65535,,,,,{ /* ソウルリーパー */ },{ /* if(Job == Job_Soulreaper) { bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; skill "SA_DISPELL",5; bonus bMaxHP,50*Baselevel; bonus bMaxSP,5*Baselevel; } */ }
+29722,ench,カース,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_Qscaraba,TRUE; },{ hateffect HAT_EF_Qscaraba,FALSE; }
+29723,ench,スター,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_ManyStars,TRUE; },{ hateffect HAT_EF_ManyStars,FALSE; }
+29725,ench,ゾディアック,6,,,,,,,,,,65535,,,,,{},{ skill "AL_BLESSING",10; }
 
 //-- 30000 --
 
@@ -2237,7 +2233,7 @@
 470038,shoes,双魚宮のシューズ,4,,10,400,,25:5,,0,2074075135,2,64,,1,,1,{},{}
 470045,shoes,人馬宮のシューズ,4,,10,400,,25:5,,0,2074075135,2,64,,1,,1,{},{}
 470046,shoes,王者のブーツ,4,,10,1000,,20:0,,1,2074075135,2,64,,130,,1,{},{}
-470047,shoes,覚醒火雷大神靴,4,,10,1000,,18:0,,1,2074075135,2,64,,99,,1,{/*300139*/},{}
+470047,shoes,覚醒火雷大神靴,4,,10,1000,,18,,1,2074075135,2,64,,99,,1,{},{ bonus2 bMagicAddRace,Rct_Boss,15; bonus bMatk,5*getequiprefinerycnt(); bonus bCastrate,-2*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Earth,2*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Ghost,2*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Neutral,2*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Undead,2*getequiprefinerycnt(); if(equippeditem(4131)){ skill "AL_HEAL",10; if(Baselevel >= 99) { bonus bInt,3*getequiprefinerycnt(); bonus bMdef,3*getequiprefinerycnt(); } if(Baselevel >= 100) { bonus bInt,10*getequiprefinerycnt(); bonus bMdef,10*getequiprefinerycnt(); } } if(equippeditem(300139)){ skill "AL_HEAL",10; if(Baselevel >= 99) { bonus bMatk,5*getequiprefinerycnt(); bonus bMdef,5*getequiprefinerycnt(); } if(Baselevel >= 100) { bonus bMatk,15*getequiprefinerycnt(); bonus bMdef,10*getequiprefinerycnt(); } } }
 470048,shoes,剛勇無双の貫,4,,10,400,,18:0,,0,2074075135,2,64,,100,,1,{},{ bonus bSkillDelayRate,-30; bonus bPerfectHitAddRate,20; if(getequiprefinerycnt() >= 7){ bonus bPerfectHitAddRate,20; } if(getequiprefinerycnt() >= 9){ bonus bPerfectHitAddRate,20; } if(equippeditem(19379)){ bonus bAddLongWeaponDamage,25; } }
 470049,shoes,ポロロッカシューズ,4,,10,500,,15:0,,1,2074075135,2,64,,100,,1,{},{}
 470050,shoes,天狗の下駄,4,,10,400,,12:0,,1,2074075135,2,64,,100,,1,{},{}
