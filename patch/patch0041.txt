@@ -1,0 +1,52 @@
+101286#ローヤルゼリーパック#
+101287#イグドラシルの実パック#
+101288#イグドラシルの種パック#
+101289#カボチャパイパック#
+101290#アイテム鑑定Lv1の箱(30日)#
+101291#グリードLv1の箱(30日)#
+101292#リザレクションLv4の箱(30日)#
+101293#アイテム鑑定Lv1(30日)#
+101294#グリードLv1(30日)#
+101295#リザレクションLv4(30日)#
+200188#[2022年]究極精錬チケットの箱#
+200189#[2022]特別チケットの箱#
+
+101286,consum,ローヤルゼリーパック,2,,,0,,,,,2074075135,2,,,1,,,{},{ getitem 526,100; }
+101287,consum,イグドラシルの実パック,2,,,0,,,,,2074075135,2,,,1,,,{},{ getitem 607,20; }
+101288,consum,イグドラシルの種パック,2,,,0,,,,,2074075135,2,,,1,,,{},{ getitem 608,20; }
+101289,consum,カボチャパイパック,2,,,0,,,,,2074075135,2,,,1,,,{},{ getitem 12192,150; }
+101290,consum,アイテム鑑定Lv1の箱(30日),2,,,0,,,,,2074075135,2,,,1,,,{},{ getitem2 101293,1,1,0,0,0,0,0,0,259200; }
+101291,consum,グリードLv1の箱(30日),2,,,0,,,,,2074075135,2,,,1,,,{},{ getitem2 101294,1,1,0,0,0,0,0,0,259200; }
+101292,consum,リザレクションLv4の箱(30日),2,,,0,,,,,2074075135,2,,,1,,,{},{ getitem2 101295,1,1,0,0,0,0,0,0,259200; }
+101293,consum,アイテム鑑定Lv1(30日),2,,,0,,,,,2074075135,2,,,1,,,{},{ itemskill "MC_IDENTIFY",1,""; }
+101294,consum,グリードLv1(30日),2,,,0,,,,,2074075135,2,,,1,,,{},{ itemskill "BS_GREED",1,""; }
+101295,consum,リザレクションLv4(30日),2,,,0,,,,,2074075135,2,,,1,,,{},{ itemskill "ALL_RESURRECTION",4,""; }
+200188,consum,[2022年]究極精錬チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{},{ getitem2 6952,1,1,0,0,0,0,0,0,604800; }
+200189,consum,[2022]特別チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{},{ getitem2 1000090,1,1,0,0,0,0,0,0,3628800; }
+
+410124#怨霊怪異の耳#
+410125#怨霊怪異の耳#
+450209#改良型パワードスーツ#
+450210#もこふわシャークパジャマ#
+490193#トラベラーリング#
+
+410124,head,怨霊怪異の耳,4,,10,300,,2:0,,0,2074075135,2,512,,100,2212,0,{},{ bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus bNoCastCancel,0; if(getskilllv("SR_RIDEINLIGHTNING") >= 5) { bonus bAspdAddRate,15; } if(equippeditem(19329) == 0){ if(getskilllv("SR_EARTHSHAKER") >= 5) { bonus2 bAddFixCastRate,"SR_HOWLINGOFLION",-100; } } else { if(getskilllv("SR_EARTHSHAKER") >= 5) { bonus2 bAddFixCastRate,"SR_HOWLINGOFLION",-100; bonus2 bAddSkillCoolDown,"SR_HOWLINGOFLION",-9500; } } }
+410125,head,怨霊怪異の耳,4,,10,300,,2:0,,1,2074075135,2,512,,100,2212,0,{},{ bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus bNoCastCancel,0; if(getskilllv("SR_RIDEINLIGHTNING") >= 5) { bonus bAspdAddRate,15; } if(equippeditem(19329) == 0){ if(getskilllv("SR_EARTHSHAKER") >= 5) { bonus2 bAddFixCastRate,"SR_HOWLINGOFLION",-100; } } else { if(getskilllv("SR_EARTHSHAKER") >= 5) { bonus2 bAddFixCastRate,"SR_HOWLINGOFLION",-100; bonus2 bAddSkillCoolDown,"SR_HOWLINGOFLION",-9500; } } }
+450209,armor,改良型パワードスーツ,4,,10,1000,,120:0,,1,2074075135,2,16,,100,,1,{},{ bonus bMaxHPrate,10; bonus bMaxSPrate,10; if(getskilllv("NC_ARMSCANNON") >= 5) { bonus bBaseAtk,Baselevel; } if(getskilllv("NC_NEUTRALBARRIER") >= 3) { bonus bAddLongWeaponDamage,70; } bonus bSkillDelayRate,-10*getskilllv("NC_PILEBUNKER"); if(getequiprefinerycnt() >= 5) { bonus2 bAddSkillDamageRate,"NC_ARMSCANNON",50; bonus2 bAddSkillDamageRate,"NC_COLDSLOWER",50; bonus2 bAddSkillDamageRate,"NC_FLAMELAUNCHER",50; } if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NC_ARMSCANNON",50; bonus2 bAddSkillDamageRate,"NC_COLDSLOWER",50; bonus2 bAddSkillDamageRate,"NC_FLAMELAUNCHER",50; } if(getequiprefinerycnt() >= 10) { bonus bAddLongWeaponDamage,15; bonus bUnbreakableArmor,0; } }
+450210,armor,もこふわシャークパジャマ,4,,10,100,,100:15,,1,2074075135,2,16,,100,,1,{},{ callfunc "ItemdbAlmightyHeal",0x7F,10; if(getskilllv("SU_SPIRITOFSEA") >= 1 ) { bonus4 bAutoSpell,"SU_TUNAPARTY",1,100,EAS_REVENGE|EAS_MAGIC|EAS_SELF|EAS_USEBETTER; } bonus2 bAddCastRate,"SU_FRESHSHRIMP",-10*getskilllv("SU_SHRIMPARTY"); bonus2 bAddCastRate,"SU_BUNCHOFSHRIMP",-10*getskilllv("SU_SHRIMPARTY"); bonus2 bAddCastRate,"SU_TUNABELLY",-10*getskilllv("SU_SHRIMPARTY"); bonus2 bAddCastRate,"SU_TUNAPARTY",-10*getskilllv("SU_SHRIMPARTY"); bonus2 bAddCastRate,"SU_GROOMING",-10*getskilllv("SU_SHRIMPARTY"); bonus2 bAddCastRate,"SU_PURRING",-10*getskilllv("SU_SHRIMPARTY"); bonus2 bAddCastRate,"SU_SHRIMPARTY",-10*getskilllv("SU_SHRIMPARTY"); bonus bMaxHPrate,10*getskilllv("SU_GROOMING"); if(getskilllv("SU_PURRING") >= 5) { bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; } if(getequiprefinerycnt() >= 5) { bonus bFlee2,5; callfunc "ItemdbAlmightyHeal",0x7F,10; } if(getequiprefinerycnt() >= 7) { bonus bFlee2,5; callfunc "ItemdbAlmightyHeal",0x7F,10; } if(getequiprefinerycnt() >= 10) { bonus bDef,300; bonus2 bSubRace,Rct_Human,7; bonus2 bMagicSubRace,Rct_Human,7; } }
+490193,acc,トラベラーリング,4,,10,300,,,,1,2074075135,2,136,,100,,0,{},{ bonus bAgi,7; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillDamageRate,"WM_SEVERE_RAINSTORM",Baselevel/3; if(getskilllv("WM_UNLIMITED_HUMMING_VOICE") >= 5) { bonus bHPGainValue,100; bonus bSPGainValue,10; } if(getskilllv("WM_SEVERE_RAINSTORM") >= 5) { bonus2 bAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_Boss,15; } if(getskilllv("WM_FRIGG_SONG") >= 5) { bonus bMaxHPrate,25; } if(getskilllv("WM_GLOOMYDAY") >= 5) { bonus bPerfectHitAddRate,15; } if((Job == Job_Minstrel) || (Job == Job_Wanderer)) { if(equippeditem(29509)){ bonus bNoSizeFix,0; bonus4 bAutoActiveSkill,"WM_SEVERE_RAINSTORM",490193,100,1; if(checkactiveitem()) { misceffect 220,""; sc_start SC_UNLIMIT,20000,5; } } } },{ sc_end SC_UNLIMIT; }
+
+item_db2_add.txt
+101286,0,0,1,1,0,1,1,0,0,0,0,0	//ローヤルゼリーパック
+101287,0,0,1,1,0,1,1,0,0,0,0,0	//イグドラシルの実パック
+101288,0,0,1,1,0,1,1,0,0,0,0,0	//イグドラシルの種パック
+101289,0,0,1,1,0,1,1,0,0,0,0,0	//カボチャパイパック
+101290,0,0,1,1,0,1,1,0,0,0,0,0	//アイテム鑑定Lv1の箱(30日)
+101291,0,0,1,1,0,1,1,0,0,0,0,0	//グリードLv1の箱(30日)
+101292,0,0,1,1,0,1,1,0,0,0,0,0	//リザレクションLv4の箱(30日)
+101293,0,0,1,1,0,1,1,0,0,0,1,0	//アイテム鑑定Lv1(30日)
+101294,0,0,1,1,0,1,1,0,0,0,1,0	//グリードLv1(30日)
+101295,0,0,1,1,0,1,1,0,0,0,1,0	//リザレクションLv4(30日)
+200188,0,0,1,1,0,1,1,0,0,0,0,0	//[2022年]究極精錬チケットの箱
+200189,0,0,1,1,0,1,1,0,0,0,0,0	//[2022]特別チケットの箱
+
