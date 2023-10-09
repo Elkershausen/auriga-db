@@ -1,0 +1,88 @@
+300318#封印されたイグニゼム=セニア（MVP）カード#
+300319#封印されたエドガカード#
+300320#封印されたオシリスカード#
+300321#封印されたオークヒーローカード#
+300322#封印されたオークロードカード#
+300323#封印されたドッペルゲンガーカード#
+300324#封印されたドレイクカード#
+300325#封印されたバフォメットカード#
+300326#封印されたフリオニカード#
+300327#封印されたマヤーカード#
+300328#封印されたミストレスカード#
+300330#封印されたアトロスカード#
+300331#封印されたイフリートカード#
+300332#封印されたグルームアンダーナイトカード#
+300334#封印された堕ちた大神官ヒバムカード#
+300335#封印された女王スカラバカード#
+300337#封印された女帝スカラバカード#
+300338#封印された魔剣士タナトスの思念体カード#
+300339#封印された汚染されたダークロードカード#
+300340#封印された汚染されたブリナラネアカード#
+300341#封印された硬化ムスペルスコールカード#
+300343#封印されたタイムホルダーカード#
+300344#封印されたボミカード#
+300345#封印された怒りの月夜花カード#
+300346#封印された怒りのドラキュラカード#
+300348#封印されたアメンホテプカード#
+300349#封印された古のタオグンカカード#
+300350#封印された輝くベアドールカード#
+300351#封印された古のウータンガードカード#
+300352#封印された覚醒クトルラナックスカード#
+300353#封印された混沌のバフォメットカード#
+300354#封印された深海のクラーケンカード#
+300355#封印された不吉なタートルGカード#
+
+300318,card,封印されたイグニゼム=セニア（MVP）カード,6,,10,10,,,,,,,64,,,,,{},{ bonus bMaxHPRate,5; bonus bMaxSPRate,5; bonus2 bHPPenaltyTime,10000,-15; bonus2 bSPPenaltyTime,10000,-3; if(equippeditem(22178)){ bonus2 bHPPenaltyTime,10000,-1500; bonus2 bSPPenaltyTime,10000,-30; if(Baselevel <= 99){ bonus bStr,getequiprefinerycnt(); bonus bFlee,2*getequiprefinerycnt(); } if(Baselevel >= 100){ bonus bStr,4*getequiprefinerycnt(); bonus bFlee,5*getequiprefinerycnt(); } } if(equippeditem(29724)){ bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus2 bHPPenaltyTime,10000,-1500; bonus2 bSPPenaltyTime,10000,-30; } }
+300319,card,封印されたエドガカード,6,,10,10,,,,,,,64,,,,,{},{ bonus3 bRevAutoSpell,"SM_ENDURE",1,500; if(equippeditem(311072)){ bonus bDef,10*readparam(bVit)/10; bonus bMdef,readparam(bVit)/10; if(readparam(bVit) >= 130){ callfunc "ItemdbAlmightySubHeal",0x7F,10; bonus2 bItemHealRate,1,10; } } }
+300320,card,封印されたオシリスカード,6,,10,10,,,,,,,136,,,,,{ /*攻撃命中時、SP + 1*/ },{ bonus bRestartFullRecover,0; bonus2 bHPPenaltyTime,10000,1000; bonus2 bSPPenaltyTime,10000,100; if(equippeditem(311072)){ } }
+300321,card,封印されたオークヒーローカード,6,,10,10,,,,,,,769,,,,,{},{ bonus bVit,1; bonus2 bResEff,Eff_Stun,3000; if(equippeditem(19443) || equippeditem(19444)){ if(Baselevel <= 99){ bonus bBaseAtk,3*readparam(bVit)/10; bonus bMatk,3*readparam(bVit)/10; bonus bVit,readparam(bLuk)/20; bonus bLuk,readparam(bLuk)/20; } if(Baselevel >= 100){ bonus bBaseAtk,10*readparam(bVit)/10; bonus bMatk,10*readparam(bVit)/10; bonus bVit,readparam(bLuk)/10; bonus bLuk,readparam(bLuk)/10; } } if(equippeditem(311072)){ bonus bFlee2,2; bonus2 bSubSkillDamageRate,"NPC_CRITICALSLASH",30; } }
+300322,card,封印されたオークロードカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bShortWeaponDamageReturn,10; if(equippeditem(450142)){ bonus2 bResEff,Eff_Freeze,10000; if(Baselevel <= 99){ bonus2 bAddEle,Ele_Dark,getequiprefinerycnt(); } if(Baselevel >= 100){ bonus2 bAddEle,Ele_Dark,3*getequiprefinerycnt(); } } if(equippeditem(450205)){ bonus2 bResEff,Eff_Freeze,10000; bonus bInfiniteEndure,0; if(Baselevel <= 99){ bonus2 bAddEle,Ele_Dark,3*getequiprefinerycnt(); } if(Baselevel >= 100){ bonus2 bAddEle,Ele_Dark,10*getequiprefinerycnt(2); } } if(equippeditem(311072)){ bonus bMaxHPRate,25; } }
+300323,card,封印されたドッペルゲンガーカード,6,,10,10,,,,,,,2,,,,,{},{ bonus bAspdAddRate,3; if(equippeditem(311072)){ bonus bShortWeaponDamageReturn,10; } }
+300324,card,封印されたドレイクカード,6,,10,10,,,,,,,2,,,,,{},{ bonus bNoSizeFix,0; bonus bBaseAtk,-100; if(equippeditem(311072)){ bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; } }
+300325,card,封印されたバフォメットカード,6,,10,10,,,,,,,2,,,,,{},{ bonus bSplashRange,1; bonus bHit,-50; if(equippeditem(311072)){ bonus3 bAutoActiveWeapon,300325,500,3000; if(checkactiveitem()) { misceffect 220,""; bonus2 bHPDrainValue,100,1; }}}
+300326,card,封印されたフリオニカード,6,,10,10,,,,,,,2,,,,,{},{ bonus bHit,30; if(equippeditem(311072)){ bonus bPerfectHitAddRate,15; bonus2 bSPDrainValue,100,1; } }
+300327,card,封印されたマヤーカード,6,,10,10,,,,,,,32,,,,,{},{ bonus bMagicDamageReturn,15; if(equippeditem(311072)){ bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus3 bRevAutoActiveMagic,300327,1000,2000; if(checkactiveitem()) { misceffect 220,""; bonus2 bHPRatePenaltyTime,1000,-15; }}}
+300328,card,封印されたミストレスカード,6,,10,10,,,,,,,769,,,,,{},{ bonus bNoGemStone,0; bonus bUseSPrate,100; if(equippeditem(311072)){ bonus2 bSubEle,Ele_Wind,15; }}
+300330,card,封印されたアトロスカード,6,,10,10,,,,,,,2,,,,,{},{ bonus bBaseAtk,25; bonus3 bAutoActiveWeapon,300330,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus bAspdAddRate,30; } if(equippeditem(311073)) { bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus3 bAutoActiveWeapon,300173,100,30000; if(checkactiveitem()) { misceffect 220,""; bonus bAspdAddRate,30; }}}
+300331,card,封印されたイフリートカード,6,,10,10,,,,,,,136,,,,,{},{ bonus bBaseAtk,JobLevel/10; bonus bCritical,JobLevel/10; bonus bHit,JobLevel/10; bonus3 bRevAutoSelfSpell,"NPC_EARTHQUAKE",10,300; if(equippeditem(480023)){ bonus2 bSubEle,Ele_Fire,30; bonus2 bSubSkillDamageRate,"NPC_CRITICALSLASH",30; } if(equippeditem(311073)){ bonus bBaseAtk,JobLevel/2; bonus bHit,JobLevel/2; bonus bCritical,JobLevel/2; } }
+300332,card,封印されたグルームアンダーナイトカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddRace,Rct_Demon,5; bonus2 bAddRace,Rct_Angel,5; bonus2 bAddEle,Ele_Holy,5; bonus2 bAddEle,Ele_Dark,5; if(equippeditem(311073)){ bonus bMaxHPRate,25; bonus2 bAddRace,Rct_Demon,10; bonus2 bAddRace,Rct_Angel,10; bonus2 bAddEle,Ele_Holy,10; bonus2 bAddEle,Ele_Dark,10; } if(equippeditem(450286)){ bonus2 bSubSkillDamageRate,"NPC_RAYOFGENESIS",5*getequiprefinerycnt(); } if(equippeditem(450287)){ bonus2 bSubSkillDamageRate,"NPC_RAYOFGENESIS",2*getequiprefinerycnt(); } }
+300334,card,封印された堕ちた大神官ヒバムカード,6,,10,10,,,,,,,64,,,,,{},{}
+300335,card,封印された女王スカラバカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddGroup,11,10; if(equippeditem(19023)){ bonus2 bAddGroup,11,10; } if(equippeditem(311075)){ bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; }}
+300337,card,封印された女帝スカラバカード,6,,10,10,,,,,,,769,,,,,{},{ bonus bInt,1; bonus2 bSubRace,Rct_Insect,3; bonus2 bMagicSubRace,Rct_Insect,3; if(getequiprefinerycnt() >= 9) { bonus2 bSubRace,Rct_Insect,2; bonus2 bMagicSubRace,Rct_Insect,2; } if(equippeditem(311075) || equippeditem(19023)){ bonus2 bResEff, Eff_Confusion,10000; } }
+300338,card,封印された魔剣士タナトスの思念体カード,6,,10,10,,,,,,,2,,,,,{ /* 攻撃命中時、SP - 1 */ },{ bonus2 bIgnoreDefRace,Rct_Boss,100; bonus2 bIgnoreDefRace,Rct_NonBoss,100; bonus bDef,-30; bonus bFlee,-30; if(equippeditem(311074)){ bonus bBaseAtk,Baselevel/2; } if(equippeditem(310197)){ bonus3 bAutoActiveWeapon,310197,300,10000; if(checkactiveitem()) { misceffect 220,""; /*EFST_EP16_DEF = 873*/ } bonus3 bAutoActiveMagic,310197,300,10000; if(checkactiveitem()) { misceffect 220,""; /*EFST_EP16_DEF = 873*/ } } }
+300339,card,封印された汚染されたダークロードカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddEle,Ele_Neutral,(readparam(bStr) + readparam(bInt) + readparam(bDex))/20; bonus2 bMagicAddEle,Ele_Neutral,(readparam(bStr) + readparam(bInt) + readparam(bDex))/20; if(equippeditem(311074)){ bonus bMaxHPRate,25; bonus2 bAddEle,Ele_Neutral,(readparam(bStr) + readparam(bInt) + readparam(bDex))/20; bonus2 bMagicAddEle,Ele_Neutral,(readparam(bStr) + readparam(bInt) + readparam(bDex))/20; }}
+300340,card,封印された汚染されたブリナラネアカード,6,,10,10,,,,,,,64,,,,,{},{ bonus bMaxHPRate,5; bonus bMaxSPRate,5; bonus2 bAddEle,Ele_Water,10; bonus2 bMagicAddEle,Ele_Water,10; bonus2 bAddEff,Eff_Freeze,1500; if(equippeditem(311074)){ bonus bMaxHPRate,15; bonus bMaxSPRate,15; bonus2 bSubEle,Ele_Water,10; }}
+300341,card,封印された硬化ムスペルスコールカード,6,,10,10,,,,,,,64,,,,,{},{ bonus bMaxHPRate,5; bonus bMaxSPRate,5; bonus2 bAddEle,Ele_Fire,10; bonus2 bMagicAddEle,Ele_Fire,10; bonus2 bAddEff,Eff_Burning,1500; if(equippeditem(311074)){ bonus bMaxHPRate,15; bonus bMaxSPRate,15; bonus2 bSubEle,Ele_Fire,10; }}
+300343,card,封印されたタイムホルダーカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bUseSPRate,10; if(equippeditem(311075)){ bonus bMatk,Baselevel/2; } }
+300344,card,封印されたボミカード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Water,15; bonus2 bSubEle,Ele_Water,25; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; }}
+300345,card,封印された怒りの月夜花カード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bMaxSPRate,-50; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Brute,20; bonus2 bMagicAddRace,Rct_Demon,20; }}
+300346,card,封印された怒りのドラキュラカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bResEff,Eff_Curse,3000; bonus2 bResEff,Eff_Fear,3000; if(equippeditem(28510)){ bonus bAspdAddRate,5; } if(equippeditem(311075)){ bonus bAspd,1; }}
+300348,card,封印されたアメンホテプカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bMagicAddRace,Rct_Demon,5; bonus2 bMagicAddRace,Rct_Undead,5; bonus2 bMagicAddEle,Ele_Dark,5; bonus2 bMagicAddEle,Ele_Undead,5; if(equippeditem(450162)){ bonus2 bAddEleMagicDamageRate,Ele_Holy,5; bonus2 bResEff,Eff_Freeze,10000; skill "AB_JUDEX",1; } if(equippeditem(450181)){ bonus2 bAddEleMagicDamageRate,Ele_Holy,15; bonus2 bResEff,Eff_Freeze,10000; skill "AB_JUDEX",getequiprefinerycnt(); } if(equippeditem(311075)){ bonus bMaxHPRate,25; bonus2 bMagicAddRace,Rct_Demon,10; bonus2 bMagicAddRace,Rct_Undead,10; bonus2 bMagicAddEle,Ele_Dark,10; bonus2 bMagicAddEle,Ele_Undead,10; } }
+300349,card,封印された古のタオグンカカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bMaxHPRate,5+(2*getequiprefinerycnt()); if(equippeditem(311075)){ bonus bMaxHPRate,25; } }
+300350,card,封印された輝くベアドールカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bMaxHPRate,-50; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Boss,20; bonus2 bMagicAddRace,Rct_NonBoss,20; }}
+300351,card,封印された古のウータンガードカード,6,,10,10,,,,,,,64,,,,,{},{ bonus bMaxHPRate,5; bonus bMaxSPRate,5; bonus2 bAddSkillDamageRate,"ASC_BREAKER",15; bonus2 bAddSkillDamageRate,"ASC_METEORASSAULT",15; if(equippeditem(311075)){ bonus bMaxHPRate,5; bonus bMaxSPRate,5; bonus bSkillDelayRate,getskilllv("ASC_BREAKER")/3; bonus bSkillDelayRate,getskilllv("ASC_METEORASSAULT")/3; }}
+300352,card,封印された覚醒クトルラナックスカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bMagicAddRace,Rct_Formless,5; bonus2 bMagicAddRace,Rct_Demon,5; bonus2 bMagicAddEle,Ele_Fire,5; bonus2 bMagicAddEle,Ele_Neutral,5; if(equippeditem(311075)){ bonus bMaxHPRate,25; bonus2 bMagicAddRace,Rct_Formless,10; bonus2 bMagicAddRace,Rct_Demon,10; bonus2 bMagicAddEle,Ele_Fire,10; bonus2 bMagicAddEle,Ele_Neutral,10; }}
+300353,card,封印された混沌のバフォメットカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus bMaxHPRate,-50; if(equippeditem(311075)){ bonus2 bMagicAddRace,Rct_Undead,20; bonus2 bMagicAddRace,Rct_Insect,20; }}
+300354,card,封印された深海のクラーケンカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddRace,Rct_Plan,5; bonus2 bMagicAddRace,Rct_Plan,5; bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; bonus2 bAddEle,Ele_Water,5; bonus2 bMagicAddEle,Ele_Water,5; bonus2 bAddEle,Ele_Ghost,5; bonus2 bMagicAddEle,Ele_Ghost,5; if(equippeditem(311075)){ bonus bMaxHPRate,25; bonus2 bAddRace,Rct_Plan,10; bonus2 bMagicAddRace,Rct_Plan,10; bonus2 bAddRace,Rct_Fish,10; bonus2 bMagicAddRace,Rct_Fish,10; bonus2 bAddEle,Ele_Water,10; bonus2 bMagicAddEle,Ele_Water,10; bonus2 bAddEle,Ele_Ghost,10; bonus2 bMagicAddEle,Ele_Ghost,10; }}
+300355,card,封印された不吉なタートルGカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bMaxSPRate,-50; if(equippeditem(311075)){ bonus2 bAddRace,Rct_Formless,20; bonus2 bAddRace,Rct_Brute,20; }}
+
+※300334#封印された堕ちた大神官ヒバムカード# セット効果が複雑で研究中なので未実装
+
+12674#コロッセオアイスの箱(50個)#
+12675#コロッセオアイスの箱(150個)#
+12674,consum,コロッセオアイスの箱(50個),2,,1500,1500,,,,,2074075135,2,,,1,,,{ getitem2 11548,50,1,0,0,0,0,0,0,604800; },{}
+12675,consum,コロッセオアイスの箱(150個),2,,4500,4500,,,,,2074075135,2,,,1,,,{ getitem2 11548,150,1,0,0,0,0,0,0,604800; },{}
+
+420105#世界を蝕む呪詛#
+450205#覚醒オークロードの鎧#
+470113#覚醒ホロウシューズ#
+480157#山羊毛のマフラー#
+490183#ミリタリーグローブ#
+600025#覚醒フルフォース#
+
+420105,head,世界を蝕む呪詛,4,,10,100,,,,0,2074075135,2,1,,100,2020,0,{ /* ドラム形プレイヤー */ },{ bonus2 bAddRace,Rct_Boss,20; bonus2 bAddRace,Rct_NonBoss,20; bonus2 bMagicAddRace,Rct_Boss,20; bonus2 bMagicAddRace,Rct_NonBoss,20; bonus2 bResEff,Eff_Curse,10000; }
+450205,armor,覚醒オークロードの鎧,4,,10,900,,90:10,,1,2074075135,2,16,,99,,1,{},{ bonus bSkillDelayRate,-10; bonus bShortWeaponDamageReturn,10; if(getequiprefinerycnt() >= 7) { bonus2 bAddSize,Size_Small,20; bonus2 bAddSize,Size_Medium,20; bonus2 bAddSize,Size_Big,20; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSize,Size_Small,20; bonus2 bAddSize,Size_Medium,20; bonus2 bAddSize,Size_Big,20; } if(equippeditem(4135)){ bonus2 bResEff,Eff_Freeze,10000; bonus bInfiniteEndure,0; if(Baselevel <= 99) { bonus2 bAddEle,Ele_Dark,5*getequiprefinerycnt(); } if(Baselevel >= 100) { bonus2 bAddEle,Ele_Dark,13*getequiprefinerycnt(); } } if(equippeditem(300322)){ bonus2 bResEff,Eff_Freeze,10000; bonus bInfiniteEndure,0; if(Baselevel <= 99) { bonus2 bAddEle,Ele_Dark,3*getequiprefinerycnt(); } if(Baselevel >= 100) { bonus2 bAddEle,Ele_Dark,10*getequiprefinerycnt(); } } }
+470113,shoes,覚醒ホロウシューズ,4,,10,500,,15:5,,1,2074075135,2,64,,99,,1,{ /* セット効果が発動しない 未実装 */ },{ bonus bMatk,50; bonus bSkillDelayRate,-10; bonus2 bMagicAddEle,Ele_All,getequiprefinerycnt(); if(equippeditem(4145)){ bonus3 bAutoActiveMagic,470113,100,1; if(checkactiveitem()) { misceffect 220,""; sc_start SC_KAAHI,30000,7; } bonus2 bMagicAddEle,Ele_All,readparam(bLuk)/10; if(readparam(bLuk) >= 130) { bonus2 bMagicAddEle,Ele_All,25; } if(Baselevel <= 99) { bonus bMatk,5*getequiprefinerycnt(); bonus bCastrate,-2*getequiprefinerycnt(); } if(Baselevel >= 100) { bonus bMatk,15*getequiprefinerycnt(); bonus bCastrate,-7*getequiprefinerycnt(); } } if(equippeditem(311071)){ skill "PR_MAGNUS",10; bonus2 bMagicAddRace,Rct_Undead,30; bonus2 bMagicAddRace,Rct_Demon,30; bonus2 bMagicAddEle,Ele_Dark,30; bonus2 bMagicAddEle,Ele_Undead,30; if(Baselevel <= 99) { bonus bMatk,5*getequiprefinerycnt(); bonus bCastrate,-2*getequiprefinerycnt(); } if(Baselevel >= 100) { bonus bMatk,15*getequiprefinerycnt(); bonus bCastrate,-7*getequiprefinerycnt(); } } }
+480157,robe,山羊毛のマフラー,4,,10,400,,50:5,,0,2074075135,2,4,,100,,1,{ /* 歪んだ迷宮の森 与えるダメージ + 30% 受けるダメージ - 60% */ },{ bonus2 bSubEle,Ele_Earth,50; bonus2 bSubEle,Ele_Poison,50; }
+490183,acc,ミリタリーグローブ,4,,10,100,,,,1,2074075135,2,136,,100,,0,{},{ bonus bVit,7; bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bAddSkillDamageRate,"NC_AXETORNADO",Baselevel/2; bonus2 bAddSkillDamageRate,"NC_AXEBOOMERANG",Baselevel/2; bonus2 bAddSkillDamageRate,"NC_POWERSWING",Baselevel/2; if(getskilllv("NC_SILVERSNIPER") >= 5) { bonus2 bAddEle,Ele_All,10; } if(getskilllv("NC_MAGICDECOY") >= 5) { bonus3 bAddMonsterDropItem,731,Rct_Boss,100; bonus3 bAddMonsterDropItem,731,Rct_NonBoss,100; bonus3 bAddMonsterDropItem,732,Rct_Boss,100; bonus3 bAddMonsterDropItem,732,Rct_NonBoss,100; } if(getskilllv("NC_AXEBOOMERANG") >= 5) { bonus bAspdAddRate,10; bonus bHPGainValue,100; bonus bSPGainValue,10; } if(getskilllv("NC_MAGMA_ERUPTION") >= 5) { bonus bSkillDelayRate,-30; } if((Job == Job_Mechanic) && equippeditem(29436)) { bonus bAddLongWeaponDamage,25; bonus2 bAddSkillCastTime,"NC_AXEBOOMERANG",-3000; } }
+600025,weapon,覚醒フルフォース,9,,10,2200,300:0,,1,1,16514,2,34,4,99,3,1,{},{ bonus bAtkRange,3; bonus bSpeedRate,25; bonus2 bSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; if(equippeditem(4142)){ bonus3 bAutoSpell,"RK_IGNITIONBREAK",5,100; if(Baselevel <= 99) { bonus bAspdAddRate,2*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,4*getequiprefinerycnt(); } if(Baselevel >= 100) { bonus bAspdAddRate,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); } } if(equippeditem(300323)){ skill "PR_LEXAETERNA",1; if(Baselevel <= 99){ bonus bAspdAddRate,2*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,4*getequiprefinerycnt(); } if(Baselevel >= 100){ bonus bAspdAddRate,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); } } }
