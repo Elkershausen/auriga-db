@@ -1,0 +1,77 @@
+fix
+200188,consum,[2022年]究極精錬チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,604800; },{}
+200189,consum,[2022]特別チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 1000090,1,1,0,0,0,0,0,0,3628800; },{}
+200234,consum,[20thAnniversary]歩羅七精錬フォースの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 6829,1,1,0,0,0,0,0,0,4233600; },{}
+200235,consum,[20thAnniversary]ドレッシークーポンの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 1000240,1,1,0,0,0,0,0,0,4233600; },{}
+
+add
+400177#ファフニールヘルム#
+400187#赤い猫耳魔女帽子#
+400194#懐郷のサクラ#
+410088#パワードインカム#
+410089#パワードインカム#
+410096#丹色のリボン#
+410097#丹色のリボン#
+460023#シールドオブフェニックス#
+470105#粛清の靴#
+470106#粛清の靴#
+480134#アヴァレーツォ#
+
+400177,head,ファフニールヘルム,4,,10,500,,10:10,,1,2074075135,2,256,,100,2149,1,{ /* 固定詠唱　- 0.2秒 未実装 ルーンストーン系効果の装備効果 未実装 */ },{ bonus bSkillDelayRate,-10; bonus2 bAddSkillDamageRate,"RK_DRAGONBREATH_WATER",30; bonus2 bAddSkillDamageRate,"RK_DRAGONBREATH",30; if((getskilllv("RK_DRAGONBREATH_WATER") >= 10) && (getskilllv("RK_DRAGONBREATH") >= 10)) { bonus bAddLongWeaponDamage,50; } if(getskilllv("RK_DRAGONTRAINING") >= 5) { bonus bMaxHPrate,25; bonus bMaxSPrate,25; bonus bSkillDelayRate,-20; } if(getskilllv("RK_DRAGONHOWLING") >= 5) { bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; } bonus2 bSubEle,Ele_Fire,3*getequiprefinerycnt(); bonus2 bSubEle,Ele_Water,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"RK_DRAGONBREATH_WATER",50; bonus2 bAddSkillDamageRate,"RK_DRAGONBREATH",50; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"RK_DRAGONBREATH_WATER",70; bonus2 bAddSkillDamageRate,"RK_DRAGONBREATH",70; } }
+
+400187,head,赤い猫耳魔女帽子,4,,10,500,,10:10,,1,2074075135,2,256,,100,2153,1,{},{ bonus bSkillDelayRate,-10; bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",15; bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",15; if(getskilllv("SO_CLOUD_KILL") >= 5) { bonus2 bAddSkillCoolDown,"SO_DIAMONDDUST",-1500; } if(getskilllv("SO_PSYCHIC_WAVE") >= 5) { bonus bSkillDelayRate,-20; } if(getskilllv("SO_STRIKING") >= 5) { bonus2 bAddEleMagicDamageRate,Ele_Fire,25; bonus2 bAddEleMagicDamageRate,Ele_Water,25; bonus2 bAddEleMagicDamageRate,Ele_Wind,25; bonus2 bAddEleMagicDamageRate,Ele_Earth,25; bonus2 bAddEleMagicDamageRate,Ele_Neutral,25; } if(getskilllv("SO_VACUUM_EXTREME") >= 5) { bonus2 bAddSkillCoolDown,"SO_PSYCHIC_WAVE",-2000; } bonus bInt,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",20; bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",20; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",30; bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",30; } }
+
+400194,head,懐郷のサクラ,4,,10,500,,10:10,,1,2074075135,2,256,,100,2162,1,{},{ bonus bMaxHPrate,10; bonus2 bAddRace,Rct_Boss,25; if(getskilllv("SJ_LIGHTOFMOON") >= 5) { if(getskilllv("SJ_NEWMOONKICK") >= 7) { bonus3 bAutoActiveWeapon,400194,100,30000; if(checkactiveitem()) { misceffect 220,""; bonus bSpeedRate,25; } } if(getskilllv("SJ_LUNARSTANCE") >= 3) { bonus bFlee,50; } if(getskilllv("SJ_FULLMOONKICK") >= 10) { bonus2 bHPDrainRate,100,2; } } bonus bPerfectHitAddRate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SJ_NEWMOONKICK",15; bonus2 bAddSkillDamageRate,"SJ_FULLMOONKICK",15; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SJ_NEWMOONKICK",35; bonus2 bAddSkillDamageRate,"SJ_FULLMOONKICK",35; } }
+
+410088,head,パワードインカム,4,,10,100,,,,0,2074075135,2,512,,100,2148,0,{},{ bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bResEff,Eff_Blind,10000; if(getskilllv("NC_NEUTRALBARRIER") >= 3) { bonus bSkillDelayRate,-15; } if(getskilllv("NC_RESEARCHFE") >= 5) { bonus2 bAddCastRate,"NC_ARMSCANNON",-100; bonus bNoGearFuel,0; } }
+410089,head,パワードインカム,4,,10,100,,,,1,2074075135,2,512,,100,2148,0,{},{ bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bResEff,Eff_Blind,10000; if(getskilllv("NC_NEUTRALBARRIER") >= 3) { bonus bSkillDelayRate,-15; } if(getskilllv("NC_RESEARCHFE") >= 5) { bonus2 bAddCastRate,"NC_ARMSCANNON",-100; bonus bNoGearFuel,0; } }
+
+410096,head,丹色のリボン,4,,10,100,,2:0,,0,2074075135,2,512,,100,2152,0,{},{ bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; bonus2 bSubRace,Rct_Human,5; bonus2 bMagicSubRace,Rct_Human,5; bonus2 bResEff,Eff_Confusion,10000; if(getskilllv("SP_SWHOO") >= 10) { bonus2 bAddFixCastRate,"SP_SPA",-100; bonus2 bAddFixCastRate,"SP_SWHOO",-100; } if(getskilllv("SP_SOULUNITY") >= 7) { bonus bAddSpeed,2; } }
+410097,head,丹色のリボン,4,,10,100,,2:0,,1,2074075135,2,512,,100,2152,0,{},{ bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; bonus2 bSubRace,Rct_Human,5; bonus2 bMagicSubRace,Rct_Human,5; bonus2 bResEff,Eff_Confusion,10000; if(getskilllv("SP_SWHOO") >= 10) { bonus2 bAddFixCastRate,"SP_SPA",-100; bonus2 bAddFixCastRate,"SP_SWHOO",-100; } if(getskilllv("SP_SOULUNITY") >= 7) { bonus bAddSpeed,2; } }
+
+460023,shield,シールドオブフェニックス,4,,10,4000,,170:30,,1,2074075135,2,32,,100,2,1,{},{ bonus bAddShortWeaponDamage,15; bonus bMaxHPrate,3*getequiprefinerycnt(); bonus bMaxSPrate,3*getequiprefinerycnt(); callfunc "ItemdbAlmightySubHeal",0x7F,20; bonus2 bItemHealRate,1,20; if(getequiprefinerycnt() >= 7) { bonus bRestartFullRecover,0; } }
+
+470105,shoes,粛清の靴,4,,10,500,,15:15,,0,2074075135,2,64,,100,,1,{},{ bonus bMaxHPrate,3; bonus bMaxSPrate,3; bonus2 bAddSkillCoolDown,"AB_HIGHNESSHEAL",-1000; if(getskilllv("AB_ORATIO") >= 10) { bonus bCastrate,-50; bonus bSkillDelayRate,-50; } if(getskilllv("AB_CLEARANCE") >= 5) { bonus2 bMagicAddEle,Ele_All,25; bonus4 bAutoActiveSkill,"AB_OFFERTORIUM",470105,10000,15000; if(checkactiveitem()) { bonus2 bAddSkillDamageRate,"AB_JUDEX",Baselevel; } } bonus bMdef,10*(getskilllv("AB_LAUDAAGNUS") + getskilllv("AB_LAUDARAMUS")); callfunc "ItemdbAlmightyHeal",0x7F,8*(getskilllv("AB_LAUDAAGNUS") + getskilllv("AB_LAUDARAMUS")); if(getequiprefinerycnt() >= 5) { bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus bSkillDelayRate,-10; } if(getequiprefinerycnt() >= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bSkillDelayRate,-10; } }
+470106,shoes,粛清の靴,4,,10,500,,15:15,,1,2074075135,2,64,,100,,1,{},{ bonus bMaxHPrate,3; bonus bMaxSPrate,3; bonus2 bAddSkillCoolDown,"AB_HIGHNESSHEAL",-1000; if(getskilllv("AB_ORATIO") >= 10) { bonus bCastrate,-50; bonus bSkillDelayRate,-50; } if(getskilllv("AB_CLEARANCE") >= 5) { bonus2 bMagicAddEle,Ele_All,25; bonus4 bAutoActiveSkill,"AB_OFFERTORIUM",470105,10000,15000; if(checkactiveitem()) { bonus2 bAddSkillDamageRate,"AB_JUDEX",Baselevel; } } bonus bMdef,10*(getskilllv("AB_LAUDAAGNUS") + getskilllv("AB_LAUDARAMUS")); callfunc "ItemdbAlmightyHeal",0x7F,8*(getskilllv("AB_LAUDAAGNUS") + getskilllv("AB_LAUDARAMUS")); if(getequiprefinerycnt() >= 5) { bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus bSkillDelayRate,-10; } if(getequiprefinerycnt() >= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bSkillDelayRate,-10; } }
+
+480134,robe,アヴァレーツォ,4,,10,100,,12:0,,1,2074075135,2,4,,100,,1,{},{ bonus bMaxHPrate,5; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",6*getskilllv("GC_CROSSIMPACT"); bonus2 bAddSkillDamageRate,"GC_CROSSIMPACT",30*getskilllv("GC_CROSSIMPACT"); if(getskilllv("GC_CROSSIMPACT") >= 5) { bonus2 bAddSkillCoolDown,"GC_DARKILLUSION",-4000; bonus2 bAddSkillCoolDown,"GC_HALLUCINATIONWALK",-20000; } if(getskilllv("GC_HALLUCINATIONWALK") >= 5) { bonus2 bSubEle,Ele_Water,100; bonus2 bSubEle,Ele_Holy,30; } if(getequiprefinerycnt() >= 7) { bonus bMaxHPrate,5; bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus bSPGainValue,10; } if(getequiprefinerycnt() >= 9) { bonus bMaxHPrate,5; bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus bSPGainValue,10; } }
+
+10046#猫王冠#
+10047#蝶ネクタイ#
+14574#バガボンドの頭蓋骨#
+26177#魔導師の記憶#
+100797#マタタビの原木#
+200139#[2021]特別チケットの箱#
+1000553#ペット用パイプタバコ#
+1000622#キューペットボックス抽選券II#
+1000623#ペット用シンブレイド#
+1000624#ペット用グリッタリングクロース#
+1000625#ペット用ヴァーリのマント#
+1000626#ペット用アリスのエプロン#
+1000627#ペット用村正#
+
+10046,pet,猫王冠,4,,10,0,,,,,,,,,,,,{},{}
+10047,pet,蝶ネクタイ,4,,10,0,,,,,,,,,,,,{},{}
+14574,pet,バガボンドの頭蓋骨,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+26177,weapon,魔導師の記憶,5,,10,300,60:180,,,1,512,2,2,4,100,10,1,{},{ bonus2 bAddSkillDamageRate,"AG_MYSTERY_ILLUSION",Baselevel; bonus2 bAddSkillDamageRate,"WL_JACKFROST",Baselevel; bonus bAspdAddRate,2*getequiprefinerycnt(); if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; skill "PA_GOSPEL",1; } }
+100797,pet,マタタビの原木,2,,10,0,,,,,2074075135,2,,,1,,,{},{}
+200139,consum,[2021]特別チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 1000090,1,1,0,0,0,0,0,0,302400; },{}
+1000553,pet,ペット用パイプタバコ,3,,10,10,,,,,,,,,,,,{},{}
+1000622,pet,キューペットボックス抽選券II,3,,,0,,,,,,,,,,,,{},{}
+1000623,pet,ペット用シンブレイド,3,,10,10,,,,,,,,,,,,{},{}
+1000624,pet,ペット用グリッタリングクロース,3,,10,10,,,,,,,,,,,,{},{}
+1000625,pet,ペット用ヴァーリのマント,3,,10,10,,,,,,,,,,,,{},{}
+1000626,pet,ペット用アリスのエプロン,3,,10,10,,,,,,,,,,,,{},{}
+1000627,pet,ペット用村正,3,,10,10,,,,,,,,,,,,{},{}
+
+item_db2_add.txt
+400177,0,22,0,0,0,0,0,0,0,0,0,0	//ファフニールヘルム
+
+9117#汚染された彷徨う者の卵#
+9118#エリオットの卵#
+9119#エリセルの卵#
+9120#エリザの卵#
+9126#キエル-D-01の卵#
+9135#ワイルドローズの卵#
+9136#エドガの卵#
+ペットに付帯する装備効果はpet_dbに記述するため未実装
