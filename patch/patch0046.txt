@@ -1,0 +1,145 @@
+fix
+25585,item,大きな剣,3,,10,0,,,,,,,,,,,,{},{}
+25586,item,赤の魔力石,3,,10,0,,,,,,,,,,,,{},{}
+25587,item,黄の魔力石,3,,10,0,,,,,,,,,,,,{},{}
+25588,item,青の魔力石,3,,10,0,,,,,,,,,,,,{},{}
+25589,item,緑の魔力石,3,,10,0,,,,,,,,,,,,{},{}
+25590,item,黒の魔力石,3,,10,0,,,,,,,,,,,,{},{}
+
+add
+12678#抗毒血清(YE)#
+19778#[衣装] ストロベリーハット#
+25655#メロリンコイン#
+
+12678,consum,抗毒血清(YE),2,,10,10,,,,,2074075135,2,,,100,,,{ sc_end SC_OBLIVIONCURSE; sc_end SC_DEATHHURT; sc_end SC_TOXIN; sc_end SC_PYREXIA; sc_end SC_PARALIZE; sc_end SC_VENOMBLEED; sc_end SC_MAGICMUSHROOM; sc_end SC_LEECHEND; },{}
+19778,cos,[衣装] ストロベリーハット,4,,10,0,,,,0,2074075135,2,1024,,1,968,0,{},{}
+25655,item,メロリンコイン,3,,10,0,,,,,,,,,,,,{},{}
+
+100738#王女メアの手紙#
+100738,consum,王女メアの手紙,2,,10,0,,,,,2074075135,2,,,1,,,{},{}
+
+410084#プレミアメロンヘッドフォン#
+410085#プレミアメロンヘッドフォン#
+450189#オケアノスの加護#
+480128#着ぐるみベアドール#
+490149#きらきらニャンニャンチョーカー#
+
+410084,head,プレミアメロンヘッドフォン,4,,10,200,,6:0,,1,2074075135,2,512,,100,2129,0,{},{ bonus bAllStatus,10; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; if(equippeditem(29585)){ bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; } }
+410085,head,プレミアメロンヘッドフォン,4,,10,200,,6:0,,0,2074075135,2,512,,100,2129,0,{},{ bonus bAllStatus,10; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; if(equippeditem(29585)){ bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; } }
+450189,armor,オケアノスの加護,4,,10,1000,,150:15,,1,2074075135,2,16,,90,,1,{},{ bonus bAspdAddRate,10; bonus2 bAddRace,Rct_Fish,40; bonus2 bAddRace,Rct_Human,40; bonus2 bMagicAddRace,Rct_Fish,40; bonus2 bMagicAddRace,Rct_Human,40; bonus2 bSubEle,Ele_Water,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 5) { bonus bDef,300; bonus bMdef,30; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,7; } if(getequiprefinerycnt() >= 7) { bonus bTigereye,0; } if(equippeditem(29045)){ bonus2 bResEff,Eff_Freeze,10000; } }
+480128,robe,着ぐるみベアドール,4,,10,400,,50:5,,0,2074075135,2,4,,100,,1,{ /*ネジリアン帝国 与えるダメージ + 30% 受けるダメージ - 60%*/ },{ bonus2 bSubEle,Ele_Neutral,30; }
+490149,acc,きらきらニャンニャンチョーカー,4,,10,100,,0:15,,1,2074075135,2,136,,100,,0,{ /*魔法攻撃でモンスターを倒した時、HP + 100 , SP + 10*/ },{ bonus bInt,7; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",Baselevel/7; if(getskilllv("SU_SPIRITOFLAND") >= 1) { bonus bMdef,("SU_SV_STEMSPEAR")+ getskilllv("SU_SV_ROOTTWIST")+ getskilllv("SU_CN_METEOR")+ getskilllv("SU_CN_POWDERING")+ getskilllv("SU_CHATTERING")+ getskilllv("SU_MEOWMEOW")+ getskilllv("SU_NYANGGRASS"); bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",("SU_SV_STEMSPEAR")+ getskilllv("SU_SV_ROOTTWIST")+ getskilllv("SU_CN_METEOR")+ getskilllv("SU_CN_POWDERING")+ getskilllv("SU_CHATTERING")+ getskilllv("SU_MEOWMEOW")+ getskilllv("SU_NYANGGRASS"); } if(getskilllv("SU_CHATTERING") >= 5) { bonus bMaxHPrate,15; } if(getskilllv("SU_NYANGGRASS") >= 5) { bonus2 bAddSpCost,"SU_SV_STEMSPEAR",-10; bonus2 bResEff,Eff_Stun,5000; } if(getskilllv("SU_MEOWMEOW") >= 5) { bonus2 bAddEleMagicDamageRate,Ele_Fire,10; bonus2 bAddEleMagicDamageRate,Ele_Water,10; bonus2 bAddEleMagicDamageRate,Ele_Wind,10; bonus2 bAddEleMagicDamageRate,Ele_Earth,10; bonus2 bAddEleMagicDamageRate,Ele_Ghost,10; } if((Job == Job_Summoner) && equippeditem(4876)){ skill "MG_FIREWALL",10; bonus bNoKnockback,0; } }
+
+500041#メロンブレイド#
+510048#メロンダガー#
+520015#メロンアックス#
+530022#メロンスピア#
+540038#メロンブック#
+550048#メロンワンド#
+550049#メロンフォックステイル#
+560029#メロンクロー#
+570026#メロンバイオリン#
+580026#メロンウィップ#
+590033#メロンメイス#
+
+600022#メロンクレイモア#
+610032#メロンカタール#
+620014#メロンツーハンドアックス#
+630017#メロンランス#
+640030#メロンスタッフ#
+650016#メロン風魔手裏剣#
+
+700048#メロンウィング#
+800007#メロンハンドガン#
+810004#メロンライフル#
+820003#メロンショットガン#
+830005#アンティークガトリングガン#
+830006#メロンガトリングガン#
+840003#メロングレネードガン#
+
+500041,weapon,メロンブレイド,5,,10,1200,150:130,,1,1,279680,2,2,4,100,2,1,{},{ bonus3 bAutoActiveWeapon,500041,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,500041,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+510048,weapon,メロンダガー,5,,10,600,120:120,,1,1,681533056,2,2,4,100,1,1,{},{ bonus3 bAutoActiveWeapon,510048,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,510048,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+520015,weapon,メロンアックス,5,,10,1800,180:110,,1,1,8672384,2,2,4,100,6,1,{},{ bonus3 bAutoActiveWeapon,520015,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,520015,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+530022,weapon,メロンスピア,5,,10,1800,150:110,,3,1,16512,2,2,4,100,4,1,{},{ bonus3 bAutoActiveWeapon,530022,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,530022,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+540038,weapon,メロンブック,5,,10,800,120:140,,1,1,33620224,2,2,4,100,15,1,{},{ bonus3 bAutoActiveWeapon,540038,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,540038,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); callfunc "ItemdbAlmightyHeal",0x7F,6*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+550048,weapon,メロンワンド,5,,10,300,60:180,,1,1,134316800,2,2,4,100,10,1,{},{ bonus3 bAutoActiveWeapon,550048,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,550048,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); callfunc "ItemdbAlmightyHeal",0x7F,6*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+550049,weapon,メロンフォックステイル,5,,10,400,150:180,,1,1,1073741824,2,2,4,100,10,1,{},{ bonus3 bAutoActiveWeapon,550049,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,550049,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); callfunc "ItemdbAlmightyHeal",0x7F,6*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+560029,weapon,メロンクロー,5,,10,400,140:100,,1,1,33024,2,2,4,100,12,1,{},{ bonus3 bAutoActiveWeapon,560029,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,560029,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+570026,weapon,メロンバイオリン,5,,10,250,180:120,,1,1,524288,2,2,4,100,13,1,{},{ bonus3 bAutoActiveWeapon,570026,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,570026,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+580026,weapon,メロンウィップ,5,,10,500,150:120,,1,1,1048576,2,2,4,100,14,1,{},{ bonus3 bAutoActiveWeapon,580026,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,580026,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+590033,weapon,メロンメイス,5,,10,1500,150:110,,1,1,8701312,2,2,4,100,8,1,{},{ bonus3 bAutoActiveWeapon,590033,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,590033,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+
+600022,weapon,メロンクレイモア,9,,10,3400,280:230,,1,1,16512,2,34,4,100,3,1,{},{ bonus3 bAutoActiveWeapon,600022,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,600022,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+610032,weapon,メロンカタール,9,,10,2800,150:250,,1,1,4096,2,34,4,100,16,1,{},{ bonus3 bAutoActiveWeapon,610032,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,610032,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+620014,weapon,メロンツーハンドアックス,9,,10,4000,320:200,,1,1,279680,2,34,4,100,7,1,{},{ bonus3 bAutoActiveWeapon,620014,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,620014,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+630017,weapon,メロンランス,9,,10,3500,200:230,,3,1,16512,2,34,4,100,5,1,{},{ bonus3 bAutoActiveWeapon,630017,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,630017,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+640030,weapon,メロンスタッフ,9,,10,2400,120:270,,1,1,142705408,2,34,4,100,23,1,{},{ bonus3 bAutoActiveWeapon,640030,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,640030,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); callfunc "ItemdbAlmightyHeal",0x7F,6*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+650016,weapon,メロン風魔手裏剣,17,,10,1500,150:160,,1,1,536870912,2,34,4,150,22,1,{},{ bonus3 bAutoActiveWeapon,650016,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,650016,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+
+700048,weapon,メロンウィング,8,,10,900,160:170,,5,1,1705984,2,34,4,100,11,1,{},{ bonus3 bAutoActiveWeapon,700048,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,700048,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+800007,weapon,メロンハンドガン,15,,10,350,70:0,,7,1,268435456,2,34,4,100,17,1,{},{ bonus3 bAutoActiveWeapon,800007,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,800007,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+810004,weapon,メロンライフル,15,,10,850,170:0,,7,1,268435456,2,34,4,100,18,1,{},{ bonus3 bAutoActiveWeapon,810004,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,810004,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+820003,weapon,メロンショットガン,15,,10,3000,180:0,,7,1,268435456,2,34,4,100,20,1,{},{ bonus3 bAutoActiveWeapon,820003,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,820003,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } bonus bSplashAddRange,1; bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",7*readparam(bStr)/10; if(readparam(bStr) >= 110) { bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",30; } }
+830005,weapon,アンティークガトリングガン,15,,10,3000,180:120,,7,1,268435456,2,34,4,100,19,1,{},{ bonus2 bAddSkillDamageRate,"RL_QD_SHOT",5*Baselevel; bonus2 bAddSkillDamageRate,"RL_R_TRIP",7*readparam(bAgi)/10; if(readparam(bAgi) >= 110) { bonus2 bAddSkillDamageRate,"RL_R_TRIP",30; } bonus2 bAddSkillCoolDown,"RL_HEAT_BARREL",-8000*getequiprefinerycnt(); if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
+830006,weapon,メロンガトリングガン,15,,10,2500,120:0,,7,1,268435456,2,34,4,100,19,1,{},{ bonus3 bAutoActiveWeapon,830006,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,830006,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } bonus2 bAddSkillDamageRate,"RL_R_TRIP",7*readparam(bAgi)/10; if(readparam(bAgi) >= 110) { bonus2 bAddSkillDamageRate,"RL_R_TRIP",30; } }
+840003,weapon,メロングレネードガン,15,,10,1400,210:0,,7,1,268435456,2,34,4,100,21,1,{},{ bonus3 bAutoActiveWeapon,840003,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus3 bAutoActiveMagic,840003,100,5000; if(checkactiveitem()) { misceffect 220,""; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } bonus2 bAddSkillDamageRate,"RL_D_TAIL",7*readparam(bLuk)/10; if(readparam(bLuk) >= 110) { bonus2 bAddSkillDamageRate,"RL_D_TAIL",30; } }
+
+1000573#チャーム＜揚花火＞#
+1000574#スウィートメロン#
+1000575#マンダリンフルーツ#
+1000576#ぷるぷるベリー#
+1000577#ジェムジェムストーン#
+1000578#レッドニードルシード#
+1000579#ゲーミングキャロット#
+1000580#ウィアードスターバッジ#
+1000581#ダークメロン#
+1000582#ウォーターメロンハート#
+1000583#メロン用化粧箱(請求書付)#
+1000584#ソリッドピーチ#
+1000585#ライトブルーギル#
+1000586#イリュージョナルフラワー#
+1000587#ヴァルキリーフラワー#
+1000588#ブラッディーシード#
+1000589#フェアリーリーフ#
+1000590#サマーナイトピース#
+1000591#メメメロピー#
+1000592#ダメメロピー#
+1000593#キーオブヘブン#
+1000594#レアスモールジェム#
+1000595#プレシャスボタン#
+1000596#スターマッシュルーム#
+1000597#濃縮メロンジャム#
+1000598#ネオンウォーター#
+1000599#ディープシーウォーター#
+
+1000573,item,チャーム＜揚花火＞,3,,10,100,,,,,,,,,,,,{},{}
+1000574,item,スウィートメロン,3,,10,0,,,,,,,,,,,,{},{}
+1000575,item,マンダリンフルーツ,3,,10,0,,,,,,,,,,,,{},{}
+1000576,item,ぷるぷるベリー,3,,10,0,,,,,,,,,,,,{},{}
+1000577,item,ジェムジェムストーン,3,,10,0,,,,,,,,,,,,{},{}
+1000578,item,レッドニードルシード,3,,10,0,,,,,,,,,,,,{},{}
+1000579,item,ゲーミングキャロット,3,,10,0,,,,,,,,,,,,{},{}
+1000580,item,ウィアードスターバッジ,3,,10,0,,,,,,,,,,,,{},{}
+1000581,item,ダークメロン,3,,10,0,,,,,,,,,,,,{},{}
+1000582,item,ウォーターメロンハート,3,,10,0,,,,,,,,,,,,{},{}
+1000583,item,メロン用化粧箱(請求書付),3,,10,0,,,,,,,,,,,,{},{}
+1000584,item,ソリッドピーチ,3,,10,0,,,,,,,,,,,,{},{}
+1000585,item,ライトブルーギル,3,,10,0,,,,,,,,,,,,{},{}
+1000586,item,イリュージョナルフラワー,3,,10,0,,,,,,,,,,,,{},{}
+1000587,item,ヴァルキリーフラワー,3,,10,0,,,,,,,,,,,,{},{}
+1000588,item,ブラッディーシード,3,,10,0,,,,,,,,,,,,{},{}
+1000589,item,フェアリーリーフ,3,,10,0,,,,,,,,,,,,{},{}
+1000590,item,サマーナイトピース,3,,10,0,,,,,,,,,,,,{},{}
+1000591,item,メメメロピー,3,,10,0,,,,,,,,,,,,{},{}
+1000592,item,ダメメロピー,3,,10,0,,,,,,,,,,,,{},{}
+1000593,item,キーオブヘブン,3,,10,0,,,,,,,,,,,,{},{}
+1000594,item,レアスモールジェム,3,,10,0,,,,,,,,,,,,{},{}
+1000595,item,プレシャスボタン,3,,10,0,,,,,,,,,,,,{},{}
+1000596,item,スターマッシュルーム,3,,10,0,,,,,,,,,,,,{},{}
+1000597,item,濃縮メロンジャム,3,,10,0,,,,,,,,,,,,{},{}
+1000598,item,ネオンウォーター,3,,10,0,,,,,,,,,,,,{},{}
+1000599,item,ディープシーウォーター,3,,10,0,,,,,,,,,,,,{},{}
+
+item_db2_add.txt
+19778,0,0,1,0,0,1,1,0,0,0,0,0	//[衣装] ストロベリーハット
+100738,0,0,1,0,0,1,1,0,10000,0,1,0	//王女メアの手紙
