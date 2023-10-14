@@ -1,0 +1,66 @@
+7062#深海のキングドラモニッパ#
+7324#深海のクラーケンの足#
+
+7062,item,深海のキングドラモニッパ,3,,10,10,,,,,,,,,,,,{},{}
+7324,item,深海のクラーケンの足,3,,10,10,,,,,,,,,,,,{},{}
+
+25892#深海の貝殻#
+25893#深海魚の尻尾#
+25894#腐敗した深海魚#
+25895#深海のヒトデ#
+25896#深海のズワイガニ#
+25898#シルドの釣り竿#
+25899#深海のエッセンス#
+
+25892,item,深海の貝殻,3,,10,10,,,,,,,,,,,,{},{}
+25893,item,深海魚の尻尾,3,,10,10,,,,,,,,,,,,{},{}
+25894,item,腐敗した深海魚,3,,10,10,,,,,,,,,,,,{},{}
+25895,item,深海のヒトデ,3,,10,10,,,,,,,,,,,,{},{}
+25896,item,深海のズワイガニ,3,,10,10,,,,,,,,,,,,{},{}
+25898,item,シルドの釣り竿,3,,,,,,,,,,,,,,,{},{}
+25899,item,深海のエッセンス,3,,10,10,,,,,,,,,,,,{},{}
+
+300143#深海のマルスカード#
+300144#深海の半漁人カード#
+300146#深海のセドラカード#
+300148#深海のストラウフカード#
+300149#深海のフェンカード#
+300150#深海のキングドラモカード#
+
+300143,card,深海のマルスカード,6,,10,10,,,,,,,769,,,,,{},{ bonus bBaseAtk,10; bonus2 bAddEle,Ele_Water,5; if(getequiprefinerycnt() >= 9){ bonus2 bAddEle,Ele_Water,5; } }
+300144,card,深海の半漁人カード,6,,10,10,,,,,,,2,,,,,{ /*紫色の深海洞窟 上層 紫色の深海洞窟 下層 与えるダメージ + 30% */ },{}
+300146,card,深海のセドラカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(getlook(2) == 13 || 14) { bonus bHit,15; bonus bAspd,3; if(getequiprefinerycnt() >=10){ bonus bBaseAtk,100; } } }
+300148,card,深海のストラウフカード,6,,10,10,,,,,,,32,,,,,{},{ bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; bonus2 bSubRace,Rct_Fish,20; bonus2 bMagicSubRace,Rct_Fish,20; if(equippeditem(300149)){ bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; bonus2 bSubRace,Rct_Fish,10; bonus2 bMagicSubRace,Rct_Fish,10; } }
+300149,card,深海のフェンカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddRace,Rct_Fish,5; bonus2 bMagicAddRace,Rct_Fish,5; }
+300150,card,深海のキングドラモカード,6,,10,10,,,,,,,769,,,,,{},{ bonus2 bSubEle,Ele_Water,10; if(getequiprefinerycnt() >= 8){ bonus bDef,50; bonus bMdef,10; } }
+
+400053#イリュージョンモリガンのヘルム#
+450144#イリュージョンセイントローブ#
+450145#イリュージョンシャピニハ海の叫び#
+450146#イリュージョンメイル#
+480054#イリュージョンモリガンのマント#
+490069#イリュージョンモリガンのベルト#
+490070#イリュージョンモリガンのペンダント#
+570008#イリュージョンエレキギター#
+580008#イリュージョン電気ウナギ#
+600011#イリュージョン死の引導者#
+610012#イリュージョン冷たい氷柱のカタール#
+630006#イリュージョンブリューナク#
+630007#イリュージョンゼピュロス#
+
+400053,head,イリュージョンモリガンのヘルム,4,,10,1000,,12:5,,1,2074075135,2,256,,150,257,1,{},{ bonus bFlee,10; if(Baselevel >= 170 ) { bonus bMaxHPrate,10; bonus bLuk,3*getequiprefinerycnt(); } if(equippeditem(480054) && equippeditem(490069) && equippeditem(490070)){ bonus bFlee,100; bonus bFlee2,50; bonus bInfiniteEndure,0; bonus2 bSubRace,Rct_Player,23; bonus2 bMagicSubRace,Rct_Player,23; } }
+450144,armor,イリュージョンセイントローブ,4,,10,600,,50:5,,1,2074075135,2,16,,150,,1,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; if(Baselevel >= 170) { bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10;} }
+450145,armor,イリュージョンシャピニハ海の叫び,4,,10,2200,,25:0,,1,2074075135,2,16,,150,,1,{},{ bonus bDefEle,Ele_Water; bonus2 bIgnoreDefRace,Rct_Fish,50; bonus2 bIgnoreMdefRace,Rct_Fish,50; }
+450146,armor,イリュージョンメイル,4,,10,2200,,55:0,,1,2074075135,2,16,,150,,1,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(Baselevel >= 170) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } }
+480054,robe,イリュージョンモリガンのマント,4,,10,600,,9:0,,1,2074075135,2,4,,150,,1,{},{ bonus bFlee,20; if(Baselevel >= 170) { bonus bFlee,20; bonus bMaxHPrate,10; bonus bLuk,3*getequiprefinerycnt(); } }
+490069,acc,イリュージョンモリガンのベルト,4,,10,200,,,,1,2074075135,2,128,,150,,0,{},{ bonus bAgi,5; bonus bFlee,5; bonus bMaxHPrate,5; if(Baselevel >= 170) { bonus bAgi,5; bonus bFlee,5; } }
+490070,acc,イリュージョンモリガンのペンダント,4,,10,200,,,,1,2074075135,2,8,,150,,0,{},{ bonus bLuk,5; bonus bFlee,5; bonus bMaxHPrate,5; if(Baselevel >= 170) { bonus bLuk,5; bonus bFlee,5; } }
+570008,weapon,イリュージョンエレキギター,5,,10,1000,140:120,,1,1,524288,2,2,4,150,13,1,{},{ bonus2 bAddRace,Rct_Boss,60; bonus2 bAddRace,Rct_NonBoss,60; bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; skill "MG_THUNDERSTORM",1; if(Baselevel >= 170) { if(getequiprefinerycnt() >= 7) { bonus bLongAtkDef,5; skill "MG_THUNDERSTORM",getequiprefinerycnt(); } if(getequiprefinerycnt() >= 9) { bonus bLongAtkDef,5; } } }
+580008,weapon,イリュージョン電気ウナギ,5,,10,1000,140:120,,1,1,1048576,2,2,4,150,14,1,{},{ bonus2 bAddRace,Rct_Boss,60; bonus2 bAddRace,Rct_NonBoss,60; bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; skill "MG_THUNDERSTORM",1; if(Baselevel >= 170) { if(getequiprefinerycnt() >= 7) { bonus bLongAtkDef,5; skill "MG_THUNDERSTORM",getequiprefinerycnt(); } if(getequiprefinerycnt() >= 9) { bonus bLongAtkDef,5; } } }
+600011,weapon,イリュージョン死の引導者,9,,10,3400,260:230,,1,1,16512,2,34,4,150,3,1,{},{ bonus bAtkRange,3; bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; if(Baselevel>= 170) { if(getequiprefinerycnt() >= 7) { bonus bNoSizeFix,0; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoSpell,"NPC_VAMPIRE_GIFT",3,100; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"NPC_VAMPIRE_GIFT",666; } } }
+610012,weapon,イリュージョン冷たい氷柱のカタール,9,,10,2800,150:250,,1,1,4096,2,34,4,150,16,1,{},{ bonus bAtkEle,Ele_Water; bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; if(Baselevel>= 170) { if(getequiprefinerycnt() >= 7) { bonus bNoSizeFix,0; } if(getequiprefinerycnt() >= 9) { bonus bNoKnockback,0; bonus2 bResEff,Eff_Freeze,10000; } } }
+630006,weapon,イリュージョンブリューナク,9,,10,3500,200:230,,3,1,16514,2,34,4,150,5,1,{},{ bonus bAtkEle,Ele_Holy; bonus2 bAddRace,Rct_Boss,60; bonus2 bAddRace,Rct_NonBoss,60; bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; bonus2 bSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; skill AL_HEAL,10; if(Baselevel>= 170) { if(getequiprefinerycnt() >= 7) { bonus3 bAutoSpell,"WL_SOULEXPANSION",3,1000; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoSelfSpell,"WL_TELEKINESIS_INTENSE",3,1000+Baselevel*5; } } }
+630007,weapon,イリュージョンゼピュロス,9,,10,3500,200:230,,3,1,16514,2,34,4,150,5,1,{},{ bonus bAtkEle,Ele_Wind; bonus2 bAddRace,Rct_Boss,60; bonus2 bAddRace,Rct_NonBoss,60; bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; bonus2 bSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; if(Baselevel>= 170) { if(getequiprefinerycnt() >= 7) { bonus3 bAutoSpell,"WL_CHAINLIGHTNING",3,1000; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoSpell,"SO_PSYCHIC_WAVE",3,1000; } } }
+
+item_db2_add.txt
+25898,0,0,1,1,1,1,1,0,0,0,0,0	//シルドの釣り竿
