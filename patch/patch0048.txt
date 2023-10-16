@@ -1,0 +1,57 @@
+fix
+100754,0,0,1,0,0,1,1,0,0,60000,0,0	//ポー秘蔵のやみつき絶品一口ケーキ
+
+101286,consum,ローヤルゼリーパック,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 526,100; },{}
+101287,consum,イグドラシルの実パック,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 607,20; },{}
+101288,consum,イグドラシルの種パック,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 608,20; },{}
+101289,consum,カボチャパイパック,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 12192,150; },{}
+101290,consum,アイテム鑑定Lv1の箱(30日),2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 101293,1,1,0,0,0,0,0,0,259200; },{}
+101291,consum,グリードLv1の箱(30日),2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 101293,1,1,0,0,0,0,0,0,259200; },{}
+101292,consum,リザレクションLv4の箱(30日),2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 101295,1,1,0,0,0,0,0,0,259200; },{}
+101293,consum,アイテム鑑定Lv1(30日),2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 101295,1,1,0,0,0,0,0,0,259200; },{}
+101294,consum,グリードLv1(30日),2,,,0,,,,,2074075135,2,,,1,,,{ itemskill "BS_GREED",1,""; },{}
+101295,consum,リザレクションLv4(30日),2,,,0,,,,,2074075135,2,,,1,,,{ itemskill "ALL_RESURRECTION",4,""; },{}
+310759,ench,アレス,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_All,5; }
+480114,robe,剛勇無双の神輿,4,,10,600,,60:0,,1,2074075135,2,4,,100,111,1,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddRace,Rct_Player,5; bonus2 bMagicAddRace,Rct_Player,5; bonus bSkillDelayRate,-1*getequiprefinerycnt(); if(getequiprefinerycnt() >= 6){ bonus bAspdAddRate,10; } if(getequiprefinerycnt() >= 8){ skill "AC_CONCENTRATION",10; if(getskilllv("AC_CONCENTRATION")>=10){ bonus bBaseAtk,50; bonus bFlee,50; } } if(equippeditem(19379)){ bonus bAddLongWeaponDamage,25; bonus2 bSPDrainValue,100,2; } if(equippeditem(470048)){ bonus bAllStatus,10*getequiprefinerycnt(6)/3; } if(equippeditem(29509)){ bonus bAtkRate,30; bonus bPerfectHitAddRate,25; } },{ sc_end 3; }
+
+add
+100739#スピーカの手紙#
+
+450024#ノブレスレインストームスーツ#
+450042#ノブレスサイキックローブ#
+450049#ノブレススカルローブ#
+450058#インペリアルレインストームスーツ#
+450078#インペリアルサイキックローブ#
+450085#インペリアルスカルローブ#
+450092#グレースレインストームスーツ#
+450112#グレースサイキックローブ#
+450119#グレーススカルローブ#
+490145#リングオブケリュネイア#
+490146#パラケルススグローブ#
+
+450024,armor,ノブレスレインストームスーツ,4,,10,900,,,,1,2074075135,2,16,,100,,1,{},{ bonus bSkillDelayRate,-1*getequiprefinerycnt()/3; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } }
+450042,armor,ノブレスサイキックローブ,4,,10,900,,,,1,2074075135,2,16,,100,,1,{},{ bonus bSkillDelayRate,-1*getequiprefinerycnt()/3; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } }
+450049,armor,ノブレススカルローブ,4,,10,900,,,,1,2074075135,2,16,,100,,1,{},{ bonus bAspdAddRate,getequiprefinerycnt()/3; if(getequiprefinerycnt() >= 7) { bonus2 bMagicAddRace,Rct_Boss,3; bonus2 bMagicAddRace,Rct_NonBoss,3; } if(getequiprefinerycnt() >= 9) { bonus2 bMagicAddRace,Rct_Boss,3; bonus2 bMagicAddRace,Rct_NonBoss,3; } }
+450058,armor,インペリアルレインストームスーツ,4,,10,400,,120:5,,1,1572864,2,16,,100,,1,{},{ bonus bBaseAtk,10*getskilllv("WM_UNLIMITED_HUMMING_VOICE"); bonus bFlee,3*getskilllv("WM_UNLIMITED_HUMMING_VOICE"); if(getskilllv("WM_SEVERE_RAINSTORM") >= 5) { bonus bDex,10; bonus bMaxHPrate,5; } bonus bAddLongWeaponDamage,4*getskilllv("WM_FRIGG_SONG"); bonus bPerfectHitAddRate,3*getskilllv("WM_FRIGG_SONG"); bonus bSkillDelayRate,-1*getequiprefinerycnt(); }
+450078,armor,インペリアルサイキックローブ,4,,10,1000,,50:15,,1,65536,2,16,,100,,1,{},{ if(getskilllv("SO_CLOUD_KILL") >= 5) { bonus bCastrate,-5; bonus bHPGainValue,50; bonus bSPGainValue,5; } bonus2 bMagicAddSize,Size_Small,4*getskilllv("SO_STRIKING"); bonus2 bMagicAddSize,Size_Medium,4*getskilllv("SO_STRIKING"); bonus2 bMagicAddSize,Size_Big,4*getskilllv("SO_STRIKING"); if(getskilllv("SO_VACUUM_EXTREME") >= 5) { bonus bMatk,Baselevel/3; bonus bMaxHP,50*Baselevel/3; } bonus bSkillDelayRate,-1*getequiprefinerycnt(); }
+450085,armor,インペリアルスカルローブ,4,,10,1000,,100:10,,1,134217728,2,16,,100,,1,{ /* ソウルリーパー */ },{ if(getskilllv("SP_SWHOO") >= 10) { bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); } bonus2 bMagicAddSize,Size_Small,4*getskilllv("SP_CURSEEXPLOSION"); bonus2 bMagicAddSize,Size_Medium,4*getskilllv("SP_CURSEEXPLOSION"); bonus2 bMagicAddSize,Size_Big,4*getskilllv("SP_CURSEEXPLOSION"); if(getskilllv("SP_SOULREAPER") >= 5) { } if(getskilllv("SP_SOULCURSE") >= 5) { bonus bInt,10; bonus bMaxHPrate,5; } bonus bAspdAddRate,getequiprefinerycnt(); }
+450092,armor,グレースレインストームスーツ,4,,10,400,,120:5,,1,1572864,2,16,,100,,1,{},{ bonus bSkillDelayRate,-10; skill "SN_SIGHT",5; bonus bBaseAtk,30; bonus bFlee,10; }
+450112,armor,グレースサイキックローブ,4,,10,1000,,50:15,,1,65536,2,16,,100,,1,{ /* 魔法攻撃でモンスターを倒した時、HP + 200 , SP + 20 */ },{ bonus bSkillDelayRate,-10; skill "WL_FROSTMISTY",3; if(getskilllv("SO_CLOUD_KILL") >= 5) { bonus bCastrate,-15; } bonus2 bMagicAddSize,Size_Small,7*getskilllv("SO_STRIKING"); bonus2 bMagicAddSize,Size_Medium,7*getskilllv("SO_STRIKING"); bonus2 bMagicAddSize,Size_Big,7*getskilllv("SO_STRIKING"); bonus bMatk,Baselevel; bonus bMaxHP,50*Baselevel; if(equippeditem(5980) == 0){ if(getskilllv("SO_PSYCHIC_WAVE") >= 5) { bonus2 bAddSkillCoolDown,"SO_VACUUM_EXTREME",-3000; } } if((equippeditem(5980) == 1) && (getequiprefinerycnt(1) <= 6)) { if(getskilllv("SO_PSYCHIC_WAVE") >= 5) { bonus2 bAddSkillCoolDown,"SO_VACUUM_EXTREME",-3000; } } if((equippeditem(5980) == 1) && (getequiprefinerycnt(1) >= 7)) { if(getskilllv("SO_PSYCHIC_WAVE") >= 5) { bonus2 bAddSkillCoolDown,"SO_VACUUM_EXTREME",0; } } }
+450119,armor,グレーススカルローブ,4,,10,1000,,100:10,,1,134217728,2,16,,100,,1,{ /* ソウルリーパー */ },{ bonus bAspdAddRate,10; skill "PR_MAGNUS",5; if(getskilllv("SP_SWHOO") >= 10) { } bonus2 bAddSize,Size_Small,7*getskilllv("SP_CURSEEXPLOSION"); bonus2 bAddSize,Size_Medium,7*getskilllv("SP_CURSEEXPLOSION"); bonus2 bAddSize,Size_Big,7*getskilllv("SP_CURSEEXPLOSION"); if(getskilllv("SP_SOULCURSE") >= 5) { bonus bInt,30; bonus bMaxHPrate,15; } if(getequiprefinerycnt() >= 10) { bonus2 bAddEleMagicDamageRate,Ele_Dark,20; bonus2 bAddEleMagicDamageRate,Ele_Neutral,20; } if(equippeditem(490209)){ bonus2 bAddSkillCoolDown,"SP_CURSEEXPLOSION",-500; bonus2 bAddSkillDamageRate,"SP_SPA",Baselevel/2; bonus2 bAddSkillDamageRate,"SP_SWHOO",Baselevel/2; bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",Baselevel/2; } }
+490145,acc,リングオブケリュネイア,4,,10,100,,,,1,2074075135,2,136,,100,,0,{ /*攻撃命中時、SP + 3*/ },{ bonus bDex,7; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillDamageRate,"RA_ARROWSTORM",Baselevel/10; bonus2 bAddSkillDamageRate,"RA_AIMEDBOLT",Baselevel/10; if(getskilllv("RA_WUGRIDER") >= 3) { bonus bSkillDelayRate,-20; } if(getskilllv("RA_AIMEDBOLT") >= 10) { bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_Boss,15; } if(getskilllv("RA_CAMOUFLAGE") >= 5) { bonus2 bAddSkillCoolDown,"RA_UNLIMIT",-45000; } if(getskilllv("RA_RANGERMAIN") >= 10) { bonus bPerfectHitAddRate,15; } if(Job ==　Job_Ranger) { if(equippeditem(29509)){ bonus bNoSizeFix,0; bonus2 bAddSkillCoolDown,"RA_AIMEDBOLT",-250; } } },{ sc_end SC_UNLIMIT; }
+490146,acc,パラケルススグローブ,4,,10,100,,,,1,2074075135,2,136,,100,,0,{},{ bonus bStr,7; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillDamageRate,"GN_CARTCANNON",2; bonus2 bAddSkillDamageRate,"GN_CART_TORNADO",2; if(getskilllv("GN_CARTBOOST") >= 5) { bonus bAspdAddRate,10; bonus bMaxHPrate,15; } if(getskilllv("GN_CRAZYWEED") >= 10) { } if(getskilllv("GN_FIRE_EXPANSION") >= 5) { bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; } if(Job == Job_Genetic) { if(equippeditem(29436)){ bonus bInfiniteEndure,0; bonus4 bAutoActiveSkill,"GN_CART_TORNADO",490146,10000,3000; if(checkactiveitem()) { bonus bPerfectHitAddRate,100; } } } }
+
+100739,0,0,1,0,0,1,1,0,10000,0,0,0	//スピーカの手紙
+
+200043#[2021年]高級オイルの箱#
+200114#[2021summer]歩羅七精錬フォースの箱#
+200115#[2021summer]ドレッシークーポンの箱#
+
+200043,consum,[2021年]高級オイルの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 6861,1,1,0,0,0,0,0,0,3715200; },{}
+200114,consum,[2021summer]歩羅七精錬フォースの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 6829,1,1,0,0,0,0,0,0,302400; },{}
+200115,consum,[2021summer]ドレッシークーポンの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 1000240,1,1,0,0,0,0,0,0,302400; },{}
+
+420068#ロードオブロイヤルズ#
+470097#魔狩りの靴#
+420068,head,ロードオブロイヤルズ,4,,10,100,,,,0,2074075135,2,1,,100,2128,0,{},{ bonus2 bAddSize,Size_Small,4*(readparam(bStr)+readparam(bInt))/50; bonus2 bAddSize,Size_Medium,4*(readparam(bStr)+readparam(bInt))/50; bonus2 bAddSize,Size_Big,4*(readparam(bStr)+readparam(bInt))/50; bonus2 bMagicAddSize,Size_Small,4*(readparam(bStr)+readparam(bInt))/50; bonus2 bMagicAddSize,Size_Medium,4*(readparam(bStr)+readparam(bInt))/50; bonus2 bMagicAddSize,Size_Big,4*(readparam(bStr)+readparam(bInt))/50; }
+470097,shoes,魔狩りの靴,4,,10,1000,,40:15,,1,2074075135,2,64,,100,,1,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus bMaxHPrate,4*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus bDefRatioAtkRace,Rct_Boss; bonus bDefRatioAtkRace,Rct_NonBoss; } }
