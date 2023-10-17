@@ -1,0 +1,54 @@
+jpatch231017
+9148#ダークロードの卵#
+9139#ダークイリュージョンの卵#
+9128#ダークプリーストの卵#
+100796#闇の聖書#
+1000552#邪悪な水#
+1001494#キューペットボックス抽選券VII#
+1001495#ペット用クロノス#
+1001496#ペット用骸骨の杖#
+1001497#ダークロード交換チケット#
+1001498#ダークイリュージョン交換チケット#
+1001499#ダークプリースト交換チケット#
+420258#ヒーロークロース#
+490427#嵐の指輪#
+490428#ケミカルレジスタントグローブ#
+490429#ペタルの尻尾(アルビノ)#
+312691#潜在解放(カーディナルV)#
+312301#潜在解放(バイオロIII)#
+//200337#[2023]特別チケットの箱(Autumn)#
+
+※200337は実装済み
+※ペットのダークロード・ダークイリュージョンはNPC交換なのでテイミングアイテムはありません
+※ペットの装備効果は未実装
+
+item_db_add.txt
+9128,pet,ダークプリーストの卵,4,,10,0,,,,,,,,,,,,{},{}
+9139,pet,ダークイリュージョンの卵,4,,10,0,,,,,,,,,,,,{},{}
+9148,pet,ダークロードの卵,4,,10,0,,,,,,,,,,,,{},{}
+100796,consume,闇の聖書,2,,10,0,,,,,2074075135,2,,,,,,{ pet 1198; },{}
+312301,ench,潜在解放(バイオロIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 */ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"BO_ACIDIFIED_ZONE_WATER",-200; bonus2 bAddSkillCoolDown,"BO_ACIDIFIED_ZONE_GROUND",-200; bonus2 bAddSkillCoolDown,"BO_ACIDIFIED_ZONE_FIRE",-200; bonus2 bAddSkillCoolDown,"BO_ACIDIFIED_ZONE_WIND",-200;} }
+312691,ench,潜在解放(カーディナルV),6,,,,,,,,,,65535,,,,,{ /* 4次職 */ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"CD_PETITIO",-200; } }
+420258,head,ヒーロークロース,4,,10,100,,,,0,2074075135,2,1,,100,2272,0,{},{ bonus2 bAddSize,Size_Small,Baselevel/10; bonus2 bAddSize,Size_Medium,Baselevel/10; bonus2 bAddSize,Size_Big,Baselevel/10; bonus2 bMagicAddSize,Size_Small,Baselevel/10; bonus2 bMagicAddSize,Size_Medium,Baselevel/10; bonus2 bMagicAddSize,Size_Big,Baselevel/10; }
+490427,acc,嵐の指輪,4,,10,100,,,,1,1572864,2,8,,100,,0,{},{ bonus bDex,20; bonus bSkillDelayRate,-15; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bPerfectHitAddRate,15; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; skill "RA_UNLIMIT",5; bonus2 bAddSkillDamageRate,"WM_SEVERE_RAINSTORM",Baselevel/2; },{ sc_end SC_UNLIMIT; }
+490428,acc,ケミカルレジスタントグローブ,4,,10,100,,,,1,2088832,2,136,,200,,0,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bPerfectHitAddRate,25; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddEleMagicDamageRate,"GN_CARTCANNON",Baselevel/2; bonus2 bAddEleMagicDamageRate,"GN_CART_TORNADO",Baselevel/2; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_WATER",Baselevel/10; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_GROUND",Baselevel/10; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_FIRE",Baselevel/10; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_WIND",Baselevel/10; }
+490429,acc,ペタルの尻尾(アルビノ),4,,10,100,,,,1,2088832,2,136,,200,,0,{ /* 4次職 */ },{ bonus bCritical,50; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddFixCastRate,"AB_ORATIO",-100; bonus2 bAddFixCastRate,"AB_RENOVATIO",-100; bonus2 bAddSkillDamageRate,"CD_PETITIO",Baselevel/10; bonus2 bAddSkillDamageRate,"CD_EFFLIGO",Baselevel/10; }
+1001494,pet,キューペットボックス抽選券VII,3,,,0,,,,,,,,,,,,{},{}
+1001495,pet,ペット用クロノス,3,,10,10,,,,,,,,,,,,{},{}
+1001496,pet,ペット用骸骨の杖,3,,10,10,,,,,,,,,,,,{},{}
+1001497,pet,ダークロード交換チケット,3,,,0,,,,,,,,,,,,{},{}
+1001498,pet,ダークイリュージョン交換チケット,3,,,0,,,,,,,,,,,,{},{}
+1001499,pet,ダークプリースト交換チケット,3,,,0,,,,,,,,,,,,{},{}
+1000552,item,邪悪な水,3,,10,1,,,,,,,,,,,,{},{}
+
+item_db2_add.txt
+312301,0,0,1,1,1,1,1,0,0,0,0,0	//潜在解放(バイオロIII)
+312691,0,0,1,1,1,1,1,0,0,0,0,0	//潜在解放(カーディナルV)
+1001494,0,0,1,1,0,1,1,0,0,0,0,0	//キューペットボックス抽選券VII
+1001497,0,0,1,1,0,1,1,0,0,0,0,0	//ダークロード交換チケット
+1001498,0,0,1,1,0,1,1,0,0,0,0,0	//ダークイリュージョン交換チケット
+1001499,0,0,1,1,0,1,1,0,0,0,0,0	//ダークプリースト交換チケット
+
+item_cardtype.txt
+312301,ench,潜在解放(バイオロIII),2
+312691,ench,潜在解放(カーディナルV),2
