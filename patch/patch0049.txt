@@ -1,0 +1,48 @@
+fix
+311284#極限の魔力#
+311284,ench,極限の魔力,6,,,,,,,,,,65535,,,,,{},{ bonus2 bHPRatePenaltyTime,1000,1; if(equippeditem(311422)){ bonus bMaxHP,50*Baselevel; bonus bMaxSP,5*Baselevel; } if(equippeditem(420210)){ bonus2 bSubEle,Ele_Dark,5; bonus2 bSubEle,Eff_Poison,5; bonus2 bSubRace,Rct_Playe,5; bonus2 bMagicSubRace,Rct_Playe,5; } if(equippeditem(420211)){ bonus2 bSubEle,Ele_Dark,5; bonus2 bSubEle,Eff_Poison,5; bonus2 bSubRace,Rct_Playe,5; bonus2 bMagicSubRace,Rct_Playe,5; } }
+
+15898#覚醒古王の王冠#
+15898,cos,覚醒古王の王冠,4,,10,500,,20:15,,1,2074075135,2,1024,,130,2121,0,{},{ bonus2 bSubEle,Ele_Fire,10; bonus2 bSubEle,Ele_Water,10; bonus2 bSubEle,Ele_Wind,10; bonus2 bSubEle,Ele_Earth,10; if(getequiprefinerycnt() >= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bLongAtkDef,10; callfunc "ItemdbAlmightySubHeal",0x7F,10; callfunc "ItemdbAlmightySubHeal",0x7F,10;} if(getequiprefinerycnt() >= 9) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; bonus bLongAtkDef,2; callfunc "ItemdbAlmightySubHeal",0x7F,15; callfunc "ItemdbAlmightySubHeal",0x7F,15;} }
+
+300283#愚者のカード(逆位置)#
+300285#吊るされた男のカード(逆位置)#
+300286#女教皇のカード#
+300287#女教皇のカード(逆位置)#
+300288#塔のカード#
+300289#塔のカード(逆位置)#
+300283,card,愚者のカード(逆位置),6,,10,10,,,,,,,1023,,,,,{},{ bonus2 bHPPenaltyTime,10000,-500+(-100*getequiprefinerycnt()); bonus2 bSPPenaltyTime,10000,-5+(-1*getequiprefinerycnt()); if(getequiprefinerycnt() >= 10){ bonus2 bHPPenaltyTime,10000,-500; bonus2 bSPPenaltyTime,10000,-5; } if(equippeditem(29585)){ bonus2 bHPPenaltyTime,10000,-5000; bonus2 bSPPenaltyTime,10000,-50; skill "WS_CARTBOOST",1; bonus bAllStatus,1;} }
+300285,card,吊るされた男のカード(逆位置),6,,10,10,,,,,,,1023,,,,,{},{ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",5+getequiprefinerycnt(); if(getequiprefinerycnt() >= 10){ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",5; } if(equippeditem(29585)){ bonus bAgi,2; bonus bVit,2; bonus bSPGainValue,20; bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",50; } }
+300286,card,女教皇のカード,6,,10,10,,,,,,,1023,,,,,{ /* ソウルリーパー */ },{ bonus2 bAddSkillDamageRate,"SP_SPA",5+getequiprefinerycnt(); if(getequiprefinerycnt() >= 10){ bonus2 bAddSkillDamageRate,"SP_SPA",5; } if(equippeditem(29585)){ bonus bAgi,2; bonus bInt,2; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bAddSkillDamageRate,"SP_SPA",50; } }
+300287,card,女教皇のカード(逆位置),6,,10,10,,,,,,,1023,,,,,{ /* ソウルリーパー */ },{ bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",5+getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",5; } if(equippeditem(29585)){ bonus bVit,2; bonus bDex,2; bonus bSPGainValue,20; bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",50; } }
+300288,card,塔のカード,6,,10,10,,,,,,,1023,,,,,{ /* ソウルリーパー */ },{ bonus2 bAddSkillDamageRate,"SJ_BOOKOFCREATINGSTAR",5+getequiprefinerycnt(); if(getequiprefinerycnt() >= 10){ bonus2 bAddSkillDamageRate,"SJ_BOOKOFCREATINGSTAR",5; } if(equippeditem(29585)){ bonus bStr,2; bonus bAgi,2; bonus bCastrate,-5; bonus2 bAddSkillDamageRate,"SJ_BOOKOFCREATINGSTAR",50; } }
+300289,card,塔のカード(逆位置),6,,10,10,,,,,,,1023,,,,,{ /* ソウルリーパー */ },{ bonus2 bAddSkillDamageRate,"SJ_STAREMPEROR",5+getequiprefinerycnt(); if(getequiprefinerycnt() >= 10){ bonus2 bAddSkillDamageRate,"SJ_STAREMPEROR",5; } if(equippeditem(29585)){ bonus bDex,2; bonus bLuk,2; bonus bAddShortWeaponDamage,5; bonus2 bAddSkillDamageRate,"SJ_STAREMPEROR",50; } }
+
+450188#覚醒魔呪のメイル#
+470096#覚醒魔呪のブーツ#
+480116#覚醒魔呪のマント#
+490139#覚醒深淵の王の指輪#
+490140#覚醒魔呪の指輪#
+
+510042#再誕のアセイミー#
+510043#覚醒栄光を讃えし王剣#
+510044#覚醒破滅を纏いし業剣#
+610029#覚醒古王の双刃#
+
+450188,armor,覚醒魔呪のメイル,4,,10,1000,,60:0,,1,2074075135,2,16,,130,,1,{},{ bonus2 bSubEle,Ele_All,5; bonus bMaxHPrate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { skill "SA_SPELLBREAKER",1; } if(equippeditem(470096) && equippeditem(480116)){ bonus2 bSubEle,Ele_All,5; bonus bLongAtkDef,5; bonus bMaxHP,66*Baselevel; bonus bMaxSP,6*Baselevel; } if(equippeditem(490140)){ bonus bMaxHPrate,30; } }
+
+470096,shoes,覚醒魔呪のブーツ,4,,10,1000,,20:0,,1,2074075135,2,64,,130,,1,{},{ bonus2 bSubEle,Ele_All,5; bonus bMaxHPrate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bTigereye,0; } if(equippeditem(490140)){ bonus bCastrate,-70; bonus bSkillDelayRate,-70; } }
+
+480116,robe,覚醒魔呪のマント,4,,10,1000,,16:0,,1,2074075135,2,4,,130,,1,{},{ bonus2 bSubEle,Ele_All,5; bonus bMaxHPrate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { skill "WZ_HEAVENDRIVE",3; } if(equippeditem(490140)){ bonus2 bSubEle,Ele_Wind,75; bonus2 bSubEle,Ele_Ghost,25; } }
+
+490139,acc,覚醒深淵の王の指輪,4,,10,100,,,,1,2074075135,2,8,,130,,0,{},{ bonus bMaxHP,50; bonus bMaxSP,5; if(equippeditem(27127)){ if(equippeditem(4879) == 0) { bonus bStr,10*getequiprefinerycnt(6); bonus bAgi,3*getequiprefinerycnt(6); } } if(equippeditem(27128)){ bonus2 bHPDrainRate,100,2; bonus bBaseAtk,Baselevel; } }
+
+490140,acc,覚醒魔呪の指輪,4,,10,100,,150:15,,1,2074075135,2,136,,130,,0,{},{ bonus bAllStatus,1; bonus2 bAddRace,Rct_Boss,6; bonus2 bAddRace,Rct_NonBoss,6; bonus2 bMagicAddRace,Rct_Boss,6; bonus2 bMagicAddRace,Rct_NonBoss,6; bonus2 bSubEle,Ele_Fire,5; bonus2 bSubEle,Ele_Water,5; bonus2 bSubEle,Ele_Wind,5; bonus2 bSubEle,Ele_Earth,5; }
+
+510042,weapon,再誕のアセイミー,5,,10,300,30:180,,1,1,673144448,2,2,4,130,1,1,{},{ bonus bAtkEle,Ele_Ghost; skill "WZ_STORMGUST",1; if(getskilllv("GN_MANDRAGORA") >= 5) { bonus2 bSPVanish,100,10; } bonus2 bAddEleMagicDamageRate,Ele_Water,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 5) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bLongAtkDef,5; } if(getequiprefinerycnt() >= 7) { skill "WZ_STORMGUST",getequiprefinerycnt(); } if(getequiprefinerycnt() >= 9) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bLongAtkDef,5; } }
+
+510043,weapon,覚醒栄光を讃えし王剣,5,,10,600,120:0,,1,1,673144448,2,2,4,130,1,1,{},{ bonus bAtkEle,Ele_Holy; bonus2 bAddSize,Size_Small,6*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Small,6*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,6*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,6*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,6*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,6*getequiprefinerycnt(); if(getequiprefinerycnt() >= 9){ bonus bNoSizeFix,0; } if(equippeditem(510044)){ bonus bPerfectHitAddRate,100; bonus2 bSubRace,Rct_Player,20; bonus2 bMagicSubRace,Rct_Player,20; } if(equippeditem(311284)){ bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",50; bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",50; bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",50; } }
+
+510044,weapon,覚醒破滅を纏いし業剣,5,,10,600,120:0,,1,1,673144448,2,2,4,130,1,1,{},{ bonus bAtkEle,Ele_Dark; bonus2 bAddEleWeaponDamageRate,Ele_All,6*getequiprefinerycnt(); if(getequiprefinerycnt() >= 9){ bonus2 bAddSkillCoolDown,"GC_DARKCROW",-30000; } if(equippeditem(311284)){ bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",50; bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",50; bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",50; } }
+
+610029,weapon,覚醒古王の双刃,9,,10,1200,240:0,,1,1,4096,2,34,4,130,16,1,{},{ bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus2 bSubSkillDamageRate,"GC_CROSSIMPACT",Baselevel; bonus2 bSubSkillDamageRate,"GC_CROSSRIPPERSLASHER",Baselevel; bonus2 bSubSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel; if(getequiprefinerycnt() >= 7){ bonus2 bSubSkillDamageRate,"GC_CROSSIMPACT",Baselevel; bonus2 bSubSkillDamageRate,"GC_CROSSRIPPERSLASHER",Baselevel; bonus2 bSubSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel; } if(getequiprefinerycnt() >= 9){ bonus2 bSubSkillDamageRate,"GC_CROSSIMPACT",Baselevel; bonus2 bSubSkillDamageRate,"GC_CROSSRIPPERSLASHER",Baselevel; bonus2 bSubSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel; } if(getequiprefinerycnt() >= 10){ bonus bDefRatioAtkRace,Rct_Boss; bonus bDefRatioAtkRace,Rct_NonBoss; bonus2 bAddSkillCoolDown,"GC_ROLLINGCUTTER",-200; } if(equippeditem(311284)){ bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); } }
