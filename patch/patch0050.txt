@@ -1,0 +1,112 @@
+add
+200248#[2023]復刻コスたまの箱(Season1)#
+200249#[2023]復刻コスたま引換券(Season1)11個の箱#
+200250#[2023]復刻コスたまの箱(Season2)#
+200251#[2023]復刻コスたま引換券(Season2)11個の箱#
+200252#[2023]復刻コスたまの箱(Season3)#
+200253#[2023]復刻コスたま引換券(Season3)11個の箱#
+200302#キューペットボックス抽選券交換チケットの箱#
+200315#[2023summer]歩羅七精錬フォースの箱#
+200316#[2023summer]ドレッシークーポンの箱#
+200318#[2023]特別チケットの箱#
+200319#[2023年]ジューンブライドチケットの箱#
+
+200248,consum,[2023]復刻コスたまの箱(Season1),2,,,10,,,,,2074075135,2,,,1,,,{ getitem2 1001192,1,1,0,0,0,0,0,0,7300800; },{}
+200249,consum,[2023]復刻コスたま引換券(Season1)11個の箱,2,,,10,,,,,2074075135,2,,,1,,,{ getitem2 1001192,11,1,0,0,0,0,0,0,7300800; },{}
+200250,consum,[2023]復刻コスたまの箱(Season2),2,,,10,,,,,2074075135,2,,,1,,,{ getitem2 1001193,1,1,0,0,0,0,0,0,7300800; },{}
+200251,consum,[2023]復刻コスたま引換券(Season2)11個の箱,2,,,10,,,,,2074075135,2,,,1,,,{ getitem2 1001193,11,1,0,0,0,0,0,0,7300800; },{}
+200252,consum,[2023]復刻コスたまの箱(Season3),2,,,10,,,,,2074075135,2,,,1,,,{ getitem2 1001194,1,1,0,0,0,0,0,0,7300800; },{}
+200253,consum,[2023]復刻コスたま引換券(Season3)11個の箱,2,,,10,,,,,2074075135,2,,,1,,,{ getitem2 1001194,11,1,0,0,0,0,0,0,7300800; },{}
+200302,consum,キューペットボックス抽選券交換チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 1001279,1; },{}
+200315,consum,[2023summer]歩羅七精錬フォースの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 6829,1,1,0,0,0,0,0,0,302400; },{}
+200316,consum,[2023summer]ドレッシークーポンの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 1000240,1,1,0,0,0,0,0,0,302400; },{}
+200318,consum,[2023]特別チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 1000090,1,1,0,0,0,0,0,0,302400; },{}
+200319,consum,[2023年]ジューンブライドチケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 1001346,1,1,0,0,0,0,0,0,302400; },{}
+
+100731#キンダープンシュ#
+100732#キンダープンシュの樽(50杯)#
+100733#キンダープンシュの樽(150杯)#
+100734#桜もち#
+100735#桜もちの折箱(50個)#
+100736#桜もちの折箱(150個)#
+100737#オスカーの手紙#
+100731,consum,キンダープンシュ,2,,30,30,,,,,2074075135,2,,,1,,,{ percentheal 3,3; },{}
+100732,consum,キンダープンシュの樽(50杯),2,,1500,1500,,,,,2074075135,2,,,1,,,{ getitem2 100731,50,1,0,0,0,0,0,0,604800; },{}
+100733,consum,キンダープンシュの樽(150杯),2,,4500,4500,,,,,2074075135,2,,,1,,,{ getitem2 100731,150,1,0,0,0,0,0,0,604800; },{}
+100734,consum,桜もち,2,,30,30,,,,,2074075135,2,,,1,,,{ percentheal 3,3; },{}
+100735,consum,桜もちの折箱(50個),2,,1500,1500,,,,,2074075135,2,,,1,,,{ getitem2 100734,50,1,0,0,0,0,0,0,604800; },{}
+100736,consum,桜もちの折箱(150個),2,,4500,4500,,,,,2074075135,2,,,1,,,{ getitem2 100734,150,1,0,0,0,0,0,0,604800; },{}
+100737,consum,オスカーの手紙,2,,10,0,,,,,2074075135,2,,,1,,,{},{}
+
+410064#ぶくぶくハンティングゴーグル#
+410065#ぶくぶくハンティングゴーグル#
+410066#教授のミニグラス#
+410067#教授のミニグラス#
+
+450028#ノブレスマグマスーツ#
+450064#インペリアルマグマスーツ#
+450098#グレースマグマスーツ#
+
+450051#ノブレス天地スーツ#
+450063#インペリアル天地スーツ#
+450097#グレース天地スーツ#
+
+450121#ノブレスアーティススーツ#
+450123#インペリアルアーティススーツ#
+450125#グレースアーティススーツ#
+
+450035#ノブレスメナススーツ#
+450071#インペリアルメナススーツ#
+450105#グレースメナススーツ#
+
+450027#ノブレスホーリーローブ#
+450061#インペリアルホーリーローブ#
+450095#グレースホーリーローブ#
+
+480109#白騎士のマント#
+490141#メタルピック#
+
+410064,head,ぶくぶくハンティングゴーグル,4,,10,100,,,,0,2074075135,2,512,,100,2116,0,{},{ bonus bMaxHPrate,15; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; callfunc "ItemdbAlmightyHeal",0x7F,25; if(getskilllv("SU_SPIRITOFSEA") >= 1) { skill "MG_SAFETYWALL",10; } if(getskilllv("SU_GROOMING") >=5) { bonus2 bFixCastrate,-70,0; } }
+410065,head,ぶくぶくハンティングゴーグル,4,,10,100,,,,1,2074075135,2,512,,100,2116,0,{},{ bonus bMaxHPrate,15; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; callfunc "ItemdbAlmightyHeal",0x7F,25; if(getskilllv("SU_SPIRITOFSEA") >= 1) { skill "MG_SAFETYWALL",10; } if(getskilllv("SU_GROOMING") >=5) { bonus2 bFixCastrate,-70,0; } }
+
+410066,head,教授のミニグラス,4,,10,100,,,,0,2074075135,2,512,,100,2118,0,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bResEff,Eff_Sleep,10000; if(getskilllv("SO_PSYCHIC_WAVE") >=5) { bonus2 bAddFixCastRate,"SO_PSYCHIC_WAVE",-100; bonus2 bAddSkillCoolDown,"SO_EARTHGRAVE",-4000; bonus2 bAddSkillCoolDown,"SO_DIAMONDDUST",-4000; } if(getskilllv("SO_VACUUM_EXTREME") >= 5) { bonus bSkillDelayRate,-15; } }
+410067,head,教授のミニグラス,4,,10,100,,,,1,2074075135,2,512,,100,2118,0,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bResEff,Eff_Sleep,10000; if(getskilllv("SO_PSYCHIC_WAVE") >=5) { bonus2 bAddFixCastRate,"SO_PSYCHIC_WAVE",-100; bonus2 bAddSkillCoolDown,"SO_EARTHGRAVE",-4000; bonus2 bAddSkillCoolDown,"SO_DIAMONDDUST",-4000; } if(getskilllv("SO_VACUUM_EXTREME") >= 5) { bonus bSkillDelayRate,-15; } }
+
+450027,armor,ノブレスホーリーローブ,4,,10,900,,,,1,2074075135,2,16,,100,,1,{},{ bonus2 bSubRace,Rct_Undead,getequiprefinerycnt()/3; bonus2 bSubRace,Rct_Demon,getequiprefinerycnt()/3; bonus2 bMagicSubRace,Rct_Undead,getequiprefinerycnt()/3; bonus2 bMagicSubRace,Rct_Demon,getequiprefinerycnt()/3; if(getequiprefinerycnt() >= 7) { bonus2 bSubRace,Rct_Boss,1; bonus2 bMagicSubRace,Rct_Boss,1; } if(getequiprefinerycnt() >= 9) { bonus2 bSubRace,Rct_Boss,1; bonus2 bMagicSubRace,Rct_Boss,1; } }
+450028,armor,ノブレスマグマスーツ,4,,10,900,,,,1,2074075135,2,16,,100,,1,{},{ bonus bSkillDelayRate,-1*getequiprefinerycnt()/3; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } }
+450035,armor,ノブレスメナススーツ,4,,10,900,,,,1,2074075135,2,16,,100,,1,{},{ bonus bAspdAddRate,getequiprefinerycnt()/3; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,3;bonus2 bAddRace,Rct_NonBoss,3;} if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,3;bonus2 bAddRace,Rct_NonBoss,3;} }
+450051,armor,ノブレス天地スーツ,4,,10,900,,,,1,2074075135,2,16,,100,,1,{},{ bonus bCastrate,-1*getequiprefinerycnt()/3; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } }
+
+450061,armor,インペリアルホーリーローブ,4,,10,800,,100:5,,1,256,2,16,,100,,1,{},{ bonus bDef,Baselevel/3; bonus bMaxHP,50*Baselevel/3; if(getskilllv("AB_SECRAMENT") >= 5) { bonus2 bSubRace,Rct_Boss,2; bonus2 bMagicSubRace,Rct_Boss,2; bonus bNoKnockback,0; } if(getskilllv("AB_HIGHNESSHEAL") >= 5) { bonus2 bResEff,Eff_Freeze,5000; } if(getskilllv("AB_PRAEFATIO") >= 10) { skill "MO_CALLSPIRITS",3; } bonus2 bSubRace,Rct_Undead,getequiprefinerycnt(); bonus2 bSubRace,Rct_Demon,getequiprefinerycnt(); bonus2 bMagicSubRace,Rct_Undead,getequiprefinerycnt(); bonus2 bMagicSubRace,Rct_Demon,getequiprefinerycnt(); }
+450063,armor,インペリアル天地スーツ,4,,10,400,,120:0,,1,32768,2,16,,100,,1,{},{ bonus2 bAddRace,Rct_Boss,4*getskilllv("SR_KNUCKLEARROW")/2; bonus2 bAddRace,Rct_NonBoss,4*getskilllv("SR_KNUCKLEARROW")/2; bonus bPerfectHitAddRate,3*getskilllv("SR_KNUCKLEARROW")/2; if(getskilllv("SR_RAISINGDRAGON") >= 10) { bonus bNoKnockback,0; bonus bMaxHP,50*Baselevel/3; } bonus bBaseAtk,10*getskilllv("SR_GENTLETOUCH_CHANGE"); bonus bAspdAddRate,getskilllv("SR_GENTLETOUCH_CHANGE"); bonus bCastrate,-1*getequiprefinerycnt(); }
+450064,armor,インペリアルマグマスーツ,4,,10,1000,,100:10,,1,1024,2,16,,100,,1,{},{ if(getskilllv("NC_SILVERSNIPER") >= 5) { bonus bCastrate,-100; bonus bHPGainValue,50; bonus bSPGainValue,5; } if(getskilllv("NC_MAGICDECOY") >= 5) { bonus3 bAddMonsterDropItem,730,Rct_Boss,50; bonus3 bAddMonsterDropItem,730,Rct_NonBoss,50; } bonus bBaseAtk,10*getskilllv("NC_AXEBOOMERANG"); bonus2 bAddSkillCoolDown,"NC_AXETORNADO",100*"NC_AXEBOOMERANG"; bonus bAddShortWeaponDamage,3*getskilllv("NC_MAGMA_ERUPTION"); bonus bPerfectHitAddRate,3*getskilllv("NC_MAGMA_ERUPTION"); bonus bSkillDelayRate,-1*getequiprefinerycnt(); }
+450071,armor,インペリアルメナススーツ,4,,10,700,,80:0,,1,131072,2,16,,100,,1,{},{ bonus bBaseAtk,10*getskilllv("SC_ESCAPE"); bonus bFlee,5*getskilllv("SC_ESCAPE"); bonus2 bAddEle,Ele_All,4*getskilllv("SM_SWORD")/2; bonus bPerfectHitAddRate,3*getskilllv("SM_SWORD")/2; if(getskilllv("SC_FEINTBOMB") >= 10) { bonus bDex,10; bonus bMaxHPrate,5; } bonus bAspdAddRate,getequiprefinerycnt(); }
+
+450095,armor,グレースホーリーローブ,4,,10,800,,100:5,,1,256,2,16,,100,,1,{},{ bonus2 bSubRace,Rct_Undead,15; bonus2 bSubRace,Rct_Demon,15; bonus2 bMagicSubRace,Rct_Undead,15; bonus2 bMagicSubRace,Rct_Demon,15; skill "MO_CALLSPIRITS",5; if(getskilllv("AB_OFFERTORIUM") >= 5) { bonus bDef,Baselevel; bonus bMaxHP,50*Baselevel; bonus bNoKnockback,0; } if(getskilllv("AB_HIGHNESSHEAL") >= 5) { bonus2 bResEff,Eff_Freeze,10000; } if(getskilllv("AB_PRAEFATIO") >= 10) { skill "MO_STEELBODY",1+getequiprefinerycnt()/3; bonus2 bAddCastRate,"MO_STEELBODY",-100; } if(getequiprefinerycnt() >= 10) { bonus2 bSubEle,Ele_All,5; } if(equippeditem(490206)){ skill "SR_GENTLETOUCH_ENERGYGAIN",3; bonus2 bSubRace,Rct_Human,10; bonus2 bMagicSubRace,Rct_Human,10; } },{ sc_end 87; }
+450097,armor,グレース天地スーツ,4,,10,400,,120:0,,1,32768,2,16,,100,,1,{ /* 精神衝撃 未実装 */ },{ bonus bCastrate,-10; skill "HP_ASSUMPTIO",3; bonus2 bAddSize,Size_Small,7*getskilllv("SR_KNUCKLEARROW"); bonus2 bAddSize,Size_Medium,7*getskilllv("SR_KNUCKLEARROW"); bonus2 bAddSize,Size_Big,7*getskilllv("SR_KNUCKLEARROW"); bonus bPerfectHitAddRate,5*getskilllv("SR_KNUCKLEARROW"); if(getskilllv("SR_RAISINGDRAGON") >= 10) { bonus bNoKnockback,0; bonus bMaxHP,50; } if(getskilllv("SR_GENTLETOUCH_CURE") >= 5) { bonus4 bAutoActiveSkill,"SR_GENTLETOUCH_CURE",450097,10000,1; if(checkactiveitem()) { percentheal 10,10; sc_end 378; sc_end 379; sc_end 423; } } bonus bBaseAtk,30*getskilllv("SR_GENTLETOUCH_CHANGE"); bonus bAspdAddRate,2*getskilllv("SR_GENTLETOUCH_CHANGE"); if(getequiprefinerycnt() >= 10) { bonus bAddShortWeaponDamage,20; } if(equippeditem(490206)){ bonus2 bAddSkillCoolDown,"SR_RAISINGDRAGON",-25000; bonus2 bAddSkillDamageRate,"SR_KNUCKLEARROW",2*Baselevel; bonus2 bAddSkillDamageRate,"SR_SKYNETBLOW",2*Baselevel; } }
+450098,armor,グレースマグマスーツ,4,,10,1000,,100:10,,1,1024,2,16,,100,,1,{},{ bonus bSkillDelayRate,-10; skill "GN_CARTBOOST",3; if(getskilllv("NC_SILVERSNIPER") >= 5) { bonus2 bAddCastRate,"BS_GREED",-100; bonus bHPGainValue,200; bonus bSPGainValue,20; } if(getskilllv("NC_MAGICDECOY") >= 5) { bonus3 bAddMonsterDropItem,732,Rct_Boss,50; bonus3 bAddMonsterDropItem,732,Rct_NonBoss,50; } bonus bBaseAtk,30*getskilllv("NC_AXEBOOMERANG"); bonus2 bAddSkillCoolDown,"NC_AXETORNADO",-300*getskilllv("NC_AXEBOOMERANG"); bonus bAddShortWeaponDamage,6*getskilllv("NC_MAGMA_ERUPTION"); bonus bPerfectHitAddRate,5*getskilllv("NC_MAGMA_ERUPTION"); if(getequiprefinerycnt() >= 10) { bonus bAddShortWeaponDamage,20; } if(equippeditem(490206)){ bonus2 bAddSkillCoolDown,"NC_AXETORNADO",-500; bonus2 bAddSkillDamageRate,"NC_AXETORNADO",Baselevel; bonus2 bAddSkillDamageRate,"NC_AXEBOOMERANG",Baselevel; } }
+450105,armor,グレースメナススーツ,4,,10,700,,80:0,,1,131072,2,16,,100,,1,{},{ bonus bAspdAddRate,10; skill "GC_DARKCROW",3; bonus bBaseAtk,30*getskilllv("SC_ESCAPE"); bonus bFlee,10*getskilllv("SC_ESCAPE"); bonus2 bAddEle,Ele_All,7*getskilllv("SM_SWORD")/2; bonus bPerfectHitAddRate,5*getskilllv("SM_SWORD")/2; if(getskilllv("SC_FATALMENACE") >= 10) { bonus4 bAutoActiveSkill,"SC_FEINTBOMB",480105,100,3000; if(checkactiveitem()) { bonus bPerfectHitAddRate,50; bonus2 bAddEle,Ele_All,15; } } if(getskilllv("SC_FEINTBOMB") >= 10) { bonus bDex,30; bonus bMaxHPrate,15; } if(getequiprefinerycnt() >= 10) { bonus bAddShortWeaponDamage,20; } if(equippeditem(490206)){ bonus2 bAddSkillCoolDown,"SC_ESCAPE",-1500; bonus2 bAddSkillDamageRate,"SC_FATALMENACE",Baselevel/2; } }
+
+450121,armor,ノブレスアーティススーツ,4,,10,900,,,,1,2074075135,2,16,,100,,1,{},{ bonus bAspdAddRate,getequiprefinerycnt()/3; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } }
+450123,armor,インペリアルアーティススーツ,4,,10,100,,50:5,,1,8388608,2,16,,100,,1,{},{ if(getskilllv("AM_AXEMASTERY") >= 10) { bonus2 bAddSkillDamageRate,"KN_BOWLINGBASH",2*Baselevel/3; } if(getskilllv("SM_SWORD") >= 10) { skill "KN_BOWLINGBASH",getequiprefinerycnt(); } bonus2 bAddEle,Ele_All,2*getskilllv("BS_WEAPONRESEARCH"); bonus bPerfectHitAddRate,getskilllv("BS_WEAPONRESEARCH"); if(getskilllv("NV_BREAKTHROUGH") >= 5) { bonus2 bAddSkillCoolDown,"NV_HELPANGEL",-60000; } bonus bAspdAddRate,getequiprefinerycnt(); }
+450125,armor,グレースアーティススーツ,4,,10,100,,50:5,,1,8388608,2,16,,100,,1,{ /* NV_HELPANGEL NV_BREAKTHROUGH 未実装 */ },{ bonus bAspdAddRate,10; skill "TK_HIGHJUMP",3; if(getskilllv("AM_AXEMASTERY") >= 10) { skill "KN_BOWLINGBASH",2*getequiprefinerycnt(); } if(getskilllv("SM_SWORD") >= 10) { skill "KN_BOWLINGBASH",getequiprefinerycnt(); } bonus2 bAddEle,Ele_All,4*getskilllv("BS_WEAPONRESEARCH"); bonus bPerfectHitAddRate,2*getskilllv("BS_WEAPONRESEARCH"); if(getskilllv("NV_BREAKTHROUGH") >= 5) { bonus2 bAddSkillCoolDown,"NV_HELPANGEL",-180000; } if(getequiprefinerycnt() >= 10) { bonus bAddShortWeaponDamage,20; } if(equippeditem(490209)){ bonus2 bAddSkillCoolDown,"NV_HELPANGEL",-60000; bonus3 bAutoSpell,"KN_BOWLINGBASH",getequiprefinerycnt(),100; } }
+
+480109,robe,白騎士のマント,4,,10,400,,50:5,,0,2074075135,2,4,,175,,1,{ /* グラストヘイムアビス 与えるダメージ + 10% */ },{ bonus2 bSubEle,Ele_Water,75; if(getequiprefinerycnt() >= 5) { } if(getequiprefinerycnt() >= 7) { bonus bFlee2,25; bonus2 bSubEle,Ele_Neutral,20; } if(getequiprefinerycnt() >= 8) { bonus bNoKnockback,0; } }
+490141,acc,メタルピック,4,,10,100,,,,1,2074075135,2,136,,100,,0,{ /* 魔法攻撃でモンスターを倒した時HP + 100 , SP + 10 */ },{ bonus bInt,7; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; bonus2 bAddSkillDamageRate,"WM_METALICSOUND",Baselevel/3; if(getskilllv("WM_RANDOMIZESPELL") >= 5) { bonus2 bAddEleMagicDamageRate,Ele_Neutral,10; } if(getskilllv("WM_RANDOMIZESPELL") >= 5) { bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(getskilllv("WM_LULLABY_DEEPSLEEP") >= 5) { bonus bAspdAddRate,10; } if(getskilllv("WM_GLOOMYDAY") >= 5) { bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; } if((Job == Job_Minstrel) || (Job == Job_Wanderer)) { if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"WM_METALICSOUND",-200; } } }
+
+fix
+440008,cos,[衣装] Master,4,,10,0,,,,0,2074075135,2,1024,,1,0,0,{},{ hateffect HAT_EF_C_Master,TRUE; },{ hateffect HAT_EF_C_Master,FALSE; }
+
+item_db2_add.txt
+fix
+100731,0,0,1,0,0,1,1,0,0,0,0,0	//キンダープンシュ
+100732,0,0,1,0,0,1,1,0,0,0,0,0	//キンダープンシュの樽(50杯)
+100733,0,0,1,0,0,1,1,0,0,0,0,0	//キンダープンシュの樽(150杯)
+100734,0,0,1,0,0,1,1,0,0,0,0,0	//桜もち
+100735,0,0,1,0,0,1,1,0,0,0,0,0	//桜もちの折箱(50個)
+100736,0,0,1,0,0,1,1,0,0,0,0,0	//桜もちの折箱(150個)
+100737,0,0,1,0,0,1,1,0,10000,0,1,0	//オスカーの手紙
+100738,0,0,1,0,0,1,1,0,10000,0,1,0	//王女メアの手紙
+100739,0,0,1,0,0,1,1,0,10000,0,1,0	//スピーカの手紙
+100740,0,0,1,0,0,1,1,0,10000,0,1,0	//クトルラナックスの手紙
+100754,0,0,1,0,0,1,1,0,60000,0,0,0	//ポー秘蔵のやみつき絶品一口ケーキ
