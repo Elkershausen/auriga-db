@@ -1,0 +1,106 @@
+fix
+400408,head,クロックワイズ,4,,10,500,,10:0,,1,2088832,2,256,,200,2350,1,{ /* 4次職 Spl 3+getequiprefinerycnt() "AG_CRIMSON_ARROW",Baselevel/10; "AG_FROZEN_SLASH",Baselevel/10; "AG_STORM_CANNON",Baselevel/10; "AG_ROCK_DOWN",Baselevel/10; */ },{ hateffect HAT_EF_C_Disapear_Time_TW_2,TRUE; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; },{ hateffect HAT_EF_C_Disapear_Time_TW_2,FALSE; }
+410000,head,轟鳴鼓,4,,10,300,,,,0,2074075135,2,512,,100,1823,0,{},{ hateffect HAT_EF_ResonateTaego,TRUE; bonus bAddShortWeaponDamage,2; bonus bAddLongWeaponDamage,2; bonus2 bAddRace,Rct_Boss,2; if(readparam(13) >= 90){ bonus bAddShortWeaponDamage,3; bonus bAddLongWeaponDamage,3; bonus2 bAddRace,Rct_Boss,3; } if(readparam(13) >= 125){ bonus bAddShortWeaponDamage,5; bonus bAddLongWeaponDamage,5; bonus2 bAddRace,Rct_Boss,5; } },{ hateffect HAT_EF_ResonateTaego,FALSE; }
+410021,cos,[衣装] 轟鳴鼓,4,,10,0,,,,0,2074075135,2,2048,,1,1823,0,{},{ hateffect HAT_EF_ResonateTaego,TRUE; },{ hateffect HAT_EF_ResonateTaego,FALSE; }
+410051,cos,[衣装] 舞い降る雪,4,,10,0,,,,0,2074075135,2,2048,,1,2080,0,{},{ hateffect HAT_EF_SnowFlake_Tiara,TRUE; },{ hateffect HAT_EF_SnowFlake_Tiara,FALSE; }
+410081,cos,[衣装] 解放された大地,4,,10,0,,,,0,2074075135,2,2048,,1,2136,0,{},{ hateffect HAT_EF_C_Released_Ground,TRUE; },{ hateffect HAT_EF_C_Released_Ground,FALSE; }
+410127,cos,[衣装] スポットライト,4,,10,0,,,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_C_Spot_Light,TRUE; },{ hateffect HAT_EF_C_Spot_Light,FALSE; }
+420176,head,メモリアルクロース,4,,10,100,,,,0,2074075135,2,1,,100,2310,0,{},{ hateffect HAT_EF_20th_Scarf_J,TRUE; bonus bMaxHP,2000; bonus2 bAddSize,Size_Small,20; bonus2 bAddSize,Size_Medium,20; bonus2 bAddSize,Size_Big,20; bonus2 bMagicAddSize,Size_Small,20; bonus2 bMagicAddSize,Size_Medium,20; bonus2 bMagicAddSize,Size_Big,20; if(equippeditem(310075)){ skill "BS_GREED",1; } },{ hateffect HAT_EF_20th_Scarf_J,FALSE; }
+420205,cos,[衣装] メモリアルクロース,4,,10,0,,,,0,2074075135,2,4096,,1,2310,0,{},{ hateffect HAT_EF_20th_Scarf_J,TRUE; },{ hateffect HAT_EF_20th_Scarf_J,FALSE; }
+420242,cos,[衣装] 棚引く霞,4,,10,0,,,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_C_Fluttering_Haze,TRUE; },{ hateffect HAT_EF_C_Fluttering_Haze,FALSE; }
+480131,cos,[衣装] 渦巻く炎,4,,10,0,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_LEVEL99_LILAC,TRUE; },{ hateffect HAT_EF_LEVEL99_LILAC,FALSE; }
+480203,cos,[衣装] 青の魔法陣,4,,10,0,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_LEVEL160_CYAN,TRUE; },{ hateffect HAT_EF_LEVEL160_CYAN,FALSE; }
+480296,cos,[衣装] 桜吹雪,4,,10,0,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_Magic_Star_TW,TRUE; },{hateffect HAT_EF_Magic_Star_TW,FALSE; }
+
+bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",50; bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",50; bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",50;
+
+1870,weapon,ロイヤルナックル,5,,10,400,140:100,,,1,32768,2,2,4,185,12,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SR_SKYNETBLOW",Baselevel; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SR_HOWLINGOFLION",Baselevel; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; skill "PA_GOSPEL",1; } }
+
+4651,card,無限のタオグンカカード,6,20,,10,,,,,,,769,,,,,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",50; bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",50; bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",50; }
+
+26165,weapon,ロイヤルクレリックスタッフ,5,,10,300,60:180,,,1,256,2,2,4,185,10,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"AB_ADORAMUS",Baselevel/2; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"AB_ADORAMUS",Baselevel/2; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; skill "PA_GOSPEL",1; } }
+26166,weapon,ロイヤルマジシャンワンド,5,,10,300,60:180,,,1,512,2,2,4,185,10,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"WL_COMET",Baselevel; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"WL_TETRAVORTEX",Baselevel/3; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; skill "PA_GOSPEL",1; } }
+26172,weapon,ロイヤルフォックステイル,5,,10,400,150:180,,,1,1073741824,2,2,4,185,10,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SU_BITE",Baselevel*3; bonus2 bAddSkillDamageRate,"SU_SCRATCH",Baselevel*3; } if(getequiprefinerycnt() >= 9) { bonus4 bSkillAutoSpell,"SU_BITE","SU_STOOP",1,10000; bonus4 bSkillAutoSpell,"SU_SCRATCH","SU_STOOP",1,10000; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; skill "PA_GOSPEL",1; } }
+
+26216,weapon,ロイヤルウィップ,5,,10,500,150:120,,,1,1048576,2,2,4,185,14,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"WM_REVERBERATION",Baselevel; } if(getequiprefinerycnt() >= 9) { bonus4 bAutoActiveSkill,"WM_REVERBERATION",26216,100,3000; if(checkactiveitem()) { bonus bFlee2,100; } } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; skill "PA_GOSPEL",1; } }
+
+28046,weapon,ロイヤルカタール,9,,10,2800,150:250,,,1,4096,2,34,4,185,16,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillCoolDown,"GC_ROLLINGCUTTER",-200; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
+
+28636,weapon,ロイヤルセージブック,5,,10,800,120:140,,,1,65536,2,2,4,185,15,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SO_EARTHGRAVE",Baselevel; bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",Baselevel; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",Baselevel/3; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
+
+28776,weapon,ロイヤルマジシャンダガー,5,,10,600,120:120,,,1,131072,2,2,4,185,1,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SC_FEINTBOMB",Baselevel/2; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SC_FATALMENACE",Baselevel/2; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
+
+32027,weapon,ガーディアンナイツスピア,5,,10,1800,150:110,,,1,16384,2,2,4,185,4,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddFixCastRate,"LG_OVERBRAND",-100; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"LG_OVERBRAND",Baselevel/2; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
+
+32111,weapon,ロイヤルチェロ,5,,10,250,180:120,,,1,524288,2,2,4,185,13,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"WM_REVERBERATION",Baselevel; } if(getequiprefinerycnt() >= 9) { bonus4 bAutoActiveSkill,"WM_REVERBERATION",32111,100,3000; if(checkactiveitem()) { bonus bFlee2,100; } } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; skill "PA_GOSPEL",1; } }
+
+450085,armor,インペリアルスカルローブ,4,,10,1000,,100:10,,1,134217728,2,16,,100,,1,{ /* ソウルリーパー */ },{ if(getskilllv("SP_SWHOO") >= 10) { bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); } bonus2 bMagicAddSize,Size_Small,4*getskilllv("SP_CURSEEXPLOSION"); bonus2 bMagicAddSize,Size_Medium,4*getskilllv("SP_CURSEEXPLOSION"); bonus2 bMagicAddSize,Size_Big,4*getskilllv("SP_CURSEEXPLOSION"); if(getskilllv("SP_SOULREAPER") >= 5) { } if(getskilllv("SP_SOULCURSE") >= 5) { bonus bInt,10; bonus bMaxHPrate,5; } bonus bAspdAddRate,getequiprefinerycnt(); }
+
+510043,weapon,覚醒栄光を讃えし王剣,5,,10,600,120:0,,1,1,673144448,2,2,4,130,1,1,{},{ bonus bAtkEle,Ele_Holy; bonus2 bAddSize,Size_Small,6*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Small,6*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,6*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,6*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,6*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,6*getequiprefinerycnt(); if(getequiprefinerycnt() >= 9){ bonus bNoSizeFix,0; } if(equippeditem(510044)){ bonus bPerfectHitAddRate,100; bonus2 bSubRace,Rct_Player,20; bonus2 bMagicSubRace,Rct_Player,20; } if(equippeditem(311284)){ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",50; bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",50; bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",50; } }
+
+510044,weapon,覚醒破滅を纏いし業剣,5,,10,600,120:0,,1,1,673144448,2,2,4,130,1,1,{},{ bonus bAtkEle,Ele_Dark; bonus2 bAddEleWeaponDamageRate,Ele_All,6*getequiprefinerycnt(); if(getequiprefinerycnt() >= 9){ bonus2 bAddSkillCoolDown,"GC_DARKCROW",-30000; } if(equippeditem(311284)){ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",50; bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",50; bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",50; } }
+
+540018,weapon,六韜三略,5,,10,800,120:140,,1,1,33554432,2,2,4,80,15,1,{},{ bonus bUnbreakableWeapon,0; bonus bAllStatus,10; bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; skill "PA_GOSPEL",1; } }
+
+610029,weapon,覚醒古王の双刃,9,,10,1200,240:0,,1,1,4096,2,34,4,130,16,1,{},{ bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus2 bSubSkillDamageRate,"GC_CROSSIMPACT",Baselevel; bonus2 bSubSkillDamageRate,"GC_CROSSRIPPERSLASHER",Baselevel; bonus2 bSubSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel; if(getequiprefinerycnt() >= 7){ bonus2 bSubSkillDamageRate,"GC_CROSSIMPACT",Baselevel; bonus2 bSubSkillDamageRate,"GC_CROSSRIPPERSLASHER",Baselevel; bonus2 bSubSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel; } if(getequiprefinerycnt() >= 9){ bonus2 bSubSkillDamageRate,"GC_CROSSIMPACT",Baselevel; bonus2 bSubSkillDamageRate,"GC_CROSSRIPPERSLASHER",Baselevel; bonus2 bSubSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel; } if(getequiprefinerycnt() >= 10){ bonus bDefRatioAtkRace,Rct_Boss; bonus bDefRatioAtkRace,Rct_NonBoss; bonus2 bAddSkillCoolDown,"GC_ROLLINGCUTTER",-200; } if(equippeditem(311284)){ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); } }
+
+add
+1336#ガーディアンナイツアックス#
+18198#ガーディアンナイツアーチャーボウ#
+21055#ガーディアンナイツクレイモア#
+25866#時間の魔力#
+25867#時間の破片#
+32403#ガーディアンアルケミックスタッフ#
+200105#イルシオンチケットIIの箱#
+200106#エンハンスキューブII(イルシオン)の箱#
+490130#辰戌の腕輪#
+
+1336,weapon,ガーディアンナイツアックス,5,,10,1800,180:110,,,1,1024,2,2,4,185,6,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NC_POWERSWING",Baselevel/2; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NC_AXETORNADO",Baselevel/2; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; skill "PA_GOSPEL",1; } }
+18198,weapon,ガーディアンナイツアーチャーボウ,9,,10,900,160:170,,,1,2048,2,34,4,185,11,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"RA_CLUSTERBOMB",4*Baselevel; } if(getequiprefinerycnt() >= 9) { bonus bInt,3*getskilllv("RA_RESEARCHTRAP"); bonus bDex,3*getskilllv("RA_RESEARCHTRAP"); } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
+21055,weapon,ガーディアンナイツクレイモア,9,,10,3400,280:230,,,1,128,2,34,4,185,3,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",Baselevel; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillCoolDown,"RK_IGNITIONBREAK",-100; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
+25866,item,時間の魔力,3,,10,10,,,,,,,,,,,,{},{}
+25867,item,時間の破片,3,,10,10,,,,,,,,,,,,{},{}
+32403,weapon,ガーディアンアルケミックスタッフ,5,,10,1500,150:110,,,1,262144,2,2,4,185,8,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillCoolDown,"GN_CART_TORNADO",-100; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"GN_CART_TORNADO",Baselevel; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
+
+200105,consum,イルシオンチケットIIの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 1000531,1; },{}
+200106,consum,エンハンスキューブII(イルシオン)の箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 100729,1; },{}
+
+490130,acc,辰戌の腕輪,4,,10,400,,,,1,2074075135,2,136,,100,,0,{},{ bonus bAgi,7; bonus2 bAddSkillDamageRate,"SR_SKYNETBLOW",2*Baselevel; if(getskilllv("SR_KNUCKLEARROW") >= 10) { bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; } bonus bMaxHPrate,2*getskilllv("SR_RAISINGDRAGON"); bonus bMaxSPrate,2*getskilllv("SR_RAISINGDRAGON"); bonus bAgi,4*getskilllv("SR_GENTLETOUCH_CHANGE"); bonus bFlee,10*getskilllv("SR_GENTLETOUCH_CHANGE"); if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"SR_SKYNETBLOW",-200; bonus4 bAutoActiveSkill,"SR_SKYNETBLOW",490130,10000,3000; if(checkactiveitem()) { bonus bFlee2,100; } } }
+
+783#迷宮調査貢献の証#
+25290#スウィートチョココイン#
+25584#職業スペシャルチケット#
+27330#クロネカーカード#
+200037#思念体武器アップグレードチケットの箱#
+200042#[2021年]究極精錬チケットの箱#
+200066#職業スペシャルチケットの箱#
+
+783,item,迷宮調査貢献の証,3,,10,1,,,,,,,,,,,,{},{}
+25290,item,スウィートチョココイン,3,,10,0,,,,,,,,,,,,{},{}
+25584,item,職業スペシャルチケット,3,,,0,,,,,,,,,,,,{},{}
+27330,card,クロネカーカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddEle,Ele_Dark,3*getequiprefinerycnt(); }
+200037,consum,思念体武器アップグレードチケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 25913,1; },{}
+200042,consum,[2021年]究極精錬チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,3628800; },{}
+200066,consum,職業スペシャルチケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 25584,1; },{}
+
+item_db2_add.txt
+1336,0,0,1,0,0,1,1,0,0,0,0,0	//ガーディアンナイツアックス
+18198,0,0,1,0,0,1,1,0,0,0,0,0	//ガーディアンナイツアーチャーボウ
+21055,0,0,1,0,0,1,1,0,0,0,0,0	//ガーディアンナイツクレイモア
+25584,0,0,1,1,0,1,1,0,0,0,0,0	//職業スペシャルチケット
+25866,0,0,1,0,0,1,1,0,0,0,0,0	//時間の魔力
+32403,0,0,1,0,0,1,1,0,0,0,0,0	//ガーディアンアルケミックスタッフ
+
+item_cardtype.txt
+4642,card,無限のトードカード,1
+4643,card,無限のさすらい狼カード,1
+4644,card,無限のボーカルカード,1
+4645,card,無限のエクリプスカード,1
+4646,card,無限のキメラカード,1
+4647,card,無限のオシリスカード,1
+4648,card,無限のエドガカード,1
+4649,card,無限のフリオニカード,1
+4650,card,無限のオークヒーローカード,1
+4651,card,無限のタオグンカカード,1
+
+27330,card,クロネカーカード,0
