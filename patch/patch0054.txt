@@ -1,0 +1,58 @@
+fix
+20990,cos,[衣装] 回る歯車,4,,10,0,,,,0,2074075135,2,8192,,1,94,0,{},{ hateffect HAT_EF_GearWheel,TRUE; },{ hateffect HAT_EF_GearWheel,FALSE; }
+
+add
+300078#スウィーティカード#
+300079#レッドペッパーカッパカード#
+300097#ブルーアリエスカード#
+300107#ボスピタヤカード#
+300114#魔力中毒プラガカード#
+300123#パープルピタヤカード#
+310337#透視#
+300078,card,スウィーティカード,6,,10,10,,,,,,,64,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillDamageRate,"RL_MASS_SPIRAL",Baselevel; if(equippeditem(311883)) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillCoolDown,"RL_HAMMER_OF_GOD",-30000; } }
+300079,card,レッドペッパーカッパカード,6,,10,10,,,,,,,769,,,,,{ /* NPC_RAYOFGENESIS 未実装 */ },{ bonus2 bSubEle,Ele_Wind,10; bonus2 bSubEle,Ele_Holy,10; bonus2 bResEff,Eff_Silence,50; if(equippeditem(311883)){ bonus bMaxHPrate,15; bonus2 bSubEle,Ele_Wind,10; } }
+300097,card,ブルーアリエスカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bMatk,5*readparam(bInt); if(readparam(bInt) >= 130){ bonus bMatk,100; } if(equippeditem(300098)) { bonus bInt,10; } }
+300107,card,ボスピタヤカード,6,,10,10,,,,,,,4,,,,,{},{ bonus2 bAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bSubEle,Ele_Poison,50; if(getequiprefinerycnt() >= 9){ bonus2 bSubEle,Ele_Earth,50; bonus bLongAtkDef,50; } if(equippeditem(311883)) { bonus2 bHPDrainRate,15,3; bonus2 bSubEle,Ele_Nutral,20; } }
+300114,card,魔力中毒プラガカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(getlook(2)==12){ bonus bHit,15; bonus bAspd,3; if(getequiprefinerycnt() >=10){ bonus bBaseAtk,100; } } }
+300123,card,パープルピタヤカード,6,,10,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(getlook(2)==22){ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; if(getequiprefinerycnt() >=10){ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } } }
+310337,ench,透視,6,,,,,,,,,,65535,,,,,{},{ bonus bTigereye,0; }
+
+15844#[衣装] マッスル帽#
+20986#科学者のマント#
+20987#[衣装] エンジェリングリュック#
+20993#身かわしのケープ#
+20994#エンシェントメガリスマント#
+22243#ママラガン#
+15844,cos,[衣装] マッスル帽,4,,10,0,,,,0,2074075135,2,1024,,1,1211,0,{},{}
+20986,robe,科学者のマント,4,,0,300,,25:5,,1,2074075135,2,4,,100,,1,{},{ bonus bFlee2,5; bonus2 bSubEle,Ele_Fire,10; bonus2 bSubEle,Ele_Wind,10; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5*getskilllv("GN_CRAZYWEED"); bonus2 bAddSkillDamageRate,"GN_SPORE_EXPLOSION",20*getskilllv("GN_FIRE_EXPANSION"); if(getskilllv("GN_MANDRAGORA") >= 5) { bonus bPerfectHitAddRate,50; } if(getskilllv("GN_HELLS_PLANT") <= 5) { bonus2 bAddCastRate,"GN_SPORE_EXPLOSION",-100; } if(getequiprefinerycnt() >= 7) { bonus bFlee2,8; bonus bAddLongWeaponDamage,10; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Wind,20; } if(getequiprefinerycnt() >= 9) { bonus bFlee2,12; bonus bAddLongWeaponDamage,10; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Wind,20; } }
+20987,cos,[衣装] エンジェリングリュック,4,,10,0,,,,0,2074075135,2,8192,,1,58,0,{},{}
+20993,robe,身かわしのケープ,4,,10,300,,25:5,,0,2074075135,2,4,,100,,1,{ /* ドラム形プレイヤー */ },{ bonus bMaxHPrate,2; bonus bMaxSPrate,2; bonus bSkillDelayRate,-5; bonus2 bSubRace,Rct_Human,5; bonus2 bMagicSubRace,Rct_Human,5; bonus bFlee,10*getskilllv("AB_SECRAMENT"); bonus bFlee2,5*getskilllv("AB_SECRAMENT"); if(getskilllv("AB_PRAEFATIO") >= 10) { bonus2 bSubEle,Ele_Neutral,50; bonus2 bAddFixCastRate,"AB_RENOVATIO",-100; } if(getskilllv("AB_HIGHNESSHEAL") >= 5) { bonus2 bSubEle,Ele_Water,75; bonus2 bSubEle,Ele_Ghost,75; } if(getequiprefinerycnt() >= 5) { bonus bMaxHPrate,3; bonus bMaxSPrate,3; bonus bSkillDelayRate,-5; } if(getequiprefinerycnt() >= 7) { bonus bMaxHPrate,5; bonus bMaxSPrate,4; bonus bSkillDelayRate,-5; } }
+20994,robe,エンシェントメガリスマント,4,,10,400,,50:5,,0,2074075135,2,4,,100,,1,{ /* 幻想の北洞窟ルワンダ出現するモンスターに与えるダメージ + 30% 受けるダメージ - 60% */ },{ bonus2 bSubEle,Ele_Fire,50; bonus2 bSubEle,Ele_Earth,50; }
+22243,shoes,ママラガン,4,,10,300,,15:10,,0,2074075135,2,64,,100,,1,{},{ bonus2 bMagicAddRace,Rct_Boss,15; skill "WZ_VERMILION",5; bonus2 bAddSkillCoolDown,"SO_VARETYR_SPEAR",-1000; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus2 bAddEleMagicDamageRate,Ele_Wind,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddEleMagicDamageRate,Ele_Wind,50; } if(equippeditem(4876)){ bonus bInt,40; bonus bSkillDelayRate,-15; } }
+
+100451#S・J・アーネストウルフの手紙#
+200039#[2020年] ハロウィンチケットの箱#
+200065#[2020] 特別チケットの箱#
+200067#思念体武器アップグレードチケットの箱#
+100451,consum,S・J・アーネストウルフの手紙,2,,10,0,,,,,2074075135,2,,,1,,,{},{}
+200039,consum,[2020年] ハロウィンチケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+200065,consum,[2020] 特別チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+200067,consum,思念体武器アップグレードチケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+
+410023#双子のツインリボン#
+410024#双子のツインリボン#
+410025#浮遊するアーティファクト#
+410026#浮遊するアーティファクト#
+420045#ツインブレイズ#
+490102#スカルリング#
+410023,head,双子のツインリボン,4,,10,300,,2:0,,0,2074075135,2,512,,100,575,0,{},{ bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bResEff,Eff_Sleep,10000; skill "DC_DANCINGLESSON",getskilllv("BA_MUSICALLESSON"); skill "BA_MUSICALLESSON",getskilllv("DC_DANCINGLESSON"); if(getskilllv("WM_UNLIMITED_HUMMING_VOICE") >=5) { bonus bPerfectHitAddRate,30; } if(getskilllv("WM_GLOOMYDAY") >= 5) { if((getlook(2) == 13) || (getlook(2) == 14)) { skill "DC_FORTUNEKISS",getskilllv("BA_POEMBRAGI"); skill "BA_POEMBRAGI",getskilllv("DC_FORTUNEKISS"); } } }
+410024,head,双子のツインリボン,4,,10,300,,2:0,,1,2074075135,2,512,,100,575,0,{},{ bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bResEff,Eff_Sleep,10000; skill "DC_DANCINGLESSON",getskilllv("BA_MUSICALLESSON"); skill "BA_MUSICALLESSON",getskilllv("DC_DANCINGLESSON"); if(getskilllv("WM_UNLIMITED_HUMMING_VOICE") >=5) { bonus bPerfectHitAddRate,30; } if(getskilllv("WM_GLOOMYDAY") >= 5) { if((getlook(2) == 13) || (getlook(2) == 14)) { skill "DC_FORTUNEKISS",getskilllv("BA_POEMBRAGI"); skill "BA_POEMBRAGI",getskilllv("DC_FORTUNEKISS"); } } }
+410025,head,浮遊するアーティファクト,4,,10,200,,10:5,,0,2074075135,2,512,,100,1996,0,{},{ bonus bHPGainValue,150; bonus bSPGainValue,15; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; }
+410026,head,浮遊するアーティファクト,4,,10,200,,10:5,,1,2074075135,2,512,,100,1996,0,{},{ bonus bHPGainValue,150; bonus bSPGainValue,15; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; }
+420045,head,ツインブレイズ,4,,10,100,,,,0,2074075135,2,1,,70,1890,0,{},{ bonus bAspdAddRate,5; bonus bShortWeaponDamageReturn,5; }
+490102,acc,スカルリング,4,,10,100,,0:15,,1,2074075135,2,136,,100,,0,{ /* ソウルリーパー */ },{ bonus bInt,7; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; if(Job == Job_Soulreaper){ if(equippeditem(28371)){ skill "MG_FIREWALL",10; bonus2 bIgnoreMdefRace,Rct_Boss,100; bonus2 bIgnoreMdefRace,Rct_NonBoss,100; } } }
+
+20994,0,0,1,0,0,1,1,0,0,0,0,0	//エンシェントメガリスマント
+100451,0,0,1,0,0,1,1,0,10000,0,1,0	//S・J・アーネストウルフの手紙
+310337,0,4,1,1,1,1,1,0,0,0,0,0	//透視
+
