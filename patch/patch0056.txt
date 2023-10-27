@@ -1,0 +1,12 @@
+400101#ゲートオブネザーワールド#
+410014#コル・コアヘッドフォン#
+410015#コル・コアヘッドフォン#
+420006#隷属の首輪#
+450165#剛勇無双の甲胄#
+480085#天魔外道の外套#
+400101,head,ゲートオブネザーワールド,4,,10,500,,10:10,,1,2074075135,2,256,,100,2016,1,{},{ bonus bAgi,5; bonus bInt,5; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bFixCastrate,-50,0; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,15; bonus2 bFixCastrate,-70,0; } if(equippeditem(4556)){ bonus bInt,30; bonus bDex,30; bonus2 bAddFixCastRate,"WL_TETRAVORTEX",-100; } }
+410014,head,コル・コアヘッドフォン,4,,10,100,,5:3,,0,2074075135,2,512,,100,2017,0,{},{ bonus bSkillDelayRate,-10; }
+410015,head,コル・コアヘッドフォン,4,,10,100,,5:3,,1,2074075135,2,512,,100,2017,0,{},{ bonus bSkillDelayRate,-10; }
+420006,head,隷属の首輪,4,,10,300,,,,0,2074075135,2,1,,70,2018,0,{},{ bonus2 bAddSize,Size_Small,4*(readparam(bStr) + readparam(bLuk))/50; bonus2 bAddSize,Size_Medium,4*(readparam(bStr) + readparam(bLuk))/50; bonus2 bAddSize,Size_Big,4*(readparam(bStr) + readparam(bLuk))/50; bonus bPerfectHitAddRate,5*(readparam(bStr) + readparam(bLuk))/50; }
+450165,armor,剛勇無双の甲胄,4,,10,1000,,120:10,,1,2074075135,2,16,,100,,1,{},{ bonus2 bAddRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus bPerfectHitAddRate,5*getequiprefinerycnt(); if(equippeditem(470048)){ bonus bNoSizeFix,0; } if(equippeditem(19379)){ bonus bAllStatus,15; } if(equippeditem(480114)){ bonus bMaxHPrate,20*getequiprefinerycnt(2)/3; bonus bLongAtkDef,5; } }
+480085,robe,天魔外道の外套,4,,10,300,,25:5,,1,2074075135,2,4,,100,,1,{},{ bonus bMaxHPrate,2; bonus bMaxSPrate,2; bonus2 bAddSize,Size_Small,5; bonus2 bAddSize,Size_Medium,5; bonus2 bAddSize,Size_Big,5; if(getskilllv("SR_EARTHSHAKER") >= 5) { bonus2 bAddSkillCoolDown,"SR_HOWLINGOFLION",-200; } bonus2 bAddSkillDamageRate,"SR_HOWLINGOFLION",15*getskilllv("SR_RAMPAGEBLASTER"); bonus bPerfectHitAddRate,4*getskilllv("SR_RIDEINLIGHTNING"); if(getequiprefinerycnt() >= 5) { bonus bMaxHPrate,3; bonus bMaxSPrate,3; bonus bCastrate,-5; } if(getequiprefinerycnt() >= 7) { bonus bMaxHPrate,5; bonus bMaxSPrate,5; bonus bCastrate,-5; } }
