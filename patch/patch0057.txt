@@ -1,0 +1,20 @@
+fix
+460010,shield,魔狩りの盾,4,,10,1200,,170:0,,1,2074075135,2,32,,130,3,1,{},{ if(equippeditem(4253) || equippeditem(27191) || equippeditem(27254) || equippeditem(27255) || equippeditem(27256)) { if(equippeditem(4253) >= 1){ } if(equippeditem(27191) >= 1){ } if(equippeditem(27254) >= 1){ } if(equippeditem(27255) >= 1){ } if(equippeditem(27256) >= 1){ } } else { bonus2 bSubRace,Rct_Boss,10; bonus2 bSubRace,Rct_NonBoss,10; bonus2 bMagicSubRace,Rct_Boss,10; bonus2 bMagicSubRace,Rct_NonBoss,10; if((Job == Job_RuneKnight) || (Job == Job_ImpeRrial_Guard)) { if(getequiprefinerycnt() >= 7) { bonus2 bSubRace,Rct_Boss,10; bonus2 bSubRace,Rct_NonBoss,10; bonus2 bMagicSubRace,Rct_Boss,10; bonus2 bMagicSubRace,Rct_NonBoss,10; } if(getequiprefinerycnt() >= 9) { bonus2 bSubRace,Rct_Boss,10; bonus2 bSubRace,Rct_NonBoss,10; bonus2 bMagicSubRace,Rct_Boss,10; bonus2 bMagicSubRace,Rct_NonBoss,10; } } } }
+
+add
+400113#戦乙女の羽耳#
+400114#戦乙女の羽耳#
+410009#レインボースター#
+410010#イリュージョンアイズ#
+480072#フローズンスケイルショール#
+490098#リングオブパズズ#
+
+400113,head,戦乙女の羽耳,4,,10,300,,2:0,,0,2074075135,2,512,,100,1185,0,{},{ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; bonus2 bResEff,Eff_Confusion,10000; if(getskilllv("AB_ADORAMUS") >= 10) { bonus bNoGemStone,0;} if(getskilllv("AB_PRAEFATIO") >= 10) { bonus bSkillDelayRate,-15;} }
+400114,head,戦乙女の羽耳,4,,10,300,,2:0,,1,2074075135,2,512,,100,1185,0,{},{ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; bonus2 bResEff,Eff_Confusion,10000; if(getskilllv("AB_ADORAMUS") >= 10) { bonus bNoGemStone,0; } if(getskilllv("AB_PRAEFATIO") >= 10) { bonus bSkillDelayRate,-15; } }
+410009,head,レインボースター,4,,10,300,,2:0,,1,2074075135,2,512,,100,1019,0,{},{ bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bResEff,Eff_Silence,10000; if(getskilllv("RA_RESEARCHTRAP") >= 10) { bonus bPerfectHitAddRate,30; } if(getskilllv("RA_UNLIMIT") >= 5) { bonus2 bFixCastrate,-70,0; } }
+410010,head,イリュージョンアイズ,4,,10,500,,2:0,,1,2074075135,2,512,,100,1779,0,{},{ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bSubRace,Rct_Player,5;bonus2 bMagicSubRace,Rct_Player,5; bonus2 bResEff,Eff_Blind,10000; if(getskilllv("GN_ILLUSIONDOPING") >= 5) { skill "SA_DISPELL",5;} if(getskilllv("GN_MANDRAGORA") >= 5) { bonus2 bFixCastrate,-70,0;} }
+480072,robe,フローズンスケイルショール,4,,10,400,,50:5,,0,2074075135,2,4,,100,,1,{ /* 物理・魔法攻撃時[フローズンメモリー]に出現するモンスターに与えるダメージ + 30% 受けるダメージ - 60% */ },{ bonus2 bSubEle,Ele_Water,75; }
+490098,acc,リングオブパズズ,4,,10,100,,0:15,,1,2074075135,2,136,,100,,0,{ /* 魔法攻撃でモンスターを倒した時HP + 100 , SP + 10 */ },{ bonus bInt,7; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; bonus2 bAddSkillDamageRate,"WL_CRIMSONROCK",3*Baselevel; bonus2 bAddSkillDamageRate,"WL_CHAINLIGHTNING",3*Baselevel; bonus2 bAddSkillDamageRate,"WZ_VERMILION",6*Baselevel; if(getskilllv("WL_CHAINLIGHTNING") >= 5) { bonus2 bAddSpCost,"WL_CHAINLIGHTNING",-35; bonus2 bAddSkillCoolDown,"WL_CHAINLIGHTNING",-500; } if(getskilllv("WL_DRAINLIFE") >= 5) { bonus bCastrate,-15; } if(getskilllv("WL_RADIUS") >= 3) { bonus2 bMagicAddEle,Ele_Fire,10; bonus2 bMagicAddEle,Ele_Wind,10; bonus2 bMagicAddEle,Ele_Neutral,10; } if(getskilllv("WL_RECOGNIZEDSPELL") >= 5) { bonus bSkillDelayRate,-30; } if((Job == Job_Warlock) || (Job == Job_Arch_Mage)) { if(equippeditem(28371)){ bonus2 bAddSpCost,"WL_CRIMSONROCK",-50; bonus2 bAddSkillCoolDown,"WL_CRIMSONROCK",-2000; } } }
+
+item_db2_add.txt
+100450,0,0,1,0,0,1,1,0,10000,0,1,0	//カプレーゼの手紙
