@@ -138,6 +138,8 @@
 //-- 10000 --
 10046,pet,猫王冠,4,,10,0,,,,,,,,,,,,{},{}
 10047,pet,蝶ネクタイ,4,,10,0,,,,,,,,,,,,{},{}
+10514,consum,[2020年]究極精錬チケットの箱,2,,,10,,,,,2074075135,2,,,1,,,{},{}
+10515,consum,[2020春]復刻コスたまカーニバルの箱,2,,,10,,,,,2074075135,2,,,1,,,{},{}
 10571,consum,コスたまHairCollectionVI(明色),2,,,10,,,,,2074075135,2,,,1,,,{},{}
 10572,consum,復刻コスたま引換券10個の箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 1000318,10; },{}
 10573,consum,[2022年]特選ネコ缶(カニ)の箱,2,,,10,,,,,2074075135,2,,,1,,,{ getitem2 1000964,10,1,0,0,0,0,0,0,3715200; },{}
@@ -285,6 +287,8 @@
 19443,head,星の眼帯,4,,10,300,,200:10,,0,2074075135,2,512,,99,800,0,{},{ bonus bVit,2; bonus2 bResEff,Eff_Stun,3000; }
 19444,head,星の眼帯,4,,10,300,,200:10,,1,2074075135,2,512,,99,800,0,{},{ bonus bVit,2; bonus2 bResEff,Eff_Stun,3000; }
 19453,head,ジェジェキャップ,4,,10,1000,,18:15,,0,2074075135,2,256,,100,1011,1,{},{ bonus bSkillDelayRate,-1*(15+6*getskilllv("GN_CRAZYWEED")); bonus bNoCastCancel,0; bonus2 bAddCastRate,"CR_ACIDDEMONSTRATION",-50; bonus2 bAddCastRate,"GN_CRAZYWEED",-50; bonus2 bAddCastRate,"CR_FULLPROTECTION",-50; bonus2 bAddSkillDamageRate,"CR_ACIDDEMONSTRATION",10; bonus2 bAddSkillDamageRate,"GN_CRAZYWEED",10; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"CR_ACIDDEMONSTRATION",15; bonus2 bAddSkillDamageRate,"GN_CRAZYWEED",15; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"CR_ACIDDEMONSTRATION",25; bonus2 bAddSkillDamageRate,"GN_CRAZYWEED",25; } if(getequiprefinerycnt() >= 10) { bonus2 bIgnoreDefRace,Rct_Boss,100; bonus2 bIgnoreDefRace,Rct_NonBoss,100; } if(getskilllv("GN_FIRE_EXPANSION") >= 5) { bonus2 bAddRace,Rct_Boss,50; bonus2 bMagicAddRace,Rct_Boss,50; } if(equippeditem(450100) == 0){ if(getskilllv("GN_MANDRAGORA") >= 5) { bonus bSkillDelayRate,-25; bonus2 bAddSkillCoolDown,"GN_CRAZYWEED",-4500; } } if((equippeditem(450100) == 1) && (getequiprefinerycnt(2) <= 9)){ if(getskilllv("GN_MANDRAGORA") >= 5) { bonus bSkillDelayRate,-25; bonus2 bAddSkillCoolDown,"GN_CRAZYWEED",-4500; } } if((equippeditem(450100) == 1) && (getequiprefinerycnt(2) >= 10)){ if(getskilllv("GN_MANDRAGORA") >= 5) { bonus bSkillDelayRate,-25; } } }
+19463,head,メロンパンハット,4,,10,600,,12:0,,0,2074075135,2,256,,100,1878,1,{},{}
+19464,cos,[衣装] メロンパンハット,4,,10,0,,,,0,2074075135,2,1024,,1,1878,0,{},{}
 19466,cos,[衣装] ちいさな海,4,,10,0,,,,0,2074075135,2,1024,,1,1883,0,{},{}
 19495,head,ディアボロスウィング,4,,10,300,,2:0,,1,2074075135,2,512,,100,680,0,{},{}
 19497,head,ファントムオブマスカレード,4,,10,500,,,,1,2074075135,2,256,,100,1899,1,{},{ bonus bStr,5; bonus bAgi,5; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bResEff,Eff_Stone,5000; if(getequiprefinerycnt() >= 7){ bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus bSkillDelayRate,-20; } if(getequiprefinerycnt() >= 9){ bonus bDefRatioAtkRace,Rct_Boss; bonus bDefRatioAtkRace,Rct_Boss; } if(equippeditem(4399)){ bonus bBaseAtk,getequiprefinerycnt(); } if(equippeditem(311074)){ bonus bBaseAtk,getequiprefinerycnt(); } }
@@ -909,6 +913,7 @@
 31973,cos,[衣装] 桜サングラス,4,,10,0,,,,0,2074075135,2,2048,,1,2119,0,{},{}
 
 //-- 32000 --
+32012,weapon,メタルスティック,5,,10,2500,180:0,,,1,16384,2,2,4,130,4,1,{},{}
 32026,weapon,ブロッキングスピア,5,,10,1500,150:110,,,1,16384,2,2,4,175,4,1,{},{  bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; skill "PR_KYRIE",1; if(getequiprefinerycnt() >= 7) { skill "PR_KYRIE",getequiprefinerycnt(); } if(getequiprefinerycnt() >= 9) { bonus2 bAddCastRate,"PR_KYRIE",-100; } if(getequiprefinerycnt() >= 10) { bonus bDef,300; } }
 32027,weapon,ガーディアンナイツスピア,5,,10,1800,150:110,,,1,16384,2,2,4,185,4,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddFixCastRate,"LG_OVERBRAND",-100; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"LG_OVERBRAND",Baselevel/2; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
 32028,weapon,アルジャンブランコ,5,,10,1800,150:110,,,1,16384,2,2,4,100,4,1,{},{}
@@ -2218,7 +2223,7 @@
 450132,armor,マジカルクロース,4,,10,100,,45:0,,1,2074075135,2,16,,100,,1,{},{}
 450133,armor,双魚宮のメイル,4,,10,1000,,100:5,,1,2074075135,2,16,,1,,1,{},{}
 450140,armor,人馬宮のメイル,4,,10,1000,,100:5,,1,2074075135,2,16,,1,,1,{},{}
-450141,armor,王者のメイル,4,,10,1000,,60:0,,1,2074075135,2,16,,130,,1,{},{}
+//450141,armor,王者のメイル,4,,10,1000,,60:0,,1,2074075135,2,16,,130,,1,{},{}
 450142,armor,オークロードの鎧,4,,10,900,,90:10,,1,2074075135,2,16,,99,,1,{},{}
 450143,armor,赤蛇のドレス,4,,10,400,,120:0,,0,2074075135,2,16,,90,,1,{},{}
 450144,armor,イリュージョンセイントローブ,4,,10,600,,50:5,,1,2074075135,2,16,,150,,1,{},{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; if(Baselevel >= 170) { bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10;} }
@@ -2377,7 +2382,7 @@
 480044,robe,スクロールストール,4,,10,600,,12:0,,1,2074075135,2,4,,100,,1,{},{}
 480045,robe,ガーディアンオブソウル,4,,10,300,,25:10,,0,2074075135,2,4,,100,,1,{},{}
 480050,robe,人馬宮のマント,4,,10,300,,25:5,,0,2074075135,2,4,,1,,1,{},{}
-480051,robe,王者のマント,4,,10,100,,16:0,,1,2074075135,2,4,,130,,1,{},{}
+//480051,robe,王者のマント,4,,10,100,,16:0,,1,2074075135,2,4,,130,,1,{},{}
 480052,cos,[衣装] 和装リボン,4,,10,0,,,,0,2074075135,2,8192,,1,69,0,{},{}
 480053,robe,地魔獣の皮膚,4,,10,200,,18:5,,1,2074075135,2,4,,100,,1,{},{}
 480054,robe,イリュージョンモリガンのマント,4,,10,600,,9:0,,1,2074075135,2,4,,150,,1,{},{ bonus bFlee,20; if(Baselevel >= 170) { bonus bFlee,20; bonus bMaxHPrate,10; bonus bLuk,3*getequiprefinerycnt(); } }
@@ -2514,7 +2519,7 @@
 490037,acc,ダークリング,4,,10,100,,,,1,2074075135,2,136,,100,,0,{},{}
 490038,acc,知覚増幅リング,4,,10,100,,0:15,,1,2074075135,2,136,,100,,0,{},{}
 490041,acc,人馬宮のリング,4,,10,100,,,,0,2074075135,2,136,,1,,0,{},{}
-490042,acc,王者の指輪,4,,10,100,,150:15,,1,2074075135,2,136,,130,,0,{},{}
+//490042,acc,王者の指輪,4,,10,100,,150:15,,1,2074075135,2,136,,130,,0,{},{}
 490043,acc,半龍王女の指輪,4,,10,100,,,,1,2074075135,2,8,,130,,0,{},{}
 490044,acc,シンフルルビーリング,4,,10,100,,,,1,128,2,8,,200,,0,{},{ bonus bStr,20; bonus bMaxHPrate,15; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bPerfectHitAddRate,15; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",Baselevel/2; if(equippeditem(490113) == 0) { bonus2 bAddSkillCoolDown,"RK_IGNITIONBREAK",0; } else { bonus2 bAddSkillCoolDown,"RK_IGNITIONBREAK",-200; } }
 490045,acc,シンフルルビーネックレス,4,,10,100,,,,1,268435456,2,8,,200,,0,{},{ bonus bDex,20; bonus bAspdAddRate,15; bonus bMaxHPrate,15; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillDamageRate,"RL_FIRE_RAIN",Baselevel; bonus2 bAddSkillDamageRate,"RL_R_TRIP",Baselevel; bonus4 bAutoActiveSkill,"RL_R_TRIP",49045,10000,3000; if(checkactiveitem()) { bonus bPerfectHitAddRate,100; } }
@@ -3186,7 +3191,7 @@
 //-------------------
 //-- 231003 jpatch --
 //-------------------
-15952,cos,[衣装] ナーガの金冠,4,,10,0,,,,0,2074075135,2,1024,,1,2296,0,{},{}
+15952,cos,[衣装] ナーガの金冠,4,,10,0,,,,0,2074075135,2,1024,,1,2296,0,{},{ hateffect HAT_EF_C_15th_Nov_Helmet,TRUE; },{ hateffect HAT_EF_C_15th_Nov_Helmet,FALSE; }
 20114,cos,[衣装] 葬式用の帽子,4,,10,0,,,,0,2074075135,2,1024,,1,77,0,{},{}
 20249,cos,[衣装] 赫々と燃ゆる逆毛,4,,10,0,,,,0,2074075135,2,1024,,1,1316,0,{},{}
 200329,consume,コスたまHalloweenVII,2,,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -3252,3 +3257,18 @@
 //-- 231031 jpatch --
 //-------------------
 1001562,item,硬化ナイトメアテラー交換チケット,3,,,0,,,,,,,,,,,,{},{}
+
+//-------------------
+//-- 231107 jpatch --
+//-------------------
+200339,consum,コスたまAnimalsIX,2,,,10,,,,,2074075135,2,,,1,,,{},{}
+20596,cos,[衣装] テディベアリュック,4,,10,0,,,,0,2074075135,2,8192,,1,81,0,{},{}
+400525,cos,[衣装] ヤマネコニット帽(白),4,,10,0,,,,0,2074075135,2,1024,,1,2381,0,{},{}
+400526,cos,[衣装] 獅子王の兜(上段),4,,10,0,,,,0,2074075135,2,1024,,1,202,0,{},{}
+400527,cos,[衣装] たれ猫（茶）,4,,10,0,,,,0,2074075135,2,1024,,1,750,0,{},{}
+410281,cos,[衣装] タイガーフェイス(中段),4,,10,0,,,,0,2074075135,2,2048,,1,483,0,{},{}
+420237,cos,[衣装] あったか虎猫マフラー,4,,10,0,,,,0,2074075135,2,4096,,1,2417,0,{},{}
+420263,cos,[衣装] ひっかき猫(下段),4,,10,0,,,,0,2074075135,2,4096,,1,1292,0,{},{}
+420264,cos,[衣装] 白猫ストレートロング,4,,10,0,,,,0,2074075135,2,4096,,1,2440,0,{},{}
+480376,cos,[衣装] ラタトスクの尻尾,4,,10,0,,,,0,2074075135,2,8192,,1,195,0,{},{}
+480377,cos,[衣装] 伸びた白猫,4,,10,0,,,,0,2074075135,2,8192,,1,196,0,{},{}
