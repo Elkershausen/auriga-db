@@ -1,0 +1,58 @@
+fix
+32012 32026 32027 32028 32029 32030 32031 片手槍の攻撃距離を3に修正
+
+add
+10514#[2020年]究極精錬チケットの箱#
+10515#[2020春]復刻コスたまカーニバルの箱#
+11626#復刻メロンパン#
+19463#メロンパンハット#
+19464#[衣装] メロンパンハット#
+32012#メタルスティック#
+10514,consum,[2020年]究極精錬チケットの箱,2,,,10,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,3628800; },{}
+10515,consum,[2020春]復刻コスたまカーニバルの箱,2,,,10,,,,,2074075135,2,,,1,,,{ getitem2 1000318,1,1,0,0,0,0,0,0,3196800; getitem2 25441,1,1,0,0,0,0,0,0,3196800; },{}
+11626,consum,復刻メロンパン,0,,10,30,,,,,2074075135,2,,,1,,,{ heal 325,80; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_end SC_DECREASEAGI; if(equippeditem(19463)){ heal 325*((5/100)*Baselevel),80*((5/100)*Baselevel); } },{}
+19463,head,メロンパンハット,4,,10,600,,12:0,,0,2074075135,2,256,,100,1878,1,{},{ bonus2 bSubEle,Ele_Earth,5+2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bLongAtkDef,10; callfunc "ItemdbAlmightySubHeal",0x7F,10; bonus2 bItemHealRate,1,10; } if(getequiprefinerycnt() >= 9) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; callfunc "ItemdbAlmightySubHeal",0x7F,10; bonus2 bItemHealRate,1,10; } }
+19464,cos,[衣装] メロンパンハット,4,,10,0,,,,0,2074075135,2,1024,,1,1878,0,{},{}
+32012,weapon,メタルスティック,5,,10,2500,180:0,,3,1,16512,2,2,4,130,4,1,{ /* ドラム形プレイヤーに与えるダメージ + 15% */ },{ bonus bVit,3; bonus2 bAddSkillDamageRate,"LG_BANISHINGPOINT",2*Baselevel; if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; bonus2 bAddSpCost,"LG_BANISHINGPOINT",-15; bonus2 bAddRace,Rct_Human,15; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"LG_BANISHINGPOINT",Baselevel; } if(getequiprefinerycnt() >= 10) { bonus2 bAddRace,Rct_Human,30; } }
+32026,weapon,ブロッキングスピア,5,,10,1500,150:110,,3,1,16384,2,2,4,175,4,1,{},{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; skill "PR_KYRIE",1; if(getequiprefinerycnt() >= 7) { skill "PR_KYRIE",getequiprefinerycnt(); } if(getequiprefinerycnt() >= 9) { bonus2 bAddCastRate,"PR_KYRIE",-100; } if(getequiprefinerycnt() >= 10) { bonus bDef,300; } }
+32027,weapon,ガーディアンナイツスピア,5,,10,1800,150:110,,3,1,16384,2,2,4,185,4,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddFixCastRate,"LG_OVERBRAND",-100; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"LG_OVERBRAND",Baselevel/2; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
+32028,weapon,アルジャンブランコ,5,,10,1800,150:110,,3,1,16384,2,2,4,100,4,1,{},{}
+32029,weapon,ハーベスト,5,,10,1800,150:110,,3,1,16384,2,2,4,100,4,1,{},{}
+32030,weapon,フォートレイジ,5,,10,1800,150:110,,3,1,16384,2,2,4,100,4,1,{},{}
+32031,weapon,白羊宮のスピアー,5,,10,1000,10:0,,3,1,16514,2,2,4,1,4,1,{},{}
+
+100278#黄金のカード帖#
+100279#運命のカード帖#
+100280#黄金の天使像#
+100278,consum,黄金のカード帖,2,,10,50,,,,,2074075135,2,,,1,,,{ getitem RAND_CARD_ALBUM,1; },{}
+100279,consum,運命のカード帖,2,,10,50,,,,,2074075135,2,,,1,,,{ /* (逆位置) (逆位置)の欠片 という接尾語がついているのとついていない同名アイテムとカードが出る */ },{}
+100280,consum,黄金の天使像,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+
+300138#半龍王女メアカード#
+300138,card,半龍王女メアカード,6,,10,10,,,,,,,769,,,,,{ /* 固定詠唱 -1秒　未実装 */ },{ bonus2 bAddRace,Rct_Boss,getequiprefinerycnt() ;bonus2 bAddRace,Rct_NonBoss,getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,getequiprefinerycnt(); }
+
+400050#ゴシックスカルリボン#
+400051#ゴールデンバイオレット#
+400060#ぴかぴかニャンニャンクラウン#
+420004#フォックスヘア#
+470056#追撃者のシューズ#
+470057#追撃者のシューズ#
+490043#半龍王女の指輪#
+490079#精神拡張リング#
+520003#氷炎悪神の刃鎌#
+400050,head,ゴシックスカルリボン,4,,10,300,,,,1,2074075135,2,256,,100,1885,1,{},{ bonus2 bMagicAddRace,Rct_Boss,10; if(getequiprefinerycnt() >= 6) { bonus2 bMagicAddRace,Rct_Boss,15; } if(getequiprefinerycnt() >= 8) { bonus2 bMagicAddRace,Rct_Boss,15; bonus bNoKnockback,0; } }
+400051,head,ゴールデンバイオレット,4,,10,1000,,10:0,,0,2074075135,2,256,,130,1886,1,{},{ bonus bAllStatus,10; if(getequiprefinerycnt() >= 7) { bonus bAllStatus,20; } if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+400060,head,ぴかぴかニャンニャンクラウン,4,,10,1000,,18:15,,0,2074075135,2,256,,100,328,1,{},{ bonus bSkillDelayRate,-15; bonus2 bAddSkillDamageRate,"SU_CN_METEOR",10; bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",10; if(getskilllv("SU_SPIRITOFLAND") >= 1) { bonus2 bAddCastRate,"SU_CN_METEOR",-4*(getskilllv("SU_CN_POWDERING") + getskilllv("SU_CN_METEOR") + getskilllv("SU_NYANGGRASS") + getskilllv("SU_SV_STEMSPEAR") + getskilllv("SU_SV_ROOTTWIST")); bonus2 bAddCastRate,"SU_SV_STEMSPEAR",-4*(getskilllv("SU_CN_POWDERING") + getskilllv("SU_CN_METEOR") + getskilllv("SU_NYANGGRASS") + getskilllv("SU_SV_STEMSPEAR") + getskilllv("SU_SV_ROOTTWIST")); } bonus bAspdAddRate,3*getskilllv("SU_CHATTERING"); if(getskilllv("SU_NYANGGRASS") >= 5) { bonus bSkillDelayRate,-20; } if(getskilllv("SU_MEOWMEOW") >= 5) { bonus2 bMagicAddRace,Rct_Boss,25; } bonus2 bHPDrainValue,100,30*getequiprefinerycnt(); bonus2 bSPDrainValue,100,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddCastRate,"SU_STOOP",-50; bonus2 bAddCastRate,"SU_LOPE",-50; bonus2 bAddSkillDamageRate,"SU_CN_METEOR",15; bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",15; } if(getequiprefinerycnt() >= 9) { bonus2 bAddCastRate,"SU_STOOP",-50; bonus2 bAddCastRate,"SU_LOPE",-50; bonus2 bAddSkillDamageRate,"SU_CN_METEOR",25; bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",25; } if(getequiprefinerycnt() >= 10) { bonus3 bAutoActiveMagic,400060,100,20000; if(checkactiveitem()) { bonus bUseSPrate,-100; } } }
+420004,head,フォックスヘア,4,,10,300,,,,0,2074075135,2,1,,130,1884,0,{},{ bonus2 bAddRace,Rct_Demon,20; bonus2 bMagicAddRace,Rct_Demon,20; bonus2 bResEff,Eff_Blind,10000; }
+470056,shoes,追撃者のシューズ,4,,10,400,,12:10,,0,2074075135,2,64,,100,,1,{},{ bonus bMaxHPrate,3; bonus bMaxSPrate,3; skill "AL_TELEPORT",1; bonus2 bAddSpCost,"SC_FATALMENACE",-18; bonus2 bIgnoreDefRace,Rct_Boss,20*getskilllv("SC_ESCAPE"); bonus2 bIgnoreMdefRace,Rct_NonBoss,20*getskilllv("SC_ESCAPE"); bonus2 bAddSkillDamageRate,"SC_FATALMENACE",10*getskilllv("GN_TRAINING_SWORD"); bonus2 bAddRace,Rct_Boss,2*getskilllv("SC_FATALMENACE"); bonus2 bAddRace,Rct_NonBoss,2*getskilllv("SC_FATALMENACE"); if(getskilllv("SC_FEINTBOMB") >= 10) { bonus bNoSizeFix,0; } bonus bFlee,4*(getskilllv("SC_ESCAPE") + getskilllv("SC_FATALMENACE") + getskilllv("SC_FEINTBOMB")); if(getequiprefinerycnt() >= 5) { bonus bAspdAddRate,5; bonus bMaxHPrate,7; bonus bMaxSPrate,7; } if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,5; bonus bMaxHPrate,10; bonus bMaxSPrate,10; } }
+470057,shoes,追撃者のシューズ,4,,10,400,,12:10,,1,2074075135,2,64,,100,,1,{},{ bonus bMaxHPrate,3; bonus bMaxSPrate,3; skill "AL_TELEPORT",1; bonus2 bAddSpCost,"SC_FATALMENACE",-18; bonus2 bIgnoreDefRace,Rct_Boss,20*getskilllv("SC_ESCAPE"); bonus2 bIgnoreMdefRace,Rct_NonBoss,20*getskilllv("SC_ESCAPE"); bonus2 bAddSkillDamageRate,"SC_FATALMENACE",10*getskilllv("GN_TRAINING_SWORD"); bonus2 bAddRace,Rct_Boss,2*getskilllv("SC_FATALMENACE"); bonus2 bAddRace,Rct_NonBoss,2*getskilllv("SC_FATALMENACE"); if(getskilllv("SC_FEINTBOMB") >= 10) { bonus bNoSizeFix,0; } bonus bFlee,4*(getskilllv("SC_ESCAPE") + getskilllv("SC_FATALMENACE") + getskilllv("SC_FEINTBOMB")); if(getequiprefinerycnt() >= 5) { bonus bAspdAddRate,5; bonus bMaxHPrate,7; bonus bMaxSPrate,7; } if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,5; bonus bMaxHPrate,10; bonus bMaxSPrate,10; } }
+490043,acc,半龍王女の指輪,4,,10,100,,,,1,2074075135,2,8,,130,,0,{ /* 絶対にホワイトインプリズン状態にならない 自分に対して使用した[ホワイトインプリズン]にはこの効果は発動しない */ },{ bonus bAllStatus,15; bonus bAspdAddRate,15; bonus2 bAddSkillDamageRate,"WL_TETRAVORTEX",Baselevel; { bonus bAutoStatusCalcPc,422; sc_end 422; } }
+490079,acc,精神拡張リング,4,,10,100,,0:15,,1,2074075135,2,136,,100,,0,{ /* 魔法攻撃でモンスターを倒した時HP + 100 , SP + 10*/ },{ bonus bInt,7; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; bonus2 bAddSkillDamageRate,"WL_SOULEXPANSION",Baselevel/7; if(getskilllv("WL_STASIS") >= 5) { bonus2 bMagicAddEle,Ele_Dark,10; bonus2 bMagicAddEle,Ele_Ghost,10; bonus2 bMagicAddEle,Ele_Neutral,10; } if(getskilllv("WL_TELEKINESIS_INTENSE") >= 5) { bonus2 bAddSkillCoolDown,"WL_TELEKINESIS_INTENSE",-75000; } if(getskilllv("WL_HELLINFERNO") >= 5) { bonus bAspdAddRate,15; } if(getskilllv("WL_RECOGNIZEDSPELL") >= 5) { bonus bSkillDelayRate,-15; } if((Job == Job_Warlock) || (Job == Job_Arch_Mage)) { if(equippeditem(28371)){ bonus2 bIgnoreMdefRace,Rct_Boss,100; bonus2 bIgnoreMdefRace,Rct_NonBoss,100; } } },{ sc_end SC_TELEKINESIS_INTENSE; }
+520003,weapon,氷炎悪神の刃鎌,5,,10,4000,360:290,,1,1,263168,2,2,4,130,6,1,{},{ bonus bAtkRange,3; bonus bStr,3; bonus bInt,5; bonus2 bAddSkillDamageRate,"MC_MAMMONITE",10*Baselevel; bonus2 bHPDrainRate,100,1; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,2*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,2*getequiprefinerycnt(); bonus bPerfectHitAddRate,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bHPDrainRate,100,1; bonus2 bResEff,Eff_Freeze,2500; bonus2 bResEff,Eff_Burning,2500; } if(getequiprefinerycnt() >= 9) { bonus2 bHPDrainRate,100,2; bonus2 bResEff,Eff_Freeze,2500; bonus2 bResEff,Eff_Burning,2500; } if(getequiprefinerycnt() >= 10) { bonus bNoSizeFix,0; } }
+
+item_db2_add.txt
+10514,0,0,1,1,0,1,1,0,0,0,0,0	//[2020年]究極精錬チケットの箱
+10515,0,0,1,1,0,1,1,0,0,0,0,0	//[2020春]復刻コスたまカーニバルの箱
+11626,0,0,1,0,0,1,1,0,0,0,0,0	//復刻メロンパン
+
+100280,0,0,1,1,0,1,1,0,1000,0,1,0	//黄金の天使像
