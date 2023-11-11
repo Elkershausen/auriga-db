@@ -1,0 +1,44 @@
+5396#ジャスパーサークレット#
+10513#3次職スペシャルチケットの箱#
+12019#開運招福の鈴#
+17912#ハッピークリスマスバッグ#
+18613#黒無常帽#
+20593#[衣装] 氷の翼#
+5396,head,ジャスパーサークレット,4,,10,1000,,18:15,,0,2074075135,2,256,,100,399,1,{},{ bonus bAspdAddRate,10; bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",20; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",20; if(getskilllv("RK_IGNITIONBREAK") >= 5) { bonus2 bAddRace,Rct_Boss,50; bonus2 bMagicAddRace,Rct_NonBoss,50; } bonus2 bIgnoreDefRace,Rct_Boss,10*getskilllv("RK_DEATHBOUND"); bonus2 bIgnoreDefRace,Rct_NonBoss,10*getskilllv("RK_DEATHBOUND"); if(getskilllv("RK_SONICWAVE") >=5){ bonus2 bAddSkillCoolDown,"RK_IGNITIONBREAK",-2500; if(equippeditem(410139)){ bonus2 bAddSkillCoolDown,"RK_IGNITIONBREAK",2500; } } if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,5; bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",30; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",30; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,5; bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",50; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",50; } if(getequiprefinerycnt() >= 10) { bonus bPerfectHitAddRate,50; } },{ sc_end 389; sc_end 390; sc_end 391; sc_end 392; sc_end 393; sc_end 394; sc_end 395; }
+10513,consum,3次職スペシャルチケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 1000309,1,1,0,0,0,0,0,0,4233600; },{}
+12019,consum,開運招福の鈴,2,,10,10,,,,,2074075135,2,,,1,,,{},{}
+17912,consum,ハッピークリスマスバッグ,2,,10,200,,,,,2074075135,2,,,1,,,{ /* イリュージョン武器イグドラシルの実種 宝箱 人形系 不思議な石片 ヨルムンガンドの花 */ },{}
+18613,head,黒無常帽,4,,10,500,,15:5,,1,2074075135,2,256,,100,771,1,{},{ bonus bAspdAddRate,10; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; if(getequiprefinerycnt() >= 7) { bonus2 bMagicAddRace,Rct_Boss,2; bonus2 bMagicAddRace,Rct_NonBoss,2; bonus bCastrate,-10; } if(getequiprefinerycnt() >= 8) { bonus2 bMagicAddRace,Rct_Boss,3; bonus2 bMagicAddRace,Rct_NonBoss,3; bonus2 bMagicAddEle,Ele_Dark,5; } if(getequiprefinerycnt() >= 9) { bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } if(equippeditem(15157)){ skill "WL_HELLINFERNO",3; bonus bMatk,7*getequiprefinerycnt(); bonus bAspdAddRate,getequiprefinerycnt(); } }
+20593,cos,[衣装] 氷の翼,4,,10,0,,,,0,2074075135,2,8192,,1,71,0,{},{}
+
+100315#召喚の魔法書#
+100315,consum,召喚の魔法書,2,,10,0,,,,,2074075135,2,,,1,,,{},{}
+100315,0,0,1,0,1,1,1,0,10000,0,0,0	//召喚の魔法書
+
+400052#決闘の龍帽子#
+410002#セブン-イレブンヘッドホン#
+410003#セブン-イレブンヘッドホン#
+450143#赤蛇のドレス#
+470048#剛勇無双の貫#
+480053#地魔獣の皮膚#
+490068#リングオブヴィーナス#
+400052,head,決闘の龍帽子,4,,10,500,,2:0,,1,2074075135,2,256,,130,1149,1,{ /* 物理・魔法攻撃時[オース二次捜索]に出現するモンスターに与えるダメージ + 15%受けるダメージ - 15% [ミグエル]に与えるダメージ + 100% */ },{ bonus2 bSubEle,Ele_Fire,10; if(getequiprefinerycnt() >= 7) { } if(getequiprefinerycnt() >= 8) { bonus2 bSubEle,Ele_Fire,15; } if(getequiprefinerycnt() >= 9) { } if(getequiprefinerycnt() >= 10) { bonus bNoKnockback,0; } }
+410002,head,セブン-イレブンヘッドホン,4,,10,200,,7:11,,0,2074075135,2,512,,100,1131,0,{},{ bonus bHPGainValue,150; bonus bSPGainValue,15; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; }
+410003,head,セブン-イレブンヘッドホン,4,,10,200,,7:11,,1,2074075135,2,512,,100,1131,0,{},{ bonus bHPGainValue,150; bonus bSPGainValue,15; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; }
+450143,armor,赤蛇のドレス,4,,10,400,,120:0,,0,2074075135,2,16,,90,,1,{},{ bonus bNoKnockback,0; if(getequiprefinerycnt() >= 5) { bonus2 bAddRace,Rct_Plant,10; bonus2 bAddRace,Rct_Insect,10; bonus2 bMagicAddRace,Rct_Plant,10; bonus2 bMagicAddRace,Rct_Insect,10; bonus2 bAddEle,Ele_Poison,10; bonus2 bAddEle,Ele_Holy,10; bonus2 bMagicAddEle,Ele_Poison,10; bonus2 bMagicAddEle,Ele_Holy,10; } if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Plant,15; bonus2 bAddRace,Rct_Insect,15; bonus2 bMagicAddRace,Rct_Plant,15; bonus2 bMagicAddRace,Rct_Insect,15; bonus2 bAddEle,Ele_Poison,15; bonus2 bAddEle,Ele_Holy,15; bonus2 bMagicAddEle,Ele_Poison,15; bonus2 bMagicAddEle,Ele_Holy,15; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Plant,15; bonus2 bAddRace,Rct_Insect,15; bonus2 bMagicAddRace,Rct_Plant,15; bonus2 bMagicAddRace,Rct_Insect,15; bonus2 bAddEle,Ele_Poison,15; bonus2 bAddEle,Ele_Holy,15; bonus2 bMagicAddEle,Ele_Poison,15; bonus2 bMagicAddEle,Ele_Holy,15; } }
+470048,shoes,剛勇無双の貫,4,,10,400,,18:0,,0,2074075135,2,64,,100,,1,{},{ bonus bSkillDelayRate,-30; bonus bPerfectHitAddRate,20; if(getequiprefinerycnt() >= 7){ bonus bPerfectHitAddRate,20; } if(getequiprefinerycnt() >= 9){ bonus bPerfectHitAddRate,20; } if(equippeditem(19379)){ bonus bAddLongWeaponDamage,25; } }
+480053,robe,地魔獣の皮膚,4,,10,200,,18:5,,1,2074075135,2,4,,100,,1,{},{ bonus2 bAddEle,Ele_Earth,15; bonus2 bMagicAddEle,Ele_Earth,15; bonus bAspdAddRate,getequiprefinerycnt(); bonus2 bAddEle,Ele_Earth,getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Earth,getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bSubEle,Ele_Earth,100; } if(equippeditem(4211)){ bonus bMdef,10; bonus bMaxHPrate,10; bonus2 bSubEle,Ele_Neutral,20; } }
+490068,acc,リングオブヴィーナス,4,,10,500,,2:0,,1,2074075135,2,136,,100,,0,{ /* getequipid()では左右別効果の装備品を実装できない */ },{ if(getequipid(8) == 490068) { bonus bAddLongWeaponDamage,readparam(bDex)/10; bonus2 bResEff,Eff_Stun,300*readparam(bDex)/10; if(readparam(bDex) >= 125) { bonus2 bFixCastrate,-70,0; bonus2 bSubEle,Ele_Fire,5; bonus2 bSubEle,Ele_Water,5; bonus2 bSubEle,Ele_Wind,5; bonus2 bSubEle,Ele_Earth,5; } } if(getequipid(7) == 490068) { bonus2 bAddRace,Rct_Boss,readparam(bAgi)/10; bonus2 bAddRace,Rct_NonBoss,readparam(bAgi)/10; bonus2 bMagicAddRace,Rct_Boss,readparam(bAgi)/10; bonus2 bMagicAddRace,Rct_NonBoss,readparam(bAgi)/10; if(readparam(bAgi) >= 125) { bonus bAddSpeed,25; bonus bSkillDelayRate,-25; } } }
+
+
+
+ミレニアムシールド	389
+リフレッシュ		390
+ジャイアントグロース	391	EFST_GIANTGROWTH
+ストーンハードスキン	392
+バイタリティアクティベーション	393	EFST_VITALITYACTIVATION
+ファイティングスピリット394
+アバンダンス		395
+ラクスアニマ
+ストームブラスト		RK_STORMBLAST
+クラッシュストライク		RK_CRUSHSTRIKE	EFST_CRUSHSTRIKE
