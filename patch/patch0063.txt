@@ -1,0 +1,70 @@
+200024#レンジャーVIPチケットの箱 [転生アーチャー(ハンター)系専用]#
+200025#レンジャーソウルの箱 [転生アーチャー(ハンター)系専用]#
+200024,consum,レンジャーVIPチケットの箱 [転生アーチャー(ハンター)系専用],2,,,0,,,,,2074075135,2,,,1,,,{ getitem 1000236,1; },{}
+200025,consum,レンジャーソウルの箱 [転生アーチャー(ハンター)系専用],2,,,0,,,,,2074075135,2,,,1,,,{ getitem 1000237,1; },{}
+
+300139#封印された月夜花カード#
+300139,card,封印された月夜花カード,6,,10,10,,,,,,,64,,,,,{},{ bonus bSpeedRate,25; bonus bHit,-50; if(equippeditem(22132)){ skill "AL_HEAL",5; if(Baselevel <= 99){ bonus bMatk,3*getequiprefinerycnt(); bonus bMdef,3*getequiprefinerycnt(); } if(Baselevel >= 100){ bonus bMatk,10*getequiprefinerycnt(); bonus bMdef,6*getequiprefinerycnt(); }}if(equippeditem(470047)){ skill "AL_HEAL",10; if(Baselevel <= 99){ bonus bMatk,5*getequiprefinerycnt(); bonus bMdef,5*getequiprefinerycnt(); } if(Baselevel >= 100){ bonus bMatk,15*getequiprefinerycnt(); bonus bMdef,10*getequiprefinerycnt(); }} if(equippeditem(311072)){ bonus bMaxHPRate,20; bonus bAspdAddRate,3; }}
+
+400047#ランナウェー・アクセラレータ#
+400048#パナギアの贈り物#
+410001#ファランクス#
+450142#オークロードの鎧#
+460003#フェザーシールド#
+470047#覚醒火雷大神靴#
+480044#スクロールストール#
+480045#ガーディアンオブソウル#
+490035#ソロモンのペンダント#
+490036#ソロモンのペンダント#
+500009#竜殺しの長剣#
+400047,head,ランナウェー・アクセラレータ,4,,10,700,,20:0,,1,2074075135,2,256,,100,1947,1,{},{ bonus2 bSubRace,Rct_Boss,10; bonus2 bSubRace,Rct_NonBoss,10; bonus2 bMagicSubRace,Rct_Boss,10; bonus2 bMagicSubRace,Rct_NonBoss,10; bonus2 bAddRace,Rct_Boss,getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,getequiprefinerycnt(); bonus2 bHPPenaltyTime,5000,-250; bonus2 bSPPenaltyTime,5000,-30; if(getequiprefinerycnt() >= 7) { bonus2 bIgnoreDefRace,Rct_Boss,25; bonus2 bIgnoreDefRace,Rct_NonBoss,25; bonus2 bIgnoreMdefRace,Rct_Boss,25; bonus2 bIgnoreMdefRace,Rct_NonBoss,25; bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5;} if(getequiprefinerycnt() >= 9) { bonus2 bIgnoreDefRace,Rct_Boss,25; bonus2 bIgnoreDefRace,Rct_NonBoss,25; bonus2 bIgnoreMdefRace,Rct_Boss,25; bonus2 bIgnoreMdefRace,Rct_NonBoss,25; bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5;} }
+400048,head,パナギアの贈り物,4,,10,200,,,,1,2074075135,2,256,,100,1948,1,{},{ bonus bVit,5; bonus bInt,5; callfunc "ItemdbAlmightyHeal",0x7F,10; bonus2 bResEff,Eff_Stun,5000; if(getequiprefinerycnt() >= 7) { bonus bSkillDelayRate,-20; callfunc "ItemdbAlmightyHeal",0x7F,10; } if(getequiprefinerycnt() >= 9) { callfunc "ItemdbAlmightyHeal",0x7F,20; } if(getequiprefinerycnt() >= 10) { bonus bUseSPrate,-20; } if(equippeditem(4805)){ bonus bSkillDelayRate,-10; callfunc "ItemdbAlmightyHeal",0x7F,5; } if(equippeditem(4850)){ bonus bSkillDelayRate,-10; callfunc "ItemdbAlmightyHeal",0x7F,5; } if(equippeditem(4804)){ bonus bUseSPrate,-10; callfunc "ItemdbAlmightyHeal",0x7F,10; } if(equippeditem(4803)){ bonus bSkillDelayRate,-10; callfunc "ItemdbAlmightyHeal",0x7F,20; } }
+410001,head,ファランクス,4,,10,800,,50:3,,0,2074075135,2,512,,100,1949,0,{},{ bonus2 bSubRace,Rct_Boss,1; bonus2 bSubRace,Rct_NonBoss,1; bonus2 bMagicSubRace,Rct_Boss,1; bonus2 bMagicSubRace,Rct_NonBoss,1; bonus2 bHPPenaltyTime,5000,-60; bonus2 bSPPenaltyTime,500,-6; if(readparam(bVit) >= 90) { bonus2 bSubRace,Rct_Boss,1; bonus2 bSubRace,Rct_NonBoss,1; bonus2 bMagicSubRace,Rct_Boss,1; bonus2 bMagicSubRace,Rct_NonBoss,1; bonus2 bHPPenaltyTime,5000,-90; bonus2 bSPPenaltyTime,500,-9; } if(readparam(bVit) >= 125) { bonus2 bSubRace,Rct_Boss,3; bonus2 bSubRace,Rct_NonBoss,3; bonus2 bMagicSubRace,Rct_Boss,3; bonus2 bMagicSubRace,Rct_NonBoss,3; bonus2 bHPPenaltyTime,5000,-150; bonus2 bSPPenaltyTime,500,-15; } }
+450142,armor,オークロードの鎧,4,,10,900,,90:10,,1,2074075135,2,16,,99,,1,{},{ bonus bSkillDelayRate,-10; bonus bShortWeaponDamageReturn,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } if(equippeditem(4135)){ bonus2 bResEff,Eff_Freeze,10000; bonus bInfiniteEndure,0; if(Baselevel <= 99) { bonus2 bAddEle,Ele_Dark,getequiprefinerycnt(); } if(Baselevel >= 100) { bonus2 bAddEle,Ele_Dark,3*getequiprefinerycnt(); } } }
+460003,shield,フェザーシールド,4,,10,400,,150:0,,1,2074075135,2,32,,90,2,1,{},{ bonus bAspdAddRate,4; bonus bSkillDelayRate,-4; if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,4; bonus bSkillDelayRate,-4; } if(getequiprefinerycnt() >= 8) { bonus bBaseAtk,50; bonus bMatk,50; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,4; bonus bSkillDelayRate,-4; } }
+470047,shoes,覚醒火雷大神靴,4,,10,1000,,18:0,,1,2074075135,2,64,,99,,1,{},{ bonus2 bMagicAddRace,Rct_Boss,15; bonus bMatk,5*getequiprefinerycnt(); bonus bCastrate,-2*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Earth,2*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Ghost,2*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Neutral,2*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Undead,2*getequiprefinerycnt(); if(equippeditem(4131)){ skill "AL_HEAL",10; if(Baselevel <= 99) { bonus bInt,3*getequiprefinerycnt(); bonus bMdef,3*getequiprefinerycnt(); } if(Baselevel >= 100) { bonus bInt,10*getequiprefinerycnt(); bonus bMdef,10*getequiprefinerycnt(); } } if(equippeditem(300139)){ skill "AL_HEAL",10; if(Baselevel <= 99) { bonus bMatk,5*getequiprefinerycnt(); bonus bMdef,5*getequiprefinerycnt(); } if(Baselevel >= 100) { bonus bMatk,15*getequiprefinerycnt(); bonus bMdef,10*getequiprefinerycnt(); } } }
+480044,robe,スクロールストール,4,,10,600,,12:0,,1,2074075135,2,4,,100,,1,{ /* 物理・魔法攻撃時 女王フェイスワーム他 与えるダメージ + 30% パワフルアムダライス倒した時、一定確率で[ヘルムスクロールI]をドロップ */ },{}
+480045,robe,ガーディアンオブソウル,4,,10,300,,25:10,,0,2074075135,2,4,,100,,1,{},{ skill "WZ_HEAVENDRIVE",3; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus bBaseAtk,15*(readparam(bStr)+readparam(bLuk))/18; bonus bSkillDelayRate,-1*(readparam(bStr)+readparam(bLuk))/18; bonus2 bSubEle,Ele_Dark,7*(readparam(bStr)+readparam(bLuk))/18; bonus2 bSubEle,Ele_Undead,7*(readparam(bStr)+readparam(bLuk))/18; bonus bAspdAddRate,2*(readparam(bAgi)+readparam(bVit))/18; bonus bMaxHPrate,2*(readparam(bAgi)+readparam(bVit))/18; bonus2 bSubEle,Ele_Fire,7*(readparam(bAgi)+readparam(bVit))/18; bonus2 bSubEle,Ele_Water,7*(readparam(bAgi)+readparam(bVit))/18; bonus bMatk,15*(readparam(bInt)+readparam(bDex))/18; bonus bCastrate,-1*(readparam(bInt)+readparam(bDex))/18; bonus2 bSubEle,Ele_Wind,7**(readparam(bInt)+readparam(bDex))/18; bonus2 bSubEle,Ele_Earth,7**(readparam(bInt)+readparam(bDex))/18; }
+490035,acc,ソロモンのペンダント,4,,10,500,,,,0,2074075135,2,8,,100,,0,{},{ bonus bInt,5; bonus bDex,5; bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; skill "HW_MAGICPOWER",5; bonus4 bAutoActiveSkill,"HW_MAGICPOWER",490035,10000,10000; if(checkactiveitem()) { bonus2 bAddEleMagicDamageRate,Ele_Fire,30; bonus2 bAddEleMagicDamageRate,Ele_Water,30; bonus2 bAddEleMagicDamageRate,Ele_Wind,30; bonus2 bAddEleMagicDamageRate,Ele_Holy,30; } if((getbaseclass(Class) == CLASS_NV) || (getbaseclass(Class) == CLASS_MG) || (getbaseclass(Class) == CLASS_AL) || (getbaseclass(Class) == CLASS_SUM)){ if(equippeditem(29445) || equippeditem(29446) || equippeditem(29447) || equippeditem(29448) || equippeditem(29449)){ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bIgnoreMdefRace,Rct_Boss,70; bonus2 bIgnoreMdefRace,Rct_NonBoss,70; } } }
+490036,acc,ソロモンのペンダント,4,,10,500,,,,1,2074075135,2,8,,100,,0,{},{ bonus bInt,5; bonus bDex,5; bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; skill "HW_MAGICPOWER",5; bonus4 bAutoActiveSkill,"HW_MAGICPOWER",490035,10000,10000; if(checkactiveitem()) { bonus2 bAddEleMagicDamageRate,Ele_Fire,30; bonus2 bAddEleMagicDamageRate,Ele_Water,30; bonus2 bAddEleMagicDamageRate,Ele_Wind,30; bonus2 bAddEleMagicDamageRate,Ele_Holy,30; } if((getbaseclass(Class) == CLASS_NV) || (getbaseclass(Class) == CLASS_MG) || (getbaseclass(Class) == CLASS_AL) || (getbaseclass(Class) == CLASS_SUM)){ if(equippeditem(29445) || equippeditem(29446) || equippeditem(29447) || equippeditem(29448) || equippeditem(29449)){ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bIgnoreMdefRace,Rct_Boss,70; bonus2 bIgnoreMdefRace,Rct_NonBoss,70; } } }
+500009,weapon,竜殺しの長剣,5,,10,1750,200:150,,1,1,8803555,2,2,4,99,2,1,{},{ bonus bAtkEle,Ele_Holy; bonus bAtkRange,3; bonus bStr,10; bonus bInt,10; if(Baselevel <= 99) { bonus2 bAddRace,Rct_Boss,3*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,3*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Holy,2*getequiprefinerycnt(); } if(Baselevel >= 100) { bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Holy,5*getequiprefinerycnt(); } if(equippeditem(4407)){ skill "AB_CLEARANCE",5; if(Baselevel <= 99) { bonus2 bMagicAddEle,Ele_Holy,15; bonus2 bResEff,Eff_Stun,2000; bonus2 bResEff,Eff_Silence,2000; } if(Baselevel >= 100) { bonus2 bMagicAddEle,Ele_Holy,50; bonus2 bResEff,Eff_Stun,5000; bonus2 bResEff,Eff_Silence,5000; } } }
+
+ランダムオプション
+100281#ヘルムスクロールI#
+100282#ウェポンスクロールI#
+100283#メイルスクロールI#
+100284#シューズスクロールI#
+100285#アクセサリースクロールI#
+
+セット効果整理準備
+(5 * 4) / 2 = 10
+19379#剛勇無双の紋帽子#
+450165#剛勇無双の甲胄#
+460052#剛勇無双の籠手#
+470048#剛勇無双の貫#
+480114#剛勇無双の神輿#
+
+19379,Unknown_Item,剛勇無双の紋帽子,4,,,400,,,,1,2074075135,2,256,,100,1759,1,{},{ bonus bAgi,5; bonus bDex,5; bonus bAddLongWeaponDamage,5; bonus bPerfectHitAddRate,10; bonus bHit,getequiprefinerycnt(1)*2; bonus bSkillDelayRate,-1*getequiprefinerycnt(1)*2; if(getequiprefinerycnt(1) >= 7){ bonus bAddLongWeaponDamage,10; bonus bPerfectHitAddRate,20; } if(getequiprefinerycnt(1) >= 7){ bonus bAddLongWeaponDamage,10; bonus bPerfectHitAddRate,20; } }
+
+450165,armor,剛勇無双の甲胄,4,,10,1000,,120:10,,1,2074075135,2,16,,100,,1,{},{ bonus2 bAddRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus bPerfectHitAddRate,5*getequiprefinerycnt(); if(equippeditem(470048)){ bonus bNoSizeFix,0; } if(equippeditem(19379)){ bonus bAllStatus,15; } if(equippeditem(480114)){ bonus bMaxHPrate,20*getequiprefinerycnt(2)/3; bonus bLongAtkDef,5; } }
+
+460052,shield,剛勇無双の籠手,4,,10,400,,60:15,,1,2074075135,2,32,,100,2,1,{},{ bonus bMaxHPRate,3*getequiprefinerycnt(); bonus bMaxSPRate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 6){ bonus bAgi,5; bonus bDex,5; } if(getequiprefinerycnt() >= 8){ bonus bAgi,10; bonus bDex,10; } if(equippeditem(19379)){ bonus2 bSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Boss,20; } if(equippeditem(450165)){ bonus bAddLongWeaponDamage,2*getequiprefinerycnt(2); } if(equippeditem(480114)){ bonus2 bSubEle,Ele_Neutral,10; } if(equippeditem(470048)){ bonus2 bAddRace,Rct_All,4*getequiprefinerycnt(6); } if(equippeditem(29509)){ bonus bAddLongWeaponDamage,15; } }
+
+470048,shoes,剛勇無双の貫,4,,10,400,,18:0,,0,2074075135,2,64,,100,,1,{},{ bonus bSkillDelayRate,-30; bonus bPerfectHitAddRate,20; if(getequiprefinerycnt() >= 7){ bonus bPerfectHitAddRate,20; } if(getequiprefinerycnt() >= 9){ bonus bPerfectHitAddRate,20; } if(equippeditem(19379)){ bonus bAddLongWeaponDamage,25; } }
+
+480114,robe,剛勇無双の神輿,4,,10,600,,60:0,,1,2074075135,2,4,,100,111,1,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddRace,Rct_Player,5; bonus2 bMagicAddRace,Rct_Player,5; bonus bSkillDelayRate,-1*getequiprefinerycnt(); if(getequiprefinerycnt() >= 6){ bonus bAspdAddRate,10; } if(getequiprefinerycnt() >= 8){ skill "AC_CONCENTRATION",10; if(getskilllv("AC_CONCENTRATION")>=10){ bonus bBaseAtk,50; bonus bFlee,50; } } if(equippeditem(19379)){ bonus bAddLongWeaponDamage,25; bonus2 bSPDrainValue,100,2; } if(equippeditem(470048)){ bonus bAllStatus,10*getequiprefinerycnt(6)/3; } if(equippeditem(29509)){ bonus bAtkRate,30; bonus bPerfectHitAddRate,25; } },{ sc_end 3; }
+
+数字の小さい順に組み合わせパターン羅列
+19379#剛勇無双の紋帽子#	450165#剛勇無双の甲胄#
+19379#剛勇無双の紋帽子#	460052#剛勇無双の籠手#
+19379#剛勇無双の紋帽子#	470048#剛勇無双の貫#
+19379#剛勇無双の紋帽子#	480114#剛勇無双の神輿#
+
+450165#剛勇無双の甲胄#	470048#剛勇無双の貫#
+450165#剛勇無双の甲胄#	460052#剛勇無双の籠手#
+450165#剛勇無双の甲胄#	480114#剛勇無双の神輿#
+
+460052#剛勇無双の籠手#	480114#剛勇無双の神輿#
+460052#剛勇無双の籠手#	470048#剛勇無双の貫#
+
+470048#剛勇無双の貫#	480114#剛勇無双の神輿#

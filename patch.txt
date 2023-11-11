@@ -1,3 +1,64 @@
+2023-11-11	patch0063
+400000番台以降で効果実装済みのアイテムをコメントアウト
+
+以下のアイテム修正
+300139#封印された月夜花カード#
+
+以下のアイテム実装
+200024#レンジャーVIPチケットの箱 [転生アーチャー(ハンター)系専用]#
+200025#レンジャーソウルの箱 [転生アーチャー(ハンター)系専用]#
+400047#ランナウェー・アクセラレータ#
+400048#パナギアの贈り物#
+410001#ファランクス#
+450142#オークロードの鎧#
+460003#フェザーシールド#
+470047#覚醒火雷大神靴#
+480044#スクロールストール#
+480045#ガーディアンオブソウル#
+490035#ソロモンのペンダント#
+490036#ソロモンのペンダント#
+500009#竜殺しの長剣#
+
+ランダムオプションアイテムは lapineupgrade_db.txt に追記必要なので後日実装予定
+100281#ヘルムスクロールI#
+100282#ウェポンスクロールI#
+100283#メイルスクロールI#
+100284#シューズスクロールI#
+100285#アクセサリースクロールI#
+
+「剛勇無双の～」セット効果整理準備
+(5 * 4) / 2 = 10通り
+19379#剛勇無双の紋帽子#
+450165#剛勇無双の甲胄#
+460052#剛勇無双の籠手#
+470048#剛勇無双の貫#
+480114#剛勇無双の神輿#
+
+19379,Unknown_Item,剛勇無双の紋帽子,4,,,400,,,,1,2074075135,2,256,,100,1759,1,{},{ bonus bAgi,5; bonus bDex,5; bonus bAddLongWeaponDamage,5; bonus bPerfectHitAddRate,10; bonus bHit,getequiprefinerycnt(1)*2; bonus bSkillDelayRate,-1*getequiprefinerycnt(1)*2; if(getequiprefinerycnt(1) >= 7){ bonus bAddLongWeaponDamage,10; bonus bPerfectHitAddRate,20; } if(getequiprefinerycnt(1) >= 7){ bonus bAddLongWeaponDamage,10; bonus bPerfectHitAddRate,20; } }
+
+450165,armor,剛勇無双の甲胄,4,,10,1000,,120:10,,1,2074075135,2,16,,100,,1,{},{ bonus2 bAddRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus bPerfectHitAddRate,5*getequiprefinerycnt(); if(equippeditem(470048)){ bonus bNoSizeFix,0; } if(equippeditem(19379)){ bonus bAllStatus,15; } if(equippeditem(480114)){ bonus bMaxHPrate,20*getequiprefinerycnt(2)/3; bonus bLongAtkDef,5; } }
+
+460052,shield,剛勇無双の籠手,4,,10,400,,60:15,,1,2074075135,2,32,,100,2,1,{},{ bonus bMaxHPRate,3*getequiprefinerycnt(); bonus bMaxSPRate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 6){ bonus bAgi,5; bonus bDex,5; } if(getequiprefinerycnt() >= 8){ bonus bAgi,10; bonus bDex,10; } if(equippeditem(19379)){ bonus2 bSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Boss,20; } if(equippeditem(450165)){ bonus bAddLongWeaponDamage,2*getequiprefinerycnt(2); } if(equippeditem(480114)){ bonus2 bSubEle,Ele_Neutral,10; } if(equippeditem(470048)){ bonus2 bAddRace,Rct_All,4*getequiprefinerycnt(6); } if(equippeditem(29509)){ bonus bAddLongWeaponDamage,15; } }
+
+470048,shoes,剛勇無双の貫,4,,10,400,,18:0,,0,2074075135,2,64,,100,,1,{},{ bonus bSkillDelayRate,-30; bonus bPerfectHitAddRate,20; if(getequiprefinerycnt() >= 7){ bonus bPerfectHitAddRate,20; } if(getequiprefinerycnt() >= 9){ bonus bPerfectHitAddRate,20; } if(equippeditem(19379)){ bonus bAddLongWeaponDamage,25; } }
+
+480114,robe,剛勇無双の神輿,4,,10,600,,60:0,,1,2074075135,2,4,,100,111,1,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddRace,Rct_Player,5; bonus2 bMagicAddRace,Rct_Player,5; bonus bSkillDelayRate,-1*getequiprefinerycnt(); if(getequiprefinerycnt() >= 6){ bonus bAspdAddRate,10; } if(getequiprefinerycnt() >= 8){ skill "AC_CONCENTRATION",10; if(getskilllv("AC_CONCENTRATION")>=10){ bonus bBaseAtk,50; bonus bFlee,50; } } if(equippeditem(19379)){ bonus bAddLongWeaponDamage,25; bonus2 bSPDrainValue,100,2; } if(equippeditem(470048)){ bonus bAllStatus,10*getequiprefinerycnt(6)/3; } if(equippeditem(29509)){ bonus bAtkRate,30; bonus bPerfectHitAddRate,25; } },{ sc_end 3; }
+
+数字の小さい順に組み合わせパターン羅列
+19379#剛勇無双の紋帽子#	450165#剛勇無双の甲胄#
+19379#剛勇無双の紋帽子#	460052#剛勇無双の籠手#
+19379#剛勇無双の紋帽子#	470048#剛勇無双の貫#
+19379#剛勇無双の紋帽子#	480114#剛勇無双の神輿#
+
+450165#剛勇無双の甲胄#	470048#剛勇無双の貫#
+450165#剛勇無双の甲胄#	460052#剛勇無双の籠手#
+450165#剛勇無双の甲胄#	480114#剛勇無双の神輿#
+
+460052#剛勇無双の籠手#	480114#剛勇無双の神輿#
+460052#剛勇無双の籠手#	470048#剛勇無双の貫#
+
+470048#剛勇無双の貫#	480114#剛勇無双の神輿#
+
 2023-11-11	patch0062
 以下のアイテム実装
 5396#ジャスパーサークレット#
