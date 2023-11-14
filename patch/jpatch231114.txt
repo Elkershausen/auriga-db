@@ -1,0 +1,30 @@
+1001559#夜市券(1K)#
+1001560#夜市券(1M)#
+1001561#夜市券(1G)#
+400556#異端審問官のヴェール#
+450309#セトの恩寵#
+460057#スプンタアールマティ#
+490453#エレメンタルジュエル#
+312799#聖なる防護#
+312303#潜在解放(エレメンタルマスターIII)#
+312034#潜在解放(インクイジターII)#
+400556,head,異端審問官のヴェール,4,,10,500,,10:0,,1,2088832,2,256,,200,,1,{ /* 4次職 */ },{ bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddSkillDamageRate,getskilllv(IQ_MASSIVE_F_BLASTER),Baselevel/10; bonus2 bAddSkillDamageRate,getskilllv("IQ_EXPOSION_BLASTER"),Baselevel/10; }
+450309,armor,セトの恩寵,4,,10,1000,,150:15,,1,2074075135,2,16,,90,,1,{ /* ドラム形プレイヤー */ },{ bonus bAspdAddRate,10; bonus2 bAddRace,Rct_Formless,40; bonus2 bAddRace,Rct_Human,40; bonus2 bMagicAddRace,Rct_Formless,40; bonus2 bMagicAddRace,Rct_Human,40; bonus2 bAddEle,Ele_Neutral,40; bonus2 bAddEle,Ele_Dark,40; bonus2 bMagicAddEle,Ele_Neutral,40; bonus2 bMagicAddEle,Ele_Dark,40; bonus2 bSubEle,Ele_Holy,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 5) { bonus bDef,300; bonus bMdef,30; bonus2 bSubRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; } if(getequiprefinerycnt() >= 7) { bonus bSkillDelayRate,-15; } if(equippeditem(311439)){ bonus2 bFixCastrate,-70,0; } }
+460057,shield,スプンタアールマティ,4,,10,300,,60:0,,0,2074075135,2,32,,100,,1,{},{ bonus2 bSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus bMaxHPrate,3*getequiprefinerycnt(); bonus bMaxSPrate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 5) { bonus2 bSubEle,Ele_Holy,25; if(getskilllv("CR_TRUST") >= 1) { bonus2 bSubEle,Ele_Holy,-25; } } if(getequiprefinerycnt() >= 7) { bonus2 bSubEle,Ele_Neutral,15; } }
+490453,acc,エレメンタルジュエル,4,,10,100,,,,1,2088832,,136,,200,,1,{ /* 4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillCoolDown,"SO_VARETYR_SPEAR",-1000; bonus2 bAddSkillDamageRate,"SO_VARETYR_SPEAR",Baselevel/3; bonus2 bAddSkillDamageRate,"EM_CONFLAGRATION",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_DIAMOND_STORM",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_LIGHTNING_LAND",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_TERRA_DRIVE",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_VENOM_SWAMP",Baselevel/10; }
+312799,ench,聖なる防護,6,,,,,,,,65535,,,,,,,{},{ bonus bDef,300; bonus3 bAutoActiveWeapon,312799,100,1; if(checkactiveitem()) { sc_start SC_ASSUMPTIO,30000,1; } bonus3 bAutoActiveMagic,312799,100,1; if(checkactiveitem()) { sc_start SC_ASSUMPTIO,30000,1; } }
+312303,ench,潜在解放(エレメンタルマスターIII),6,,,,,,,,65535,,,,,,,{ /* 4次職 */ },{ if(equippeditem(29371)){ bonus2 bAddSkillCoolDown,"EM_CONFLAGRATION",-2000; bonus2 bAddSkillCoolDown,"EM_LIGHTNING_LAND",-2000; } }
+312034,ench,潜在解放(インクイジターII),6,,,,,,,,65535,,,,,,,{ /* 4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312034,100,10000; if(checkactiveitem()) { bonus2 bAddSpCost,"IQ_MASSIVE_F_BLASTER",-299; bonus2 bAddSpCost,"IQ_EXPOSION_BLASTER",-169;}} }
+1001559,item,夜市券(1K),3,,,0,,,,,,,,,,,,{},{}
+1001560,item,夜市券(1M),3,,,0,,,,,,,,,,,,{},{}
+1001561,item,夜市券(1G),3,,,0,,,,,,,,,,,,{},{}
+
+item_db2_add.txt
+1001559,0,0,1,0,0,0,0,0,0,0,0,0	//夜市券(1K)
+1001560,0,0,1,0,0,0,0,0,0,0,0,0	//夜市券(1M)
+1001561,0,0,1,0,0,0,0,0,0,0,0,0	//夜市券(1G)
+
+item_cardtype.txt
+312799,ench,聖なる防護,2
+312303,ench,潜在解放(エレメンタルマスターIII),2
+312034,ench,潜在解放(インクイジターII),2
