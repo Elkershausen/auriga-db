@@ -1,0 +1,14 @@
+10509#[2019] 特別チケットの箱#
+100221#飛行船乗りのパイプ#
+100222#巨影の残滓#
+480025#オウルバロンのマント#
+
+10509,consum,[2019] 特別チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem2 1000090,1,1,0,0,0,0,0,0,2592000; },{}
+100221,consum,飛行船乗りのパイプ,2,,10,10,,,,,2074075135,2,,,1,,,{ sc_start SC_MATK,300000,25; sc_start SC_MHIT,300000,20; },{}
+100222,consum,巨影の残滓,2,,10,10,,,,,2074075135,2,,,1,,,{ sc_start SC_MDEF,300000,50; sc_start SC_MFLEE,300000,50; },{}
+480025,robe,オウルバロンのマント,4,,10,100,,5:5,,1,2074075135,2,4,,100,,1,{},{ bonus bInt,2; bonus bAspdAddRate,10; bonus bBaseAtk,6*getequiprefinerycnt(); bonus bMatk,6*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus3 bAutoActiveWeapon,480025,100,30000; if(checkactiveitem()) { bonus bAspdAddRate,10; } bonus3 bAutoActiveMagic,480025,100,30000; if(checkactiveitem()) { bonus bAspdAddRate,10; } } if(getequiprefinerycnt() >= 9) { bonus3 bAutoActiveWeapon,480025,100,30000; if(checkactiveitem()) { bonus bAspdAddRate,10; } bonus3 bAutoActiveMagic,480025,100,30000; if(checkactiveitem()) { bonus bAspdAddRate,10; } } if(getequiprefinerycnt() >= 10) { skill "PR_LEXAETERNA",1; bonus3 bAutoActiveWeapon,480025,100,30000; if(checkactiveitem()) { bonus bAspdAddRate,20; } bonus3 bAutoActiveMagic,480025,100,30000; if(checkactiveitem()) { bonus bAspdAddRate,20; } } if(equippeditem(4250)){ bonus2 bSubSize,Size_Big,5; bonus2 bMagicSubSize,Size_Big,5; if(getequiprefinerycnt() >= 8) { bonus2 bAddSize,Size_Big,25; bonus2 bMagicAddSize,Size_Big,25; } } if(equippeditem(4254)){ bonus2 bSubSize,Size_Medium,5; bonus2 bMagicSubSize,Size_Big,5; if(getequiprefinerycnt() >= 8) { bonus2 bAddSize,Size_Medium,25; bonus2 bMagicAddSize,Size_Medium,25; } } if(equippeditem(4207)){ bonus2 bSubSize,Size_Small,5; bonus2 bMagicSubSize,Size_Small,5; if(getequiprefinerycnt() >= 8) { bonus2 bAddSize,Size_Small,25; bonus2 bMagicAddSize,Size_Small,25; } } }
+
+20508,cos,[衣装] 看板娘,4,,10,0,,,,0,2074075135,2,1024,,1,1446,0,{},{}
+20510,cos,[衣装] ソードウィング,4,,10,0,,,,0,2074075135,2,8192,,1,19,0,{},{}
+20515,cos,[衣装] 魔法陣,4,,10,0,,,,0,2074075135,2,8192,,1,,0,{},{ hateffect HAT_EF_MAGICCIRCLE,TRUE; },{ hateffect HAT_EF_MAGICCIRCLE,FALSE; }
+20596,cos,[衣装] テディベアリュック,4,,10,0,,,,0,2074075135,2,8192,,1,81,0,{},{}
