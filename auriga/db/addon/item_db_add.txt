@@ -1,5 +1,24 @@
  //item_db.txtへオーバーライド
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript}
+//-- OS装備--
+1862,Unknown_Item,バーニングナックル-OS,5,,,400,140:100,,1,0,32768,0,2,4,150,12,1,{},{  bonus2 bAddRace,Rct_Boss,60; bonus2 bAddRace,Rct_NonBoss,60; bonus2 bAddSkillCoolDown,"SR_SKYNETBLOW",-200; bonus2 bAddSkillCoolDown,"SR_SKYNETBLOW",-200; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 10) { bonus bNoSizeFix,0; } if(equippeditem(410014) || equippeditem(410015)) { bonus bBaseAtk,200; bonus bMatk,200; } }
+
+13493,Unknown_Item,キャノンレイピア-OS,5,,,1200,,,1,,0,,2,4,150,4,1,{},{ bonus2 bAddEle,Ele_All,20; bonus2 bMagicAddEle,Ele_All,20; bonus3 bAutoSpell,2211,3,300; bonus3 bAutoSpell,2212,3,300; skill "SA_VOLCANO",5; if(getequiprefinerycnt(4)>=7){ bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=9){ bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=10){ bonus bAspd,3; } }
+
+16088,Unknown_Item,サフィールホール-OS,5,,,1500,,,1,,262144,,2,4,150,8,1,{},{ bonus2 bAddEle,Ele_All,60; bonus2 bAddSkillCoolDown,"GN_CART_TORNADO",-200; if(getequiprefinerycnt(4)>=7){ bonus2 bAddEle,Ele_All,25; } if(getequiprefinerycnt(4)>=9){ bonus2 bAddEle,Ele_All,25; } if(getequiprefinerycnt(4)>=10){ bonus2 bIgnoreDefRace,Rct_NonBoss,100; bonus2 bIgnoreDefRace,Rct_Boss,100; } }
+
+16089,Unknown_Item,ウルティオ-OS,5,,,1500,,,1,,256,,2,4,150,8,1,{},{ bonus2 bAddEle,Ele_All,20; bonus2 bMagicAddEle,Ele_All,20; bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MELEE",BaseLevel*7; bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MAGIC",BaseLevel*7; if(getequiprefinerycnt(4)>=7){ bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=9){ bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=10){ skill "BS_ADRENALINE",5; } }
+
+26151,Unknown_Item,ルティルススティック-OS,5,,,300,,,1,,512,,2,4,150,10,1,{},{ bonus2 bMagicAddEle,Ele_All,20; bonus2 bAddSkillDamageRate,"WL_HELLINFERNO",BaseLevel; if(getequiprefinerycnt(4)>=7){ bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=9){ bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=10){ bonus2 bIgnoreMDefRace,Rct_NonBoss,100; bonus2 bIgnoreMDefRace,Rct_Boss,100; } }
+
+26164,Unknown_Item,エレクトリックフォックス-OS,5,,,400,150:180,,1,,2074075135,2,2,4,150,10,1,{},{ bonus2 bAddEle,Ele_All,20; bonus2 bMagicAddEle,Ele_All,20; bonus3 bAutoSpell,2214,3,300; bonus bBaseAtk,getequiprefinerycnt(4)*10; bonus bMatk,getequiprefinerycnt(4)*10; bonus bAspdAddRate,getequiprefinerycnt(4); if(getequiprefinerycnt(4)>=7){ bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=9){ bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=10){ bonus2 bAddEleMagicDamageRate,Ele_Wind,50; } }
+
+28629,Unknown_Item,サーキットボード-OS,5,,,800,,,1,,65536,,2,4,150,15,1,{},{ bonus2 bMagicAddEle,Ele_All,20; bonus2 bAddSkillDamageRate,"MG_COLDBOLT",BaseLevel; bonus2 bAddSkillDamageRate,"MG_FIREBOLT",BaseLevel; bonus2 bAddSkillDamageRate,"MG_LIGHTNINGBOLT",BaseLevel; bonus2 bAddSkillDamageRate,"WZ_EARTHSPIKE",BaseLevel; if(getequiprefinerycnt(4)>=7){ bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=9){ bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=10){ bonus bDoubleAddRate,50; } }
+
+28755,Unknown_Item,黒色-OS,5,,,600,,,1,,0,,2,4,150,1,1,{},{ bonus2 bAddEle,Ele_All,60; bonus2 bAddSkillCoolDown,"KO_JYUMONJIKIRI",-300; if(getequiprefinerycnt(4)>=7){ bonus2 bAddEle,Ele_All,25; } if(getequiprefinerycnt(4)>=9){ bonus2 bAddEle,Ele_All,25; } if(getequiprefinerycnt(4)>=10){ bonus bNoSizeFix,1; } }
+
+32019,Unknown_Item,ブースターランス-OS,5,,,1800,,,3,,16384,,2,4,150,4,1,{},{ bonus2 bAddEle,Ele_All,60; bonus4 bAutoActiveSkill,2308,32019,1000,3000; if(checkactiveitem(32019)){ bonus bBonusDamage,50; } if(getequiprefinerycnt(4)>=7){ bonus2 bAddEle,Ele_All,25; } if(getequiprefinerycnt(4)>=9){ bonus2 bAddEle,Ele_All,25; } if(getequiprefinerycnt(4)>=10){ bonus2 bSPDrainRate,5,5; } }
+
 //-- 500 --
 526,Royal_Jelly,ローヤルゼリー,0,7000,,150,,,,,2074075135,2,,,,,,{ if(((equippeditem(4132) || (equippeditem(300328)) && equippeditem(19106)))){ percentheal 15,15; } else { itemheal rand(325,405),rand(40,60); } sc_end SC_Poison; sc_end SC_Silence; sc_end SC_Blind; sc_end SC_Confusion; sc_end SC_Curse; sc_end SC_Hallucination; } },{}
 783,item,迷宮調査貢献の証,3,,10,1,,,,,,,,,,,,{},{}
@@ -125,7 +144,7 @@
 7398,consum,春爛漫チケットの箱,2,,10,0,,,,,2074075135,2,,,1,,,{ getitem 7398,1; },{}
 
 //-- 9000 --
-//-- 20231114付で全部網羅 --
+//-- ペットの卵は20231114付で全部網羅 --
 9001,pet,ポリンの卵,4,,10,0,,,,,,,,,,,,{},{}
 9002,pet,ドロップスの卵,4,,10,0,,,,,,,,,,,,{},{}
 9003,pet,ポポリンの卵,4,,10,0,,,,,,,,,,,,{},{}
@@ -881,6 +900,12 @@
 23348,consume,露店代行依頼書,2,,,0,,,,,2074075135,2,,,1,,,{},{}
 23351,consume,買取露店代行依頼書,2,,,0,,,,,2074075135,2,,,1,,,{},{}
 23368,consume,特殊カタログ,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+23776,consume,武器改造装置(Type1),2,,10,10,,,,,2074075135,2,,,1,,,{ openupgrade 23776; },{}
+23777,consume,武器改造装置(Type2),2,,10,10,,,,,2074075135,2,,,1,,,{ openupgrade 23777; },{}
+23778,consume,武器改造装置(Type3),2,,10,10,,,,,2074075135,2,,,1,,,{ openupgrade 23778; },{}
+23779,consume,武器改造装置(Type4),2,,10,10,,,,,2074075135,2,,,1,,,{ openupgrade 23779; },{}
+23780,consume,武器改造装置(Type5),2,,10,10,,,,,2074075135,2,,,1,,,{ openupgrade 23780; },{}
+23781,consume,武器改造装置(Type6),2,,10,10,,,,,2074075135,2,,,1,,,{ openupgrade 23781; },{}
 23981,consume,竜気のエッセンス,2,,,10,,,,,2074075135,2,,,1,,,{},{}
 
 //-- 24000 --
@@ -1438,8 +1463,8 @@
 200010,consum,アークビショップVIPチケットの箱 [転生アコライト(プリースト)系専用],2,,,0,,,,,2074075135,2,,,1,,,{},{}
 200011,consum,アークビショップソウルの箱 [転生アコライト(プリースト)系専用],2,,,0,,,,,2074075135,2,,,1,,,{},{}
 200012,consum,コスたまAnimalsVI,2,,,10,,,,,2074075135,2,,,1,,,{},{}
-200013,consum,イルシオンシリーズ選択交換チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{},{}
-200014,consum,イルシオンチケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+200013,consum,イルシオンシリーズ選択交換チケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 1000203,1; },{}
+200014,consum,イルシオンチケットの箱,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 1000204,1; },{}
 200015,consum,コスたまMoonRabbitII,2,,,10,,,,,2074075135,2,,,1,,,{},{}
 200016,consum,ミンストレルVIPチケットの箱 [転生アーチャー(バード)系専用],2,,,0,,,,,2074075135,2,,,1,,,{ getitem 1000209,1; },{}
 200017,consum,ミンストレルソウルの箱 [転生アーチャー(バード)系専用],2,,,0,,,,,2074075135,2,,,1,,,{ getitem 1000211,1; },{}
