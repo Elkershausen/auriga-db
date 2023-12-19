@@ -3937,37 +3937,37 @@
 420298,cos,[衣装] レンジャーハーフアップ(漆黒),4,,10,0,,,,0,2074075135,2,4096,,1,2476,0,{},{}
 420299,cos,[衣装] レンジャーハーフアップ(白),4,,10,0,,,,0,2074075135,2,4096,,1,2477,0,{},{}
 420300,cos,[衣装] レンジャーハーフアップ(紅),4,,10,0,,,,0,2074075135,2,4096,,1,2478,0,{},{}
-650025,weapon,グレイシア風魔手裏剣,9,,10,1500,150:160,,1,0,536870912,2,34,3,220,22,1,{},{}
-300499,ench,潜在解放(天帝I),6,,,,,,,,,,65535,,,,,{},{}
-312922,ench,潜在解放(ハイパーノービスI),6,,,,,,,,,,65535,,,,,{},{}
-312923,ench,潜在解放(ソウルアセティックI),6,,,,,,,,,,65535,,,,,{},{}
-312924,ench,潜在解放(ナイトウォッチI),6,,,,,,,,,,65535,,,,,{},{}
-312925,ench,潜在解放(蜃気楼&不知火I),6,,,,,,,,,,65535,,,,,{},{}
-312926,ench,潜在解放(スピリットハンドラーI),6,,,,,,,,,,65535,,,,,{},{}
-311209,ench,氷華の魔力(星帝I),6,,,,,,,,,,65535,,,,,{},{}
-311210,ench,氷華の魔力(ソウルリーパーI),6,,,,,,,,,,65535,,,,,{},{}
-311211,ench,氷華の魔力(リベリオンI),6,,,,,,,,,,65535,,,,,{},{}
-311212,ench,氷華の魔力(影狼&朧I),6,,,,,,,,,,65535,,,,,{},{}
-311213,ench,氷華の魔力(サモナーI),6,,,,,,,,,,65535,,,,,{},{}
-311214,ench,氷華の魔力(サモナーII),6,,,,,,,,,,65535,,,,,{},{}
+650025,weapon,グレイシア風魔手裏剣,9,,10,1500,150:160,,1,1,536870912,2,34,3,220,22,1,{ /* 超越段階 */ },{ bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; bonus2 bAddRace,Rct_Boss,6*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,6*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,3*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,3*getequiprefinerycnt(); if(equippeditem(311439)){ bonus2 bIgnoreDefRace,Rct_All,100; bonus2 bIgnoreMdefRace,Rct_All,100; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; } }
+300499,ench,潜在解放(天帝I),6,,,,,,,,,,65535,,,,,{ /* 天帝 固定詠唱時間 + n秒 */ },{ if(equippeditem(29509)){ } }
+312922,ench,潜在解放(ハイパーノービスI),6,,,,,,,,,,65535,,,,,{ /* ハイパーノービス 固定詠唱時間 + n秒 */ },{ if(equippeditem(29371)){} }
+312923,ench,潜在解放(ソウルアセティックI),6,,,,,,,,,,65535,,,,,{ /* ソウルアセティック 固定詠唱時間 + n秒 */ },{ if(equippeditem(29371)){} }
+312924,ench,潜在解放(ナイトウォッチI),6,,,,,,,,,,65535,,,,,{ /* ナイトウォッチ 固定詠唱時間 + n秒 */ },{ if(equippeditem(29509)){} }
+312925,ench,潜在解放(蜃気楼&不知火I),6,,,,,,,,,,65535,,,,,{ /* 蜃気楼 不知火 固定詠唱時間 + n秒 */ },{ if(equippeditem(29509)){} }
+312926,ench,潜在解放(スピリットハンドラーI),6,,,,,,,,,,65535,,,,,{ /* スピリットハンドラー 固定詠唱時間 + n秒 */ },{ if(equippeditem(29509)){} }
+311209,ench,氷華の魔力(星帝I),6,,,,,,,,,,65535,,,,,{ /* 星帝 */ },{ bonus2 bAddSkillDamageRate,"SJ_NEWMOONKICK",5*getequiprefinerycnt(); }
+311210,ench,氷華の魔力(ソウルリーパーI),6,,,,,,,,,,65535,,,,,{ /* ソウルリーパー */ },{ bonus2 bAddSkillDamageRate,"SP_SPA",5*getequiprefinerycnt(); bonus2 bAddSkillDamageRate,"SP_SWHOO",5*getequiprefinerycnt(); }
+311211,ench,氷華の魔力(リベリオンI),6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddSkillDamageRate,"RL_FIREDANCE",5*getequiprefinerycnt(); }
+311212,ench,氷華の魔力(影狼&朧I),6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddSkillDamageRate,"KO_HUUMARANKA",5*getequiprefinerycnt(); }
+311213,ench,氷華の魔力(サモナーI),6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddSkillDamageRate,"SU_SVG_SPIRIT",5*getequiprefinerycnt(); }
+311214,ench,氷華の魔力(サモナーII),6,,,,,,,,,,65535,,,,,{},{ bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",5*getequiprefinerycnt(); }
 1000480,item,フィデス・メイスの図面,3,,10,1,,,,,,,,,,,,{},{}
 1000485,item,フィデス・ダガーの図面,3,,10,1,,,,,,,,,,,,{},{}
 1000689,item,フィデス・ライフルの図面,3,,10,1,,,,,,,,,,,,{},{}
 1000693,item,フィデス・スターダストブックの図面,3,,10,1,,,,,,,,,,,,{},{}
 1000694,item,フィデス・ソウルスティックの図面,3,,10,1,,,,,,,,,,,,{},{}
 1000697,item,フィデス・フォックステイルの図面,3,,10,1,,,,,,,,,,,,{},{}
-810002,weapon,アドゥルテル・フィデス・ライフル,9,,10,850,170:0,,9,1,268435456,2,34,4,200,18,1,{},{}
-810008,weapon,ウィワートゥス・フィデス・ライフル,9,,10,850,170:0,,9,1,268435456,2,34,4,200,18,1,{},{}
-800014,weapon,グレイシアハンドガン,9,,10,350,70:0,,9,1,268435456,2,34,3,220,17,1,{},{}
-590021,weapon,アドゥルテル・フィデス・メイス,5,,10,1500,150:110,,1,1,8388608,2,2,4,200,8,1,{},{}
-590023,weapon,ウィワートゥス・フィデス・メイス,5,,10,1500,150:110,,1,1,8388608,2,2,4,200,8,1,{},{}
-540023,weapon,アドゥルテル・フィデス・スターダストブック,5,,10,800,120:140,,1,1,33554432,2,2,4,200,15,1,{},{}
-540045,weapon,ウィワートゥス・フィデス・スターダストブック,5,,10,800,120:140,,1,1,33554432,2,2,4,200,15,1,{},{}
-550025,weapon,アドゥルテル・フィデス・ソウルスティック,5,,10,300,60:180,,1,1,134217728,2,2,4,200,10,1,{},{}
-550064,weapon,ウィワートゥス・フィデス・ソウルスティック,5,,10,300,60:180,,1,1,134217728,2,2,4,200,10,1,{},{}
-510032,weapon,アドゥルテル・フィデス・ダガー,5,,10,600,120:120,,1,1,536870912,2,2,4,200,1,1,{},{}
-510033,weapon,ウィワートゥス・フィデス・ダガー,5,,10,600,120:120,,1,1,536870912,2,2,4,200,1,1,{},{}
-550028,weapon,アドゥルテル・フィデス・フォックステイル,5,,10,400,150:180,,1,1,1073741824,2,2,4,200,10,1,{},{}
-550066,weapon,ウィワートゥス・フィデス・フォックステイル,5,,10,400,150:180,,1,1,1073741824,2,2,4,200,10,1,{},{}
-500050,weapon,グレイシアベーシックソード,5,,10,1200,150:130,,1,1,8388608,2,2,3,220,2,1,{},{}
-550070,weapon,グレイシアフォックステイル,5,,10,400,150:180,,1,1,1073741824,2,2,3,220,10,1,{},{}
+810002,weapon,アドゥルテル・フィデス・ライフル,15,,10,850,170:0,,9,1,268435456,2,34,4,200,18,1,{},{ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*readparam(bInt)/10; if(readparam(bInt) >= 110){ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",30; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); }
+810008,weapon,ウィワートゥス・フィデス・ライフル,15,,10,850,170:0,,9,1,268435456,2,34,4,200,18,1,{},{ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*readparam(bInt)/10; if(readparam(bInt) >= 110){ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",30; } bonus2 bAddRace,Rct_Boss,13*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,13*getequiprefinerycnt(); if(equippeditem(311072)){ bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",25; bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",25; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; } if(equippeditem(312418)){ bonus bMaxHPrate,15; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; skill "CR_PROVIDENCE",3; } }
+800014,weapon,グレイシアハンドガン,15,,10,350,70:0,,9,1,268435456,2,34,3,220,17,1,{ /* 超越段階 */ },{ bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; bonus2 bAddRace,Rct_Boss,6*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,6*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,3*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,3*getequiprefinerycnt(); if(equippeditem(311439)){ bonus2 bIgnoreDefRace,Rct_All,100; bonus2 bIgnoreMdefRace,Rct_All,100; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; } }
+590021,weapon,アドゥルテル・フィデス・メイス,5,,10,1500,150:110,,1,1,8388608,2,2,4,200,8,1,{},{ bonus2 bMagicAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,5*getequiprefinerycnt(); }
+590023,weapon,ウィワートゥス・フィデス・メイス,5,,10,1500,150:110,,1,1,8388608,2,2,4,200,8,1,{ /* ハイパーノービス */ },{ bonus2 bMagicAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,10*getequiprefinerycnt(); if(equippeditem(311073)){ bonus2 bAddSkillDamageRate,"HN_JUPITEL_THUNDER_STORM",25; bonus2 bAddSkillDamageRate,"HN_HELLS_DRIVE",25; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; skill "CR_PROVIDENCE",3; } }
+540023,weapon,アドゥルテル・フィデス・スターダストブック,5,,10,800,120:140,,1,1,33554432,2,2,4,200,15,1,{},{ bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); }
+540045,weapon,ウィワートゥス・フィデス・スターダストブック,5,,10,800,120:140,,1,1,33554432,2,2,4,200,15,1,{ /* 天帝 */ },{ bonus2 bMagicAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,10*getequiprefinerycnt(); if(equippeditem(311073)){ bonus2 bAddSkillDamageRate,"SKE_TWINKLING_GALAXY",25; bonus2 bAddSkillDamageRate,"SKE_STAR_BURST",25; bonus2 bAddSkillDamageRate,"SKE_STAR_CANNON",25; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; } if(equippeditem(312418)){ bonus bMaxHPrate,15; bonus2 bSubRace,Rct_Boss,10; bonus2 bMagicSubRace,Rct_Boss,10; skill "CR_PROVIDENCE",3; } }
+550025,weapon,アドゥルテル・フィデス・ソウルスティック,5,,10,300,60:180,,1,1,134217728,2,2,4,200,10,1,{},{ bonus2 bMagicAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,5*getequiprefinerycnt(); }
+550064,weapon,ウィワートゥス・フィデス・ソウルスティック,5,,10,300,60:180,,1,1,134217728,2,2,4,200,10,1,{ /* ソウルアセティック */ },{ bonus2 bMagicAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,10*getequiprefinerycnt(); if(equippeditem(311073)){ bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLUE_DRAGON",25; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_WHITE_TIGER",25; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_RED_PHOENIX",25; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLACK_TORTOISE",25; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",25; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",25; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; } if(equippeditem(312418)){ bonus bMaxHPrate,15; bonus2 bSubRace,Rct_Boss,10; bonus2 bMagicSubRace,Rct_Boss,10; skill "CR_PROVIDENCE",3; } }
+510032,weapon,アドゥルテル・フィデス・ダガー,5,,10,600,120:120,,1,1,536870912,2,2,4,200,1,1,{},{ bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); }
+510033,weapon,ウィワートゥス・フィデス・ダガー,5,,10,600,120:120,,1,1,536870912,2,2,4,200,1,1,{ /* 蜃気楼 不知火 */ },{ bonus2 bAddRace,Rct_Boss,13*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,13*getequiprefinerycnt(); if(equippeditem(311073)){ bonus2 bAddSkillDamageRate,"SS_KAGEGARI",25; bonus2 bAddSkillDamageRate,"SS_KAGENOMAI",25; bonus2 bAddSkillDamageRate,"SS_KAGEGISSEN",25; bonus2 bAddSkillDamageRate,"SS_KAGEAKUMU",25; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; } if(equippeditem(312418)){ bonus bMaxHPrate,15; bonus2 bSubRace,Rct_Boss,10; bonus2 bMagicSubRace,Rct_Boss,10; skill "CR_PROVIDENCE",3; } }
+550028,weapon,アドゥルテル・フィデス・フォックステイル,5,,10,400,150:180,,1,1,1073741824,2,2,4,200,10,1,{},{ bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); }
+550066,weapon,ウィワートゥス・フィデス・フォックステイル,5,,10,400,150:180,,1,1,1073741824,2,2,4,200,10,1,{ /* スピリットハンドラー */ },{ bonus2 bAddRace,Rct_Boss,13*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,13*getequiprefinerycnt(); if(equippeditem(311073)){ bonus2 bAddSkillDamageRate,"SH_CHUL_HO_SONIC_CLAW",25; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",25; bonus2 bAddSkillDamageRate,"SH_HOGOGONG_STRIKE",25; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; } if(equippeditem(312418)){ bonus bMaxHPrate,15; bonus bCritical,50; skill "CR_PROVIDENCE",3; } }
+500050,weapon,グレイシアベーシックソード,5,,10,1200,150:130,,1,1,8388608,2,2,3,220,2,1,{ /* 超越段階 */ },{ bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus2 bAddRace,Rct_Boss,6*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,6*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,3*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,3*getequiprefinerycnt(); if(equippeditem(311439)){ bonus2 bIgnoreDefRace,Rct_All,100; bonus2 bIgnoreMdefRace,Rct_All,100; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; } }
+550070,weapon,グレイシアフォックステイル,5,,10,400,150:180,,1,1,1073741824,2,2,3,220,10,1,{ /* 超越段階 */ },{ bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus2 bAddRace,Rct_Boss,6*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,6*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,3*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,3*getequiprefinerycnt(); if(equippeditem(311439)){ bonus2 bIgnoreDefRace,Rct_All,100; bonus2 bIgnoreMdefRace,Rct_All,100; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; } }
