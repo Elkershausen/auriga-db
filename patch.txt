@@ -1,3 +1,8 @@
+2023-12-21	patch0076
+2023-12-19パッチ分実装
+
+claasnum_db.txt 更新
+
 2023-12-19	patch0075
 classnum_db.txt 更新
 

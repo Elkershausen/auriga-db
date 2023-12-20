@@ -1,0 +1,159 @@
+add
+400581#情熱あふれるラビットリボン#
+400582#ウォルフライエ#
+420302#りんりんニャンカーベル#
+490471#リングオブアルテミス#
+312916#スキル石(ブレッシングLv10)#
+312917#潜在解放(インペリアルガードIII)#
+312918#潜在解放(ウィンドホークIV)#
+312919#潜在解放(トルバドゥール&トルヴェールI)#
+15282#ウサギ柄のシャツ#
+21063#ソリッドクレイモア#
+610035#ウィキッドカタール#
+620016#ウィキッドアックス#
+640031#ソリッドスタッフ#
+650019#プレジション風魔手裏剣#
+650020#スクラップ風魔手裏剣#
+700050#プレジションボウ#
+300292#エクストラジョーカーカード#
+300293#エルジェーベトカード#
+300294#ジェニファーカード#
+300295#ジェネラルオークカード#
+300296#ジクラウスカード#
+300297#ゴブリンキングカード#
+25505#ワイルドジョーカー#
+25506#かわいいホウキ#
+25507#華麗なサンゴ#
+25509#光る丸形の皮#
+1000680#鉛の塊#
+1000681#時計の歯車#
+800009#プレジションハンドガン#
+800010#スクラップハンドガン#
+810005#プレジションライフル#
+810006#スクラップライフル#
+820004#プレジションショットガン#
+820005#スクラップショットガン#
+830008#プレジションガトリング#
+830009#スクラップガトリング#
+840004#プレジショングレネード#
+840005#スクラップグレネード#
+101099#ゼンマイ制御機#
+26140#魔女のホウキ#
+500044#ソリッドエッジ#
+500045#ウィキッドブレード#
+510051#ウィキッドダガー#
+510054#フォーティファイドエッジ#
+530023#ソリッドスピアー#
+540041#ソリッドマニュアル#
+540042#ウィキッドブック#
+540043#リラプスブック#
+550054#ソリッドワンド#
+550055#ソリッドロッド#
+550056#ウィキッドフォックステイル#
+550057#フォーティファイドロッド#
+550058#リラプスフォックステイル#
+550059#フォーティファイドワンド#
+560030#プレジションフィスト#
+570028#プレジションリュート#
+580028#プレジションホイップ#
+590036#ウィキッドクロス#
+312960#潜在解放(ハイパーノービスII)#
+
+400581,head,情熱あふれるラビットリボン,4,,10,500,,10:0,,1,2074075008,2,256,,200,2484,1,{ /* 4次職 */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"TR_RHYTHMSHOOTING",Baselevel/10; bonus2 bAddSkillDamageRate,"TR_ROSEBLOSSOM",Baselevel/10; }
+400582,head,ウォルフライエ,4,,10,500,,10:0,,1,2074075008,2,256,,200,2487,1,{ /* 4次職 */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"IG_OVERSLASH",Baselevel/10; bonus2 bAddSkillDamageRate,"IG_GRAND_JUDGEMENT",Baselevel/10; bonus2 bAddSkillDamageRate,"IG_SHIELD_SHOOTING",Baselevel/10; }
+420302,head,りんりんニャンカーベル,4,,10,100,,0:0,,0,134217728,2,1,,100,2483,0,{ /* [マグロシールド]の固定詠唱時間 - 1秒 4次職 */ },{ callfunc "ItemdbAlmightyHeal",0x7F,10; if(getskilllv("SU_SPIRITOFSEA") >= 1) {} bonus bMaxHPrate,3*getskilllv("SU_PURRING"); }
+490471,acc,リングオブアルテミス,4,,10,100,,0:0,,1,2074075008,2,136,,200,,0,{ /* 4次職 */ },{ bonus bCritical,50; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddFixCastRate,"RA_AIMEDBOLT",-100; bonus2 bAddSkillDamageRate,"WH_CRESCIVE_BOLT",Baselevel/10; bonus2 bAddSkillDamageRate,"WH_GALESTORM",Baselevel/10; }
+312916,ench,スキル石(ブレッシングLv10),6,,,,,,,,,,65535,,,,,{},{ skill "AL_BLESSING",10; }
+312917,ench,潜在解放(インペリアルガードIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 */ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"IG_OVERSLASH",-200; } }
+312918,ench,潜在解放(ウィンドホークIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 */ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"WH_CRESCIVE_BOLT",-100; bonus2 bAddSkillCoolDown,"WH_GALESTORM",-100;} }
+312919,ench,潜在解放(トルバドゥール&トルヴェールI),6,,,,,,,,,,65535,,,,,{ /* 4次職 */ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"TR_RHYTHMSHOOTING",-200; bonus2 bAddSkillCoolDown,"TR_ROSEBLOSSOM",-200;} }
+15282,armor,ウサギ柄のシャツ,4,,10,400,,80:0,,1,134316800,2,16,,220,,1,{},{ bonus bMaxSPrate,25; bonus2 bSubRace,Rct_Player,7;bonus2 bMagicSubRace,Rct_Player,7; if(getequiprefinerycnt() >= 6) { bonus2 bAddEleMagicDamageRate,Ele_Fire,10; bonus2 bAddEleMagicDamageRate,Ele_Dark,10; bonus2 bAddEleMagicDamageRate,Ele_Neutral,10;} if(getequiprefinerycnt() >= 8) { bonus2 bAddEleMagicDamageRate,Ele_Fire,10; bonus2 bAddEleMagicDamageRate,Ele_Dark,10; bonus2 bAddEleMagicDamageRate,Ele_Neutral,10;} }
+21063,weapon,ソリッドクレイモア,9,,10,9000,280:230,,1,3,128,2,34,4,220,3,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"DK_HACKANDSLASHER",10; bonus2 bAddSkillDamageRate,"DK_MADNESS_CRUSHER",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"DK_HACKANDSLASHER",15; bonus2 bAddSkillDamageRate,"DK_MADNESS_CRUSHER",15; } if(getequiprefinerycnt() >= 10) {} }
+610035,weapon,ウィキッドカタール,9,,10,2800,150:250,,1,3,4096,2,34,4,220,16,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SHC_IMPACT_CRATER",10; bonus2 bAddSkillDamageRate,"SHC_SAVAGE_IMPACT",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SHC_IMPACT_CRATER",15; bonus2 bAddSkillDamageRate,"SHC_SAVAGE_IMPACT",15; } if(getequiprefinerycnt() >= 10) { } }
+620016,weapon,ウィキッドアックス,9,,10,4000,320:200,,1,3,1024,2,34,4,220,7,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"MT_AXE_STOMP",10; bonus2 bAddSkillDamageRate,"MT_RUSH_QUAKE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"MT_AXE_STOMP",15; bonus2 bAddSkillDamageRate,"MT_RUSH_QUAKE",15; } if(getequiprefinerycnt() >= 10) { } }
+640031,weapon,ソリッドスタッフ,9,,10,2400,120:270,,1,3,512,2,34,4,220,23,1,{ /* 4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"AG_CRIMSON_ARROW",10; bonus2 bAddSkillDamageRate,"AG_FROZEN_SLASH",10; bonus2 bAddSkillDamageRate,"AG_STORM_CANNON",10; bonus2 bAddSkillDamageRate,"AG_ROCK_DOWN",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"AG_CRIMSON_ARROW",15; bonus2 bAddSkillDamageRate,"AG_FROZEN_SLASH",15; bonus2 bAddSkillDamageRate,"AG_STORM_CANNON",15; bonus2 bAddSkillDamageRate,"AG_ROCK_DOWN",15; } if(getequiprefinerycnt() >= 10) { } }
+650019,weapon,プレジション風魔手裏剣,9,,10,1500,150:160,,1,3,536870912,2,34,4,220,22,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SS_FUUMASHOUAKU",10; bonus2 bAddSkillDamageRate,"SS_FUUMAKOUCHIKU",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SS_FUUMASHOUAKU",15; bonus2 bAddSkillDamageRate,"SS_FUUMAKOUCHIKU",15; } if(getequiprefinerycnt() >= 10) { } }
+650020,weapon,スクラップ風魔手裏剣,9,,10,1500,150:160,,1,2,536870912,2,34,4,200,22,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SS_FUUMASHOUAKU",10; bonus2 bAddSkillDamageRate,"SS_FUUMAKOUCHIKU",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SS_FUUMASHOUAKU",15; bonus2 bAddSkillDamageRate,"SS_FUUMAKOUCHIKU",15; } if(getequiprefinerycnt() >= 10) { } }
+700050,weapon,プレジションボウ,9,,10,900,160:170,,5,3,2048,2,34,4,220,11,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"WH_HAWKBOOMERANG",10; bonus2 bAddSkillDamageRate,"WH_HAWKRUSH",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"WH_HAWKBOOMERANG",15; bonus2 bAddSkillDamageRate,"WH_HAWKRUSH",15; } if(getequiprefinerycnt() >= 10) { } }
+300292,card,エクストラジョーカーカード,6,,10,10,,,,,,,4,,,,,{},{ bonus bAddLongWeaponDamage,5; if(equippeditem(1751)){ bonus2 bSubEle,Ele_Holy,50;} }
+300293,card,エルジェーベトカード,6,,10,10,,,,,,,2,,,,,{},{ bonus3 bAutoSpell,"WL_HELLINFERNO",3,100; }
+300294,card,ジェニファーカード,6,,10,10,,,,,,,136,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Poison,10; }
+300295,card,ジェネラルオークカード,6,,10,10,,,,,,,2,,,,,{ /* 物理・魔法攻撃時 [アルデバラン時計塔地下未知の空間]出現するモンスターに与えるダメージ + 30% */ },{}
+300296,card,ジクラウスカード,6,,10,10,,,,,,,16,,,,,{},{ bonus2 bAddRace,Rct_Brute,1; if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Brute,10; } }
+300297,card,ゴブリンキングカード,6,,10,10,,,,,,,16,,,,,{},{ bonus bAddCriticalDamage,2*readparam(bLuk)/10; if(readparam(bLuk) >= 130) { bonus bAddCriticalDamage,20;} if(equippeditem(311075)){ bonus bMaxHPrate,50; skill "LK_HEADCRUSH",5;} }
+25505,item,ワイルドジョーカー,3,,10,10,,,,,,,,,,,,{},{}
+25506,item,かわいいホウキ,3,,10,10,,,,,,,,,,,,{},{}
+25507,item,華麗なサンゴ,3,,10,10,,,,,,,,,,,,{},{}
+25509,item,光る丸形の皮,3,,10,10,,,,,,,,,,,,{},{}
+1000680,item,鉛の塊,3,,10,10,,,,,,,,,,,,{},{}
+1000681,item,時計の歯車,3,,10,1,,,,,,,,,,,,{},{}
+800009,weapon,プレジションハンドガン,15,,10,350,70:0,,5,3,268435456,2,34,4,220,17,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",10; bonus2 bAddSkillDamageRate,"NW_MAGAZINE_FOR_ONE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",15; bonus2 bAddSkillDamageRate,"NW_MAGAZINE_FOR_ONE",15; } if(getequiprefinerycnt() >= 10) { } }
+800010,weapon,スクラップハンドガン,15,,10,350,70:0,,5,2,268435456,2,34,4,200,17,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",10; bonus2 bAddSkillDamageRate,"NW_MAGAZINE_FOR_ONE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",15; bonus2 bAddSkillDamageRate,"NW_MAGAZINE_FOR_ONE",15; } if(getequiprefinerycnt() >= 10) { } }
+810005,weapon,プレジションライフル,15,,10,850,170:0,,5,3,268435456,2,34,4,220,18,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*readparam(bInt)/10; if(readparam(bInt) >= 110) { bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",30; } if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",10; bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",15; bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",15; } if(getequiprefinerycnt() >= 10) { } }
+810006,weapon,スクラップライフル,15,,10,850,170:0,,5,2,268435456,2,34,4,200,18,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*readparam(bInt)/10; if(readparam(bInt) >= 110) { bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",30; } if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",10; bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",15; bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",15; } if(getequiprefinerycnt() >= 10) { } }
+820004,weapon,プレジションショットガン,15,,10,3000,180:0,,5,3,268435456,2,34,4,220,20,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",7*readparam(bStr)/10; if(readparam(bStr) >= 110) { bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",30; } if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NW_THE_VIGILANTE_AT_NIGHT",10; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NW_THE_VIGILANTE_AT_NIGHT",15; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",15; } if(getequiprefinerycnt() >= 10) { } }
+820005,weapon,スクラップショットガン,15,,10,3000,180:0,,5,2,268435456,2,34,4,200,20,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",7*readparam(bStr)/10; if(readparam(bStr) >= 110) { bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",30; } if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NW_THE_VIGILANTE_AT_NIGHT",10; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NW_THE_VIGILANTE_AT_NIGHT",15; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",15; } if(getequiprefinerycnt() >= 10) { } }
+830008,weapon,プレジションガトリング,15,,10,2500,120:0,,5,3,268435456,2,34,4,220,19,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bAddSkillDamageRate,"RL_R_TRIP",7*readparam(bAgi)/10; if(readparam(bAgi) >= 110) { bonus2 bAddSkillDamageRate,"RL_R_TRIP",30; } if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NW_THE_VIGILANTE_AT_NIGHT",10; bonus2 bAddSkillDamageRate,"NW_MAGAZINE_FOR_ONE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NW_THE_VIGILANTE_AT_NIGHT",15; bonus2 bAddSkillDamageRate,"NW_MAGAZINE_FOR_ONE",15; } if(getequiprefinerycnt() >= 10) { } }
+830009,weapon,スクラップガトリング,15,,10,2500,120:0,,5,2,268435456,2,34,4,200,19,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bAddSkillDamageRate,"RL_R_TRIP",7*readparam(bAgi)/10; if(readparam(bAgi) >= 110) { bonus2 bAddSkillDamageRate,"RL_R_TRIP",30; } if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NW_THE_VIGILANTE_AT_NIGHT",10; bonus2 bAddSkillDamageRate,"NW_MAGAZINE_FOR_ONE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NW_THE_VIGILANTE_AT_NIGHT",15; bonus2 bAddSkillDamageRate,"NW_MAGAZINE_FOR_ONE",15; } if(getequiprefinerycnt() >= 10) { } }
+840004,weapon,プレジショングレネード,15,,10,1400,210:0,,5,3,268435456,2,34,4,220,21,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bAddSkillDamageRate,"RL_D_TAIL",7*readparam(bLuk)/10; if(readparam(bLuk) >= 110) { bonus2 bAddSkillDamageRate,"RL_D_TAIL",30; } if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",10; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",15; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",15; } if(getequiprefinerycnt() >= 10) { } }
+840005,weapon,スクラップグレネード,15,,10,1400,210:0,,5,2,268435456,2,34,4,200,21,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bAddSkillDamageRate,"RL_D_TAIL",7*readparam(bLuk)/10; if(readparam(bLuk) >= 110) { bonus2 bAddSkillDamageRate,"RL_D_TAIL",30; } if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",10; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",15; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",15; } if(getequiprefinerycnt() >= 10) { } }
+101099,item,ゼンマイ制御機,2,,10,1,,,,,2074075135,2,,,1,,,{ openupgrade 101099; },{}
+26140,weapon,魔女のホウキ,5,,10,300,60:180,,1,1,142705408,2,2,4,220,10,1,{ /* 4次職 */ },{ bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus2 bAddCastRate,"WZ_METEOR",-100; bonus2 bAddCastRate,"HN_METEOR_STORM_BUSTER",-100; bonus2 bMagicAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 6) { bonus2 bAddSkillDamageRate,"WZ_METEOR",10; bonus2 bAddSkillDamageRate,"HN_METEOR_STORM_BUSTER",10; } if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"WZ_METEOR",15; bonus2 bAddSkillDamageRate,"HN_METEOR_STORM_BUSTER",15; } }
+500044,weapon,ソリッドエッジ,5,,10,600,120:120,,1,3,8388608,2,2,4,220,1,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"HN_DOUBLEBOWLINGBASH",10; bonus2 bAddSkillDamageRate,"HN_MEGA_SONIC_BLOW",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"HN_DOUBLEBOWLINGBASH",15; bonus2 bAddSkillDamageRate,"HN_MEGA_SONIC_BLOW",15; } if(getequiprefinerycnt() >= 10) { } }
+500045,weapon,ウィキッドブレード,5,,10,1200,150:130,,1,3,262144,2,2,4,220,2,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_WATER",10; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_GROUND",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_WATER",15; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_GROUND",15; } if(getequiprefinerycnt() >= 10) { } }
+510051,weapon,ウィキッドダガー,5,,10,600,120:120,,1,3,131072,2,2,4,220,1,1,{ /* 4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"ABC_ABYSS_SQUARE",10; bonus2 bAddSkillDamageRate,"ABC_ABYSS_STRIKE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"ABC_ABYSS_SQUARE",15; bonus2 bAddSkillDamageRate,"ABC_ABYSS_STRIKE",15; } if(getequiprefinerycnt() >= 10) { } }
+510054,weapon,フォーティファイドエッジ,5,,10,600,120:120,,1,2,8388608,2,2,4,200,1,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"HN_DOUBLEBOWLINGBASH",10; bonus2 bAddSkillDamageRate,"HN_MEGA_SONIC_BLOW",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"HN_DOUBLEBOWLINGBASH",15; bonus2 bAddSkillDamageRate,"HN_MEGA_SONIC_BLOW",15; } if(getequiprefinerycnt() >= 10) { } }
+530023,weapon,ソリッドスピアー,5,,10,1800,150:110,,3,3,16384,2,2,4,220,4,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"IG_OVERSLASH",10; bonus2 bAddSkillDamageRate,"IG_GRAND_JUDGEMENT",10; bonus2 bAddSkillDamageRate,"IG_SHIELD_SHOOTING",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"IG_OVERSLASH",15; bonus2 bAddSkillDamageRate,"IG_GRAND_JUDGEMENT",15; bonus2 bAddSkillDamageRate,"IG_SHIELD_SHOOTING",15; } if(getequiprefinerycnt() >= 10) { } }
+540041,weapon,ソリッドマニュアル,5,,10,800,120:140,,1,3,65536,2,2,4,220,15,1,{ /* 4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"EM_CONFLAGRATION",10; bonus2 bAddSkillDamageRate,"EM_DIAMOND_STORM",10; bonus2 bAddSkillDamageRate,"EM_LIGHTNING_LAND",10; bonus2 bAddSkillDamageRate,"EM_TERRA_DRIVE",10; bonus2 bAddSkillDamageRate,"EM_VENOM_SWAMP",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"EM_CONFLAGRATION",15; bonus2 bAddSkillDamageRate,"EM_DIAMOND_STORM",15; bonus2 bAddSkillDamageRate,"EM_LIGHTNING_LAND",15; bonus2 bAddSkillDamageRate,"EM_TERRA_DRIVE",15; bonus2 bAddSkillDamageRate,"EM_VENOM_SWAMP",15; } if(getequiprefinerycnt() >= 10) { } }
+540042,weapon,ウィキッドブック,5,,10,800,120:140,,1,3,33554432,2,2,4,220,15,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SKE_TWINKLING_GALAXY",10; bonus2 bAddSkillDamageRate,"SKE_STAR_BURST",10; bonus2 bAddSkillDamageRate,"SKE_STAR_CANNON",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SKE_TWINKLING_GALAXY",15; bonus2 bAddSkillDamageRate,"SKE_STAR_BURST",15; bonus2 bAddSkillDamageRate,"SKE_STAR_CANNON",15; } if(getequiprefinerycnt() >= 10) { } }
+540043,weapon,リラプスブック,5,,10,800,120:140,,1,2,33554432,2,2,4,200,15,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SKE_TWINKLING_GALAXY",10; bonus2 bAddSkillDamageRate,"SKE_STAR_BURST",10; bonus2 bAddSkillDamageRate,"SKE_STAR_CANNON",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SKE_TWINKLING_GALAXY",15; bonus2 bAddSkillDamageRate,"SKE_STAR_BURST",15; bonus2 bAddSkillDamageRate,"SKE_STAR_CANNON",15; } if(getequiprefinerycnt() >= 10) { } }
+550054,weapon,ソリッドワンド,5,,10,300,60:180,,1,3,134217728,2,2,4,220,10,1,{ /* 4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLUE_DRAGON",10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_WHITE_TIGER",10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_RED_PHOENIX",10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLACK_TORTOISE",10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",10; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLUE_DRAGON",15; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_WHITE_TIGER",15; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_RED_PHOENIX",15; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLACK_TORTOISE",15; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",15; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",15; } if(getequiprefinerycnt() >= 10) { } }
+550055,weapon,ソリッドロッド,5,,10,300,60:180,,1,3,8388608,2,2,4,220,10,1,{ /* 4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"HN_JUPITEL_THUNDER_STORM",10; bonus2 bAddSkillDamageRate,"HN_HELLS_DRIVE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"HN_JUPITEL_THUNDER_STORM",15; bonus2 bAddSkillDamageRate,"HN_HELLS_DRIVE",15; } if(getequiprefinerycnt() >= 10) { } }
+550056,weapon,ウィキッドフォックステイル,5,,10,400,150:180,,1,3,1073741824,2,2,4,220,10,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SH_CHUL_HO_SONIC_CLAW",10; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",10; bonus2 bAddSkillDamageRate,"SH_HOGOGONG_STRIKE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SH_CHUL_HO_SONIC_CLAW",15; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",15; bonus2 bAddSkillDamageRate,"SH_HOGOGONG_STRIKE",15; } if(getequiprefinerycnt() >= 10) { } }
+550057,weapon,フォーティファイドロッド,5,,10,300,60:180,,1,2,8388608,2,2,4,200,10,1,{ /* 4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"HN_JUPITEL_THUNDER_STORM",10; bonus2 bAddSkillDamageRate,"HN_HELLS_DRIVE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"HN_JUPITEL_THUNDER_STORM",15; bonus2 bAddSkillDamageRate,"HN_HELLS_DRIVE",15; } if(getequiprefinerycnt() >= 10) { } }
+550058,weapon,リラプスフォックステイル,5,,10,400,150:180,,1,2,1073741824,2,2,4,200,10,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SH_CHUL_HO_SONIC_CLAW",10; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",10; bonus2 bAddSkillDamageRate,"SH_HOGOGONG_STRIKE",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SH_CHUL_HO_SONIC_CLAW",15; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",15; bonus2 bAddSkillDamageRate,"SH_HOGOGONG_STRIKE",15; } if(getequiprefinerycnt() >= 10) { } }
+550059,weapon,フォーティファイドワンド,5,,10,300,60:180,,1,2,134217728,2,2,4,200,10,1,{ /* 4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLUE_DRAGON",10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_WHITE_TIGER",10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_RED_PHOENIX",10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLACK_TORTOISE",10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",10; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLUE_DRAGON",15; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_WHITE_TIGER",15; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_RED_PHOENIX",15; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLACK_TORTOISE",15; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",15; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",15; } if(getequiprefinerycnt() >= 10) { } }
+560030,weapon,プレジションフィスト,5,,10,400,140:100,,1,3,32768,2,2,4,220,12,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"IQ_SECOND_JUDGEMENT",10; bonus2 bAddSkillDamageRate,"IQ_THIRD_CONSECRATION",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"IQ_SECOND_JUDGEMENT",15; bonus2 bAddSkillDamageRate,"IQ_THIRD_CONSECRATION",15; } if(getequiprefinerycnt() >= 10) { } }
+570028,weapon,プレジションリュート,5,,10,250,180:120,,1,3,524288,2,2,4,220,13,1,{ /* 4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"TR_SOUNDBLEND",10; bonus2 bAddSkillDamageRate,"TR_METALIC_FURY",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"TR_SOUNDBLEND",15; bonus2 bAddSkillDamageRate,"TR_METALIC_FURY",15; } if(getequiprefinerycnt() >= 10) { } }
+580028,weapon,プレジションホイップ,5,,10,250,180:120,,1,3,1048576,2,2,3,220,14,1,{ /* 4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"TR_SOUNDBLEND",10; bonus2 bAddSkillDamageRate,"TR_METALIC_FURY",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"TR_SOUNDBLEND",15; bonus2 bAddSkillDamageRate,"TR_METALIC_FURY",15; } if(getequiprefinerycnt() >= 10) { } }
+590036,weapon,ウィキッドクロス,5,,10,1500,150:110,,1,3,256,2,2,4,220,8,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"CD_PETITIO",10; bonus2 bAddSkillDamageRate,"CD_EFFLIGO",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"CD_PETITIO",15; bonus2 bAddSkillDamageRate,"CD_EFFLIGO",15; } if(getequiprefinerycnt() >= 10) { } }
+312960,ench,潜在解放(ハイパーノービスII),6,,,,,,,,,,65535,,,,,{ /* 固定詠唱時間 - 1.5秒 */ },{ if(equippeditem(29371)){ } }
+
+classnum_db.txt
+//-- 231219 -
+21063#3#
+610035#16#
+620016#7#
+640031#23#
+650019#22#
+650020#22#
+700050#11#
+800009#17#
+800010#17#
+810005#18#
+810006#18#
+820004#20#
+820005#20#
+830008#19#
+830009#19#
+840004#21#
+840005#21#
+26140#10#
+500044#1#
+500045#2#
+510051#1#
+510054#1#
+530023#4#
+540041#15#
+540042#15#
+540043#15#
+550054#10#
+550055#10#
+550056#100#
+550057#10#
+550058#100#
+550059#10#
+560030#12#
+570028#13#
+580028#14#
+590036#8#
