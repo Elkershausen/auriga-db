@@ -1,0 +1,2 @@
+fix
+420302,head,りんりんニャンカーベル,4,,10,100,,0:0,,0,1073741824,2,1,,100,2483,0,{ /* [マグロシールド]の固定詠唱時間 - 1秒 4次職 */ },{ callfunc "ItemdbAlmightyHeal",0x7F,10; if(getskilllv("SU_SPIRITOFSEA") >= 1) {} bonus bMaxHPrate,3*getskilllv("SU_PURRING"); }
