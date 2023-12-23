@@ -1,22 +1,5 @@
  //item_db.txtへオーバーライド
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript}
-//-- ブルート武器 --
-1328,weapon,ブルートクリーヴァー,5,,10,0,150:0,,1,0,279680,2,2,4,100,6,1,{},{}
-13147,weapon,ブルートハンドガン,15,,10,0,70,,5,0,268435456,2,34,4,100,17,1,{},{}
-13342,weapon,ブルート風魔手裏剣,9,,10,0,150:160,,1,0,536870912,2,34,4,100,22,1,{},{}
-16082,weapon,ブルートモーニングスター,5,,10,0,150:0,,1,0,8701312,2,2,4,100,8,1,{},{}
-18171,weapon,ブルートハンターボウ,9,,10,0,160:0,,5,0,1705984,2,34,4,100,11,1,{},{}
-26141,weapon,ブルートアークワンド,5,,10,0,60:180,,1,0,134316800,2,2,4,100,10,1,{},{}
-26206,weapon,ブルートラリエット,5,,10,0,150:0,,2,0,1048576,2,2,4,100,14,1,{},{}
-28033,weapon,ブルートカタール,9,,10,0,150:0,,1,0,4096,2,34,4,100,16,1,{},{}
-28245,weapon,ブルートライフル,15,,10,0,170,,5,0,268435456,2,34,4,100,18,1,{},{}
-28246,weapon,ブルートガトリングガン,15,,10,0,120,,5,0,268435456,2,34,4,100,19,1,{},{}
-28247,weapon,ブルートショットガン,15,,10,0,180,,5,0,268435456,2,34,4,100,20,1,{},{}
-28248,weapon,ブルートグレネードガン,15,,10,0,210,,5,0,268435456,2,34,4,100,21,1,{},{}
-28746,weapon,ブルートダマスカス,5,,10,0,120:0,,1,0,681533056,2,2,4,100,1,1,{},{}
-32014,weapon,ブルートスピア,5,,10,0,150:0,,3,0,16512,2,2,4,100,4,1,{},{}
-32100,weapon,ブルートギター,5,,10,0,150:0,,1,0,524288,2,2,4,100,13,1,{},{}
-
 //-- 500 --
 526,Royal_Jelly,ローヤルゼリー,0,7000,,150,,,,,2074075135,2,,,,,,{ if(((equippeditem(4132) || (equippeditem(300328)) && equippeditem(19106)))){ percentheal 15,15; } else { itemheal rand(325,405),rand(40,60); } sc_end SC_Poison; sc_end SC_Silence; sc_end SC_Blind; sc_end SC_Confusion; sc_end SC_Curse; sc_end SC_Hallucination; } },{}
 600,heal,タロットデッキ,0,,10,220,,,,,2074075135,2,,,100,,,{ percentheal 0,-5; /* 自身の能力に応じたスキルが1回発動可能になる 特定の状態やマップでは発動しない */ },{}
@@ -950,10 +933,10 @@
 24777,shadow,[シャドウ] オルタネイトペンダント,4,,10,0,,,,0,2088832,2,1048576,,200,,1,{},{ bonus2 bAddRace,Rct_Boss,getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,getequiprefinerycnt(); }
 
 //-- 25000 --
-25058,ench,チャーム＜トゥインクル＞,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_LJOSALFAR,TRUE; },{ hateffect HAT_EF_LJOSALFAR,FALSE; }
-25177,ench,チャーム＜シャドウ＞,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_KAGEMUSYA,TRUE; },{ hateffect HAT_EF_KAGEMUSYA,FALSE; }
-25178,ench,チャーム＜ピンクグロー＞,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_CHERRYBLOSSOM,TRUE; },{ hateffect HAT_EF_CHERRYBLOSSOM,FALSE; }
-25224,ench,チャーム＜ホワイトボディ＞,6,,,,,,,,,,65535,,,,,{},{ hateffect HAT_EF_WHITEBODY,TRUE; },{ hateffect HAT_EF_WHITEBODY,FALSE; }
+25058,ench,チャーム＜トゥインクル＞,3,,10,10,,,,,,,,,,,,{},{}
+25177,ench,チャーム＜シャドウ＞,3,,10,10,,,,,,,,,,,,{},{}
+25178,ench,チャーム＜ピンクグロー＞,3,,10,10,,,,,,,,,,,,{},{}
+25224,ench,チャーム＜ホワイトボディ＞,3,,10,10,,,,,,,,,,,,{},{}
 25232,item,安い潤滑油,3,,10,1,,,,,,,,,,,,{},{}
 25290,item,スウィートチョココイン,3,,10,0,,,,,,,,,,,,{},{}
 25291,item,最高級マロンの蜜漬け,3,,10,10,,,,,,,,,,,,{},{}
@@ -2132,7 +2115,7 @@
 312473,ench,潜在解放(アークメイジIII),6,,,,,,,,,,65535,,,,,{ /*4次職 if(equippeditem(29371)){ bonus2 bAddSkillCoolDown,"AG_CRIMSON_ARROW",-300; bonus2 bAddSkillCoolDown,"AG_STORM_CANNON",-300; }*/ },{}
 312475,ench,無念無想,6,,,,,,,,,,65535,,,,,{},{ bonus3 bAutoActiveWeapon,312475,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus bAddCriticalDamage,100; } }
 312645,ench,潜在解放(カーディナルIV),6,,,,,,,,,,65535,,,,,{ /*4次職 if(equippeditem(29371)){ "CD_ARBITRIUM" 固定詠唱時間 - 1.5秒 } */ },{}
-312646,ench,潜在解放(ウィンドホークIII),6,,,,,,,,,,65535,,,,,{ /*4次職 アンリミットLv5状態になる*/ },{},{ /* sc_end 631; */ }
+312646,ench,潜在解放(ウィンドホークIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 */ },{ bonus4 bAutoActiveSkill,"WH_HAWKBOOMERANG",312646,100,20000; if(checkactiveitem()) { sc_start SC_UNLIMIT,20000,5; } bonus4 bAutoActiveSkill,"WH_HAWKRUSH",312646,100,20000; if(checkactiveitem()) { sc_start SC_UNLIMIT,20000,5; } } },{  if(equippeditem(29509)){ sc_end SC_UNLIMIT;} }
 
 //-- 400000 --
 400012,head,黎明のマジェスティックゴート,4,,10,100,,10:0,,0,2074075135,2,256,,1,513,1,{},{ bonus bMaxHP,1000; bonus bMaxSP,200; bonus bHPGainValue,200; bonus bSPGainValue,30; bonus2 bHPPenaltyTime,5000,250; bonus2 bSPPenaltyTime,5000,30; bonus bNoCastCancel,0; bonus bBaseAtk,10*getequiprefinerycnt(); bonus bMatk,10*getequiprefinerycnt(); bonus bHit,2*getequiprefinerycnt(); bonus bAspdAddRate,getequiprefinerycnt(); }
@@ -4034,3 +4017,20 @@
 580028,weapon,プレジションホイップ,5,,10,250,180:120,,1,3,1048576,2,2,3,220,14,1,{ /* 4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"TR_SOUNDBLEND",10; bonus2 bAddSkillDamageRate,"TR_METALIC_FURY",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"TR_SOUNDBLEND",15; bonus2 bAddSkillDamageRate,"TR_METALIC_FURY",15; } if(getequiprefinerycnt() >= 10) { } }
 590036,weapon,ウィキッドクロス,5,,10,1500,150:110,,1,3,256,2,2,4,220,8,1,{ /* 4次職 */ },{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"CD_PETITIO",10; bonus2 bAddSkillDamageRate,"CD_EFFLIGO",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"CD_PETITIO",15; bonus2 bAddSkillDamageRate,"CD_EFFLIGO",15; } if(getequiprefinerycnt() >= 10) { } }
 312960,ench,潜在解放(ハイパーノービスII),6,,,,,,,,,,65535,,,,,{ /* 固定詠唱時間 - 1.5秒 */ },{ if(equippeditem(29371)){ } }
+
+//-- ブルート武器 --
+1328,weapon,ブルートクリーヴァー,5,,10,0,150,,1,0,279680,2,2,4,100,6,1,{},{ bonus2 bAddRace,Rct_Player,60; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+13147,weapon,ブルートハンドガン,15,,10,0,70,,5,0,268435456,2,34,4,100,17,1,{},{ bonus2 bAddRace,Rct_Player,60; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+13342,weapon,ブルート風魔手裏剣,9,,10,0,150:160,,1,0,536870912,2,34,4,100,22,1,{},{ bonus2 bAddRace,Rct_Player,95; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+16082,weapon,ブルートモーニングスター,5,,10,0,150,,1,0,8701312,2,2,4,100,8,1,{},{ bonus2 bAddRace,Rct_Player,60; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+18171,weapon,ブルートハンターボウ,9,,10,0,160,,5,0,1705984,2,34,4,100,11,1,{},{ bonus2 bAddRace,Rct_Player,50; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+26141,weapon,ブルートアークワンド,5,,10,0,60:180,,1,0,134316800,2,2,4,100,10,1,{},{ bonus2 bMagicAddRace,Rct_Player,25; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bMagicAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 9) { bonus2 bMagicAddRace,Rct_Player,10; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+26206,weapon,ブルートラリエット,5,,10,0,150,,2,0,1048576,2,2,4,100,14,1,{},{ bonus2 bAddRace,Rct_Player,80; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+28033,weapon,ブルートカタール,9,,10,0,150,,1,0,4096,2,34,4,100,16,1,{},{ bonus2 bAddRace,Rct_Player,60; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+28245,weapon,ブルートライフル,15,,10,0,170,,5,0,268435456,2,34,4,100,18,1,{},{ bonus2 bAddRace,Rct_Player,60; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*readparam(bInt)/10; if(readparam(bInt) >= 110) { bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",30; } bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+28246,weapon,ブルートガトリングガン,15,,10,0,120,,5,0,268435456,2,34,4,100,19,1,{},{ bonus2 bAddRace,Rct_Player,60; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus2 bAddSkillDamageRate,"RL_R_TRIP",7*readparam(bAgi)/10; if(readparam(bAgi) >= 110) { bonus2 bAddSkillDamageRate,"RL_R_TRIP",30; } bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+28247,weapon,ブルートショットガン,15,,10,0,180,,5,0,268435456,2,34,4,100,20,1,{},{ bonus bSplashRange,1; bonus2 bAddRace,Rct_Player,80; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",7*readparam(bStr)/10; if(readparam(bStr) >= 110) { bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",30; } bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+28248,weapon,ブルートグレネードガン,15,,10,0,210,,5,0,268435456,2,34,4,100,21,1,{},{ bonus2 bAddRace,Rct_Player,50; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus2 bAddSkillDamageRate,"RL_D_TAIL",7*readparam(bLuk)/10; if(readparam(bLuk) >= 110) { bonus2 bAddSkillDamageRate,"RL_D_TAIL",30; } bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+28746,weapon,ブルートダマスカス,5,,10,0,120,,1,0,681533056,2,2,4,100,1,1,{},{ bonus2 bAddRace,Rct_Player,60; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+32014,weapon,ブルートスピア,5,,10,0,150,,3,0,16512,2,2,4,100,4,1,{},{ bonus2 bAddRace,Rct_Player,80; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+32100,weapon,ブルートギター,5,,10,0,150,,1,0,524288,2,2,4,100,13,1,{},{ bonus2 bAddRace,Rct_Player,80; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
