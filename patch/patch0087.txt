@@ -1,0 +1,724 @@
+2024-01-17	patch0087
+
+16000-17999
+//-- 16000 --
+
+//16000,weapon,エルデ,5,20,,500,130:0,,1,2,312754,2,2,3,50,8,1,{},{ bonus bMaxSP,50; bonus2 bAddSkillDamageRate,"AM_ACIDTERROR",20; bonus2 bAddSkillDamageRate,"AM_DEMONSTRATION",20; bonus2 bAddSkillHealRate,"AL_HEAL",10; bonus2 bAddSkillHealRate,"PR_SANCTUARY",10; bonus2 bAddSkillHealRate,"AM_POTIONPITCHER",10; bonus2 bAddSkillHealRate,"AB_CHEAL",10; bonus2 bAddSkillHealRate,"AB_HIGHNESSHEAL",10; }
+//16001,weapon,赤いスクエアバッグ,5,20,,500,130:0,,1,2,312754,2,2,3,50,8,1,{},{ bonus bMaxHP,200; bonus2 bAddSkillDamageRate,"AM_ACIDTERROR",20; bonus2 bAddSkillDamageRate,"AM_DEMONSTRATION",20; bonus3 bAddMonsterDropItem,501,Rct_NonBoss,30; bonus3 bAddMonsterDropItem,502,Rct_NonBoss,30; bonus3 bAddMonsterDropItem,503,Rct_NonBoss,30; bonus3 bAddMonsterDropItem,504,Rct_NonBoss,30; bonus3 bAddMonsterDropItem,505,Rct_NonBoss,30; bonus3 bAddMonsterDropItem,506,Rct_NonBoss,30; /*暫定ドロップ率0.3%*/ if(readparam(bSTR)<90) end; bonus2 bAddEffShort,Eff_Stun,500; }
+//16003,weapon,カルガメイス,5,20,,1500,175:0,,1,2,312704,2,2,3,100,8,1,{},{}
+//16010,weapon,赤いエーテルバッグ,5,20,,1000,15:100,,1,1,262144,2,2,3,102,8,1,{},{ bonus2 bAddSkillDamageRate,"GN_CRAZYWEED_ATK",20; bonus2 bAddSkillDamageRate,"GN_DEMONIC_FIRE",20; if(getequiprefinerycnt(4)<6) end; bonus2 bAddSkillDamageRate,"GN_CRAZYWEED_ATK",(getequiprefinerycnt(4)*2); bonus2 bAddSkillDamageRate,"GN_DEMONIC_FIRE",(getequiprefinerycnt(4)*2); }
+//16013,weapon,審判のメイス,5,20,,1200,140:180,,1,2,256,2,2,3,100,8,1,{},{ bonus bStr,1; bonus bInt,1; bonus3 bAutoActiveWeapon,16013,10,7000; bonus3 bAutoActiveMagic,16013,10,7000; if(checkactiveitem()&EAS_WEAPON) { misceffect 216,""; bonus2 bAddRace,Rct_Demon,20; } if(checkactiveitem()&EAS_MAGIC) { misceffect 216,""; bonus2 bMagicAddRace,Rct_Demon,20; } if(getequipid(2) == 15030 && getequipid(5) == 2570 && getequipid(6) == 2472) { bonus2 bAddSpCost,"AB_ADORAMUS",30; if(getequiprefinerycnt(4) >= 7 && getequiprefinerycnt(2) >= 7 && getequiprefinerycnt(5) >= 7 && getequiprefinerycnt(6) >= 7) { bonus2 bAddRace,Rct_Undead,15; bonus2 bMagicAddRace,Rct_Undead,15; bonus2 bAddSkillDamageRate,"AB_ADORAMUS",150; } else { bonus2 bAddRace,Rct_Undead,10; bonus2 bMagicAddRace,Rct_Undead,10; bonus2 bAddSkillDamageRate,"AB_ADORAMUS",50; } } }
+//16015,weapon,肉球クラブ,5,20,,700,88:0,,1,3,8701363,2,2,1,1,8,1,{},{ bonus2 bAddRace,Rct_Brute,15; bonus2 bAddEff,Eff_Siren,500; }
+16017,weapon,ブラッディクロス,5,20,,1500,170:0,,1,0,33024,2,2,4,100,8,1,{},{ bonus bAtkEle,Ele_Dark; bonus3 bAutoSpell,"WL_HELLINFERNO",1,200*getequiprefinerycnt(); }
+//16018,weapon,審判のメイスⅡ,5,20,,1200,170:180,,1,1,256,2,2,4,130,8,1,{},{ bonus bStr,2; bonus bInt,2; bonus3 bAutoActiveWeapon,16013,10,7000; bonus3 bAutoActiveMagic,16013,10,7000; if(checkactiveitem()&EAS_WEAPON) { misceffect 216,""; bonus2 bAddRace,Rct_Demon,40; } if(checkactiveitem()&EAS_MAGIC) { misceffect 216,""; bonus2 bMagicAddRace,Rct_Demon,40; } if(getequipid(2) == 15030 && getequipid(5) == 2570 && getequipid(6) == 2472) { bonus2 bAddSpCost,"AB_ADORAMUS",30; bonus2 bAddCastRate,"PR_TURNUNDEAD",-50; bonus2 bAddCastRate,"PR_MAGNUS",-50; bonus2 bAddCastRate,"AL_HOLYLIGHT",-50; bonus2 bAddCastRate,"AB_JUDEX",-50; bonus2 bAddCastRate,"AB_ADORAMUS",-50; if(getequiprefinerycnt(4) >= 7 && getequiprefinerycnt(2) >= 7 && getequiprefinerycnt(5) >= 7 && getequiprefinerycnt(6) >= 7) { bonus2 bAddRace,Rct_Undead,30; bonus2 bMagicAddRace,Rct_Undead,30; bonus2 bAddSkillDamageRate,"AB_ADORAMUS",200; } else { bonus2 bAddRace,Rct_Undead,15; bonus2 bMagicAddRace,Rct_Undead,15; bonus2 bAddSkillDamageRate,"AB_ADORAMUS",150; } } }
+//16022,weapon,ネメシス,5,20,,900,120:0,,1,2,33040,2,2,4,60,8,1,{},{ bonus bAtkEle,Ele_Holy; bonus2 bAddRace,Rct_Demon,10; bonus2 bAddEle,Ele_Dark,10; if(getequiprefinerycnt(4)) bonus3 bAutoSpell,32,getequiprefinerycnt(4),100; bonus3 bAutoActiveWeapon,16022,100,20000; if(checkactiveitem()) { misceffect 216,""; bonus bBaseAtk,50; } }
+//16024,weapon,カドリール,5,20,,900,165:0,,1,2,33040,2,2,4,40,8,1,{},{ bonus2 bAddRace,Rct_Human,10; bonus2 bAddEle,Ele_Earth,10; bonus2 bAddEle,Ele_Undead,10; }
+//16025,weapon,攻城戦TEメイス,5,0,,0,120:0,,1,0,8701363,2,2,3,40,8,0,{},{}
+//16029,weapon,ノーブルクロス,5,20,,1500,195:150,,1,1,33040,2,2,4,40,8,1,{},{ bonus bAtkEle,Ele_Holy; bonus3 bAutoSpell,77,6,100; bonus3 bDefeatSPDrainValue,Rct_Undead,100,12; bonus2 bSPDrainValue,100,1; if(equippeditem(27007)) { bonus bLuk,getequiprefinerycnt(4)*3; bonus bAspdRate,getequiprefinerycnt(4)*2; } }
+//16042,weapon,レクイエムスマッシャー,5,100000,,3000,180:0,,1,0,8701362,2,2,4,100,8,1,{},{}
+//16043,weapon,メテオストライク,5,49800,,20000,1:0,,1,2,8388608,2,2,4,110,8,1,{},{ bonus bBaseAtk,10*getequiprefinerycnt(4); bonus bBaseAtk,7*getskilllv("NC_TRAININGAXE"); bonus bHit,5*getskilllv("NC_TRAININGAXE"); bonus bBaseAtk,10*getskilllv("BS_WEAPONRESEARCH"); bonus bBaseAtk,30*getskilllv("MO_IRONHAND"); if(readparam(bStr)>=108){ bonus bUseSPrate,-20; } if(readparam(bStr)>=120){ bonus bUseSPrate,-30; } if(getskilllv("MC_PUSHCART")==10){ skill "MC_CARTREVOLUTION",1; } if(getskilllv("SM_SWORD")==1){ skill "KN_BOWLINGBASH",1; } if(getskilllv("SM_SWORD")>=2){ skill "KN_BOWLINGBASH",getskilllv("SM_SWORD"); } }
+//16044,weapon,パイルバンカーS,5,1000000,,3500,50:0,,1,3,1024,2,2,4,130,8,1,{},{ bonus2 bAddEff,Eff_Frostmisty,200; bonus3 bAddEffSkill,"NC_PILEBUNKER",Eff_Freeze,10000; bonus2 bAddSkillCoolDown,"NC_PILEBUNKER",5000; if(getequiprefinerycnt(4)>=7){ bonus2 bAddEff,Eff_Frostmisty,50*(getequiprefinerycnt(4)-6); } }
+//16045,weapon,パイルバンカーP,5,1000000,,3500,50:0,,1,3,1024,2,2,4,130,8,1,{},{ bonus2 bAddEff,Eff_Curse,200; bonus3 bAddEffSkill,"NC_PILEBUNKER",Eff_Stone,10000; bonus2 bAddSkillCoolDown,"NC_PILEBUNKER",5000; if(getequiprefinerycnt(4)>=7){ bonus2 bAddEff,Eff_Curse,50*(getequiprefinerycnt(4)-6); } }
+//16046,weapon,パイルバンカーT,5,1000000,,3500,50:0,,1,3,1024,2,2,4,130,8,1,{},{ bonus bPerfectHitAddRate,20; if(getequiprefinerycnt(4)>=7){ bonus bPerfectHitAddRate,30; } bonus4 bAutoActiveSkill,"NC_BOOSTKNUCKLE",16046,500,1000; if(checkactiveitem(16046)){ /* 物理攻撃時一定確率で麻痺 */ } }
+//16047,weapon,錆びたアーム,5,30000,,2000,150:0,,1,3,312704,2,2,4,100,8,1,{},{ bonus bAtkEle,Ele_Poison; bonus bHit,5; if(getequiprefinerycnt()>=7){ bonus bHit,15; } }
+16049,weapon,迅雷鎚,5,20,,2000,130:0,,1,3,8701363,2,2,3,50,8,1,{},{ bonus bAtkEle,Ele_Wind; if(getequiprefinerycnt(4)>=7){ bonus2 bAddRace,Rct_Fish,10; bonus2 bMagicAddRace,Rct_Fish,10; bonus2 bAddEle,Ele_Water,10; bonus2 bMagicAddEle,Ele_Water,10; } if(getequiprefinerycnt(4)>=9){ bonus2 bAddRace,Rct_Fish,15; bonus2 bMagicAddRace,Rct_Fish,15; bonus2 bAddEle,Ele_Water,15; bonus2 bMagicAddEle,Ele_Water,25; } if(equippeditem(490022)){ bonus2 bAddRace,Rct_Fish,20; bonus2 bMagicAddRace,Rct_Fish,20; bonus2 bAddEle,Ele_Water,20; bonus2 bMagicAddEle,Ele_Water,20; } }
+//16050,weapon,[レンタル] 猟乱鎚,5,0,,0,130:0,,1,0,8701363,2,2,3,50,8,1,{},{}
+//16051,weapon,ヴァルキリーハンマー,5,400000,,100,50:50,,1,4,8701363,2,2,4,70,8,1,{},{ if(getbaseclass(Class) == CLASS_NV){ bonus bBaseAtk,150; bonus bMatk,200; bonus bHit,10; bonus bMaxHP,500; bonus bMaxSP,400; bonus bVit,getequiprefinerycnt(4); bonus bMaxHP,200*getequiprefinerycnt(4); bonus bFlee2,getequiprefinerycnt(4); bonus bAspdAddRate,getequiprefinerycnt(4); bonus bCastrate,-(getequiprefinerycnt(4)/2); } if(getbaseclass(Class) == CLASS_SM){ bonus bMaxHP,500; bonus bMaxSP,100; bonus bVit,getequiprefinerycnt(4); } if(getbaseclass(Class,2) == CLASS_PR){ bonus bBaseAtk,50; bonus bMatk,100; bonus bAspdAddRate,getequiprefinerycnt(4); } if(getbaseclass(Class,2) == CLASS_MO){ bonus bMaxSP,200; bonus bFlee2,getequiprefinerycnt(4); bonus bUseSPrate,-5; } if(getbaseclass(Class) == CLASS_MC){ bonus bBaseAtk,100; bonus bHit,10; bonus bCastrate,-(getequiprefinerycnt(4)/2); } }
+//16052,weapon,アイアンドライバー,5,20,,3000,155:0,,1,3,33024,2,2,3,78,8,1,{},{}
+//16053,weapon,ローラの鎖鉄球,5,20,,1500,170:0,,1,3,279680,2,2,4,130,8,1,{},{ if(equippeditem(2655)||equippeditem(28388)){ bonus3 bAutoActiveWeapon,16053,500,5000; if(getequiprefinerycnt(4)>=5){ bonus3 bAutoActiveWeapon,16053,500,5000+1000*getequiprefinerycnt(4); } } if(checkactiveitem(16053)){ misceffect 221,""; bonus2 bIgnoreDefRace,Rct_Boss,100; bonus2 bIgnoreDefRace,Rct_NonBoss,100; } }
+//16055,weapon,無双鎚,5,20,,2000,130:0,,1,3,8701363,2,2,3,50,8,1,{},{ bonus bAtkEle,Ele_Earth; if(getequiprefinerycnt(3)>=7){ bonus2 bAddRace,Rct_Brute,10; bonus2 bAddRace,Rct_Plant,10; bonus2 bAddEle,Ele_Wind,10; bonus2 bAddEle,Ele_Earth,10; } if(getequiprefinerycnt(3)>=9){ bonus2 bAddRace,Rct_Brute,15; bonus2 bAddRace,Rct_Plant,15; bonus2 bAddEle,Ele_Wind,15; bonus2 bAddEle,Ele_Earth,15; } }
+//16056,weapon,達人の槌,5,10000,,1800,160:0,,1,3,33040,2,2,3,80,8,1,{},{ bonus bInt,1; bonus bLuk,1; callfunc "ItemdbAlmightyHeal",0x7F,getskilllv("AL_DP"); bonus bCritical,getskilllv("PR_MACEMASTERY")*2; if(equippeditem(22129)){ bonus bAspdAddRate,getskilllv("AB_DUPLELIGHT"); bonus2 bIgnoreDefRace,Rct_Undead,10*getskilllv("PR_MACEMASTERY"); bonus2 bIgnoreDefRace,Rct_Demon,10*getskilllv("PR_MACEMASTERY"); bonus2 bIgnoreDefRace,Rct_Human,10*getskilllv("PR_MACEMASTERY"); bonus2 bCriticalRace,Rct_Undead,5*getskilllv("PR_MACEMASTERY"); bonus2 bCriticalRace,Rct_Demon,5*getskilllv("PR_MACEMASTERY"); bonus2 bCriticalRace,Rct_Human,5*getskilllv("PR_MACEMASTERY"); } }
+//16057,weapon,一碧鎚,5,20,,2000,130:0,,1,3,8701363,2,2,3,50,8,1,{},{ bonus bAtkEle,Ele_Water; if(getequiprefinerycnt(4)>=7){ bonus2 bAddRace,Rct_Formless,10; bonus2 bAddRace,Rct_Demon,10; bonus2 bAddEle,Ele_Fire,10; } if(getequiprefinerycnt(4)>=9){ bonus2 bAddRace,Rct_Formless,15; bonus2 bAddRace,Rct_Demon,15; bonus2 bAddEle,Ele_Fire,15; } }
+//16058,weapon,ディーヴァメイス,5,200000,,1500,150:110,,1,1,8701312,2,2,4,150,8,1,{},{ if(getequiprefinerycnt(4)>=7){ bonus bBaseAtk,30; bonus bHit,5; } if(getequiprefinerycnt(4)>=9){ bonus bBaseAtk,30; bonus bHit,5; } if(equippeditem(27031)){ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bSplashRange,1; } }
+//16059,weapon,ミラージュメイス,5,200000,,1500,150:110,,5,1,8701312,2,2,4,150,8,1,{},{ if(getequiprefinerycnt(4)>=7){ bonus bBaseAtk,30; bonus bHit,5; } if(getequiprefinerycnt(4)>=9){ bonus bBaseAtk,30; bonus bHit,5; } if(equippeditem(27032)){ bonus2 bSPDrainRate,10,5; } }
+//16061,weapon,邪念のメイス,5,100000,,500,105:0,,1,0,8701312,2,2,4,100,8,1,{},{ bonus bBaseAtk,getequiprefinerycnt(4)*getequiprefinerycnt(4); }
+//16062,weapon,死者のスプーン,5,30000,,300,170:0,,1,2,8701312,2,2,4,100,8,1,{},{ bonus2 bSPDrainValue,100,1; if(getequiprefinerycnt(4)>=7){ bonus2 bSPDrainValue,100,1; } }
+//16063,weapon,イリュージョンロングメイス,5,20,,800,135:120,,3,1,8701312,2,2,4,150,8,1,{},{ bonus bLongAtkDef,10; if(BaseLevel>=170) { bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; } }
+//16065,weapon,イリュージョンアイアンドライバー,5,20,,2000,210:0,,2,1,33024,2,2,4,150,8,1,{},{ if(BaseLevel>=170)bonus3 bAutoSpell,2279,3,100+getequiprefinerycnt(4)*20; else bonus3 bAutoSpell,2279,3,100; }
+//16066,weapon,猟乱鎚,5,20,,2000,130:0,,1,3,8701363,2,2,3,50,8,1,{},{ bonus bAtkEle,Ele_Fire; if(getequiprefinerycnt(3)>=7){ bonus2 bAddEle,Ele_Earth,10; bonus2 bAddEle,Ele_Water,10; bonus2 bAddRace,Rct_Insect,10; bonus2 bAddRace,Rct_Human,10; } if(getequiprefinerycnt(3)>=9){ bonus2 bAddEle,Ele_Earth,15; bonus2 bAddEle,Ele_Water,15; bonus2 bAddRace,Rct_Insect,15; bonus2 bAddRace,Rct_Human,15; } }
+16082,weapon,ブルートモーニングスター,5,20,,0,150:0,,1,0,8701312,2,2,4,100,8,1,{},{ bonus2 bAddRace,Rct_Player,60; bonus2 bIgnoreDefRace,Rct_All,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } bonus bUnbreakableWeapon,0; }
+16087,weapon,アビスメイス,5,20,,1500,150:110,,1,1,8701312,2,2,4,165,8,1,{},{ if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; } if(equippeditem(27301)){ bonus bAspdAddRate,10; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } if(equippeditem(19451)){ bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddEle,Ele_All,15; bonus2 bAddEle,Ele_All,15; } }
+//16088,weapon,サフィールホール-OS,5,20,,1500,150:110,,1,0,262144,2,2,4,150,8,1,{},{ bonus2 bAddEle,Ele_All,60; bonus2 bAddSkillCoolDown,"GN_CART_TORNADO",-200; if(getequiprefinerycnt(4)>=7){ bonus2 bAddEle,Ele_All,25; } if(getequiprefinerycnt(4)>=9){ bonus2 bAddEle,Ele_All,25; } if(getequiprefinerycnt(4)>=10){ bonus2 bIgnoreDefRace,Rct_NonBoss,100; bonus2 bIgnoreDefRace,Rct_Boss,100; } }
+//16089,weapon,ウルティオ-OS,5,20,,1500,150:110,,1,0,256,2,2,4,150,8,1,{},{ bonus2 bAddEle,Ele_All,20; bonus2 bMagicAddEle,Ele_All,20; bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MELEE",BaseLevel*7; bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MAGIC",BaseLevel*7; if(getequiprefinerycnt(4)>=7){ bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=9){ bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt(4)>=10){ skill "BS_ADRENALINE",5; } }
+//16098,weapon,獅子宮のメイス,5,20,,400,10:0,,1,1,8701363,2,2,4,1,8,1,{},{ bonus bBaseAtk,50; bonus bCastrate,-10; bonus bBaseAtk,readparam(11); bonus bUnbreakableWeapon,0; if(Job == Job_Shura){ bonus bAspdAddRate,10; bonus bCastrate,-5; bonus2 bAddRace,Rct_Boss,50; bonus2 bAddRace,Rct_NonBoss,50; if(getequiprefinerycnt()>=7){ bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; } if(getequiprefinerycnt()>=9){ bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; } } } }
+16099,weapon,ラヴァーハンマー,5,20,,1500,150:110,,1,1,256,2,2,4,175,8,1,{},{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; skill "NC_POWERSWING",3; if(getequiprefinerycnt() >= 7) { skill "NC_POWERSWING",getskilllv("NC_POWERSWING"); } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NC_POWERSWING",Baselevel; } if(getequiprefinerycnt() >= 10) { bonus4 bSkillAutoSpell,"NC_POWERSWING","NC_MAGMA_ERUPTION",5,100; } }
+//16156,consum,ポリン交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6157,1; },{}
+//16157,consum,ドロップス交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6158,1; },{}
+//16158,consum,ポポリン交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6159,1; },{}
+//16159,consum,ルナティック交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6160,1; },{}
+//16160,consum,ピッキ交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6161,1; },{}
+//16161,consum,ペコペコ交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6162,1; },{}
+//16162,consum,サベージベベ交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6163,1; },{}
+//16163,consum,スポア交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6164,1; },{}
+//16164,consum,ポイズンスポア交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6165,1; },{}
+//16165,consum,チョンチョン交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6166,1; },{}
+//16166,consum,スチールチョンチョン交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6167,1; },{}
+//16167,consum,グラウンドプティット交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6168,1; },{}
+//16168,consum,デビルチ交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6169,1; },{}
+//16169,consum,イシス交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6170,1; },{}
+//16170,consum,スモーキー交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6171,1; },{}
+//16171,consum,ドケビ交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6172,1; },{}
+//16172,consum,子デザートウルフ交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6173,1; },{}
+//16173,consum,ヨーヨー交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6174,1; },{}
+//16174,consum,ソヒー交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6175,1; },{}
+//16175,consum,ロッカー交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6176,1; },{}
+//16176,consum,ハンターフライ交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6177,1; },{}
+//16177,consum,オークウォリアー交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6178,1; },{}
+//16178,consum,バフォメットJr交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6179,1; },{}
+//16179,consum,ムナック交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6180,1; },{}
+//16180,consum,ボンゴン交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6181,1; },{}
+//16181,consum,クリスマスゴブリン交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6182,1; },{}
+//16182,consum,モチリン交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6183,1; },{}
+//16183,consum,ジルタス交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6184,1; },{}
+//16184,consum,アリス交換チケットの箱,18,0,,0,,,,,2074075135,2,,,,,,{ getitem 6185,1; },{}
+//16570,consum,マッスル騎士団旅情編の箱,18,0,,0,,,,,2074075135,2,,,,,,{},{}
+//16607,consum,バブルガム(2個)の箱,18,0,,10,,,,,2074075135,2,,,,,,{ getitem 12210,2; },{}
+//16608,consum,バブルガム(4個)の箱,18,0,,10,,,,,2074075135,2,,,,,,{ getitem 12210,4; },{}
+//16633,consum,バブルガム+の箱,18,0,,10,,,,,2074075135,2,,,,,,{},{}
+//16653,consum,戦闘教範75の箱,18,0,,10,,,,,2074075135,2,,,,,,{ getitem 12563,10; },{}
+//16674,consum,身代わりの護符の箱,18,0,,10,,,,,2074075135,2,,,,,,{ getitem 6413,10; },{}
+//16682,consum,騎乗用手綱の箱,18,0,,10,,,,,2074075135,2,,,,,,{ getitem 12622,1; },{}
+17104,consum,改良型濃縮オリデオコンの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem 6240,1; },{}
+17105,consum,改良型濃縮エルニウムの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem 6241,1; },{}
+17161,consum,ドモヴォイブリーダーの証の箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem 6550,1; },{}
+17165,consum,かき氷BOX(50杯),18,,1500,1500,,,,,2074075135,2,,,1,,,{ getitem2 12784,50,1,0,0,0,0,0,0,604800; },{}
+17183,consum,マジカルウォッチの箱,18,20,,0,,,,,2074075135,2,,,1,,,{},{}
+17213,consum,古の黄色い箱,18,20,,100,,,,,2074075135,2,,,1,,,{},{}
+17214,consum,マジカルブックの箱,18,20,,0,,,,,2074075135,2,,,1,,,{},{}
+17215,consum,マジカルブックの箱,18,20,,0,,,,,2074075135,2,,,1,,,{},{}
+17216,consum,かき氷BOX(150杯),18,,4500,4500,,,,,2074075135,2,,,1,,,{ getitem2 12784,150,1,0,0,0,0,0,0,604800; },{}
+17217,consum,ドーナツBOX(50個),18,,1500,1500,,,,,2074075135,2,,,1,,,{ getitem2 12784,50,1,0,0,0,0,0,0,604800; },{}
+17218,consum,ドーナツBOX(150個),18,,4500,4500,,,,,2074075135,2,,,1,,,{ getitem2 12784,150,1,0,0,0,0,0,0,604800; },{}
+17219,consum,マジカルアップルの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem 6680,1; },{}
+17220,consum,スペシャルクエストチケットの箱,18,20,,100,,,,,2074075135,2,,,1,,,{ getitem 6998,1; },{}
+17243,consum,コスたまClassic,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17249,consum,コスたまClassicII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17250,consum,コスたまClassicIII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17252,consum,RWC2012記念チケット,3,20,,0,,,,,,,,,,,,{},{}
+17267,consum,コスたまCollection,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17268,consum,コスたまAnniversary,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17269,consum,コスたまXmasParty,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17276,consum,マジカルフラワーの箱,18,20,,0,,,,,2074075135,2,,,1,,,{},{}
+17280,consum,コスたまNewYear,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17289,consum,ヴェルゼブブの羽の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem2 14645,1,1,0,0,0,0,0,0,864000; },{}
+17290,consum,オルレアンのフルコースの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 14646,5; },{}
+17291,consum,コスたまGirlsSelection,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17295,consum,コスたまBoysSelection,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17300,consum,コスたまHolyDarkness,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17301,consum,コスたまJuneBride,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17305,consum,コスたまSpringParty,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17323,consum,コスたまShinobi,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17324,consum,コスたまBurning,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17325,consum,コスたまHorror,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17336,consum,ジェレミーの美容クーポンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6707,1; },{}
+17428,consum,コスたまMoonRabbit,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17434,consum,コスたまHalloween,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17436,consum,コスたまGothic,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17444,consum,コスたまRWC2013,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17448,consum,コスたまToyBox,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17461,consum,コスたまFrozen,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17462,consum,コスたまWingII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17463,consum,スペシャルクエストしいたけの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem 25081,1; },{}
+17470,consum,コスたまHelmCollection,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17476,consum,コスたまGirlsSelectionⅡ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17481,consum,コスたまFlowerGarden,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17493,consum,コスたまWing,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17497,consum,コスたまSeaside,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17500,consum,コスたまMonsters,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17506,consum,コスたまAutumnParty,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17514,consum,コスたまHalloweenII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17517,consum,コスたまAnimals,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17518,consum,ファミ通クエストチケットの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6918,1; },{}
+17523,consum,コスたまMystic,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17528,consum,コスたまFrozenII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17546,consum,コスたまGirlsSelectionIII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17551,consum,コスたまAnimalsII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17571,consum,コスたまSchool,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17581,consum,コスたまMonstersII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17585,consum,コスたまCyber,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17589,consum,コスたまSeasideII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17596,consum,コスたまHairCollection(青赤黄緑),18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17597,consum,コスたまHairCollection(黒白紅紫),18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17611,consum,コスたまSteampunk,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17619,consum,究極精錬チケットの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6952,1; },{}
+17620,consum,イベントチケットの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem 7381,5; },{}
+17621,consum,キャンペーンクエストチケットの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem2 7382,1,1,0,0,0,0,0,0,1900800; },{}
+17622,consum,プラロック精錬フォースの箱,18,20,,0,,,,,2074075135,2,,,1,,,{},{}
+17623,consum,[2017年]究極精錬チケットの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,3110400; },{}
+17624,consum,高級オイルの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem2 6861,1,1,0,0,0,0,0,0,2505600; },{}
+17625,consum,タイニーチケットの箱,18,20,,0,,,,,2074075135,2,,,1,,,{},{}
+17626,consum,[2017年]プラロック精錬フォースの箱,18,20,,0,,,,,2074075135,2,,,1,,,{},{}
+17627,consum,[15th]復刻コスたまシールの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem2 25441,1,1,0,0,0,0,0,0,3196800; },{}
+17634,consum,コスチュームチェンジチケットの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6959,1; },{}
+17635,consum,コスたまHolyDarknessII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17638,consum,コスたまCharacters,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17641,consum,コスたまNewYearII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17661,consum,コスたまGothicII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17664,consum,コスたま2012Selection,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17670,consum,コスたまFlowerGardenII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17678,consum,コスたまAnimalsIII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17679,consum,[ガンスリンガー系専用] マジカルソウルの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem 25202,1; },{}
+17680,consum,[ガンスリンガー系専用] 反逆の証の箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem 25203,1; },{}
+17687,consum,コスたまGirlsSelectionIV,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17693,consum,コスたまMonstersIII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17696,consum,コスたまGirlsSelection,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17697,consum,コスたまHolyDarkness,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17698,consum,コスたまJuneBride,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17699,consum,コスたまHorror,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17700,consum,コスたまMoonRabbit,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17701,consum,コスたまGothic,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17702,consum,コスたまSeaside,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17703,consum,コスたまMonsters,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17704,consum,コスたまAutumnParty,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17705,consum,コスたまFrozenII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17706,consum,コスたまAnimalsII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17707,consum,コスたまCyber,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17710,consum,コスたまHairCollectionII(青赤黄緑),18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17711,consum,コスたまHairCollectionII(黒白紅紫),18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17715,consum,コスたまEmil Chronicle Online,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17735,consum,コスたまHorrorII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17741,consum,コスたまMaerchen,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17750,consum,コスたまCharactersII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17762,consum,コスたまMofuMofu,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17767,consum,コスたまGothicIII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17780,consum,特選ネコ缶(マグロ)の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 25308,1; },{}
+17781,consum,コスたまHairCollectionIII(青赤黄緑),18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17782,consum,コスたまHairCollectionIII(黒白紅紫),18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17785,consum,コスたまVariations,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17789,consum,コスたまAnimalsIV,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17796,consum,コスたまVariationsII(青赤黄緑),18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17797,consum,コスたまVariationsII(黒白紅紫),18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17803,consum,コスたまGirlsSelectionV,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17808,consum,コスたまHolyDarknessIII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17809,consum,コスたまClassic,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17810,consum,コスたまClassicII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17811,consum,コスたまClassicIII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17812,consum,コスたまCollection,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17813,consum,コスたまAnniversary,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17814,consum,コスたまXmasParty,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17815,consum,コスたまNewYear,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17816,consum,コスたまBoysSelection,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17817,consum,コスたまSpringParty,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17818,consum,コスたまShinobi,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17819,consum,コスたまBurning,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17820,consum,コスたまHalloween,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17821,consum,コスたまRWC2013,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17822,consum,コスたまToyBox,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17823,consum,コスたまFrozen,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17824,consum,コスたまHelmCollection,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17825,consum,コスたまGirlsSelectionII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17826,consum,コスたまFlowerGarden,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17827,consum,コスたまPartners,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17828,consum,コスたまWing,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17829,consum,コスたまHalloweenII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17830,consum,コスたまAnimals,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17831,consum,コスたまMystic,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17835,consum,コスたまMonstersIV,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17836,consum,コスたまBoysSelectionII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17889,consum,コスたまHalloweenIII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17899,consum,コスたまMysticII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17904,consum,[2018]復刻コスたまシールの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem2 25441,1,1,0,0,0,0,0,0,3196800; },{}
+17905,consum,[2018年]究極精錬チケットの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,3628800; },{}
+17906,consum,[2018年]高級オイルの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem2 6861,1,1,0,0,0,0,0,0,3715200; },{}
+17907,consum,[2018summer]プラロック精錬フォースの箱,18,20,,0,,,,,2074075135,2,,,1,,,{},{}
+17908,consum,信頼の証の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem2 25573,1,1,0,0,0,0,0,0,604800; },{}
+17909,consum,[16thPKG]プラロック精錬フォースの箱,18,20,,0,,,,,2074075135,2,,,1,,,{},{}
+17910,consum,[2019年]究極精錬チケットの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,3628800; },{}
+17911,consum,[2019年]高級オイルの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem2 6861,1,1,0,0,0,0,0,0,3715200; },{}
+17912,consum,ハッピークリスマスバッグ,18,20,,200,,,,,2074075135,2,,,1,,,{ /* イリュージョン武器イグドラシルの実種 宝箱 人形系 不思議な石片 ヨルムンガンドの花 */ },{}
+17913,consum,[2019]復刻コスたまシールの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem2 25441,1,1,0,0,0,0,0,0,3801600; },{}
+17922,consum,コスたまFrozenIII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17934,consum,コスたまGothic&Lolita,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17942,consum,コスたまSpringPartyII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17952,consum,コスたまAnimalsV,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17958,consum,コスたまGirlsSelectionVI,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17963,consum,コスたまMonstersV,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17964,consum,コスたまVariationsIII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17965,consum,コスたまHolyDarknessIV,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17966,consum,コスたまCyberII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17991,consum,コスたまAutumnPartyII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17992,consum,コスたまMysticIII,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17993,consum,コスたまHairCollectionIV(明色),18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17994,consum,コスたまHairCollectionIV(暗色),18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+17995,consum,修羅VIPチケットの箱 [転生アコライト(モンク)系専用],18,20,,0,,,,,2074075135,2,,,1,,,{ getitem 25794,1; },{}
+17996,consum,修羅ソウルの箱 [転生アコライト(モンク)系専用],18,20,,0,,,,,2074075135,2,,,1,,,{ getitem 25795,1; },{}
+17997,consum,転生チケットの箱,18,20,,0,,,,,2074075135,2,,,1,,,{ getitem 25796,1; },{}
+17998,consum,コスたまMonstersVI,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+
+
+移動予定のグローバルアイテム
+16002,weapon,スタナー,5,20,,0,175:0,,1,0,33040,2,2,2,1,8,0,{},{ bonus2 bAddSize,Size_Small,40; bonus2 bAddSize,Size_Medium,40; bonus2 bAddSize,Size_Big,40; bonus2 bAddEff,Eff_Stun,1000; }
+16004,weapon,P.メイスⅠ,5,20,,0,142:0,,1,0,312754,2,2,2,26,8,0,{},{}
+16005,weapon,P.メイスⅡ,5,20,,0,163:0,,1,0,312754,2,2,2,40,8,0,{},{}
+16006,weapon,Tourist_Mace,5,20,,10,,,1,0,312754,2,2,2,1,8,0,{},{}
+16007,weapon,ミョルニールR,5,20,,10,250:0,,1,0,279714,2,2,4,95,8,0,{},{}
+16008,weapon,F_Spanner_C,5,20,,10,,,1,0,312754,2,2,2,1,8,0,{},{}
+16009,weapon,E_Spanner_C,5,20,,10,,,1,0,312754,2,2,2,1,8,0,{},{}
+16100,16100,怒った口の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5521,1; },{}
+16101,16101,幸運の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5521,1; getitem 12391,1; },{}
+16102,16102,クレイモアの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1190,1; },{}
+16103,16103,ジャマダハルの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1286,1; },{}
+16104,16104,ツーハンドアックスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1388,1; },{}
+16105,16105,ランスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1487,1; },{}
+16106,16106,風魔手裏剣・大車輪の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 13309,1; },{}
+16107,16107,オーキッシュアックスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1312,1; },{}
+16108,16108,パイクの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1430,1; },{}
+16109,16109,大百科事典の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1580,1; },{}
+16110,16110,フィストの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1829,1; },{}
+16111,16111,ギターの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1929,1; },{}
+16112,16112,ランテの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1983,1; },{}
+16113,16113,ダマスカスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 13048,1; },{}
+16114,16114,フランベルジェの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 13422,1; },{}
+16115,16115,スタナーの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 16002,1; },{}
+16116,16116,幸運の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5521,1; getitem 12391,1; },{}
+16117,16117,クレイモアの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1190,1; },{}
+16118,16118,ジャマダハルの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1286,1; },{}
+16119,16119,ツーハンドアックスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1388,1; },{}
+16120,16120,ランスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1487,1; },{}
+16121,16121,風魔手裏剣・大車輪の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 13309,1; },{}
+16122,16122,オーキッシュアックスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1312,1; },{}
+16123,16123,パイクの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1430,1; },{}
+16124,16124,大百科事典の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1580,1; },{}
+16125,16125,フィストの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1829,1; },{}
+16126,16126,ギターの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1929,1; },{}
+16127,16127,ランテの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1983,1; },{}
+16128,16128,ダマスカスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 13048,1; },{}
+16129,16129,フランベルジェの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 13422,1; },{}
+16130,16130,スタナーの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 16002,1; },{}
+16131,16131,レディタニー人形の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5526,1; },{}
+16132,16132,ルナティック帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5527,1; },{}
+16133,16133,光の守護杖の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2006,1; },{}
+16134,16134,蛙王子の帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5528,1; },{}
+16135,16135,魔王の骨兜の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5529,1; },{}
+16136,16136,女神の祝福10個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12315,10; },{}
+16137,16137,天使の祝福10個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12316,10; },{}
+16138,16138,パウダースノー10個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12317,10; },{}
+16139,16139,リトルハート10個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12318,10; },{}
+16140,16140,派手な花火10個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12326,10; },{}
+16141,16141,金色のイヤリングの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10022,1; },{}
+16142,16142,緑色の福袋の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10023,1; },{}
+16143,16143,ファッションメガネの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10024,1; },{}
+16144,16144,星のヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10025,1; },{}
+16145,16145,トゥルマギ用の房の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10026,1; },{}
+16146,16146,ペット用魂のリングの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10027,1; },{}
+16147,16147,素敵な徽章の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10028,1; },{}
+16148,16148,翡翠の装身具の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10029,1; },{}
+16149,16149,夏団扇の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10030,1; },{}
+16150,16150,死のリングの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10031,1; },{}
+16151,16151,女王のコロネットの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10032,1; },{}
+16152,16152,アフロヘアの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10033,1; },{}
+16153,16153,舞踏会仮面の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10034,1; },{}
+16154,16154,ぜんまいの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10035,1; },{}
+16155,16155,地獄の角の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 10036,1; },{}
+16185,16185,カラス帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5530,1; },{}
+16186,16186,赤ちゃん竜帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5531,1; },{}
+16187,16187,怒った口の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5521,1; },{}
+16188,16188,兎魔術帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5503,1; },{}
+16189,16189,サイドキャップの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5535,1; },{}
+16190,16190,兎魔術帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5503,1; },{}
+16191,16191,サイドキャップの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5535,1; },{}
+16192,16192,クァティ帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5537,1; },{}
+16193,16193,オオハシ帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5538,1; },{}
+16194,16194,ジャガー帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5539,1; },{}
+16195,16195,台湾3月スクロール,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16196,16196,プレイヤー魂シールドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2141,1; },{}
+16197,16197,プレイヤー魂シールドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2142,1; },{}
+16198,16198,プレイヤー魂シールドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2143,1; },{}
+16199,16199,プレイヤー魂シールドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2144,1; },{}
+16200,16200,プレイヤー魂ローブの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 15003,1; },{}
+16201,16201,プレイヤー魂ローブの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 15004,1; },{}
+16202,16202,プレイヤー魂ローブの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 15005,1; },{}
+16203,16203,プレイヤー魂ローブの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 15006,1; },{}
+16204,16204,プレイヤー魂スカーフの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2555,1; },{}
+16205,16205,プレイヤー魂スカーフの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2556,1; },{}
+16206,16206,プレイヤー魂スカーフの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2557,1; },{}
+16207,16207,プレイヤー魂スカーフの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2558,1; },{}
+16208,16208,プレイヤー魂サンダルの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2451,1; },{}
+16209,16209,プレイヤー魂サンダルの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2452,1; },{}
+16210,16210,プレイヤー魂サンダルの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2453,1; },{}
+16211,16211,プレイヤー魂サンダルの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2454,1; },{}
+16212,16212,プレイヤー魂サークレットの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5540,1; },{}
+16213,16213,プレイヤー魂サークレットの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5541,1; },{}
+16214,16214,プレイヤー魂サークレットの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5542,1; },{}
+16215,16215,プレイヤー魂サークレットの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5543,1; },{}
+16216,16216,プレイヤー魂腕輪の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2811,1; },{}
+16217,16217,プレイヤー魂腕輪の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2812,1; },{}
+16218,16218,プレイヤー魂腕輪の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2813,1; },{}
+16219,16219,プレイヤー魂腕輪の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2814,1; },{}
+16220,16220,マリオネットテイミングの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12361,5; getitem 10025,1; },{}
+16221,16221,ウィスパーテイミングの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12363,5; getitem 10027,1; },{}
+16222,16222,インキュバステイミングの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12370,5; getitem 10034,1; },{}
+16223,16223,マリオネットテイミングの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12361,5; getitem 10025,1; },{}
+16224,16224,ウィスパーテイミングの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12363,5; getitem 10027,1; },{}
+16225,16225,インキュバステイミングの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12370,5; getitem 10034,1; },{}
+16226,16226,白羊宮空の宝冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5545,1; },{}
+16227,16227,白羊宮空の王冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5546,1; },{}
+16228,16228,RJC花のカチューシャの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5547,1; },{}
+16229,16229,真紅のローズの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5548,1; },{}
+16230,16230,金牛宮空の宝冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5549,1; },{}
+16231,16231,金牛宮空の王冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5550,1; },{}
+16232,16232,レギンレイヴの翼の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5471,1; },{}
+16233,16233,祭用ロードサークレットの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5552,1; },{}
+16234,16234,祭用ウサギのヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5553,1; },{}
+16235,16235,タコ帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5554,1; },{}
+16236,16236,リーフキャット帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5555,1; },{}
+16237,16237,オットー帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5556,1; },{}
+16238,16238,ワイルドローズ帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5557,1; },{}
+16239,16239,贅沢な帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5558,1; },{}
+16240,16240,ヒュッケの黒い猫耳の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5360,1; },{}
+16241,16241,こっこちゃんの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5431,1; },{}
+16242,16242,ヒュッケの黒い猫耳の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5360,1; },{}
+16243,16243,こっこちゃんの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5431,1; },{}
+16245,16245,台湾4月スクロール,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16246,16246,邪気の王冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5564,1; },{}
+16247,16247,降龍羅漢の仮面の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5565,1; },{}
+16248,16248,伏虎羅漢の仮面の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5566,1; },{}
+16249,16249,騎士団のプレゼントボックス,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5825,1; },{}
+16250,16250,ヴァルキリーのプレゼントボックス,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5826,1; },{}
+16251,16251,双子宮の宝冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5569,1; },{}
+16252,16252,双子宮の王冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5570,1; },{}
+16253,16253,兎のスクロール,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5568,1; },{}
+16254,16254,活性化ポーションの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12404,5; },{}
+16255,16255,活性化ポーションの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12404,5; },{}
+16256,16256,ラグナロクDSの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5481,1; getitem 2781,1; getitem 5483,1; },{}
+16257,16257,仏心スクロール,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16258,16258,高密度ブラディウム5個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6226,5; },{}
+16259,16259,高密度カルニウム5個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6225,5; },{}
+16260,16260,高密度ブラディウム10個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6226,10; },{}
+16261,16261,高密度カルニウム10個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6225,10; },{}
+16262,16262,高密度ブラディウム5個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6226,5; },{}
+16263,16263,高密度カルニウム5個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6225,5; },{}
+16264,16264,高密度ブラディウム10個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6226,10; },{}
+16265,16265,高密度カルニウム10個の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6225,10; },{}
+16266,16266,インドネシアベレー帽の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5580,1; },{}
+16267,16267,要約戦闘教範の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12411,10; },{}
+16268,16268,最強弾力バブルガムの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 12412,10; },{}
+16269,16269,巨蟹宮の宝冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5581,1; },{}
+16270,16270,巨蟹宮の王冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5582,1; },{}
+16271,16271,ホッケーマスクの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5314,1; },{}
+16272,16272,オブザーバの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5315,1; },{}
+16273,16273,オールインワンリングの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2741,1; },{}
+16274,16274,スピリチュアルチューニックの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2384,1; },{}
+16275,16275,リキュパレーティブアーマーの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2385,1; },{}
+16276,16276,シェルターオブレジスタンスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2132,1; },{}
+16277,16277,シルフィードマントの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2543,1; },{}
+16278,16278,リフレッシュシューズの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2439,1; },{}
+16279,16279,トーストの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5391,1; },{}
+16280,16280,荒野の用心棒の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 13109,1; },{}
+16281,16281,レバーアクションライフルの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 13175,1; },{}
+16282,16282,治癒の杖の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1638,1; },{}
+16283,16283,プラックシノスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2752,1; },{}
+16284,16284,ギルドメンバー募集帽の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5336,1; },{}
+16285,16285,パーティーメンバー募集帽の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5337,1; },{}
+16286,16286,ボーイフレンド募集帽の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5338,1; },{}
+16287,16287,ガールフレンド募集帽の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5346,1; },{}
+16288,16288,友達募集帽の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5339,1; },{}
+16289,16289,クレイモアの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1190,1; },{}
+16290,16290,ツーハンドアックスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1388,1; },{}
+16291,16291,ランスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1487,1; },{}
+16292,16292,ジャマダハルの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1286,1; },{}
+16293,16293,風魔手裏剣・大車輪の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 13309,1; },{}
+16294,16294,オーキッシュアックスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1312,1; },{}
+16295,16295,パイクの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1430,1; },{}
+16296,16296,大百科事典の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1580,1; },{}
+16297,16297,フィストの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1829,1; },{}
+16298,16298,ギターの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1929,1; },{}
+16299,16299,ランテの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1983,1; },{}
+16300,16300,ダマスカスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 13048,1; },{}
+16301,16301,フランベルジェの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 13422,1; },{}
+16302,16302,スタナーの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 16002,1; },{}
+16303,16303,怒った口の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 5521,1; },{}
+16304,16304,悪魔の体,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16347,16347,シューティングスターの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 18100,1; },{}
+16348,16348,ブラッディフィアーの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1288,1; },{}
+16349,16349,アルシェピースの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1488,1; },{}
+16350,16350,ヒーリングスタッフの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1653,1; },{}
+16351,16351,アンチデモンシールドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2152,1; },{}
+16352,16352,シューティングスターの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 18100,1; },{}
+16353,16353,ブラッディフィアーの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1288,1; },{}
+16354,16354,アルシェピースの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1488,1; },{}
+16355,16355,ヒーリングスタッフの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 1653,1; },{}
+16356,16356,アンチデモンシールドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 2152,1; },{}
+16371,16371,天香ハ雲外ニ飄ル,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16416,16416,金牛宮のダイアデムの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16417,16417,金牛宮のクラウンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16418,16418,巨大なハエの羽（500個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16419,16419,グリードLv1（30個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16420,16420,アドベンチャーパック,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16421,16421,結婚誓約書の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16422,16422,マジェスティックゴートRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16423,16423,Episode13.1鍵パッケージ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16424,16424,エクスキューショナーRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16425,16425,カトラスRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16426,16426,月光剣Rの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16427,16427,スパナRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16428,16428,太陽剣Rの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16429,16429,トマホークRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16430,16430,ルドラの弓Rの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16431,16431,ポールアクスRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16432,16432,戦闘教範パッケージの箱A,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16433,16433,戦闘教範パッケージの箱A,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16434,16434,戦闘教範パッケージの箱B,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16435,16435,戦闘教範パッケージの箱B,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16436,16436,天秤宮のクラウンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16437,16437,天秤宮のクラウンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16438,16438,天秤宮のダイアデムの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16439,16439,天秤宮のダイアデムの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16440,16440,フィーリルの羽の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16441,16441,戦闘教範パッケージの箱B,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16442,16442,巫俗人の帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16443,16443,巫俗人の帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16444,16444,金冠帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16445,16445,金冠帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16446,16446,天馬ガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16447,16447,天蝎宮のクラウンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16448,16448,天蝎宮のダイアデムの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16449,16449,天蝎宮のクラウンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16450,16450,天蝎宮のダイアデムの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16451,16451,カラス帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16452,16452,光輝の激怒の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16453,16453,トライアングルルーンキャップの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16454,16454,光輝の激怒の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16455,16455,トライアングルルーンキャップの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16456,16456,新婦のリボンのガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16457,16457,狼神伝説,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16458,16458,2009ラブダディの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16459,16459,女王アリの王冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16460,16460,女王アリの王冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16461,16461,赤い翼の帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16462,16462,赤い翼の帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16463,16463,NoFearベルトRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16464,16464,NoFear靴Rの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16465,16465,NoFearアンダーウェアRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16466,16466,光のガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16467,16467,クリスマスカードの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16468,16468,クリスマスカードの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16469,16469,クリスマスカードの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16470,16470,クリスマスカードの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16542,16542,クリスマスの祝福,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16543,16543,雪だるま帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16544,16544,雪だるま帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16548,16548,人馬宮のクラウンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16549,16549,人馬宮のダイアデムの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16550,16550,人馬宮のクラウンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16551,16551,人馬宮のダイアデムの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16554,16554,エルフのサングラスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16555,16555,オーディンの片鱗の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16556,16556,プレミアムリセット石の箱,18,20,,10,,,,,2074075135,2,,,1,,,{ getitem 6320,1; },{}
+16557,16557,ケミカルヘルムチャージ Lv1の箱（10個）,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16558,16558,ケミカルシールドチャージ Lv1の箱（10個）,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16559,16559,ケミカルアーマーチャージ Lv1の箱（10個）,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16560,16560,ケミカルウェポンチャージ Lv1の箱（10個）,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16561,16561,ケミカルチャージスクロールの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16562,16562,マジェスティックデビルガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16563,16563,戦闘教範100の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16564,16564,ドラゴンガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16565,16565,磨羯宮のクラウンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16566,16566,磨羯宮のクラウンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16567,16567,磨羯宮のダイアデムの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16568,16568,磨羯宮のダイアデムの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16569,16569,ブラジリスの卵,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16573,16573,骸骨フードの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16574,16574,骸骨フードの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16575,16575,2010_パグダヤの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16576,16576,幻霊武想,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16577,16577,群龍の首,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16578,16578,スチームガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16579,16579,フェニックスガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16580,16580,ラクマの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16581,16581,ラクマの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16582,16582,赤いウサギのヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16584,16584,ナマケモノ帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16585,16585,ナマケモノ帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16586,16586,ドゥネイールの兜の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16587,16587,ドゥネイールの兜の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16588,16588,吹き出し帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16589,16589,吹き出し帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16590,16590,吹き出し帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16591,16591,Kotakahuanaのガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16592,16592,ファミリー帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16593,16593,ファミリー帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16596,16596,深淵の兜の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16597,16597,深淵の兜の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16598,16598,活性化ポーションの箱Ⅱ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16599,16599,活性化ポーションの箱Ⅱ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16600,16600,春暖ニ花開キ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16601,16601,青いアララス帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16602,16602,青いアララス帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16603,16603,たれボトの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16604,16604,たれボトの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16605,16605,テンドリルリオン帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16606,16606,テンドリルリオン帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16615,16615,かわいいリボンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16616,16616,かわいいリボンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16619,16619,黄色いウサギのヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16620,16620,黄色いウサギのヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16621,16621,ピンクのウサギのヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16622,16622,ピンクのウサギのヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16623,16623,グリーンのウサギのヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16624,16624,グリーンのウサギのヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16625,16625,アスプリカ(体験版)の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16626,16626,メギンギョルド(体験版)の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16627,16627,ブリーシンガメン(体験版)の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16628,16628,ブリュンヒルデ(体験版)の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16629,16629,グランペコのヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16630,16630,グランペコのヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16631,16631,阿里不達ガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16632,16632,きれいな太陽の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16634,16634,鋲付スカーフRの箱Ⅱ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16635,16635,虹のスカーフRの箱Ⅱ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16636,16636,鋲付スカーフRの箱Ⅲ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16637,16637,虹のスカーフRの箱Ⅲ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16638,16638,生命のリボンRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16639,16639,生命のリボンRの箱Ⅱ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16640,16640,生命のリボンRの箱Ⅲ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16641,16641,鋲付スカーフRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16642,16642,虹のスカーフRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16643,16643,鋲付スカーフRの箱Ⅱ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16644,16644,虹のスカーフRの箱Ⅱ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16645,16645,鋲付スカーフRの箱Ⅲ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16646,16646,虹のスカーフRの箱Ⅲ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16647,16647,生命のリボンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16648,16648,生命のリボンRの箱Ⅱ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16649,16649,生命のリボンRの箱Ⅲ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16650,16650,双児宮 天空の宝冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16651,16651,生命のリボンRの箱Ⅲ,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16652,16652,光の火炎,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16654,16654,空翔ケル獅鷲,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16655,16655,高速生命水（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16656,16656,高速生命水（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16657,16657,高速生命水（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16658,16658,高速生命水（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16659,16659,十二宮ダイアデムパック,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16660,16660,魂の錐の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16661,16661,魂の錐の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16662,16662,白羊宮 天空の宝冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16663,16663,白羊宮 天空の王冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16664,16664,獅子宮の聖冠伝説のガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16665,16665,処女宮の聖冠伝説のガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16666,16666,魔法のキャンディ（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16667,16667,魔法のキャンディ（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16668,16668,カラフルなクトゥパットRの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16669,16669,幸運の箱1,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16670,16670,戦闘教範の箱A,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16671,16671,魔法のキャンディ（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16672,16672,魔法のキャンディ（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16673,16673,処女_天秤座の聖冠伝説のガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16675,16675,水滴ガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16677,16677,万能カタログゴールド（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16678,16678,万能カタログゴールド（50個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16679,16679,万能カタログゴールド（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16680,16680,万能カタログゴールド（50個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16681,16681,ブラジル独立ガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16684,16684,ハエの羽（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16685,16685,ハエの羽（50個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16686,16686,ハエの羽（100個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16689,16689,ガルーダ初心者の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16690,16690,ガルーダ初心者の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16691,16691,天秤宮の神冠伝説のガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16692,16692,たれ人形の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16693,16693,三日月の兜の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16694,16694,三日月の兜の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16695,16695,龍の骸骨の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16696,16696,龍の骸骨の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16697,16697,たれうさぎの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16698,16698,たれうさぎの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16699,16699,進化した青い魚の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16700,16700,進化した青い魚の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16701,16701,進化したツインリボンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16702,16702,進化したツインリボンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16703,16703,進化したパイプタバコの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16704,16704,進化したパイプタバコの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16705,16705,ハイビスカスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16706,16706,ハイビスカスの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16707,16707,飛び跳ねポリンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16708,16708,飛び跳ねポリンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16709,16709,魔法のヤカンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16710,16710,魔法のヤカンの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16711,16711,マジックアイズの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16712,16712,マジックアイズの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16713,16713,プロペラの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16714,16714,プロペラの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16715,16715,子犬のヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16716,16716,子犬のヘアバンドの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16717,16717,羊帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16718,16718,羊帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16719,16719,タイガーマスクの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16720,16720,避暑地の帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16721,16721,避暑地の帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16722,16722,風車のかんざしの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16723,16723,風車のかんざしの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16724,16724,バニルミルトの帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16725,16725,バニルミルトの帽子の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16726,16726,睡蓮の冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16727,16727,睡蓮の冠の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16728,16728,毛糸の帽子（桃）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16729,16729,毛糸の帽子（桃）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16730,16730,リボン（緑）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16731,16731,リボン（緑）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16732,16732,子悪魔帽（灰）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16733,16733,子悪魔帽（灰）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16734,16734,たれ猫（青）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16735,16735,たれ猫（青）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16736,16736,ファンタスティックアフロかつらの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16737,16737,ファンタスティックアフロかつらの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16738,16738,とんがり帽子（黄）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16739,16739,とんがり帽子（黄）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16740,16740,海神の加護（23時間）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16741,16741,タチウオR（1時間）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16742,16742,タチウオR（7日）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16743,16743,マカジキR（1時間）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16744,16744,マカジキR（7日）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16745,16745,アジR（1時間）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16746,16746,アジR（7日）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16747,16747,カツオR（1時間）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16748,16748,カツオR（7日）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16749,16749,マランガニR（1時間）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16750,16750,マランガニR（7日）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16751,16751,まだら模様のウナギR（1時間）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16752,16752,まだら模様のウナギR（7日）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16753,16753,祝福を受けた武器鉱石の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16755,16755,祝福を受けた防具鉱石の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16757,16757,ハロウィンガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16758,16758,ウンバラの魂Rの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16759,16759,ウンバラの魂Rの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16760,16760,ウンバラの魂Rの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16761,16761,ウンバラの魂Rの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16762,16762,ウンバラの魂R（7日間）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16763,16763,海神の加護（7日）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16764,16764,海神の加護（15日）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16765,16765,タコ狩り用串（23時間）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16766,16766,タコ狩り用串（3日）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16767,16767,タコ狩り用串（7日）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16768,16768,キラキラスティックの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16769,16769,キラキラスティックの箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16770,16770,マタタビの実（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16771,16771,マタタビの実（20個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16774,16774,アスガルドガチャポン,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16776,16776,万能カタログゴールド（10個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16777,16777,万能カタログゴールド（50個）の箱,18,20,,10,,,,,2074075135,2,,,1,,,{},{}
+16939,16939,ラブエンジェルマジックパウダーの箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12287,1,1,0,0,0,0,0,0,604800; },{}
+16940,16940,ラブエンジェルマジックパウダー（30日）の箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12287,1,1,0,0,0,0,0,0,2419200; },{}
+16941,16941,スクイールマジックパウダーの箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12288,1,1,0,0,0,0,0,0,604800; },{}
+16942,16942,スクイールマジックパウダー（30日）の箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12288,1,1,0,0,0,0,0,0,2419200; },{}
+16943,16943,絵日記マジックパウダーの箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12304,1,1,0,0,0,0,0,0,604800; },{}
+16944,16944,絵日記マジックパウダー（30日）の箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12309,1,1,0,0,0,0,0,0,2419200; },{}
+16945,16945,ミニハートマジックパウダーの箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12305,1,1,0,0,0,0,0,0,604800; },{}
+16946,16946,ミニハートマジックパウダー（30日）の箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12305,1,1,0,0,0,0,0,0,2419200; },{}
+16947,16947,ニューフェイスマジックパウダーの箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12306,1,1,0,0,0,0,0,0,604800; },{}
+16948,16948,ニューフェイスマジックパウダー（30日）の箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12306,1,1,0,0,0,0,0,0,2419200; },{}
+16949,16949,ココママジックパウダーの箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12307,1,1,0,0,0,0,0,0,604800; },{}
+16950,16950,ココママジックパウダー（30日）の箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12307,1,1,0,0,0,0,0,0,2419200; },{}
+16951,16951,魔法の城マジックパウダーの箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12308,1,1,0,0,0,0,0,0,604800; },{}
+16952,16952,魔法の城マジックパウダー（30日）の箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12308,1,1,0,0,0,0,0,0,2419200; },{}
+16953,16953,チャンクマジックパウダーの箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12309,1,1,0,0,0,0,0,0,604800; },{}
+16954,16954,チャンクマジックパウダー（30日）の箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem2 12309,1,1,0,0,0,0,0,0,2419200; },{}
+16998,16998,大天使の羽の箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem 2573,1; },{}
+16999,16999,冒険家のリュックサックの箱,18,20,,1,,,,,2074075135,2,,,1,,,{ getitem 2576,1; },{}
+17037,17037,変身スクロール(デビルチ)10個の箱,18,1,,1,,,,,2074075135,2,,,,,,{ getitem 12658,10; },{}
+17038,17038,変身スクロール(レイドリックアーチャー)10個の箱,18,1,,1,,,,,2074075135,2,,,,,,{ getitem 12659,10; },{}
+17039,17039,変身スクロール(マブカ)10個の箱,18,1,,1,,,,,2074075135,2,,,,,,{ getitem 12660,10; },{}
+17040,17040,変身スクロール(マルドゥーク)10個の箱,18,1,,1,,,,,2074075135,2,,,,,,{ getitem 12661,10; },{}
+17041,17041,変身スクロール(バンシー)10個の箱,18,1,,1,,,,,2074075135,2,,,,,,{ getitem 12662,10; },{}
+17042,17042,変身スクロール(ポリン)10個の箱,18,1,,1,,,,,2074075135,2,,,,,,{ getitem 12663,10; },{}
+17043,17043,変身スクロール(ゴーレム)10個の箱,18,1,,1,,,,,2074075135,2,,,,,,{ getitem 12664,10; },{}
