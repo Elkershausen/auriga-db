@@ -1,0 +1,42 @@
+20240117	patch0089
+
+20240116パッチ分実装
+※102723はリソースファイル名だけ定義されていたため仮定義
+
+400592#イエローキティヘッドフォン#
+400593#ぷにぷにあんよのスタンプフード#
+470254#剣禅一如#
+490481#五行封神陣#
+312044#潜在解放(マイスターII)#
+312975#潜在解放(スピリットハンドラーII)#
+312966#潜在解放(ソウルアセティックII)#
+9143#レッドピタヤの卵#
+9153#ミストレスの卵#
+9154#ジャイアントホーネットの卵#
+9155#ホーネットの卵#
+1001576#ペット用ローヤルゼリー#
+1001577#ペット用ハチ蜜#
+1001578#ミストレス交換チケット#
+1001579#ジャイアントホーネット交換チケット#
+1001580#ホーネット交換チケット#
+1001587#レッドピタヤ交換チケット#
+1000502#浄化の聖水#
+400592,head,イエローキティヘッドフォン,4,20,,500,,10:0,,1,2074075008,2,256,,200,2495,1,{ /* 4次職 拡張4次職 */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"MT_SPARK_BLASTER",Baselevel/10; bonus2 bAddSkillDamageRate,"MT_TRIPLE_LASER",Baselevel/10; }
+400593,head,ぷにぷにあんよのスタンプフード,4,20,,500,,10:0,,1,2074075008,2,256,,200,2496,1,{ /* 4次職 拡張4次職 */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"SH_CHUL_HO_SONIC_CLAW",Baselevel/10; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",Baselevel/10; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",Baselevel/10; }
+470254,shoes,剣禅一如,4,20,,700,,25:15,,1,2074075008,2,64,,200,,1,{ /* 4次職 拡張4次職 */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus bMaxHPrate,4*getequiprefinerycnt(); if(getequiprefinerycnt() >= 5) { bonus bSkillDelayRate,-15; bonus2 bSubRace,Rct_Boss,15; bonus2 bSubRace,Rct_NonBoss,15; bonus2 bMagicSubRace,Rct_Boss,15; bonus2 bMagicSubRace,Rct_NonBoss,15; } if(getequiprefinerycnt() >= 7) { bonus bSkillDelayRate,-25; bonus2 bSubRace,Rct_Boss,25; bonus2 bSubRace,Rct_NonBoss,25; bonus2 bMagicSubRace,Rct_Boss,25; bonus2 bMagicSubRace,Rct_NonBoss,25; } if(equippeditem(311075)){ bonus bCritical,25; bonus bAddCriticalDamage,30; } }
+490481,acc,五行封神陣,4,200,,100,,0:0,,1,2074075008,2,136,,200,,0,{ /* 4次職 拡張4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillCoolDown,"SP_CURSEEXPLOSION",-500; bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",Baselevel/3; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLUE_DRAGON",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_WHITE_TIGER",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_RED_PHOENIX",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLACK_TORTOISE",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",Baselevel/10; }
+312044,ench,潜在解放(マイスターII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"MT_SPARK_BLASTER",-200; bonus2 bAddSkillCoolDown,"MT_TRIPLE_LASER",-200;} }
+312975,ench,潜在解放(スピリットハンドラーII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"SH_CHUL_HO_SONIC_CLAW",-200; bonus2 bAddSkillCoolDown,"SH_HOGOGONG_STRIKE",-200;} }
+312966,ench,潜在解放(ソウルアセティックII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29371)){ bonus2 bAddSkillCoolDown,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",-200; bonus2 bAddSkillCoolDown,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",-300;} }
+9143,pet,レッドピタヤの卵,3,20,,10,,,,,,,,,,,,{ /* ペットにセット効果 */ },{}
+9153,pet,ミストレスの卵,3,20,,10,,,,,,,,,,,,{ /* ペットにセット効果 */ },{}
+9154,pet,ジャイアントホーネットの卵,3,20,,10,,,,,,,,,,,,{ /* ペットにセット効果 */ },{}
+9155,pet,ホーネットの卵,3,20,,10,,,,,,,,,,,,{ /* ペットにセット効果 */ },{}
+1001576,item,ペット用ローヤルゼリー,3,20,,10,,,,,,,,,,,,{ /* [ミストレス]に進化するためのアイテム */ },{}
+1001577,item,ペット用ハチ蜜,3,20,,10,,,,,,,,,,,,{ /* [ジャイアントホーネット]に進化するためのアイテム */ },{}
+1001578,item,ミストレス交換チケット,3,0,,0,,,,,,,,,,,,{},{}
+1001579,item,ジャイアントホーネット交換チケット,3,0,,0,,,,,,,,,,,,{},{}
+1001580,item,ホーネット交換チケット,3,0,,0,,,,,,,,,,,,{},{}
+1001587,item,レッドピタヤ交換チケット,3,0,,0,,,,,,,,,,,,{},{}
+1000502,item,浄化の聖水,3,20,,1,,,,,,,,,,,,{},{}
+//102723,102723,-,2,,,,,,,,,,,,,,,{},{}
