@@ -1,0 +1,28 @@
+add
+28009
+28012
+28013
+28014
+28045
+28046
+28048
+28049
+
+fix
+28022
+28023
+28038
+28047
+
+28009,weapon,退魔神のカタール,9,56000,,1200,120:0,,1,0,4096,2,34,3,70,16,1,{ /* 物理・魔法攻撃時魔王モロク系モンスターに与えるダメージ + 40% 魔王モロク系モンスターから受けるダメージ - 10% */ },{}
+28012,weapon,猫カタール・ツナ,9,50000,,1200,120:0,,1,0,4096,2,34,3,40,16,0,{ /* 物理・魔法攻撃時[地下排水路][暴\窟王の洞窟]に出現するモンスターに与えるダメージ + 50% 受けるダメージ - 30% */ },{}
+28013,weapon,レクイエムカタール,9,100000,,800,140:0,,1,0,4096,2,34,4,100,16,1,{ /* 物理攻撃時[生体工学研究所][戦死者の墓]に与えるダメージ + 40%受けるダメージ - 5% */ },{ bonus bUnbreakableWeapon,0; }
+28014,weapon,古王の双刃,9,20,,2800,150:0,,1,3,4096,2,34,4,130,16,1,{},{ bonus2 bAddSkillDamageRate,"GC_CROSSIMPACT",3*getequiprefinerycnt(); bonus2 bAddSkillDamageRate,"GC_CROSSRIPPERSLASHER",2*getequiprefinerycnt(); bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,5; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,5; } if(getequiprefinerycnt() >= 10) { bonus bDefRatioAtkRace,Rct_Boss; bonus bDefRatioAtkRace,Rct_NonBoss; } }
+28022,weapon,イリュージョン裏切り者,9,20,,1500,140:0,,1,1,4096,2,34,4,150,16,1,{},{ bonus bFlee,50; bonus bFlee2,20; bonus2 bAddRace,Rct_Human,50; if(BaseLevel>=170) bonus2 bResEff,Eff_Sleep,10000; }
+28023,weapon,イリュージョンデスナイフ,9,20,,1700,150:0,,1,1,4096,2,34,4,150,16,1,{},{ bonus bAtkEle,Ele_Undead; bonus bPerfectHitAddRate,10; if(BaseLevel>=170) bonus bPerfectHitAddRate,10; }
+28038,weapon,モイスラ-OS,9,20,,2800,150:250,,1,0,4096,2,34,4,150,16,1,{},{ bonus bFlee2,40; bonus bAddCriticalDamage,BaseLevel; if(getequiprefinerycnt(4)>=7){ bonus2 bAddEle,Ele_All,25; } if(getequiprefinerycnt(4)>=9){ bonus2 bAddEle,Ele_All,25; } if(getequiprefinerycnt(4)>=10){ bonus bCritical,50; } }
+28045,weapon,ナットブレイカー,9,20,,2800,150:250,,1,3,4096,2,34,4,175,16,1,{},{ bonus2 bAddRace,Rct_Boss,60; bonus2 bAddRace,Rct_NonBoss,60; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",150; } }
+28046,weapon,ロイヤルカタール,9,20,,2800,150:250,,1,1,4096,2,34,4,185,16,1,{},{ bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillCoolDown,"GC_ROLLINGCUTTER",-200; } if(equippeditem(310760)){ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } }
+28047,weapon,天蝎宮のカタール,9,20,,1000,10:0,,1,1,4096,2,34,4,1,16,1,{},{ bonus bBaseAtk,100; bonus bAspdAddRate,10; bonus bBaseAtk,readparam(11); bonus bUnbreakableWeapon,0; if(Job == Job_Guillotine){ bonus bFlee,50; bonus2 bAddRace,Rct_Boss,50; bonus2 bAddRace,Rct_NonBoss,50; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; if(getequiprefinerycnt()>=7){ bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; } if(getequiprefinerycnt()>=9){ bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; } } } }
+28048,weapon,リッパークロス,9,20,,2800,150:250,,1,1,4096,2,34,4,100,16,1,{},{ bonus2 bAddSkillDamageRate,"GC_CROSSRIPPERSLASHER",30; if(equippeditem(300314)){ bonus bBaseAtk,100; bonus bMatk,100; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "LK_CONCENTRATION",5; } if(equippeditem(312417)){ bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,5*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); } }
+28049,weapon,アグードフィロ,9,20,,2800,150:250,,1,1,4096,2,34,4,100,16,1,{},{ bonus2 bAddSkillDamageRate,"AS_SONICBLOW",30; if(equippeditem(300314)){ bonus bBaseAtk,100; bonus bMatk,100; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "LK_CONCENTRATION",5; } if(equippeditem(312417)){ bonus2 bAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,5*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt(); bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt(); } }
