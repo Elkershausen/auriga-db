@@ -1,0 +1,46 @@
+add
+312647,ench,潜在解放(アビスチェイサーIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312647,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"ABC_CHAIN_REACTION_SHOT",-169; bonus2 bAddSpCost,"ABC_FRENZY_SHOT",-109; } } }
+312927,ench,潜在解放(アークメイジIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 固定詠唱時間 - 0.5秒 */ },{ if(equippeditem(29371)){} }
+312955,ench,潜在解放(バイオロIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312955,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"BO_ACIDIFIED_ZONE_FIRE",-539; bonus2 bAddSpCost,"BO_ACIDIFIED_ZONE_WIND",-539; bonus2 bAddSpCost,"BO_ACIDIFIED_ZONE_WATER",-479; bonus2 bAddSpCost,"BO_ACIDIFIED_ZONE_GROUND",-479; } } }
+312944,ench,潜在解放(カーディナルVI),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29371)){ bonus3 bAutoActiveMagic,312944,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"CD_ARBITRIUM",-439; bonus2 bAddSpCost,"CD_PNEUMATICUS_PROCELLA",-659; bonus2 bAddSpCost,"CD_FRAMEN",-439; } } }
+312474,ench,潜在解放(ドラゴンナイトIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312474,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"DK_HACKANDSLASHER",-189; bonus2 bAddSpCost,"DK_MADNESS_CRUSHER",-189; } } }
+312941,ench,潜在解放(エレメンタルマスターIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 固定詠唱時間 - 1秒 */ },{ if(equippeditem(29371)){} }
+312961,ench,潜在解放(ハイパーノービスIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29371)){ bonus3 bAutoActiveMagic,312961,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"HN_JUPITEL_THUNDER_STORM",-79; bonus2 bAddSpCost,"HN_HELLS_DRIVE",-69; } } }
+312935,ench,潜在解放(インペリアルガードIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312935,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"IG_OVERSLASH",-239; bonus2 bAddSpCost,"IG_GRAND_JUDGEMENT",-429; bonus2 bAddSpCost,"IG_SHIELD_SHOOTING",-159; } } }
+312932,ench,潜在解放(インクイジターIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"IQ_MASSIVE_F_BLASTER",-100; } }
+312958,ench,潜在解放(マイスターIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312958,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"MT_AXE_STOMP",-299; bonus2 bAddSpCost,"MT_RUSH_QUAKE",-439; } } }
+312969,ench,潜在解放(ナイトウォッチII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312969,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"NW_ONLY_ONE_BULLET",-99; bonus2 bAddSpCost,"NW_SPIRAL_SHOOTING",-179; } } }
+312976,ench,潜在解放(スピリットハンドラーIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312979,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"SH_CHUL_HO_SONIC_CLAW",-99; bonus2 bAddSpCost,"SH_HOWLING_OF_CHUL_HO",-199; bonus2 bAddSpCost,"SH_HOGOGONG_STRIKE",-169; } } }
+312396,ench,潜在解放(シャドウクロスIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312396,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"SHC_IMPACT_CRATER",-209; bonus2 bAddSpCost,"SHC_SAVAGE_IMPACT",-209; } } }
+312963,ench,潜在解放(天帝II),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312963,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"SKE_TWINKLING_GALAXY",-269; bonus2 bAddSpCost,"SKE_STAR_BURST",-269;}} }
+312967,ench,潜在解放(ソウルアセティックIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 固定詠唱時間 - 0.5秒 */ },{ if(equippeditem(29371)){ } }
+312972,ench,潜在解放(蜃気楼&不知火II),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312972,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"NJ_KIRIKAGE",-229; bonus2 bAddSpCost,"SS_KAGENOMAI",-189; bonus2 bAddSpCost,"SS_KAGEGISSEN",-189; bonus2 bAddSpCost,"SS_KAGEAKUMU",-279; } } }
+312951,ench,潜在解放(トルバドゥール&トルヴェールII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312951,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"TR_RHYTHMSHOOTING",-109; bonus2 bAddSpCost,"TR_ROSEBLOSSOM",-229; } } }
+312938,ench,潜在解放(ウィンドホークV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312938,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"WH_CRESCIVE_BOLT",-119; bonus2 bAddSpCost,"WH_GALESTORM",-169; } } }
+311409,ench,無属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Neutral,5; }
+
+item_cardtype.txt
+312647,ench,潜在解放(アビスチェイサーIV),2
+312927,ench,潜在解放(アークメイジIV),2
+312955,ench,潜在解放(バイオロIV),2
+312944,ench,潜在解放(カーディナルVI),2
+312474,ench,潜在解放(ドラゴンナイトIV),2
+312941,ench,潜在解放(エレメンタルマスターIV),2
+312961,ench,潜在解放(ハイパーノービスIII),2
+312935,ench,潜在解放(インペリアルガードIV),2
+312932,ench,潜在解放(インクイジターIII),2
+312958,ench,潜在解放(マイスターIII),2
+312969,ench,潜在解放(ナイトウォッチII),2
+312976,ench,潜在解放(スピリットハンドラーIII),2
+312396,ench,潜在解放(シャドウクロスIII),2
+312963,ench,潜在解放(天帝II),2
+312967,ench,潜在解放(ソウルアセティックIII),2
+312972,ench,潜在解放(蜃気楼&不知火II),2
+312951,ench,潜在解放(トルバドゥール&トルヴェールII),2
+312938,ench,潜在解放(ウィンドホークV),2
+311409,ench,無属性耐性 + 5%,2
+
+fix
+//420158,head,イエスタデイ・ワンス・モア,4,,10,500,,0:5,,0,2074075135,2,1,,100,2264,0,{},{ bonus bAspdAddRate,10; if(equippeditem(311072)){ bonus2 bAddSize,Size_Small,15; bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Big,15; bonus2 bMagicAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Medium,15; bonus2 bMagicAddSize,Size_Big,15; } }
+1001471,item,コンプリエッグ,3,,10,0,,,,,,,,,,,,{},{}
+
