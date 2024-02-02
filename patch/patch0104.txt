@@ -1,0 +1,111 @@
+fix
+5914,cos,[衣装] 蝶のはためき,4,20,,,,,,0,2074075135,2,4096,,1,0,0,{},{ hateffect HAT_EF_FLUTTER_BUTTERFLY,TRUE; },{ hateffect HAT_EF_FLUTTER_BUTTERFLY,FALSE; }
+5979,cos,[衣装] 舞い降る天使の羽,4,20,,,,,,0,2074075135,2,4096,,1,0,0,{},{ hateffect HAT_EF_ANGEL_FLUTTERING,TRUE; },{ hateffect HAT_EF_ANGEL_FLUTTERING,FALSE; }
+
+15952,cos,[衣装] ナーガの金冠,4,20,,,,,,0,2074075135,2,1024,,1,2296,0,{},{ hateffect HAT_EF_C_15th_Nov_Helmet,TRUE; },{ hateffect HAT_EF_C_15th_Nov_Helmet,FALSE; }
+
+18740,cos,[衣装] 激昂する逆毛,4,20,,,,,,0,2074075135,2,1024,,1,879,0,{},{}
+18742,cos,[衣装] 月と星の煌めき,4,20,,,,,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_C_MoonStar_Accessory,TRUE; },{ hateffect HAT_EF_C_MoonStar_Accessory,FALSE; }
+18744,cos,[衣装] スーパースター,4,20,,,,,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_LJOSALFAR,TRUE; },{ hateffect HAT_EF_LJOSALFAR,FALSE; }
+
+19600,cos,[衣装] たれキエル,4,20,,,,,,0,2074075135,2,1024,,1,909,0,{},{}
+19602,cos,[衣装] インビジブルキャップ,4,20,,,,,,0,2074075135,2,1024,,1,0,0,{},{}
+19603,cos,[衣装] インビジブルサングラス,4,20,,,,,,0,2074075135,2,2048,,1,0,0,{},{}
+19604,cos,[衣装] インビジブルマスク,4,20,,,,,,0,2074075135,2,4096,,1,0,0,{},{}
+
+20015,cos,[衣装] 大統領のひげ,4,20,,,,,,0,2074075135,2,4096,,1,1205,0,{},{}
+20153,cos,[衣装] モノクロームキャップ,4,20,,,,,,0,2074075135,2,1024,,1,1274,0,{},{}
+20154,cos,[衣装] 舞い落ちる紅葉,4,20,,,,,,0,2074075135,2,4096,,1,1275,0,{},{ hateffect HAT_EF_C_MAPLE_WHICH_FALLS_RD,TRUE; },{ hateffect HAT_EF_C_MAPLE_WHICH_FALLS_RD,FALSE; }
+20205,cos,[衣装] 装飾用花,4,20,,,,,,0,2074075135,2,1024,,1,4,0,{},{}
+20323,cos,[衣装] 音の煌めき,4,20,,,,,,0,2074075135,2,4096,,1,0,0,{},{ hateffect HAT_EF_decoration_of_music,TRUE; },{ hateffect HAT_EF_decoration_of_music,FALSE; }
+20240,cos,[衣装] 雪の贈り物,4,20,,,,,,0,2074075135,2,4096,,1,0,0,{},{ hateffect HAT_EF_GIFT_OF_SNOW,TRUE; },{ hateffect HAT_EF_GIFT_OF_SNOW,FALSE; }
+20307,cos,[衣装] ビギナー帽,4,20,,,,,,0,2074075135,2,4096,,1,1348,0,{},{ if(BaseLevel<99){ bonus bHit,30-BaseLevel/10*3; bonus bMaxHP,1000-BaseLevel/10*100; bonus bMaxSP,200-BaseLevel/10*20; bonus bCastrate,-(10-BaseLevel/10); bonus2 bItemHealRate,13,50; callfunc "ItemdbAlmightyHeal",0x7F,150-(BaseLevel/10*10); callfunc "ItemdbAlmightySubHeal",0x7F,BaseLevel/10*10; } bonus4 bAutoActiveSkill,142,20307,10000,1000; if(checkactiveitem()) { warp "ac_cl_room.gat",37,30; } }
+20439,cos,[衣装] 新春の輝き,4,20,,,,,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_GLOW_OF_NEW_YEAR,TRUE; },{ hateffect HAT_EF_GLOW_OF_NEW_YEAR,FALSE; }
+20476,cos,[レンタル衣装] エレガントウェーブ,4,20,,,,,,0,2074075135,2,4096,,1,2011,0,{},{ /* アイテムが変わっているためhateffectを削除 */}
+20508,cos,[衣装] 看板娘,4,20,,,,,,0,2074075135,2,1024,,1,1446,0,{},{}
+20515,cos,[衣装] 魔法陣,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_MAGICCIRCLE,TRUE; },{ hateffect HAT_EF_MAGICCIRCLE,FALSE; }
+20519,cos,[衣装] 満開の桜,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_Full_BloomCherry_Tree,TRUE; },{ hateffect HAT_EF_Full_BloomCherry_Tree,FALSE; }
+20524,cos,[衣装] 輝く天使の翼,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_C_Shining_Angel_Wing,TRUE; },{ hateffect HAT_EF_C_Shining_Angel_Wing,FALSE; }
+20532,cos,[衣装] 紅焔の爆裂波動(肩にかける物),4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_DOUBLEGUMGANG,TRUE; },{ hateffect HAT_EF_DOUBLEGUMGANG,FALSE; }
+20535,cos,[衣装] デジタル空間,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_Digital_Space,TRUE; },{ hateffect HAT_Digital_Space,FALSE; }
+20537,cos,[衣装] 舞い落ちる赤い紅葉,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_C_Maple_Which_Falls_Rd,TRUE; },{ hateffect HAT_EF_C_Maple_Which_Falls_Rd,FALSE; }
+20538,cos,[衣装] 虹色の魔法陣,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_MagiccircleRainbow,TRUE; },{ hateffect HAT_EF_MagiccircleRainbow,FALSE; }
+20544,cos,[衣装] ゴールデンシャワー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_gold_shower,TRUE; },{ hateffect HAT_EF_gold_shower,FALSE; }
+20547,cos,[衣装] ウィスパーの祝福,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_C_Ghost_Effect,TRUE; },{ hateffect HAT_EF_C_Ghost_Effect,FALSE; }
+20548,cos,[衣装] はじけるポリンオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_C_Popping_Poring_Aura,TRUE; },{ hateffect HAT_EF_C_Popping_Poring_Aura,FALSE; }
+20549,cos,[衣装] ブルーエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Royal_Guard_Blue,TRUE; },{ hateffect HAT_EF_99LV_Royal_Guard_Blue,FALSE; }
+20550,cos,[衣装] バイオレットエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Warlock_Violet,TRUE; },{ hateffect HAT_EF_99LV_Warlock_Violet,FALSE; }
+20551,cos,[衣装] ライトブルーエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Sorcerer_LBlue,TRUE; },{ hateffect HAT_EF_99LV_Sorcerer_LBlue,FALSE; }
+20552,cos,[衣装] グリーンエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Ranger_Green,TRUE; },{ hateffect HAT_EF_99LV_Ranger_Green,FALSE; }
+20553,cos,[衣装] ピンクエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Minstrel_Pink,TRUE; },{ hateffect HAT_EF_99LV_Minstrel_Pink,FALSE; }
+20554,cos,[衣装] ホワイトエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Archbishop_White,TRUE; },{ hateffect HAT_EF_99LV_Archbishop_White,FALSE; }
+20555,cos,[衣装] シルバーエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Guill_Silver,TRUE; },{ hateffect HAT_EF_99LV_Guill_Silver,FALSE; }
+20556,cos,[衣装] ブラックエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_ShadowC_Black,TRUE; },{ hateffect HAT_EF_99LV_ShadowC_Black,FALSE; }
+20557,cos,[衣装] ゴールドエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Mechanic_Gold,TRUE; },{ hateffect HAT_EF_99LV_Mechanic_Gold,FALSE; }
+20558,cos,[衣装] イエローグリーンエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Genetic_YGreen,TRUE; },{ hateffect HAT_EF_99LV_Genetic_YGreen,FALSE; }
+20559,cos,[衣装] レッドオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Rune_Red,TRUE; },{ hateffect HAT_EF_160LV_Rune_Red,FALSE; }
+20560,cos,[衣装] ブルーオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Royal_G_Blue,TRUE; },{ hateffect HAT_EF_160LV_Royal_G_Blue,FALSE; }
+20561,cos,[衣装] バイオレットオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Warlock_Violet,TRUE; },{ hateffect HAT_EF_160LV_Warlock_Violet,FALSE; }
+20562,cos,[衣装] ライトブルーオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Sorcerer_LBlue,TRUE; },{ hateffect HAT_EF_160LV_Sorcerer_LBlue,FALSE; }
+20563,cos,[衣装] グリーンオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Ranger_Green,TRUE; },{ hateffect HAT_EF_160LV_Ranger_Green,FALSE; }
+20564,cos,[衣装] ピンクオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Minstrel_Pink,TRUE; },{ hateffect HAT_EF_160LV_Minstrel_Pink,FALSE; }
+20565,cos,[衣装] ホワイトオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Archb_White,TRUE; },{ hateffect HAT_EF_160LV_Archb_White,FALSE; }
+20566,cos,[衣装] シルバーオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Guill_Silver,TRUE; },{ hateffect HAT_EF_160LV_Guill_Silver,FALSE; }
+20567,cos,[衣装] ブラックオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_ShadowC_Black,TRUE; },{ hateffect HAT_EF_160LV_ShadowC_Black,FALSE; }
+20568,cos,[衣装] ゴールドオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Mechanic_Gold,TRUE; },{ hateffect HAT_EF_160LV_Mechanic_Gold,FALSE; }
+20569,cos,[衣装] イエローグリーンオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Genetic_YGreen,TRUE; },{ hateffect HAT_EF_160LV_Genetic_YGreen,FALSE; }
+20583,cos,[衣装] イリュージョンクリスタル,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_Magic_Star_TW,TRUE; },{ hateffect HAT_EF_Magic_Star_TW,FALSE; }
+20587,cos,[衣装] 光と闇の翼,4,20,,,,,,0,2074075135,2,8192,,1,20,0,{},{}
+20601,cos,[衣装] レッドエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Rune_Red,TRUE; },{ hateffect HAT_EF_99LV_Rune_Red,FALSE; }
+20608,cos,[衣装] ミッドナイトブルーエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_STAR_E_MBLUE,TRUE; },{ hateffect HAT_EF_99LV_STAR_E_MBLUE,FALSE; }
+20609,cos,[衣装] ミッドナイトブルーオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_STAR_E_MBLUE,TRUE; },{ hateffect HAT_EF_160LV_STAR_E_MBLUE,FALSE; }
+20610,cos,[衣装] グレーエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_SOUL_R_GRAY,TRUE; },{ hateffect HAT_EF_99LV_SOUL_R_GRAY,FALSE; }
+20611,cos,[衣装] グレーオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_SOUL_R_GRAY,TRUE; },{ hateffect HAT_EF_160LV_SOUL_R_GRAY,FALSE; }
+20765,cos,[衣装] 大天使の翼,4,20,,,,,,0,2074075135,2,8192,,1,1,0,{},{}
+20950,cos,[衣装] ファイアーレッドオーラ,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_LEVEL99_RED,TRUE; },{ hateffect HAT_EF_LEVEL99_RED,FALSE; }
+24422,cos,[衣装] ファイアーレッドエナジー,4,20,,,,,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_LEVEL160_RED,TRUE; },{ hateffect HAT_EF_LEVEL160_RED,FALSE; }
+
+add
+2007,weapon,ゴールデンロッドスタッフ,9,20,,900,30:230,,1,2,512,2,34,4,100,23,1,{},{}
+2008,weapon,アクアスタッフ,9,20,,900,30:230,,1,2,512,2,34,4,100,23,1,{},{}
+2009,weapon,クリムゾンスタッフ,9,20,,900,30:230,,1,2,512,2,34,4,100,23,1,{},{ bonus bAtkEle,Ele_Fire; bonus bInt,3; bonus2 bAddSkillDamageRate,"MG_FIREBALL",10; bonus2 bAddSkillDamageRate,"MG_FIREBOLT",10; if((equippeditem(2469) && equippeditem(2861) && equippeditem(15027))) { bonus2 bSubEle,Ele_Fire,15; if(getequiprefinerycnt(4) >= 7 && getequiprefinerycnt(2) >= 7 && getequiprefinerycnt(6) >= 7) { bonus2 bAddEleMagicDamageRate,Ele_Fire,30; bonus2 bAddEleMagicDamageRate,Ele_Water,-30; bonus2 bSubEle,Ele_Water,-50; } else { bonus2 bAddEleMagicDamageRate,Ele_Fire,20; bonus2 bAddEleMagicDamageRate,Ele_Water,-15; bonus2 bSubEle,Ele_Water,-25; } } if(equippeditem(28373)) { bonus bMaxHP,1000; } }
+2010,weapon,フォレストスタッフ,9,20,,900,30:230,,1,2,512,2,34,4,100,23,1,{},{}
+2011,weapon,ゴールデンロッドスタッフⅡ,9,20,,900,30:270,,1,1,512,2,34,4,130,23,1,{},{}
+2012,weapon,アクアスタッフⅡ,9,20,,900,30:270,,1,1,512,2,34,4,130,23,1,{},{}
+2013,weapon,クリムゾンスタッフⅡ,9,20,,900,30:270,,1,1,512,2,34,4,130,23,1,{},{ bonus bAtkEle,Ele_Fire; bonus bInt,5; bonus2 bAddSkillDamageRate,"MG_FIREBALL",30; bonus2 bAddSkillDamageRate,"MG_FIREBOLT",30; if((equippeditem(2469) && equippeditem(2861) && equippeditem(15027))) { bonus2 bSubEle,Ele_Fire,15; if(getequiprefinerycnt(4) >= 7 && getequiprefinerycnt(2) >= 7 && getequiprefinerycnt(6) >= 7) { bonus2 bAddEleMagicDamageRate,Ele_Fire,50; bonus2 bAddEleMagicDamageRate,Ele_Water,-60; bonus2 bSubEle,Ele_Water,-50; } else { bonus2 bAddEleMagicDamageRate,Ele_Fire,40; bonus2 bAddEleMagicDamageRate,Ele_Water,-40; bonus2 bSubEle,Ele_Water,-30; } } if(equippeditem(28373)) { bonus bMaxHP,1000; } }
+2014,weapon,フォレストスタッフⅡ,9,20,,900,30:270,,1,1,512,2,34,4,130,23,1,{},{}
+2467,shoes,ゴールデンロッドシューズ,4,20,,500,,12:2,,0,512,2,64,,100,,1,{},{}
+2468,shoes,アクアシューズ,4,20,,500,,12:2,,0,512,2,64,,100,,1,{},{}
+2469,shoes,クリムゾンシューズ,4,20,,500,,12:2,,0,512,2,64,,100,,1,{},{ bonus bMaxHP,500; bonus2 bSubEle,Ele_Fire,10; if(equippeditem(28373)) { bonus2 bSubEle,Ele_Fire,-1*getequiprefinerycnt(); } }
+2470,shoes,フォレストシューズ,4,20,,500,,12:2,,0,512,2,64,,100,,1,{},{}
+2476,shoes,ペオースグリーブ,4,20,,900,,32:0,,1,128,2,64,,100,,1,{},{ bonus bMaxSP,40; if(getequiprefinerycnt() >= 8) { bonus bAgi,getequiprefinerycnt()-7; } if(equippeditem(28373)) { bonus2 bAddCastRate,"RK_WINDCUTTER",-50; if(getequiprefinerycnt() >= 7) { bonus2 bAddCastRate,"RK_WINDCUTTER",-50; } } }
+2478,shoes,ナブのシューズ,4,20,,400,,18:0,,1,4096,2,64,,100,,1,{},{}
+2480,shoes,黒羽のブーツ,4,20,,400,,18:0,,1,2048,2,64,,100,,1,{},{ bonus bMaxSPrate,5; bonus bInt,2; if(equippeditem(28373)) { bonus bVit,getequiprefinerycnt(); } }
+2575,robe,ペオースマント,4,20,,600,,16:0,,0,128,2,4,,100,,1,{},{ bonus bFlee,10; bonus bCritical,10; if(equippeditem(28373)) { bonus2 bAddSkillDamageRate,"RK_WINDCUTTER",50*getequiprefinerycnt()/2; } }
+2578,robe,ナブのフード,4,20,,100,,13:0,,0,4096,2,4,,100,,1,{},{}
+2581,robe,黒羽のマント,4,20,,200,,15:0,,0,2048,2,4,,100,,1,{},{ bonus bInt,2; if(getequiprefinerycnt() >= 7) { bonus bFlee2,getequiprefinerycnt()-6; } if(equippeditem(28373)) { bonus bFlee2,3*getequiprefinerycnt(); } }
+2859,acc,ゴールデンロッドオーブ,4,20,,200,,2:2,,0,512,2,136,,100,,,{},{}
+2860,acc,アクアオーブ,4,20,,200,,2:2,,0,512,2,136,,100,,,{},{}
+2861,acc,クリムゾンオーブ,4,20,,200,,2:2,,0,512,2,136,,100,,,{},{ bonus bInt,1; bonus2 bSubEle,Ele_Fire,10; if(sc_ison(SC_SIGHT)) { bonus4 bAutoSpell,"WZ_SIGHTRASHER",3,30,EAS_REVENGE|EAS_WEAPON|EAS_MAGIC|EAS_SELF; } if(equippeditem(28373)) { bonus2 bAddEleMagicDamageRate,Ele_Fire,10; } }
+2862,acc,フォレストオーブ,4,20,,200,,2:2,,0,512,2,136,,100,,,{},{}
+2884,acc,ペオースブローチ,4,20,,200,,3:0,,1,128,2,136,,100,,,{},{ bonus bMaxSP,20; bonus bBaseAtk,15; if(equippeditem(28373)) { bonus bMaxSP,20; bonus bBaseAtk,15; } }
+2887,acc,ナブのリング,4,20,,100,,0:0,,0,4096,2,136,,100,,,{},{}
+2891,acc,黒羽のブローチ,4,20,,100,,0:0,,0,2048,2,136,,100,,,{},{ bonus bInt,2; bonus bFlee2,3; if(equippeditem(28373)) { bonus bInt,2; bonus bFlee2,3; } }
+15025,armor,ゴールデンロッドローブ,4,20,,500,,40:0,,0,512,2,16,,100,,1,{},{}
+15026,armor,アクアローブ,4,20,,500,,40:0,,0,512,2,16,,100,,1,{},{}
+15027,armor,クリムゾンローブ,4,20,,500,,40:10,,0,512,2,16,,100,,1,{},{ bonus bDefEle,Ele_Fire; bonus bInt,1; bonus2 bAddSkillCastTime,"WZ_METEOR",-3000; if(readparam(bInt) >= 120) { bonus bInt,1; } if(equippeditem(28373)) { bonus2 bAddSkillDamageRate,"WL_SUMMONFB",2*getequiprefinerycnt(); } }
+15028,armor,フォレストローブ,4,20,,500,,40:0,,0,512,2,16,,100,,1,{},{}
+15037,armor,ペオースプレート,4,20,,3000,,110:10,,0,128,2,16,,100,,1,{},{ bonus bBaseAtk,20; bonus bFlee,17; if(equippeditem(28373)) { bonus bMaxHPrate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSpCost,"RK_WINDCUTTER",-15; bonus2 bAddSpCost,"RK_IGNITIONBREAK",-25; } } if((equippeditem(2476) && equippeditem(2575) && equippeditem(2884))) { bonus2 bAddSkillDamageRate,"RK_SONICWAVE",100; bonus2 bAddSkillDamageRate,"RK_WINDCUTTER",100; if(getequiprefinerycnt(2) >= 7 && getequiprefinerycnt(5) >= 7 && getequiprefinerycnt(6) >= 7) { bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus4 bAutoActiveSkill,"LK_CONCENTRATION",15037,10000,10000; } else { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus4 bAutoActiveSkill,"LK_CONCENTRATION",15037,10000,5000; } if(checkactiveitem()) { bonus bAspd,2; } } }
+15039,armor,ナブのクロース,4,20,,100,,45:0,,1,4096,2,16,,100,,1,{},{}
+15043,armor,黒羽のスーツ,4,20,,100,,45:0,,1,2048,2,16,,100,,1,{},{ bonus bInt,2; bonus bBaseAtk,getequiprefinerycnt()*3; if(equippeditem(28373)) { bonus2 bAddRace,Rct_Boss,2*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,2*getequiprefinerycnt(); } if((equippeditem(2480) && equippeditem(2581) && equippeditem(2891))) { bonus bAspd,-7; if(getequiprefinerycnt(2) >= 7 && getequiprefinerycnt(5) >= 7 && getequiprefinerycnt(6) >= 7) { bonus bMaxHPrate,15; bonus bFlee2,10; bonus2 bAddSkillDamageRate,"RA_CLUSTERBOMB",30; bonus bAddLongWeaponDamage,-30; } else { bonus bMaxHPrate,10; bonus bFlee2,5; bonus2 bAddSkillDamageRate,"RA_CLUSTERBOMB",20; bonus bAddLongWeaponDamage,-20; } } }
+28236,weapon,メタルキングコブラ,15,20,,850,170:0,,5,1,268435456,2,34,4,130,18,1,{},{ bonus bVit,3; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus bAddLongWeaponDamage,50; bonus2 bAddSkillCoolDown,"RL_AM_BLAST",-5000; bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*readparam(bInt)/10; if(readparam(bInt) >= 110) { bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",30; } bonus2 bAddFixCastRate,"RL_AM_BLAST",-10; }
+28237,weapon,メタルダイヤモンドバック,15,20,,2500,120:0,,5,1,268435456,2,34,4,130,19,1,{},{ bonus bVit,3; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus bAddLongWeaponDamage,50; bonus2 bAddSkillDamageRate,"RL_R_TRIP",7*readparam(bAgi)/10; if(readparam(bAgi) >= 110) { bonus2 bAddSkillDamageRate,"RL_R_TRIP",30; } bonus2 bAddSkillDamageRate,"RL_R_TRIP",30*getequiprefinerycnt(); }
+28238,weapon,メタルアナコンダ,15,20,,3000,180:0,,5,1,268435456,2,34,4,130,20,1,{},{ bonus bVit,3; bonus bSplashAddRange,1; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus bAddLongWeaponDamage,50; bonus2 bAddSkillCoolDown,"RL_S_STORM",-2000; bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",7*readparam(bStr)/10; if(readparam(bStr) >= 110) { bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",30; } bonus2 bAddSkillDamageRate,"RL_S_STORM",15*getequiprefinerycnt(); }
+28239,weapon,メタルパイソン,15,20,,1400,210:0,,5,1,268435456,2,34,4,130,21,1,{},{ bonus bVit,3; bonus2 bSubRace,Rct_Player,30; bonus2 bMagicSubRace,Rct_Player,30; bonus bAddLongWeaponDamage,50; bonus2 bAddSkillCoolDown,"RL_D_TAIL",-4500; bonus2 bAddSkillDamageRate,"RL_D_TAIL",7*readparam(bLuk)/10; if(readparam(bLuk)/10>= 110) { bonus2 bAddSkillDamageRate,"RL_D_TAIL",30; } bonus2 bAddCastRate,"RL_D_TAIL",-10*getequiprefinerycnt(); }
+28307,acc,踏破の指輪,4,20,,100,,0:0,,0,2074075135,2,136,,1,,0,{ /* それゆけ！古代遺跡探険隊 クエストアイテム */ },{ if(equippeditem(2751)){ bonus bBaseAtk,70; bonus bMatk,60; } if(equippeditem(2888)){ bonus bBaseAtk,70; bonus bMatk,60; } }
+28308,acc,制覇の指輪,4,20,,100,,0:0,,0,2074075135,2,136,,1,,0,{ /* それゆけ！古代遺跡探険隊 クエストアイテム */ },{ if(equippeditem(28307)){ bonus bBaseAtk,70; bonus bMatk,60; bonus bHit,20; } }
+28373,acc,アルティメットモードチェンジャー,4,200000,,200,,0:0,,1,2074075135,2,136,,100,,0,{ /* セット効果は対象アイテムに分散して追加・全て装備時の効果はここに記述予定 */ /* 対象アイテム [2476 2575 2884 15037] [2480 2581 2891 15043] [2009 2013 2469 2861 15027] [2008 2012 2468 2860 15026] [2007 2011 2467 2859 15025] [2010 2014 2470 2862 15028] [2478 2578 2887 15039] */ },{ bonus bMaxSP,20; }
+28387,acc,神官のネックレス,4,20,,200,,0:0,,0,2074075135,2,136,,70,,0,{ /* 2016 EPISODE EDDA クエストアイテム 夢の加護エンチャント [真昼の弦月] クリア報酬 */ },{}
+28388,acc,血塗られた鉄球,4,50000,,4000,,0:0,,1,2065686526,2,136,,1,,0,{ /* [ローラの鎖鉄球]セット効果実装済み */ },{ if((equippeditem(2408) || equippeditem(22015))) { bonus bBaseAtk,50; bonus2 bAddDefClass,1196,20; bonus2 bAddDefClass,1479,20; bonus2 bAddDefClass,1197,20; bonus2 bAddDefClass,1480,20; } if(equippeditem(2913)){ bonus bBaseAtk,10; } }
+28390,acc,幻影の刻印,4,20,,50,,0:0,,0,2074075135,2,136,,1,,0,{ /* 幻影の刻印エンチャント */ },{}
+28393,acc,RJC2015缶バッジ,4,20,,100,,0:0,,1,2074075135,2,136,,1,,0,{ /* [レッドスリムポーション][イエロースリムポーション][ホワイトスリムポーション] のHP回復量 + 10% */ },{}
