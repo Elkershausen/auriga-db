@@ -1,1225 +1,1386 @@
 //ID,Name,Jname,Composition_Type
-4001,Poring_Card,ポリンカード,0
-4002,Fabre_Card,ファブルカード,1
-4003,Pupa_Card,プパカード,0
-4004,Drops_Card,ドロップスカード,1
-4005,Santa_Poring_Card,サンタポリンカード,1
-4006,Lunatic_Card,ルナティックカード,1
-4007,Pecopeco_Egg_Card,ペコペコの卵カード,1
-4008,Picky_Card,ピッキカード,0
-4009,Chonchon_Card,チョンチョンカード,0
-4010,Willow_Card,ウィローカード,0
-4011,Picky_Egg_Card,すごいピッキカード,0
-4012,Thiefbug_Egg_Card,盗蟲の卵カード,0
-4013,Andre_Egg_Card,アンドレの卵カード,0
-4014,Roda_Frog_Card,ロッダフロッグカード,0
-4015,Condor_Card,コンドルカード,0
-4016,Thief_Bug_Card,盗蟲カード,0
-4017,Savage_Bebe_Card,サベージベベカード,1
-4018,Andre_Larva_Card,アンドレの幼虫カード,1
-4019,Hornet_Card,ホーネットカード,1
-4020,Familiar_Card,ファミリアーカード,1
-4021,Rocker_Card,ロッカーカード,0
-4022,Spore_Card,スポアカード,0
-4023,Baby_Desertwolf_Card,子デザートウルフカード,0
-4024,Plankton_Card,プランクトンカード,1
-4025,Skeleton_Card,スケルトンカード,1
-4026,Female_Thiefbug_Card,雌盗蟲カード,1
-4027,Kukre_Card,ククレカード,0
-4028,Tarou_Card,タロウカード,0
-4029,Wolf_Card,ウルフカード,1
-4030,Mandragora_Card,マンドラゴラカード,1
-4031,Pecopeco_Card,ペコペコカード,0
-4032,Ambernite_Card,アンバーナイトカード,0
-4033,Poporing_Card,ポポリンカード,0
-4034,Wormtail_Card,ワームテールカード,0
-4035,Hydra_Card,ヒドラカード,1
-4036,Muka_Card,ムカーカード,0
-4037,Boa_Card,スネイクカード,1
-4038,Zombie_Card,ゾンビカード,0
-4039,Stainer_Card,スタイナーカード,0
-4040,Creamy_Card,クリーミーカード,0
-4041,Coco_Card,コーコーカード,0
-4042,Steel_Chonchon_Card,スチールチョンチョンカード,0
-4043,Andre_Card,アンドレカード,1
-4044,Smokie_Card,スモーキーカード,0
-4045,Horn_Card,ホルンカード,0
-4046,Martin_Card,マーティンカード,0
-4047,Ghostring_Card,ゴーストリングカード,0
-4048,Poison_Spore_Card,ポイズンスポアカード,0
-4049,Vadon_Card,バドンカード,1
-4050,Male_Thiefbug_Card,雄盗蟲カード,0
-4051,Yoyo_Card,ヨーヨーカード,0
-4052,Elder_Willow_Card,エルダーウィローカード,0
-4053,Vitata_Card,ビタタカード,0
-4054,Angeling_Card,エンジェリングカード,0
-4055,Marina_Card,マリナカード,1
-4056,Dustiness_Card,ダスティネスカード,0
-4057,Metaller_Card,メタルラカード,1
-4058,Thara_Frog_Card,タラフロッグカード,0
-4059,Soldier_Andre_Card,兵隊アンドレカード,0
-4060,Goblin_Card,ゴブリンカード,1
-4061,Cornutus_Card,カナトウスカード,0
-4062,Anacondaq_Card,アナコンダクカード,1
-4063,Caramel_Card,キャラメルカード,1
-4064,Zerom_Card,ゼロムカード,0
-4065,Kaho_Card,カホカード,1
-4066,Orc_Warrior_Card,オークウォリアーカード,0
-4067,Megalodon_Card,メガロドンカード,0
-4068,Scorpion_Card,スコーピオンカード,1
-4069,Drainliar_Card,ドレインリアーカード,1
-4070,Eggyra_Card,エギラカード,0
-4071,Orc_Zombie_Card,オークゾンビカード,0
-4072,Golem_Card,ゴーレムカード,1
-4073,Pirate_Skel_Card,パイレーツスケルカード,0
-4074,Bigfoot_Card,ビッグフットカード,0
-4075,Argos_Card,アルゴスカード,0
-4076,Magnolia_Card,白蓮玉カード,1
-4077,Phen_Card,フェンカード,0
-4078,Savage_Card,サベージカード,0
-4079,Mantis_Card,マンティスカード,0
-4080,Flora_Card,フローラカード,1
-4081,Hode_Card,ホードカード,0
-4082,Desert_Wolf_Card,デザートウルフカード,1
-4083,Rafflesia_Card,ラフレシアカード,0
-4084,Marine_Sphere_Card,マリンスフィアーカード,0
-4085,Orc_Skeleton_Card,オークスケルトンカード,1
-4086,Soldier_Skeleton_Card,ソルジャースケルトンカード,1
-4087,Giearth_Card,ガイアスカード,0
-4088,Frilldora_Card,フリルドラカード,0
-4089,Swordfish_Card,ソードフィッシュカード,0
-4090,Munak_Card,ムナックカード,0
-4091,Kobold_Card,コボルドカード,0
-4092,Skel_Worker_Card,スケルワーカーカード,1
-4093,Obeaune_Card,オボンヌカード,0
-4094,Archer_Skeleton_Card,アーチャースケルトンカード,1
-4095,Marse_Card,マルスカード,0
-4096,Zenorc_Card,ゼノークカード,1
-4097,Matyr_Card,マーターカード,0
-4098,Dokebi_Card,ドケビカード,0
-4099,Pasana_Card,パサナカード,0
-4100,Sohee_Card,ソヒーカード,0
-4101,Sandman_Card,サンドマンカード,0
-4102,Whisper_Card,ウィスパーカード,0
-4103,Horong_Card,ホロンカード,0
-4104,Requiem_Card,レクイエムカード,1
-4105,Marc_Card,マルクカード,0
-4106,Mummy_Card,マミーカード,1
-4107,Verit_Card,ベリットカード,0
-4108,Myst_Card,ミストカード,0
-4109,Jakk_Card,ジャックカード,0
-4110,Ghoul_Card,グールカード,0
-4111,Strouf_Card,ストラウフカード,1
-4112,Marduk_Card,マルドゥークカード,0
-4113,Marionette_Card,マリオネットカード,0
-4114,Argiope_Card,アルギオペカード,0
-4115,Hunter_Fly_Card,ハンターフライカード,1
-4116,Isis_Card,イシスカード,0
-4117,Sidewinder_Card,サイドワインダーカード,1
-4118,Earth_Petite_Card,グラウンドプティットカード,1
-4119,Bathory_Card,バースリーカード,0
-4120,Sky_Petite_Card,スカイプティットカード,0
-4121,Phreeoni_Card,フリオニカード,1
-4122,Deviruchi_Card,デビルチカード,0
-4123,Eddga_Card,エドガカード,0
-4124,Medusa_Card,メデューサカード,0
-4125,Deviace_Card,デビアスカード,1
-4126,Minorous_Card,ミノタウロスカード,1
-4127,Nightmare_Card,ナイトメアカード,0
-4128,Golden_Thiefbug_Card,黄金蟲カード,0
-4129,Bapho_Jr_Card,バフォメットジュニアカード,0
-4130,Scorpion_King_Card,スコーピオンキングカード,1
-4131,Moonlight_Flower_Card,月夜花カード,0
-4132,Mistress_Card,ミストレスカード,0
-4133,Raydric_Card,レイドリックカード,0
-4134,Dracula_Card,ドラキュラカード,1
-4135,Orc_Lord_Card,オークロードカード,0
-4136,Khalitzburg_Card,カーリッツバーグカード,0
-4137,Drake_Card,ドレイクカード,1
-4138,Anubis_Card,アヌビスカード,0
-4139,Joker_Card,ジョーカーカード,0
-4140,Abysmal_Knight_Card,深淵の騎士カード,1
-4141,Evil_Druid_Card,イビルドルイドカード,0
-4142,Doppelganger_Card,ドッペルゲンガーカード,1
-4143,Orc_Hero_Card,オークヒーローカード,0
-4144,Osiris_Card,オシリスカード,0
-4145,Berzebub_Card,ヴェルゼブブカード,0
-4146,Maya_Card,マヤーカード,0
-4147,Baphomet_Card,バフォメットカード,1
-4148,Pharaoh_Card,ファラオカード,0
-4149,Gargoyle_Card,ガーゴイルカード,0
-4150,Goat_Card,ゴートカード,0
-4151,Gajomart_Card,ガジョマートカード,0
-4152,Galapago_Card,ガラパゴカード,0
-4153,Crab_Card,カニカード,1
-4154,Dumpling_Kid_Card,団子童子カード,0
-4155,Goblin_Leader_Card,ゴブリンリーダーカード,1
-4156,Goblin_Steamrider_Card,ゴブリンライダーカード,1
-4157,Goblin_Archer_Card,ゴブリンアーチャーカード,1
-4158,Sky_Deleter_Card,スカイデリーターカード,0
-4159,Nine_Tail_Card,九尾狐カード,0
-4160,Firelock_Soldier_Card,銃奇兵カード,0
-4161,Grand_Peco_Card,グランペコカード,0
-4162,Grizzly_Card,グリズリーカード,0
-4163,Gryphon_Card,グリフォンカード,1
-4164,Gullinbursti_Card,グリンブルスティカード,0
-4165,Gig_Card,ギグカード,1
-4166,Nightmare_Terror_Card,ナイトメアテラーカード,0
-4167,Nereid_Card,ネレイドカード,1
-4168,Dark_Lord_Card,ダークロードカード,0
-4169,Dark_Illusion_Card,ダークイリュージョンカード,0
-4170,Dark_Frame_Card,ダークフレームカード,0
-4171,Dark_Priest_Card,ダークプリーストカード,1
-4172,The_Paper_Card,一反木綿カード,1
-4173,Demon_Fungus_Card,デーモンパンクカード,0
-4174,Deviling_Card,デビルリングカード,0
-4175,Poisonous_Toad_Card,大口蛙カード,0
-4176,Dullahan_Card,デュラハンカード,1
-4177,Dryad_Card,ドリアードカード,0
-4178,Dragon_Tail_Card,ドラゴンテイルカード,0
-4179,Dragon_Fly_Card,ドラゴンフライカード,0
-4180,Driller_Card,ドリラーカード,1
-4181,Disguise_Card,ディスガイズカード,0
-4182,Diabolic_Card,ディアボリックカード,1
-4183,Vagabond_Wolf_Card,さすらい狼カード,0
-4184,Lava_Golem_Card,ラーヴァゴーレムカード,1
-4185,Rideword_Card,ライドワードカード,0
-4186,Raggler_Card,レグルロカード,0
-4187,Raydric_Archer_Card,レイドリックアーチャーカード,0
-4188,Leib_Olmai_Card,レイブオルマイカード,0
-4189,Wraith_Dead_Card,デッドリーレイスカード,0
-4190,Wraith_Card,レイスカード,0
-4191,Loli_Ruri_Card,ロリルリカード,0
-4192,Rotar_Zairo_Card,ロータージャイロカード,1
-4193,Lude_Card,ルードカード,0
-4194,Rybio_Card,リビオカード,0
-4195,Leaf_Cat_Card,リーフキャットカード,0
-4196,Marin_Card,マーリンカード,0
-4197,Mastering_Card,マスターリングカード,0
-4198,Maya_Purple_Card,マヤパープルカード,0
-4199,Merman_Card,半漁人カード,0
-4200,Megalith_Card,メガリスカード,0
-4201,Majoruros_Card,ごっついミノタウロスカード,0
-4202,Mao_Guai_Card,ミョグェカード,1
-4203,Mutant_Dragonoid_Card,ミュータントドラゴンカード,1
-4204,Mini_Demon_Card,ミニデモカード,0
-4205,Mimic_Card,ミミックカード,0
-4206,Myst_Case_Card,ミストケースカード,0
-4207,Mysteltainn_Card,ミステルテインカード,0
-4208,Miyabi_Doll_Card,雅人形カード,0
-4209,Violy_Card,ヴァイオリーカード,0
-4210,Wanderer_Card,彷徨う者カード,0
-4211,Vocal_Card,ボーカルカード,0
-4212,Bongun_Card,ボンゴンカード,0
-4213,Brilight_Card,ブリライトカード,0
-4214,Bloody_Murderer_Card,ブラッディマーダーカード,1
-4215,Blazzer_Card,ブレイザーカード,0
-4216,Sasquatch_Card,サスカッチカード,0
-4217,Enchanted_Peach_Tree_Card,人面桃樹カード,0
-4218,Succubus_Card,サキュバスカード,0
-4219,Sage_Worm_Card,セージワームカード,0
-4220,Solider_Card,ソリッドタートルカード,0
-4221,Skeleton_General_Card,ジェネラルスケルトンカード,0
-4222,Skel_Prisoner_Card,スケルプリズナーカード,0
-4223,Stalactic_Golem_Card,スタラクタイトゴーレムカード,0
-4224,Stem_Worm_Card,ステムワームカード,0
-4225,Stone_Shooter_Card,フレイムシューターカード,1
-4226,Sting_Card,スティングカード,0
-4227,Spring_Rabbit_Card,スプリングラビットカード,0
-4228,Sleeper_Card,スリーパーカード,0
-4229,Tower_Keeper_Card,時計塔管理者カード,0
-4230,Shinobi_Card,カブキ忍者カード,0
-4231,Mi_Gao_Card,土精カード,0
-4232,Hermit_Plant_Card,老人参カード,0
-4233,Baby_Leopard_Card,コウカード,0
-4234,Anolian_Card,アノリアンカード,0
-4235,Christmas_Cookie_Card,クリスマスクッキーカード,0
-4236,Amon_Ra_Card,アモンラーカード,0
-4237,Owl_Duke_Card,オウルデュークカード,0
-4238,Owl_Baron_Card,オウルバロンカード,0
-4239,Iron_Fist_Card,アイアンフィストカード,0
-4240,Arclouze_Card,アクラウスカード,0
-4241,Arc_Angeling_Card,アークエンジェリングカード,0
-4242,Apocalipse_Card,アポカリプスカード,0
-4243,Antonio_Card,アンソニカード,0
-4244,Alarm_Card,アラームカード,0
-4245,Am_Mut_Card,アムムトカード,0
-4246,Assaulter_Card,アサルトタートルカード,1
-4247,Aster_Card,ヒトデカード,1
-4248,Ancient_Mummy_Card,エンシェントマミーカード,0
-4249,Ancient_Worm_Card,エンシェントワームカード,0
-4250,Executioner_Card,エクスキューショナーカード,0
-4251,Elder_Card,エルダーカード,1
-4252,Alligator_Card,アリゲーターカード,0
-4253,Alice_Card,アリスカード,0
-4254,Ogretooth_Card,オーガトゥースカード,0
-4255,Orc_Lady_Card,オークレディカード,1
-4256,Orc_Archer_Card,オークアーチャーカード,0
-4257,Wild_Rose_Card,ワイルドローズカード,0
-4258,Evil_Nymph_Card,天仙娘々カード,0
-4259,Wooden_Golem_Card,ウドゥンゴーレムカード,0
-4260,Wootan_Shooter_Card,ウータンシューターカード,0
-4261,Wootan_Fighter_Card,ウータンファイターカード,0
-4262,Cloud_Hermit_Card,天邪仙人カード,0
-4263,Samurai_Specter_Card,怨霊武士カード,1
-4264,Wind_Ghost_Card,ウィンドゴーストカード,0
-4265,Jing_Guai_Card,虎人カード,0
-4266,Eclipse_Card,エクリプスカード,0
-4267,Explosion_Card,エクスプロージョンカード,0
-4268,Injustice_Card,インジャスティスカード,1
-4269,Incubus_Card,インキュバスカード,0
-4270,Giant_Spider_Card,ジャイアントスパイダーカード,0
-4271,Giant_Hornet_Card,ジャイアントホーネットカード,0
-4272,Zhu_Po_Long_Card,小龍舞カード,0
-4273,Shell_Fish_Card,お化け貝カード,1
-4274,Zombie_Master_Card,ゾンビマスターカード,1
-4275,Zombie_Prisoner_Card,ゾンビプリズナーカード,0
-4276,Lord_of_the_Dead_Card,ロードオブデスカード,1
-4277,Zealotus_Card,ジルタスカード,0
-4278,Gibbet_Card,ジビットカード,0
-4279,Earth_Deleter_Card,グラウンドデリーターカード,0
-4280,Geographer_Card,ジオグラファーカード,0
-4281,Zipper_Bear_Card,チャッキーカード,1
-4282,Tengu_Card,酒天狗カード,0
-4283,Greatest_General_Card,天下大将軍カード,0
-4284,Chepet_Card,チェペットカード,1
-4285,Choco_Card,チョコカード,0
-4286,Karakasa_Card,カラ傘カード,0
-4287,Kapha_Card,河童カード,0
-4288,Carat_Card,ジェスターカード,0
-4289,Caterpillar_Card,キャタピラーカード,1
-4290,Cat_O'_Nine_Tails_Card,キャットナインテイルカード,0
-4291,Kobold_Leader_Card,コボルドリーダーカード,1
-4292,Kobold_Archer_Card,コボルドアーチャーカード,1
-4293,Cookie_Card,クッキーカード,0
-4294,Quve_Card,キューブカード,0
-4295,Kraben_Card,クラベンカード,0
-4296,Cramp_Card,クランプカード,0
-4297,Cruiser_Card,クルーザーカード,1
-4298,Creamy_Fear_Card,クリーミーフィアーカード,0
-4299,Clock_Card,クロックカード,0
-4300,Chimera_Card,キメラカード,0
-4301,Killer_Mantis_Card,キラーマンティスカード,0
-4302,Tao_Gunka_Card,タオグンカカード,0
-4303,Giant_Whisper_Card,巨大ウィスパーカード,0
-4304,Tamruan_Card,タムランカード,0
-4305,Turtle_General_Card,タートルジェネラルカード,1
-4306,Toad_Card,トードカード,0
-4307,Beetle_King_Card,ビートルカード,1
-4308,Tri_Joint_Card,三葉蟲カード,1
-4309,Parasite_Card,フェアリーフカード,0
-4310,Panzer_Goblin_Card,パンツァーゴブリンカード,1
-4311,Permeter_Card,パーメットタートルカード,0
-4312,Fur_Seal_Card,オットーカード,1
-4313,Punk_Card,パンクカード,0
-4314,Penomena_Card,ペノメナカード,0
-4315,Pest_Card,ペストカード,0
-4316,False_Angel_Card,フェイクエンジェルカード,1
-4317,Mobster_Card,チンピラカード,1
-4318,Stormy_Knight_Card,ストームナイトカード,1
-4319,Freezer_Card,フリーズタートルカード,0
-4320,Bloody_Knight_Card,ブラッディナイトカード,1
-4321,Hylozoist_Card,ハイローゾイストカード,0
-4322,High_Orc_Card,ハイオークカード,0
-4323,Hatii_Bebe_Card,ハティーベベカード,1
-4324,Hatii_Card,ハティーカード,0
-4325,Harpy_Card,ハーピーカード,0
-4326,Sea_Otter_Card,シーオッターカード,0
-4327,Bloody_Butterfly_Card,パピヨンカード,0
-4328,Yao_Jun_Card,ヒェグンカード,0
-4329,Phendark_Card,フェンダークカード,1
-4330,Evil_Snake_Lord_Card,黒蛇王カード,0
-4331,Heater_Card,ヒートタートルカード,0
-4332,Waste_Stove_Card,ジャンクポットカード,0
-4333,Venomous_Card,ベノマスカード,0
-4334,Noxious_Card,ノクシャスカード,0
-4335,Pitman_Card,ピットマンカード,1
-4336,Ungoliant_Card,ウンゴリアントカード,0
-4337,Porcellio_Card,ポルセリオカード,0
-4338,Obsidian_Card,オブシディアンカード,0
-4339,Mineral_Card,ミネラルカード,0
-4340,Teddy_Bear_Card,ベアドールカード,0
-4341,Metaling_Card,メタリンカード,1
-4342,RSX_0806_Card,RSX-0806カード,0
-4343,Holden_Card,モルデンカード,0
-4344,Anopheles_Card,ウィレスカード,0
-4345,Hill_Wind_Card,ヒルウィンドカード,1
-4346,Egnigem_Cenia_Card,イグニゼム=セニアカード,0
-4347,Armeyer_Dinze_Card,アルマイア=デュンゼカード,0
-4348,Wickebine_Tres_Card,ヒュッケバイン=トリスカード,0
-4349,Errende_Ebecee_Card,イレンド=エベシカード,0
-4350,Laurell_Weinder_Card,ラウレル=ヴィンダーカード,1
-4351,Kavach_Icarus_Card,カヴァク=イカルスカード,0
-4352,Boss_Egnigem_Card,イグニゼム=セニア（MVP）カード,0
-4353,Remover_Card,リムーバカード,0
-4354,Gemini_S58_Card,ジェミニ-S58カード,0
-4355,Gremlin_Card,グレムリンカード,0
-4356,Beholder_Card,ビホルダーカード,0
-4357,Lord_Knight_Card,セイレン=ウィンザー（MVP）カード,0
-4358,Seyren_Windsor_Card,セイレン=ウィンザーカード,0
-4359,Assassin_Cross_Card,エレメス=ガイル（MVP）カード,0
-4360,Eremes_Guile_Card,エレメス=ガイルカード,1
-4361,Mastersmith_Card,ハワード=アルトアイゼン（MVP）カード,1
-4362,Howard_Alt_Eisen_Card,ハワード=アルトアイゼンカード,1
-4363,High_Priest_Card,マーガレッタ=ソリン（MVP）カード,0
-4364,Margaretha_Sorin_Card,マーガレッタ=ソリンカード,0
-4365,High_Wizard_Card,カトリーヌ=ケイロン（MVP）カード,0
-4366,Kathryne_Keyron_Card,カトリーヌ=ケイロンカード,0
-4367,Sniper_Card,セシル=ディモン（MVP）カード,1
-4368,Cecil_Damon_Card,セシル=ディモンカード,1
-4369,Venatu_Card,ヴェナートカード,0
-4370,Dimik_Card,ディミックカード,0
-4371,Archdam_Card,アークダムカード,0
-4372,White_Lady_Card,ペクソジンカード,0
-4373,Green_Maiden_Card,チュンイーカード,0
-4374,Vesper_Card,ヴェスパーカード,0
-4375,Orc_Baby_Card,オークベイビーカード,0
-4376,Lady_Tanee_Card,レディータニーカード,0
-4377,Grove_Card,グリーンイグアナカード,0
-4378,Gold_Acidus_Card,ゴールドオシドスカード,0
-4379,Blue_Acidus_Card,ブルーオシドスカード,0
-4380,Red_Ferus_Card,レッドペロスカード,1
-4381,Green_Ferus_Card,グリーンペロスカード,0
-4382,Yellow_Novus_Card,イエローノーバスカード,0
-4383,Red_Novus_Card,レッドノーバスカード,0
-4384,Hydrolancer_Card,ハイドラランサーカード,0
-4385,Dragon_Egg_Card,ドラゴンの卵カード,0
-4386,Detardeurus_Card,データルザウルスカード,0
-4387,Ancient_Mimic_Card,エンシェントミミックカード,0
-4388,Death_Word_Card,デスワードカード,1
-4389,Plasma_Card,プラズマカード,0
-4390,Breeze_Card,ブリーズカード,1
-4391,Baroness_of_Retribution_Card,執行する者カード,0
-4392,Dame_of_Sentinel_Card,監視する者カード,0
-4393,Mistress_of_Shelter_Card,保護する者カード,0
-4394,Lady_Solace_Card,慰める者カード,1
-4395,Maero_of_Thanatos_Card,タナトスの悲しみカード,1
-4396,Odium_of_Thanatos_Card,タナトスの憎悪カード,0
-4397,Despero_of_Thanatos_Card,タナトスの絶望カード,0
-4398,Dolor_of_Thanatos_Card,タナトスの苦悩カード,1
-4399,Memory_of_Thanatos_Card,魔剣士タナトスの思念体カード,1
-4400,Aliza_Card,エリザカード,0
-4401,Alicel_Card,エリセルカード,0
-4402,Aliot_Card,エリオットカード,0
-4403,Kiel_D_01_Card,キエル-D-01カード,0
-4404,Skogul_Card,スコグルカード,0
-4405,Frus_Card,プルスカード,0
-4406,Skeggiold_Card,スケゴルトカード,1
-4407,Randgris_Card,ランドグリスカード,1
-4408,Gloom_Under_Night_Card,グルームアンダーナイトカード,0
-4409,Agav_Card,アガヴカード,0
-4410,Echio_Card,エキオカード,0
-4411,Vanberk_Card,ヴァンベルクカード,0
-4412,Isilla_Card,アイシラカード,0
-4413,Hodremlin_Card,ホドレムリンカード,0
-4414,Seeker_Card,シーカーカード,0
-4415,Snowier_Card,スノウアーカード,0
-4416,Siroma_Card,シロマカード,0
-4417,Ice_Titan_Card,アイスタイタンカード,0
-4418,Gazeti_Card,ゲイズティカード,0
-4419,Ktullanux_Card,クトルラナックスカード,0
-4420,Muscipular_Card,マスキプラーカード,0
-4421,Drosera_Card,ドロセラカード,1
-4422,Roween_Card,ロウィーンカード,0
-4423,Galion_Card,ガリオンカード,0
-4424,Stapo_Card,スタポカード,0
-4425,Atroce_Card,アトロスカード,1
-4426,Byorgue_Card,ビョルグカード,0
-4427,Sword_Guardian_Card,ソードガーディアンカード,1
-4428,Bow_Guardian_Card,ボウガーディアンカード,1
-4429,Salamander_Card,サラマンダーカード,0
-4430,Ifrit_Card,イフリートカード,0
-4431,Kasa_Card,カーサカード,0
-4432,Magmaring_Card,マグマリンカード,0
-4433,Imp_Card,インプカード,0
-4434,Knocker_Card,ノッカーカード,0
-4435,Zombie_Slaughter_Card,ゾンビスローターカード,0
-4436,Ragged_Zombie_Card,ラギッドゾンビカード,0
-4437,Hell_Poodle_Card,ヘルプードルカード,0
-4438,Banshee_Card,バンシーカード,0
-4439,Flame_Skull_Card,フレームスカルカード,0
-4440,Necromancer_Card,ネクロマンサーカード,1
-4441,Fallen_Bishop_Card,堕ちた大神官ヒバムカード,0
-4442,Tatacho_Card,タタチョカード,0
-4443,Aqua_Elemental_Card,アクアエレメンタルカード,0
-4444,Draco_Card,ドラコカード,0
-4445,Luciola_Vespa_Card,ルシオラヴェスパカード,0
-4447,Centipede_Card,センチピードカード,0
-4448,Cornus_Card,コルヌスカード,0
-4449,Dark_Shadow_Card,ダークシャドーカード,0
-4450,Banshee_Master_Card,バンシーマスターカード,0
-4451,Entweihen_Crothen_Card,エントヴァイエンカード,0
-4452,Centipede_Larva_Card,センチピード幼虫カード,1
-4453,Hillslion_Card,ヒルスリオンカード,1
-4454,Light_Up_Card1,ヴァルキリーカード1,1
-4455,Light_Up_Card2,ヴァルキリーカード2,1
-4456,Nidhoggur_Shadow_Card,ニーズヘッグの影カード,0
-4457,Naght_Seiger_Card,ナハトズィーガーカード,0
-4458,Duneyrr_Card,ドゥネイールカード,0
-4459,Rata_Card,ラタトスクカード,0
-4460,Rhyncho_Card,リンコカード,0
-4461,Phylla_Card,フィラカード,0
-4462,Hardrock_Mammoth_Card,ハードロックマンモスカード,0
-4463,Tendrillion_Card,テンドリルリオンカード,1
-4464,Aunoe_Card,アウノエカード,1
-4465,Fanat_Card,ファナトカード,1
-4466,Beholder_Master_Card,ビホルダーマスターカード,1
-4467,Heavy_Metaling_Card,ヘビィメタリンカード,0
-4468,Dark_Pinguicula_Card,ダークピンギキュラカード,0
-4469,Naga_Card,ナーガカード,1
-4470,Nepenthes_Card,ネペンテスカード,1
-4471,Draco_Egg_Card,ドラコの卵カード,1
-4472,Bradium_Golem_Card,ブラディウムゴーレムカード,1
-4473,Ancient_Tree_Card,エンシェントツリーカード,1
-4474,Zakudam_Card,ザクダムカード,1
-4475,Cobalt_Mineral_Card,コバルトミネラルカード,1
-4476,Pinguicula_Card,ピンギキュラカード,1
-4477,Hell_Apocalypse_Card,ヘルアポカリプスカード,1
-4505,Scaraba_Card,スカラバカード,0
-4506,Dolomedes_Card,ドロメデスカード,0
-4507,Q_Scaraba_Card,女王スカラバカード,1
-4508,Gold_Scaraba_Card,甲帝スカラバカード,0
-4509,Queen_Scaraba_Card,女帝スカラバカード,0
-4510,Miming_Card,ミミンカード,1
-4511,Little_Fatum_Card,リトルファートゥムカード,1
-4512,Parus_Card,パルスカード,0
-4513,Angra_Mantis_Card,アングラマンティスカード,0
-4514,Pom_Spider_Card,ポムスパイダーカード,1
-4515,Alnold_Card,アーノルディカード,0
-4516,Comodo_Card,デワタドラゴンカード,0
-4517,Cendrawasih_Card,極楽鳥カード,0
-4518,Banaspaty_Card,バナスパティカード,1
-4519,Butoijo_Card,ブトイジョカード,1
-4520,Leak_Card,レヤックカード,0
-4521,Sedora_Card,セドラカード,1
-4522,Sropho_Card,スロフォカード,1
-4523,Pot_Dofle_Card,ドフレカード,0
-4524,King_Dramoh_Card,キングドラモカード,0
-4525,Kraken_Card,クラーケンカード,0
-4526,Odd_Coelacanth_Card,異形のシーラカンスカード,0
-4527,Black_Coelacanth_Card,暗黒のシーラカンスカード,0
-4528,Mutant_Coelacanth_Card,変異のシーラカンスカード,0
-4529,Cruel_Coelacanth_Card,暴虐のシーラカンスカード,0
-4530,Siorava_Card,シオラバカード,0
-4531,Red_Eruma_Card,レッドエルマカード,1
-4532,Wild_Rider_Card,ワイルドライダーカード,0
-4533,Mini_Octopus_Card,子分タコカード,1
-4534,Giant_Octopus_Card,頭領タコカード,0
-4556,Fenrir_Card,フェンリルカード,0
-4557,Weakened_Fenrir_Card,微力のフェンリルカード,0
-4560,Clown_Card,アルフォシオ=バジル（MVP）カード,0
-4561,Professor_Card,セリア=アルデ（MVP）カード,0
-4562,Champion_Card,チェン=リウ（MVP）カード,0
-4563,Creator_Card,エミュール=プラメール（MVP）カード,0
-4564,Stalker_Card,ガーティー=ウー（MVP）カード,0
-4565,Paladin_Card,ランデル=ロレンス（MVP）カード,0
-4566,Gypsy_Card,トレンティーニ（MVP）カード,0
-4567,Alphoccio_Card,アルフォシオ=バジルカード,0
-4568,Ceila_Card,セリア=アルデカード,0
-4569,Chen_Card,チェン=リウカード,0
-4570,Flamel_Card,エミュール=プラメールカード,0
-4571,Gertie_Card,ガーティー=ウーカード,0
-4572,Randel_Card,ランデル=ロレンスカード,0
-4573,Trentini_Card,トレンティーニカード,0
-4578,Pyuriel_Card,狂信者ヒュリエルカード,1
-4580,Kades_Card,亡者の守護者カデスカード,0
-4582,Bungisngis_Card,ブギスギスカード,0
-4583,Engkanto_Card,エンカントカード,0
-4584,Manananggal_Card,マナナンガルカード,1
-4585,Mangkukulam_Card,マンククーラムカード,0
-4586,Tikbalang_Card,ティクバランカード,0
-4587,Tiyanak_Card,チャナックカード,0
-4588,Wakwak_Card,ワクワクカード,0
-4589,Jejeling_Card,ジェジェリンカード,0
-4590,Bangungot_Card,ビョンウンゴカード,0
-4591,Bakonawa_Card,バコナワカード,0
-4592,Buwaya_Card,ブワヤカード,0
-4593,Menblatt_Card,メンブリッツカード,0
-4594,Petal_Card,ペタルカード,0
-4595,Cenere_Card,チェネレカード,0
-4596,Antique_Book_Card,毀損された古書カード,0
-4597,Lichtern_Blue_Card,ヴァッサー・リヒテルンカード,0
-4598,Lichtern_Yellow_Card,ゲルブ・リヒテルンカード,0
-4599,Lichtern_Red_Card,フンケ・リヒテルンカード,0
-4600,Lichtern_Green_Card,フェルス・リヒテルンカード,0
-4601,Amdarais_Card,アムダライスカード,0
-4603,Corruption_Root_Card,誘いの魔眼カード,1
-4605,Undead_Knight_M_Card,苦痛のロイヤルナイトカード,0
-4606,Undead_Knight_F_Card,呪われたロイヤルナイトカード,0
-4607,Faithful_Manager_Card,リヒトヘルシャーカード,1
-4623,Unknown_Item,11thアニバーサリーカード,0
-4625,Time_Holder_Card,タイムホルダーカード,1
-4626,Big_Ben_Card,ビッグベンカード,1
-4627,Big_Bell_Card,ビッグベルカード,1
-4628,Neo_Punk_Card,ネオパンクカード,0
-4629,Arc_Elder_Card,アークエルダーカード,0
-4630,Timer_Keeper_Card,タイムキーパーカード,0
-4631,Owl_Viscount_Card,オウルヴァイカウントカード,0
-4632,Owl_Marquees_Card,オウルマーキスカード,0
-4652,Nightmare_Amon_Ra_Card,アメンホテプカード,0
-4653,Nightmare_Arclouse_Card,グレイヴアクラウスカード,0
-4654,Nightmare_Mimic_Card,グレイヴミミックカード,1
-4655,Nightmare_Minorous_Card,グレイヴミノタウロスカード,1
-4656,Nightmare_Mummy_Card,グレイヴマミーカード,0
-4657,Nightmare_Ancient_Mummy_Card,グレイヴクラウンマミーカード,0
-4658,Nightmare_Verit_Card,グレイヴベリットカード,0
-4700,STR1,Str + 1,2
-4701,STR2,Str + 2,2
-4702,STR3,Str + 3,2
-4703,STR4,Str + 4,2
-4704,STR5,Str + 5,2
-4705,STR6,Str + 6,2
-4706,STR7,Str + 7,2
-4707,STR8,Str + 8,2
-4708,STR9,Str + 9,2
-4709,STR10,Str + 10,2
-4710,INT1,Int + 1,2
-4711,INT2,Int + 2,2
-4712,INT3,Int + 3,2
-4713,INT4,Int + 4,2
-4714,INT5,Int + 5,2
-4715,INT6,Int + 6,2
-4716,INT7,Int + 7,2
-4717,INT8,Int + 8,2
-4718,INT9,Int + 9,2
-4719,INT10,Int + 10,2
-4720,DEX1,Dex + 1,2
-4721,DEX2,Dex + 2,2
-4722,DEX3,Dex + 3,2
-4723,DEX4,Dex + 4,2
-4724,DEX5,Dex + 5,2
-4725,DEX6,Dex + 6,2
-4726,DEX7,Dex + 7,2
-4730,AGI1,Agi + 1,2
-4731,AGI2,Agi + 2,2
-4732,AGI3,Agi + 3,2
-4733,AGI4,Agi + 4,2
-4734,AGI5,Agi + 5,2
-4735,AGI6,Agi + 6,2
-4736,AGI7,Agi + 7,2
-4740,VIT1,Vit + 1,2
-4741,VIT2,Vit + 2,2
-4742,VIT3,Vit + 3,2
-4743,VIT4,Vit + 4,2
-4744,VIT5,Vit + 5,2
-4745,VIT6,Vit + 6,2
-4746,VIT7,Vit + 7,2
-4750,LUK1,Luk + 1,2
-4751,LUK2,Luk + 2,2
-4752,LUK3,Luk + 3,2
-4753,LUK4,Luk + 4,2
-4754,LUK5,Luk + 5,2
-4755,LUK6,Luk + 6,2
-4756,LUK7,Luk + 7,2
-4760,MATK1,Matk 1,2
-4761,MATK2,Matk 2,2
-4762,FLEE6,Flee + 6,2
-4763,FLEE12,Flee + 12,2
-4764,CRI5,Cri + 5,2
-4765,CRI7,Cri + 7,2
-4766,ATK2,Atk 2,2
-4767,ATK3,Atk 3,2
-4768,Unknown_Item,Str + 1,2
-4769,Unknown_Item,Str + 2,2
-4770,Unknown_Item,Str + 3,2
-4771,Unknown_Item,Int + 1,2
-4772,Unknown_Item,Int + 2,2
-4773,Unknown_Item,Int + 3,2
-4774,Unknown_Item,Vit + 1,2
-4775,Unknown_Item,Vit + 2,2
-4776,Unknown_Item,Vit + 3,2
-4777,Unknown_Item,Agi + 1,2
-4778,Unknown_Item,Agi + 2,2
-4779,Unknown_Item,Agi + 3,2
-4780,Unknown_Item,Dex + 1,2
-4781,Unknown_Item,Dex + 2,2
-4782,Unknown_Item,Dex + 3,2
-4783,Unknown_Item,Luk + 1,2
-4784,Unknown_Item,Luk + 2,2
-4785,Unknown_Item,Luk + 3,2
-4786,MDEF2,Mdef + 2,2
-4787,MDEF4,Mdef + 4,2
-4788,MDEF6,Mdef + 6,2
-4789,MDEF8,Mdef + 8,2
-4790,MDEF10,Mdef + 10,2
-4791,DEF3,Def + 3,2
-4792,DEF6,Def + 6,2
-4793,DEF9,Def + 9,2
-4794,DEF12,Def + 12,2
-4795,HP100,HP + 100,2
-4796,HP200,HP + 200,2
-4797,HP300,HP + 300,2
-4798,HP400,HP + 400,2
-4799,HP500,HP + 500,2
-4800,SP50,SP + 50,2
-4801,SP100,SP + 100,2
-4802,SP150,SP + 150,2
-4803,Cure1lv,治癒1,2
-4804,Catholic1lv,大聖堂1,2
-4805,Archbishop1lv,大司教1,2
-4806,MATK3,Matk 3,2
-4807,Atk_Speed1,Aspd + 1,2
-4808,Fighting_Spirit4,闘志4,2
-4809,Fighting_Spirit3,闘志3,2
-4810,Fighting_Spirit2,闘志2,2
-4811,Fighting_Spirit1,闘志1,2
-4812,Spell4,魔力4,2
-4813,Spell3,魔力3,2
-4814,Spell2,魔力2,2
-4815,Spell1,魔力1,2
-4816,Sharp3,先鋭3,2
-4817,Sharp2,先鋭2,2
-4818,Sharp1,先鋭1,2
-4819,Atk1,Atk1,2
-4820,Fighting_Spirit5,闘志5,2
-4821,Fighting_Spirit6,闘志6,2
-4822,Fighting_Spirit7,闘志7,2
-4823,Fighting_Spirit8,闘志8,2
-4824,Fighting_Spirit9,闘志9,2
-4825,Fighting_Spirit10,闘志10,2
-4826,Spell5,魔力5,2
-4827,Spell6,魔力6,2
-4828,Spell7,魔力7,2
-4829,Spell8,魔力8,2
-4830,Spell9,魔力9,2
-4831,Spell10,魔力10,2
-4832,Expert_Archer1,名弓1,2
-4833,Expert_Archer2,名弓2,2
-4834,Expert_Archer3,名弓3,2
-4835,Expert_Archer4,名弓4,2
-4836,Expert_Archer5,名弓5,2
-4837,Expert_Archer6,名弓6,2
-4838,Expert_Archer7,名弓7,2
-4839,Expert_Archer8,名弓8,2
-4840,Expert_Archer9,名弓9,2
-4841,Expert_Archer10,名弓10,2
-4842,Atk_Speed2,Aspd + 2,2
-4843,Sharp4,先鋭4,2
-4844,Sharp5,先鋭5,2
-4845,Sea_Energy,海の力,2
-4846,2011val_Angel,愛でいっぱいの石,2
-4847,2011val_Devil,魔法がかかった石,2
-4848,Immuned1,イミューン1,2
-4849,Cranial1,クラニアル1,2
-4850,Heal_Amount3,大司教2,2
-4851,Heal_Amount4,大司教3,2
-4852,Heal_Amount5,大司教4,2
-4853,Special_Str,Special Str,2
-4854,Special_Agi,Special Agi,2
-4855,Special_Vit,Special Vit,2
-4856,Special_Int,Special Int,2
-4857,Special_Dex,Special Dex,2
-4858,Special_Luk,Special Luk,2
-4859,Evasion1,Flee + 1,2
-4860,Evasion3,Flee + 3,2
-4861,MHP1,MaxHP1,2
-4862,MHP2,MaxHP2,2
-4863,Unknown_Item,致命1,2
-4864,Unknown_Item,致命2,2
-4865,Unknown_Item,致命3,2
-4866,Unknown_Item,致命4,2
-4867,MHP3,MaxHP3,2
-4868,MHP4,MaxHP4,2
-4869,Delayafterattack1lv,攻撃速度1,2
-4870,SP25,SP + 25,2
-4871,SP75,SP + 75,2
-4872,Delayafterattack2lv,攻撃速度2,2
-4873,Delayafterattack3lv,攻撃速度3,2
-4874,Unknown_Item,春の緑柱石,2
-4875,Bears_Power,熊の力,2
-4876,Runaway_Magic,暴走した魔力,2
-4877,Speed_of_Light,光速,2
-4878,Muscle_Fool,鋼鎧,2
-4879,Hawkeye,大鷲の眼光,2
-4880,Lucky_Day,幸運な日,2
-4881,Attack_Delay_4,攻撃速度4,2
-4882,ATK1,Atk + 1%,2
-4883,MATK1,Matk + 1%,2
-4884,HIT1,Hit + 1,2
-4890,MDEF1,Mdef + 1,2
-4891,MDEF3,Mdef + 3,2
-4892,MDEF5,Mdef + 5,2
-4893,DEF15,Def + 15,2
-4894,ATK4,Atk + 4%,2
-4895,ATK5,Atk + 5%,2
-4896,MATK2,Matk + 2%,2
-4897,MATK3,Matk + 3%,2
-4898,MATK4,Matk + 4%,2
-4899,MATK5,Matk + 5%,2
-4900,MHP5,MaxHP5,2
-4901,MDEF7,Mdef + 7,2
-4902,DEF18,Def + 18,2
-4903,DEF21,Def + 21,2
-4908,Darklord_Essence_Force1,魔神の腕力1,1
-4909,Darklord_Essence_Force2,魔神の腕力2,1
-4910,Darklord_Essence_Force3,魔神の腕力3,1
-4911,Darklord_Essence_Intelligence1,魔神の知力1,1
-4912,Darklord_Essence_Intelligence2,魔神の知力2,1
-4913,Darklord_Essence_Intelligence3,魔神の知力3,1
-4914,Darklord_Essence_Speed1,魔神の迅速1,1
-4915,Darklord_Essence_Speed2,魔神の迅速2,1
-4916,Darklord_Essence_Speed3,魔神の迅速3,1
-4917,Darklord_Essence_Vitality1,魔神の体力1,1
-4918,Darklord_Essence_Vitality2,魔神の体力2,1
-4919,Darklord_Essence_Vitality3,魔神の体力3,1
-4920,Darklord_Essence_Concentration1,魔神の集中1,1
-4921,Darklord_Essence_Concentration2,魔神の集中2,1
-4922,Darklord_Essence_Concentration3,魔神の集中3,1
-4923,Darklord_Essence_Luck1,魔神の幸運1,1
-4924,Darklord_Essence_Luck2,魔神の幸運2,1
-4925,Darklord_Essence_Luck3,魔神の幸運3,1
-4933,Neutral_Resistance_Lv1,無属性耐性1,2
-4934,Neutral_Resistance_Lv2,無属性耐性2,2
-4935,Neutral_Resistance_Lv3,無属性耐性3,2
-4942,Parrying_Lv1,完全回避 + 3,2
-4943,Parrying_Lv2,完全回避 + 4,2
-4944,Parrying_Lv3,完全回避 + 5,2
-4945,Economy_Lv1,消費SP - 2%,2
-4946,Economy_Lv2,消費SP - 4%,2
-4947,Economy_Lv3,消費SP - 6%,2
-4949,After_Skill_Delay_Lv2,スキルディレイ - 4%,2
-4950,After_Skill_Delay_Lv3,スキルディレイ - 6%,2
-4951,Unknown_Item,闇ドロップ,2
-4952,Unknown_Item,火ドロップ,2
-4953,Unknown_Item,水ドロップ,2
-4954,Unknown_Item,木ドロップ,2
-4955,Unknown_Item,光ドロップ,2
-4956,Unknown_Item,回復ドロップ,2
-4957,Unknown_Item,ファミ通の力,2
-4958,Unknown_Item,双児宮,2
-4959,Unknown_Item,人馬宮,2
-4960,Unknown_Item,宝瓶宮,2
-4961,Unknown_Item,白羊宮,2
-4962,Unknown_Item,巨蟹宮,2
+4001,card,ポリンカード,0
+4002,card,ファブルカード,1
+4003,card,プパカード,0
+4004,card,ドロップスカード,1
+4005,card,サンタポリンカード,1
+4006,card,ルナティックカード,1
+4007,card,ペコペコの卵カード,1
+4008,card,ピッキカード,0
+4009,card,チョンチョンカード,0
+4010,card,ウィローカード,0
+4011,card,すごいピッキカード,0
+4012,card,盗蟲の卵カード,0
+4013,card,アンドレの卵カード,0
+4014,card,ロッダフロッグカード,0
+4015,card,コンドルカード,0
+4016,card,盗蟲カード,0
+4017,card,サベージベベカード,1
+4018,card,アンドレの幼虫カード,1
+4019,card,ホーネットカード,1
+4020,card,ファミリアーカード,1
+4021,card,ロッカーカード,0
+4022,card,スポアカード,0
+4023,card,子デザートウルフカード,0
+4024,card,プランクトンカード,1
+4025,card,スケルトンカード,1
+4026,card,雌盗蟲カード,1
+4027,card,ククレカード,0
+4028,card,タロウカード,0
+4029,card,ウルフカード,1
+4030,card,マンドラゴラカード,1
+4031,card,ペコペコカード,0
+4032,card,アンバーナイトカード,0
+4033,card,ポポリンカード,0
+4034,card,ワームテールカード,0
+4035,card,ヒドラカード,1
+4036,card,ムカーカード,0
+4037,card,スネイクカード,1
+4038,card,ゾンビカード,0
+4039,card,スタイナーカード,0
+4040,card,クリーミーカード,0
+4041,card,コーコーカード,0
+4042,card,スチールチョンチョンカード,0
+4043,card,アンドレカード,1
+4044,card,スモーキーカード,0
+4045,card,ホルンカード,0
+4046,card,マーティンカード,0
+4047,card,ゴーストリングカード,0
+4048,card,ポイズンスポアカード,0
+4049,card,バドンカード,1
+4050,card,雄盗蟲カード,0
+4051,card,ヨーヨーカード,0
+4052,card,エルダーウィローカード,0
+4053,card,ビタタカード,0
+4054,card,エンジェリングカード,0
+4055,card,マリナカード,1
+4056,card,ダスティネスカード,0
+4057,card,メタルラカード,1
+4058,card,タラフロッグカード,0
+4059,card,兵隊アンドレカード,0
+4060,card,ゴブリンカード,1
+4061,card,カナトウスカード,0
+4062,card,アナコンダクカード,1
+4063,card,キャラメルカード,1
+4064,card,ゼロムカード,0
+4065,card,カホカード,1
+4066,card,オークウォリアーカード,0
+4067,card,メガロドンカード,0
+4068,card,スコーピオンカード,1
+4069,card,ドレインリアーカード,1
+4070,card,エギラカード,0
+4071,card,オークゾンビカード,0
+4072,card,ゴーレムカード,1
+4073,card,パイレーツスケルカード,0
+4074,card,ビッグフットカード,0
+4075,card,アルゴスカード,0
+4076,card,白蓮玉カード,1
+4077,card,フェンカード,0
+4078,card,サベージカード,0
+4079,card,マンティスカード,0
+4080,card,フローラカード,1
+4081,card,ホードカード,0
+4082,card,デザートウルフカード,1
+4083,card,ラフレシアカード,0
+4084,card,マリンスフィアーカード,0
+4085,card,オークスケルトンカード,1
+4086,card,ソルジャースケルトンカード,1
+4087,card,ガイアスカード,0
+4088,card,フリルドラカード,0
+4089,card,ソードフィッシュカード,0
+4090,card,ムナックカード,0
+4091,card,コボルドカード,0
+4092,card,スケルワーカーカード,1
+4093,card,オボンヌカード,0
+4094,card,アーチャースケルトンカード,1
+4095,card,マルスカード,0
+4096,card,ゼノークカード,1
+4097,card,マーターカード,0
+4098,card,ドケビカード,0
+4099,card,パサナカード,0
+4100,card,ソヒーカード,0
+4101,card,サンドマンカード,0
+4102,card,ウィスパーカード,0
+4103,card,ホロンカード,0
+4104,card,レクイエムカード,1
+4105,card,マルクカード,0
+4106,card,マミーカード,1
+4107,card,ベリットカード,0
+4108,card,ミストカード,0
+4109,card,ジャックカード,0
+4110,card,グールカード,0
+4111,card,ストラウフカード,1
+4112,card,マルドゥークカード,0
+4113,card,マリオネットカード,0
+4114,card,アルギオペカード,0
+4115,card,ハンターフライカード,1
+4116,card,イシスカード,0
+4117,card,サイドワインダーカード,1
+4118,card,グラウンドプティットカード,1
+4119,card,バースリーカード,0
+4120,card,スカイプティットカード,0
+4121,card,フリオニカード,1
+4122,card,デビルチカード,0
+4123,card,エドガカード,0
+4124,card,メデューサカード,0
+4125,card,デビアスカード,1
+4126,card,ミノタウロスカード,1
+4127,card,ナイトメアカード,0
+4128,card,黄金蟲カード,0
+4129,card,バフォメットジュニアカード,0
+4130,card,スコーピオンキングカード,1
+4131,card,月夜花カード,0
+4132,card,ミストレスカード,0
+4133,card,レイドリックカード,0
+4134,card,ドラキュラカード,1
+4135,card,オークロードカード,0
+4136,card,カーリッツバーグカード,0
+4137,card,ドレイクカード,1
+4138,card,アヌビスカード,0
+4139,card,ジョーカーカード,0
+4140,card,深淵の騎士カード,1
+4141,card,イビルドルイドカード,0
+4142,card,ドッペルゲンガーカード,1
+4143,card,オークヒーローカード,0
+4144,card,オシリスカード,0
+4145,card,ヴェルゼブブカード,0
+4146,card,マヤーカード,0
+4147,card,バフォメットカード,1
+4148,card,ファラオカード,0
+4149,card,ガーゴイルカード,0
+4150,card,ゴートカード,0
+4151,card,ガジョマートカード,0
+4152,card,ガラパゴカード,0
+4153,card,カニカード,1
+4154,card,団子童子カード,0
+4155,card,ゴブリンリーダーカード,1
+4156,card,ゴブリンライダーカード,1
+4157,card,ゴブリンアーチャーカード,1
+4158,card,スカイデリーターカード,0
+4159,card,九尾狐カード,0
+4160,card,銃奇兵カード,0
+4161,card,グランペコカード,0
+4162,card,グリズリーカード,0
+4163,card,グリフォンカード,1
+4164,card,グリンブルスティカード,0
+4165,card,ギグカード,1
+4166,card,ナイトメアテラーカード,0
+4167,card,ネレイドカード,1
+4168,card,ダークロードカード,0
+4169,card,ダークイリュージョンカード,0
+4170,card,ダークフレームカード,0
+4171,card,ダークプリーストカード,1
+4172,card,一反木綿カード,1
+4173,card,デーモンパンクカード,0
+4174,card,デビルリングカード,0
+4175,card,大口蛙カード,0
+4176,card,デュラハンカード,1
+4177,card,ドリアードカード,0
+4178,card,ドラゴンテイルカード,0
+4179,card,ドラゴンフライカード,0
+4180,card,ドリラーカード,1
+4181,card,ディスガイズカード,0
+4182,card,ディアボリックカード,1
+4183,card,さすらい狼カード,0
+4184,card,ラーヴァゴーレムカード,1
+4185,card,ライドワードカード,0
+4186,card,レグルロカード,0
+4187,card,レイドリックアーチャーカード,0
+4188,card,レイブオルマイカード,0
+4189,card,デッドリーレイスカード,0
+4190,card,レイスカード,0
+4191,card,ロリルリカード,0
+4192,card,ロータージャイロカード,1
+4193,card,ルードカード,0
+4194,card,リビオカード,0
+4195,card,リーフキャットカード,0
+4196,card,マーリンカード,0
+4197,card,マスターリングカード,0
+4198,card,マヤパープルカード,0
+4199,card,半漁人カード,0
+4200,card,メガリスカード,0
+4201,card,ごっついミノタウロスカード,0
+4202,card,ミョグェカード,1
+4203,card,ミュータントドラゴンカード,1
+4204,card,ミニデモカード,0
+4205,card,ミミックカード,0
+4206,card,ミストケースカード,0
+4207,card,ミステルテインカード,0
+4208,card,雅人形カード,0
+4209,card,ヴァイオリーカード,0
+4210,card,彷徨う者カード,0
+4211,card,ボーカルカード,0
+4212,card,ボンゴンカード,0
+4213,card,ブリライトカード,0
+4214,card,ブラッディマーダーカード,1
+4215,card,ブレイザーカード,0
+4216,card,サスカッチカード,0
+4217,card,人面桃樹カード,0
+4218,card,サキュバスカード,0
+4219,card,セージワームカード,0
+4220,card,ソリッドタートルカード,0
+4221,card,ジェネラルスケルトンカード,0
+4222,card,スケルプリズナーカード,0
+4223,card,スタラクタイトゴーレムカード,0
+4224,card,ステムワームカード,0
+4225,card,フレイムシューターカード,1
+4226,card,スティングカード,0
+4227,card,スプリングラビットカード,0
+4228,card,スリーパーカード,0
+4229,card,時計塔管理者カード,0
+4230,card,カブキ忍者カード,0
+4231,card,土精カード,0
+4232,card,老人参カード,0
+4233,card,コウカード,0
+4234,card,アノリアンカード,0
+4235,card,クリスマスクッキーカード,0
+4236,card,アモンラーカード,0
+4237,card,オウルデュークカード,0
+4238,card,オウルバロンカード,0
+4239,card,アイアンフィストカード,0
+4240,card,アクラウスカード,0
+4241,card,アークエンジェリングカード,0
+4242,card,アポカリプスカード,0
+4243,card,アンソニカード,0
+4244,card,アラームカード,0
+4245,card,アムムトカード,0
+4246,card,アサルトタートルカード,1
+4247,card,ヒトデカード,1
+4248,card,エンシェントマミーカード,0
+4249,card,エンシェントワームカード,0
+4250,card,エクスキューショナーカード,0
+4251,card,エルダーカード,1
+4252,card,アリゲーターカード,0
+4253,card,アリスカード,0
+4254,card,オーガトゥースカード,0
+4255,card,オークレディカード,1
+4256,card,オークアーチャーカード,0
+4257,card,ワイルドローズカード,0
+4258,card,天仙娘々カード,0
+4259,card,ウドゥンゴーレムカード,0
+4260,card,ウータンシューターカード,0
+4261,card,ウータンファイターカード,0
+4262,card,天邪仙人カード,0
+4263,card,怨霊武士カード,1
+4264,card,ウィンドゴーストカード,0
+4265,card,虎人カード,0
+4266,card,エクリプスカード,0
+4267,card,エクスプロージョンカード,0
+4268,card,インジャスティスカード,1
+4269,card,インキュバスカード,0
+4270,card,ジャイアントスパイダーカード,0
+4271,card,ジャイアントホーネットカード,0
+4272,card,小龍舞カード,0
+4273,card,お化け貝カード,1
+4274,card,ゾンビマスターカード,1
+4275,card,ゾンビプリズナーカード,0
+4276,card,ロードオブデスカード,1
+4277,card,ジルタスカード,0
+4278,card,ジビットカード,0
+4279,card,グラウンドデリーターカード,0
+4280,card,ジオグラファーカード,0
+4281,card,チャッキーカード,1
+4282,card,酒天狗カード,0
+4283,card,天下大将軍カード,0
+4284,card,チェペットカード,1
+4285,card,チョコカード,0
+4286,card,カラ傘カード,0
+4287,card,河童カード,0
+4288,card,ジェスターカード,0
+4289,card,キャタピラーカード,1
+4290,card,キャットナインテイルカード,0
+4291,card,コボルドリーダーカード,1
+4292,card,コボルドアーチャーカード,1
+4293,card,クッキーカード,0
+4294,card,キューブカード,0
+4295,card,クラベンカード,0
+4296,card,クランプカード,0
+4297,card,クルーザーカード,1
+4298,card,クリーミーフィアーカード,0
+4299,card,クロックカード,0
+4300,card,キメラカード,0
+4301,card,キラーマンティスカード,0
+4302,card,タオグンカカード,0
+4303,card,巨大ウィスパーカード,0
+4304,card,タムランカード,0
+4305,card,タートルジェネラルカード,1
+4306,card,トードカード,0
+4307,card,ビートルカード,1
+4308,card,三葉蟲カード,1
+4309,card,フェアリーフカード,0
+4310,card,パンツァーゴブリンカード,1
+4311,card,パーメットタートルカード,0
+4312,card,オットーカード,1
+4313,card,パンクカード,0
+4314,card,ペノメナカード,0
+4315,card,ペストカード,0
+4316,card,フェイクエンジェルカード,1
+4317,card,チンピラカード,1
+4318,card,ストームナイトカード,1
+4319,card,フリーズタートルカード,0
+4320,card,ブラッディナイトカード,1
+4321,card,ハイローゾイストカード,0
+4322,card,ハイオークカード,0
+4323,card,ハティーベベカード,1
+4324,card,ハティーカード,0
+4325,card,ハーピーカード,0
+4326,card,シーオッターカード,0
+4327,card,パピヨンカード,0
+4328,card,ヒェグンカード,0
+4329,card,フェンダークカード,1
+4330,card,黒蛇王カード,0
+4331,card,ヒートタートルカード,0
+4332,card,ジャンクポットカード,0
+4333,card,ベノマスカード,0
+4334,card,ノクシャスカード,0
+4335,card,ピットマンカード,1
+4336,card,ウンゴリアントカード,0
+4337,card,ポルセリオカード,0
+4338,card,オブシディアンカード,0
+4339,card,ミネラルカード,0
+4340,card,ベアドールカード,0
+4341,card,メタリンカード,1
+4342,card,RSX-0806カード,0
+4343,card,モルデンカード,0
+4344,card,ウィレスカード,0
+4345,card,ヒルウィンドカード,1
+4346,card,イグニゼム=セニアカード,0
+4347,card,アルマイア=デュンゼカード,0
+4348,card,ヒュッケバイン=トリスカード,0
+4349,card,イレンド=エベシカード,0
+4350,card,ラウレル=ヴィンダーカード,1
+4351,card,カヴァク=イカルスカード,0
+4352,card,イグニゼム=セニア（MVP）カード,0
+4353,card,リムーバカード,0
+4354,card,ジェミニ-S58カード,0
+4355,card,グレムリンカード,0
+4356,card,ビホルダーカード,0
+4357,card,セイレン=ウィンザー（MVP）カード,0
+4358,card,セイレン=ウィンザーカード,0
+4359,card,エレメス=ガイル（MVP）カード,0
+4360,card,エレメス=ガイルカード,1
+4361,card,ハワード=アルトアイゼン（MVP）カード,1
+4362,card,ハワード=アルトアイゼンカード,1
+4363,card,マーガレッタ=ソリン（MVP）カード,0
+4364,card,マーガレッタ=ソリンカード,0
+4365,card,カトリーヌ=ケイロン（MVP）カード,0
+4366,card,カトリーヌ=ケイロンカード,0
+4367,card,セシル=ディモン（MVP）カード,1
+4368,card,セシル=ディモンカード,1
+4369,card,ヴェナートカード,0
+4370,card,ディミックカード,0
+4371,card,アークダムカード,0
+4372,card,ペクソジンカード,0
+4373,card,チュンイーカード,0
+4374,card,ヴェスパーカード,0
+4375,card,オークベイビーカード,0
+4376,card,レディータニーカード,0
+4377,card,グリーンイグアナカード,0
+4378,card,ゴールドオシドスカード,0
+4379,card,ブルーオシドスカード,0
+4380,card,レッドペロスカード,1
+4381,card,グリーンペロスカード,0
+4382,card,イエローノーバスカード,0
+4383,card,レッドノーバスカード,0
+4384,card,ハイドラランサーカード,0
+4385,card,ドラゴンの卵カード,0
+4386,card,データルザウルスカード,0
+4387,card,エンシェントミミックカード,0
+4388,card,デスワードカード,1
+4389,card,プラズマカード,0
+4390,card,ブリーズカード,1
+4391,card,執行する者カード,0
+4392,card,監視する者カード,0
+4393,card,保護する者カード,0
+4394,card,慰める者カード,1
+4395,card,タナトスの悲しみカード,1
+4396,card,タナトスの憎悪カード,0
+4397,card,タナトスの絶望カード,0
+4398,card,タナトスの苦悩カード,1
+4399,card,魔剣士タナトスの思念体カード,1
+4400,card,エリザカード,0
+4401,card,エリセルカード,0
+4402,card,エリオットカード,0
+4403,card,キエル-D-01カード,0
+4404,card,スコグルカード,0
+4405,card,プルスカード,0
+4406,card,スケゴルトカード,1
+4407,card,ランドグリスカード,1
+4408,card,グルームアンダーナイトカード,0
+4409,card,アガヴカード,0
+4410,card,エキオカード,0
+4411,card,ヴァンベルクカード,0
+4412,card,アイシラカード,0
+4413,card,ホドレムリンカード,0
+4414,card,シーカーカード,0
+4415,card,スノウアーカード,0
+4416,card,シロマカード,0
+4417,card,アイスタイタンカード,0
+4418,card,ゲイズティカード,0
+4419,card,クトルラナックスカード,0
+4420,card,マスキプラーカード,0
+4421,card,ドロセラカード,1
+4422,card,ロウィーンカード,0
+4423,card,ガリオンカード,0
+4424,card,スタポカード,0
+4425,card,アトロスカード,1
+4426,card,ビョルグカード,0
+4427,card,ソードガーディアンカード,1
+4428,card,ボウガーディアンカード,1
+4429,card,サラマンダーカード,0
+4430,card,イフリートカード,0
+4431,card,カーサカード,0
+4432,card,マグマリンカード,0
+4433,card,インプカード,0
+4434,card,ノッカーカード,0
+4435,card,ゾンビスローターカード,0
+4436,card,ラギッドゾンビカード,0
+4437,card,ヘルプードルカード,0
+4438,card,バンシーカード,0
+4439,card,フレームスカルカード,0
+4440,card,ネクロマンサーカード,1
+4441,card,堕ちた大神官ヒバムカード,0
+4442,card,タタチョカード,0
+4443,card,アクアエレメンタルカード,0
+4444,card,ドラコカード,0
+4445,card,ルシオラヴェスパカード,0
+4447,card,センチピードカード,0
+4448,card,コルヌスカード,0
+4449,card,ダークシャドーカード,0
+4450,card,バンシーマスターカード,0
+4451,card,エントヴァイエンカード,0
+4452,card,センチピード幼虫カード,1
+4453,card,ヒルスリオンカード,1
+4456,card,ニーズヘッグの影カード,0
+4457,card,ナハトズィーガーカード,0
+4458,card,ドゥネイールカード,0
+4459,card,ラタトスクカード,0
+4460,card,リンコカード,0
+4461,card,フィラカード,0
+4462,card,ハードロックマンモスカード,0
+4463,card,テンドリルリオンカード,1
+4464,card,アウノエカード,1
+4465,card,ファナトカード,1
+4466,card,ビホルダーマスターカード,1
+4467,card,ヘビィメタリンカード,0
+4468,card,ダークピンギキュラカード,0
+4469,card,ナーガカード,1
+4470,card,ネペンテスカード,1
+4471,card,ドラコの卵カード,1
+4472,card,ブラディウムゴーレムカード,1
+4473,card,エンシェントツリーカード,1
+4474,card,ザクダムカード,1
+4475,card,コバルトミネラルカード,1
+4476,card,ピンギキュラカード,1
+4477,card,ヘルアポカリプスカード,1
+4481,card,封印されたクトルラナックスカード,0
+4488,card,封印されたダークロードカード,0
+4505,card,スカラバカード,0
+4506,card,ドロメデスカード,0
+4507,card,女王スカラバカード,1
+4508,card,甲帝スカラバカード,0
+4509,card,女帝スカラバカード,0
+4510,card,ミミンカード,1
+4511,card,リトルファートゥムカード,1
+4512,card,パルスカード,0
+4513,card,アングラマンティスカード,0
+4514,card,ポムスパイダーカード,1
+4515,card,アーノルディカード,0
+4516,card,デワタドラゴンカード,0
+4517,card,極楽鳥カード,0
+4518,card,バナスパティカード,1
+4519,card,ブトイジョカード,1
+4520,card,レヤックカード,0
+4521,card,セドラカード,1
+4522,card,スロフォカード,1
+4523,card,ドフレカード,0
+4524,card,キングドラモカード,0
+4525,card,クラーケンカード,0
+4526,card,異形のシーラカンスカード,0
+4527,card,暗黒のシーラカンスカード,0
+4528,card,変異のシーラカンスカード,0
+4529,card,暴虐のシーラカンスカード,0
+4530,card,シオラバカード,0
+4531,card,レッドエルマカード,1
+4532,card,ワイルドライダーカード,0
+4533,card,子分タコカード,1
+4534,card,頭領タコカード,0
+4556,card,フェンリルカード,0
+4557,card,微力のフェンリルカード,0
+4560,card,アルフォシオ=バジル（MVP）カード,0
+4561,card,セリア=アルデ（MVP）カード,0
+4562,card,チェン=リウ（MVP）カード,0
+4563,card,エミュール=プラメール（MVP）カード,0
+4564,card,ガーティー=ウー（MVP）カード,0
+4565,card,ランデル=ロレンス（MVP）カード,0
+4566,card,トレンティーニ（MVP）カード,0
+4567,card,アルフォシオ=バジルカード,0
+4568,card,セリア=アルデカード,0
+4569,card,チェン=リウカード,0
+4570,card,エミュール=プラメールカード,0
+4571,card,ガーティー=ウーカード,0
+4572,card,ランデル=ロレンスカード,0
+4573,card,トレンティーニカード,0
+4578,card,狂信者ヒュリエルカード,1
+4580,card,亡者の守護者カデスカード,0
+4582,card,ブギスギスカード,0
+4583,card,エンカントカード,0
+4584,card,マナナンガルカード,1
+4585,card,マンククーラムカード,0
+4586,card,ティクバランカード,0
+4587,card,チャナックカード,0
+4588,card,ワクワクカード,0
+4589,card,ジェジェリンカード,0
+4590,card,ビョンウンゴカード,0
+4591,card,バコナワカード,0
+4592,card,ブワヤカード,0
+4593,card,メンブリッツカード,0
+4594,card,ペタルカード,0
+4595,card,チェネレカード,0
+4596,card,毀損された古書カード,0
+4597,card,ヴァッサー・リヒテルンカード,0
+4598,card,ゲルブ・リヒテルンカード,0
+4599,card,フンケ・リヒテルンカード,0
+4600,card,フェルス・リヒテルンカード,0
+4601,card,アムダライスカード,0
+4603,card,誘いの魔眼カード,1
+4605,card,苦痛のロイヤルナイトカード,0
+4606,card,呪われたロイヤルナイトカード,0
+4607,card,リヒトヘルシャーカード,1
+4623,card,11thアニバーサリーカード,0
+4625,card,タイムホルダーカード,1
+4626,card,ビッグベンカード,1
+4627,card,ビッグベルカード,1
+4628,card,ネオパンクカード,0
+4629,card,アークエルダーカード,0
+4630,card,タイムキーパーカード,0
+4631,card,オウルヴァイカウントカード,0
+4632,card,オウルマーキスカード,0
+4642,card,無限のトードカード,0
+4643,card,無限のさすらい狼カード,0
+4644,card,無限のボーカルカード,0
+4645,card,無限のエクリプスカード,0
+4646,card,無限のキメラカード,0
+4647,card,無限のオシリスカード,0
+4648,card,無限のエドガカード,0
+4649,card,無限のフリオニカード,0
+4650,card,無限のオークヒーローカード,0
+4651,card,無限のタオグンカカード,0
+4652,card,アメンホテプカード,0
+4653,card,グレイヴアクラウスカード,0
+4654,card,グレイヴミミックカード,1
+4655,card,グレイヴミノタウロスカード,1
+4656,card,グレイヴマミーカード,0
+4657,card,グレイヴクラウンマミーカード,0
+4658,card,グレイヴベリットカード,0
+4700,ench,Str + 1,2
+4701,ench,Str + 2,2
+4702,ench,Str + 3,2
+4703,ench,Str + 4,2
+4704,ench,Str + 5,2
+4705,ench,Str + 6,2
+4706,ench,Str + 7,2
+4707,ench,Str + 8,2
+4708,ench,Str + 9,2
+4709,ench,Str + 10,2
+4710,ench,Int + 1,2
+4711,ench,Int + 2,2
+4712,ench,Int + 3,2
+4713,ench,Int + 4,2
+4714,ench,Int + 5,2
+4715,ench,Int + 6,2
+4716,ench,Int + 7,2
+4717,ench,Int + 8,2
+4718,ench,Int + 9,2
+4719,ench,Int + 10,2
+4720,ench,Dex + 1,2
+4721,ench,Dex + 2,2
+4722,ench,Dex + 3,2
+4723,ench,Dex + 4,2
+4724,ench,Dex + 5,2
+4725,ench,Dex + 6,2
+4726,ench,Dex + 7,2
+4727,ench,Dex + 8,2
+4728,ench,Dex + 9,2
+4729,ench,Dex + 10,2
+4730,ench,Agi + 1,2
+4731,ench,Agi + 2,2
+4732,ench,Agi + 3,2
+4733,ench,Agi + 4,2
+4734,ench,Agi + 5,2
+4735,ench,Agi + 6,2
+4736,ench,Agi + 7,2
+4737,ench,Agi + 8,2
+4738,ench,Agi + 9,2
+4739,ench,Agi + 10,2
+4740,ench,Vit + 1,2
+4741,ench,Vit + 2,2
+4742,ench,Vit + 3,2
+4743,ench,Vit + 4,2
+4744,ench,Vit + 5,2
+4745,ench,Vit + 6,2
+4746,ench,Vit + 7,2
+4747,ench,Vit + 8,2
+4748,ench,Vit + 9,2
+4749,ench,Vit + 10,2
+4750,ench,Luk + 1,2
+4751,ench,Luk + 2,2
+4752,ench,Luk + 3,2
+4753,ench,Luk + 4,2
+4754,ench,Luk + 5,2
+4755,ench,Luk + 6,2
+4756,ench,Luk + 7,2
+4757,ench,Luk + 8,2
+4758,ench,Luk + 9,2
+4759,ench,Luk + 10,2
+4760,ench,Matk 1,2
+4761,ench,Matk 2,2
+4762,ench,Flee + 6,2
+4763,ench,Flee + 12,2
+4764,ench,Cri + 5,2
+4765,ench,Cri + 7,2
+4766,ench,Atk 2,2
+4767,ench,Atk 3,2
+4768,ench,Str + 1,2
+4769,ench,Str + 2,2
+4770,ench,Str + 3,2
+4771,ench,Int + 1,2
+4772,ench,Int + 2,2
+4773,ench,Int + 3,2
+4774,ench,Vit + 1,2
+4775,ench,Vit + 2,2
+4776,ench,Vit + 3,2
+4777,ench,Agi + 1,2
+4778,ench,Agi + 2,2
+4779,ench,Agi + 3,2
+4780,ench,Dex + 1,2
+4781,ench,Dex + 2,2
+4782,ench,Dex + 3,2
+4783,ench,Luk + 1,2
+4784,ench,Luk + 2,2
+4785,ench,Luk + 3,2
+4786,ench,Mdef + 2,2
+4787,ench,Mdef + 4,2
+4788,ench,Mdef + 6,2
+4789,ench,Mdef + 8,2
+4790,ench,Mdef + 10,2
+4791,ench,Def + 3,2
+4792,ench,Def + 6,2
+4793,ench,Def + 9,2
+4794,ench,Def + 12,2
+4795,ench,HP + 100,2
+4796,ench,HP + 200,2
+4797,ench,HP + 300,2
+4798,ench,HP + 400,2
+4799,ench,HP + 500,2
+4800,ench,SP + 50,2
+4801,ench,SP + 100,2
+4802,ench,SP + 150,2
+4803,ench,治癒1,2
+4804,ench,大聖堂1,2
+4805,ench,大司教1,2
+4806,ench,Matk 3,2
+4807,ench,Aspd + 1,2
+4808,ench,闘志4,2
+4809,ench,闘志3,2
+4810,ench,闘志2,2
+4811,ench,闘志1,2
+4812,ench,魔力4,2
+4813,ench,魔力3,2
+4814,ench,魔力2,2
+4815,ench,魔力1,2
+4816,ench,先鋭3,2
+4817,ench,先鋭2,2
+4818,ench,先鋭1,2
+4819,ench,Atk1,2
+4820,ench,闘志5,2
+4821,ench,闘志6,2
+4822,ench,闘志7,2
+4823,ench,闘志8,2
+4824,ench,闘志9,2
+4825,ench,闘志10,2
+4826,ench,魔力5,2
+4827,ench,魔力6,2
+4828,ench,魔力7,2
+4829,ench,魔力8,2
+4830,ench,魔力9,2
+4832,ench,名弓1,2
+4833,ench,名弓2,2
+4834,ench,名弓3,2
+4835,ench,名弓4,2
+4843,ench,先鋭4,2
+4844,ench,先鋭5,2
+4850,ench,大司教2,2
+4853,ench,Special Str,2
+4854,ench,Special Agi,2
+4855,ench,Special Vit,2
+4856,ench,Special Int,2
+4857,ench,Special Dex,2
+4858,ench,Special Luk,2
+4859,ench,Flee + 1,2
+4860,ench,Flee + 3,2
+4861,ench,MaxHP1,2
+4862,ench,MaxHP2,2
+4867,ench,MaxHP3,2
+4868,ench,MaxHP4,2
+4869,ench,攻撃速度1,2
+4870,ench,SP + 25,2
+4871,ench,SP + 75,2
+4872,ench,攻撃速度2,2
+4873,ench,攻撃速度3,2
+4875,ench,熊の力,2
+4876,ench,暴走した魔力,2
+4877,ench,光速,2
+4878,ench,鋼鎧,2
+4879,ench,大鷲の眼光,2
+4880,ench,幸運な日,2
+4881,ench,攻撃速度4,2
+4882,ench,Atk + 1%,2
+4883,ench,Matk + 1%,2
+4884,ench,Hit + 1,2
+4890,ench,Mdef + 1,2
+4891,ench,Mdef + 3,2
+4892,ench,Mdef + 5,2
+4893,ench,Def + 15,2
+4894,ench,Atk + 4%,2
+4895,ench,Atk + 5%,2
+4896,ench,Matk + 2%,2
+4897,ench,Matk + 3%,2
+4898,ench,Matk + 4%,2
+4899,ench,Matk + 5%,2
+4900,ench,MaxHP5,2
+4901,ench,Mdef + 7,2
+4902,ench,Def + 18,2
+4903,ench,Def + 21,2
+4908,card,魔神の腕力1,1
+4909,card,魔神の腕力2,1
+4910,card,魔神の腕力3,1
+4911,card,魔神の知力1,1
+4912,card,魔神の知力2,1
+4913,card,魔神の知力3,1
+4914,card,魔神の迅速1,1
+4915,card,魔神の迅速2,1
+4916,card,魔神の迅速3,1
+4917,card,魔神の体力1,1
+4918,card,魔神の体力2,1
+4919,card,魔神の体力3,1
+4920,card,魔神の集中1,1
+4921,card,魔神の集中2,1
+4922,card,魔神の集中3,1
+4923,card,魔神の幸運1,1
+4924,card,魔神の幸運2,1
+4925,card,魔神の幸運3,1
+4933,ench,無属性耐性1,2
+4934,ench,無属性耐性2,2
+4935,ench,無属性耐性3,2
+4942,ench,完全回避 + 3,2
+4943,ench,完全回避 + 4,2
+4944,ench,完全回避 + 5,2
+4945,ench,消費SP - 2%,2
+4946,ench,消費SP - 4%,2
+4947,ench,消費SP - 6%,2
+4949,ench,スキルディレイ - 4%,2
+4950,ench,スキルディレイ - 6%,2
+4951,ench,闇ドロップ,2
+4952,ench,火ドロップ,2
+4953,ench,水ドロップ,2
+4954,ench,木ドロップ,2
+4955,ench,光ドロップ,2
+4956,ench,回復ドロップ,2
+4957,ench,ファミ通の力,2
+4958,ench,双児宮,2
+4959,ench,人馬宮,2
+4960,ench,宝瓶宮,2
+4961,ench,白羊宮,2
+4962,ench,巨蟹宮,2
 4963,ench,金牛宮,2
-4964,Unknown_Item,磨羯宮,2
-4965,Unknown_Item,双魚宮,2
-4966,Unknown_Item,天蝎宮,2
-4967,Unknown_Item,獅子宮,2
-4968,Unknown_Item,処女宮,2
-4969,Unknown_Item,天秤宮,2
-4970,Unknown_Item,E-Fire,2
-4971,Unknown_Item,E-Water,2
-4972,Unknown_Item,E-Ground,2
-4973,Unknown_Item,E-Wind,2
-4974,Unknown_Item,R-Fire,2
-4975,Unknown_Item,R-Water,2
-4976,Unknown_Item,R-Ground,2
-4977,Unknown_Item,R-Wind,2
-4978,Unknown_Item,C-Life,2
-4979,Unknown_Item,C-Soul,2
-4980,Unknown_Item,C-HPR,2
-4981,Unknown_Item,C-SPR,2
-4982,Unknown_Item,A-Str,2
-4983,Unknown_Item,A-Int,2
-4984,Unknown_Item,A-Def,2
-4985,Unknown_Item,A-Avoid,2
-4986,Unknown_Item,A-Atk,2
-4987,Unknown_Item,A-Matk,2
-4988,Unknown_Item,A-MaxHP,2
-4989,Unknown_Item,A-MaxSP,2
-4990,Unknown_Item,A-Frozen,2
-4991,Unknown_Item,A-ASPD,2
-
-27000,Unknown_Item,怪奇な装飾ツリーカード,1
-27001,Unknown_Item,プレゼント包装担当者カード,0
-27002,Unknown_Item,包装されたボックスカード,0
-27003,Unknown_Item,工場警備員の魂カード,1
-27004,Unknown_Item,プレゼントがない幽霊カード,1
-27005,Unknown_Item,包装されなかった人形カード,0
-27006,Unknown_Item,捨てられたクマ人形カード,1
-27007,Unknown_Item,セリーヌ・キミカード,1
-27008,Unknown_Item,魔眼のアムダライスカード,0
-27009,Unknown_Item,殺戮の魔眼カード,1
-27010,Unknown_Item,怨恨の白の騎士カード,1
-27011,Unknown_Item,怨恨のカーリッツバーグカード,0
-27021,Unknown_Item,[ECO] ブリキングRX1・アルマカード,1
-27022,Unknown_Item,[ECO] サラマンダー・アルマカード,0
-27023,Unknown_Item,[ECO] モーモー・アルマカード,0
-27024,Unknown_Item,[ECO] ミニー・ドゥ・アルマカード,1
-27026,Unknown_Item,フレイムコンドルカード,0
-27027,Unknown_Item,フレイムサンドマンカード,0
-27028,Unknown_Item,フレイムフリルドラカード,0
-27029,Unknown_Item,フレイムゴーレムカード,1
-27030,Unknown_Item,フレイムバグカード,0
-27031,Unknown_Item,迷宮のバフォメットカード,1
-27032,Unknown_Item,迷宮のドラキュラカード,1
-27033,Unknown_Item,不滅の呪われた騎士カード,0
-27034,Unknown_Item,不滅のウィンドゴーストカード,0
-27035,Unknown_Item,S・J・アーネストウルフカード,1
-27036,Unknown_Item,パワフルスケルトンカード,1
-27037,Unknown_Item,パワフルAスケルトンカード,1
-27038,Unknown_Item,パワフルSスケルトンカード,1
-27039,Unknown_Item,パワフルアムダライスカード,0
-27040,Unknown_Item,ビジョウカード,0
-27041,Unknown_Item,不死の軍団カード,0
-27042,Unknown_Item,ウォッチャーカード,0
-27043,Unknown_Item,タフィーカード,0
-27044,Unknown_Item,フローズンウルフカード,0
-27045,Unknown_Item,ゾンビガードカード,0
-27046,Unknown_Item,ヴァルゴ,0
-27047,Unknown_Item,ヴァルゴの欠片,0
-27048,Unknown_Item,レオ,0
-27049,Unknown_Item,レオの欠片,0
-27050,Unknown_Item,スカイプティット&ペノメナカード,0
-27051,Unknown_Item,アヌビス&ベアドールカード,0
-27052,Unknown_Item,オークウォリアー&ラフレシアカード,0
-27053,Unknown_Item,アーノルディ&ビッグフットカード,0
-27054,Unknown_Item,カーリッツバーグ&タラフロッグカード,0
-27055,Unknown_Item,ソーサラーセリア(MVP)カード,0
-27056,Unknown_Item,修羅チェン(MVP)カード,0
-27057,Unknown_Item,ミンストレルアルフォシオ(MVP)カード,0
-27058,Unknown_Item,ギロチンクロスエレメス(MVP)カード,0
-27059,Unknown_Item,アークビショップマーガレッタ(MVP)カード,0
-27060,Unknown_Item,レンジャーセシル(MVP)カード,0
-27061,Unknown_Item,メカニックハワード(MVP)カード,0
-27062,Unknown_Item,ウォーロックカトリーヌ(MVP)カード,0
-27063,Unknown_Item,ルーンナイトセイレン(MVP)カード,0
-27064,Unknown_Item,ロイヤルガードランデル(MVP)カード,0
-27065,Unknown_Item,ジェネティックエミュール(MVP)カード,0
-27066,Unknown_Item,シャドウチェイサーガーティー(MVP)カード,0
-27067,Unknown_Item,ワンダラートレンティーニ(MVP)カード,0
-27068,Unknown_Item,ギロチンクロスエレメスカード,0
-27069,Unknown_Item,アークビショップマーガレッタカード,0
-27070,Unknown_Item,ウォーロックカトリーヌカード,0
-27071,Unknown_Item,レンジャーセシルカード,0
-27072,Unknown_Item,メカニックハワードカード,0
-27073,Unknown_Item,ルーンナイトセイレンカード,0
-27074,Unknown_Item,ロイヤルガードランデルカード,0
-27075,Unknown_Item,ジェネティックエミュールカード,0
-27076,Unknown_Item,ソーサラーセリアカード,0
-27077,Unknown_Item,修羅チェンカード,0
-27078,Unknown_Item,シャドウチェイサーガーティーカード,0
-27079,Unknown_Item,ワンダラートレンティーニカード,0
-27080,Unknown_Item,ミンストレルアルフォシオカード,0
-27081,Unknown_Item,怒りの月夜花カード,0
-27082,Unknown_Item,怒りの九尾狐カード,0
-27083,Unknown_Item,怨恨のボンゴンカード,1
-27084,Unknown_Item,怨恨のソヒーカード,0
-27085,Unknown_Item,怨恨のムナックカード,0
-27086,Unknown_Item,怨恨のAスケルトンカード,1
-27087,Unknown_Item,真理の魔法使いカード,0
-27088,Unknown_Item,狂乱した冒険者カード,0
-27089,Unknown_Item,T W Oカード,0
-27090,Unknown_Item,DR815カード,0
-27091,Unknown_Item,GC109カード,0
-27092,Unknown_Item,チャールストン3号カード,0
-27093,Unknown_Item,キックステップカード,0
-27094,Unknown_Item,ロックステップカード,0
-27095,Unknown_Item,ステップカード,0
-27096,Unknown_Item,キックアンドキックカード,0
-27097,Unknown_Item,スモッグカード,0
-27098,Unknown_Item,修理型ウェルスギアカード,1
-27099,Unknown_Item,探査型ウェルスギアカード,1
-27100,Unknown_Item,クラップカード,0
-27101,Unknown_Item,スウィートナイトメアカード,0
-27102,Unknown_Item,マットドレインリアーカード,1
-27103,Unknown_Item,安らぎを奪われし者達カード,0
-27104,Unknown_Item,怒りのドラキュラカード,0
-27105,Unknown_Item,ボミカード,0
-27110,Unknown_Item,怒りのゲイズティカード,1
-27111,Unknown_Item,怒りのスノウアーカード,0
-27112,Unknown_Item,怒りのアイスタイタンカード,0
-27113,Unknown_Item,覚醒クトルラナックスカード,0
+4964,ench,磨羯宮,2
+4965,ench,双魚宮,2
+4966,ench,天蝎宮,2
+4967,ench,獅子宮,2
+4968,ench,処女宮,2
+4969,ench,天秤宮,2
+4970,ench,E-Fire,2
+4971,ench,E-Water,2
+4972,ench,E-Ground,2
+4973,ench,E-Wind,2
+4974,ench,R-Fire,2
+4975,ench,R-Water,2
+4976,ench,R-Ground,2
+4977,ench,R-Wind,2
+4978,ench,C-Life,2
+4979,ench,C-Soul,2
+4980,ench,C-HPR,2
+4981,ench,C-SPR,2
+4982,ench,A-Str,2
+4983,ench,A-Int,2
+4984,ench,A-Def,2
+4985,ench,A-Avoid,2
+4986,ench,A-Atk,2
+4987,ench,A-Matk,2
+4988,ench,A-MaxHP,2
+4989,ench,A-MaxSP,2
+4990,ench,A-Frozen,2
+4991,ench,A-ASPD,2
+27000,card,怪奇な装飾ツリーカード,1
+27001,card,プレゼント包装担当者カード,0
+27002,card,包装されたボックスカード,0
+27003,card,工場警備員の魂カード,1
+27004,card,プレゼントがない幽霊カード,1
+27005,card,包装されなかった人形カード,0
+27006,card,捨てられたクマ人形カード,1
+27007,card,セリーヌ・キミカード,1
+27008,card,魔眼のアムダライスカード,0
+27009,card,殺戮の魔眼カード,1
+27010,card,怨恨の白の騎士カード,1
+27011,card,怨恨のカーリッツバーグカード,0
+27021,card,[ECO] ブリキングRX1・アルマカード,1
+27022,card,[ECO] サラマンダー・アルマカード,0
+27023,card,[ECO] モーモー・アルマカード,0
+27024,card,[ECO] ミニー・ドゥ・アルマカード,1
+27026,card,フレイムコンドルカード,0
+27027,card,フレイムサンドマンカード,0
+27028,card,フレイムフリルドラカード,0
+27029,card,フレイムゴーレムカード,1
+27030,card,フレイムバグカード,0
+27031,card,迷宮のバフォメットカード,1
+27032,card,迷宮のドラキュラカード,1
+27033,card,不滅の呪われた騎士カード,0
+27034,card,不滅のウィンドゴーストカード,0
+27035,card,S・J・アーネストウルフカード,1
+27036,card,パワフルスケルトンカード,1
+27037,card,パワフルAスケルトンカード,1
+27038,card,パワフルSスケルトンカード,1
+27039,card,パワフルアムダライスカード,0
+27040,card,ビジョウカード,0
+27041,card,不死の軍団カード,0
+27042,card,ウォッチャーカード,0
+27043,card,タフィーカード,0
+27044,card,フローズンウルフカード,0
+27045,card,ゾンビガードカード,0
+27046,card,ヴァルゴ,0
+27047,card,ヴァルゴの欠片,0
+27048,card,レオ,0
+27049,card,レオの欠片,0
+27050,card,スカイプティット&ペノメナカード,0
+27051,card,アヌビス&ベアドールカード,0
+27052,card,オークウォリアー&ラフレシアカード,0
+27053,card,アーノルディ&ビッグフットカード,0
+27054,card,カーリッツバーグ&タラフロッグカード,0
+27055,card,ソーサラーセリア(MVP)カード,0
+27056,card,修羅チェン(MVP)カード,0
+27057,card,ミンストレルアルフォシオ(MVP)カード,0
+27058,card,ギロチンクロスエレメス(MVP)カード,0
+27059,card,アークビショップマーガレッタ(MVP)カード,0
+27060,card,レンジャーセシル(MVP)カード,0
+27061,card,メカニックハワード(MVP)カード,0
+27062,card,ウォーロックカトリーヌ(MVP)カード,0
+27063,card,ルーンナイトセイレン(MVP)カード,0
+27064,card,ロイヤルガードランデル(MVP)カード,0
+27065,card,ジェネティックエミュール(MVP)カード,0
+27066,card,シャドウチェイサーガーティー(MVP)カード,0
+27067,card,ワンダラートレンティーニ(MVP)カード,0
+27068,card,ギロチンクロスエレメスカード,0
+27069,card,アークビショップマーガレッタカード,0
+27070,card,ウォーロックカトリーヌカード,0
+27071,card,レンジャーセシルカード,0
+27072,card,メカニックハワードカード,0
+27073,card,ルーンナイトセイレンカード,0
+27074,card,ロイヤルガードランデルカード,0
+27075,card,ジェネティックエミュールカード,0
+27076,card,ソーサラーセリアカード,0
+27077,card,修羅チェンカード,0
+27078,card,シャドウチェイサーガーティーカード,0
+27079,card,ワンダラートレンティーニカード,0
+27080,card,ミンストレルアルフォシオカード,0
+27081,card,怒りの月夜花カード,0
+27082,card,怒りの九尾狐カード,0
+27083,card,怨恨のボンゴンカード,1
+27084,card,怨恨のソヒーカード,0
+27085,card,怨恨のムナックカード,0
+27086,card,怨恨のAスケルトンカード,1
+27087,card,真理の魔法使いカード,0
+27088,card,狂乱した冒険者カード,0
+27089,card,T W Oカード,0
+27090,card,DR815カード,0
+27091,card,GC109カード,0
+27092,card,チャールストン3号カード,0
+27093,card,キックステップカード,0
+27094,card,ロックステップカード,0
+27095,card,ステップカード,0
+27096,card,キックアンドキックカード,0
+27097,card,スモッグカード,0
+27098,card,修理型ウェルスギアカード,1
+27099,card,探査型ウェルスギアカード,1
+27100,card,クラップカード,0
+27101,card,スウィートナイトメアカード,0
+27102,card,マットドレインリアーカード,1
+27103,card,安らぎを奪われし者達カード,0
+27104,card,怒りのドラキュラカード,0
+27105,card,ボミカード,0
+27110,card,怒りのゲイズティカード,1
+27111,card,怒りのスノウアーカード,0
+27112,card,怒りのアイスタイタンカード,0
+27113,card,覚醒クトルラナックスカード,0
+27114,card,不吉なソリッドタートルカード,0
+27115,card,不吉なPタートルカード,0
+27116,card,不吉なヒートタートルカード,0
+27117,card,不吉なアサルトタートルカード,0
+27118,card,不吉なフリーズタートルカード,0
+27119,card,不吉なタートルGカード,0
 27120,card,イアラカード,0
+27121,card,ピラニアカード,0
 27122,card,クルピラカード,1
+27123,card,トゥカンカード,0
 27124,card,ジャガーカード,0
 27125,card,首なしラバカード,0
-27127,Unknown_Item,古王グローザカード,0
-27128,Unknown_Item,深層の古王グローザカード,0
-27129,Unknown_Item,正義のカード,1
-27130,Unknown_Item,星のカード,1
-27131,Unknown_Item,節制のカード,1
-27132,Unknown_Item,戦車のカード,1
-27133,Unknown_Item,死神のカード,1
-27134,Unknown_Item,隠者のカード,1
-27135,Unknown_Item,皇帝のカード,1
-27136,Unknown_Item,月のカード,1
-27137,Unknown_Item,恋人のカード,1
-27138,Unknown_Item,法王のカード,1
-27139,Unknown_Item,悪魔のカード,1
-27140,Unknown_Item,力のカード,1
-27141,Unknown_Item,イーブルカード,0
-27142,Unknown_Item,ハートハンターカード,0
-27143,Unknown_Item,ヴェノムキメラカード,0
-27144,Unknown_Item,マッターキメラカード,0
-27145,Unknown_Item,ヒューマノイドキメラカード,0
-27146,Unknown_Item,CUTIEカード,1
-27155,Unknown_Item,キャンサー,0
-27156,Unknown_Item,タウロス,0
-27185,Unknown_Item,ラウンドライダーカード,0
-27186,Unknown_Item,サイドライダーカード,0
-27187,Unknown_Item,ブレードライダーカード,0
-27188,Unknown_Item,トップラウンドライダーカード,1
-27189,Unknown_Item,トップサイドライダーカード,1
-27190,Unknown_Item,コヨーテカード,0
-27191,Unknown_Item,ガスターカード,0
-27192,Unknown_Item,トップブレードライダーカード,0
-27194,Unknown_Item,カニバラウスカード,0
-27195,Unknown_Item,プラズマラットカード,0
-27204,Unknown_Item,ジェミニ,0
-27205,Unknown_Item,サジタリウス,0
-27223,Unknown_Item,エッグリンカード,0
-27226,Unknown_Item,偵察バジルリスクカード,0
-27227,Unknown_Item,突撃バジルリスクカード,0
-27228,Unknown_Item,ビッグエッグリンカード,0
-27229,Unknown_Item,リーフルナティックカード,0
-27230,Unknown_Item,グラスファブルカード,0
-27231,Unknown_Item,ワイルドホーネットカード,0
-27232,Unknown_Item,スウィートフロッグカード,0
-27233,Unknown_Item,ハンターウルフカード,0
-27234,Unknown_Item,トランススポアカード,0
-27235,Unknown_Item,ジャングルマンドラゴラカード,0
-27236,Unknown_Item,フルーツポムスパイダーカード,0
-27237,Unknown_Item,女王フェイスワームカード,1
-27238,Unknown_Item,フェイスワームカード,0
-27239,Unknown_Item,ダークフェイスワームカード,0
-27240,Unknown_Item,フェイスワームの卵カード,0
-27241,Unknown_Item,フェイスワームの幼虫カード,0
-27242,Unknown_Item,大長老アイリンカード,0
-27243,Unknown_Item,フェイヨン警備兵&フェイヨン守護兵カード,0
-27244,Unknown_Item,ペル&キスミー・ペルカード,0
-27245,Unknown_Item,シンギング・ペル&スイング・ペルカード,0
-27246,Unknown_Item,ジターバグカード,0
-27247,Unknown_Item,fff・ジターバグカード,0
-27248,Unknown_Item,サラの幻影カード,0
-27359,Unknown_Item,アイスゴーストカード,1
-
+27126,card,ボイタタカード,1
+27127,card,古王グローザカード,0
+27128,card,深層の古王グローザカード,0
+27129,card,正義のカード,1
+27130,card,星のカード,1
+27131,card,節制のカード,1
+27132,card,戦車のカード,1
+27133,card,死神のカード,1
+27134,card,隠者のカード,1
+27135,card,皇帝のカード,1
+27136,card,月のカード,1
+27137,card,恋人のカード,1
+27138,card,法王のカード,1
+27139,card,悪魔のカード,1
+27140,card,力のカード,1
+27141,card,イーブルカード,0
+27142,card,ハートハンターカード,0
+27143,card,ヴェノムキメラカード,0
+27144,card,マッターキメラカード,0
+27145,card,ヒューマノイドキメラカード,0
+27146,card,CUTIEカード,1
+27155,card,キャンサー,0
+27156,card,タウロス,0
+27157,card,ウッドゴブリンカード,0
+27158,card,レスカード,0
+27159,card,ウジャスカード,0
+27160,card,ババヤガカード,1
+27161,card,マブカカード,0
+27162,card,ゴピニクカード,0
+27181,card,飛行船襲撃団カード,0
+27182,card,暴走した船長ペルロックカード,0
+27183,card,ギガンテスカード,1
+27184,card,騎士サクライカード,0
+27185,card,ラウンドライダーカード,0
+27186,card,サイドライダーカード,0
+27187,card,ブレードライダーカード,0
+27188,card,トップラウンドライダーカード,0
+27189,card,トップサイドライダーカード,1
+27190,card,コヨーテカード,0
+27191,card,ガスターカード,0
+27192,card,トップブレードライダーカード,0
+27194,card,カニバラウスカード,0
+27195,card,プラズマラットカード,0
+27196,card,ニーヒル・M・ハイネンカード,0
+27197,card,アグネス・レベンブルグカード,0
+27198,card,ユルゲン・ウィグナーカード,0
+27199,card,スピーカ・ネリウスカード,0
+27200,card,ニーヒルカード,0
+27201,card,アグネスカード,0
+27202,card,ユルゲンカード,0
+27203,card,スピーカカード,0
+27204,card,ジェミニ,0
+27205,card,サジタリウス,0
+27223,card,エッグリンカード,0
+27226,card,偵察バジルリスクカード,0
+27227,card,突撃バジルリスクカード,0
+27228,card,ビッグエッグリンカード,0
+27229,card,リーフルナティックカード,0
+27230,card,グラスファブルカード,0
+27231,card,ワイルドホーネットカード,0
+27232,card,スウィートフロッグカード,0
+27233,card,ハンターウルフカード,0
+27234,card,トランススポアカード,0
+27235,card,ジャングルマンドラゴラカード,0
+27236,card,フルーツポムスパイダーカード,0
+27237,card,女王フェイスワームカード,1
+27238,card,フェイスワームカード,0
+27239,card,ダークフェイスワームカード,0
+27240,card,フェイスワームの卵カード,0
+27241,card,フェイスワームの幼虫カード,0
+27242,card,大長老アイリンカード,0
+27243,card,フェイヨン警備兵&フェイヨン守護兵カード,0
+27244,card,ペル&キスミー・ペルカード,0
+27245,card,シンギング・ペル&スイング・ペルカード,0
+27246,card,ジターバグカード,0
+27247,card,fff・ジターバグカード,0
+27248,card,サラの幻影カード,0
+27249,card,アルヒカード,0
+27250,card,ディオ・アネモスカード,0
+27251,card,ブラック・カネイリーカード,0
+27252,card,ヒピア・スニキカード,0
+27253,card,ビリー・コスルリースカード,0
+27254,card,フェモンカード,0
+27255,card,オルドルカード,0
+27256,card,ブルート・ハゼカード,0
+27257,card,黒魔カード,0
+27258,card,イフォドスカード,0
+27259,card,レチェニエカード,0
+27260,card,ユメヒメカード,0
+27261,card,ジューカード,0
+27262,card,ディワイカード,0
+27263,card,フェイ・カナビアンカード,0
+27264,card,魔神の信者カード,0
+27265,card,魔神の巨影カード,0
+27299,card,サーペンタリウス,0
+27300,card,アクエリアス,0
+27301,card,迷宮のドッペルゲンガーカード,1
+27302,card,リーブラ,0
+27303,card,スコーピオ,0
+27304,card,EA2Sカード,0
+27305,card,EL-A17Tカード,0
+27306,card,ハートハンター・ベラレカード,0
+27307,card,ハートハンター・Mベラレカード,0
+27308,card,ハートハンター・サナレカード,0
+27309,card,ハートハンター・Mサナレカード,0
+27310,card,プラガカード,1
+27311,card,変種プラガカード,0
+27312,card,ドロールカード,1
+27313,card,変種ドロールカード,0
+27314,card,ヴェネヌムカード,0
+27315,card,変種ヴェネヌムカード,0
+27316,card,ツイン・カプトゥカード,1
+27317,card,変種ツイン・カプトゥカード,0
+27318,card,ミグエルカード,0
+27319,card,R48-85-ベスティアカード,0
+27320,card,E-EA1Lカード,1
+27321,card,絶望の神モロクカード,0
+27322,card,魔神の使徒・アハトカード,0
+27323,card,魔神の使徒・シナイムカード,0
+27324,card,ブリナラネアカード,0
+27325,card,ムスペルスコールカード,0
+27326,card,モルス・ネクロマンサーカード,0
+27327,card,死神アンクカード,0
+27328,card,堕落した生命のカード,0
+27329,card,呪いを呑み込んだ王カード,0
+27330,card,クロネカーカード,0
+27331,card,クロネカー・ハイネンカード,0
+27332,card,スキアカード,0
+27333,card,スキア・ネリウスカード,0
+27334,card,混沌のバフォメットカード,0
+27335,card,混沌のバフォメット.Jrカード,0
+27336,card,混沌のサイドワインダーカード,1
+27337,card,混沌のハンターフライカード,0
+27338,card,混沌のマンティスカード,0
+27339,card,混沌のゴーストリングカード,0
+27340,card,混沌のキラーマンティスカード,0
+27341,card,混沌のポポリンカード,0
+27342,card,混沌のステムワームカード,1
+27343,card,混沌のアコライトカード,0
+27344,card,魔女ジラントカード,0
+27345,card,古龍ジラントカード,0
+27346,card,硬化ムスペルスコールカード,0
+27347,card,硬化カホカード,1
+27348,card,硬化ラーヴァゴーレムカード,1
+27349,card,硬化エクスプロージョンカード,0
+27350,card,硬化Sデリーターカード,0
+27351,card,硬化Gデリーターカード,0
+27352,card,硬化ナイトメアテラーカード,0
+27353,card,硬化ブレイザーカード,0
+27354,card,汚染されたレイドリックカード,0
+27355,card,汚染されたレイドリックAカード,0
+27356,card,アイスガーゴイルカード,0
+27357,card,汚染されたスティングカード,0
+27358,card,プリズンブレイカーカード,1
+27359,card,アイスゴーストカード,0
+27360,card,フレイムゴーストカード,0
+27361,card,汚染された彷徨う者カード,1
+27362,card,汚染されたブリナラネアカード,0
+27363,card,汚染されたダークロードカード,0
+27364,card,愚者のカード,1
+27365,card,運命の輪のカード,1
+27366,card,吊るされた男のカード,1
+27367,card,世界のカード,1
+27368,card,カラフルなベアドールカード,0
+27369,card,輝くベアドールカード,0
+27370,card,労働型ピットマンカード,0
+27371,card,魂の破片カード,0
+27372,card,邪念のオブシディアンカード,0
+27373,card,古の三葉蟲カード,0
+27374,card,古のSゴーレムカード,0
+27375,card,古のメガリスカード,0
+27376,card,古のタオグンカカード,0
+27377,card,古のフレイムシューターカード,0
+27378,card,古のウータンシューターカード,0
+27379,card,古のウータンファイターカード,1
+27380,card,古のウータンガードカード,0
+27381,card,呪殺のヒメルメズカード,0
+27382,card,堕落の魔眼カード,1
+27383,card,呪殺のアムダライスカード,0
+27384,card,変貌の白騎士カード,1
+27385,card,変貌のカーリッツバーグカード,0
+27386,card,呪われたレイドリックカード,0
+27387,card,呪われたレイドリックAカード,0
+27388,card,呪われた執事カード,1
+27389,card,ヴォルフカード,0
+27390,card,ヴォルフ・レベンブルグカード,0
+27391,card,ポーカード,0
+27392,card,ポー・リハルトカード,0
+27393,card,カトリンカード,0
+27394,card,カトリン・ウィグナーカード,0
+27395,card,アイザックカード,0
+27396,card,アイザック・ウィグナーカード,0
+27397,ench,ニヒツ,2
+27398,ench,完全回避 + 25,2
+27399,ench,神供,2
+27400,ench,遠距離物理耐性 + 5%,2
+27401,ench,気奪Lv1,2
+27402,ench,潜在解放(サモナー),2
+27403,ench,潜在解放(星帝),2
+27404,ench,潜在解放(ソウルリーパー),2
+27405,ench,潜在解放(影狼),2
+27406,ench,潜在解放(朧),2
+27407,ench,潜在解放(リベリオン),2
 27408,ench,イミューンファイア,2
 27409,ench,イミューンウォーター,2
 27410,ench,イミューンウィンド,2
 27411,ench,イミューンアース,2
 27412,ench,MaxHP + 15%,2
-
+29012,ench,ハイレベル,2
 29041,ench,トゥインクル,2
-
-29042,Unknown_Item,エナジー<守護竜>,2
-29043,Unknown_Item,エナジー<戦乙女>,2
-29044,Unknown_Item,エナジー<烈風>,2
-29045,Unknown_Item,疾風,2
-29058,Unknown_Item,龍飛流の幻珠,2
-29059,Unknown_Item,万波息笛の幻珠,2
-29060,Unknown_Item,宇宙根源の幻珠,2
-29127,Unknown_Item,<紅蓮>,2
-29128,Unknown_Item,<真鍮>,2
-29129,Unknown_Item,<白銀>,2
-29130,Unknown_Item,<黄昏>,2
-29131,Unknown_Item,<混沌>,2
-29132,Unknown_Item,<曙光>,2
-29133,Unknown_Item,<恢復>,2
-29134,Unknown_Item,覇者の思念,1
-29135,Unknown_Item,鋭利1,2
-29136,Unknown_Item,鋭利2,2
-29137,Unknown_Item,鋭利3,2
-29138,Unknown_Item,鋭利4,2
-29139,Unknown_Item,鋭利5,2
-29140,Unknown_Item,勇者の怒り,2
-29141,Unknown_Item,魔羊の咆哮,2
-
+29042,ench,エナジー<守護竜>,2
+29043,ench,エナジー<戦乙女>,2
+29044,ench,エナジー<烈風>,2
+29045,ench,疾風,2
+29058,ench,龍飛流の幻珠,2
+29059,ench,万波息笛の幻珠,2
+29060,ench,宇宙根源の幻珠,2
+29127,ench,<紅蓮>,2
+29128,ench,<真鍮>,2
+29129,ench,<白銀>,2
+29130,ench,<黄昏>,2
+29131,ench,<混沌>,2
+29132,ench,<曙光>,2
+29133,ench,<恢復>,2
+29134,card,覇者の思念,1
+29135,ench,鋭利1,2
+29136,ench,鋭利2,2
+29137,ench,鋭利3,2
+29138,ench,鋭利4,2
+29139,ench,鋭利5,2
+29140,ench,勇者の怒り,2
+29141,ench,魔羊の咆哮,2
 29161,ench,ピンクグロー,2
 29162,ench,シャドウ,2
-
-29166,Unknown_Item,A-Tolerance,2
-29167,Unknown_Item,A-Hit,2
-29168,Unknown_Item,A-Flee,2
-29169,Unknown_Item,A-Mdef,2
-29170,Unknown_Item,S-Atk,2
-29171,Unknown_Item,S-Matk,2
-29172,Unknown_Item,S-Avoid,2
-29173,Unknown_Item,S-MaxHP,2
-29174,Unknown_Item,S-Quick,2
-29175,Unknown_Item,S-Cri,2
-29176,Unknown_Item,天地,2
-29177,Unknown_Item,夢の加護1,2
-29178,Unknown_Item,夢の加護2,2
-29179,Unknown_Item,夢の加護3,2
-29180,Unknown_Item,夢の加護4,2
-29181,Unknown_Item,夢の加護5,2
-29182,Unknown_Item,リーサルフレーム,2
-29183,Unknown_Item,リーサルアンデッド,2
-29184,Unknown_Item,リーサルビースト,2
-29185,Unknown_Item,リーサルプラント,2
-29186,Unknown_Item,リーサルインセクト,2
-29187,Unknown_Item,リーサルフィッシュ,2
-29188,Unknown_Item,リーサルデーモン,2
-29189,Unknown_Item,リーサルヒューマン,2
-29190,Unknown_Item,リーサルエンジェル,2
-29191,Unknown_Item,リーサルドラゴン,2
-29192,Unknown_Item,モータルノーマル,2
-29193,Unknown_Item,モータルウォーター,2
-29194,Unknown_Item,モータルグラウンド,2
-29195,Unknown_Item,モータルフレイム,2
-29196,Unknown_Item,モータルウィンド,2
-29197,Unknown_Item,モータルポイズン,2
-29198,Unknown_Item,モータルセイント,2
-29199,Unknown_Item,モータルイービル,2
-29200,Unknown_Item,モータルテレキネシス,2
-29201,Unknown_Item,モータルアンデッド,2
-29202,Unknown_Item,フェイタルスモール,2
-29203,Unknown_Item,フェイタルミディアム,2
-29204,Unknown_Item,フェイタルラージ,2
-29205,Unknown_Item,フェイタルネメシス,2
-29206,Unknown_Item,ブルズアイ,2
-29207,Unknown_Item,ライフドレイン,2
-29212,Unknown_Item,Hit + 3,2
-29213,Unknown_Item,Hit + 6,2
-29214,Unknown_Item,バーン,2
-29215,Unknown_Item,ゲイル,2
-29216,Unknown_Item,フラッド,2
-29217,Unknown_Item,クレイ,2
-29218,Unknown_Item,グラッジ,2
-29219,Unknown_Item,ウーア,2
-29220,Unknown_Item,ベノム,2
-29221,Unknown_Item,デスペリア,2
-29222,Unknown_Item,セイクレッド,2
-29223,Unknown_Item,水天,2
-
+29166,ench,A-Tolerance,2
+29167,ench,A-Hit,2
+29168,ench,A-Flee,2
+29169,ench,A-Mdef,2
+29170,ench,S-Atk,2
+29171,ench,S-Matk,2
+29172,ench,S-Avoid,2
+29173,ench,S-MaxHP,2
+29174,ench,S-Quick,2
+29175,ench,S-Cri,2
+29176,ench,天地,2
+29177,ench,夢の加護1,2
+29178,ench,夢の加護2,2
+29179,ench,夢の加護3,2
+29180,ench,夢の加護4,2
+29181,ench,夢の加護5,2
+29182,ench,リーサルフレーム(物理),2
+29183,ench,リーサルアンデッド(物理),2
+29184,ench,リーサルビースト(物理),2
+29185,ench,リーサルプラント(物理),2
+29186,ench,リーサルインセクト(物理),2
+29187,ench,リーサルフィッシュ(物理),2
+29188,ench,リーサルデーモン(物理),2
+29189,ench,リーサルヒューマン(物理),2
+29190,ench,リーサルエンジェル(物理),2
+29191,ench,リーサルドラゴン(物理),2
+29192,ench,モータルノーマル(物理),2
+29193,ench,モータルウォーター(物理),2
+29194,ench,モータルグラウンド(物理),2
+29195,ench,モータルフレイム(物理),2
+29196,ench,モータルウィンド(物理),2
+29197,ench,モータルポイズン(物理),2
+29198,ench,モータルセイント(物理),2
+29199,ench,モータルイービル(物理),2
+29200,ench,モータルテレキネシス(物理),2
+29201,ench,モータルアンデッド(物理),2
+29202,ench,フェイタルスモール(物理),2
+29203,ench,フェイタルミディアム(物理),2
+29204,ench,フェイタルラージ(物理),2
+29205,ench,フェイタルネメシス(物理),2
+29206,ench,ブルズアイ,2
+29207,ench,ライフドレイン,2
+29212,ench,Hit + 3,2
+29213,ench,Hit + 6,2
+29214,ench,バーン,2
+29215,ench,ゲイル,2
+29216,ench,フラッド,2
+29217,ench,クレイ,2
+29218,ench,グラッジ,2
+29219,ench,ウーア,2
+29220,ench,ベノム,2
+29221,ench,デスペリア,2
+29222,ench,セイクレッド,2
+29223,ench,水天,2
 29224,ench,ホワイトボディ,2
-
-29230,Unknown_Item,[ECO] タイニー・アルマカード,1
-29231,Unknown_Item,エナジー<竜狩>,2
-29232,Unknown_Item,エナジー<頑強>,2
-29233,Unknown_Item,エナジー<魔導>,2
-29234,Unknown_Item,エナジー<致命ノ一撃>,2
-29235,Unknown_Item,完全回避 + 1,2
-29236,Unknown_Item,完全回避 + 2,2
-29237,Unknown_Item,Flee + 5,2
-29238,Unknown_Item,Flee + 10,2
-29239,Unknown_Item,Hit + 5,2
-29240,Unknown_Item,Hit + 10,2
-29241,Unknown_Item,Cri + 10,2
-29242,Unknown_Item,破壊不可(鎧),2
-29243,Unknown_Item,詠唱妨害不可,2
-29244,Unknown_Item,プレイヤー耐性1,2
-29245,Unknown_Item,プレイヤー耐性2,2
-29246,Unknown_Item,プレイヤー耐性3,2
-29247,Unknown_Item,プレイヤー耐性4,2
-29248,Unknown_Item,プレイヤー耐性5,2
-29249,Unknown_Item,安息のニーヴ(体力),2
-29250,Unknown_Item,安息のニーヴ(精神),2
-29251,Unknown_Item,安息のニーヴ(生命),2
-29252,Unknown_Item,安息のニーヴ(知力),2
-29253,Unknown_Item,永劫のニーヴ(火),2
-29254,Unknown_Item,永劫のニーヴ(水),2
-29255,Unknown_Item,永劫のニーヴ(風),2
-29256,Unknown_Item,永劫のニーヴ(地),2
-29257,Unknown_Item,永劫のニーヴ(闇),2
-29258,Unknown_Item,永劫のニーヴ(念),2
-29259,Unknown_Item,永劫のニーヴ(毒),2
-29260,Unknown_Item,傷のニーヴ(無形),2
-29261,Unknown_Item,傷のニーヴ(不死形),2
-29262,Unknown_Item,傷のニーヴ(動物形),2
-29263,Unknown_Item,傷のニーヴ(植物形),2
-29264,Unknown_Item,傷のニーヴ(昆虫形),2
-29265,Unknown_Item,傷のニーヴ(魚貝形),2
-29266,Unknown_Item,傷のニーヴ(悪魔形),2
-29267,Unknown_Item,傷のニーヴ(人間形),2
-29268,Unknown_Item,傷のニーヴ(天使形),2
-29269,Unknown_Item,傷のニーヴ(竜形),2
-29270,Unknown_Item,血のニーヴ(腕力),2
-29271,Unknown_Item,血のニーヴ(迅速),2
-29272,Unknown_Item,血のニーヴ(体力),2
-29273,Unknown_Item,血のニーヴ(知力),2
-29274,Unknown_Item,血のニーヴ(集中),2
-29275,Unknown_Item,血のニーヴ(幸運),2
-29276,Unknown_Item,名誉のニーヴ(迅速),2
-29277,Unknown_Item,名誉のニーヴ(集中),2
-29278,Unknown_Item,名誉のニーヴ(熟練),2
-29279,Unknown_Item,死のニーヴ(腕力),2
-29280,Unknown_Item,死のニーヴ(知力),2
-29281,Unknown_Item,死のニーヴ(体力),2
-29282,Unknown_Item,死のニーヴ(魔防),2
-29300,Unknown_Item,獄,2
-29363,Unknown_Item,百火,2
-29366,Unknown_Item,強撃1,2
-29367,Unknown_Item,強撃2,2
-29368,Unknown_Item,強撃3,2
-29369,Unknown_Item,強撃4,2
-29370,Unknown_Item,強撃5,2
-29371,Unknown_Item,真理の解放,2
-29372,Unknown_Item,固定詠唱時間 - 50%,2
-29373,Unknown_Item,スキルディレイ - 15%,2
-29374,Unknown_Item,消費SP - 15%,2
-29375,Unknown_Item,プレイヤー耐性6,2
-29376,Unknown_Item,プレイヤー耐性7,2
-29377,Unknown_Item,プレイヤー耐性8,2
-29378,Unknown_Item,プレイヤー耐性9,2
-29379,Unknown_Item,プレイヤー耐性10,2
-29382,Unknown_Item,名誉のニーヴ(命中),2
-29383,Unknown_Item,名誉のニーヴ(回避),2
-29384,Unknown_Item,名誉のニーヴ(幸運),2
-29385,Unknown_Item,死のニーヴ(技巧),2
-29386,Unknown_Item,死のニーヴ(幸運),2
-29436,Unknown_Item,覇王,2
-29437,Unknown_Item,スキルディレイ - 8%,2
-29438,Unknown_Item,Z-Knockback,2
-29439,Unknown_Item,Z-Immortal,2
-29440,Unknown_Item,Z-Killgain,2
-29441,Unknown_Item,Z-Reincarnation,2
-29442,Unknown_Item,Z-NoDispell,2
-29443,Unknown_Item,Z-Clairvoyance,2
-29444,Unknown_Item,Z-CastFixed,2
-29445,Unknown_Item,増幅1,2
-29446,Unknown_Item,増幅2,2
-29447,Unknown_Item,増幅3,2
-29448,Unknown_Item,増幅4,2
-29449,Unknown_Item,増幅5,2
-29472,Unknown_Item,<Overclock>,2
-29473,Unknown_Item,<超越者>,2
-29474,Unknown_Item,<剛腕>,2
-29475,Unknown_Item,<呪力>,2
-29476,Unknown_Item,<竜鱗>,2
-29509,Unknown_Item,豪傑,2
-29510,Unknown_Item,傷のニーヴ(プレイヤー),2
-29511,Unknown_Item,Q-Player,2
-29512,Unknown_Item,強靭,2
-29527,Unknown_Item,B-Def,2
-29528,Unknown_Item,B-Mdef,2
-29529,Unknown_Item,B-HPR,2
-29530,Unknown_Item,B-MaxSP,2
-29531,Unknown_Item,B-MaxHP,2
-29532,Unknown_Item,B-SPR,2
-29533,Unknown_Item,Q-Heal,2
-29534,Unknown_Item,B-Atk,2
-29535,Unknown_Item,B-Matk,2
-29536,Unknown_Item,Q-Shooter,2
-29537,Unknown_Item,Q-Speed,2
-29538,Unknown_Item,Q-CastStat,2
-29539,Unknown_Item,Q-Fatal,2
-29540,Unknown_Item,Q-Delay,2
-29541,Unknown_Item,Q-CastFixed,2
-29542,Unknown_Item,Q-Attribute,2
-29543,Unknown_Item,G-DrainHP,2
-29544,Unknown_Item,G-DrainSP,2
-29545,Unknown_Item,G-Life,2
-29546,Unknown_Item,G-Soul,2
-29547,Unknown_Item,X-UnlimitVital,2
-29548,Unknown_Item,X-SpellBuster,2
-29549,Unknown_Item,X-FiringShot,2
-29550,Unknown_Item,X-OverPower,2
-29551,Unknown_Item,X-FatalFlash,2
-29552,Unknown_Item,X-LuckyStrike,2
-29586,Unknown_Item,プレイヤー耐性12,2
-
+29230,card,[ECO] タイニー・アルマカード,1
+29231,ench,エナジー<竜狩>,2
+29232,ench,エナジー<頑強>,2
+29233,ench,エナジー<魔導>,2
+29234,ench,エナジー<致命ノ一撃>,2
+29235,ench,完全回避 + 1,2
+29236,ench,完全回避 + 2,2
+29237,ench,Flee + 5,2
+29238,ench,Flee + 10,2
+29239,ench,Hit + 5,2
+29240,ench,Hit + 10,2
+29241,ench,Cri + 10,2
+29242,ench,破壊不可(鎧),2
+29243,ench,詠唱妨害不可,2
+29244,ench,プレイヤー耐性1,2
+29245,ench,プレイヤー耐性2,2
+29246,ench,プレイヤー耐性3,2
+29247,ench,プレイヤー耐性4,2
+29248,ench,プレイヤー耐性5,2
+29249,ench,安息のニーヴ(体力),2
+29250,ench,安息のニーヴ(精神),2
+29251,ench,安息のニーヴ(生命),2
+29252,ench,安息のニーヴ(知力),2
+29253,ench,永劫のニーヴ(火),2
+29254,ench,永劫のニーヴ(水),2
+29255,ench,永劫のニーヴ(風),2
+29256,ench,永劫のニーヴ(地),2
+29257,ench,永劫のニーヴ(闇),2
+29258,ench,永劫のニーヴ(念),2
+29259,ench,永劫のニーヴ(毒),2
+29260,ench,傷のニーヴ(無形),2
+29261,ench,傷のニーヴ(不死形),2
+29262,ench,傷のニーヴ(動物形),2
+29263,ench,傷のニーヴ(植物形),2
+29264,ench,傷のニーヴ(昆虫形),2
+29265,ench,傷のニーヴ(魚貝形),2
+29266,ench,傷のニーヴ(悪魔形),2
+29267,ench,傷のニーヴ(人間形),2
+29268,ench,傷のニーヴ(天使形),2
+29269,ench,傷のニーヴ(竜形),2
+29270,ench,血のニーヴ(腕力),2
+29271,ench,血のニーヴ(迅速),2
+29272,ench,血のニーヴ(体力),2
+29273,ench,血のニーヴ(知力),2
+29274,ench,血のニーヴ(集中),2
+29275,ench,血のニーヴ(幸運),2
+29276,ench,名誉のニーヴ(迅速),2
+29277,ench,名誉のニーヴ(集中),2
+29278,ench,名誉のニーヴ(熟練),2
+29279,ench,死のニーヴ(腕力),2
+29280,ench,死のニーヴ(知力),2
+29281,ench,死のニーヴ(体力),2
+29282,ench,死のニーヴ(魔防),2
+29300,ench,獄,2
+29302,ench,水属性付与(鎧),2
+29303,ench,風属性付与(鎧),2
+29304,ench,地属性付与(鎧),2
+29305,ench,火属性付与(鎧),2
+29306,ench,闇属性付与(鎧),2
+29307,ench,聖属性付与(鎧),2
+29308,ench,不死属性付与(鎧),2
+29309,ench,毒属性付与(鎧),2
+29363,ench,百火,2
+29366,ench,強撃1,2
+29367,ench,強撃2,2
+29368,ench,強撃3,2
+29369,ench,強撃4,2
+29370,ench,強撃5,2
+29371,ench,真理の解放,2
+29372,ench,固定詠唱時間 - 50%,2
+29373,ench,スキルディレイ - 15%,2
+29374,ench,消費SP - 15%,2
+29375,ench,プレイヤー耐性6,2
+29376,ench,プレイヤー耐性7,2
+29377,ench,プレイヤー耐性8,2
+29378,ench,プレイヤー耐性9,2
+29379,ench,プレイヤー耐性10,2
+29382,ench,名誉のニーヴ(命中),2
+29383,ench,名誉のニーヴ(回避),2
+29384,ench,名誉のニーヴ(幸運),2
+29385,ench,死のニーヴ(技巧),2
+29386,ench,死のニーヴ(幸運),2
+29436,ench,覇王,2
+29437,ench,スキルディレイ - 8%,2
+29438,ench,Z-Knockback,2
+29439,ench,Z-Immortal,2
+29440,ench,Z-Killgain,2
+29441,ench,Z-Reincarnation,2
+29442,ench,Z-NoDispell,2
+29443,ench,Z-Clairvoyance,2
+29444,ench,Z-CastFixed,2
+29445,ench,増幅1,2
+29446,ench,増幅2,2
+29447,ench,増幅3,2
+29448,ench,増幅4,2
+29449,ench,増幅5,2
+29450,ench,Lv1,2
+29451,ench,Lv2,2
+29452,ench,Lv3,2
+29453,ench,Lv4,2
+29454,ench,Lv5,2
+29455,ench,Lv6,2
+29456,ench,Lv7,2
+29457,ench,Lv8,2
+29458,ench,Lv9,2
+29459,ench,Lv10,2
+29472,ench,<Overclock>,2
+29473,ench,<超越者>,2
+29474,ench,<剛腕>,2
+29475,ench,<呪力>,2
+29476,ench,<竜鱗>,2
+29509,ench,豪傑,2
+29510,ench,傷のニーヴ(プレイヤー),2
+29511,ench,Q-Player,2
+29512,ench,強靭,2
+29527,ench,B-Def,2
+29528,ench,B-Mdef,2
+29529,ench,B-HPR,2
+29530,ench,B-MaxSP,2
+29531,ench,B-MaxHP,2
+29532,ench,B-SPR,2
+29533,ench,Q-Heal,2
+29534,ench,B-Atk,2
+29535,ench,B-Matk,2
+29536,ench,Q-Shooter,2
+29537,ench,Q-Speed,2
+29538,ench,Q-CastStat,2
+29539,ench,Q-Fatal,2
+29540,ench,Q-Delay,2
+29541,ench,Q-CastFixed,2
+29542,ench,Q-Attribute,2
+29543,ench,G-DrainHP,2
+29544,ench,G-DrainSP,2
+29545,ench,G-Life,2
+29546,ench,G-Soul,2
+29547,ench,X-UnlimitVital,2
+29548,ench,X-SpellBuster,2
+29549,ench,X-FiringShot,2
+29550,ench,X-OverPower,2
+29551,ench,X-FatalFlash,2
+29552,ench,X-LuckyStrike,2
+29585,ench,アルカナ,2
+29586,ench,プレイヤー耐性12,2
 29587,ench,閃光,2
 29588,ench,強剛,2
 29589,ench,天弓,2
 29590,ench,新暦,2
 29591,ench,剛体,2
 29592,ench,白雲,2
-
-29593,Unknown_Item,凍結耐性,2
-
-29608,ench,アリエス,2
-29609,ench,カプリコーン,2
-29610,ench,パイシーズ,2
-
-29646,Unknown_Item,<超弩級>,2
-29647,Unknown_Item,<反逆者>,2
-29648,Unknown_Item,<火雷大神>,2
-29649,Unknown_Item,Def50%無視,2
-29650,Unknown_Item,Mdef50%無視,2
-
+29593,ench,凍結耐性,2
+29608,card,アリエス,0
+29609,card,カプリコーン,0
+29610,card,パイシーズ,0
+29646,ench,<超弩級>,2
+29647,ench,<反逆者>,2
+29648,ench,<火雷大神>,2
+29649,ench,Def50%無視,2
+29650,ench,Mdef50%無視,2
 29690,ench,火属性付与(武器),2
 29691,ench,水属性付与(武器),2
 29692,ench,風属性付与(武器),2
@@ -1236,152 +1397,32 @@
 29703,ench,モータルアンデッド(魔法),2
 29704,ench,フェイタルスモール(魔法),2
 29705,ench,フェイタルネメシス(魔法),2
+29716,ench,太陽,2
+29717,ench,月,2
+29718,ench,星,2
 29719,ench,エス,2
 29720,ench,死霊,2
 29721,ench,魂,2
 29722,ench,カース,2
-
-31000,Unknown_Item,ルドカード,0
-31001,Unknown_Item,ローラカード,1
-31002,Unknown_Item,エルヴィラカード,0
-31003,Unknown_Item,無慈悲なジオイアカード,0
-31004,Unknown_Item,ソヒョンカード,1
-31005,Unknown_Item,将軍デヒョンカード,1
-31006,Unknown_Item,[LoVA] ハデスカード,0
-31007,Unknown_Item,[LoVA] 真化ハデスカード,0
-31008,Unknown_Item,[LoVA] ルールーカード,0
-31009,Unknown_Item,[LoVA] 真化ルールーカード,0
-31010,Unknown_Item,[LoVA] キマカード,0
-31011,Unknown_Item,[LoVA] 真化キマカード,0
-31012,Unknown_Item,[LoVA] バハムートカード,1
-31013,Unknown_Item,[LoVA] 真化バハムートカード,1
-31014,Unknown_Item,[LoVA] ラグナロクカード,0
-31015,Unknown_Item,[LoVA] 真化ラグナロクカード,0
-310012,Unknown_Item,死の欲動,2
-310075,Unknown_Item,グリード詠唱 - 100%,2
-310192,Unknown_Item,<Extreme>,2
-310193,Unknown_Item,ノックバック無効,2
-310194,Unknown_Item,Def + 50,2
-310195,Unknown_Item,マグニフィカートLv5,2
-310196,Unknown_Item,遠距離物理耐性 + 10%,2
-310269,Unknown_Item,石化耐性,2
-310270,Unknown_Item,T-PowerBoost,2
-310271,Unknown_Item,T-MagicBoost,2
-310272,Unknown_Item,T-Assault,2
-310273,Unknown_Item,T-Electricity,2
-310310,Unknown_Item,潜在解放(ルーンナイト),2
-310311,Unknown_Item,潜在解放(ロイヤルガード),2
-310312,Unknown_Item,潜在解放(ソーサラー),2
-310313,Unknown_Item,潜在解放(アークビショップ),2
-310314,Unknown_Item,潜在解放(修羅),2
-310315,Unknown_Item,潜在解放(シャドウチェイサー),2
-310316,Unknown_Item,潜在解放(メカニック),2
-310317,Unknown_Item,潜在解放(ジェネティック),2
-310318,Unknown_Item,必中攻撃 + 25%,2
-310319,Unknown_Item,Hit + 100,2
-
-//-- add --
-4642,card,無限のトードカード,1
-4643,card,無限のさすらい狼カード,1
-4644,card,無限のボーカルカード,1
-4645,card,無限のエクリプスカード,1
-4646,card,無限のキメラカード,1
-4647,card,無限のオシリスカード,1
-4648,card,無限のエドガカード,1
-4649,card,無限のフリオニカード,1
-4650,card,無限のオークヒーローカード,1
-4651,card,無限のタオグンカカード,1
-4951,ench,闇ドロップ,2
-4952,ench,火ドロップ,2
-4953,ench,水ドロップ,2
-4954,ench,木ドロップ,2
-4955,ench,光ドロップ,2
-4956,ench,回復ドロップ,2
-
-27250,Unknown_Item,ディオ・アネモスカード,0
-27251,Unknown_Item,ブラック・カネイリーカード,0
-27252,Unknown_Item,ヒピア・スニキカード,0
-27253,Unknown_Item,ビリー・コスルリースカード,0
-27254,Unknown_Item,フェモンカード,0
-27255,Unknown_Item,オルドルカード,0
-27256,Unknown_Item,ブルート・ハゼカード,0
-27257,Unknown_Item,黒魔カード,0
-27258,Unknown_Item,イフォドスカード,0
-27259,Unknown_Item,レチェニエカード,0
-27260,Unknown_Item,ユメヒメカード,0
-27261,Unknown_Item,ジューカード,0
-27262,Unknown_Item,ディワイカード,0
-27263,Unknown_Item,フェイ・カナビアンカード,0
-27264,Unknown_Item,魔神の信者カード,0
-27304,Unknown_Item,EA2Sカード,0
-27305,Unknown_Item,EL-A17Tカード,0
-27306,Unknown_Item,ハートハンター・ベラレカード,0
-27307,Unknown_Item,ハートハンター・Mベラレカード,0
-27308,Unknown_Item,ハートハンター・サナレカード,0
-27309,Unknown_Item,ハートハンター・Mサナレカード,0
-27310,Unknown_Item,プラガカード,0
-27311,Unknown_Item,変種プラガカード,0
-27312,Unknown_Item,ドロールカード,1
-27313,Unknown_Item,変種ドロールカード,0
-27314,Unknown_Item,ヴェネヌムカード,0
-27315,Unknown_Item,変種ヴェネヌムカード,0
-27316,Unknown_Item,ツイン・カプトゥカード,1
-27317,Unknown_Item,変種ツイン・カプトゥカード,0
-27318,Unknown_Item,ミグエルカード,0
-27319,Unknown_Item,R48-85-ベスティアカード,0
-27320,Unknown_Item,E-EA1Lカード,1
-27330,card,クロネカーカード,0
-27331,card,クロネカー・ハイネンカード,0
-27332,card,スキアカード,0
-27333,card,スキア・ネリウスカード,0
-27335,Unknown_Item,混沌のバフォメット.Jrカード,0
-27336,Unknown_Item,混沌のサイドワインダーカード,1
-27337,Unknown_Item,混沌のハンターフライカード,0
-27338,Unknown_Item,混沌のマンティスカード,0
-27339,Unknown_Item,混沌のゴーストリングカード,0
-27340,Unknown_Item,混沌のキラーマンティスカード,0
-27341,Unknown_Item,混沌のポポリンカード,0
-27342,Unknown_Item,混沌のステムワームカード,1
-27347,Unknown_Item,硬化カホカード,1
-27348,Unknown_Item,硬化ラーヴァゴーレムカード,1
-27349,Unknown_Item,硬化エクスプロージョンカード,0
-27350,Unknown_Item,硬化Sデリーターカード,0
-27351,Unknown_Item,硬化Gデリーターカード,0
-27352,Unknown_Item,硬化ナイトメアテラーカード,0
-27353,Unknown_Item,硬化ブレイザーカード,0
-27354,Unknown_Item,汚染されたレイドリックカード,0
-27355,Unknown_Item,汚染されたレイドリックAカード,0
-27356,Unknown_Item,アイスガーゴイルカード,0
-27357,Unknown_Item,汚染されたスティングカード,0
-27358,Unknown_Item,プリズンブレイカーカード,1
-27359,Unknown_Item,アイスゴーストカード,0
-27360,Unknown_Item,フレイムゴーストカード,0
-27361,Unknown_Item,汚染された彷徨う者カード,1
-27381,Unknown_Item,呪殺のヒメルメズカード,0
-27382,Unknown_Item,堕落の魔眼カード,1
-27383,Unknown_Item,呪殺のアムダライスカード,0
-27384,Unknown_Item,変貌の白騎士カード,1
-27385,Unknown_Item,変貌のカーリッツバーグカード,0
-27386,Unknown_Item,呪われたレイドリックカード,0
-27387,Unknown_Item,呪われたレイドリックAカード,0
-27388,Unknown_Item,呪われた執事カード,1
-27389,Unknown_Item,ヴォルフカード,0
-27390,Unknown_Item,ヴォルフ・レベンブルグカード,0
-27391,Unknown_Item,ポーカード,0
-27392,Unknown_Item,ポー・リハルトカード,0
-27393,Unknown_Item,カトリンカード,0
-27394,Unknown_Item,カトリン・ウィグナーカード,0
-27395,Unknown_Item,アイザックカード,0
-27396,Unknown_Item,アイザック・ウィグナーカード,0
-27397,Unknown_Item,ニヒツ,2
-27398,Unknown_Item,完全回避 + 25,2
-27399,Unknown_Item,神供,2
-27400,Unknown_Item,遠距離物理耐性 + 5%,2
-27401,Unknown_Item,気奪Lv1,2
-29371,Unknown_Item,真理の解放,2
-29436,Unknown_Item,覇王,2
-29509,Unknown_Item,豪傑,2
-
+29723,ench,スター,2
+29724,ench,殺意の怨念,2
+29725,ench,ゾディアック,2
+31000,card,ルドカード,0
+31001,card,ローラカード,1
+31002,card,エルヴィラカード,0
+31003,card,無慈悲なジオイアカード,0
+31004,card,ソヒョンカード,1
+31005,card,将軍デヒョンカード,1
+31006,card,[LoVA] ハデスカード,0
+31007,card,[LoVA] 真化ハデスカード,0
+31008,card,[LoVA] ルールーカード,0
+31009,card,[LoVA] 真化ルールーカード,0
+31010,card,[LoVA] キマカード,0
+31011,card,[LoVA] 真化キマカード,0
+31012,card,[LoVA] バハムートカード,1
+31013,card,[LoVA] 真化バハムートカード,1
+31014,card,[LoVA] ラグナロクカード,0
+31015,card,[LoVA] 真化ラグナロクカード,0
 300001,card,ポイゾナスカード,0
 300002,card,トキシャスカード,1
 300003,card,ホワイトポルセリオカード,0
@@ -1453,12 +1494,12 @@
 300123,card,パープルピタヤカード,1
 300124,card,ブルーピタヤカード,0
 300125,card,グリーンピタヤカード,1
-300131,card,正義のカード(逆位置),0
-300132,card,星のカード(逆位置),0
-300133,card,節制のカード(逆位置),0
-300134,card,戦車のカード(逆位置),0
-300135,card,死神のカード(逆位置),0
-300136,card,恋人のカード(逆位置),0
+300131,card,正義のカード(逆位置),1
+300132,card,星のカード(逆位置),1
+300133,card,節制のカード(逆位置),1
+300134,card,戦車のカード(逆位置),1
+300135,card,死神のカード(逆位置),1
+300136,card,恋人のカード(逆位置),1
 300137,card,王女メアカード,0
 300138,card,半龍王女メアカード,0
 300139,card,封印された月夜花カード,0
@@ -1473,13 +1514,13 @@
 300148,card,深海のストラウフカード,0
 300149,card,深海のフェンカード,0
 300150,card,深海のキングドラモカード,0
-300151,card,深海のクラーケンカード,0
-300163,card,皇帝のカード(逆位置),0
-300164,card,力のカード(逆位置),0
-300165,card,悪魔のカード(逆位置),0
-300166,card,月のカード(逆位置),0
-300167,card,運命の輪のカード(逆位置),0
-300168,card,世界のカード(逆位置),0
+300151,card,深海のクラーケンカード,2
+300163,card,皇帝のカード(逆位置),1
+300164,card,力のカード(逆位置),1
+300165,card,悪魔のカード(逆位置),1
+300166,card,月のカード(逆位置),1
+300167,card,運命の輪のカード(逆位置),1
+300168,card,世界のカード(逆位置),1
 300170,card,腐った木カード,0
 300171,card,グレイヴワームカード,0
 300172,card,ブレインサッカーカード,0
@@ -1528,8 +1569,8 @@
 300235,card,ぐにゃぐにゃした蟻の卵カード,0
 300236,card,度胸のあるガイアスカード,0
 300237,card,度胸のあるファミリアーカード,0
-300238,card,真面目なビタタカード,0
-300239,card,無口なマヤーカード,0
+300238,card,真面目なビタタカード,1
+300239,card,無口なマヤーカード,1
 300240,card,ガンキャンカード,0
 300241,card,ブルータルマーダーカード,0
 300242,card,ゴーストキューブカード,0
@@ -1568,14 +1609,20 @@
 300279,card,ブックオブデスカード,0
 300280,card,破損したタナトスの記憶カード,0
 300281,card,R001-ベスティアカード,0
-300282,card,隠者のカード(逆位置),0
+300282,card,隠者のカード(逆位置),1
 300283,card,愚者のカード(逆位置),0
-300284,card,法王のカード(逆位置),0
+300284,card,法王のカード(逆位置),1
 300285,card,吊るされた男のカード(逆位置),0
 300286,card,女教皇のカード,0
 300287,card,女教皇のカード(逆位置),0
 300288,card,塔のカード,0
 300289,card,塔のカード(逆位置),0
+300292,card,エクストラジョーカーカード,0
+300293,card,エルジェーベトカード,1
+300294,card,ジェニファーカード,0
+300295,card,ジェネラルオークカード,1
+300296,card,ジクラウスカード,0
+300297,card,ゴブリンキングカード,0
 300304,ench,再誕,2
 300305,ench,近物反射5%,2
 300306,ench,不屈,2
@@ -1683,6 +1730,25 @@
 300451,card,キャサリン・ゲオルグ(サイン入り)カード,0
 300452,card,フリードリヒ・ハイネン(サイン入り)カード,0
 300453,card,クロネカー・ハイネン(サイン入り)カード,0
+300486,card,エレナカード,0
+300487,card,リベリオン・エレナ・ヴォルコヴァカード,1
+300488,card,ルッキーカード,0
+300489,card,リベリオン・ルッキーカード,0
+300490,card,エストカード,0
+300491,card,リベリオン・エスト・ラブロイカード,0
+300492,card,ゴニーカード,0
+300493,card,リベリオン・ゴニーカード,0
+300494,card,フィローテスカード,0
+300495,card,秘密の羽・フィローテスカード,0
+300496,card,レイジーカード,0
+300497,card,秘密の羽・レイジーカード,0
+300498,ench,コスモ,2
+300499,ench,潜在解放(天帝I),2
+300502,card,秘密の羽・レイジー(サイン入り)カード,0
+300503,card,リベリオン・エレナ・ヴォルコヴァ(サイン入り)カード,0
+300504,card,リベリオン・エスト・ラブロイ(サイン入り)カード,0
+310012,ench,死の欲動,2
+310075,ench,グリード詠唱 - 100%,2
 310082,ench,Q-Normal,2
 310083,ench,Q-Boss,2
 310084,ench,B-Vit,2
@@ -1760,9 +1826,29 @@
 310164,ench,L-PotionPitcher3,2
 310165,ench,L-MagicPower5,2
 310166,ench,L-Gloria1,2
+310192,ench,<Extreme>,2
+310193,ench,ノックバック無効,2
+310194,ench,Def + 50,2
+310195,ench,マグニフィカートLv5,2
+310196,ench,遠距離物理耐性 + 10%,2
 310197,ench,天地崩壊,2
 310198,ench,断撃,2
 310203,ench,斬魔,2
+310269,ench,石化耐性,2
+310270,ench,T-PowerBoost,2
+310271,ench,T-MagicBoost,2
+310272,ench,T-Assault,2
+310273,ench,T-Electricity,2
+310310,ench,潜在解放(ルーンナイト),2
+310311,ench,潜在解放(ロイヤルガード),2
+310312,ench,潜在解放(ソーサラー),2
+310313,ench,潜在解放(アークビショップ),2
+310314,ench,潜在解放(修羅),2
+310315,ench,潜在解放(シャドウチェイサー),2
+310316,ench,潜在解放(メカニック),2
+310317,ench,潜在解放(ジェネティック),2
+310318,ench,必中攻撃 + 25%,2
+310319,ench,Hit + 100,2
 310320,ench,念属性付与(鎧),2
 310321,ench,シンソウの王,2
 310323,ench,超越,2
@@ -1808,20 +1894,46 @@
 310759,ench,アレス,2
 310760,ench,王の神威,2
 310850,ench,揚花火,2
+310940,ench,潜在覚醒(インスピレーションI),2
+310941,ench,潜在覚醒(アースドライブI),2
 310942,ench,潜在覚醒(ジャックフロスト),2
+310943,ench,潜在覚醒(クリムゾンロックI),2
 310944,ench,潜在覚醒(サモンベントス),2
+310945,ench,潜在覚醒(サイキックウェーブI),2
+310946,ench,潜在覚醒(サイキックウェーブII),2
+310947,ench,潜在覚醒(ヴェラチュールスピアーI),2
 310948,ench,潜在覚醒(アローストーム),2
+310949,ench,潜在覚醒(アローストームII),2
 310950,ench,潜在覚醒(シビアレインストーム),2
+310951,ench,潜在覚醒(シビアレインストームII),2
 310952,ench,潜在覚醒(ジュデックス),2
+310953,ench,潜在覚醒(ジュデックスII),2
 310954,ench,潜在覚醒(イグニッションブレイク),2
+310955,ench,潜在覚醒(イグニッションブレイクII),2
+310956,ench,潜在覚醒(ソニックウェーブI),2
 310957,ench,潜在覚醒(獅子吼),2
+310958,ench,潜在覚醒(獅子吼II),2
 310959,ench,潜在覚醒(アームズキャノン),2
+310960,ench,潜在覚醒(アックストルネードI),2
 310961,ench,潜在覚醒(クレイジーウィード),2
+310962,ench,潜在覚醒(カートキャノンI),2
+310963,ench,潜在覚醒(ローリングカッターI),2
+310964,ench,潜在覚醒(クロスリッパースラッシャーI),2
+310965,ench,潜在覚醒(トライアングルショットI),2
+310966,ench,潜在覚醒(フェイタルメナスI),2
+310967,ench,潜在覚醒(風魔手裏剣 -乱華-I),2
+310968,ench,潜在覚醒(十文字斬りI),2
 310971,ench,潜在覚醒(バニシングバスター),2
+310972,ench,潜在覚醒(ラウンドトリップI),2
 310973,ench,潜在覚醒(満月脚),2
+310974,ench,潜在覚醒(太陽爆発I),2
+310975,ench,潜在覚醒(満月脚II),2
 310976,ench,潜在覚醒(エスハ),2
+310977,ench,潜在覚醒(死霊爆発I),2
 310978,ench,潜在覚醒(大トロ),2
 310979,ench,潜在覚醒(サベージの魂),2
+310980,ench,潜在覚醒(マタタビランスI),2
+310981,ench,潜在覚醒(イヌハッカメテオI),2
 311065,ench,レジストポイズン,2
 311066,ench,レジストセイント,2
 311067,ench,レジストダークネス,2
@@ -1851,12 +1963,19 @@
 311206,ench,氷華の魔力(レンジャーI),2
 311207,ench,氷華の魔力(ミンストレル&ワンダラーI),2
 311208,ench,氷華の魔力(ミンストレル&ワンダラーII),2
+311209,ench,氷華の魔力(星帝I),2
+311210,ench,氷華の魔力(ソウルリーパーI),2
+311211,ench,氷華の魔力(リベリオンI),2
+311212,ench,氷華の魔力(影狼&朧I),2
+311213,ench,氷華の魔力(サモナーI),2
+311214,ench,氷華の魔力(サモナーII),2
 311284,ench,極限の魔力,2
 311365,ench,王家の栄光,2
 311366,ench,移動速度増加,2
 311383,ench,気功Lv2,2
 311405,ench,火属性耐性 + 5%,2
 311408,ench,地属性耐性 + 5%,2
+311409,ench,無属性耐性 + 5%,2
 311410,ench,聖属性耐性 + 5%,2
 311411,ench,闇属性耐性 + 5%,2
 311412,ench,念属性耐性 + 5%,2
@@ -1897,10 +2016,12 @@
 311905,ench,氷結耐性,2
 311907,ench,冷凍耐性,2
 311909,ench,不滅なる利益者,2
+312022,ench,天与の才,2
 312023,ench,MaxSP + 15%,2
 312031,ench,潜在解放(アークメイジII),2
 312032,ench,Cri + 25,2
 312033,ench,潜在解放(アビスチェイサーII),2
+312034,ench,潜在解放(インクイジターII),2
 312035,ench,潜在解放(インペリアルガードII),2
 312036,ench,潜在解放(ウィンドホークII),2
 312037,ench,潜在解放(エレメンタルマスターII),2
@@ -1908,10 +2029,19 @@
 312039,ench,潜在解放(シャドウクロスII),2
 312040,ench,潜在解放(ドラゴンナイトII),2
 312043,ench,潜在解放(バイオロII),2
+312044,ench,潜在解放(マイスターII),2
+312045,ench,魔獣の爪牙,2
+312046,ench,根源への到達,2
+312047,ench,不滅の肉体,2
+312048,ench,叡知の王冠,2
+312049,ench,蒼穹の覇者,2
 312300,ench,潜在解放(ドラゴンナイトIII),2
+312301,ench,潜在解放(バイオロIII),2
+312303,ench,潜在解放(エレメンタルマスターIII),2
 312304,ench,潜在解放(カーディナルIII),2
 312305,ench,悠遠なる天上の都,2
 312395,ench,ウルの加護,2
+312396,ench,潜在解放(シャドウクロスIII),2
 312397,ench,潜在解放(アビスチェイサーIII),2
 312417,ench,増幅された怨望,2
 312418,ench,祈りの晩鐘,2
@@ -1921,144 +2051,13 @@
 312445,ench,オートスペル(チェーンライトニング),2
 312446,ench,魔鉱,2
 312473,ench,潜在解放(アークメイジIII),2
+312474,ench,潜在解放(ドラゴンナイトIV),2
 312475,ench,無念無想,2
 312645,ench,潜在解放(カーディナルIV),2
 312646,ench,潜在解放(ウィンドホークIII),2
-
-1000105,ench,改造オーブ(Q-Normal),2
-1000106,ench,改造オーブ(Q-Boss),2
-1000107,ench,改造オーブ(B-Vit),2
-1000108,ench,改造オーブ(B-Luk),2
-1000109,ench,改造オーブ(B-Str),2
-1000110,ench,改造オーブ(B-Agi),2
-1000111,ench,改造オーブ(B-Int),2
-1000112,ench,改造オーブ(B-Dex),2
-1000113,ench,改造オーブ(A-Reflect),2
-1000114,ench,改造オーブ(A-SPCost),2
-1000115,ench,改造オーブ(P-Petrifaction),2
-1000116,ench,改造オーブ(P-Curse),2
-1000117,ench,改造オーブ(P-Sleep),2
-1000118,ench,改造オーブ(P-Confuse),2
-1000119,ench,改造オーブ(P-Silence),2
-1000120,ench,改造オーブ(P-Fear),2
-1000121,ench,改造オーブ(P-Ignition),2
-1000122,ench,改造オーブ(R-Saint),2
-1000123,ench,改造オーブ(R-Undead),2
-1000124,ench,改造オーブ(R-Darkness),2
-1000125,ench,改造オーブ(R-Telekinesis),2
-1000126,ench,改造オーブ(E-Saint),2
-1000127,ench,改造オーブ(E-Undead),2
-1000128,ench,改造オーブ(E-Darkness),2
-1000129,ench,改造オーブ(E-Poison),2
-1000130,ench,改造オーブ(G-Guided),2
-1000131,ench,改造オーブ(G-Cri),2
-1000132,ench,改造オーブ(U-PowerArmor),2
-1000133,ench,改造オーブ(U-PowerLeg),2
-1000134,ench,改造オーブ(U-PowerWing),2
-1000135,ench,改造オーブ(U-PowerShield),2
-1000144,ench,改造オーブ(S-UnlimitVital),2
-1000145,ench,改造オーブ(S-SpellBuster),2
-1000146,ench,改造オーブ(S-FiringShot),2
-1000147,ench,改造オーブ(S-OverPower),2
-1000148,ench,改造オーブ(S-FatalFlash),2
-1000149,ench,改造オーブ(S-LuckyStrike),2
-1000152,ench,改造オーブ(L-Sight1),2
-1000153,ench,改造オーブ(L-Teleport1),2
-1000154,ench,改造オーブ(L-SpellBreaker1),2
-1000155,ench,改造オーブ(L-Steal1),2
-1000156,ench,改造オーブ(L-SnowFlip1),2
-1000157,ench,改造オーブ(L-PeonyMamy1),2
-1000158,ench,改造オーブ(L-Sadagui1),2
-1000159,ench,改造オーブ(L-SeuoiaDust1),2
-1000160,ench,改造オーブ(L-Hiding1),2
-1000161,ench,改造オーブ(L-Magnum3),2
-1000162,ench,改造オーブ(L-FireBall3),2
-1000163,ench,改造オーブ(L-Heal1),2
-1000164,ench,改造オーブ(L-Cure1),2
-1000165,ench,改造オーブ(L-Poison3),2
-1000166,ench,改造オーブ(L-Detoxify1),2
-1000167,ench,改造オーブ(L-ThrowStone1),2
-1000168,ench,改造オーブ(L-AbsorbSpirits1),2
-1000169,ench,改造オーブ(L-Bash3),2
-1000170,ench,改造オーブ(L-Cloaking1),2
-1000171,ench,改造オーブ(L-CastCancel1),2
-1000172,ench,改造オーブ(L-FireBolt3),2
-1000173,ench,改造オーブ(L-ColdBolt3),2
-1000174,ench,改造オーブ(L-LightningBolt3),2
-1000175,ench,改造オーブ(L-EarthSpike3),2
-1000176,ench,改造オーブ(L-Angelus1),2
-1000177,ench,改造オーブ(L-StoneCurse3),2
-1000178,ench,改造オーブ(L-FrostDiver3),2
-1000179,ench,改造オーブ(L-Meteor3),2
-1000180,ench,改造オーブ(L-Estimation1),2
-1000181,ench,改造オーブ(L-FrostNova2),2
-1000182,ench,改造オーブ(L-DecAgi1),2
-1000183,ench,改造オーブ(L-Identify1),2
-1000184,ench,改造オーブ(L-Loud1),2
-1000185,ench,改造オーブ(L-SoulStrike3),2
-1000186,ench,改造オーブ(L-CallSpirits2),2
-1000187,ench,改造オーブ(L-CloseConfine1),2
-1000188,ench,改造オーブ(L-AutoGuard3),2
-1000189,ench,改造オーブ(L-PotionPitcher3),2
-1000190,ench,改造オーブ(L-MagicPower5),2
-1000191,ench,改造オーブ(L-Gloria1),2
-1000312,ench,改造モジュール(T-PowerBoost),2
-1000313,ench,改造モジュール(T-MagicBoost),2
-1000314,ench,改造モジュール(T-Assault),2
-1000315,ench,改造モジュール(T-Electricity),2
-1000519,ench,改造オーブ(Q-Range),2
-1000573,ench,チャーム＜揚花火＞,2
-1001038,ench,チャーム＜花火玉＞,2
-
-//-------------------
-//-- 231017 update --
-//-------------------
-312301,ench,潜在解放(バイオロIII),2
+312647,ench,潜在解放(アビスチェイサーIV),2
 312691,ench,潜在解放(カーディナルV),2
-
-//-------------------
-//-- 231114 update --
-//-------------------
 312799,ench,聖なる防護,2
-312303,ench,潜在解放(エレメンタルマスターIII),2
-312034,ench,潜在解放(インクイジターII),2
-
-//-------------------
-//-- 231128 update --
-//-------------------
-300498,ench,コスモ,2
-310940,ench,潜在覚醒(インスピレーションI),2
-310941,ench,潜在覚醒(アースドライブI),2
-310943,ench,潜在覚醒(クリムゾンロックI),2
-310945,ench,潜在覚醒(サイキックウェーブI),2
-310946,ench,潜在覚醒(サイキックウェーブII),2
-310947,ench,潜在覚醒(ヴェラチュールスピアーI),2
-310949,ench,潜在覚醒(アローストームII),2
-310951,ench,潜在覚醒(シビアレインストームII),2
-310953,ench,潜在覚醒(ジュデックスII),2
-310955,ench,潜在覚醒(イグニッションブレイクII),2
-310956,ench,潜在覚醒(ソニックウェーブI),2
-310958,ench,潜在覚醒(獅子吼II),2
-310960,ench,潜在覚醒(アックストルネードI),2
-310962,ench,潜在覚醒(カートキャノンI),2
-310963,ench,潜在覚醒(ローリングカッターI),2
-310964,ench,潜在覚醒(クロスリッパースラッシャーI),2
-310965,ench,潜在覚醒(トライアングルショットI),2
-310966,ench,潜在覚醒(フェイタルメナスI),2
-310967,ench,潜在覚醒(風魔手裏剣 -乱華-I),2
-310968,ench,潜在覚醒(十文字斬りI),2
-310972,ench,潜在覚醒(ラウンドトリップI),2
-310974,ench,潜在覚醒(太陽爆発I),2
-310975,ench,潜在覚醒(満月脚II),2
-310977,ench,潜在覚醒(死霊爆発I),2
-310980,ench,潜在覚醒(マタタビランスI),2
-310981,ench,潜在覚醒(イヌハッカメテオI),2
-312022,ench,天与の才,2
-312045,ench,魔獣の爪牙,2
-312046,ench,根源への到達,2
-312047,ench,不滅の肉体,2
-312048,ench,叡知の王冠,2
-312049,ench,蒼穹の覇者,2
 312807,ench,潜在覚醒(ソウルエクスパンションI),2
 312808,ench,潜在覚醒(アースストレインI),2
 312809,ench,潜在覚醒(ジャックフロストII),2
@@ -2100,67 +2099,33 @@
 312845,ench,潜在解放(影狼&朧I),2
 312846,ench,潜在解放(リベリオンII),2
 312847,ench,潜在解放(サモナーII),2
-
-//-------------------
-//-- 231205 update --
-//-------------------
-300499,ench,潜在解放(天帝I),2
+312916,ench,スキル石(ブレッシングLv10),2
+312917,ench,潜在解放(インペリアルガードIII),2
+312918,ench,潜在解放(ウィンドホークIV),2
+312919,ench,潜在解放(トルバドゥール&トルヴェールI),2
 312922,ench,潜在解放(ハイパーノービスI),2
 312923,ench,潜在解放(ソウルアセティックI),2
 312924,ench,潜在解放(ナイトウォッチI),2
 312925,ench,潜在解放(蜃気楼&不知火I),2
 312926,ench,潜在解放(スピリットハンドラーI),2
-311209,ench,氷華の魔力(星帝I),2
-311210,ench,氷華の魔力(ソウルリーパーI),2
-311211,ench,氷華の魔力(リベリオンI),2
-311212,ench,氷華の魔力(影狼&朧I),2
-311213,ench,氷華の魔力(サモナーI),2
-311214,ench,氷華の魔力(サモナーII),2
-
-//-------------------
-//-- 231219 update --
-//-------------------
-312916,ench,スキル石(ブレッシングLv10),2
-312917,ench,潜在解放(インペリアルガードIII),2
-312918,ench,潜在解放(ウィンドホークIV),2
-312919,ench,潜在解放(トルバドゥール&トルヴェールI),2
-300292,card,エクストラジョーカーカード,0
-300293,card,エルジェーベトカード,1
-300294,card,ジェニファーカード,0
-300295,card,ジェネラルオークカード,1
-300296,card,ジクラウスカード,0
-300297,card,ゴブリンキングカード,0
-312960,ench,潜在解放(ハイパーノービスII),2
-
-//-------------------
-//-- 240116 update --
-//-------------------
-312044,ench,潜在解放(マイスターII),2
-312975,ench,潜在解放(スピリットハンドラーII),2
-312966,ench,潜在解放(ソウルアセティックII),2
-
-//-------------------
-//-- 240130 update --
-//-------------------
-312647,ench,潜在解放(アビスチェイサーIV),2
 312927,ench,潜在解放(アークメイジIV),2
-312955,ench,潜在解放(バイオロIV),2
-312944,ench,潜在解放(カーディナルVI),2
-312474,ench,潜在解放(ドラゴンナイトIV),2
-312941,ench,潜在解放(エレメンタルマスターIV),2
-312961,ench,潜在解放(ハイパーノービスIII),2
-312935,ench,潜在解放(インペリアルガードIV),2
 312932,ench,潜在解放(インクイジターIII),2
-312958,ench,潜在解放(マイスターIII),2
-312969,ench,潜在解放(ナイトウォッチII),2
-312976,ench,潜在解放(スピリットハンドラーIII),2
-312396,ench,潜在解放(シャドウクロスIII),2
-312963,ench,潜在解放(天帝II),2
-312967,ench,潜在解放(ソウルアセティックIII),2
-312972,ench,潜在解放(蜃気楼&不知火II),2
-312951,ench,潜在解放(トルバドゥール&トルヴェールII),2
+312935,ench,潜在解放(インペリアルガードIV),2
 312938,ench,潜在解放(ウィンドホークV),2
-311409,ench,無属性耐性 + 5%,2
+312941,ench,潜在解放(エレメンタルマスターIV),2
+312944,ench,潜在解放(カーディナルVI),2
+312951,ench,潜在解放(トルバドゥール&トルヴェールII),2
+312955,ench,潜在解放(バイオロIV),2
+312958,ench,潜在解放(マイスターIII),2
+312960,ench,潜在解放(ハイパーノービスII),2
+312961,ench,潜在解放(ハイパーノービスIII),2
+312963,ench,潜在解放(天帝II),2
+312966,ench,潜在解放(ソウルアセティックII),2
+312967,ench,潜在解放(ソウルアセティックIII),2
+312969,ench,潜在解放(ナイトウォッチII),2
+312972,ench,潜在解放(蜃気楼&不知火II),2
+312975,ench,潜在解放(スピリットハンドラーII),2
+312976,ench,潜在解放(スピリットハンドラーIII),2
 
 //-------------------
 //-- 240206 update --
