@@ -1,0 +1,36 @@
+add
+26016
+26103
+26143
+26144
+26152
+26163
+
+27049
+27117
+27118
+27299
+27301
+27302
+27392
+
+26016,weapon,王室騎士の槍,9,20,,3200,360:0,,3,1,16512,2,34,4,175,5,1,{},{ bonus2 bIgnoreDefRace,Rct_All,50; bonus2 bAddRace,Rct_Boss,15*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,15*getequiprefinerycnt(); }
+26103,weapon,[レンタル] ホーリーステッキ,5,20,,500,50:140,,1,0,33024,2,2,4,70,10,1,{},{}
+26143,weapon,ディーヴァフォックステイル,5,20,,400,150:180,,1,1,1073741824,2,2,4,150,10,1,{},{ callfunc "ItemdbAlmightyHeal",0x7F,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bBaseAtk,30; bonus bHit,5; bonus2 bMagicAddRace,Rct_Boss,4; bonus2 bMagicAddRace,Rct_NonBoss,4; } if(getequiprefinerycnt() >= 9) { bonus bBaseAtk,30; bonus bHit,5; bonus2 bMagicAddRace,Rct_Boss,4; bonus2 bMagicAddRace,Rct_NonBoss,4; } if(equippeditem(27031)) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bSplashRange,1; } }
+26144,weapon,ミラージュフォックステイル,5,20,,400,150:180,,5,1,1073741824,2,2,4,150,10,1,{},{ if(getskilllv("SU_SOULATTACK") >= 1) { bonus bPerfectHitAddRate,20; } callfunc "ItemdbAlmightyHeal",0x7F,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bBaseAtk,30; bonus bHit,5; bonus2 bMagicAddRace,Rct_Boss,4; bonus2 bMagicAddRace,Rct_NonBoss,4; } if(getequiprefinerycnt() >= 9) { bonus bBaseAtk,30; bonus bHit,5; bonus2 bMagicAddRace,Rct_Boss,4; bonus2 bMagicAddRace,Rct_NonBoss,4; } if(equippeditem(27032)) { bonus2 bSPDrainRate,10,5; } }
+26152,weapon,スタッフオブパフィ,5,20,,300,70:150,,5,1,65792,2,2,4,100,10,1,{ /* 固定詠唱時間 + 10秒 */ },{ if(getskilllv("SO_SPELLFIST") >= 5) { bonus2 bAddSkillDamageRate,"MG_FIREBOLT",3*getequiprefinerycnt(); bonus2 bAddSkillDamageRate,"MG_COLDBOLT",3*getequiprefinerycnt(); bonus2 bAddSkillDamageRate,"MG_LIGHTNINGBOLT",3*getequiprefinerycnt(); bonus2 bAddSkillDamageRate,"WZ_EARTHSPIKE",3*getequiprefinerycnt(); } if(getequiprefinerycnt() >= 10) { skill "TF_DOUBLE",3;} if(equippeditem(4433)) {} if(equippeditem(4416)) {} if(equippeditem(31002)) {} }
+26163,weapon,虹色の猫じゃらし,5,20,,400,110:160,,1,1,1073741824,2,2,4,100,10,1,{},{ bonus3 bAutoSpell,"MG_FIREBOLT",4,100; bonus3 bAutoSpell,"MG_COLDBOLT",4,100; bonus3 bAutoSpell,"MG_LIGHTNINGBOLT",4,100; bonus3 bAutoSpell,"WZ_EARTHSPIKE",4,100; bonus bBaseAtk,10*getequiprefinerycnt(); bonus bMatk,10*getequiprefinerycnt(); bonus bAspdAddRate,getequiprefinerycnt(); if(equippeditem(19156)) { bonus bBaseAtk,15*getequiprefinerycnt(1); bonus bMatk,15*getequiprefinerycnt(1); bonus bAspdAddRate,2*getequiprefinerycnt(1); } if(equippeditem(4320)) { bonus3 bAutoSpell,"WL_HELLINFERNO",3,100; bonus2 bAddSkillDamageRate,"WL_HELLINFERNO",10*getequiprefinerycnt(); } if(equippeditem(4318)) { if(getskilllv("SU_SPRITEMABLE") >= 1) { bonus3 bAutoSpell,"SO_DIAMONDDUST",5,100; bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",10*getequiprefinerycnt(); bonus2 bAddEleMagicDamageRate,Ele_Water,5*getequiprefinerycnt(); } } if(equippeditem(300392)) {if(getskilllv("SU_SPRITEMABLE") >= 1) { bonus3 bAutoSpell,"SO_DIAMONDDUST",5,100; bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",3*getequiprefinerycnt(); bonus2 bAddEleMagicDamageRate,Ele_Water,getequiprefinerycnt(); } } }
+27049,card,レオの欠片,6,20,,10,,,,,,,769,,,,,{},{ bonus bAgi,1; bonus bAspdAddRate,1; }
+27117,card,不吉なアサルトタートルカード,6,20,,10,,,,,,,64,,,,,{},{ if(equippeditem(27118) == 0) { bonus4 bAutoSpell,"NPC_SILENCEATTACK",2,100,EAS_REVENGE|EAS_WEAPON|EAS_SKILL|EAS_TARGET; } if(equippeditem(27118)) { bonus2 bSubEle,Ele_Neutral,5; bonus4 bAutoSpell,"NPC_SILENCEATTACK",2,1200,EAS_REVENGE|EAS_WEAPON|EAS_SKILL|EAS_TARGET; } }
+27118,card,不吉なフリーズタートルカード,6,20,,10,,,,,,,4,,,,,{},{ bonus2 bSubEle,Ele_Neutral,15; bonus2 bAddEleMagicDamageRate,3*Ele_Water,getequiprefinerycnt(); }
+27299,card,サーペンタリウス,6,20,,10,,,,,,,769,,,,,{},{ bonus3 bAddMonsterDropItem,11602,Rct_All,50; bonus3 bAddMonsterDropItem,567,Rct_All,50; bonus3 bAddMonsterDropItem,515,Rct_All,50; if((Job == Job_Summoner) & (Job == Job_Spirit_Handler)) { bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bCastrate,-1*getequiprefinerycnt(); } if(equippeditem(19385)) { bonus bAllStatus,10; bonus bCastrate,-10; bonus bSkillDelayRate,-10; } }
+27301,card,迷宮のドッペルゲンガーカード,6,20,,10,,,,,,,2,,,,,{ /* アビス装備セット効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,10;bonus2 bAddRace,Rct_NonBoss,10; }
+27302,card,リーブラ,6,20,,10,,,,,,,769,,,,,{},{ bonus bAddLongWeaponDamage,5; if((Job == Job_RuneKnight) & (Job == Job_Dragon_Knight)) { bonus bAspdAddRate,getequiprefinerycnt(); } if(equippeditem(19394)) { bonus bMaxHPrate,10; bonus2 bAddRace,Rct_Boss,20; } }
+27392,card,ポー・リハルトカード,6,20,,10,,,,,,,32,,,,,{ /* 物理・魔法攻撃命中時一定確率でサイコロを振るサイコロの目に応じてスキルが発動する */ },{}
+300392,card,封印されたストームナイトカード,6,,10,10,,,,,,,2,,,,,{},{ bonus3 bAutoSpell,"WZ_STORMGUST",1,200; if(equippeditem(311439) ==0){ bonus2 bAddEff,Eff_Freeze,2000; } else { bonus2 bAddEff,Eff_Freeze,3000; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } }
+400556,head,異端審問官のヴェール,4,,10,500,,10:0,,1,2088832,2,256,,200,2447,1,{ /* 4次職 */ },{ bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddSkillDamageRate,getskilllv(IQ_MASSIVE_F_BLASTER),Baselevel/10; bonus2 bAddSkillDamageRate,getskilllv("IQ_EXPOSION_BLASTER"),Baselevel/10; }
+
+
+fix
+300392,card,封印されたストームナイトカード,6,,10,10,,,,,,,2,,,,,{},{ bonus3 bAutoSpell,"WZ_STORMGUST",1,200; if(equippeditem(311439) ==0){ bonus2 bAddEff,Eff_Freeze,2000; } else { bonus2 bAddEff,Eff_Freeze,3000; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } }
+400556,head,異端審問官のヴェール,4,,10,500,,10:0,,1,2088832,2,256,,200,2447,1,{ /* 4次職 */ },{ bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddSkillDamageRate,getskilllv(IQ_MASSIVE_F_BLASTER),Baselevel/10; bonus2 bAddSkillDamageRate,getskilllv("IQ_EXPOSION_BLASTER"),Baselevel/10; }
