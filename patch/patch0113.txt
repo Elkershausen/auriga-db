@@ -1,0 +1,31 @@
+add
+item_db_add.txt
+//==============================================================//
+//==================== 240213 アップデート =====================//
+//==============================================================//
+400601,head,スチームローラー,4,20,,500,,10:0,,1,2074075008,2,256,,200,2504,1,{ /*240213*//*4次職*/ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",Baselevel/10; bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",Baselevel/10; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",Baselevel/10; if(getequiprefinerycnt() >= 10) { bonus bCritical,25; bonus bSkillDelayRate,-20; } }
+400602,head,白狐耳の笠,4,20,,500,,10:0,,1,2074075008,2,256,,200,2505,1,{ /*240213*//*4次職*/ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"SS_KAGEGARI",Baselevel/10; bonus2 bAddSkillDamageRate,"SS_KAGENOMAI",Baselevel/10; bonus2 bAddSkillDamageRate,"SS_KAGEGISSEN",Baselevel/10; if(getequiprefinerycnt() >= 10) { bonus bPerfectHitAddRate,25; bonus bSkillDelayRate,-20; } }
+410302,head,ウィズダムコアヘッドフォン,4,20,,100,,0:0,,1,2074075135,2,512,,100,2503,0,{ /*240213*/ },{ bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; if(equippeditem(311883)) { bonus bSpeedRate,25; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; } }
+490501,acc,天涯極地の腕輪,4,20,,100,,0:0,,1,2074075008,2,136,,200,,0,{ /*240213*//*4次職*/ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bPerfectHitAddRate,25; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillDamageRate,"SJ_FLASHKICK",Baselevel/5; bonus2 bAddSkillDamageRate,"SJ_FALLINGSTAR",Baselevel/5; bonus2 bAddSkillDamageRate,"SKE_TWINKLING_GALAXY",Baselevel/10; bonus2 bAddSkillDamageRate,"SKE_STAR_BURST",Baselevel/10; bonus2 bAddSkillDamageRate,"SKE_STAR_CANNON",Baselevel/10; }
+312970,ench,潜在解放(ナイトウォッチIII),6,,,,,,,,,,65535,,,,,{ /*240213*/ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"NW_SPIRAL_SHOOTING",-300; } }
+312964,ench,潜在解放(天帝III),6,,,,,,,,,,65535,,,,,{ /*240213*/ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"SKE_TWINKLING_GALAXY",-1000; } }
+312973,ench,潜在解放(蜃気楼&不知火III),6,,,,,,,,,,65535,,,,,{ /*240213*/ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"SS_KAGENOMAI",-200; } }
+
+item_db2_add.txt
+//-------------------------------------------------------------//
+//---------------------- 240213 update ------------------------//
+//-------------------------------------------------------------//
+312964,0,0,1,1,1,1,1,0,0,0,0,0	//潜在解放(天帝III)
+312970,0,0,1,1,1,1,1,0,0,0,0,0	//潜在解放(ナイトウォッチIII)
+312973,0,0,1,1,1,1,1,0,0,0,0,0	//潜在解放(蜃気楼&不知火III)
+400601,2,0,0,0,0,0,0,0,0,0,0,0	//スチームローラー
+400602,2,0,0,0,0,0,0,0,0,0,0,0	//白狐耳の笠
+490501,2,0,0,0,0,0,0,0,0,0,0,0	//天涯極地の腕輪
+
+item_cardtype.txt
+//-------------------
+//-- 240213 update --
+//-------------------
+312964,ench,潜在解放(天帝III),2
+312970,ench,潜在解放(ナイトウォッチIII),2
+312973,ench,潜在解放(蜃気楼&不知火III),2
