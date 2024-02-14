@@ -1,5 +1,11 @@
- //item_db.txtへオーバーライド
-//ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript}
+dbの全体的整理を実施
+
+番号の区切りを一時撤去
+
+再掲アイテムの整理
+
+精錬できないのが標準のアクセサリと頭中下段に精錬不可 0 のデータを追記
+
 //501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,,,,{ itemheal rand(45,65),0; },{}
 //502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,,,,{ itemheal rand(105,145),0; },{}
 //503,heal,黄ポーション,0,550,,130,,,,,2074075135,2,,,,,,{ itemheal rand(175,235),0; },{}
@@ -12465,11 +12471,7 @@
 1100018,heal,夜市の綿菓子,0,,10,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_SIROMA_ICE_TEA,500000,20; },{}
 1100019,heal,とれたて野菜串,0,,10,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_MAGI,500000,10; },{}
 1100020,heal,直火焼ソーセージ,0,,10,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_MSTR,500000,10; },{}
-//-- ここまで20240213までの全アイテム --
 
-//-- ここから240109以降実装をわかるように再掲 --
-//-- モチーフ装備EP装備の再掲 --
-//-- セット効果の再掲 --
 
 //==============================================================//
 //================= サバイバルロッド系装備 =====================//
@@ -12605,141 +12607,3 @@
 650025,weapon,グレイシア風魔手裏剣,9,,10,1500,150:160,,1,1,536870912,2,34,3,220,22,1,{/*超越装備*/},{ bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; bonus2 bAddRace,Rct_Boss,6*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,6*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,3*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,3*getequiprefinerycnt(); if(equippeditem(311439)){ bonus2 bIgnoreDefRace,Rct_All,100; bonus2 bIgnoreMdefRace,Rct_All,100; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; } }
 700052,weapon,グレイシアボウ,8,,10,900,160:170,,5,1,1703936,2,34,3,220,11,1,{/*超越装備*/},{ bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; bonus2 bAddRace,Rct_Boss,6*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,6*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,3*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,3*getequiprefinerycnt(); if(equippeditem(311439)){ bonus2 bIgnoreDefRace,Rct_Boss,100; bonus2 bIgnoreDefRace,Rct_NonBoss,100; bonus2 bIgnoreMDefRace,Rct_Boss,100; bonus2 bIgnoreMDefRace,Rct_NonBoss,100; bonus bBaseAtk,BaseLevel; bonus bMatk,BaseLevel; } /* (超越段階>=1) bonus2 bAddRace,Rct_Boss,7; bonus2 bAddRace,Rct_NonBoss,7; bonus2 bMagicAddRace,Rct_Boss,7; bonus2 bMagicAddRace,7; */}
 800014,weapon,グレイシアハンドガン,15,,10,350,70:0,,5,1,268435456,2,34,3,220,17,1,{/*超越装備*/},{ bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; bonus2 bAddRace,Rct_Boss,6*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,6*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,3*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,3*getequiprefinerycnt(); if(equippeditem(311439)){ bonus2 bIgnoreDefRace,Rct_All,100; bonus2 bIgnoreMdefRace,Rct_All,100; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; } }
-
-//==============================================================//
-//==================== 240109 アップデート =====================//
-//==============================================================//
-200348,consum,コスたまNewYearIII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
-20208,cos,[衣装] 酒豪のネクタイ,4,20,,0,,,,0,2074075135,2,1024,,1,443,0,{},{}
-31159,cos,[衣装] 決闘の龍帽子,4,20,,0,,,,0,2074075135,2,1024,,1,1149,0,{},{}
-400588,cos,[衣装] 福巾着,4,20,,0,,,,0,2074075135,2,1024,,1,2493,0,{},{}
-410296,cos,[衣装] 一升瓶,4,20,,0,,,,0,2074075135,2,2048,,1,2491,0,{},{}
-410297,cos,[衣装] 瞬く古龍の瞳,4,20,,0,,,,0,2074075135,2,2048,,1,2492,0,{},{}
-420211,cos,[衣装] 夢見る赤羊,4,20,,0,,,,0,2074075135,2,4096,,1,2277,0,{},{}
-420306,cos,[衣装] こたつ,4,20,,0,,,,0,2074075135,2,8192,,1,2489,0,{},{}
-420307,cos,[衣装] 王女メアロールヘア,4,20,,0,,,,0,2074075135,2,4096,,1,2490,0,{},{}
-480407,cos,[衣装] レティシアの翼,4,20,,0,,,,0,2074075135,2,8192,,1,203,0,{},{}
-200347,consum,[2024年]究極精錬お楽しみチケットの箱,2,,,0,,,,,2074075135,2,,,1,,0,{ getitem2 6952,1,1,0,0,0,0,0,0,604800; getitem2 1001223,1,1,0,0,0,0,0,0,3628800; },{}
-1001575,item,キューペットボックス抽選券VIII,3,0,,0,,,,,,,,,,,,{},{}
-
-//==============================================================//
-//==================== 240116 アップデート =====================//
-//==============================================================//
-400592,head,イエローキティヘッドフォン,4,20,,500,,10:0,,1,2074075008,2,256,,200,2495,1,{ /* 4次職 拡張4次職 */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"MT_SPARK_BLASTER",Baselevel/10; bonus2 bAddSkillDamageRate,"MT_TRIPLE_LASER",Baselevel/10; }
-400593,head,ぷにぷにあんよのスタンプフード,4,20,,500,,10:0,,1,2074075008,2,256,,200,2496,1,{ /* 4次職 拡張4次職 */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"SH_CHUL_HO_SONIC_CLAW",Baselevel/10; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",Baselevel/10; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",Baselevel/10; }
-470254,shoes,剣禅一如,4,20,,700,,25:15,,1,2074075008,2,64,,200,,1,{ /* 4次職 拡張4次職 */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus bMaxHPrate,4*getequiprefinerycnt(); if(getequiprefinerycnt() >= 5) { bonus bSkillDelayRate,-15; bonus2 bSubRace,Rct_Boss,15; bonus2 bSubRace,Rct_NonBoss,15; bonus2 bMagicSubRace,Rct_Boss,15; bonus2 bMagicSubRace,Rct_NonBoss,15; } if(getequiprefinerycnt() >= 7) { bonus bSkillDelayRate,-25; bonus2 bSubRace,Rct_Boss,25; bonus2 bSubRace,Rct_NonBoss,25; bonus2 bMagicSubRace,Rct_Boss,25; bonus2 bMagicSubRace,Rct_NonBoss,25; } if(equippeditem(311075)){ bonus bCritical,25; bonus bAddCriticalDamage,30; } }
-490481,acc,五行封神陣,4,200,,100,,0:0,,1,2074075008,2,136,,200,,0,{ /* 4次職 拡張4次職 */ },{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillCoolDown,"SP_CURSEEXPLOSION",-500; bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",Baselevel/3; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLUE_DRAGON",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_WHITE_TIGER",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_RED_PHOENIX",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLACK_TORTOISE",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",Baselevel/10; }
-312044,ench,潜在解放(マイスターII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"MT_SPARK_BLASTER",-200; bonus2 bAddSkillCoolDown,"MT_TRIPLE_LASER",-200;} }
-312975,ench,潜在解放(スピリットハンドラーII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"SH_CHUL_HO_SONIC_CLAW",-200; bonus2 bAddSkillCoolDown,"SH_HOGOGONG_STRIKE",-200;} }
-312966,ench,潜在解放(ソウルアセティックII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29371)){ bonus2 bAddSkillCoolDown,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",-200; bonus2 bAddSkillCoolDown,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",-300;} }
-9143,pet,レッドピタヤの卵,3,20,,10,,,,,,,,,,,,{ /* ペットにセット効果 */ },{}
-9153,pet,ミストレスの卵,3,20,,10,,,,,,,,,,,,{ /* ペットにセット効果 */ },{}
-9154,pet,ジャイアントホーネットの卵,3,20,,10,,,,,,,,,,,,{ /* ペットにセット効果 */ },{}
-9155,pet,ホーネットの卵,3,20,,10,,,,,,,,,,,,{ /* ペットにセット効果 */ },{}
-1001576,item,ペット用ローヤルゼリー,3,20,,10,,,,,,,,,,,,{ /* [ミストレス]に進化するためのアイテム */ },{}
-1001577,item,ペット用ハチ蜜,3,20,,10,,,,,,,,,,,,{ /* [ジャイアントホーネット]に進化するためのアイテム */ },{}
-1001578,item,ミストレス交換チケット,3,0,,0,,,,,,,,,,,,{},{}
-1001579,item,ジャイアントホーネット交換チケット,3,0,,0,,,,,,,,,,,,{},{}
-1001580,item,ホーネット交換チケット,3,0,,0,,,,,,,,,,,,{},{}
-1001587,item,レッドピタヤ交換チケット,3,0,,0,,,,,,,,,,,,{},{}
-1000502,item,浄化の聖水,3,20,,1,,,,,,,,,,,,{},{}
-//102723,102723,-,2,,,,,,,,,,,,,,,{},{}
-
-//==============================================================//
-//==================== 240123 アップデート =====================//
-//==============================================================//
-200356,consum,[2024]復刻コスたまの箱(Season1),2,,,0,,,,,2074075135,2,,,,,,{ getitem2 1001192,1,1,0,0,0,0,0,0,7948800; },{}
-200358,consum,[2024]復刻コスたま引換券(Season1)11個の箱,2,,,0,,,,,2074075135,2,,,,,,{ getitem2 1001192,11,1,0,0,0,0,0,0,7948800; },{}
-20621,cos,[衣装] 汚染されたダークロードのマント,4,20,,0,,,,0,2074075135,2,8192,,1,175,0,{},{ hateffect HAT_EF_C_Dark_Lord_Manteau,TRUE; },{ hateffect HAT_EF_C_Dark_Lord_Manteau,FALSE; }
-15954,cos,[衣装] わんにゃん親衛隊,4,20,,0,,,,0,2074075135,2,2048,,1,2297,0,{},{}
-
-//==============================================================//
-//==================== 240130 アップデート =====================//
-//==============================================================//
-312647,ench,潜在解放(アビスチェイサーIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312647,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"ABC_CHAIN_REACTION_SHOT",-169; bonus2 bAddSpCost,"ABC_FRENZY_SHOT",-109; } } }
-312927,ench,潜在解放(アークメイジIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 固定詠唱時間 - 0.5秒 */ },{ if(equippeditem(29371)){} }
-312955,ench,潜在解放(バイオロIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312955,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"BO_ACIDIFIED_ZONE_FIRE",-539; bonus2 bAddSpCost,"BO_ACIDIFIED_ZONE_WIND",-539; bonus2 bAddSpCost,"BO_ACIDIFIED_ZONE_WATER",-479; bonus2 bAddSpCost,"BO_ACIDIFIED_ZONE_GROUND",-479; } } }
-312944,ench,潜在解放(カーディナルVI),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29371)){ bonus3 bAutoActiveMagic,312944,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"CD_ARBITRIUM",-439; bonus2 bAddSpCost,"CD_PNEUMATICUS_PROCELLA",-659; bonus2 bAddSpCost,"CD_FRAMEN",-439; } } }
-312474,ench,潜在解放(ドラゴンナイトIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312474,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"DK_HACKANDSLASHER",-189; bonus2 bAddSpCost,"DK_MADNESS_CRUSHER",-189; } } }
-312941,ench,潜在解放(エレメンタルマスターIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 固定詠唱時間 - 1秒 */ },{ if(equippeditem(29371)){} }
-312961,ench,潜在解放(ハイパーノービスIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29371)){ bonus3 bAutoActiveMagic,312961,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"HN_JUPITEL_THUNDER_STORM",-79; bonus2 bAddSpCost,"HN_HELLS_DRIVE",-69; } } }
-312935,ench,潜在解放(インペリアルガードIV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312935,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"IG_OVERSLASH",-239; bonus2 bAddSpCost,"IG_GRAND_JUDGEMENT",-429; bonus2 bAddSpCost,"IG_SHIELD_SHOOTING",-159; } } }
-312932,ench,潜在解放(インクイジターIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"IQ_MASSIVE_F_BLASTER",-100; } }
-312958,ench,潜在解放(マイスターIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312958,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"MT_AXE_STOMP",-299; bonus2 bAddSpCost,"MT_RUSH_QUAKE",-439; } } }
-312969,ench,潜在解放(ナイトウォッチII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312969,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"NW_ONLY_ONE_BULLET",-99; bonus2 bAddSpCost,"NW_SPIRAL_SHOOTING",-179; } } }
-312976,ench,潜在解放(スピリットハンドラーIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312979,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"SH_CHUL_HO_SONIC_CLAW",-99; bonus2 bAddSpCost,"SH_HOWLING_OF_CHUL_HO",-199; bonus2 bAddSpCost,"SH_HOGOGONG_STRIKE",-169; } } }
-312396,ench,潜在解放(シャドウクロスIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312396,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"SHC_IMPACT_CRATER",-209; bonus2 bAddSpCost,"SHC_SAVAGE_IMPACT",-209; } } }
-312963,ench,潜在解放(天帝II),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312963,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"SKE_TWINKLING_GALAXY",-269; bonus2 bAddSpCost,"SKE_STAR_BURST",-269;}} }
-312967,ench,潜在解放(ソウルアセティックIII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 固定詠唱時間 - 0.5秒 */ },{ if(equippeditem(29371)){ } }
-312972,ench,潜在解放(蜃気楼&不知火II),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312972,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"NJ_KIRIKAGE",-229; bonus2 bAddSpCost,"SS_KAGENOMAI",-189; bonus2 bAddSpCost,"SS_KAGEGISSEN",-189; bonus2 bAddSpCost,"SS_KAGEAKUMU",-279; } } }
-312951,ench,潜在解放(トルバドゥール&トルヴェールII),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312951,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"TR_RHYTHMSHOOTING",-109; bonus2 bAddSpCost,"TR_ROSEBLOSSOM",-229; } } }
-312938,ench,潜在解放(ウィンドホークV),6,,,,,,,,,,65535,,,,,{ /* 4次職 拡張4次職 */ },{ if(equippeditem(29509)){ bonus3 bAutoActiveWeapon,312938,100,20000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"WH_CRESCIVE_BOLT",-119; bonus2 bAddSpCost,"WH_GALESTORM",-169; } } }
-311409,ench,無属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{},{ bonus2 bSubEle,Ele_Neutral,5; }
-
-//==============================================================//
-//==================== 240206 アップデート =====================//
-//==============================================================//
-15836,cos,[衣装] 熾天使のヘアバンド,4,20,,0,,,,0,2074075135,2,1024,,1,679,0,{ /* 240206 */ /* コスたまCuteIII */ },{}
-102822,use,ロイヤルチョコパック(ニーヒル),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102823,use,ロイヤルチョコパック(スキア),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102824,use,ロイヤルチョコパック(スピーカ),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102825,use,ロイヤルチョコパック(アグネス),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102826,use,ロイヤルチョコパック(ポー),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102827,use,ロイヤルチョコパック(アイザック),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102828,use,ロイヤルチョコパック(キャサリン),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102829,use,ロイヤルチョコパック(フリードリヒ),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102830,use,ロイヤルチョコパック(クロネカー),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102831,use,ロイヤルチョコパック(レイジー),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102832,use,ロイヤルチョコパック(エレナ),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102833,use,ロイヤルチョコパック(エスト),2,20,,200,,,,,2074075135,2,,,1,,,{ /* 240206 */ getitem 12234,1; },{ /* カード459種 ダイヤ１カラ 27391 27389 300421 300423 27392 27199 27394 300493 1000468 */ /* [チョコ 112/112] [ダイヤ 98/112] [カード 14/112] */ }
-102844,heal,アグネスが夢見たローズケーキ,0,20,,10,,,,,2074075135,2,,,200,,,{ /* 240206 */ percentheal 100,100; },{ /* EFST_SWEETSFAIR_ATK */ }
-102845,heal,アイザックが仕掛けるミルククレープ,0,20,,10,,,,,2074075135,2,,,200,,,{ /* 240206 */ percentheal 100,100; },{ /* EFST_SWEETSFAIR_ATK */ }
-102846,heal,クロネカーお墨付き団子(老舗の味),0,20,,10,,,,,2074075135,2,,,200,,,{ /* 240206 */ percentheal 100,100; sc_start 31,60000,1; },{}
-102847,heal,レイジーの心を奪った教皇クッキー,0,20,,10,,,,,2074075135,2,,,200,,,{ /* 240206 */ percentheal 100,100; },{ /* EFST_SWEETSFAIR_ATK */ }
-102848,heal,エレナ爆推しの芳烈ポップコーン,0,20,,10,,,,,2074075135,2,,,200,,,{ /* 240206 */ percentheal 100,100; },{ /* EFST_SWEETSFAIR_ATK */ }
-102849,heal,エストが愛飲する炭酸ベリージュース,0,20,,10,,,,,2074075135,2,,,200,,,{ /* 240206 */ percentheal 100,100; },{ /* EFST_SWEETSFAIR_ATK */ }
-200365,use,コスたまCuteIII,2,0,,1,,,,,2074075135,2,,,1,,,{ /* 240206 */ /* コスたまCuteIII */ },{}
-300486,card,エレナカード,6,20,,10,,,,,,,136,,,,,{ /* 240206 */ },{ bonus bAddLongWeaponDamage,5; }
-300487,card,リベリオン・エレナ・ヴォルコヴァカード,6,20,,10,,,,,,,2,,,,,{ /* 240206 */ },{ bonus bAddLongWeaponDamage,10; if(getequiprefinerycnt() >= 7) { bonus bAddLongWeaponDamage,5; } if(getequiprefinerycnt() >= 9) { bonus bAddLongWeaponDamage,5; } }
-300488,card,ルッキーカード,6,20,,10,,,,,,,4,,,,,{ /* 240206 */ },{ bonus bFlee,5; bonus2 bSubEle,Ele_Holy,30; if(getskilllv("CR_TRUST") >= 1) { bonus2 bSubEle,Ele_Holy,-30; } }
-300489,card,リベリオン・ルッキーカード,6,20,,10,,,,,,,4,,,,,{ /* 240206 */ },{ bonus2 bSubEle,Ele_Neutral,15; bonus2 bAddEleMagicDamageRate,Ele_Holy,3*getequiprefinerycnt(); }
-300490,card,エストカード,6,20,,10,,,,,,,136,,,,,{ /* 240206 */ },{ skill "AC_CONCENTRATION",5; }
-300491,card,リベリオン・エスト・ラブロイカード,6,20,,10,,,,,,,136,,,,,{ /* 240206 */ },{ bonus2 bAddSkillDamageRate,"RL_MASS_SPIRAL",50; }
-300492,card,ゴニーカード,6,20,,10,,,,,,,769,,,,,{ /* 240206 */ },{ bonus bMaxHP,500*getequiprefinerycnt(); }
-300493,card,リベリオン・ゴニーカード,6,20,,10,,,,,,,16,,,,,{ /* 240206 */ },{ bonus bUnbreakableArmor,0; bonus bMaxHPrate,3*getequiprefinerycnt(); }
-300494,card,フィローテスカード,6,20,,10,,,,,,,769,,,,,{ /* 240206 */ },{ bonus2 bSPPenaltyTime,10000,-10-10*getequiprefinerycnt(); }
-300495,card,秘密の羽・フィローテスカード,6,20,,10,,,,,,,4,,,,,{ /* 240206 */ },{ bonus bInt,getequiprefinerycnt(); bonus bMaxSPrate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus bInt,5; bonus bMaxSPrate,5; } }
-300496,card,レイジーカード,6,20,,10,,,,,,,136,,,,,{ /* 240206 */ },{ skill "SM_PROVOKE",5; }
-300497,card,秘密の羽・レイジーカード,6,20,,10,,,,,,,64,,,,,{ /* 240206 */ },{ bonus2 bFixCastrate,-70,0; }
-300502,card,秘密の羽・レイジー(サイン入り)カード,6,20,,10,,,,,,,136,,,,,{ /* 240206 */ },{ bonus bMaxHPrate,15; bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; skill "MO_CALLSPIRITS",5; }
-300503,card,リベリオン・エレナ・ヴォルコヴァ(サイン入り)カード,6,20,,10,,,,,,,136,,,,,{ /* 240206 */ },{ bonus bNoSizeFix,0; }
-300504,card,リベリオン・エスト・ラブロイ(サイン入り)カード,6,20,,10,,,,,,,136,,,,,{ /* 240206 */ },{ bonus bCritical,100; }
-400432,cos,[衣装] ハートラビットベレー,4,20,,0,,,,0,2074075135,2,1024,,1,2367,0,{ /* 240206 */ /* コスたまCuteIII */ },{}
-400594,cos,[衣装] クロックワイズ,4,20,,0,,,,0,2074075135,2,1024,,1,2350,0,{ /* 240206 */ /* コスたまCuteIII */ },{ hateffect HAT_EF_C_Disapear_Time_TW_2,TRUE; },{ hateffect HAT_EF_C_Disapear_Time_TW_2,FALSE; }
-400595,cos,[衣装] 聖母の慈愛(上段),4,20,,0,,,,0,2074075135,2,1024,,1,610,0,{ /* 240206 */ /* コスたまCuteIII */ },{}
-400596,cos,[衣装] プチチョコハット,4,20,,0,,,,0,2074075135,2,1024,,1,2498,0,{ /* 240206 */ /* コスたまCuteIII */ },{}
-410200,cos,[衣装] 白ウサギ執事,4,20,,0,,,,0,2074075135,2,2048,,1,2362,0,{ /* 240206 */ /* コスたまCuteIII */ },{}
-410231,cos,[衣装] ティーパーティー,4,20,,0,,,,0,2074075135,2,4096,,1,0,0,{ /* 240206 */ /* コスたまCuteIII */ },{ hateffect HAT_EF_alice_tea,TRUE; },{hateffect HAT_EF_alice_tea,FALSE; }
-420317,cos,[衣装] ホワイトラビットヘア,4,20,,0,,,,0,2074075135,2,4096,,1,2499,0,{ /* 240206 */ /* コスたまCuteIII */ },{}
-480297,cos,[衣装] ロップイヤーケープ,4,20,,0,,,,0,2074075135,2,8192,,1,169,0,{ /* 240206 */ /* コスたまCuteIII */ },{}
-480411,cos,[衣装] 白ウサギの尻尾,4,20,,0,,,,0,2074075135,2,8192,,1,206,0,{ /* 240206 */ /* コスたまCuteIII */ },{}
-1001606,item,サイン会チケット(レイジー),3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
-1001607,item,サイン会チケット(エレナ),3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
-1001608,item,サイン会チケット(エスト),3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
-1001609,item,プリンセス・レベンブルグ,3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
-1001610,item,搾りたて濃厚濃く甘ミルク,3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
-1001611,item,専属農家の最高級米粉,3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
-1001612,item,アルナベルツ産ラブリー卵,3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
-1001613,item,ゴールデンラッシュコーン,3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
-1001614,item,朝摘み完熟シャインベリー,3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
-
-//==============================================================//
-//==================== 240213 アップデート =====================//
-//==============================================================//
-400601,head,スチームローラー,4,20,,500,,10:0,,1,2074075008,2,256,,200,2504,1,{ /*240213*//*4次職*/ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",Baselevel/10; bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",Baselevel/10; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",Baselevel/10; if(getequiprefinerycnt() >= 10) { bonus bCritical,25; bonus bSkillDelayRate,-20; } }
-400602,head,白狐耳の笠,4,20,,500,,10:0,,1,2074075008,2,256,,200,2505,1,{ /*240213*//*4次職*/ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"SS_KAGEGARI",Baselevel/10; bonus2 bAddSkillDamageRate,"SS_KAGENOMAI",Baselevel/10; bonus2 bAddSkillDamageRate,"SS_KAGEGISSEN",Baselevel/10; if(getequiprefinerycnt() >= 10) { bonus bPerfectHitAddRate,25; bonus bSkillDelayRate,-20; } }
-410302,head,ウィズダムコアヘッドフォン,4,20,,100,,0:0,,1,2074075135,2,512,,100,2503,0,{ /*240213*/ },{ bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; if(equippeditem(311883)) { bonus bSpeedRate,25; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; } }
-490501,acc,天涯極地の腕輪,4,20,,100,,0:0,,1,2074075008,2,136,,200,,0,{ /*240213*//*4次職*/ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bPerfectHitAddRate,25; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillDamageRate,"SJ_FLASHKICK",Baselevel/5; bonus2 bAddSkillDamageRate,"SJ_FALLINGSTAR",Baselevel/5; bonus2 bAddSkillDamageRate,"SKE_TWINKLING_GALAXY",Baselevel/10; bonus2 bAddSkillDamageRate,"SKE_STAR_BURST",Baselevel/10; bonus2 bAddSkillDamageRate,"SKE_STAR_CANNON",Baselevel/10; }
-312970,ench,潜在解放(ナイトウォッチIII),6,,,,,,,,,,65535,,,,,{ /*240213*/ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"NW_SPIRAL_SHOOTING",-300; } }
-312964,ench,潜在解放(天帝III),6,,,,,,,,,,65535,,,,,{ /*240213*/ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"SKE_TWINKLING_GALAXY",-1000; } }
-312973,ench,潜在解放(蜃気楼&不知火III),6,,,,,,,,,,65535,,,,,{ /*240213*/ },{ if(equippeditem(29509)){ bonus2 bAddSkillCoolDown,"SS_KAGENOMAI",-200; } }
