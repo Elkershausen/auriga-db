@@ -4479,7 +4479,7 @@
 //11710,heal,カナダドライ サクラミスト,0,800,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(60,70),rand(10,11); },{}
 //11711,heal,紅茶花伝 桜 ミルクティー,0,800,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(60,70),rand(10,11); },{}
 //11712,heal,一 茶花,0,800,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(60,70),rand(10,11); },{}
-//11723,heal,グリーンクリスタルの欠片,3,0,,1,,,,,2074075135,2,,,1,,,{},{}
+11723,heal,グリーンクリスタルの欠片,3,0,,1,,,,,2074075135,2,,,1,,,{ /*  イベントアイテム 効果変わる */ },{}
 //11724,heal,ミスティの手作りチョコ,0,0,,80,,,,,2074075135,2,,,1,,,{},{}
 //11725,heal,ジェドの手作りチョコ,0,0,,80,,,,,2074075135,2,,,1,,,{},{}
 //11726,heal,ニルエンの手作りチョコ,0,0,,80,,,,,2074075135,2,,,1,,,{},{}
@@ -7386,56 +7386,56 @@
 22243,shoes,ママラガン,4,20,,300,,15:10,,0,2074075135,2,64,,100,,1,{},{ bonus2 bMagicAddRace,Rct_Boss,15; skill "WZ_VERMILION",5; bonus2 bAddSkillCoolDown,"SO_VARETYR_SPEAR",-1000; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus2 bAddEleMagicDamageRate,Ele_Wind,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddEleMagicDamageRate,Ele_Wind,50; } if(equippeditem(4876)){ bonus bInt,40; bonus bSkillDelayRate,-15; } }
 22244,shoes,お洒落なサイレントシューズ,4,20,,600,,25:0,,1,2074075135,2,64,,100,,1,{},{ bonus2 bAddEle,Ele_All,20; bonus2 bMagicAddEle,Ele_All,20; bonus bHPGainValue,150; bonus bHPGainValue,15; if(getequiprefinerycnt() >= 7) { bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; skill "BS_GREED",1; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } }
 22245,shoes,覚醒特殊環境活動用ブーツ,4,20,,1000,,15:0,,1,2074075135,2,64,,99,,1,{},{ bonus bMatk,50; bonus bAspdAddRate,15; bonus bMaxHPRate,20; bonus bMaxSPRate,20; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; if(equippeditem(4168)){ skill "SA_VOLCANO",5; bonus3 bRevAutoActiveWeapon,22203,500,15000; if(checkactiveitem()){ if(Baselevel <= 99){ bonus2 bAddEleMagicDamageRate,Ele_Fire,5*getequiprefinerycnt(); } } if(Baselevel >= 100){ bonus3 bRevAutoActiveWeapon,22203,500,15000; if(checkactiveitem()){ bonus2 bAddEleMagicDamageRate,Ele_Fire,10*getequiprefinerycnt(); } } } if(equippeditem(4488)){ skill "SA_VOLCANO",1; bonus3 bRevAutoActiveWeapon,22203,100,10000; if(checkactiveitem()){ if(Baselevel <= 99){ bonus2 bAddEleMagicDamageRate,Ele_Fire,5*getequiprefinerycnt(); } } if(Baselevel >= 100){ bonus3 bRevAutoActiveWeapon,22203,100,10000; if(checkactiveitem()){ bonus2 bAddEleMagicDamageRate,Ele_Fire,10*getequiprefinerycnt(); } } } if(equippeditem(4876)) { bonus bSkillDelayRate,-70; bonus bSPGainValue,5; } }
-//22506,use,新鮮な魔力貝,2,0,,100,,,,,2074075135,2,,,,,,{},{}
-//22507,use,フェイヨン移動スクロール,2,1000,,10,,,,,2074075135,2,,,,,,{ switch(rand(8)){ case 0: warp "pay_dun04.gat",120,116; end; case 1: warp "payon_in03.gat",99,182; end; case 2: warp "payon_in02.gat",17,62; end; case 3: warp "payon_in01.gat",144,15; end; case 4: warp "pay_fild01.gat",141,211; end; case 5: warp "pay_fild04.gat",348,333; end; case 6: warp "pay_fild07.gat",200,186; end; case 7: warp "pay_fild10.gat",147,267; end; } },{}
-//22511,use,フェンリルの呪符,2,20,,10,,,,,2074075135,2,,,,,,{},{}
-//22515,use,捻じれた時間のカギ,2,5000,,300,,,,,2074075135,2,,,100,,,{},{}
-//22516,use,赤黒い塊,2,1440,,10,,,,,2074075135,2,,,,,,{},{}
-//22534,use,閉ざされた心の箱,2,1000,,1000,,,,,2074075135,2,,,,,,{ getitem RAND_MIND_BOX,1,0; },{}
-//22537,use,勇者の戦利品,2,0,,100,,,,,2074075135,2,,,,,,{},{}
-22538,use,[服装] フェイヨン礼服,2,20,,100,,,,,2074075135,2,,,1,,,{},{}
-//22540,use,ラクスアニマルーンストーン,2,0,,100,,,,,2074075135,2,,,,,,{ itemskill "RK_LUXANIMA",1,""; },{}
-//22566,use,永久霜,2,10,,0,,,,,2074075135,2,,,,,,{ sc_start SC_CHILL,10000,0; },{}
-//22567,use,魔神モロク遠征褒賞箱,2,5000,,100,,,,,2074075135,2,,,,,,{},{}
-//22656,use,補給物資の箱,2,20,,10,,,,,2074075135,2,,,,,,{},{}
-//22667,use,ワールド対抗戦特殊箱,2,0,,100,,,,,2074075135,2,,,,,,{},{}
-//22679,use,死の櫃,2,20,,10,,,,,2074075135,2,,,,,,{},{}
-//22680,use,イエロークリスタルの欠片,2,0,,1,,,,,2074075135,2,,,,,,{},{}
-//22681,use,ブルークリスタルの欠片,2,0,,1,,,,,2074075135,2,,,,,,{},{}
-//22682,use,レッドクリスタルの欠片,2,0,,1,,,,,2074075135,2,,,,,,{},{}
-//22687,use,思念の残滓,2,20,,10,,,,,2074075135,2,,,,,,{},{}
-//22691,use,レコードの破片(2日目),2,0,,0,,,,,2074075135,2,,,,,,{ set VER_MEMORY,0; if(countitem(6825)){ delitem 6825,countitem(6825); } for(set '@i,5341; '@i <= 5370; set '@i,'@i+1){ if(checkquest('@i)){ delquest '@i; } } warp "un_bk_q.gat",98,143; },{}
-//22692,use,レコードの破片(30日目),2,0,,0,,,,,2074075135,2,,,,,,{ set VER_MEMORY,0; if(countitem(6825)){ delitem 6825,countitem(6825); } for(set '@i,5341; '@i <= 5370; set '@i,'@i+1){ if(checkquest('@i)){ delquest '@i; } } warp "un_bk_q.gat",45,276; },{}
-//22693,use,レコードの破片(32日目),2,0,,0,,,,,2074075135,2,,,,,,{ set VER_MEMORY,0; if(countitem(6825)){ delitem 6825,countitem(6825); } for(set '@i,5341; '@i <= 5370; set '@i,'@i+1){ if(checkquest('@i)){ delquest '@i; } } warp "un_bk_q.gat",217,346; },{}
-//22694,use,レコードの破片(40日目),2,0,,0,,,,,2074075135,2,,,,,,{ set VER_MEMORY,0; if(countitem(6825)){ delitem 6825,countitem(6825); } for(set '@i,5341; '@i <= 5370; set '@i,'@i+1){ if(checkquest('@i)){ delquest '@i; } } warp "un_bk_q.gat",273,235; },{}
-//22695,use,レコードの破片(50日目),2,0,,0,,,,,2074075135,2,,,,,,{ set VER_MEMORY,0; if(countitem(6825)){ delitem 6825,countitem(6825); } for(set '@i,5341; '@i <= 5370; set '@i,'@i+1){ if(checkquest('@i)){ delquest '@i; } } warp "un_bk_q.gat",275,290; },{}
-//22696,use,Wチケット(2個)の箱,2,0,,10,,,,,2074075135,2,,,,,,{},{}
-//22698,use,防壁強化の証の箱,2,0,,0,,,,,2074075135,2,,,,,,{},{}
-//22709,use,リリーフポーション(小),2,200,,50,,,,,2074075135,2,,,100,,,{},{}
-//22710,use,リリーフポーション(中),2,400,,100,,,,,2074075135,2,,,100,,,{},{}
-//22711,use,リリーフポーション(大),2,800,,150,,,,,2074075135,2,,,100,,,{},{}
-//22712,use,リリーフポーション(SP),2,200,,50,,,,,2074075135,2,,,99,,,{},{}
-//22722,use,手作りクッキー,2,0,,20,,,,,2074075135,2,,,,,,{},{}
+22506,use,新鮮な魔力貝,2,20,,100,,,,,2074075135,2,,,1,,,{ set '@id22506,rand(0,17); switch('@id22506) { case 0: { if('@id22506 == 0) { getitem 6620,6; break; } } case 1: { if('@id22506 == 1) { getitem 6620,9; break; } } case 2: { if('@id22506 == 2) { getitem 6621,4; break; } } case 3: { if('@id22506 == 3) { getitem 6621,6; break; } } case 4: { if('@id22506 == 4) { getitem 6622,2; break; } } case 5: { if('@id22506 == 5) { getitem 6622,3; break; } } case 6: { if('@id22506 == 8) { getitem 11559,3; break; } } case 7: { if('@id22506 == 7) { getitem 11559,6; break; } } case 8: { if('@id22506 == 8) { getitem 11559,9; break; } } case 9: { if('@id22506 == 9) { getitem 11560,3; break; } } case 10: { if('@id22506 == 10) { getitem 11560,6; break; } } case 11: { if('@id22506 == 11) { getitem 11560,9; break; } } case 12: { if('@id22506 == 12) { getitem 11561,3; break; } } case 13: { if('@id22506 == 13) { getitem 11561,6; break; } } case 14: { if('@id22506 == 14) { getitem 11561,9; break; } } case 15: { if('@id22506 == 15) { getitem 966,1; break; } } case 16: { if('@id22506 == 16) { getitem 722,1; break; } } case 17: { if('@id22506 == 17) { getitem 717,10; break; } } getitem 6620,6; break; } },{}
+//22507,use,フェイヨン移動スクロール,2,1000,,10,,,,,2074075135,2,,,1,,,{ switch(rand(8)){ case 0: warp "pay_dun04.gat",120,116; end; case 1: warp "payon_in03.gat",99,182; end; case 2: warp "payon_in02.gat",17,62; end; case 3: warp "payon_in01.gat",144,15; end; case 4: warp "pay_fild01.gat",141,211; end; case 5: warp "pay_fild04.gat",348,333; end; case 6: warp "pay_fild07.gat",200,186; end; case 7: warp "pay_fild10.gat",147,267; end; } },{}
+22511,use,フェンリルの呪符,2,20,,10,,,,,2074075135,2,,,1,,,{ sc_start SC_MATKPOTION,30000,25; },{ /* 固定詠唱 -50% */ }
+22515,use,捻じれた時間のカギ,2,5000,,300,,,,,2074075135,2,,,100,,,{ itemskill "NPC_WIDECURSE",2,""; },{}
+22516,use,赤黒い塊,2,1440,,10,,,,,2074075135,2,,,1,,,{ sc_start SC_Curse,30000,1; },{}
+//22534,use,閉ざされた心の箱,2,1000,,1000,,,,,2074075135,2,,,1,,,{ getitem RAND_MIND_BOX,1,0; },{}
+22537,use,勇者の戦利品,2,0,,100,,,,,2074075135,2,,,1,,,{ set '@id22537,rand(0,11); if('@id22537 == 0) { getitem 2981,1; } else if('@id22537 == 1) { getitem 15093,1; } else if('@id22537 == 2) { getitem 15094,1; } else if('@id22537 == 3) { getitem 15095,1; } else if('@id22537 == 4) { getitem 15096,1; } else if('@id22537 == 5) { getitem 15097,1; } else if('@id22537 == 6) { getitem 15098,1; } else if('@id22537 == 7) { getitem 22035,1; } else if('@id22537 == 8) { getitem 22036,1; } else if('@id22537 == 9) { getitem 22037,1; } else if('@id22537 == 10) { getitem 22129,1; } else if('@id22537 == 11) { getitem 32222,1; } },{}
+22538,use,[服装] フェイヨン礼服,2,20,,100,,,,,2074075135,2,,,1,,,{ /* サンタ状態 サマー状態 SC_Summer SC_Santa 類似 */ },{}
+//22540,use,ラクスアニマルーンストーン,2,0,,100,,,,,2074075135,2,,,1,,,{ itemskill "RK_LUXANIMA",1,""; },{}
+//22566,use,永久霜,2,10,,0,,,,,2074075135,2,,,1,,,{ sc_start SC_CHILL,10000,0; },{}
+22567,use,魔神モロク遠征褒賞箱,2,5000,,100,,,,,2074075135,2,,,1,,,{ set '@MJ,rand(0,1799); if(('@MJ >= 0) && ('@MJ <= 179 )) { getitem 4908,1; } else if(('@MJ >= 180) && ('@MJ <= 359 )) { getitem 4911,1; } else if(('@MJ >= 360) && ('@MJ <= 539 )) { getitem 4914,1; } else if(('@MJ >= 540) && ('@MJ <= 719 )) { getitem 4917,1; } else if(('@MJ >= 720) && ('@MJ <= 899 )) { getitem 4920,1; } else if(('@MJ >= 900) && ('@MJ <= 1079 )) { getitem 4923,1; } else if(('@MJ >= 1080) && ('@MJ <= 1179 )) { getitem 4909,1; } else if(('@MJ >= 1180) && ('@MJ <= 1279 )) { getitem 4912,1; } else if(('@MJ >= 1280) && ('@MJ <= 1379 )) { getitem 4915,1; } else if(('@MJ >= 1380) && ('@MJ <= 1479 )) { getitem 4918,1; } else if(('@MJ >= 1480) && ('@MJ <= 1579 )) { getitem 4921,1; } else if(('@MJ >= 1580) && ('@MJ <= 1679 )) { getitem 4924,1; } else if(('@MJ >= 1680) && ('@MJ <= 1699 )) { getitem 4910,1; } else if(('@MJ >= 1700) && ('@MJ <= 1719 )) { getitem 4913,1; } else if(('@MJ >= 1720) && ('@MJ <= 1739 )) { getitem 4916,1; } else if(('@MJ >= 1740) && ('@MJ <= 1759 )) { getitem 4919,1; } else if(('@MJ >= 1760) && ('@MJ <= 1779 )) { getitem 4922,1; } else if(('@MJ >= 1780) && ('@MJ <= 1799 )) { getitem 4925,1; } },{ /* 4908-4928 魔神の*** ランダム */ }
+22656,use,補給物資の箱,2,20,,10,,,,,2074075135,2,,,1,,,{ /* 夢幻の迷宮 ランダムアイテム */ },{}
+22667,use,ワールド対抗戦特殊箱,2,0,,100,,,,,2074075135,2,,,1,,,{ /* 2013ワールド対抗戦 報酬 */ },{}
+22679,use,死の櫃,2,20,,10,,,,,2074075135,2,,,1,,,{ set '@id22679,rand(0,9); if('@id22679 == 0) { getitem 6561,1; } else if('@id22679 == 1) { getitem 6561,1; } else if('@id22679 == 2) { getitem 7001,1; } else if('@id22679 == 3) { getitem 7001,1; } else if('@id22679 == 4) { getitem 6814,1; } else if('@id22679 == 5) { getitem 6815,1; } else if('@id22679 == 6) { getitem 6816,1; } else if('@id22679 == 7) { getitem 6817,1; } else if('@id22679 == 8) { getitem 6818,1; } else if('@id22679 == 9) { getitem 6819,1; } },{}
+22680,use,イエロークリスタルの欠片,2,0,,1,,,,,2074075135,2,,,1,,,{ /*  イベントアイテム 効果変わる */ },{}
+22681,use,ブルークリスタルの欠片,2,0,,1,,,,,2074075135,2,,,1,,,{ /*  イベントアイテム 効果変わる */ },{}
+22682,use,レッドクリスタルの欠片,2,0,,1,,,,,2074075135,2,,,1,,,{ /*  イベントアイテム 効果変わる */ },{}
+22687,use,思念の残滓,2,20,,10,,,,,2074075135,2,,,1,,,{ /* lhz_dun_n_c.rsw
+//22691,use,レコードの破片(2日目),2,0,,0,,,,,2074075135,2,,,1,,,{ set VER_MEMORY,0; if(countitem(6825)){ delitem 6825,countitem(6825); } for(set '@i,5341; '@i <= 5370; set '@i,'@i+1){ if(checkquest('@i)){ delquest '@i; } } warp "un_bk_q.gat",98,143; },{}
+//22692,use,レコードの破片(30日目),2,0,,0,,,,,2074075135,2,,,1,,,{ set VER_MEMORY,0; if(countitem(6825)){ delitem 6825,countitem(6825); } for(set '@i,5341; '@i <= 5370; set '@i,'@i+1){ if(checkquest('@i)){ delquest '@i; } } warp "un_bk_q.gat",45,276; },{}
+//22693,use,レコードの破片(32日目),2,0,,0,,,,,2074075135,2,,,1,,,{ set VER_MEMORY,0; if(countitem(6825)){ delitem 6825,countitem(6825); } for(set '@i,5341; '@i <= 5370; set '@i,'@i+1){ if(checkquest('@i)){ delquest '@i; } } warp "un_bk_q.gat",217,346; },{}
+//22694,use,レコードの破片(40日目),2,0,,0,,,,,2074075135,2,,,1,,,{ set VER_MEMORY,0; if(countitem(6825)){ delitem 6825,countitem(6825); } for(set '@i,5341; '@i <= 5370; set '@i,'@i+1){ if(checkquest('@i)){ delquest '@i; } } warp "un_bk_q.gat",273,235; },{}
+//22695,use,レコードの破片(50日目),2,0,,0,,,,,2074075135,2,,,1,,,{ set VER_MEMORY,0; if(countitem(6825)){ delitem 6825,countitem(6825); } for(set '@i,5341; '@i <= 5370; set '@i,'@i+1){ if(checkquest('@i)){ delquest '@i; } } warp "un_bk_q.gat",275,290; },{}
+22696,use,Wチケット(2個)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ /* Wチケット入手 アイテム名変更 */ },{}
+22698,use,防壁強化の証の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 7689,1,1,0,0,0,0,0,0,604800; },{}
+22709,use,リリーフポーション(小),2,200,,50,,,,,2074075135,2,,,100,,,{ /* 状態異常を受ける時BaseLv偏差を最大+15まで補正して成否が判定される 街・室内・攻城戦・新攻城戦マップで効果 */ },{}
+22710,use,リリーフポーション(中),2,400,,100,,,,,2074075135,2,,,100,,,{ /* 状態異常を受ける時BaseLv偏差を最大+30まで補正して成否が判定される 街・室内・攻城戦・新攻城戦マップで効果 */ },{}
+22711,use,リリーフポーション(大),2,800,,150,,,,,2074075135,2,,,100,,,{ /* 状態異常を受ける時BaseLv偏差を最大+45まで補正して成否が判定される 街・室内・攻城戦・新攻城戦マップで効果 */ },{}
+22712,use,リリーフポーション(SP),2,200,,50,,,,,2074075135,2,,,99,,,{ /* 状態異常を受ける時BaseLv偏差を最大+100まで補正して成否が判定される 街・室内・攻城戦・新攻城戦マップで効果 */ },{}
+22722,use,手作りクッキー,0,0,,20,,,,,2074075135,2,,,1,,,{ percentheal 2,2; itemskill "PR_MAGNIFICAT",1,""; },{}
 22723,use,血色のかき氷,0,60,,10,,,,,2074075135,2,,,1,,,{ percentheal 3,3; },{}
-//22733,use,スペシャルダンジョン入場チケットの箱,2,0,,10,,,,,2074075135,2,,,,,,{},{}
-//22737,use,ブラッドバレットCケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13222,500; },{}
-//22738,use,シルバーバレットCケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13221,500; },{}
-//22744,use,APバレットケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13215,500; },{}
-//22745,use,ブレイズバレットケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13216,500; },{}
-//22746,use,フリージングバレットケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13217,500; },{}
-//22747,use,エレクトリックバレットケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13218,500; },{}
-//22748,use,マジカルストーンバレットケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13219,500; },{}
-//22749,use,サンクタファイドバレットケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13220,500; },{}
-//22778,use,金タマゴ,2,0,,10,,,,,2074075135,2,,,,,,{},{}
-//22779,use,銀タマゴ,2,0,,10,,,,,2074075135,2,,,,,,{},{}
-//22780,use,星タマゴ,2,0,,10,,,,,2074075135,2,,,,,,{},{}
-//22822,use,ニャンニャンバカンスセット,2,20,,100,,,,,2074075135,2,,,,,,{},{}
-//22836,use,15周年記念カード帖,3,,,50,,,,,,,,,,,,{},{}
-//22839,use,ハッピーボックス,2,20,,200,,,,,2074075135,2,,,,,,{},{}
-//22848,use,プロンテラ移動スクロール,3,,,0,,,,,,,,,,,,{},{}
-//22871,use,究極精錬チケットの箱,2,0,,10,,,,,2074075135,2,,,,,,{},{}
-//22900,use,ナカガヨクナール,2,0,,10,,,,,2074075135,2,,,,,,{},{}
-//22901,use,王家の青い箱,2,10000,,200,,,,,2074075135,2,,,,,,{},{}
+22733,use,スペシャルダンジョン入場チケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ /* スペシャルダンジョン入場チケット 入手 アイテム名変更 */ },{}
+//22737,use,ブラッドバレットCケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13222,500; },{}
+//22738,use,シルバーバレットCケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13221,500; },{}
+//22744,use,APバレットケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13215,500; },{}
+//22745,use,ブレイズバレットケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13216,500; },{}
+//22746,use,フリージングバレットケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13217,500; },{}
+//22747,use,エレクトリックバレットケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13218,500; },{}
+//22748,use,マジカルストーンバレットケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13219,500; },{}
+//22749,use,サンクタファイドバレットケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13220,500; },{}
+22778,use,金タマゴ,2,0,,10,,,,,2074075135,2,,,1,,,{ set '@22778,rand(0,14); if('@22778 == 0) { getitem 4951,1;} else if('@22778 == 1) { getitem 4952,1;} else if('@22778 == 2) { getitem 4953,1;} else if('@22778 == 3) { getitem 4954,1;} else if('@22778 == 4) { getitem 4955,1;} else if('@22778 == 5) { getitem 4956,1;} else if('@22778 == 6) { getitem 7696,1;} else if('@22778 == 7) { getitem 7698,1;} else if('@22778 == 8) { getitem 7700,1;} else if('@22778 == 9) { getitem 6887,1;} else if('@22778 == 10) { getitem 6888,1;} else if('@22778 == 11) { getitem 6889,1;} else if('@22778 == 12) { getitem 6890,1;} else if('@22778 == 13) { getitem 20081,1;} else if('@22778 == 14) { getitem 20082,1;} },{}
+22779,use,銀タマゴ,2,0,,10,,,,,2074075135,2,,,1,,,{ set '@22779,rand(0,13); if('@22779 == 0) { getitem 522,10; } else if('@22779 == 1) { getitem 526,10; } else if('@22779 == 2) { getitem 604,2; } else if('@22779 == 3) { getitem 607,3; } else if('@22779 == 4) { getitem 608,3; } else if('@22779 == 5) { getitem 6887,1; } else if('@22779 == 6) { getitem 6888,1; } else if('@22779 == 7) { getitem 6889,1; } else if('@22779 == 8) { getitem 6890,1; } else if('@22779 == 9) { getitem 7696,1; } else if('@22779 == 10) { getitem 7698,1; } else if('@22779 == 11) { getitem 7700,1; } else if('@22779 == 12) { getitem 20081,1; } else if('@22779 == 13) { getitem 20082,1; } },{}
+22780,use,星タマゴ,2,0,,10,,,,,2074075135,2,,,1,,,{ set '@22780,rand(0,34); if('@22780 == 0) { getitem 6887,1; } else if('@22780 == 1) { getitem 6888,1; } else if('@22780 == 2) { getitem 6889,1; } else if('@22780 == 3) { getitem 6890,1; } else if('@22780 == 4) { getitem 7696,1; } else if('@22780 == 5) { getitem 7698,1; } else if('@22780 == 6) { getitem 7700,1; } else if(('@22780 >= 7) && ('@22780 <= 9)) { getitem 522,5; } else if(('@22780 >= 10) && ('@22780 <= 12)) { getitem 526,5; } else if(('@22780 >= 13) && ('@22780 <= 17)) { getitem 545,30; } else if(('@22780 >= 18) && ('@22780 <= 22)) { getitem 546,20; } else if(('@22780 >= 23) && ('@22780 <= 27)) { getitem 547,10; } else if(('@22780 >= 28) && ('@22780 <= 30)) { getitem 604,1; } else if('@22780 == 31) { getitem 607,1; } else if(('@22780 >= 32) && ('@22780 <= 34)) { getitem 608,2; } },{}
+22822,use,ニャンニャンバカンスセット,2,20,,100,,,,,2074075135,2,,,1,,,{ /* サンタ状態 サマー状態 SC_Summer SC_Santa 類似 */ },{}
+22836,use,15周年記念カード帖,2,0,,50,,,,,2074075135,2,,,1,,,{ /* 2017頃までのカード */ },{}
+22839,use,ハッピーボックス,2,20,,200,,,,,2074075135,2,,,1,,,{ set '@22839,rand(0,10000); if('@22839 <= 1500) { getitem 518,1; } else if(('@22839 >= 1501) && ('@22839 <= 1600)) { getitem 526,1; } else if(('@22839 >= 1601) && ('@22839 <= 1800)) { getitem 644,1; } else if(('@22839 >= 1801) && ('@22839 <= 1900)) { getitem 714,1; } else if(('@22839 >= 1901) && ('@22839 <= 2200)) { getitem 748,1; } else if(('@22839 >= 2201) && ('@22839 <= 2500)) { getitem 749,1; } else if(('@22839 >= 2501) && ('@22839 <= 2700)) { getitem 970,1; } else if(('@22839 >= 2701) && ('@22839 <= 2800)) { getitem 972,1; } else if(('@22839 >= 2801) && ('@22839 <= 3000)) { getitem 6244,1; } else if(('@22839 >= 3001) && ('@22839 <= 3100)) { getitem 6249,1; } else if(('@22839 >= 3101) && ('@22839 <= 3400)) { getitem 6252,1; } else if(('@22839 >= 3401) && ('@22839 <= 3500)) { getitem 6253,1; } else if(('@22839 >= 3501) && ('@22839 <= 3700)) { getitem 6254,1; } else if(('@22839 >= 3701) && ('@22839 <= 4200)) { getitem 6256,1; } else if(('@22839 >= 4201) && ('@22839 <= 4400)) { getitem 6257,1; } else if(('@22839 >= 4401) && ('@22839 <= 4600)) { getitem 6259,1; } else if(('@22839 >= 4601) && ('@22839 <= 4900)) { getitem 7135,1; } else if(('@22839 >= 4901) && ('@22839 <= 5200)) { getitem 7136,1; } else if(('@22839 >= 5201) && ('@22839 <= 5400)) { getitem 7137,1; } else if(('@22839 >= 5401) && ('@22839 <= 5600)) { getitem 7139,1; } else if(('@22839 >= 5601) && ('@22839 <= 6400)) { getitem 12048,1; } else if(('@22839 >= 6401) && ('@22839 <= 7400)) { getitem 12063,1; } else if(('@22839 >= 7401) && ('@22839 <= 8400)) { getitem 12068,1; } else if(('@22839 >= 8401) && ('@22839 <= 8900)) { getitem 12071,1; } else if(('@22839 >= 8901) && ('@22839 <= 9400)) { getitem 12081,1; } else if(('@22839 >= 9401) && ('@22839 <= 9900)) { getitem 12086,1; } else if('@22839 >= 9901) { getitem 19684,1; } },{}
+22848,use,プロンテラ移動スクロール,2,20,,0,,,,,2074075135,2,,,1,,,{ warp "prontera.gat",106,60; },{}
+22871,use,究極精錬チケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,2505600; },{}
+22900,use,ナカガヨクナール,2,0,,10,,,,,2074075135,2,,,1,,,{ /* ホムンクルスのアイテムらしい */ },{}
+22901,use,王家の青い箱,2,10000,,200,,,,,2074075135,2,,,1,,,{ set '@22901,rand(0,10000); if('@22901 <= 2000) { getitem 526,1; } else if(('@22901 >= 2001) && ('@22901 <= 3000)) { getitem 732,1; } else if(('@22901 >= 3001) && ('@22901 <= 4000)) { getitem 969,1; } else if(('@22901 >= 4001) && ('@22901 <= 4050)) { getitem 2038,1; } else if(('@22901 >= 4051) && ('@22901 <= 5050)) { getitem 7228,1; } else if(('@22901 >= 5051) && ('@22901 <= 6550)) { getitem 7229,1; } else if(('@22901 >= 6551) && ('@22901 <= 8550)) { getitem 12078,1; } else if(('@22901 >= 8551) && ('@22901 <= 9550)) { getitem 12079,1; } else if(('@22901 >= 9551) && ('@22901 <= 9600)) { getitem 12399,1; } else if(('@22901 >= 9601) && ('@22901 <= 9650)) { getitem 20288,1; } else if(('@22901 >= 9651) && ('@22901 <= 9700)) { getitem 21029,1; } else if(('@22901 >= 9701) && ('@22901 <= 9750)) { getitem 28021,1; } else if(('@22901 >= 9751) && ('@22901 <= 9800)) { getitem 28526,1; } else if(('@22901 >= 9801) && ('@22901 <= 9850)) { getitem 28527,1; } else if(('@22901 >= 9851) && ('@22901 <= 9900)) { getitem 28528,1; } else if(('@22901 >= 9901) && ('@22901 <= 9950)) { getitem 28920,1; } else if('@22901 >= 9951) { getitem 31142,1; } },{}
 //22954,use,レベルアップボックス(Lv1),2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25019,1; getitem2 22955,1,1,0,0,0,0,0,0,1209600; },{}
 //22955,use,レベルアップボックス(Lv10),2,0,,0,,,,,2074075135,2,,,10,,,{ getitem 25018,1; getitem 25019,1; getitem2 22956,1,1,0,0,0,0,0,0,1209600; },{}
 //22956,use,レベルアップボックス(Lv30),2,0,,0,,,,,2074075135,2,,,30,,,{ getitem 25018,1; getitem2 22957,1,1,0,0,0,0,0,0,1209600; },{}
@@ -7452,78 +7452,78 @@
 //22967,use,レベルアップボックス(Lv97),2,0,,0,,,,,2074075135,2,,,97,,,{ getitem 25019,1; getitem2 22968,1,1,0,0,0,0,0,0,1209600; },{}
 //22968,use,レベルアップボックス(Lv98),2,0,,0,,,,,2074075135,2,,,98,,,{ getitem 25019,1; getitem2 22969,1,1,0,0,0,0,0,0,1209600; },{}
 //22969,use,レベルアップボックス(Lv99),2,0,,0,,,,,2074075135,2,,,99,,,{ getitem2 25020,1,1,0,0,0,0,0,0,172800; },{}
-//22970,use,ラウンジの香り,2,0,,0,,,,,2074075135,2,,,,,,{},{}
-22980,use,特殊なスクロール,2,,,,,,,,,,,,,,,{},{}
-//22981,use,ギア誘導ビーコン,2,30000,,100,,,,,2074075135,2,,,,,,{},{}
-//22984,use,カルーニャミルク,0,20,,10,,,,,2074075135,2,,,,,,{},{}
-//22985,use,バジル,0,20,,10,,,,,2074075135,2,,,,,,{},{}
-//22986,use,RJCクッキー,2,20,,40,,,,,2074075135,2,,,,,,{},{}
-//22987,use,RJC2015カード帖,2,0,,0,,,,,2074075135,2,,,,,,{},{}
-//23027,use,タンポポリング,2,0,,0,,,,,2074075135,2,,,70,,,{},{}
-//23035,use,スペシャルダンジョン入場チケットの箱,2,0,,0,,,,,2074075135,2,,,,,,{},{}
-//23036,use,LoVAコラボチケットの箱,2,0,,0,,,,,2074075135,2,,,,,,{},{}
+22970,use,ラウンジの香り,2,0,,0,,,,,2074075135,2,,,1,,,{ warp "lounge01_jp.gat",27,22; },{ /* ネカフェ特典 HOSTで判断 map_auriga.conf 設定必要 */ }
+22980,use,特殊なスクロール,2,20,,0,,,,,2074075135,2,,,185,,,{ /* ファロス燈台地下迷宮内の一部のマップで使用すると「無謀な探検家(NPC)」召喚 */ },{}
+22981,use,ギア誘導ビーコン,2,30000,,100,,,,,2074075135,2,,,1,,,{ setgear; },{}
+22984,use,カルーニャミルク,0,20,,10,,,,,2074075135,2,,,1,,,{ /* EFST_DORAM_BUF_01 */ },{}
+22985,use,バジル,0,20,,10,,,,,2074075135,2,,,1,,,{ /* EFST_DORAM_BUF_02 */ },{}
+22986,use,RJCクッキー,0,20,,40,,,,,2074075135,2,,,1,,,{ percentheal 5,5; },{}
+22987,use,RJC2015カード帖,2,0,,0,,,,,2074075135,2,,,1,,,{ /* ボスカード入手 */ },{}
+23027,use,タンポポリング,2,0,,0,,,,,2074075135,2,,,70,,,{ warp "ra_in01.gat",375,65; },{}
+23035,use,スペシャルダンジョン入場チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* スペシャルダンジョン入場チケット 入手 アイテム名変更 */ },{}
+23036,use,LoVAコラボチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25097,1; },{}
 23044,use,エルヴィラキャンディ,2,20,,150,,,,,2074075135,2,,,1,,,{ sc_end "SC_CURSEDCIRCLE"; sc_end "SC_SLOWCAST"; sc_end "SC_MANDRAGORA"; sc_end "SC_CRITICALWOUND"; sc_end "SC_SITDOWN_FORCE"; sc_end "SC_FROSTMISTY"; if(equippeditem(15349)) { sc_end "SC__IGNORANCE"; } if(equippeditem(15388) && (equippeditem(410119) || equippeditem(410120))) { sc_end "SC__IGNORANCE"; } },{}
 23045,use,フリードリヒ監修・しぼりたてモンブラン,2,20,,10,,,,,2074075135,2,,,1,,,{ percentheal 100,100; /* 60秒間魔法攻撃で与えるダメージ + 15% */ },{}
-//23059,use,フェイスペイントボックス,2,20,,150,,,,,2074075135,2,,,,,,{ getitem 6120,500; },{}
-//23060,use,サーフェイスペイントボックス,2,20,,150,,,,,2074075135,2,,,,,,{ getitem 6123,500; },{}
-//23061,use,鋭い矢筒,2,20,,250,,,,,2074075135,2,,,,,,{ getitem 1764,500; },{}
-//23063,use,凍りついた夢,2,0,,0,,,,,2074075135,2,,,,,,{},{}
+//23059,use,フェイスペイントボックス,2,20,,150,,,,,2074075135,2,,,1,,,{ getitem 6120,500; },{}
+//23060,use,サーフェイスペイントボックス,2,20,,150,,,,,2074075135,2,,,1,,,{ getitem 6123,500; },{}
+//23061,use,鋭い矢筒,2,20,,250,,,,,2074075135,2,,,1,,,{ getitem 1764,500; },{}
+//23063,use,凍りついた夢,2,0,,0,,,,,2074075135,2,,,1,,,{},{}
 23079,use,双子姉妹のわがままイチゴケーキ,2,20,,10,,,,,2074075135,2,,,1,,,{ percentheal 100,100; sc_start 390,60000,1; },{}
-//23087,use,小さなレザーバッグ,2,0,,,,,,,2074075135,2,,,1,,,{},{}
-//23123,use,フレアバレットケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13228,500; },{}
-//23124,use,ライトニングバレットケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13229,500; },{}
-//23125,use,アイスバレットケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13230,500; },{}
-//23126,use,ポイズンバレットケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13231,500; },{}
-//23127,use,ブラインドバレットケース,2,2,,250,,,,,2074075135,2,,,,,,{ getitem 13232,500; },{}
-//23138,use,豊穣の玉,2,20,,1,,,,,2074075135,2,,,,,,{},{}
-//23139,use,劈風の玉,2,20,,1,,,,,2074075135,2,,,,,,{},{}
-//23140,use,霧氷の玉,2,20,,1,,,,,2074075135,2,,,,,,{},{}
-//23141,use,劫火の玉,2,20,,1,,,,,2074075135,2,,,,,,{},{}
-//23166,use,プロンテラ軍丸薬,2,20,,100,,,,,2074075135,2,,,,,,{},{}
-//23179,use,[ECO] タイニー・アルマの想い,2,20,,10,,,,,2074075135,2,,,,,,{},{}
-//23180,use,[ECO] ブリキングRX1・アルマの想い,2,20,,10,,,,,2074075135,2,,,,,,{},{}
-//23181,use,[ECO] サラマンダー・アルマの想い,2,20,,10,,,,,2074075135,2,,,,,,{},{}
-//23182,use,[ECO] モーモー・アルマの想い,2,20,,10,,,,,2074075135,2,,,,,,{},{}
-//23183,use,[ECO] ミニー・ドゥ・アルマの想い,2,20,,10,,,,,2074075135,2,,,,,,{},{}
-//23184,use,ヒーローボタン,3,,,0,,,,,,,,,,,,{},{}
-//23187,use,樹液ゼリー,2,,,0,,,,,,,,,,,,{},{}
-23188,pet,飛行船の部品,4,20,,0,,,,,,,,,,,,{},{}
-//23219,use,ドラゴンホーン,2,20,,0,,,,,2074075135,2,,,,,,{},{}
-//23220,use,コールオブネメシス,2,20,,0,,,,,2074075135,2,,,,,,{},{}
-//23228,use,微かな月餅,2,768,,10,,,,,2074075135,2,,,,,,{ sc_start2 SC_Curse,10000,0,getscrate(SC_Curse,9000); },{}
+23087,use,小さなレザーバッグ,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25180,1; getitem 25181,1; getitem 25182,1; getitem 25183,1; getitem 25184,1; getitem 25185,1; },{ /* クエストアイテム */ }
+//23123,use,フレアバレットケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13228,500; },{}
+//23124,use,ライトニングバレットケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13229,500; },{}
+//23125,use,アイスバレットケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13230,500; },{}
+//23126,use,ポイズンバレットケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13231,500; },{}
+//23127,use,ブラインドバレットケース,2,2,,250,,,,,2074075135,2,,,1,,,{ getitem 13232,500; },{}
+23138,use,豊穣の玉,2,20,,1,,,,,2074075135,2,,,1,,,{ sc_start SC_Stone,3000,0; },{}
+23139,use,劈風の玉,2,20,,1,,,,,2074075135,2,,,1,,,{ sc_start SC_Sleep,3000,0; },{}
+23140,use,霧氷の玉,2,20,,1,,,,,2074075135,2,,,1,,,{ sc_start SC_Freeze,3000,0; },{}
+23141,use,劫火の玉,2,20,,1,,,,,2074075135,2,,,1,,,{ sc_start 479,3000,0; },{}
+23166,use,プロンテラ軍丸薬,2,20,,100,,,,,2074075135,2,,,1,,,{ /* EFST_PRONTERA_JP */ },{}
+23179,use,[ECO] タイニー・アルマの想い,2,20,,10,,,,,2074075135,2,,,1,,,{ itemskill "SA_SPELLBREAKER",1,""; },{}
+23180,use,[ECO] ブリキングRX1・アルマの想い,2,20,,10,,,,,2074075135,2,,,1,,,{ itemskill "BS_MAXIMIZE",1,""; },{}
+23181,use,[ECO] サラマンダー・アルマの想い,2,20,,10,,,,,2074075135,2,,,1,,,{ itemskill "WZ_METEOR",5,""; },{}
+23182,use,[ECO] モーモー・アルマの想い,2,20,,10,,,,,2074075135,2,,,1,,,{ itemskill "PR_STRECOVERY",1,""; },{}
+23183,use,[ECO] ミニー・ドゥ・アルマの想い,2,20,,10,,,,,2074075135,2,,,1,,,{ itemskill "PR_GLORIA",5,""; },{}
+23184,use,ヒーローボタン,2,20,,0,,,,,2074075135,2,,,1,,,{ /* 15th イベント 不明 */ },{}
+//23187,pet,樹液ゼリー,2,20,,0,,,,,2074075135,2,,,1,,,{},{}
+23188,pet,飛行船の部品,2,20,,0,,,,,2074075135,2,,,1,,,{},{}
+23219,use,ドラゴンホーン,2,20,,0,,,,,2074075135,2,,,1,,,{ setdragon 0; },{}
+23220,use,コールオブネメシス,2,20,,0,,,,,2074075135,2,,,1,,,{ setriding; },{}
+//23228,use,微かな月餅,2,768,,10,,,,,2074075135,2,,,1,,,{ sc_start2 SC_Curse,10000,0,getscrate(SC_Curse,9000); },{}
 23257,pet,古木の光る露,2,1000,,0,,,,,2074075135,2,,,1,,,{},{}
 23259,use,王妃が愛した魅惑の極上カップケーキ,2,20,,10,,,,,2074075135,2,,,1,,,{ percentheal 100,100; sc_start SC_ASSUMPTIO,60000,1; },{}
 23260,use,ニーヒル御用達フルーツパフェ・極,2,20,,10,,,,,2074075135,2,,,1,,,{ percentheal 100,100; sc_start SC_MMDEF,60000,100; },{}
-//23298,use,コスたまCoordinate,18,0,,10,,,,,2074075135,2,,,,,,{},{}
-//23300,use,自動映写機,2,0,,0,,,,,2074075135,2,,,,,,{},{}
-//23301,use,試作型ワープボタン,2,0,,0,,,,,2074075135,2,,,,,,{},{}
-23348,use,露店代行依頼書,2,,,0,,,,,2074075135,2,,,1,,,{},{}
-23351,use,買取露店代行依頼書,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+//23298,use,コスたまCoordinate,18,0,,10,,,,,2074075135,2,,,1,,,{},{}
+23300,use,自動映写機,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 170205 SSコンテスト撮影 フレーム画像の表示 */ },{}
+23301,use,試作型ワープボタン,2,0,,0,,,,,2074075135,2,,,1,,,{ misceffect 32,""; warp "prontera.gat",132,216; },{ /* イベント用 */ }
+23348,use,露店代行依頼書,2,0,,0,,,,,2074075135,2,,,1,,,{},{}
+23351,use,買取露店代行依頼書,2,0,,0,,,,,2074075135,2,,,1,,,{},{}
 //23360,use,RBマッスル15mg,2,20,,10,,,,,2074075135,2,,,100,,,{ sc_start 501,90000,5; },{}
 //23361,use,抗毒血清,2,20,,10,,,,,2074075135,2,,,100,,,{ sc_end SC_TOXIN; sc_end SC_PARALIZE; sc_end SC_VENOMBLEED; sc_end SC_MAGICMUSHROOM; sc_end SC_PYREXIA; sc_end SC_OBLIVIONCURSE; sc_end SC_LEECHEND; sc_end SC_DEATHHURT; },{}
-23368,use,特殊カタログ,2,,,0,,,,,2074075135,2,,,1,,,{},{}
-//23372,use,反逆の箱,2,20,,200,,,,,2074075135,2,,,,,,{},{}
-//23705,use,ラザーニャ特産缶詰,0,0,,0,,,,,2074075135,2,,,,,,{ misceffect 34,""; warp "lasagna.gat",321,222; },{}
-//23772,use,オース武器の箱,3,,,0,,,,,,,,,,,,{},{}
-//23773,use,武器改造装置の箱,3,,,0,,,,,,,,,,,,{},{}
-//23774,use,高級な武器改造装置の箱,3,,,0,,,,,,,,,,,,{},{}
-//23775,use,改造モジュールの箱,3,,,0,,,,,,,,,,,,{},{}
+23368,use,特殊カタログ,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 露天検索ができる */ },{}
+23372,use,反逆の箱,2,20,,200,,,,,2074075135,2,,,1,,,{ set '@23372,rand(0,10000); if('@23372 <= 1600) { getitem 522,1; } else if(('@23372 >= 1601) && ('@23372 <= 2600)) { getitem 714,1; } else if(('@23372 >= 2601) && ('@23372 <= 3600)) { getitem 732,1; } else if(('@23372 >= 3601) && ('@23372 <= 4600)) { getitem 969,1; } else if(('@23372 >= 4601) && ('@23372 <= 5600)) { getitem 7228,1; } else if(('@23372 >= 5601) && ('@23372 <= 6600)) { getitem 7229,1; } else if(('@23372 >= 6601) && ('@23372 <= 7100)) { getitem 12016,1; } else if(('@23372 >= 7101) && ('@23372 <= 7150)) { getitem 12399,1; } else if(('@23372 >= 7151) && ('@23372 <= 7200)) { getitem 13470,1; } else if(('@23372 >= 7201) && ('@23372 <= 7250)) { getitem 13471,1; } else if(('@23372 >= 7251) && ('@23372 <= 7300)) { getitem 13472,1; } else if(('@23372 >= 7301) && ('@23372 <= 7350)) { getitem 19280,1; } else if(('@23372 >= 7351) && ('@23372 <= 7400)) { getitem 22142,1; } else if(('@23372 >= 7401) && ('@23372 <= 7900)) { getitem 23360,1; } else if(('@23372 >= 7901) && ('@23372 <= 9900)) { getitem 25374,1; } else if(('@23372 >= 9901) && ('@23372 <= 9950)) { getitem 28524,1; } else if('@23372 >= 9951) { getitem 28525,1; } },{}
+//23705,use,ラザーニャ特産缶詰,2,0,,0,,,,,2074075135,2,,,1,,,{ misceffect 34,""; warp "lasagna.gat",321,222; },{}
+23772,unknown,オース武器の箱,2,20,,10,,,,,2074075135,2,,,1,,,{ /* データなし未実装 */ },{}
+23773,unknown,武器改造装置の箱,2,20,,10,,,,,2074075135,2,,,1,,,{ /* データなし未実装 */ },{}
+23774,unknown,高級な武器改造装置の箱,2,20,,10,,,,,2074075135,2,,,1,,,{ /* データなし未実装 */ },{}
+23775,unknown,改造モジュールの箱,2,20,,10,,,,,2074075135,2,,,1,,,{ /* データなし未実装 */ },{}
 23776,use,武器改造装置(Type1),2,20,,10,,,,,2074075135,2,,,1,,,{ openupgrade 23776; },{}
 23777,use,武器改造装置(Type2),2,20,,10,,,,,2074075135,2,,,1,,,{ openupgrade 23777; },{}
 23778,use,武器改造装置(Type3),2,20,,10,,,,,2074075135,2,,,1,,,{ openupgrade 23778; },{}
 23779,use,武器改造装置(Type4),2,20,,10,,,,,2074075135,2,,,1,,,{ openupgrade 23779; },{}
 23780,use,武器改造装置(Type5),2,20,,10,,,,,2074075135,2,,,1,,,{ openupgrade 23780; },{}
 23781,use,武器改造装置(Type6),2,20,,10,,,,,2074075135,2,,,1,,,{ openupgrade 23781; },{}
-//23815,use,守護のエッセンス,2,20,,10,,,,,2074075135,2,,,,,,{ openupgrade 23815; },{}
-//23935,use,王級メロンの箱(50個),3,,,1500,,,,,,,,,,,,{},{}
-//23936,use,王級メロンの箱(150個),3,,,4500,,,,,,,,,,,,{},{}
-//23954,use,王級メロン,3,,,30,,,,,,,,,,,,{},{}
-//23955,use,王級メロンジュース,3,,,100,,,,,,,,,,,,{},{}
-//23956,use,王級メロンパフェ,3,,,100,,,,,,,,,,,,{},{}
-23981,use,竜気のエッセンス,2,,,10,,,,,2074075135,2,,,1,,,{},{}
-//23992,use,青色の思念体ボックス,3,,,10,,,,,,,,,,,,{},{}
-//23993,use,黄色の思念体ボックス,3,,,10,,,,,,,,,,,,{},{}
-//23994,use,赤色の思念体ボックス,3,,,10,,,,,,,,,,,,{},{}
+//23815,use,守護のエッセンス,2,20,,10,,,,,2074075135,2,,,1,,,{ openupgrade 23815; },{}
+23935,use,王級メロンの箱(50個),2,6000,,1500,,,,,2074075135,2,,,1,,,{ getitem2 23954,50,1,0,0,0,0,0,0,259200; },{}
+23936,use,王級メロンの箱(150個),2,18000,,4500,,,,,2074075135,2,,,1,,,{ getitem2 23954,150,1,0,0,0,0,0,0,259200; },{}
+23954,use,王級メロン,0,120,,30,,,,,2074075135,2,,,1,,,{ percentheal 3,3; },{}
+23955,use,王級メロンジュース,0,20,,100,,,,,2074075135,2,,,1,,,{ percentheal 25,0; },{}
+23956,use,王級メロンパフェ,0,20,,100,,,,,2074075135,2,,,1,,,{ percentheal 10,10; },{}
+23981,use,竜気のエッセンス,2,20,,10,,,,,2074075135,2,,,1,,,{},{}
+23992,use,青色の思念体ボックス,2,20,,10,,,,,2074075135,2,,,1,,,{ /* 武器以外に収集品が出る */ },{}
+23993,use,黄色の思念体ボックス,2,20,,10,,,,,2074075135,2,,,1,,,{ set '@23993,rand(0,10); if('@23993 == 0) { getitem 2063,1; } else if('@23993 == 1) { getitem 18193,1; } else if('@23993 == 2) { getitem 18195,1; } else if('@23993 == 3) { getitem 26169,1; } else if('@23993 == 4) { getitem 26217,1; } else if('@23993 == 5) { getitem 28048,1; } else if('@23993 == 6) { getitem 32028,1; } else if('@23993 == 7) { getitem 32030,1; } else if('@23993 == 8) { getitem 32112,1; } else if('@23993 == 9) { getitem 32404,1; } else if('@23993 == 10) { getitem 32406,1; } },{}
+23994,use,赤色の思念体ボックス,2,20,,10,,,,,2074075135,2,,,1,,,{ set '@23994,rand(0,13); if('@23994 == 0) { getitem 1868,1; } else if('@23994 == 1) { getitem 2062,1; } else if('@23994 == 2) { getitem 18194,1; } else if('@23994 == 3) { getitem 21057,1; } else if('@23994 == 4) { getitem 26171,1; } else if('@23994 == 5) { getitem 26218,1; } else if('@23994 == 6) { getitem 28142,1; } else if('@23994 == 7) { getitem 28637,1; } else if('@23994 == 8) { getitem 28777,1; } else if('@23994 == 9) { getitem 28778,1; } else if('@23994 == 10) { getitem 28779,1; } else if('@23994 == 11) { getitem 32029,1; } else if('@23994 == 12) { getitem 32113,1; } else if('@23994 == 13) { getitem 32355,1; } },{}
 24422,cos,[衣装] ファイアーレッドエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_LEVEL160_RED,TRUE; },{ hateffect HAT_EF_LEVEL160_RED,FALSE; }
 24772,shadow,[シャドウ] オルタネイトウェポン,4,20,,0,,,,0,2088832,2,131072,,200,,1,{},{ bonus bBaseAtk,10*getequiprefinerycnt(); bonus bMatk,10*getequiprefinerycnt(); }
 24773,shadow,[シャドウ] オルタネイトアーマー,4,20,,0,,,,0,2088832,2,65536,,200,,1,{},{ bonus bMaxHP,200*getequiprefinerycnt(); }
@@ -11414,8 +11414,8 @@
 470005,shoes,サバイバルシューズ,4,,10,500,,15:15,,1,2074075135,2,64,,100,,1,{},{ bonus bMaxHPrate,3; bonus bMaxSPrate,3; bonus2 bMagicAddRace,Rct_Boss,2; bonus2 bMagicAddRace,Rct_NonBoss,2; bonus2 bAddEleMagicDamageRate,Ele_Wind,2; bonus2 bAddEleMagicDamageRate,Ele_Earth,2; if(getequiprefinerycnt() >= 5) { bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus2 bAddEleMagicDamageRate,Ele_Wind,3; bonus2 bAddEleMagicDamageRate,Ele_Earth,3; } if(getequiprefinerycnt() >= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddEleMagicDamageRate,Ele_Wind,5; bonus2 bAddEleMagicDamageRate,Ele_Earth,5; } }
 //470006,shoes,スナイピングシューズ,4,,,200,,,,0,2074075135,2,64,,100,,1,{},{ { bonus bMaxHPrate,3; bonus bMaxSPrate,3; skill "PR_GLORIA",1; bonus bSkillDelayRate,-8*getskilllv(5002); bonus2 bAddSize,Size_Small,5*getskilllv(2241); bonus2 bAddSize,Size_Medium,5*getskilllv(2241); bonus2 bAddSize,Size_Big,5*getskilllv(2241); if(getskilllv(2236) == 10){ bonus bAddCriticalDamage,25; bonus bNoSizeFix,0; } if(getskilllv(2238) == 5){ bonus bAllStatus,10; bonus2 bAddSpCost,2247,-20; } if(getequiprefinerycnt()>=5){ bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus bAddLongWeaponDamage,5; } if(getequiprefinerycnt()>=7){ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bAddLongWeaponDamage,5; } } }
 //470007,shoes,スナイピングシューズ,4,,,200,,,,1,2074075135,2,64,,100,,1,{},{ { bonus bMaxHPrate,3; bonus bMaxSPrate,3; skill "PR_GLORIA",1; bonus bSkillDelayRate,-8*getskilllv(5002); bonus2 bAddSize,Size_Small,5*getskilllv(2241); bonus2 bAddSize,Size_Medium,5*getskilllv(2241); bonus2 bAddSize,Size_Big,5*getskilllv(2241); if(getskilllv(2236) == 10){ bonus bAddCriticalDamage,25; bonus bNoSizeFix,0; } if(getskilllv(2238) == 5){ bonus bAllStatus,10; bonus2 bAddSpCost,2247,-20; } if(getequiprefinerycnt()>=5){ bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus bAddLongWeaponDamage,5; } if(getequiprefinerycnt()>=7){ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bAddLongWeaponDamage,5; } } }
-//470008,shoes,ふわふわタンポポシューズ,4,,,100,,,,0,2074075135,2,64,,100,,1,{},{ bonus bMaxHPrate,3; bonus bMaxSPrate,3; if(getskilllv(5054) == 1){ if(getskilllv(5027) == 5){ bonus2 bResEff,Eff_Curse,10000; bonus2 bAddSpCost,5028,-50; } if(getskilllv(5028) == 5){ bonus2 bAddSkillDamageRate,5026,20; } if(getskilllv(5048) == 5){ bonus bMatk,50; } if(getskilllv(5026) == 5){ bonus bSpeedRate,25; } if(getskilllv(5029) == 5){ bonus bMatk,50; } } bonus bAspdAddRate,5*getskilllv(5055); if(getskilllv(5048) == 5){ bonus2 bIgnoreMdefRace,Rct_Boss,100; bonus2 bIgnoreMdefRace,Rct_NonBoss,100; } bonus2 bAddSkillDamageRate,5042,15*getskilllv(5053); if(getequiprefinerycnt(6)>=5){ bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus bSkillDelayRate,-10; } if(getequiprefinerycnt(6)>=7){ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bSkillDelayRate,-10; } } }
-//470009,shoes,ふわふわタンポポシューズ,4,,,100,,,,1,2074075135,2,64,,100,,1,{},{ bonus bMaxHPrate,3; bonus bMaxSPrate,3; if(getskilllv(5054) == 1){ if(getskilllv(5027) == 5){ bonus2 bResEff,Eff_Curse,10000; bonus2 bAddSpCost,5028,-50; } if(getskilllv(5028) == 5){ bonus2 bAddSkillDamageRate,5026,20; } if(getskilllv(5048) == 5){ bonus bMatk,50; } if(getskilllv(5026) == 5){ bonus bSpeedRate,25; } if(getskilllv(5029) == 5){ bonus bMatk,50; } } bonus bAspdAddRate,5*getskilllv(5055); if(getskilllv(5048) == 5){ bonus2 bIgnoreMdefRace,Rct_Boss,100; bonus2 bIgnoreMdefRace,Rct_NonBoss,100; } bonus2 bAddSkillDamageRate,5042,15*getskilllv(5053); if(getequiprefinerycnt(6)>=5){ bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus bSkillDelayRate,-10; } if(getequiprefinerycnt(6)>=7){ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bSkillDelayRate,-10; bonus2 bAddSkillDamageRate,5042,100*getequiprefinerycnt(6); } } }
+470008,shoes,ふわふわタンポポシューズ,4,,,100,,,,0,2074075135,2,64,,100,,1,{},{ bonus bMaxHPrate,3; bonus bMaxSPrate,3; if(getskilllv("SU_SPIRITOFLAND") >= 1){ if(getskilllv("SU_CN_POWDERING") >= 5){ bonus2 bResEff,Eff_Curse,10000; bonus2 bAddSpCost,"SU_CN_POWDERING",-50; } if(getskilllv("SU_CN_POWDERING") >= 5){ bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",20; } if(getskilllv("SU_NYANGGRASS") >= 5){ bonus bMatk,50; } if(getskilllv("SU_SV_STEMSPEAR") >= 5){ bonus bSpeedRate,25; } if(getskilllv("SU_SV_ROOTTWIST") >= 5){ bonus bMatk,50; } } bonus bAspdAddRate,5*getskilllv("SU_CHATTERING"); if(getskilllv("SU_NYANGGRASS") >= 5){ bonus2 bIgnoreMdefRace,Rct_Boss,100; bonus2 bIgnoreMdefRace,Rct_NonBoss,100; } bonus2 bAddSkillDamageRate,"SU_CN_METEOR",15*getskilllv("SU_MEOWMEOW"); if(getequiprefinerycnt()>=5){ bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus bSkillDelayRate,-10; } if(getequiprefinerycnt()>=7){ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bSkillDelayRate,-10; } }
+470009,shoes,ふわふわタンポポシューズ,4,,,100,,,,1,2074075135,2,64,,100,,1,{},{ bonus bMaxHPrate,3; bonus bMaxSPrate,3; if(getskilllv("SU_SPIRITOFLAND") >= 1){ if(getskilllv("SU_CN_POWDERING") >= 5){ bonus2 bResEff,Eff_Curse,10000; bonus2 bAddSpCost,"SU_CN_POWDERING",-50; } if(getskilllv("SU_CN_POWDERING") >= 5){ bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",20; } if(getskilllv("SU_NYANGGRASS") >= 5){ bonus bMatk,50; } if(getskilllv("SU_SV_STEMSPEAR") >= 5){ bonus bSpeedRate,25; } if(getskilllv("SU_SV_ROOTTWIST") >= 5){ bonus bMatk,50; } } bonus bAspdAddRate,5*getskilllv("SU_CHATTERING"); if(getskilllv("SU_NYANGGRASS") >= 5){ bonus2 bIgnoreMdefRace,Rct_Boss,100; bonus2 bIgnoreMdefRace,Rct_NonBoss,100; } bonus2 bAddSkillDamageRate,"SU_CN_METEOR",15*getskilllv("SU_MEOWMEOW"); if(getequiprefinerycnt()>=5){ bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus bSkillDelayRate,-10; } if(getequiprefinerycnt()>=7){ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bSkillDelayRate,-10; } }
 //470010,shoes,磨羯宮のシューズ,4,,,400,,,,0,2074075135,2,64,,1,,1,{},{ bonus bBaseAtk,50; bonus bMatk,50; bonus bAspdAddRate,10; bonus bMaxHPrate,10; bonus bMaxSPrate,10; if(Job == Job_ShadowChaser){ bonus bBaseAtk,80; bonus bMatk,80; bonus bFlee2,5; bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddSkillDamageRate,212,700; bonus2 bAddSkillDamageRate,2288,100; if(getequiprefinerycnt(5)>=8){ skill "TK_JUMPKICK",7; } } } }
 //470014,shoes,処女宮のシューズ,4,,,400,,,,0,2074075135,2,64,,1,,1,{},{ bonus bMatk,50; bonus bAspdAddRate,10; bonus bMaxHPrate,10; bonus bMaxSPrate,10; if(Job == Job_ArchBishop){ bonus bMatk,80; bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddEleMagicDamageRate,Ele_Holy,20; bonus2 bAddSkillDamageRate,2038,100; if(getequiprefinerycnt(5)>=8){ bonus4 bAutoSpell,12,3,1000,EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_RANDOM|EAS_USEBETTER|EAS_NOSP; } } } }
 470022,shoes,オートマティックレッグI,4,,10,600,,20:0,,0,2074075135,2,64,,165,,1,{},{ bonus bMaxHPRate,15; bonus bMaxSPRate,15; if(Baselevel >= 175){ bonus bMaxHPRate,15; bonus bMaxSPRate,15; } bonus2 bIgnoreDefRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bIgnoreDefRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bIgnoreMdefRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bIgnoreMdefRace,Rct_NonBoss,10*getequiprefinerycnt(); }
