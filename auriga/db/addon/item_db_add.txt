@@ -12465,7 +12465,9 @@
 1100018,heal,夜市の綿菓子,0,,10,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_SIROMA_ICE_TEA,500000,20; },{}
 1100019,heal,とれたて野菜串,0,,10,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_MAGI,500000,10; },{}
 1100020,heal,直火焼ソーセージ,0,,10,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_MSTR,500000,10; },{}
-//-- ここから240109以降実装をわかるように再掲 -- 12470
+//-- ここまで 20240220 までの全アイテム --
+
+//-- ここから240109以降実装をわかるように再掲 --
 //-- モチーフ装備EP装備の再掲 --
 //-- セット効果の再掲 --
 
