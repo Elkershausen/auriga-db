@@ -1,0 +1,86 @@
+fix
+2206,head,ヴェール,4,23000,,100,,0:5,,0,2074075135,2,256,,1,44,1,{ /* セット効果実装済み */ },{}
+2407,shoes,ガラスの靴,4,20,,100,,5:10,,0,2065686526,2,64,,1,,1,{ /* セット効果実装済み */ },{ bonus bLuk,5; }
+2494,shoes,ガラスの靴,4,20,,100,,5:10,,1,2065686526,2,64,,1,,1,{ /* セット効果実装済み */ },{}
+4302,card,タオグンカカード,6,20,,10,,,,,,,16,,,,,{ /* 15349 セット効果実装済み */ },{ bonus bMaxHPrate,100; bonus bDef,-50; bonus bMdef,-50; if(equippeditem(311439)) { bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; skill "NPC_STONESKIN",2; } }
+4324,card,ハティーカード,6,20,,10,,,,,,,64,,,,,{},{ bonus2 bAddRevEff,Eff_Freeze,5000; if(equippeditem(311439)) { bonus bMaxHPRate,50; bonus2 bAddRevEff,10000,Eff_Freeze; } }
+4561,card,セリア=アルデ（MVP）カード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus2 bMagicAddRace,Rct_Boss,7; bonus2 bMagicAddRace,Rct_NonBoss,7; if(readparam(bDex) >= 110) { bonus2 bMagicAddRace,Rct_Boss,7; bonus2 bMagicAddRace,Rct_NonBoss,7; } if(getequipid(2)==15387) { bonus2 bResEff,Eff_Freeze,10000; bonus2 bAddCastRate,"SO_PSYCHIC_WAVE",-100; } else bonus4 bAutoSpell,288,5,100,EAS_REVENGE|EAS_MAGIC|EAS_SELF; if(equippeditem(29724)){ if(readparam(bDex) >= 110) { bonus2 bMagicAddRace,Rct_Boss,7; bonus2 bMagicAddRace,Rct_NonBoss,7; } bonus bMaxHPrate,50; bonus2 bResEff,Eff_Freeze,10000; bonus4 bAutoSpell,288,5,-100,EAS_REVENGE|EAS_MAGIC|EAS_SELF; } } }
+5888,head,ヴェール,4,23000,,100,,0:5,,1,2074075135,2,256,,1,44,1,{ /* セット効果実装済み */ },{}
+13465,weapon,セイヴザキング,5,20,,600,170:130,,1,3,16384,2,2,4,100,2,1,{ /* 15386 13465 28927 セット効果実装済み */ },{ bonus bAtkEle,Ele_Ghost; if(getskilllv("KN_RIDING")==0){ bonus bNoSizeFix,0; bonus bFlee,2*getskilllv("CR_SPEARQUICKEN"); bonus bAspdAddRate,3*getskilllv("CR_SPEARQUICKEN"); bonus bCritical,3*getskilllv("CR_SPEARQUICKEN"); bonus2 bAddSkillDamageRate,"SM_BASH",20*getequiprefinerycnt(4); bonus2 bAddSkillDamageRate,"CR_HOLYCROSS",20*getequiprefinerycnt(4); bonus2 bAddSkillDamageRate,"CR_GRANDCROSS",20*getequiprefinerycnt(4); if(getequiprefinerycnt(4)>=6){ bonus2 bAddSkillHealRate,"AL_HEAL",40; bonus2 bAddSkillSubHealRate,"AL_HEAL",15; bonus2 bAddSkillSubHealRate,"AM_POTIONPITCHER",15; bonus2 bAddSkillSubHealRate,"AB_CHEAL",15; bonus2 bAddSkillSubHealRate,"AB_HIGHNESSHEAL",15; bonus2 bItemHealRate,1,15; bonus2 bItemHealRate,2,15; } if(getequiprefinerycnt(4)>=8){ bonus2 bAddSkillHealRate,"AL_HEAL",80; bonus2 bAddSkillSubHealRate,"AL_HEAL",30; bonus2 bAddSkillSubHealRate,"AM_POTIONPITCHER",30; bonus2 bAddSkillSubHealRate,"AB_CHEAL",30; bonus2 bAddSkillSubHealRate,"AB_HIGHNESSHEAL",30; bonus2 bItemHealRate,1,30; bonus2 bItemHealRate,2,30; } } if(equippeditem(28927)){ bonus2 bAddSkillDamageRate,"SM_BASH",20*getequiprefinerycnt(3); bonus2 bAddSkillDamageRate,"CR_HOLYCROSS",20*getequiprefinerycnt(3); bonus2 bAddSkillDamageRate,"CR_GRANDCROSS",20*getequiprefinerycnt(3); } }
+20924,robe,ブレイブマフラー,4,20,,1000,,16:0,,1,2074075135,2,4,,165,0,1,{ /* 15349 セット効果実装済み */ },{ bonus2 bResEff,Eff_Freeze,2500; callfunc "ItemdbAlmightySubHeal",0x7F,4*getequiprefinerycnt(); callfunc "ItemdbAlmightySubHeal",0x7F,4*getequiprefinerycnt(); bonus2 bItemHealRate,1,4*getequiprefinerycnt(); }
+22193,shoes,ブレイブシューズ,4,20,,1000,,16:0,,1,2074075135,2,64,,165,,1,{ /* 15349 セット効果実装済み */ },{ bonus2 bResEff,Eff_Freeze,2500; bonus bMaxHP,100*getequiprefinerycnt(); bonus bMaxSP,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_Player,2; bonus2 bMagicAddRace,Rct_Player,2; }
+28927,shield,キングスガード,4,20,,2500,,150:10,,1,16384,2,32,,130,0,1,{ /* 15386 セット効果実装済み */ },{ if(getequiprefinerycnt(3)>=7){ bonus2 bAddRace,Rct_Undead,15; bonus2 bMagicAddRace,Rct_Undead,15; bonus2 bAddEle,Ele_Dark,15; bonus2 bMagicAddEle,Ele_Dark,15; } if(getequiprefinerycnt(3)>=9){ bonus2 bAddRace,Rct_Undead,15; bonus2 bMagicAddRace,Rct_Undead,15; bonus2 bAddEle,Ele_Dark,15; bonus2 bMagicAddEle,Ele_Dark,15; } }
+29724,ench,殺意の怨念,6,,,,,,,,,,65535,,,,,{ /* 4561 セット効果実装済み */ },{ bonus bMaxHPrate,15; bonus bMaxSPrate,15; }
+300400,card,封印されたハティーカード,6,20,,10,,,,,,,16,,,,,{ /* 15374 セット効果実装済み */ },{ if(equippeditem(311439)) { bonus bMaxHPRate,25; } if(equippeditem(15374)==0) { bonus2 bAddRevEff,Eff_Freeze,1000; end; } bonus2 bAddRevEff,Eff_Freeze,5000; bonus2 bResEff,Eff_Freeze,10000; bonus2 bAddEle,Ele_Water,2*getequiprefinerycnt(2); }
+300407,card,封印されたタオグンカカード,6,20,,10,,,,,,,16,,,,,{ /* 15349 セット効果実装済み */ },{ bonus bMaxHPrate,30; bonus bDef,-50; bonus bMdef,-50; if(equippeditem(311439)) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; } if(equippeditem(450224)) { bonus3 bAutoSelfSpell,"NPC_STONESKIN",6,500; } if(equippeditem(450225)) { bonus3 bAutoSelfSpell,"NPC_STONESKIN",6,500; } }
+
+add
+15013,armor,クレールスーツ,4,28000,,2800,,58:0,,1,2088958,2,16,,22,,1,{ /* 効果なし */ },{}
+15014,armor,漆黒の鎧,4,40000,,4500,,93:0,,1,16512,2,16,,100,,1,{ /* 効果なし */ },{}
+15024,armor,モーラの服,4,0,,10,,10:0,,0,2074075135,2,16,,1,,1,{ /* 効果なし */ },{}
+15062,armor,攻城戦TEロングコート,4,0,,0,,15:15,,0,2074075135,2,16,,40,,0,{},{ bonus bMaxHP,250; bonus bMaxSP,250; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus2 bResEff,Eff_Freeze,2500; }
+15063,armor,攻城戦TEメイル,4,0,,0,,25:5,,0,279714,2,16,,40,,0,{},{ bonus bMaxHP,450; bonus bMaxSP,50; bonus2 bSubRace,Rct_Player,15; bonus2 bMagicSubRace,Rct_Player,15; bonus2 bResEff,Eff_Freeze,2500; }
+15064,armor,攻城戦TEマジックコート,4,0,,0,,5:25,,0,142705429,2,16,,40,,0,{},{ bonus bMaxHP,250; bonus bMaxSP,250; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus2 bResEff,Eff_Freeze,2500; }
+15066,armor,精巧な鎧,4,110000,,3000,,120:25,,1,16512,2,16,,150,,1,{ /* 効果なし */ },{}
+15114,armor,ウェディングドレス,4,43000,,500,,10:15,,1,2065686526,2,16,,1,,1,{ /* セット効果実装済み */ },{ if(equippeditem(28312) && (equippeditem(2206) || equippeditem(5888)) && (equippeditem(2407) || equippeditem(2494))){ bonus bMdef,3; bonus bMdef,getequiprefinerycnt(1); bonus bMdef,getequiprefinerycnt(6); bonus bMdef,getequiprefinerycnt(2); } }
+15241,armor,自警団のスーツ,4,20,,500,,50:0,,1,2074075135,2,16,,130,,1,{},{ bonus bShortWeaponDamageReturn,5; bonus bMatk,10*getequiprefinerycnt(); bonus bMdef,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bMatk,20; bonus bMdef,5; } if(getequiprefinerycnt() >= 9) { bonus bMatk,30; bonus bMdef,5; } }
+15242,armor,精霊のローブ,4,20,,500,,40:0,,1,2074075135,2,16,,130,,1,{},{ bonus2 bAddEleMagicDamageRate,Ele_Fire,5; bonus2 bAddEleMagicDamageRate,Ele_Water,5; bonus2 bAddEleMagicDamageRate,Ele_Wind,5; bonus2 bAddEleMagicDamageRate,Ele_Earth,5; bonus2 bAddEleMagicDamageRate,Ele_Neutral,5; bonus2 bAddSkillCastTime,"SO_PSYCHIC_WAVE",-2000; if(getequiprefinerycnt() >= 7) { bonus2 bAddEleMagicDamageRate,Ele_Fire,5; bonus2 bAddEleMagicDamageRate,Ele_Water,5; bonus2 bAddEleMagicDamageRate,Ele_Wind,5; bonus2 bAddEleMagicDamageRate,Ele_Earth,5; bonus2 bAddEleMagicDamageRate,Ele_Neutral,5; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleMagicDamageRate,Ele_Fire,5; bonus2 bAddEleMagicDamageRate,Ele_Water,5; bonus2 bAddEleMagicDamageRate,Ele_Wind,5; bonus2 bAddEleMagicDamageRate,Ele_Earth,5; bonus2 bAddEleMagicDamageRate,Ele_Neutral,5; bonus2 bAddSkillCastTime,"SO_PSYCHIC_WAVE",-2000; bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",10; } }
+15243,armor,用心棒のスーツ,4,20,,500,,50:0,,1,2074075135,2,16,,130,,1,{},{ bonus bStr,2; bonus bUseSPrate,10; if(getequiprefinerycnt() >= 7) { bonus bSkillDelayRate,-5; bonus bUseSPrate,5; } if(getequiprefinerycnt() >= 9) { bonus bSkillDelayRate,-5; bonus bUseSPrate,5; } }
+15244,armor,鉱員のベスト,4,20,,1500,,80:0,,1,2074075135,2,16,,130,,1,{},{ bonus2 bAddEle,Ele_Wind,5; if(getequiprefinerycnt() >= 7) { bonus2 bAddEle,Ele_Wind,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEle,Ele_Wind,15; } }
+15245,armor,大自然のスーツ,4,20,,500,,50:0,,1,2074075135,2,16,,130,,1,{},{ bonus2 bHPPenaltyTime,5000,1500; bonus2 bSPPenaltyTime,5000,15; bonus bHPGainValue,50; bonus bSPGainValue,5; if(getequiprefinerycnt() >= 7) { bonus bHPGainValue,50; bonus bSPGainValue,5;} if(getequiprefinerycnt() >= 9) { bonus bHPGainValue,100; bonus bSPGainValue,10;} }
+15283,armor,黒糸威胴丸,4,20,,800,,60:0,,1,2074075135,2,16,,100,,1,{},{ bonus bBaseAtk,10; bonus2 bIgnoreDefRace,Rct_Boss,10; bonus2 bIgnoreDefRace,Rct_NonBoss,10; if(getequiprefinerycnt() >= 7) { bonus bBaseAtk,20; bonus2 bIgnoreDefRace,Rct_Boss,20; bonus2 bIgnoreDefRace,Rct_NonBoss,20; } if(getequiprefinerycnt() >= 8) { bonus bBaseAtk,20; bonus2 bIgnoreDefRace,Rct_Boss,20; bonus2 bIgnoreDefRace,Rct_NonBoss,20; } if(getequiprefinerycnt() >= 9) { bonus bBaseAtk,30; bonus2 bIgnoreDefRace,Rct_Boss,20; bonus2 bIgnoreDefRace,Rct_NonBoss,20; } }
+15298,acc,式鍛錬符,4,20,,100,,0:0,,0,2074075135,2,8,,175,,0,{ /* 効果なし */ },{}
+15299,acc,式鍛錬符(良),4,20,,100,,0:0,,0,2074075135,2,8,,175,,0,{ /* 効果なし */ },{}
+15301,acc,式鍛錬符(優),4,20,,100,,0:0,,0,2074075135,2,128,,200,,0,{ /* 効果なし */ },{}
+15349,armor,ブレイブスーツ,4,20,,1000,,60:0,,1,2074075135,2,16,,165,,1,{ /* ホワイトプリズン-イグノアランス 未実装 セット効果実装済み*/ },{ bonus2 bAddEff,Eff_Freeze,5000; bonus bMaxHPrate,4*getequiprefinerycnt(); if(equippeditem(20924) || equippeditem(22193)) { bonus2 bAddRace,Rct_Player,50; bonus2 bMagicAddRace,Rct_Player,50; } if(equippeditem(4302)) { bonus bMaxHPrate,-100; } if(equippeditem(300407)) { bonus bMaxHPrate,-30; } }
+15374,armor,月食の装束,4,20,,600,,120:10,,1,2074075135,2,16,,99,,1,{ /* 4324 300400 セット効果実装済み */ },{ bonus bMaxHPrate,15; bonus bMaxSPrate,15; bonus bSkillDelayRate,getequiprefinerycnt(); if(equippeditem(4324)){ bonus2 bResEff,Eff_Freeze,10000; bonus2 bAddEff,Eff_Freeze,2500; bonus2 bAddEle,Ele_Water,5*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Water,5*getequiprefinerycnt(); } }
+15375,armor,古びた月食の装束,4,20,,600,,0:0,,1,2074075135,2,16,,1,,1,{},{ bonus bMaxHPrate,5; bonus bMaxSPrate,15; bonus bSkillDelayRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus2 bFixCastrate,-50,0;} }
+15381,armor,スターフィッシュスーツ,4,20,,500,,30:0,,1,2074075135,2,16,,170,,1,{ /* 魔法攻撃 敵を沈黙状態にする 街マップでモンスター変身 未実装 */ },{ bonus2 bAddRace,Rct_Formless,5+getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Formless,5+getequiprefinerycnt(); bonus2 bSubRace,Rct_Formless,5+getequiprefinerycnt(); bonus2 bMagicSubRace,Rct_Formless,5+getequiprefinerycnt(); bonus bAllStatus,getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { skill "TF_HIDING",3; bonus2 bSubEle,Ele_Water,15; } if(getequiprefinerycnt() >= 10) { bonus2 bAddEff,Eff_Silence,500; } /* sc_starte SC_MONSTER_TRANSFORM,999999,1313; sc_starte SC_MONSTER_TRANSFORM,999999,1266; sc_starte SC_MONSTER_TRANSFORM,999999,2197; */ }
+15386,armor,キングスメイル,4,20,,1500,,180:10,,1,16384,2,16,,130,,1,{ /* 15386 13465 28927 セット効果実装済み */ },{ bonus2 bSubRace,Rct_Undead,15; bonus2 bSubRace,Rct_Demon,15; bonus2 bMagicSubRace,Rct_Undead,15; bonus2 bMagicSubRace,Rct_Demon,15; if(getequiprefinerycnt() >= 6) { bonus bMaxHPrate,5; callfunc "ItemdbAlmightyHeal",0x7F,10; callfunc "ItemdbAlmightySubHeal",0x7F,10; bonus2 bItemHealRate,1,10; } if(getequiprefinerycnt() >= 6) { bonus bMaxHPrate,5; callfunc "ItemdbAlmightyHeal",0x7F,10; callfunc "ItemdbAlmightySubHeal",0x7F,10; bonus2 bItemHealRate,1,10; } if(equippeditem(13465)){ bonus2 bAddSkillDamageRate,"CR_GRANDCROSS",20*getequiprefinerycnt(2); bonus2 bAddSkillDamageRate,"SM_BASH",20*getequiprefinerycnt(2); bonus2 bAddSkillDamageRate,"CR_HOLYCROSS",20*getequiprefinerycnt(2); } if(equippeditem(28927)){ bonus2 bSubEle,Ele_Dark,5*getequiprefinerycnt(2); } }
+15387,armor,降霊術士のドレス,4,20,,800,,35:10,,1,2074075135,2,16,,130,,1,{ /* 魔法攻撃で倒した時HP + n */ },{ bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus bMatk,15**getequiprefinerycnt(); bonus2 bAddEleMagicDamageRate,Ele_Wind,2*getequiprefinerycnt(); if(equippeditem(20852)){ bonus2 bMagicAddRace,Rct_Boss,2*getequiprefinerycnt(5); bonus2 bMagicAddRace,Rct_NonBoss,2*getequiprefinerycnt(5); bonus bCastrate,-2*getequiprefinerycnt(5); } if(equippeditem(2041)){ skill "AL_INCAGI",1; bonus2 bAddSkillDamageRate,"SO_ELECTRICWALK",30*getequiprefinerycnt(4); bonus2 bAddSkillDamageRate,"SO_FIREWALK",30*getequiprefinerycnt(4); if(getequiprefinerycnt() >= 7) { skill "AL_INCAGI",getequiprefinerycnt(4); } } if(equippeditem(28956)){ bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bIgnoreMdefRace,Rct_Boss,25; if(getequiprefinerycnt() >= 8) { bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bIgnoreMdefRace,Rct_Boss,25; } } }
+15405,armor,ファフニールスケイル,4,20,,1500,,120:15,,0,2074075135,2,16,,100,,1,{},{ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddSkillDamageRate,"RK_DRAGONBREATH_WATER",50; bonus2 bAddSkillDamageRate,"RK_DRAGONBREATH",50; bonus bAddLongWeaponDamage,2*getskilllv("RK_DRAGONBREATH"); bonus bSkillDelayRate,-2*getskilllv("RK_DRAGONBREATH_WATER"); if(getequiprefinerycnt() >= 5) { bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus bSkillDelayRate,-5;} if(getequiprefinerycnt() >= 7) { bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus bSkillDelayRate,-5;} }
+15407,armor,白の騎士団の鎧,4,20,,400,,40:0,,1,2074075135,2,16,,100,,1,{ /* 超越段階 */ },{ bonus2 bSubRace,Rct_Player,1; bonus2 bMagicSubRace,Rct_Player,1; bonus bSkillDelayRate,-5; bonus bSkillDelayRate,-2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus bInfiniteEndure,0;} }
+15417,armor,紫糸威胴丸,4,20,,800,,,,1,2074075135,2,16,,100,,1,{},{ bonus bBaseAtk,10; bonus bPerfectHitAddRate,5; if(getequiprefinerycnt() >= 7) { bonus bBaseAtk,20; bonus bPerfectHitAddRate,5; } if(getequiprefinerycnt() >= 8) { bonus bBaseAtk,20; bonus bPerfectHitAddRate,10; bonus bUnbreakableArmor,0; } if(getequiprefinerycnt() >= 9) { bonus bBaseAtk,30; bonus bPerfectHitAddRate,10; } }
+15419,armor,白糸威胴丸,4,20,,800,,60:0,,1,2074075135,2,16,,100,,1,{},{ bonus bMatk,10; bonus2 bIgnoreMdefRace,Rct_Boss,10; bonus2 bIgnoreMdefRace,Rct_NonBoss,10; if(getequiprefinerycnt() >= 7) { bonus bMatk,20; bonus2 bIgnoreMdefRace,Rct_Boss,20; bonus2 bIgnoreMdefRace,Rct_NonBoss,20; } if(getequiprefinerycnt() >= 8) { bonus bMatk,20; bonus2 bIgnoreMdefRace,Rct_Boss,20; bonus2 bIgnoreMdefRace,Rct_NonBoss,20; bonus bUnbreakableArmor,0; } if(getequiprefinerycnt() >= 9) { bonus bMatk,30; bonus2 bIgnoreMdefRace,Rct_Boss,20; bonus2 bIgnoreMdefRace,Rct_NonBoss,20; } }
+15420,armor,氷獄のドレス,4,20,,400,,120:0,,0,2074075135,2,16,,90,,1,{ /* ドラム形プレイヤー与えるダメージ + n% */ },{ bonus bNoKnockback,0; bonus bDefEle,Ele_Water; if(getequiprefinerycnt() >= 5) { bonus2 bAddRace,Rct_Formless,10; bonus2 bAddRace,Rct_Human,10; bonus2 bMagicAddRace,Rct_Formless,10; bonus2 bMagicAddRace,Rct_Human,10; bonus2 bAddEle,Ele_Fire,10; bonus2 bAddEle,Ele_Water,10; bonus2 bMagicAddEle,Ele_Fire,10; bonus2 bMagicAddEle,Ele_Water,10; } if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Formless,15; bonus2 bAddRace,Rct_Human,15; bonus2 bMagicAddRace,Rct_Formless,15; bonus2 bMagicAddRace,Rct_Human,15; bonus2 bAddEle,Ele_Fire,15; bonus2 bAddEle,Ele_Water,15; bonus2 bMagicAddEle,Ele_Fire,15; bonus2 bMagicAddEle,Ele_Water,15; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Formless,15; bonus2 bAddRace,Rct_Human,15; bonus2 bMagicAddRace,Rct_Formless,15; bonus2 bMagicAddRace,Rct_Human,15; bonus2 bAddEle,Ele_Fire,15; bonus2 bAddEle,Ele_Water,15; bonus2 bMagicAddEle,Ele_Fire,15; bonus2 bMagicAddEle,Ele_Water,15; } }
+15422,armor,古びた羽衣,4,20,,900,,,,1,2074075135,2,16,,1,,1,{},{ bonus bMaxHPrate,5; bonus bMaxSPrate,5; bonus bAspdAddRate,getequiprefinerycnt()/3; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,3;bonus2 bAddRace,Rct_NonBoss,3;} if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,3;bonus2 bAddRace,Rct_NonBoss,3;} }
+
+メモ書き
+28312
+2206
+5888
+2407
+2494
+
+20924
+22193
+4302
+300407
+
+--15349
+20924
+22193
+4302
+300407
+
+if(equippeditem(4561/15387)){
+	bonus2 bResEff,Eff_Freeze,10000;
+	bonus2 bAddCastRate,"SO_PSYCHIC_WAVE",-100;
+}
+
+
+bonus2 bMagicAddRace,Rct_Boss,7;
+bonus2 bMagicAddRace,Rct_NonBoss,7;
+if(readparam(bDex) >= 110) {
+	bonus2 bMagicAddRace,Rct_Boss,7;
+	bonus2 bMagicAddRace,Rct_NonBoss,7;
+}
+if(equippeditem(15387) == 1) {
+	bonus2 bResEff,Eff_Freeze,10000;
+	bonus2 bAddCastRate,"SO_PSYCHIC_WAVE",-100;
+}
+if(equippeditem(29724) == 1) {
+	bonus bMaxHPrate,50;
+	bonus2 bResEff,Eff_Freeze,10000;
+}
+bonus4 bAutoSpell,"SA_LANDPROTECTOR",5,10000,EAS_REVENGE|EAS_MAGIC|EAS_SELF;
