@@ -1,0 +1,57 @@
+fix
+600011,weapon,イリュージョン死の引導者,9,20,,3400,260:230,,1,1,16512,2,34,4,150,3,1,{},{ bonus bAtkRange,3; bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; bonus2 bSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; if(Baselevel>= 170) { if(getequiprefinerycnt() >= 7) { bonus bNoSizeFix,0; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoSpell,"NPC_VAMPIRE_GIFT",3,10000; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"NPC_VAMPIRE_GIFT",666; } } }
+
+add
+501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,1,,,{ itemheal rand(45,65),0; if(equippeditem(4331) && equippeditem(19018)){ itemheal rand(45,65)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(45,65)*(12/10),0; } },{}
+502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(105,145),0; if(equippeditem(4331) && equippeditem(19018)){ itemheal rand(105,145)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(105,145)*(12/10),0; } },{}
+503,heal,黄ポーション,0,550,,130,,,,,2074075135,2,,,1,,,{ itemheal rand(175,235),0; if(equippeditem(4331) && equippeditem(19018)){ itemheal rand(175,235)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(175,235)*(12/10),0; } },{}
+504,heal,白ポーション,0,1200,,150,,,,,2074075135,2,,,1,,,{ itemheal rand(325,405),0; if(equippeditem(2488)) {itemheal rand(325,405)*(12/10),0; } },{}
+513,heal,バナナ,0,15,,20,,,,,2074075135,2,,,1,,,{ itemheal rand(17,21),0; if(equippeditem(4376) && equippeditem(311439)){ itemheal rand(17,21)*Baselevel*(13/10),0; } },{}
+569,heal,初心者用ポーション,0,0,,10,,,,,2074075135,2,,,1,,,{ itemheal rand(22,33),0; if(equippeditem(4331) && equippeditem(19018)){ itemheal rand(22,33)*(11/10),0; } },{}
+2426,shoes,シャドウウォーカー,4,20,,2000,,0:10,,0,2088958,2,64,,75,,1,{ /* 条件ターゲッティング魔法攻撃 仮設定 */ },{ if(getskilllv("AS_CLOAKING") >= 3) { bonus4 bAutoSpell,"AS_CLOAKING",getskilllv("AS_CLOAKING"),1000,EAS_REVENGE|EAS_MAGIC|EAS_SELF; } else { bonus4 bAutoSpell,"AS_CLOAKING",3,1000,EAS_REVENGE|EAS_MAGIC|EAS_SELF; } if(equippeditem(2135)){ bonus2 bAddEff,Eff_Blind,200; bonus3 bRevAutoActiveWeapon,2426,200,1000; if(checkactiveitem()) { misceffect 37,""; bonus bFlee,20; } } }
+2486,shoes,シャドウウォーカー,4,20,,2000,,0:10,,1,2088958,2,64,,75,,1,{ /* 条件ターゲッティング魔法攻撃 仮設定 */ },{ if(getskilllv("AS_CLOAKING") >= 3) { bonus4 bAutoSpell,"AS_CLOAKING",getskilllv("AS_CLOAKING"),1000,EAS_REVENGE|EAS_MAGIC|EAS_SELF; } else { bonus4 bAutoSpell,"AS_CLOAKING",3,1000,EAS_REVENGE|EAS_MAGIC|EAS_SELF; } if(equippeditem(2135)){ bonus2 bAddEff,Eff_Blind,200; bonus3 bRevAutoActiveWeapon,2486,200,1000; if(checkactiveitem()) { misceffect 37,""; bonus bFlee,20; } } }
+2488,shoes,フレイシューズ,4,30000,,500,,12:0,,1,2065686526,2,64,,65,,1,{},{ bonus bAgi,2; if((equippeditem(2353) || equippeditem(15001)) && equippeditem(2516)) { bonus bAgi,3; bonus bMaxHPrate,5; bonus bMaxSPrate,5; } }
+2489,shoes,ヴィダルのブーツ,4,30000,,650,,13:0,,1,2065686526,2,64,,65,,1,{ /* セット効果実装済み */ },{ bonus bMaxHPrate,9; bonus bMaxSPrate,9; }
+2491,shoes,ビョンウンゴブーツ,4,20,,600,,10:0,,0,2074075135,2,64,,1,,1,{ /* セット効果実装済み */ },{ bonus bMdef,getequiprefinerycnt(6); }
+2493,shoes,ゴヴニュの軍靴,4,30000,,700,,13:3,,1,2065686526,2,64,,54,,1,{ /* セット効果実装済み */ },{ bonus bLuk,5; }
+2494,shoes,ガラスの靴,4,20,,100,,5:10,,1,2065686526,2,64,,1,,1,{ /* セット効果実装済み */ },{}
+2496,shoes,攻城戦TEシューズ,4,0,,0,,5:5,,0,2074075135,2,64,,40,,0,{},{ bonus bMaxHP,150; bonus bMaxSP,150; bonus2 bAddRace,Rct_Player,5; bonus2 bMagicAddRace,Rct_Player,5; bonus2 bResEff,Eff_Freeze,2500; }
+2497,shoes,攻城戦TEブーツ,4,0,,0,,10:0,,0,279714,2,64,,40,,0,{},{ bonus bMaxHP,200; bonus bMaxSP,100; bonus2 bAddRace,Rct_Player,10; bonus2 bResEff,Eff_Freeze,2500; }
+2498,shoes,攻城戦TEマジックサンダル,4,0,,0,,5:5,,0,142705429,2,64,,40,,0,{},{ bonus bMaxHP,100; bonus bMaxSP,200; bonus2 bMagicAddRace,Rct_Player,5; bonus2 bResEff,Eff_Freeze,2500; }
+2528,robe,ウールスカーフ,4,20,,500,,11:4,,1,2088958,2,4,,55,0,1,{ /* セット効果実装済み */ },{}
+2550,robe,釣り人のマフラー,4,20,,200,,0:5,,0,2074075135,2,4,,1,0,1,{ /* 釣りキャスティング時間2秒減少 */ },{}
+2564,robe,野生の尻尾,4,0,,0,,16:0,,0,2074075135,2,4,,75,0,0,{ /* 効果なし */ },{}
+2588,robe,ぼろマント,4,56000,,500,,4:10,,1,2065686526,2,4,,1,0,1,{ /* 効果なし */ },{}
+2627,acc,ベルト,4,20000,,1200,,0:0,,1,2074075135,2,136,,25,,0,{ /* 効果なし */ },{}
+2628,acc,ノービスアミュレット,4,400,,200,,0:0,,1,8388609,2,136,,1,,0,{ /* 効果なし */ },{}
+2642,acc,セリンの指輪,4,0,,0,,0:0,,0,2074075135,2,136,,1,,0,{ /* 効果なし */ },{}
+2643,acc,セリンの指輪,4,45000,,100,,0:0,,0,2074075135,2,136,,1,,0,{ /* 効果なし */ },{}
+2655,acc,血塗られた鉄球,4,50000,,4000,,0:0,,0,2065686526,2,136,,1,,0,{ /* 取り巻き 1479 1480 ローラの鎖鉄球 セット効果実装済み */ },{ if(equippeditem(2408) || equippeditem(22105)) { bonus bBaseAtk,50; bonus2 bAddDefClass,1196,20; bonus2 bAddMdefClass,1196,20; bonus2 bAddDefClass,1197,20; bonus2 bAddMdefClass,1197,20; bonus2 bAddDefClass,1479,20; bonus2 bAddMdefClass,1479,20; bonus2 bAddDefClass,1480,20; bonus2 bAddMdefClass,1480,20; } if(equippeditem(2913)) { bonus bBaseAtk,10; } }
+2657,acc,研究所の通行パス,4,20,,100,,0:0,,0,2074075135,2,136,,1,,0,{ /* 効果なし */ },{}
+2700,acc,封印の赤い絹,4,20,,100,,0:0,,0,16514,2,136,,60,,0,{ /* セット効果実装済み */ },{}
+2707,acc,グスリ,4,20,,100,,0:0,,0,2074075135,2,136,,1,,0,{ /* 効果なし */ },{}
+2764,acc,小さな釣り竿,4,10,,250,,,,0,2074075135,2,136,,1,,0,{ /* 釣りキャスティング時間1秒減少 */ },{}
+2775,acc,釣り餌,4,20,,100,,0:0,,0,2074075135,2,136,,1,,0,{ /* 釣りキャスティング時間1秒減少 */ },{}
+2787,acc,水玉ブローチ,4,50000,,200,,0:2,,1,2088958,2,136,,75,,0,{},{ bonus2 bSubEle,Ele_Water,5; bonus bMaxHPrate,1; bonus bMdef,2; }
+2798,acc,くたびれた天使の意思,4,0,,200,,0:0,,0,2088832,2,136,,90,,0,{ /* 同名 2077 取り巻き 1761 1762*/ },{ bonus2 bAddDefClass,1752,50; bonus2 bAddMdefClass,1752,50; bonus2 bAddDefClass,1761,50; bonus2 bAddMdefClass,1761,50; bonus2 bAddDefClass,2077,50; bonus2 bAddMdefClass,2077,50; bonus2 bAddMdefClass,1753,50; bonus2 bAddDefClass,1753,50; bonus2 bAddDefClass,1762,50; bonus2 bAddMdefClass,1762,50; }
+2843,acc,猛獣の鈴,4,0,,0,,0:0,,0,2074075135,2,136,,75,,0,{},{ bonus bMaxSP,50; }
+2872,acc,ニャンゲーマーズの証,4,20,,0,,0:0,,0,2074075135,2,136,,1,,0,{ /* 効果なし */ },{}
+2897,acc,RWC2011ネックレス,4,20,,100,,5:5,,0,2074075135,2,136,,30,,0,{ /* 536 セット効果実装済み */ },{ bonus bMatk,5; bonus bAspdAddRate,5; bonus2 bAddSize,Size_Medium,5; bonus2 bSubSize,Size_Medium,3; }
+2913,acc,大盗賊の手鎖,4,20,,2400,,0:0,,1,2074075135,2,136,,10,,0,{ /* セット効果実装済み */ },{ bonus bBaseAtk,5; if(equippeditem(2295)){ bonus bBaseAtk,10; } if(equippeditem(15040)){ bonus bBaseAtk,2*getequiprefinerycnt(2); } if(equippeditem(2408) || equippeditem(22105)) { bonus bBaseAtk,getequiprefinerycnt(6); } if(equippeditem(2655) || equippeditem(28388)) { bonus bBaseAtk,10; } }
+2915,acc,エスランの首飾り,4,20,,50,,0:10,,0,2074075135,2,136,,100,,0,{ /* 効果なし */ },{}
+2929,acc,百戦錬磨のお守り,4,20,,300,,0:2,,0,2074075135,2,136,,1,,0,{},{ if(readparam(bStr) >= 60) { bonus bStr,2; } if(readparam(bStr)>= 80) { bonus bStr,1; bonus bBaseAtk,5; } if(readparam(bStr) >= 100) { bonus bBaseAtk,5; bonus bHit,2; } if(readparam(bStr) >= 120) { bonus bBaseAtk,5; bonus bHit,3; } }
+2930,acc,先手必勝のお守り,4,20,,300,,0:2,,0,2074075135,2,136,,1,,0,{},{ if(readparam(bAgi) >= 60) { bonus bAgi,2; } if(readparam(bAgi) >= 80) { bonus bAgi,1; bonus bFlee,4; } if(readparam(bAgi) >= 100) { bonus bFlee,1; bonus bAspdAddRate,2; } if(readparam(bAgi) >= 120) { bonus bAspdAddRate,2; } }
+2931,acc,無病息災のお守り,4,20,,300,,0:2,,0,2074075135,2,136,,1,,0,{},{ if(readparam(bVit) >= 60) { bonus bVit,2; } if(readparam(bVit) >= 80) { bonus bVit,1; bonus bMaxHP,50; } if(readparam(bVit) >= 100) { bonus bMaxHP,150; bonus bFlee2,1; } if(readparam(bVit) >= 120) { bonus bMaxHP,100; bonus bFlee2,3; } }
+2932,acc,百発百中のお守り,4,20,,300,,0:2,,0,2074075135,2,136,,1,,0,{},{ if(readparam(bDex) >= 60) { bonus bDex,2; } if(readparam(bDex) >= 80) { bonus bDex,1; bonus bCastrate,-1; } if(readparam(bDex) >= 100) { bonus bCastrate,-2; bonus bAddLongWeaponDamage,1; } if(readparam(bDex) >= 120) { bonus bAddLongWeaponDamage,2; } }
+2933,acc,博学多才のお守り,4,20,,300,,0:2,,0,2074075135,2,136,,1,,0,{},{ if(readparam(bInt) >= 60) { bonus bInt,2; } if(readparam(bInt) >= 80) { bonus bInt,1; bonus bMatk,5; } if(readparam(bInt) >= 100) { bonus bMatk,5; bonus bSkillDelayRate,-1; } if(readparam(bInt) >= 120) { bonus bMatk,5; bonus bSkillDelayRate,-2; } }
+2934,acc,商売繁盛のお守り,4,20,,300,,0:2,,0,2074075135,2,136,,1,,0,{},{ if(readparam(bLuk) >= 60) { bonus bLuk,2; } if(readparam(bLuk) >= 80) { bonus bDex,1; bonus bLuk,2; } if(readparam(bLuk) >= 100) { bonus bDex,1; bonus bInt,1; } if(readparam(bLuk) >= 120) { bonus bDex,1; bonus bInt,3; bonus bLuk,1; } }
+2937,acc,RJC2012EXPネックレス,4,0,,0,,0:0,,0,2074075135,2,136,,1,,0,{},{ bonus2 bExpRate,Rct_All,10; bonus2 bJobRate,Rct_All,10; }
+2938,acc,RJC2012ステータスネックレス,4,0,,0,,0:0,,0,2074075135,2,136,,1,,0,{},{ bonus bAllStatus,5; bonus bHit,5; }
+2939,acc,RJC2012スペルネックレス,4,0,,0,,0:0,,0,2074075135,2,136,,1,,0,{},{ bonus bNoCastCancel,0; bonus bCastrate,-20; }
+2944,acc,攻城戦TE守護の指輪,4,0,,0,,0:0,,0,2074075135,2,136,,40,,0,{},{ bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; }
+2945,acc,攻城戦TE怒りの指輪,4,0,,0,,0:0,,0,2074075135,2,136,,40,,0,{},{ bonus2 bAddRace,Rct_Player,5; bonus2 bMagicAddRace,Rct_Player,5; }
+2946,acc,攻城戦TE反抗の指輪,4,0,,0,,0:5,,0,2074075135,2,136,,40,,0,{},{ bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; }
+2967,acc,RWC2012記念リング,4,20,,200,,0:0,,1,2074075135,2,136,,1,,0,{ /* セット効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,1;bonus2 bAddRace,Rct_NonBoss,1; }
+2969,acc,RWC2012記念ペンダント,4,20,,200,,0:0,,1,2074075135,2,136,,1,,0,{},{ bonus bMatk,1; if(equippeditem(2967)){ bonus2 bAddRace,Rct_Boss,4;bonus2 bAddRace,Rct_NonBoss,4;bonus bMatk,4;} }
+2975,acc,10周年記念バッジ,4,20,,100,,0:0,,0,2074075135,2,136,,10,,0,{ /* 効果なし */ },{}
+2981,acc,勇者の指輪,4,20,,200,,0:0,,0,2074075135,2,136,,140,,0,{ /* 効果なし */ },{}
