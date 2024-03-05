@@ -1,0 +1,18 @@
+20240305 update
+
+add
+item_db.txt
+510148,weapon,–Â‚è‹¿‚­¬‘¾“,5,20,,600,120:120,,1,1,536870912,2,2,4,200,1,1,{ /* 240305 */ },{ bonus bUnbreakableWeapon,0; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus2 bAddCastRate,"SS_SEKIENHOU",-10; bonus2 bAddCastRate,"SS_REIKETSUHOU",-10; bonus2 bAddCastRate,"SS_RAIDENPOU",-10; bonus2 bAddCastRate,"SS_ANTENPOU",-10; bonus2 bMagicAddSize,Size_Small,10*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,10*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,10*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"SS_SEKIENHOU",25; bonus2 bAddSkillDamageRate,"SS_REIKETSUHOU",25; bonus2 bAddSkillDamageRate,"SS_RAIDENPOU",25; bonus2 bAddSkillDamageRate,"SS_ANTENPOU",25; } if(getequiprefinerycnt() >= 10) { bonus3 bAutoActiveMagic,510148,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddEleMagicDamageRate,Ele_Dark,50; } } }
+510149,weapon,‰¹‚ğ¸‚Á‚½¬‘¾“,5,20,,600,120:120,,1,1,536870912,2,2,4,200,1,1,{ /* 240305 */ },{ bonus2 bMagicAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,5*getequiprefinerycnt(); }
+560064,weapon,×ˆ«‚ğÄ‚«•¥‚¤Œ,5,20,,400,140:100,,1,1,32768,2,2,4,200,12,1,{ /* 240305 */ },{ bonus bUnbreakableWeapon,0; bonus2 bSubRace,Rct_Player,10; bonus2 bAddSize,Size_Small,13*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,13*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,13*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"IQ_SECOND_FAITH",25; bonus2 bAddSkillDamageRate,"IQ_THIRD_PUNISH",25; } if(getequiprefinerycnt() >= 10) { bonus bAddCriticalDamage,50; } }
+560065,weapon,âq‚³‚ê‚½‰Š‚ÌŒ,5,20,,400,140:100,,1,1,32768,2,2,4,200,12,1,{ /* 240305 */ },{ bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); }
+590085,weapon,‘S‚Ä‚ğ”j‰ó‚·‚é’Æ,5,20,,1500,150:110,,1,1,256,2,2,4,200,8,1,{ /* 240305 */ },{ bonus bUnbreakableWeapon,0; bonus2 bSubRace,Rct_Player,10; bonus2 bAddSize,Size_Small,13*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,13*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,13*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"CD_PETITIO",25; bonus2 bAddSkillDamageRate,"CD_EFFLIGO",25; } if(getequiprefinerycnt() >= 10) { bonus bAddCriticalDamage,50; } }
+590086,weapon,ˆÓv‚ğ¸‚Á‚½’Æ,5,20,,1500,150:110,,1,1,256,2,2,4,200,8,1,{ /* 240305 */ },{ bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); }
+
+item_db2.txt
+510148,0,0,0,0,0,0,0,0,0,0,0,0	//ğŒ‚È‚µ	//–Â‚è‹¿‚­¬‘¾“
+510149,0,0,0,0,0,0,0,0,0,0,0,0	//ğŒ‚È‚µ	//‰¹‚ğ¸‚Á‚½¬‘¾“
+560064,2,0,0,0,0,0,0,0,0,0,0,0	//“]	//×ˆ«‚ğÄ‚«•¥‚¤Œ
+560065,2,0,0,0,0,0,0,0,0,0,0,0	//“]	//âq‚³‚ê‚½‰Š‚ÌŒ
+590085,2,0,0,0,0,0,0,0,0,0,0,0	//“]	//‘S‚Ä‚ğ”j‰ó‚·‚é’Æ
+590086,2,0,0,0,0,0,0,0,0,0,0,0	//“]	//ˆÓv‚ğ¸‚Á‚½’Æ
