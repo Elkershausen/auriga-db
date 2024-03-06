@@ -1,5 +1,5 @@
 map_conf.txt
-npc: script/npc/npc_test.sc
+npc: script/npc/test/npc_test.sc
 
 //--ƒoƒ‹ƒ€ƒ“ƒg“@
 map: ba_bath.gat
