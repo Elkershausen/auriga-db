@@ -11,9 +11,53 @@
 
 
 //==============================================================//
-//==================== 20240313 アップデート ===================//
+//==================== 20240312 アップデート ===================//
 //==============================================================//
+200373,cos,コスたまCyberIII,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240312 */ },{ /* 480419 480420 420321 480421 480422 31849 410121 420319 420320 400607 */ }
+312959,ench,潜在解放(マイスターIV),6,,,,,,,,,,65535,,,,,{ /* 240312 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"MT_SPARK_BLASTER",-100; bonus2 bAddSkillCoolDown,"MT_TRIPLE_LASER",-100; } }
+312971,ench,潜在解放(ナイトウォッチIV),6,,,,,,,,,,65535,,,,,{ /* 240312 ナイトウォッチ */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"NW_THE_VIGILANTE_AT_NIGHT",-300; } }
+312977,ench,潜在解放(スピリットハンドラーIV),6,,,,,,,,,,65535,,,,,{ /* 240312 スピリットハンドラー */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SH_HYUN_ROKS_BREEZE",-1000; bonus2 bAddSkillCoolDown,"SU_CN_METEOR",1000; } }
+400607,cos,[衣装] ライオットチップ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1201,0,{ /* 240312 コスたまCyberIII */ },{}
+400624,head,白猫の魔女帽子,4,20,,500,,10:0,,1,2074075008,2,256,,200,2509,1,{ /* 240312 4次職 */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,2; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"SH_HYUN_ROK_CANNON",Baselevel/10; bonus2 bAddSkillDamageRate,"SH_HYUN_ROKS_BREEZE",Baselevel/10; if(getequiprefinerycnt() >= 10) { bonus bSkillDelayRate,-20; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+420319,cos,[衣装] カードボードボックス(下段),4,20,,0,,0:0,,0,2074075135,2,4096,,1,450,0,{ /* 240312 コスたまCyberIII */ },{}
+420320,cos,[衣装] チャームオブラフウィンド,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1263,0,{ /* 240312 コスたまCyberIII */ },{}
+420321,cos,[衣装] ネオンハーフロング,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2508,0,{ /* 240312 コスたまCyberIII */ },{}
+480419,cos,[衣装] サイバーソード,4,20,,0,,0:0,,0,2074075135,2,8192,,1,207,0,{ /* 240312 コスたまCyberIII */ },{}
+480420,cos,[衣装] サイバーライフル,4,20,,0,,0:0,,0,2074075135,2,8192,,1,208,0,{ /* 240312 コスたまCyberIII */ },{}
+480421,cos,[衣装] ディフェンスフィールド,4,20,,0,,0:0,,0,2074075135,2,8192,,1,209,0,{ /* 240312 コスたまCyberIII */ },{}
+480422,cos,[衣装] 電源ケーブル,4,20,,0,,0:0,,0,2074075135,2,8192,,1,210,0,{ /* 240312 コスたまCyberIII */ },{}
+490523,acc,決闘者のゴールドコイン,4,20,,100,,0:0,,1,2074075008,2,136,,200,,0,{ /* 240312 4次職 */ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bPerfectHitAddRate,25; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillCoolDown,"RL_HEAT_BARREL",-40000; bonus2 bAddSkillDamageRate,"NW_MAGAZINE_FOR_ONE",Baselevel/10; bonus2 bAddSkillDamageRate,"NW_THE_VIGILANTE_AT_NIGHT",Baselevel/10; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",Baselevel/10; }
+490524,acc,エレクトロンブースター,4,20,,100,,0:0,,1,2074075008,2,136,,200,,0,{ /* 240312 4次職 */ },{ bonus bCritical,50; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bPerfectHitAddRate,25; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus bNoGearFuel,0; bonus2 bAddSkillDamageRate,"MT_SPARK_BLASTER",Baselevel/10; bonus2 bAddSkillDamageRate,"MT_TRIPLE_LASER",Baselevel/10; }
 
+200373,0,0,1,1,0,1,1,0,0,0,0,0	//倉庫	//コスたまCyberIII
+312959,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(マイスターIV)
+312971,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(ナイトウォッチIV)
+312977,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(スピリットハンドラーIV)
+400607,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] ライオットチップ
+400624,2,0,0,0,0,0,0,0,0,0,0,0	//転	//白猫の魔女帽子
+420319,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] カードボードボックス(下段)
+420320,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] チャームオブラフウィンド
+420321,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] ネオンハーフロング
+480419,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] サイバーソード
+480420,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] サイバーライフル
+480421,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] ディフェンスフィールド
+480422,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] 電源ケーブル
+490523,2,0,0,0,0,0,0,0,0,0,0,0	//転	//決闘者のゴールドコイン
+490524,2,0,0,0,0,0,0,0,0,0,0,0	//転	//エレクトロンブースター
+
+312959,ench,潜在解放(マイスターIV),2
+312971,ench,潜在解放(ナイトウォッチIV),2
+312977,ench,潜在解放(スピリットハンドラーIV),2
+
+400607#1201#	//[衣装] ライオットチップ
+420319#450#	//[衣装] カードボードボックス(下段)
+420320#1263#	//[衣装] チャームオブラフウィンド
+420321#2508#	//[衣装] ネオンハーフロング
+480419#207#	//[衣装] サイバーソード
+480420#208#	//[衣装] サイバーライフル
+480421#209#	//[衣装] ディフェンスフィールド
+480422#210#	//[衣装] 電源ケーブル
+400624#2509#	//白猫の魔女帽子
 
 //==============================================================//
 //==================== 20240305 アップデート ===================//
