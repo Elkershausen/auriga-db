@@ -1,3 +1,10 @@
+20240312	patch0135
+・超越装備の整理とコメントの追加(item_db.txt item_memo.txt)
+
+・***宮の*** 職業系アイテムの整理(item_db.txt item_memo.txt)
+
+・武器classを最適化し不要データを削除(classnum_db.txt)
+
 20240310	patch0134
 ・29371#真理の開放#のセット効果の対象アイテムの効果見直して全体的に修正(item_db.txt)
 
