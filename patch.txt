@@ -1,3 +1,8 @@
+20240314	patch0137
+・アイテムの効果少し修正(item_db.txt)
+
+・if(Job == Job_XXXX) {} で職指定しているアイテムを4次職・拡張4次職にも対応するために4次職の記述を仮設定(item_db.txt)
+
 20240312	patch0136
 ・240312 アップデート 実装(item_db.txt item_db2.txt item_cardtype.txt classnum_db.txt)
 
