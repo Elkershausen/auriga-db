@@ -1,3 +1,10 @@
+20240317	patch0140
+・イベント用の3%回復剤と入手する箱のNPC売値を0に変更
+
+・アイテムの装備効果のぶれ修正と最適化
+
+・記述誤りを修正
+
 20240316	patch0139
 ・1150 1335 2042 2043 2044 2045 2124 2134 2524 2908 2963 2991 2992 19391 27083 300102 300178 300184 300190 410004
 ・[物理ダメージが n%増] の記述にぶれがあるので [bonus bAddShortWeaponDamage,n; bonus bAddLongWeaponDamage,n;] を使っている記述を[bonus2 bAddRace,Rct_Boss,n; bonus2 bAddRace,Rct_NonBoss,n;]に書き換えて統一
