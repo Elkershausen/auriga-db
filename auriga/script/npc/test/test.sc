@@ -121,24 +121,3 @@ prontera.gat,1,1,4	script	HPSPコーマ	533,{
 
 }
 
-//--かかし--
-rwc01.gat,47,33,0,0	monster	無・Lv1		2510,1,0,0,0
-rwc01.gat,45,33,0,0	monster	水・Lv1		2511,1,0,0,0
-rwc01.gat,43,33,0,0	monster	地・Lv1		2512,1,0,0,0
-rwc01.gat,41,33,0,0	monster	火・Lv1		2513,1,0,0,0
-rwc01.gat,39,33,0,0	monster	風・Lv1		2514,1,0,0,0
-rwc01.gat,37,33,0,0	monster	毒・Lv1		2515,1,0,0,0
-rwc01.gat,35,33,0,0	monster	聖・Lv1		2516,1,0,0,0
-rwc01.gat,33,33,0,0	monster	闇・Lv1		2517,1,0,0,0
-rwc01.gat,31,33,0,0	monster	念・Lv1		2518,1,0,0,0
-rwc01.gat,29,33,0,0	monster	不死・Lv1		2519,1,0,0,0
-
-rwc01.gat,47,41,0,0	monster	水・lv4		2520,1,0,0,0
-rwc01.gat,45,41,0,0	monster	地・Lv4		2521,1,0,0,0
-rwc01.gat,43,41,0,0	monster	火・Lv4		2522,1,0,0,0
-rwc01.gat,41,41,0,0	monster	風・Lv4		2523,1,0,0,0
-rwc01.gat,39,41,0,0	monster	毒・Lv4		2524,1,0,0,0
-rwc01.gat,37,41,0,0	monster	聖・Lv4		2525,1,0,0,0
-rwc01.gat,35,41,0,0	monster	闇・Lv4		3460,1,0,0,0
-rwc01.gat,33,41,0,0	monster	念・Lv4		3461,1,0,0,0
-rwc01.gat,31,41,0,0	monster	不死・Lv4	3462,1,0,0,0
