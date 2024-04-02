@@ -1,3 +1,19 @@
+20240402	patch0151
+・20240402 アップデート 実装(item_db.* item_db2.* item_memo.*)
+※accessoryid.* accname.* spriterobeid.* spriterobename.* tb_layer_priority.* transparentitem.* iteminfo.* を各自更新しdata\luafiles514\lua files\[datainfo][transparentitem]同じ階層に配置して下さい
+※テスト環境は[read data folder first]のパッチを利用しているのでgrfを更新しなくてもいいです
+※hateffectは更新ありません
+
+・itemmoveinfov5.txt 更新(data\itemmoveinfov5.txt)
+※dataフォルダ直下に配置し、アイテム画面の下に表示される移動制限の表示に使います
+※20240326テスト環境の更新で実装
+※表示のみで実際挙動には影響しませんので更新を急がなくても問題ありません
+※テスト環境は[read data folder first]のパッチを利用しているのでgrfを更新しなくてもいいです
+
+・[風の矢][岩石の矢][水晶の矢]を販売系NPCに追加([alb2trea.gat][ein_in01.gat][lhz_in03.gat] npc_town_alberta.* npc_town_einbroch.* npc_town_lighthalzen.*)
+※20151222アップデートで実装されている要素です
+※そのまま上書きして下さい
+
 20240401	patch0150
 ・5400-5599 5653 修正と最適化
 ※効果が全部違うものがあり、過去になされたグローバル系アイテムの不明情報実装の名残だと思われる

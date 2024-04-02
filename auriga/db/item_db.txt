@@ -1,4 +1,4 @@
-//item_db.txt Auriga db_override patch1538+add update 20240326
+//item_db.txt Auriga db_override patch1538+add update 20240402
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript},{UnEquipScript}
 501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,1,,,{ itemheal rand(45,65),0; if(equippeditem(4331) && equippeditem(19018)){ itemheal rand(45,65)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(45,65)*(12/10),0; } },{}
 502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(105,145),0; if(equippeditem(4331) && equippeditem(19018)){ itemheal rand(105,145)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(105,145)*(12/10),0; } },{}
@@ -6363,6 +6363,7 @@
 19797,cos,[衣装] 名射手のりんご,4,20,,0,,0:0,,0,2074075135,2,1024,,1,72,0,{},{}
 19798,cos,[衣装] 怒った口,4,20,,0,,0:0,,0,2074075135,2,4096,,1,194,0,{},{}
 19799,cos,[衣装] ゴールデンヘッドギア,4,20,,0,,0:0,,0,2074075135,2,1024,,1,30,0,{},{}
+19800,cos,[衣装] カーネーションの髪飾り,4,20,,0,,0:0,,0,2074075135,2,1024,,1,878,0,{ /* 240402 */ },{}
 19801,cos,[衣装] 白狐の仮面,4,20,,0,,0:0,,0,2074075135,2,6144,,1,403,0,{},{}
 19802,cos,[衣装] たれ九尾狐,4,20,,0,,0:0,,0,2074075135,2,1024,,1,296,0,{},{}
 19803,cos,[衣装] 風車帽子,4,20,,0,,0:0,,0,2074075135,2,1024,,1,456,0,{},{}
@@ -10013,8 +10014,9 @@
 200348,use,コスたまNewYearIII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 200356,use,[2024]復刻コスたまの箱(Season1),2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 1001192,1,1,0,0,0,0,0,0,7948800; },{}
 200358,use,[2024]復刻コスたま引換券(Season1)11個の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 1001192,11,1,0,0,0,0,0,0,7948800; },{}
-200365,use,コスたまCuteIII,2,0,,1,,,,,2074075135,2,,,1,,,{ /* 240206 */ /* コスたまCuteIII */ },{}
-200373,cos,コスたまCyberIII,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240312 */ },{ /* 480419 480420 420321 480421 480422 31849 410121 420319 420320 400607 */ }
+200365,use,コスたまCuteIII,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240206 */ /* コスたまCuteIII */ },{}
+200373,use,コスたまCyberIII,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240312 */ },{ /* 480419 480420 420321 480421 480422 31849 410121 420319 420320 400607 */ }
+200384,use,コスたまFlowerGardenIV,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240402 */ },{ /* 19800 400633 400634 400635 410311 410312 420325 480430 480431 480432 */ }
 300001,card,ポイゾナスカード,6,20,,10,,,,,,,769,,,,,{},{ bonus bVit,1; bonus2 bResEff,Eff_Poison,10000; }
 300002,card,トキシャスカード,6,20,,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; skill "ASC_EDP",1; }
 300003,card,ホワイトポルセリオカード,6,20,,10,,,,,,,136,,,,,{},{ bonus2 bAddSkillDamageRate,"WL_EARTHSTRAIN",50; }
@@ -10921,6 +10923,9 @@
 400602,head,白狐耳の笠,4,20,,500,,10:0,,1,2074075008,2,256,,200,2505,1,{ /*240213*//*4次職*/ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"SS_KAGEGARI",Baselevel/10; bonus2 bAddSkillDamageRate,"SS_KAGENOMAI",Baselevel/10; bonus2 bAddSkillDamageRate,"SS_KAGEGISSEN",Baselevel/10; if(getequiprefinerycnt() >= 10) { bonus bPerfectHitAddRate,25; bonus bSkillDelayRate,-20; } }
 400607,cos,[衣装] ライオットチップ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1201,0,{ /* 240312 コスたまCyberIII */ },{}
 400624,head,白猫の魔女帽子,4,20,,500,,10:0,,1,2074075008,2,256,,200,2509,1,{ /* 240312 4次職 */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,2; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"SH_HYUN_ROK_CANNON",Baselevel/10; bonus2 bAddSkillDamageRate,"SH_HYUN_ROKS_BREEZE",Baselevel/10; if(getequiprefinerycnt() >= 10) { bonus bSkillDelayRate,-20; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+400633,cos,[衣装] シックピオニー,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2380,0,{ /* 240402 */ },{}
+400634,cos,[衣装] 妖魔のささやき,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2338,0,{ /* 240402 */ },{}
+400635,cos,[衣装] 花のサマーニット帽,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2516,0,{ /* 240402 */ },{}
 410000,head,轟鳴鼓,4,20,,300,,0:0,,0,2074075135,2,512,,100,1823,0,{},{ hateffect HAT_EF_ResonateTaego,TRUE; bonus2 bAddRace,Rct_Boss,2; bonus2 bAddRace,Rct_NonBoss,2; if(readparam(bStr) >= 90){ bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } if(readparam(bStr) >= 125){ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; } },{ hateffect HAT_EF_ResonateTaego,FALSE; }
 410001,head,ファランクス,4,20,,800,,50:3,,0,2074075135,2,512,,100,1949,0,{},{ bonus2 bSubRace,Rct_Boss,1; bonus2 bSubRace,Rct_NonBoss,1; bonus2 bMagicSubRace,Rct_Boss,1; bonus2 bMagicSubRace,Rct_NonBoss,1; bonus2 bHPPenaltyTime,5000,-60; bonus2 bSPPenaltyTime,500,-6; if(readparam(bVit) >= 90) { bonus2 bSubRace,Rct_Boss,1; bonus2 bSubRace,Rct_NonBoss,1; bonus2 bMagicSubRace,Rct_Boss,1; bonus2 bMagicSubRace,Rct_NonBoss,1; bonus2 bHPPenaltyTime,5000,-90; bonus2 bSPPenaltyTime,500,-9; } if(readparam(bVit) >= 125) { bonus2 bSubRace,Rct_Boss,3; bonus2 bSubRace,Rct_NonBoss,3; bonus2 bMagicSubRace,Rct_Boss,3; bonus2 bMagicSubRace,Rct_NonBoss,3; bonus2 bHPPenaltyTime,5000,-150; bonus2 bSPPenaltyTime,500,-15; } }
 410002,head,セブン-イレブンヘッドホン,4,20,,200,,7:11,,0,2074075135,2,512,,100,1131,0,{},{ bonus bHPGainValue,150; bonus bSPGainValue,15; bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; }
@@ -11101,6 +11106,8 @@
 410296,cos,[衣装] 一升瓶,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2491,0,{ /* 240109 */ },{}
 410297,cos,[衣装] 瞬く古龍の瞳,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2492,0,{ /* 240109 */ },{}
 410302,head,ウィズダムコアヘッドフォン,4,20,,100,,0:0,,1,2074075135,2,512,,100,2503,0,{ /*240213*/ },{ bonus bBaseAtk,Baselevel; bonus bMatk,Baselevel; if(equippeditem(311883)) { bonus bSpeedRate,25; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; } }
+410311,cos,[衣装] ゴルゴーンの花冠,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2250,0,{ /* 240402 */ },{}
+410312,cos,[衣装] クローバーのヘアピン,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2515,0,{ /* 240402 */ },{}
 420001,head,[レンタル] 八卦の封呪,4,0,,300,,0:0,,0,2074075135,2,1,,70,1901,0,{},{}
 420004,head,フォックスヘア,4,20,,300,,0:0,,0,2074075135,2,1,,130,1884,0,{},{ bonus2 bAddRace,Rct_Demon,20; bonus2 bMagicAddRace,Rct_Demon,20; bonus2 bResEff,Eff_Blind,10000; }
 420006,head,隷属の首輪,4,20,,300,,0:0,,0,2074075135,2,1,,70,2018,0,{},{ bonus2 bAddSize,Size_Small,4*(readparam(bStr) + readparam(bLuk))/50; bonus2 bAddSize,Size_Medium,4*(readparam(bStr) + readparam(bLuk))/50; bonus2 bAddSize,Size_Big,4*(readparam(bStr) + readparam(bLuk))/50; bonus bPerfectHitAddRate,5*(readparam(bStr) + readparam(bLuk))/50; }
@@ -11282,6 +11289,7 @@
 420319,cos,[衣装] カードボードボックス(下段),4,20,,0,,0:0,,0,2074075135,2,4096,,1,450,0,{ /* 240312 コスたまCyberIII */ },{}
 420320,cos,[衣装] チャームオブラフウィンド,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1263,0,{ /* 240312 コスたまCyberIII */ },{}
 420321,cos,[衣装] ネオンハーフロング,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2508,0,{ /* 240312 コスたまCyberIII */ },{}
+420325,cos,[衣装] もっちりローツイン,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2517,0,{ /* 240402 */ },{}
 436006,cos,[衣装] ルガン変装道具,4,20,,0,,0:0,,0,2074075135,2,6144,,1,2144,0,{},{}
 436007,cos,[衣装] アーウィン防寒帽,4,20,,0,,0:0,,0,2074075135,2,6144,,1,2143,0,{},{}
 436010,cos,[衣装] スパイダリン,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2315,0,{},{}
@@ -11649,6 +11657,9 @@
 480420,cos,[衣装] サイバーライフル,4,20,,0,,0:0,,0,2074075135,2,8192,,1,208,0,{ /* 240312 コスたまCyberIII */ },{}
 480421,cos,[衣装] ディフェンスフィールド,4,20,,0,,0:0,,0,2074075135,2,8192,,1,209,0,{ /* 240312 コスたまCyberIII */ },{}
 480422,cos,[衣装] 電源ケーブル,4,20,,0,,0:0,,0,2074075135,2,8192,,1,210,0,{ /* 240312 コスたまCyberIII */ },{}
+480430,cos,[衣装] ブルーミングスタッフ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,213,0,{ /* 240402 */ },{}
+480431,cos,[衣装] 甘やかな花庭,4,20,,0,,0:0,,0,2074075135,2,8192,,1,214,0,{ /* 240402 */ },{}
+480432,cos,[衣装] グラスローズガーデン,4,20,,0,,0:0,,0,2074075135,2,8192,,1,215,0,{ /* 240402 */ },{}
 490009,acc,磨羯宮のリング,4,20,,100,,0:0,,0,2074075135,2,136,,1,,0,{},{ bonus bFlee2,10; bonus bMaxSP,100; bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddSpCost,"TF_BACKSLIDING",-2; if(Job == Job_ShadowChaser || Job == Job_AbyssChaser) { bonus bAspdAddRate,5; bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus bSkillDelayRate,-30; if(equippeditem(29725)) { bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bAddSkillDamageRate,"SC_TRIANGLESHOT",70; } } }
 490010,acc,処女宮のリング,4,20,,100,,0:0,,0,2074075135,2,136,,1,,0,{},{ bonus bAspdAddRate,5; bonus bMaxSP,100; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddEffMagic,Eff_Stun,1000; if(Job == Job_ArchBishop || Job == Job_Cardinal) { bonus bAspdAddRate,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddCastRate,"AB_JUDEX",-50; if(equippeditem(29725)) { bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bAddCastRate,"AB_JUDEX",-50; } } }
 490013,acc,悪鬼羅刹の指輪,4,20,,100,,0:0,,1,2074075135,2,136,,100,,0,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillCoolDown,2340,-3000; if(getskilllv(2328) == 5){ bonus2 bAddSpCost,2517,-35; bonus2 bAddSpCost,2336,-4; } if(getskilllv(2332) == 5){ bonus2 bAddSkillDamageRate,2517,30; bonus2 bAddSkillDamageRate,2336,100; } if(getskilllv(2518) == 5){ bonus bAspdAddRate,10; bonus bPerfectHitAddRate,15; } } }
