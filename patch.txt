@@ -1,3 +1,15 @@
+20240403	patch0152
+・保留していた(封印された)ヴェルゼブブカード (封印された)堕ちた大神官ヒバムカードと関係アイテムの実装
+
+・封印されたヴェルゼブブカードのitem_cardtype.txtを修正
+
+・メロン系武器のミス修正と最適化
+※活性化率が「かなり出る」という複数の詳細情報を目視確認し物理魔法共に5%に設定(使用感は最適でしたので確定でいいと思います)
+※misceffectは緑の輪で探したけど見つからなかったので緑ポーションのエフェクトで仮設定です
+※魔法攻撃時にshowmessage "豊作☆メロ～～～ン!!"; 表示されませんがスキル名に上書きされるためです
+
+・矢販売NPCの日付を修正(挙動に変化なし)
+
 20240402	patch0151
 ・20240402 アップデート 実装(item_db.* item_db2.* item_memo.*)
 ※accessoryid.* accname.* spriterobeid.* spriterobename.* tb_layer_priority.* transparentitem.* iteminfo.* を各自更新しdata\luafiles514\lua files\[datainfo][transparentitem]同じ階層に配置して下さい
