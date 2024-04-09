@@ -1,4 +1,4 @@
-//item_db.txt Auriga db_override patch1538+add update 20240402
+//item_db.txt Auriga db_override patch1538+add 20240409 アップデート
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript},{UnEquipScript}
 501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,1,,,{ itemheal rand(45,65),0; if(equippeditem(4331) && equippeditem(19018)){ itemheal rand(45,65)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(45,65)*(12/10),0; } },{}
 502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(105,145),0; if(equippeditem(4331) && equippeditem(19018)){ itemheal rand(105,145)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(105,145)*(12/10),0; } },{}
@@ -4393,6 +4393,7 @@
 10573,use,[2022年]特選ネコ缶(カニ)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 1000964,10,1,0,0,0,0,0,0,3715200; },{}
 10574,use,[2022年]ハロウィンチケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 25582,1,1,0,0,0,0,0,0,2419200; },{}
 10575,use,[2023年]特選ネコ缶(カニ)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 1000964,50,1,0,0,0,0,0,0,3715200; },{}
+10576,use,[2024年]特選ネコ缶(カニ)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240409 効果実装済み */ getitem2 1000964,1,1,0,0,0,0,0,0,3715200; },{}
 10598,use,[2020]BitCashチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 782,1; },{}
 10600,use,コスたまRoyal,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 10626,use,コスたまHairCollectionVII(暗色),2,0,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -6087,6 +6088,7 @@
 19436,head,ヴェスパーヘッドギア,4,20,,400,,8:0,,1,2074075135,2,256,,100,1827,1,{ /* セット効果実装済み */ },{ bonus bDex,2; bonus bCastrate,-10; if(getequiprefinerycnt() >= 7) { bonus bCastrate,-10; } if(getequiprefinerycnt() >= 9) { bonus bCastrate,-10; } if(equippeditem(4374)) { bonus2 bIgnoreMDefRace,Rct_Boss,70; bonus2 bAddEleMagicDamageRate,Ele_Neutral,30; bonus2 bAddEleMagicDamageRate,Ele_Holy,30; } if(equippeditem(300395)) { bonus2 bIgnoreMDefRace,Rct_Boss,35; bonus2 bAddEleMagicDamageRate,Ele_Neutral,15; bonus2 bAddEleMagicDamageRate,Ele_Holy,15; } if(equippeditem(4145)){ bonus bCastrate,30; } if(equippeditem(311071)){ bonus bCastrate,10; } }
 19437,head,リトルガーデン,4,20,,100,,0:0,,0,2074075135,2,512,,100,1830,0,{},{ bonus bBaseAtk,40; bonus bAddCriticalDamage,5; if(readparam(bLuk) >= 90) { bonus bAddCriticalDamage,10; } if(readparam(bLuk) >= 125) { bonus bAddCriticalDamage,20; } }
 19438,head,炎雷魔女の首飾り,4,20,,100,,0:0,,0,2074075135,2,1,,70,1831,0,{},{ bonus bSpeedRate,25; bonus bSkillDelayRate,-5; }
+19439,head,思念のオーラ,4,20,,100,,0:0,,0,2074075008,2,1,,200,1267,0,{ /* 240409 セット効果実装済み */ },{ bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus bNoCastCancel,0; if(equippeditem(312417)) { bonus2 bAddSize,Size_Small,15; bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Big,15; bonus2 bMagicAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Medium,15; bonus2 bMagicAddSize,Size_Big,15; } }
 19440,head,アリエスダイアデム,4,20,,400,,200:0,,1,2074075135,2,256,,80,531,1,{ /* セット効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,6; bonus2 bAddRace,Rct_NonBoss,6; if(equippeditem(29608)){ bonus bAspdAddRate,10; bonus bAddLongWeaponDamage,10; } }
 19441,head,カプリコーンクラウン,4,20,,400,,7:0,,1,2074075135,2,256,,80,621,1,{ /* セット効果実装済み */ },{ bonus bFlee,20; bonus2 bAddRace,Rct_Boss,6; bonus2 bAddRace,Rct_NonBoss,6; if(equippeditem(29609)){ bonus bDex,8; bonus bSPGainValue,20; } }
 19442,head,パイシーズクラウン,4,20,,400,,7:0,,1,2074075135,2,256,,80,512,1,{ /* セット効果実装済み */ },{ bonus2 bMagicAddRace,Rct_Boss,7; bonus2 bMagicAddRace,Rct_NonBoss,7; bonus2 bFixCastrate,-50,0; if(equippeditem(29610)){ bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus bCastrate,-20; } }
@@ -9887,6 +9889,7 @@
 102847,heal,レイジーの心を奪った教皇クッキー,0,20,,10,,,,,2074075135,2,,,200,,,{ /* 240206 */ percentheal 100,100; },{ /* EFST_SWEETSFAIR_ATK */ }
 102848,heal,エレナ爆推しの芳烈ポップコーン,0,20,,10,,,,,2074075135,2,,,200,,,{ /* 240206 */ percentheal 100,100; },{ /* EFST_SWEETSFAIR_ATK */ }
 102849,heal,エストが愛飲する炭酸ベリージュース,0,20,,10,,,,,2074075135,2,,,200,,,{ /* 240206 */ percentheal 100,100; },{ /* EFST_SWEETSFAIR_ATK */ }
+102983,use,エンハンスキューブII(雪花),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 240409 openupgrade 精錬値が変化 */ },{}
 200007,use,シャドウチェイサーVIPチケットの箱 [転生シーフ(ローグ)系専用],2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 1000028,1; },{}
 200008,use,シャドウチェイサーソウルの箱 [転生シーフ(ローグ)系専用],2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 1000029,1; },{}
 200009,use,コスたまMonstersVII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -10016,6 +10019,8 @@
 200358,use,[2024]復刻コスたま引換券(Season1)11個の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 1001192,11,1,0,0,0,0,0,0,7948800; },{}
 200365,use,コスたまCuteIII,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240206 */ /* コスたまCuteIII */ },{}
 200373,use,コスたまCyberIII,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240312 */ },{ /* 480419 480420 420321 480421 480422 31849 410121 420319 420320 400607 */ }
+200380,use,イスガルドチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 240409 効果実装済み */ getitem 1001681,1; },{}
+200381,use,エンハンスキューブII(雪花)の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 240409 効果実装済み */ getitem 102983,1; },{}
 200384,use,コスたまFlowerGardenIV,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240402 */ },{ /* 19800 400633 400634 400635 410311 410312 420325 480430 480431 480432 */ }
 300001,card,ポイゾナスカード,6,20,,10,,,,,,,769,,,,,{},{ bonus bVit,1; bonus2 bResEff,Eff_Poison,10000; }
 300002,card,トキシャスカード,6,20,,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; skill "ASC_EDP",1; }
@@ -10188,6 +10193,10 @@
 300260,card,変異キメラナペオカード,6,20,,10,,,,,,,16,,,,,{},{ bonus2 bSubEle,Ele_Wind,5; bonus2 bResEff,Eff_Silence,10000; }
 300261,card,変異キメラガレンシスカード,6,20,,10,,,,,,,769,,,,,{},{ skill "MO_TRIPLEATTACK",getequiprefinerycnt(); }
 300262,card,変異キメラ・ザ・ワンカード,6,20,,10,,,,,,,16,,,,,{},{ bonus2 bAddRace,Rct_Formless,40; bonus2 bAddRace,Rct_Dragon,40; bonus2 bAddEle,Ele_Fire,40; bonus2 bAddEle,Ele_Poison,40; if(equippeditem(311883)){ bonus bMaxHPrate,50; skill "GC_VENOMIMPRESS",3; } }
+300263,card,レッケンベル警備兵カード,6,20,,10,,,,,,,769,,,,,{ /* 240409 効果実装済み */ },{ bonus bAddShortWeaponDamage,5; }
+300264,card,レッケンベル警備兵長カード,6,20,,10,,,,,,,136,,,,,{ /* 240409 効果実装済み */ },{ bonus bPerfectHitAddRate,10; }
+300265,card,レゲンシュルム科学者カード,6,20,,10,,,,,,,136,,,,,{ /* 240409 効果実装済み */ },{ bonus bSkillDelayRate,-5; }
+300266,card,無名のソードマンカード,6,20,,10,,,,,,,4,,,,,{ /* 240409 固定詠唱 +n秒 */ },{ bonus2 bAddEleMagicDamageRate,Ele_Fire,50; bonus2 bSubEle,Ele_Fire,70; if(equippeditem(29724)) { bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; } }
 300267,card,クロウバロンカード,6,20,,10,,,,,,,136,,,,,{},{ skill "HW_MAGICPOWER",1; if(equippeditem(300268)){ bonus2 bAddSkillDamageRate,"MG_FIREBOLT",50; bonus2 bAddSkillDamageRate,"MG_LIGHTNINGBOLT",50; bonus2 bAddSkillDamageRate,"MG_LIGHTNINGBOLT",50; } }
 300268,card,クロウデュークカード,6,20,,10,,,,,,,136,,,,,{},{ bonus2 bAddCastRate,"PF_DOUBLECASTING",-100; }
 300269,card,エルディストカード,6,20,,10,,,,,,,2,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Fire,getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddEleMagicDamageRate,Ele_Fire,10; } }
@@ -12484,6 +12493,9 @@
 1001612,item,アルナベルツ産ラブリー卵,3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
 1001613,item,ゴールデンラッシュコーン,3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
 1001614,item,朝摘み完熟シャインベリー,3,20,,10,,,,,,,,,,,,{ /* 240206 */ /* バレンタインイベント */ },{}
+1001681,item,イスガルドチケット,3,0,,0,,,,,,,,,,,,{ /* 240409 効果実装済み */ },{}
+1001682,item,レベルアップチケット(BaseLv230),3,0,,0,,,,,,,,,,,,{ /* 240409 効果実装済み */ },{}
+1001683,item,クエストスキップチケット(説話の地),3,0,,0,,,,,,,,,,,,{ /* 240409 効果実装済み */ },{}
 1100006,heal,干しアイスフナムシ,0,20,,20,,,,,2074075135,2,,,201,,,{ itemheal 1100,65; },{}
 1100009,heal,トロピカル豚丼,0,20,,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_SAVAGE_STEAK,500000,20; },{}
 1100010,heal,ポリンコンブチャ,0,20,,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_SAVAGE_STEAK,500000,1; sc_start SC_MDEX,500000,10; },{}
