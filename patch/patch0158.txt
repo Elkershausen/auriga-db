@@ -1,0 +1,12 @@
+ワープポータルのメモが取れないマップフラグを2015年のアップデートにあわせて撤去(mapflag.*)
+glast_01.gat	mapflag	nomemo	dummy　他多数
+※グラストヘイム古城は過去にフラグが追加されましたがMDの実装などの環境の変化で再度撤去です
+
+メモリアルダンジョンに死亡ペナルティ無効のマップフラグ追加(mapflag_memorial.*)
+1@tower.gat	mapflag	nopenalty	dummy　他多数
+※現在の常設メモリアルダンジョンは全部死亡ペナルティがないものと解釈していい
+
+未実装のメモリアルダンジョンをリスト化(mapflag_memorial.)
+
+ペット系NPCに[不審なボトル]販売項目に追加(npc_town_payon.* npc_town_izlude.* npc_town_lighthalzen.* npc_town_geffen.* npc_town_morocc.* npc_town_yuno.*)
+※不要な情報を削除しアップデート情報を記述するようにしました
