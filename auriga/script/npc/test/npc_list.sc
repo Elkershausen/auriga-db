@@ -1,4 +1,4 @@
-//20240319 update
+//20240409 update
 //NPC一覧
 //ローカル環境で使えないものはコメントアウト
 moc_fild07.gat,155,245,4	script	45	45,{}
@@ -3054,3 +3054,54 @@ moc_fild17.gat,325,261,4	script	23230	23230,{}
 moc_fild17.gat,325,258,4	script	23231	23231,{}
 moc_fild17.gat,325,255,4	script	23232	23232,{}
 moc_fild17.gat,325,252,4	script	23235	23235,{}
+//生体工学研究所の記録（4thモード）240409
+moc_fild17.gat,325,249,4	script	23243	23243,{}
+moc_fild17.gat,325,246,4	script	23244	23244,{}
+moc_fild17.gat,325,243,4	script	23246	23246,{}
+moc_fild17.gat,325,240,4	script	23255	23255,{}
+moc_fild17.gat,325,237,4	script	23245	23245,{}
+moc_fild17.gat,325,234,4	script	23249	23249,{}
+moc_fild17.gat,325,231,4	script	23250	23250,{}
+moc_fild17.gat,325,228,4	script	23251	23251,{}
+moc_fild17.gat,325,225,4	script	23253	23253,{}
+moc_fild17.gat,325,222,4	script	23247	23247,{}
+moc_fild17.gat,325,219,4	script	23254	23254,{}
+moc_fild17.gat,325,216,4	script	23248	23248,{}
+moc_fild17.gat,325,213,4	script	23252	23252,{}
+moc_fild17.gat,325,210,4	script	23256	23256,{}
+moc_fild17.gat,325,207,4	script	23257	23257,{}
+moc_fild17.gat,325,204,4	script	23258	23258,{}
+moc_fild17.gat,325,201,4	script	23259	23259,{}
+moc_fild17.gat,325,198,4	script	23260	23260,{}
+moc_fild17.gat,325,195,4	script	23261	23261,{}
+moc_fild17.gat,325,192,4	script	23262	23262,{}
+moc_fild17.gat,330,330,4	script	23263	23263,{}
+moc_fild17.gat,330,327,4	script	23264	23264,{}
+moc_fild17.gat,330,324,4	script	23265	23265,{}
+moc_fild17.gat,330,321,4	script	23266	23266,{}
+moc_fild17.gat,330,318,4	script	23267	23267,{}
+moc_fild17.gat,330,315,4	script	23268	23268,{}
+moc_fild17.gat,330,312,4	script	23269	23269,{}
+moc_fild17.gat,330,309,4	script	23270	23270,{}
+moc_fild17.gat,330,306,4	script	23271	23271,{}
+moc_fild17.gat,330,303,4	script	23272	23272,{}
+moc_fild17.gat,330,300,4	script	23273	23273,{}
+moc_fild17.gat,330,297,4	script	23274	23274,{}
+moc_fild17.gat,330,294,4	script	23275	23275,{}
+moc_fild17.gat,330,291,4	script	23276	23276,{}
+moc_fild17.gat,330,288,4	script	23277	23277,{}
+moc_fild17.gat,330,285,4	script	23278	23278,{}
+moc_fild17.gat,330,282,4	script	23279	23279,{}
+moc_fild17.gat,330,279,4	script	23280	23280,{}
+moc_fild17.gat,330,276,4	script	23281	23281,{}
+moc_fild17.gat,330,273,4	script	23282	23282,{}
+moc_fild17.gat,330,270,4	script	23283	23283,{}
+moc_fild17.gat,330,267,4	script	23284	23284,{}
+moc_fild17.gat,330,264,4	script	23285	23285,{}
+moc_fild17.gat,330,261,4	script	23286	23286,{}
+moc_fild17.gat,330,258,4	script	23287	23287,{}
+moc_fild17.gat,330,255,4	script	23288	23288,{}
+moc_fild17.gat,330,252,4	script	23289	23289,{}
+moc_fild17.gat,330,249,4	script	23290	23290,{}
+moc_fild17.gat,330,246,4	script	23291	23291,{}
+moc_fild17.gat,330,243,4	script	23292	23292,{}
