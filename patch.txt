@@ -1,3 +1,8 @@
+20240417	patch0163
+・20240416 アップデート分実装(item_db.* item_db2.* item_cartype.* item_memo.* classnum_db.*)
+
+・アクセサリで(1)(2)の装備指定があるもので左右間違っていたのがあるので修正
+
 20240415	patch0162
 ・bonus4 bAutoSpell の条件にNOSPオプションを付けなかったのを修正
 ※オートスペルはSPを消費しないという解釈がbonus4 bAutoSpellにも適用されていると思い込んだのが原因です

@@ -1,8 +1,204 @@
 ※実装困難なもの/セット効果/系列アイテム/効果の追加変更の可能性のあるもの/実装に注意するもの/202400402以降に実装されるアイテムを実装日単位で記述
+//20240416 アップデート
+7925,item,時間のエッセンス,3,20,,1,,,,,,,,,,,,{ /* 240416 効果実装済み */ },{}
+19474,head,時間のサークレット(ドラゴンナイト),4,20,,500,,10:0,,1,128,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddFixCastRate,"RK_STONEHARDSKIN",-100; bonus2 bAddFixCastRate,"RK_REFRESH",-100; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"DK_HACKANDSLASHER",Baselevel/10; bonus2 bAddSkillDamageRate,"DK_MADNESS_CRUSHER",Baselevel/10; bonus2 bAddSkillDamageRate,"DK_DRAGONIC_AURA",Baselevel/10; } }
+19475,head,時間のサークレット(インペリアルガード),4,20,,500,,10:0,,1,16384,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddFixCastRate,"LG_INSPIRATION",-100; bonus2 bAddFixCastRate,"LG_PRESTIGE",-100; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"IG_OVERSLASH",Baselevel/10; bonus2 bAddSkillDamageRate,"IG_GRAND_JUDGEMENT",Baselevel/10; bonus2 bAddSkillDamageRate,"IG_SHIELD_SHOOTING",Baselevel/10; } }
+19476,head,時間のサークレット(マイスター),4,20,,500,,10:0,,1,1024,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; if(equippeditem(490336) == 0) { bonus2 bAddSkillCastTime,"NC_NEUTRALBARRIER",-5000; } } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"MT_SPARK_BLASTER",Baselevel/10; bonus2 bAddSkillDamageRate,"MT_TRIPLE_LASER",Baselevel/10; } }
+19477,head,時間のサークレット(バイオロ),4,20,,500,,10:0,,1,262144,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddSkillCoolDown,"GN_CART_TORNADO",-200; bonus2 bAddSkillCoolDown,"GN_DEMONIC_FIRE",-5000; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_FIRE",Baselevel/10; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_WATER",Baselevel/10; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_WIND",Baselevel/10; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_GROUND",Baselevel/10; } }
+19478,head,時間のサークレット(シャドウクロス),4,20,,500,,10:0,,1,4096,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddSkillCoolDown,"GC_DARKILLUSION",-2000; bonus2 bAddSkillCoolDown,"GC_DARKCROW",-60000; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"SHC_DANCING_KNIFE",Baselevel/10; bonus2 bAddSkillDamageRate,"SHC_SHADOW_STAB",Baselevel/10; bonus2 bAddSkillDamageRate,"SHC_ETERNAL_SLASH",Baselevel/10; } }
+19479,head,時間のサークレット(アビスチェイサー),4,20,,500,,10:0,,1,131072,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus4 bAutoActiveSkill,"SC_TRIANGLESHOT",19478,100,1; if(checkactiveitem()) { misceffect 220,""; bonus2 bEternalStatusChange,SC_UNLIMIT,20000; sc_start SC_UNLIMIT,20000,1; } } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"ABC_CHAIN_REACTION_SHOT",Baselevel/10; bonus2 bAddSkillDamageRate,"ABC_FRENZY_SHOT",Baselevel/10; } },{ sc_end SC_UNLIMIT; }
+19480,head,時間のサークレット(カーディナル),4,20,,500,,10:0,,1,256,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddSkillCoolDown,"AB_ORATIO",-1500; bonus2 bAddFixCastRate,"AB_ORATIO",-100; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"CD_ARBITRIUM",Baselevel/10; bonus2 bAddSkillDamageRate,"CD_PNEUMATICUS_PROCELLA",Baselevel/10; bonus2 bAddSkillDamageRate,"CD_FRAMEN",Baselevel/10; } }
+19481,head,時間のサークレット(インクイジター),4,20,,500,,10:0,,1,32768,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; if((equippeditem(450097) == 0) && (equippeditem(490206) == 0)) { bonus2 bAddSkillCoolDown,"SR_RAISINGDRAGON",-25000; } } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"IQ_MASSIVE_F_BLASTER",Baselevel/10; bonus2 bAddSkillDamageRate,"IQ_OLEUM_SANCTUM",Baselevel/10; bonus2 bAddSkillDamageRate,"IQ_EXPOSION_BLASTER",Baselevel/10; } }
+19482,head,時間のサークレット(アークメイジ),4,20,,500,,10:0,,1,512,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddFixCastRate,"WL_TELEKINESIS_INTENSE",-100; bonus2 bAddSkillCoolDown,"WL_TELEKINESIS_INTENSE",-185000; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"AG_CRIMSON_ARROW",Baselevel/10; bonus2 bAddSkillDamageRate,"AG_FROZEN_SLASH",Baselevel/10; bonus2 bAddSkillDamageRate,"AG_STORM_CANNON",Baselevel/10; bonus2 bAddSkillDamageRate,"AG_ROCK_DOWN",Baselevel/10; } },{ sc_end SC_TELEKINESIS_INTENSE; }
+19483,head,時間のサークレット(エレメンタルマスター),4,20,,500,,10:0,,1,65536,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddFixCastRate,"SO_SUMMON_AGNI",-100; bonus2 bAddFixCastRate,"SO_SUMMON_AQUA",-100; bonus2 bAddFixCastRate,"SO_SUMMON_VENTUS",-100; bonus2 bAddFixCastRate,"SO_SUMMON_TERA",-100; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"EM_CONFLAGRATION",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_DIAMOND_STORM",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_LIGHTNING_LAND",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_TERRA_DRIVE",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_VENOM_SWAMP",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_ELEMENTAL_BUSTER",Baselevel/10; } }
+19484,head,時間のサークレット(ウィンドホーク),4,20,,500,,10:0,,1,2048,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddFixCastRate,"RA_UNLIMIT",100; bonus2 bAddSkillCoolDown,"RA_UNLIMIT",-240000; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"WH_CRESCIVE_BOLT",Baselevel/10; bonus2 bAddSkillDamageRate,"WH_GALESTORM",Baselevel/10; } },{ sc_end SC_UNLIMIT; }
+19485,head,時間のサークレット(トルバドゥール&トルヴェール),4,20,,500,,10:0,,1,1572864,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; skill "DC_DANCINGLESSON",getskilllv("BA_MUSICALLESSON"); skill "BA_MUSICALLESSON",getskilllv("DC_DANCINGLESSON"); skill "DC_FORTUNEKISS",getskilllv("BA_POEMBRAGI"); skill "BA_POEMBRAGI",getskilllv("DC_FORTUNEKISS"); } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"TR_RHYTHMSHOOTING",Baselevel/10; bonus2 bAddSkillDamageRate,"TR_ROSEBLOSSOM",Baselevel/10; } }
+19486,head,時間のサークレット(天帝),4,20,,500,,10:0,,1,33554432,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddSkillDamageRate,"SG_SUN_WARM",300; bonus2 bAddSkillDamageRate,"SG_MOON_WARM",300; bonus2 bAddSkillDamageRate,"SG_STAR_WARM",300; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"SKE_TWINKLING_GALAXY",Baselevel/10; bonus2 bAddSkillDamageRate,"SKE_STAR_BURST",Baselevel/10; bonus2 bAddSkillDamageRate,"SKE_STAR_CANNON",Baselevel/10; } }
+19487,head,時間のサークレット(ソウルアセティック),4,20,,500,,10:0,,1,134217728,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddFixCastRate,"SP_SOULSHADOW",-100; bonus2 bAddFixCastRate,"SP_SOULGOLEM",-100; bonus2 bAddFixCastRate,"SP_SOULFALCON",-100; bonus2 bAddFixCastRate,"SP_SOULFAIRY",-100; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLUE_DRAGON",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_WHITE_TIGER",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_RED_PHOENIX",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLACK_TORTOISE",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",Baselevel/10; } }
+19488,head,時間のサークレット(ナイトウォッチ),4,20,,500,,10:0,,1,268435456,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddSkillCoolDown,"RL_HEAT_BARREL",-80000; bonus2 bAddSkillCoolDown,"RL_RICHS_COIN",-3000; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",Baselevel/10; bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",Baselevel/10; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",Baselevel/10; } }
+19489,head,時間のサークレット(蜃気楼&不知火),4,20,,500,,10:0,,1,536870912,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddSkillCoolDown,"KO_IZAYOI",-30000; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"SS_KAGEGARI",Baselevel/10; bonus2 bAddSkillDamageRate,"SS_KAGENOMAI",Baselevel/10; bonus2 bAddSkillDamageRate,"SS_KAGEGISSEN",Baselevel/10; bonus2 bAddSkillDamageRate,"SS_KAGEAKUMU",Baselevel/10; } }
+19491,head,時間のサークレット(ハイパーノービス),4,20,,500,,10:0,,1,8388608,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; if(equippeditem(450125) == 0) { bonus2 bAddSkillCoolDown,"NV_HELPANGEL",-240000; } } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"HN_JUPITEL_THUNDER_STORM",Baselevel/10; bonus2 bAddSkillDamageRate,"HN_HELLS_DRIVE",Baselevel/10; bonus2 bAddSkillDamageRate,"HN_NAPALM_VULCAN_STRIKE",Baselevel/10; } }
+19492,head,時間のサークレット(スピリットハンドラー),4,20,,500,,10:0,,1,1073741824,2,256,,200,1892,1,{ /* 240416 4次職 */ },{ bonus bUnbreakableHelm,0; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt()>= 7) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bAddFixCastRate,"SU_CN_POWDERING",-100; bonus2 bAddFixCastRate,"SU_NYANGGRASS",-100; } if(getequiprefinerycnt()>= 9) { bonus bAllStatus,10; bonus2 bAddSkillDamageRate,"SH_HYUN_ROK_CANNON",Baselevel/10; bonus2 bAddSkillDamageRate,"SH_HYUN_ROK_CANNON",Baselevel/10; } }
+25591,item,呪いに汚染された欠片,3,20,,0,,,,,,,,,,,,{ /* 240416 効果実装済み */ },{}
+25864,item,封印された時間のサークレット,3,20,,10,,,,,,,,,,,,{ /* 240416 効果実装済み */ },{}
+25865,item,時間の宝石,3,20,,1,,,,,,,,,,,,{ /* 240416 効果実装済み */ },{}
+312930,ench,潜在解放(アビスチェイサーV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"ABC_CHAIN_REACTION_SHOT",-200; } }
+312931,ench,潜在解放(アビスチェイサーVI),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"ABC_FRENZY_SHOT",-200; } }
+312933,ench,潜在解放(インクイジターIV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"IQ_MASSIVE_F_BLASTER",-100;} }
+312936,ench,潜在解放(インペリアルガードV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"IG_SHIELD_SHOOTING",-200; } }
+312937,ench,潜在解放(インペリアルガードVI),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"IG_JUDGEMENT_CROSS",-200; } }
+312942,ench,潜在解放(エレメンタルマスターV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"EM_CONFLAGRATION",-500; bonus2 bAddSkillCoolDown,"EM_LIGHTNING_LAND",-500; } }
+312947,ench,潜在解放(シャドウクロスIV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SHC_SHADOW_STAB",-500; } }
+312948,ench,潜在解放(シャドウクロスV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SHC_IMPACT_CRATER",-200; } }
+312949,ench,潜在解放(ドラゴンナイトV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"DK_DRAGONIC_AURA",-300; } }
+312952,ench,潜在解放(トルバドゥール&トルヴェールIII),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"TR_RHYTHMSHOOTING",-100; } }
+312962,ench,潜在解放(ハイパーノービスIV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"HN_JUPITEL_THUNDER_STORM",-300; } }
+312965,ench,潜在解放(天帝IV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29509)) { bonus3 bAutoActiveWeapon,312965,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSkillDamageRate,"SKE_STAR_BURST",300; } } }
+312968,ench,潜在解放(ソウルアセティックIV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SOA_TALISMAN_OF_BLUE_DRAGON",-200; bonus2 bAddSkillCoolDown,"SOA_TALISMAN_OF_WHITE_TIGER",-200; bonus2 bAddSkillCoolDown,"SOA_TALISMAN_OF_RED_PHOENIX",-200; bonus2 bAddSkillCoolDown,"SOA_TALISMAN_OF_BLACK_TORTOISE",-200; } }
+312979,ench,潜在解放(スピリットハンドラーV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SH_HYUN_ROK_CANNON",-200; } }
+313269,ench,潜在解放(アビスチェイサーVII),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"ABC_ABYSS_DAGGER",-100; bonus2 bAddSkillCoolDown,"ABC_DEFT_STAB",-100; } }
+313273,ench,潜在解放(ハイパーノービスV),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"HN_DOUBLEBOWLINGBASH",-100; bonus2 bAddSkillCoolDown,"HN_MEGA_SONIC_BLOW",-100; } }
+313274,ench,潜在解放(ハイパーノービスVI),6,,,,,,,,,,65535,,,,,{ /* 240416 4次職 */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"HN_HELLS_DRIVE",-300; } }
+313289,ench,潜在覚醒(デュプレライトI),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MELEE",2*Baselevel; bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MAGIC",2*Baselevel; if(equippeditem(29509)) { bonus2 bAddFixCastRate,"AB_DUPLELIGHT",-100; } }
+313290,ench,潜在覚醒(カウンタースラッシュI),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",Baselevel/10; if(equippeditem(29509)) { bonus3 bAutoActiveWeapon,313290,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"GC_COUNTERSLASH",-31; } } }
+313292,ench,潜在覚醒(ローリングカッターII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",Baselevel/2; if(equippeditem(29509)) { bonus4 bSkillAutoSpell,"GC_ROLLINGCUTTER","AB_ORATIO",5,100; } }
+313293,ench,潜在覚醒(十文字斬りII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"KO_JYUMONJIKIRI",Baselevel/3; if(equippeditem(29509)) { bonus3 bAutoActiveMagic,312293,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"KO_JYUMONJIKIRI",-45; } } }
+313294,ench,潜在覚醒(風魔手裏剣 -乱華-II),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"KO_HUUMARANKA",Baselevel/4; if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"KO_HUUMARANKA",-300; } }
+313295,ench,潜在覚醒(シールドプレスII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"LG_SHIELDPRESS",Baselevel/2; if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"LG_SHIELDPRESS",-2000; } }
+313296,ench,潜在覚醒(レイオブジェネシスII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"LG_RAYOFGENESIS",Baselevel/3; if(equippeditem(29371)) { bonus3 bAutoActiveMagic,313296,100,3000; if(checkactiveitem()) { misceffect 220,""; bonus4 bSkillAutoSelfSpell,"LG_RAYOFGENESIS","AB_HIGHNESSHEAL",3,10000; } } }
+313297,ench,潜在覚醒(シビアレインストームIII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WM_SEVERE_RAINSTORM",Baselevel/3; if(equippeditem(29509)) { if(Job == (Job_Trouvere || Job_Troubadour)) { skill "RA_UNLIMIT",5; } } },{ sc_end SC_UNLIMIT; }
+313298,ench,潜在覚醒(アームズキャノンII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"NC_ARMSCANNON",Baselevel5; if(equippeditem(29509)) { bonus3 bAutoActiveMagic,313298,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"NC_ARMSCANNON",-59; } } }
+313299,ench,潜在覚醒(アックストルネードII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"NC_AXETORNADO",Baselevel/2; if(equippeditem(29509)) { bonus3 bAutoActiveWeapon,313299,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"NC_AXETORNADO",-25; } } }
+313300,ench,潜在覚醒(アックスブーメランII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"NC_AXEBOOMERANG",Baselevel/2; if(equippeditem(29509)) { bonus3 bAutoActiveWeapon,313300,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"NC_AXEBOOMERANG",-25; } } }
+313301,ench,潜在覚醒(アローストームIII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RA_ARROWSTORM",Baselevel/10; if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"RA_UNLIMIT",-60000; } },{ sc_end SC_UNLIMIT; }
+313302,ench,潜在覚醒(エイムドボルトII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RA_AIMEDBOLT",Baselevel/10; if(equippeditem(29509)) { bonus2 bAddFixCastRate,"RA_AIMEDBOLT",-100; } }
+313303,ench,潜在覚醒(イグニッションブレイクIII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",Baselevel/2; if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"RK_IGNITIONBREAK",-200; } }
+313304,ench,潜在覚醒(スラッグショットI),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",Baselevel/3; if(equippeditem(29509)) { if(equippeditem(29647) == 0) { bonus2 bAddSkillCoolDown,"RL_SLUGSHOT",-10000; } } }
+313305,ench,潜在覚醒(ハンマーオブゴッドI),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",Baselevel/3; if(equippeditem(29509)) { bonus4 bSkillAutoSelfSpell,"RL_HAMMER_OF_GOD","RL_RICHS_COIN",1,10000; } }
+313306,ench,潜在覚醒(アンチマテリアルブラストI),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RL_AM_BLAST",Baselevel/3; if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"RL_AM_BLAST",-5000; } }
+313307,ench,潜在覚醒(ラウンドトリップII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RL_R_TRIP",Baselevel/2; if(equippeditem(29509)) { bonus3 bAutoActiveWeapon,313307,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"RL_R_TRIP",-19; } } }
+313308,ench,潜在覚醒(ファイアーレインII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RL_FIRE_RAIN",Baselevel/2; if(equippeditem(29509)) { bonus3 bAutoActiveWeapon,313308,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"RL_FIRE_RAIN",-19; } } }
+313309,ench,潜在覚醒(トライアングルショットII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SC_TRIANGLESHOT",Baselevel/3; if(equippeditem(29509)) { if(Job == Job_AbyssChaser) { skill "RA_UNLIMIT",5; } } },{ if(equippeditem(29509)) { if(Job == Job_AbyssChaser) { sc_end SC_UNLIMIT; } } }
+313310,ench,潜在覚醒(ヴェラチュールスピアーII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SO_VARETYR_SPEAR",Baselevel/3; if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SO_VARETYR_SPEAR",-1000; } }
+313311,ench,潜在覚醒(ダイヤモンドダストI),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",Baselevel/3; if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SO_DIAMONDDUST",-1000; } }
+313312,ench,潜在覚醒(アースグレイヴI),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SO_EARTHGRAVE",Baselevel/3; if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SO_EARTHGRAVE",-1000; } }
+313313,ench,潜在覚醒(エスパII),6,,,,,,,,,,65535,,,,,{ /* 240416 ソウルリーパー */ },{ bonus2 bAddSkillDamageRate,"SP_SPA",Baselevel/5; if(equippeditem(29371)) { bonus3 bAutoActiveMagic,313313,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"SP_SPA",-29; } } }
+313314,ench,潜在覚醒(エスフI),6,,,,,,,,,,65535,,,,,{ /* 240416 ソウルリーパー */ },{ bonus2 bAddSkillDamageRate,"SP_SWHOO",Baselevel/5; if(equippeditem(29371)) { bonus3 bAutoActiveMagic,313314,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"SP_SWHOO",-119; } } }
+313315,ench,潜在覚醒(死霊爆発II),6,,,,,,,,,,65535,,,,,{ /* 240416 ソウルリーパー */ },{ bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",Baselevel/5; if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SP_CURSEEXPLOSION",-5000; } }
+313316,ench,潜在覚醒(獅子吼III),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SR_HOWLINGOFLION",Baselevel/3; if(equippeditem(29509)) { bonus3 bAutoActiveWeapon,313316,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"SR_HOWLINGOFLION",-119; } } }
+313317,ench,潜在覚醒(天羅地網II),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SR_SKYNETBLOW",Baselevel/2; if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SR_SKYNETBLOW",-200; } }
+313318,ench,潜在覚醒(ソウルエクスパンションII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WL_SOULEXPANSION",Baselevel/5; if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"WL_TELEKINESIS_INTENSE",-75000; } },{ sc_end SC_TELEKINESIS_INTENSE; }
+313319,ench,潜在覚醒(クリムゾンロックII),6,,,,,,,,,,65535,,,,,{ /* 240416 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WL_CRIMSONROCK",Baselevel/5; if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"WL_CRIMSONROCK",-2000; } }
+400644,head,霊道冠,4,20,,500,,10:0,,1,2074075008,2,256,,200,2519,1,{ /* 240416 4次職 */ },{ /*bonus bSpl,3+getequiprefinerycnt();*/ bonus2 bSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLUE_DRAGON",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_WHITE_TIGER",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_RED_PHOENIX",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLACK_TORTOISE",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",Baselevel/10; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",Baselevel/10; if(getequiprefinerycnt() >= 10) { bonus bSkillDelayRate,-20; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+400645,head,ガーデンオブヘヴン,4,20,,500,,10:0,,1,2074075008,2,256,,200,2521,1,{ /* 240416 4次職 */ },{ /*bonus bSpl,3+getequiprefinerycnt();*/ bonus2 bSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"EM_CONFLAGRATION",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_DIAMOND_STORM",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_LIGHTNING_LAND",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_TERRA_DRIVE",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_VENOM_SWAMP",Baselevel/10; bonus2 bAddSkillDamageRate,"EM_ELEMENTAL_BUSTER",Baselevel/10; if(getequiprefinerycnt() >= 10) { bonus bSkillDelayRate,-20; bonus2 bIgnoreMdefRace,Rct_Boss,50; bonus2 bIgnoreMdefRace,Rct_NonBoss,50; } }
+470274,shoes,ツインヘッド・ドラゴンブーツ,4,20,,400,,12:10,,1,2074075135,2,64,,100,,1,{ /* 240416 効果実装済み */ },{ bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus bMaxHPrate,4*getskilllv("RK_DRAGONBREATH_WATER"); bonus bMaxSPrate,4*getskilllv("RK_DRAGONBREATH_WATER"); bonus2 bAddSkillDamageRate,"RK_DRAGONBREATH_WATER",10*getskilllv("RK_DRAGONBREATH_WATER"); if(getskilllv("RK_DRAGONHOWLING") >= 5) { bonus bSpeedRate,25; } bonus bAddLongWeaponDamage,4*getskilllv("RK_DRAGONBREATH"); bonus2 bAddSkillDamageRate,"RK_DRAGONBREATH",10*getskilllv("RK_DRAGONBREATH"); if(getequiprefinerycnt() >= 5) { bonus bAllStatus,15; bonus bSkillDelayRate,-10; } if(getequiprefinerycnt() >= 7) { bonus bAllStatus,15; bonus bSkillDelayRate,-10; } }
+490544,acc,オーバードライブランページ,4,20,,100,,0:0,,0,2074075135,2,128,,200,,0,{ /* 240416 効果実装済み */ },{ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSize,Size_Small,15; bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Big,15; bonus2 bMagicAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Medium,15; bonus2 bMagicAddSize,Size_Big,15; bonus2 bAddRace,Rct_Boss,Baselevel/5; bonus2 bAddRace,Rct_NonBoss,Baselevel/5; bonus2 bMagicAddRace,Rct_Boss,Baselevel/5; bonus2 bMagicAddRace,Rct_NonBoss,Baselevel/5; if(equippeditem(311890)) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; bonus4 bAutoActiveItem,490544,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC|EAS_NORMAL; if(checkactiveitem()) { misceffect 220,""; sc_end SC_REBOUND; } } },{ sc_end SC_REBOUND; } } }
+490545,acc,オーバードライブランページ,4,20,,100,,0:0,,1,2074075135,2,128,,200,,0,{ /* 240416 効果実装済み */ },{ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSize,Size_Small,15; bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Big,15; bonus2 bMagicAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Medium,15; bonus2 bMagicAddSize,Size_Big,15; bonus2 bAddRace,Rct_Boss,Baselevel/5; bonus2 bAddRace,Rct_NonBoss,Baselevel/5; bonus2 bMagicAddRace,Rct_Boss,Baselevel/5; bonus2 bMagicAddRace,Rct_NonBoss,Baselevel/5; if(equippeditem(311890)) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; bonus4 bAutoActiveItem,490545,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC|EAS_NORMAL; if(checkactiveitem()) { misceffect 220,""; sc_end SC_REBOUND; } } },{ sc_end SC_REBOUND; } } }
 
-//==============================================================//
+7925,0,0,1,0,0,1,1,0,0,0,0,0	//NPC・倉庫	//時間のエッセンス
+19474,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(ドラゴンナイト)
+19475,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(インペリアルガード)
+19476,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(マイスター)
+19477,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(バイオロ)
+19478,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(シャドウクロス)
+19479,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(アビスチェイサー)
+19480,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(カーディナル)
+19481,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(インクイジター)
+19482,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(アークメイジ)
+19483,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(エレメンタルマスター)
+19484,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(ウィンドホーク)
+19485,2,0,1,0,0,1,1,0,0,0,0,1	//転・NPC・倉庫	//時間のサークレット(トルバドゥール&トルヴェール)
+19486,0,0,1,0,0,1,1,0,0,0,0,1	//NPC・倉庫	//時間のサークレット(天帝)
+19487,0,0,1,0,0,1,1,0,0,0,0,1	//NPC・倉庫	//時間のサークレット(ソウルアセティック)
+19488,0,0,1,0,0,1,1,0,0,0,0,1	//NPC・倉庫	//時間のサークレット(ナイトウォッチ)
+19489,0,0,1,0,0,1,1,0,0,0,0,1	//NPC・倉庫	//時間のサークレット(蜃気楼&不知火)
+19491,0,0,1,0,0,1,1,0,0,0,0,1	//NPC・倉庫	//時間のサークレット(ハイパーノービス)
+19492,0,0,1,0,0,1,1,0,0,0,0,1	//NPC・倉庫	//時間のサークレット(スピリットハンドラー)
+25591,0,0,1,0,1,1,1,0,0,0,0,0	//NPC	//呪いに汚染された欠片
+25864,0,0,1,0,0,1,1,0,0,0,0,0	//NPC・倉庫	//封印された時間のサークレット
+25865,0,0,0,0,0,0,0,0,0,1,0,0	//制限なし	//時間の宝石
+312930,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(アビスチェイサーV)
+312931,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(アビスチェイサーVI)
+312933,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(インクイジターIV)
+312936,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(インペリアルガードV)
+312937,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(インペリアルガードVI)
+312942,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(エレメンタルマスターV)
+312947,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(シャドウクロスIV)
+312948,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(シャドウクロスV)
+312949,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(ドラゴンナイトV)
+312952,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(トルバドゥール&トルヴェールIII)
+312962,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(ハイパーノービスIV)
+312965,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(天帝IV)
+312968,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(ソウルアセティックIV)
+312979,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(スピリットハンドラーV)
+313269,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(アビスチェイサーVII)
+313273,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(ハイパーノービスV)
+313274,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(ハイパーノービスVI)
+313289,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(デュプレライトI)
+313290,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(カウンタースラッシュI)
+313292,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(ローリングカッターII)
+313293,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(十文字斬りII)
+313294,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(風魔手裏剣 -乱華-II)
+313295,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(シールドプレスII)
+313296,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(レイオブジェネシスII)
+313297,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(シビアレインストームIII)
+313298,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(アームズキャノンII)
+313299,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(アックストルネードII)
+313300,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(アックスブーメランII)
+313301,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(アローストームIII)
+313302,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(エイムドボルトII)
+313303,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(イグニッションブレイクIII)
+313304,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(スラッグショットI)
+313305,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(ハンマーオブゴッドI)
+313306,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(アンチマテリアルブラストI)
+313307,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(ラウンドトリップII)
+313308,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(ファイアーレインII)
+313309,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(トライアングルショットII)
+313310,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(ヴェラチュールスピアーII)
+313311,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(ダイヤモンドダストI)
+313312,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(アースグレイヴI)
+313313,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(エスパII)
+313314,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(エスフI)
+313315,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(死霊爆発II)
+313316,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(獅子吼III)
+313317,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(天羅地網II)
+313318,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(ソウルエクスパンションII)
+313319,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在覚醒(クリムゾンロックII)
+400644,2,0,0,0,0,0,0,0,0,0,0,1	//転	//霊道冠
+400645,2,0,0,0,0,0,0,0,0,0,0,1	//転	//ガーデンオブヘヴン
+470274,0,0,0,0,0,0,0,0,0,0,0,1	//制限なし	//ツインヘッド・ドラゴンブーツ
+490544,2,0,0,0,0,0,0,0,0,0,0,1	//転	//オーバードライブランページ
+490545,2,0,0,0,0,0,0,0,0,0,0,1	//転	//オーバードライブランページ
+
+312930,ench,潜在解放(アビスチェイサーV),2
+312931,ench,潜在解放(アビスチェイサーVI),2
+312933,ench,潜在解放(インクイジターIV),2
+312936,ench,潜在解放(インペリアルガードV),2
+312937,ench,潜在解放(インペリアルガードVI),2
+312942,ench,潜在解放(エレメンタルマスターV),2
+312947,ench,潜在解放(シャドウクロスIV),2
+312948,ench,潜在解放(シャドウクロスV),2
+312949,ench,潜在解放(ドラゴンナイトV),2
+312952,ench,潜在解放(トルバドゥール&トルヴェールIII),2
+312962,ench,潜在解放(ハイパーノービスIV),2
+312965,ench,潜在解放(天帝IV),2
+312968,ench,潜在解放(ソウルアセティックIV),2
+312979,ench,潜在解放(スピリットハンドラーV),2
+313269,ench,潜在解放(アビスチェイサーVII),2
+313273,ench,潜在解放(ハイパーノービスV),2
+313274,ench,潜在解放(ハイパーノービスVI),2
+313289,ench,潜在覚醒(デュプレライトI),2
+313290,ench,潜在覚醒(カウンタースラッシュI),2
+313292,ench,潜在覚醒(ローリングカッターII),2
+313293,ench,潜在覚醒(十文字斬りII),2
+313294,ench,潜在覚醒(風魔手裏剣 -乱華-II),2
+313295,ench,潜在覚醒(シールドプレスII),2
+313296,ench,潜在覚醒(レイオブジェネシスII),2
+313297,ench,潜在覚醒(シビアレインストームIII),2
+313298,ench,潜在覚醒(アームズキャノンII),2
+313299,ench,潜在覚醒(アックストルネードII),2
+313300,ench,潜在覚醒(アックスブーメランII),2
+313301,ench,潜在覚醒(アローストームIII),2
+313302,ench,潜在覚醒(エイムドボルトII),2
+313303,ench,潜在覚醒(イグニッションブレイクIII),2
+313304,ench,潜在覚醒(スラッグショットI),2
+313305,ench,潜在覚醒(ハンマーオブゴッドI),2
+313306,ench,潜在覚醒(アンチマテリアルブラストI),2
+313307,ench,潜在覚醒(ラウンドトリップII),2
+313308,ench,潜在覚醒(ファイアーレインII),2
+313309,ench,潜在覚醒(トライアングルショットII),2
+313310,ench,潜在覚醒(ヴェラチュールスピアーII),2
+313311,ench,潜在覚醒(ダイヤモンドダストI),2
+313312,ench,潜在覚醒(アースグレイヴI),2
+313313,ench,潜在覚醒(エスパII),2
+313314,ench,潜在覚醒(エスフI),2
+313315,ench,潜在覚醒(死霊爆発II),2
+313316,ench,潜在覚醒(獅子吼III),2
+313317,ench,潜在覚醒(天羅地網II),2
+313318,ench,潜在覚醒(ソウルエクスパンションII),2
+313319,ench,潜在覚醒(クリムゾンロックII),2
+
 //==================== 20240402 アップデート ===================//
-//==============================================================//
 200384,use,コスたまFlowerGardenIV,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 240402 */ },{ /* 19800 400633 400634 400635 410311 410312 420325 480430 480431 480432 */ }
 19800,cos,[衣装] カーネーションの髪飾り,4,20,,0,,0:0,,0,2074075135,2,1024,,1,878,0,{ /* 240402 */ },{}
 400633,cos,[衣装] シックピオニー,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2380,0,{ /* 240402 */ },{}
