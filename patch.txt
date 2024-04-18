@@ -6,7 +6,7 @@
 ・19170-19199 ミス修正と最適化
 
 ・hateffect関連のソースデータ公開(const.txt status.h)
-※patch1585を使った私の環境と同じで最新のエフェクト装備の実装に必要です
+※patch1538を使った私の環境と同じで最新のエフェクト装備の実装に必要です
 
 ・2020年アップデートの3次職スキル仕様調整でアークビショップスキルの最新仕様実装(skill_db_add.* skill_require_db_add.* skill_cast_db_add.* skill_tree_add.* battle.c)
 ※アークビショップスキル[AB_JUDEX][AB_RENOVATIO]のスキル仕様調整を実装してみました
