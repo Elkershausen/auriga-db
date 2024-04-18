@@ -1,0 +1,4 @@
+//skill_cast_db.txtへオーバーライド
+//id,cast_list,fixed_cast_list,delay_list,cool_list,upkeep_time,upkeep_time2
+2038,2000,0,0,0,0,0		//AB_JUDEX#ジュデックス#
+2050,4000,0,0,0,90000:120000:150000:180000:,0		//AB_RENOVATIO#レノヴァティオ#

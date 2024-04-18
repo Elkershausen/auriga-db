@@ -1,0 +1,4 @@
+//skill_require_db.txtへオーバーライド
+//id,list_hp,list_sp,list_hp_rate,list_sp_rate,list_zeny,list_weapon,state,spiritball,itemid1,amount1,itemid2,amount2,itemid3,amount3,itemid4,amount4,itemid5,amount5,itemid6,amount6,itemid7,amount7,itemid8,amount8,itemid9,amount9,itemid10,amount10
+2038,0,20:23:26:29:32:35:38:41:44:47,0,0,0,99,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		//AB_JUDEX#ジュデックス#
+2050,0,70:80:90:100,0,0,0,99,none,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0		//AB_RENOVATIO#レノヴァティオ#
