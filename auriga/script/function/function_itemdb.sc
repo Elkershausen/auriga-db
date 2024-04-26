@@ -1,4 +1,5 @@
 //20240415 19108#ワイルドポリンライダー#追加
+//20240426 反射ダメージ軽減(ロイヤル系) 310760#王の神威# 300314#理性と記憶の残滓# セット効果追記
 //============================================================
 // 巨大なハエの羽
 //------------------------------------------------------------
@@ -95,6 +96,89 @@ function	script	ItemdbAlmightySubHeal	{
 		bonus2 bAddSkillSubHealRate,2043,'@val;	/* コルセオヒール */
 	if('@flag&64)
 		bonus2 bAddSkillSubHealRate,2051,'@val;	/* ハイネスヒール */
+	return;
+}
+
+//一部のダメージを反射する効果で受けるダメージ 精錬値*-10%
+//精錬値は記述されている装備品を参照するので参照が自身のアイテム以外は記述を抜き出して装備ボーナスに書いて下さい
+//ここは書き換えないで下さい
+//ロイヤル系武器 32028 32029
+//{ callfunc "redamage"; } 
+
+function	script	redamage	{
+	bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt();
+	bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt();
+	bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt();
+	bonus2 bSubSkillDamageRate,"SL_KAITE",10*getequiprefinerycnt();
+	bonus2 bSubSkillDamageRate,"SR_CRESCENTELBOW",10*getequiprefinerycnt();
+	return;
+}
+
+//310760#王の神威#セット効果A
+//攻撃速度 + 15% プレイヤーから受けるダメージ - 10% [ゴスペル]Lv1使用可能
+//{ callfunc "ounosini_A"; } 
+function	script	ounosini_A	{
+if(equippeditem(310760)) {
+	bonus bAspdAddRate,15;
+	bonus2 bSubRace,Rct_Player,10;
+	bonus2 bMagicSubRace,Rct_Player,10;
+	skill "PA_GOSPEL",1;
+	}
+	return;
+}
+
+//310760#王の神威#セット効果B
+//攻撃速度 + 15% プレイヤーから受けるダメージ - 40% [ゴスペル]Lv1使用可能
+//{ callfunc "ounosini_B"; } 
+function	script	ounosini_B	{
+if(equippeditem(310760)) {
+	bonus bAspdAddRate,15;
+	bonus2 bSubRace,Rct_Player,40;
+	bonus2 bMagicSubRace,Rct_Player,40;
+	skill "PA_GOSPEL",1;
+	}
+	return;
+}
+
+//300314#理性と記憶の残滓#セット効果A
+//Atk + 100 , Matk + 100 プレイヤーから受けるダメージ - 10% [コンセントレイション]Lv5
+//{ callfunc "riseikioku_A"; } 
+function	script	riseikioku_A	{
+if(equippeditem(300314)) {
+	bonus bBaseAtk,100;
+	bonus bMatk,100;
+	bonus2 bSubRace,Rct_Player,10;
+	bonus2 bMagicSubRace,Rct_Player,10;
+	skill "LK_CONCENTRATION",5;
+	}
+	return;
+}
+
+//300314#理性と記憶の残滓#セット効果B
+//Atk + 200 , Matk + 200 プレイヤーから受けるダメージ - 40% [コンセントレイション]Lv5
+//{ callfunc "riseikioku_B"; } 
+function	script	riseikioku_B	{
+if(equippeditem(300314)) {
+	bonus bBaseAtk,200;
+	bonus bMatk,200;
+	bonus2 bSubRace,Rct_Player,40;
+	bonus2 bMagicSubRace,Rct_Player,40;
+	skill "LK_CONCENTRATION",5;
+	}
+	return;
+}
+
+//300314#理性と記憶の残滓#セット効果C
+//Atk + 100 , Matk + 100 プレイヤーから受けるダメージ - 40% [コンセントレイション]Lv5
+//{ callfunc "riseikioku_C"; } 
+function	script	riseikioku_C	{
+if(equippeditem(300314)) {
+	bonus bBaseAtk,100;
+	bonus bMatk,100;
+	bonus2 bSubRace,Rct_Player,40;
+	bonus2 bMagicSubRace,Rct_Player,40;
+	skill "LK_CONCENTRATION",5;
+	}
 	return;
 }
 
