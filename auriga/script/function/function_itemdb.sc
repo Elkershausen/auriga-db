@@ -1,6 +1,8 @@
-//20240415 19108#ワイルドポリンライダー#追加
-//20240426 反射ダメージ軽減(ロイヤル系) 310760#王の神威# 300314#理性と記憶の残滓# セット効果追記
+//20240507 防御無視 [一般・ボスモンスター][すべての種族]用ボーナス追加
 //20240427 312417#増幅された怨望#セット追記 テスト用設定追加 サンプル追記
+//20240426 反射ダメージ軽減(ロイヤル系) 310760#王の神威# 300314#理性と記憶の残滓# セット効果追記
+//20240415 19108#ワイルドポリンライダー#追加
+
 //============================================================
 //テスト用func スクリプト
 //{ callfunc "test",'@flag,'@val; }
@@ -197,6 +199,67 @@ function	script	MagicRct_All	{
 }
 
 //============================================================
+//一般・ボスモンスターの防御を DEF '@val% 無視
+//{ callfunc "IgnoreDefRct_All",'@val; }
+
+function	script	IgnoreDefRct_All	{
+	set '@val,getarg(0);
+		bonus2 bIgnoreDefRace,Rct_Boss,'@val;
+		bonus2 bIgnoreDefRace,Rct_NonBoss,'@val;
+	return;
+}
+
+//============================================================
+//一般・ボスモンスターの魔法防御を '@val% 無視
+//{ callfunc "IgnoreMDefRct_All",'@val; }
+
+function	script	IgnoreMDefRct_All	{
+	set '@val,getarg(0);
+		bonus2 bIgnoreMdefRace,Rct_Boss,'@val;
+		bonus2 bIgnoreMdefRace,Rct_NonBoss,'@val;
+	return;
+}
+
+//============================================================
+//全ての種族のDEF 防御力 '@val%無視
+//{ callfunc "bonus2bIgnoreDefRace",'@val; }
+
+function	script	bonus2bIgnoreDefRace	{
+	set '@val,getarg(0);
+		bonus2 bIgnoreDefRace,Rct_Formless,'@val;
+		bonus2 bIgnoreDefRace,Rct_Undead,'@val;
+		bonus2 bIgnoreDefRace,Rct_Brute,'@val;
+		bonus2 bIgnoreDefRace,Rct_Plant,'@val;
+		bonus2 bIgnoreDefRace,Rct_Insect,'@val;
+		bonus2 bIgnoreDefRace,Rct_Fish,'@val;
+		bonus2 bIgnoreDefRace,Rct_Demon,'@val;
+		bonus2 bIgnoreDefRace,Rct_Human,'@val;
+		bonus2 bIgnoreDefRace,Rct_Angel,'@val;
+		bonus2 bIgnoreDefRace,Rct_Dragon,'@val;
+
+	return;
+}
+
+//============================================================
+//全ての種族のMDEF 魔法防御力'@val%無視
+//{ callfunc "bonus2bIgnoreMdefRace",'@val; }
+
+function	script	bonus2bIgnoreMdefRace	{
+	set '@val,getarg(0);
+		bonus2 bIgnoreMdefRace,Rct_Formless,'@val;
+		bonus2 bIgnoreMdefRace,Rct_Undead,'@val;
+		bonus2 bIgnoreMdefRace,Rct_Brute,'@val;
+		bonus2 bIgnoreMdefRace,Rct_Plant,'@val;
+		bonus2 bIgnoreMdefRace,Rct_Insect,'@val;
+		bonus2 bIgnoreMdefRace,Rct_Fish,'@val;
+		bonus2 bIgnoreMdefRace,Rct_Demon,'@val;
+		bonus2 bIgnoreMdefRace,Rct_Human,'@val;
+		bonus2 bIgnoreMdefRace,Rct_Angel,'@val;
+		bonus2 bIgnoreMdefRace,Rct_Dragon,'@val;
+	return;
+}
+
+//============================================================
 //一部のダメージを反射する効果で受けるダメージ 精錬値*-10%
 //精錬値は記述されている装備品を参照するので参照が自身のアイテム以外は記述を抜き出して装備ボーナスに書いて下さい
 //ロイヤル系武器 32028 32029
@@ -305,6 +368,35 @@ if(equippeditem(312417)) {
 	bonus2 bSubSkillDamageRate,"SL_KAITE",10*getequiprefinerycnt();
 	bonus2 bSubSkillDamageRate,"SR_CRESCENTELBOW",10*getequiprefinerycnt();
 	}
+	return;
+}
+//============================================================
+//410028#ワンダーエッグバスケット#
+
+//============================================================
+//410015#コル・コアヘッドフォン
+
+//============================================================
+//27002#包装されたボックスカード#
+
+//============================================================
+//27031#迷宮のバフォメットカード#
+
+//============================================================
+//27301#迷宮のドッペルゲンガーカード#
+
+//============================================================
+//27032#迷宮のドラキュラカード#
+
+//============================================================
+//bonus3 bAddMonsterDropItem
+////{ callfunc "drop",'@drop,'@rate; }
+
+function	script	drop	{
+	set '@drop,getarg(0);
+	set '@rate,getarg(1);
+		bonus3 bAddMonsterDropItem,'@drop,Rct_Boss,'@rate;
+		bonus3 bAddMonsterDropItem,'@drop,Rct_NonBoss,'@rate;
 	return;
 }
 
@@ -431,5 +523,5 @@ if(getbaseclass(Class,2||3) == CLASS_GS) {
 	bonus3 bAddMonsterDropItem,12150,Rct_NonBoss,50;
 	bonus3 bAddMonsterDropItem,12637,Rct_NonBoss,50;
 	}
-return;
+	return;
 }
