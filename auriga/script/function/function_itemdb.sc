@@ -271,6 +271,7 @@ function	script	redamage	{
 	bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt();
 	bonus2 bSubSkillDamageRate,"SL_KAITE",10*getequiprefinerycnt();
 	bonus2 bSubSkillDamageRate,"SR_CRESCENTELBOW",10*getequiprefinerycnt();
+	bonus2 bSubSkillDamageRate,"ST_REJECTSWORD",10*getequiprefinerycnt();
 	return;
 }
 
