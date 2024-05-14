@@ -1,0 +1,50 @@
+20240514 アップデート
+item_db.txt
+9156,pet,チャオの卵,4,20,,0,,,,,,,,,,,,{ /* 240514 1001735[チャオ交換チケット]交換 */ },{}
+102800,use,ハイスピード,2,0,,10,,,,,2074075135,2,,,1,,,{ sc_start SC_SpeedUp0,240000,0; },{ /* 240514 効果実装済み [Dr. エッグマンの秘密基地]専用 */ }
+102801,heal,1UP,0,0,,10,,,,,2074075135,2,,,1,,,{ percentheal 60,60; misceffect 7,""; },{ /* 240514 効果実装済み [Dr. エッグマンの秘密基地]専用 */ }
+200377,use,nodata,2,0,,10,,,,,2074075135,2,,,1,,,{},{ /* 240514 定義のみ */ }
+200378,use,スーパーソニックパッケージ,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 1001549,8; getitem 410263,1; },{ /* 240514 効果実装済み [Dr. エッグマンの秘密基地]専用 */ }
+200379,use,カオスエメラルドパッケージ,2,0,,100,,,,,2074075135,2,,,1,,,{ getitem 1001549,8; getitem 420303,1; },{ /* 240514 効果実装済み [Dr. エッグマンの秘密基地]専用 */ }
+313196,ench,潜在解放(スピリットハンドラーVI),6,,,,,,,,,,65535,,,,,{ /* スピリットハンドラー */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SH_CHUL_HO_SONIC_CLAW",-100; bonus2 bAddSkillCoolDown,"SH_HOGOGONG_STRIKE",-100; } }
+313320,ench,スキル石(ファイアーウォールLv10),6,,,,,,,,,,65535,,,,,{ /* 240514 効果実装済み */ },{ skill "MG_FIREWALL",10; }
+400502,cos,[衣装] リング,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2433,0,{ /* 240514 効果実装済み */ },{}
+400649,head,サタニッククラウン,4,20,,500,,10:0,,1,2074075008,2,256,,200,2523,1,{ /* 4次職 */ },{ /*bonus bCon,3+getequiprefinerycnt(); */ bonus2 bSubRace,Rct_Player_Human,13; bonus2 bMagicSubRace,Rct_Player_Human,13; bonus2 bSubRace,Rct_Player_Doram,13; bonus2 bMagicSubRace,Rct_Player_Doram,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddSkillDamageRate,"ABC_CHAIN_REACTION_SHOT",BaseLevel/10; bonus2 bAddSkillDamageRate,"ABC_FRENZY_SHOT",BaseLevel/10; if(getequiprefinerycnt() >= 10) { bonus bCritical,25; bonus bSkillDelayRate,-20; } }
+410262,cos,[衣装] ソニック・ミニミー,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2429,0,{ /* 240514 効果実装済み */ },{}
+410263,cos,[衣装] スーパーソニック・ミニミー,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2430,0,{ /* 240514 効果実装済み */ },{}
+410264,cos,[衣装] テイルス・ミニミー,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2431,0,{ /* 240514 効果実装済み */ },{}
+410265,cos,[衣装] リング（被撃）,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2432,0,{ /* 240514 効果実装済み */ },{}
+420303,cos,[衣装] カオスエメラルド,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2485,0,{ /* 240514 効果実装済み */ },{}
+420327,head,ネコミミケープ(青),4,20,,100,,0:0,,0,2074075135,2,1,,100,2522,0,{ /* 240514 効果実装済み */ },{ bonus2 bAddSize,Size_Small,BaseLevel/10; bonus2 bAddSize,Size_Medium,BaseLevel/10; bonus2 bAddSize,Size_Big,BaseLevel/10; bonus2 bMagicAddSize,Size_Small,BaseLevel/10; bonus2 bMagicAddSize,Size_Medium,BaseLevel/10; bonus2 bMagicAddSize,Size_Big,BaseLevel/10; }
+440012,cos,[衣装] Dr. エッグマンマスク,4,20,,0,,0:0,,0,2074075135,2,7168,,1,2434,0,{ /* 240514 効果実装済み */ },{}
+450368,armor,がおがおタイガーパジャマ,4,20,,1000,,100:0,,1,1073741824,2,16,,200,,1,{ /* 240514 効果実装済み */ },{ bonus2 bAddRace,Rct_Player_Human,7; bonus2 bMagicAddRace,Rct_Player_Human,7; bonus2 bAddRace,Rct_Player_Doram,7; bonus2 bMagicAddRace,Rct_Player_Doram,7; bonus2 bAddSkillDamageRate,"SH_CHUL_HO_SONIC_CLAW",BaseLevel/10; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",BaseLevel/10; bonus2 bAddSkillDamageRate,"SH_HOGOGONG_STRIKE",BaseLevel/10; bonus2 bAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; bonus bNoKnockback,0; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; bonus2 bAddSkillCoolDown,"SU_HISS",-45000; } }
+1001474,item,リング,3,20,,10,,,,,,,,,,,,{ /* 240514 [Dr. エッグマンの秘密基地]専用 */ },{}
+1001549,item,ソニックバッジ,3,20,,10,,,,,,,,,,,,{ /* 240514 [Dr. エッグマンの秘密基地]専用 */ },{}
+1001735,item,チャオ交換チケット,3,20,,10,,,,,,,,,,,,{ /* 240514 9156[チャオの卵]交換 */ },{}
+
+item_db2.txt
+9156,0,0,1,0,0,1,1,0,0,0,0,0	//NPC・倉庫	//チャオの卵
+102800,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ハイスピード
+102801,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//1UP
+200377,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//nodata
+200378,0,0,1,1,0,1,1,0,0,0,0,0	//倉庫	//スーパーソニックパッケージ
+200379,0,0,1,1,0,1,1,0,0,0,0,0	//倉庫	//カオスエメラルドパッケージ
+313196,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(スピリットハンドラーVI)
+313320,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//スキル石(ファイアーウォールLv10)
+400502,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] リング
+400649,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//サタニッククラウン
+410262,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] ソニック・ミニミー
+410263,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] スーパーソニック・ミニミー
+410264,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] テイルス・ミニミー
+410265,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] リング（被撃）
+420303,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] カオスエメラルド
+420327,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ネコミミケープ(青)
+440012,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] Dr. エッグマンマスク
+450368,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//がおがおタイガーパジャマ
+1001474,0,0,1,0,0,1,1,0,0,0,0,0	//NPC・倉庫	//リング
+1001549,0,0,1,1,0,1,1,0,0,0,0,0	//倉庫	//ソニックバッジ
+1001735,0,0,1,1,0,1,1,0,0,0,0,0	//倉庫	//チャオ交換チケット
+
+item_cardtype.txt
+313196,ench,潜在解放(スピリットハンドラーVI),2
+313320,ench,スキル石(ファイアーウォールLv10),2
