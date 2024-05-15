@@ -1,0 +1,665 @@
+NPC更新
+20191029 20200907 20201027 アップデート
+579#おいしい魚# 11616#美味しいお肉# 25233#綿の玉# 25377#豪華なペットフード# 追加(テイミング商人 テイミング用品販売員)
+
+20140819アップデート対応 [アイスクリーム] 購入数上限500に増加
+-	script	IceBuyer	85,{
+	mes "[アイスクリーム商人]";
+	if(strnpcinfo(2) == "moc") {
+		mes "さぁ、モロクが大変な";
+		mes "今だからこそ";
+		mes "冷たいアイスクリーム！";
+		mes "^3355FF100 Zeny^000000で";
+		mes "身も心も爽やかにリフレッシュ！";
+		mes "明日への活力にいかがですか！";
+	}
+	else if(strnpcinfo(2) == "moc_") {
+		mes "さぁ、思わず食べたくなる";
+		mes "冷たいアイスクリーム！";
+		mes "^3355FF100 Zeny^000000で";
+		mes "身も心も爽やかに！";
+	}
+	if(strnpcinfo(2) == "bra") {
+		mes "さぁ、あつ～いブラジリスで";
+		mes "つめた～いアイスクリームはいかが！";
+		mes "冷たいアイスクリーム！";
+		mes "^3355FF100 Zeny^000000で";
+		mes "身も心も爽やかにリフレッシュ！";
+		mes "おいしいよ！";
+	}
+	else {
+		mes "冷たくて甘～い";
+		mes "アイスクリーム！";
+		mes "^3355FF100 Zeny^000000で";
+		mes "身も心も爽やかに！";
+	}
+	next;
+	switch(select("アイスクリームをください！","アイスクリームについて","取引をやめる")) {
+	case 1:
+		mes "[アイスクリーム商人]";
+		if(strnpcinfo(2) == "moc") {
+			mes "ありがとうございます!!";
+			mes "このキャンプに移転したのを";
+			mes "きっかけに製造数を増やしたので";
+			mes "当店では一度に500個まで";
+			mes "お買い求めいただけます！";
+			set '@max,500;
+		}
+		else if(strnpcinfo(2) == "moc_") {
+			mes "冷たくて甘いアイスクリームは";
+			mes "こんな砂漠では本当に大事な";
+			mes "補給源。一度に500個まで";
+			mes "お買い求めいただけます。";
+			set '@max,500;
+		}
+		else if(strnpcinfo(2) == "bra") {
+			mes "ありがとうございます!!";
+			mes "ここブラジリスでは";
+			mes "最高のアイスクリーム製造機を";
+			mes "導入しておりますので、当店では";
+			mes "一度に500個まで";
+			mes "お買い求めいただけます！";
+			set '@max,500;
+		}
+		else {
+			mes "アイスクリームは";
+			mes "おやつにぴったり！";
+			mes "一度に500個まで";
+			mes "お買い求めいただけます。";
+			set '@max,500;
+		}
+		while(1) {
+			next;
+			input '@num;
+			if('@num > '@max) {
+				mes "[アイスクリーム商人]";
+				mes "え？";
+				mes "ちょっと多すぎです。";
+				mes "一度に販売できるのは";
+				mes '@max+ "個までです。";
+				mes "あまり食べ過ぎると";
+				mes "お腹を壊しますよ～。";
+				continue;
+			}
+			break;
+		}
+		if('@num <= 0) {
+			mes "[アイスクリーム商人]";
+			mes "あら？";
+			mes "お腹の調子が良くないのですか？";
+			close;
+		}
+		if(Zeny<'@num*100) {
+			mes "[アイスクリーム商人]";
+			mes "お客さん、お金が足りないです…";
+			mes "一つ ^3355FF100 Zeny^000000ですよ！";
+			close;
+		}
+		if(checkweight(536,'@num)==0) {
+			mes "[アイスクリーム商人]";
+			mes "お客さん、ちょっと荷物が";
+			mes "多すぎますね。";
+			mes "アイスクリームを落としてしまいます。";
+			mes "持ち物を減らしてから来て下さい～。";
+			close;
+		}
+		set Zeny,Zeny-'@num*100;
+		getitem 536,'@num;
+		mes "[アイスクリーム商人]";
+		mes "はい、" +'@num+ "個ね。";
+		mes "ありがとうございましたー。";
+		close;
+	case 2:
+		mes "[アイスクリーム商人]";
+		mes "「アイスクリーム」はですね…";
+		mes "牛乳・乳製品の脂肪と";
+		mes "無脂乳固形分を主原料に、";
+		mes "砂糖・香料・安定剤・乳化剤";
+		mes "色素などを加えて混合し、";
+		next;
+		mes "[アイスクリーム商人]";
+		mes "泡立てて凍結させた食べ物です。";
+		mes "細かく言うと、";
+		mes "乳固形分15%以上";
+		mes "うち乳脂肪8%以上";
+		mes "のものですね。";
+		next;
+		mes "[アイスクリーム商人]";
+		mes "エネルギーと栄養も豊富で";
+		mes "とても美味しいんですが、";
+		mes "だからと言って食べ過ぎると";
+		mes "お腹を壊しますよ！";
+		close;
+	case 3:
+		mes "[アイスクリーム商人]";
+		mes "今この機会を逃すと";
+		mes "もう味わうことが";
+		mes "できなくなるかもしれませんよ？";
+		mes "さぁ、さぁ、いかがですか～？";
+		close;
+	}
+}
+
+//morocc.gat,160,143,4	duplicate(IceBuyer)	アイスクリーム商人#moc	85
+moc_ruins.gat,81,155,4	duplicate(IceBuyer)	アイスクリーム商人#moc	85
+alberta.gat,107,73,4	duplicate(IceBuyer)	アイスクリーム商人#alb	85
+moc_fild16.gat,88,304,4	duplicate(IceBuyer)	アイスクリーム商人#moc_	85
+brasilis.gat,189,225,3	duplicate(IceBuyer)	アイスクリーム商人#bra	85
+
+20140819アップデート対応 交換NPC[黄金の手のビリーナ]の[温かい紅茶][甘いお菓子]購入数増加・所持重量制限の処理追記
+xmas.gat,240,291,3	script	黄金の手のビリーナ	711,{
+	if(BaseLevel < 110) {
+		mes "[黄金の手のビリーナ]";
+		mes "なんだ、あんた。";
+		mes "こんな辺鄙な場所に来ても";
+		mes "面白いものなんてないと思うぜ？";
+		mes "風邪ひく前に、街の方に";
+		mes "戻ることをすすめるさ。";
+		next;
+		mes "[黄金の手のビリーナ]";
+		mes "おれはちょっとここに";
+		mes "野暮用があるもんでな。";
+		mes "ククク。";
+		mes "縁があったらまた、";
+		mes "会うことになるだろう。";
+		close;
+	}
+	mes "[黄金の手のビリーナ]";
+	mes "ふふふ、どうだ？";
+	mes "コインを少しは持って来たのか？";
+	mes "コインさえ持っているなら何でも";
+	mes "売ってやる。魂だけは除いてな。";
+	mes "　";
+	mes "^0000ff血塗られたコイン所持数" +countitem(7642)+ "枚^000000";
+	mes "所持残重量" +(MaxWeight - Weight)/10+ "";		//所持重量制限処理のため仮表示(消していい)
+	next;
+	switch(select("やめる","コインについて聞く","アイテムと交換する","アイテムの性能を見る")) {
+	case 1:
+		mes "[黄金の手のビリーナ]";
+		mes "ククク、良心の呵責でも感じるのか？";
+		mes "まあいい。いつでも気が変わったら";
+		mes "訪ねて来るといいぜ。";
+		close;
+	case 2:
+		mes "[黄金の手のビリーナ]";
+		mes "コインについて聞きたいのか。";
+		mes "あんたは正真正銘の物好きだな。";
+		mes "まっ、古びたこんな汚いコインでも";
+		mes "ほしがるやつがいるんだよ。";
+		mes "需要があるから供給があるのさ。";
+		next;
+		mes "[黄金の手のビリーナ]";
+		mes "以前はおれ自身がコイン集めに";
+		mes "工場に忍び込んでいたんだが、";
+		mes "最近はどうも以前以上に";
+		mes "工場の雰囲気が物騒でな。";
+		mes "自分で集める手段は";
+		mes "やめることにしたってわけだ。";
+		next;
+		mes "[黄金の手のビリーナ]";
+		mes "何より命あってのゼニーだしな。";
+		mes "ここの工場も、工場主が健在だったら";
+		mes "今みたいにはならなかっただろう。";
+		mes "あと、おれもここでこうして、";
+		mes "あんたら相手にコインと交換なんて";
+		mes "していなかっただろうな。";
+		next;
+		mes "[黄金の手のビリーナ]";
+		mes "何があったのか知りたそうな";
+		mes "顔をしてやがるな。";
+		mes "残念ながらおれも工場のことの仔細は";
+		mes "よく知らないんだが、";
+		mes "工場長が誰かに殺されたらしいとは";
+		mes "聞いたことがあるぜ。";
+		next;
+		mes "[黄金の手のビリーナ]";
+		mes "ククク。";
+		mes "この工場のことをもっと";
+		mes "知りたくなってくれりゃ、おれも";
+		mes "コインの集まりが良くなるしな。";
+		mes "せいぜい、死なない程度に";
+		mes "頑張って真実を調べてくれよ。";
+		close;
+	case 3:
+		switch(select("やめる","閉ざされた心の箱（コイン100枚）","瑞々しいバラ（コイン500枚）","[衣装] 瑞々しいバラ（コイン1000枚）","[衣装] サンタ人形ヘアバンド（コイン500枚）","[衣装] 赤いボンネット（コイン500枚）","古い洋傘（コイン1000枚）","温かい紅茶（コイン7枚）","甘いお菓子（コイン5枚）")) {
+		case 1:
+			mes "[黄金の手のビリーナ]";
+			mes "ククク、良心の呵責でも感じるのか？";
+			mes "まあいい。いつでも気が変わったら";
+			mes "訪ねて来るんだな。";
+			close;
+		case 2:
+			set '@gain,22534;
+			set '@price,100;
+			set '@num,1;
+			break;
+		case 3:
+			set '@gain,18848;
+			set '@price,500;
+			set '@num,1;
+			break;
+		case 4:
+			set '@gain,19687;
+			set '@price,1000;
+			set '@num,1;
+			break;
+		case 5:
+			set '@gain,19686;
+			set '@price,500;
+			set '@num,1;
+			break;
+		case 6:
+			set '@gain,19701;
+			set '@price,500;
+			set '@num,1;
+			break;
+		case 7:
+			set '@gain,13442;
+			set '@price,1000;
+			set '@num,1;
+			break;
+		case 8:
+//11563[温かい紅茶]購入数の選択肢 一時変数'@Weight追記 個数による交換レート設定
+			switch(select("10セット","50セット","100セット","200セット","300セット","400セット","500セット")) {
+			case 1:
+				set '@gain,11563;
+				set '@price,70;
+				set '@num,100;
+				set '@Weight,200;
+				break;
+			case 2:
+				set '@gain,11563;
+				set '@price,350;
+				set '@num,500;
+				set '@Weight,1000;
+				break;
+			case 3:
+				set '@gain,11563;
+				set '@price,700;
+				set '@num,1000;
+				set '@Weight,2000;
+				break;
+			case 4:
+				set '@gain,11563;
+				set '@price,1400;
+				set '@num,2000;
+				set '@Weight,4000;
+				break;
+			case 5:
+				set '@gain,11563;
+				set '@price,2100;
+				set '@num,3000;
+				set '@Weight,6000;
+				break;
+			case 6:
+				set '@gain,11563;
+				set '@price,2800;
+				set '@num,4000;
+				set '@Weight,8000;
+				break;
+			case 7:
+				set '@gain,11563;
+				set '@price,3500;
+				set '@num,5000;
+				set '@Weight,10000;
+				break;
+				}
+//追記ここまで
+			break;
+		case 9:
+//11564[甘いお菓子]購入数の選択肢 一時変数'@Weight追記 個数による交換レート設定
+			switch(select("10セット","50セット","100セット","200セット","300セット","400セット","500セット")) {
+			case 1:
+				set '@gain,11564;
+				set '@price,50;
+				set '@num,100;
+				set '@Weight,200;
+				break;
+			case 2:
+				set '@gain,11564;
+				set '@price,250;
+				set '@num,500;
+				set '@Weight,1000;
+				break;
+			case 3:
+				set '@gain,11564;
+				set '@price,500;
+				set '@num,1000;
+				set '@Weight,2000;
+				break;
+			case 4:
+				set '@gain,11564;
+				set '@price,1000;
+				set '@num,2000;
+				set '@Weight,4000;
+				break;
+			case 5:
+				set '@gain,11564;
+				set '@price,1500;
+				set '@num,3000;
+				set '@Weight,6000;
+				break;
+			case 6:
+				set '@gain,11564;
+				set '@price,2000;
+				set '@num,4000;
+				set '@Weight,8000;
+				break;
+			case 7:
+				set '@gain,11564;
+				set '@price,2500;
+				set '@num,5000;
+				set '@Weight,10000;
+				break;
+			}
+//追記ここまで
+		break;
+		}
+//所持コイン数判定
+		mes "[黄金の手のビリーナ]";
+		if(countitem(7642) < '@price) {
+			mes "^0000ff" +getitemname('@gain)+ "^000000は";
+			mes "血塗られたコイン^0000ff" +'@price+ "^000000個が必要だ。";
+			mes "残念ながら、数が足りないようだな。";
+			close;
+		}
+
+//所持重量処理判定追記 一時変数'@Weight利用
+		if(((MaxWeight - Weight)/10) <= '@Weight) {
+			mes "^0000ff" +getitemname('@gain)+ "^000000は";
+ 			mes "重量の空き" + ('@Weight) + "必要だ。";
+			mes "荷物の整理をしてから来てくれ。";
+			close;
+		}
+//追記ここまで
+//アイテムの交換処理
+		mes "^0000ff" +getitemname('@gain)+ "^000000の購入には";
+		mes "血塗られたコイン^0000ff" +'@price+ "^000000枚が必要だ。";
+		mes "本当に買うのか？";
+		next;
+		if(select("やめる","購入する") == 1) {
+			mes "[黄金の手のビリーナ]";
+			mes "ククク、よく気が変わる奴だな。";
+			mes "買う気になったらまた来てくれ。";
+			close;
+		}
+		delitem 7642,'@price;
+		getitem '@gain,'@num;
+		mes "[黄金の手のビリーナ]";
+		mes "コインは確かに受け取った。";
+		mes "また必要なら利用してくれ。";
+		close;
+
+
+npc_melon.sc 実装
+yuno.gat,201,325,5	script	調査風雷猫	10164,{
+	set '@max,100;
+	set '@costitem,7347;
+	set '@getitemA,23935;
+	set '@getitemB,23936;
+	mes "[調査風来猫]";
+	mes "いらっしゃいませ～。";
+	mes "王級メロン";
+	mes "を提供していますにゃ。";
+	//ここは動作確認用
+	mes "所持"+getitemname('@costitem)+" "+countitem('@costitem)+"個";
+	mes "交換対象A"+getitemname('@getitemA)+"";
+	mes "交換対象B"+getitemname('@getitemB)+"";
+	//ここまで
+	next;
+	mes "[調査風来猫]";
+	mes "「^0000ff王級メロン^000000」と";
+	mes "「^0000ff王級メロンの箱^000000」について";
+	mes "説明しておくにゃ～。";
+	next;
+	mes "[調査風来猫]";
+	mes "「王級メロンの箱」は";
+	mes "50個入りのものと";
+	mes "150個入りのものがあるにゃ。";
+	mes "重量は 150 と 450 にゃ。";
+	next;
+	mes "[調査風来猫]";
+	mes "冒険者の皆さんが";
+	mes "ダンジョンの調査にいくのに";
+	mes "お腹がすくといけないからって";
+	mes "研究会の人達に";
+	mes "お店を出さないかって";
+	mes "お願いされたのにゃ。";
+	next;
+	mes "[調査風来猫]";
+	mes "本当はニャーも調査したいのだけど";
+	mes "仕入れが得意だから";
+	mes "出すことにしたのにゃ。";
+	mes "調査できない分、「研究記録」を";
+	mes "お代としていただいているにゃん。";
+	next;
+	mes "[調査風来猫]";
+	mes "「王級メロン」の効果は";
+	mes "次の通りにゃ～。";
+	next;
+	mes "-^0000ff王級メロン^000000-";
+	mes "―――――――――――――";
+	mes "HP・SPを3%回復する";
+	mes "―――――――――――――";
+	mes "NPC売却・倉庫への移動のみ";
+	mes "可能です";
+	mes "―――――――――――――";
+	mes "重量：3";
+	next;
+	mes "[調査風来猫]";
+	mes "「王級メロンの箱」と";
+	mes "「王級メロン」には";
+	mes "「^ff0000賞味期限^000000」があるにゃ。";
+	mes "「倉庫」内であっても期限が過ぎると";
+	mes "^ff0000取り出すときに消滅^000000するにゃ。";
+	mes "気を付けてちょうだいにゃ～。";
+	next;
+	mes "【インフォメーション】";
+	mes "-「王級メロンの箱」と";
+	mes " 中から出てくる";
+	mes " 「王級メロン」は";
+	mes " 一定期間で自動的に消滅します-";
+	next;
+	mes "[調査風来猫]";
+	mes "説明は以上にゃ～。";
+	next;
+	switch(select("「王級メロン」がほしい","王級メロンの説明を聞く","話をやめる")) {
+	case 1:
+		switch(select(""+getitemname('@getitemA)+"",""+getitemname('@getitemB)+"","やっぱりやめる")) {
+			case 1:
+				mes "[調査風来猫]";
+				mes "「"+getitemname('@getitemA)+"」は";
+				mes "1セットにつき";
+				mes "「^0000ff"+getitemname('@costitem)+"^000000」が3個必要にゃ。";
+				mes "一度に100セットまで";
+				mes "渡すことができるにゃ。";
+				mes "「0」セットなら、取引は終わりにするにゃ。";
+				next;
+				input '@num;
+				set '@Weight,'@num*150;
+				set '@Price,'@num*3;
+				set '@Gain,'@num;
+				if('@num > '@max) {
+					mes "[調査風来猫]";
+					mes "え？";
+					mes "ちょっと多すぎです。";
+					close;
+				}
+				if('@num <= 0) {
+					mes "[調査風来猫]";
+					mes "またのご利用";
+					mes "お待ちしていますにゃ～";
+					close;
+				}
+				if(countitem('@costitem) < '@Price) {
+					mes "[調査風来猫]";
+					mes "^0000ff"+getitemname('@costitem)+"^000000が";
+					mes "足りないにゃ～";
+				close;
+				}
+				if(((MaxWeight - Weight)/10) <= '@Weight) {
+					mes "[調査風来猫]";
+					mes "^0000ff"+getitemname('@getitemA)+"^000000は";
+ 					mes "重量の空き" + ('@Weight) + "必要にゃ～。";
+					mes "荷物の整理をしてから来てにゃ～。";
+					close;
+				}
+				delitem '@costitem,'@price;
+				getitem2 '@getitemA,'@Gain,1,0,0,0,0,0,0,259200;
+				mes "[調査風来猫]";
+				mes "またのご利用";
+				mes "お待ちしていますにゃ～";
+				close;
+			case 2:
+				mes "[調査風来猫]";
+				mes "「"+getitemname('@getitemB)+"」は";
+				mes "1セットにつき";
+				mes "「^0000ff"+getitemname('@costitem)+"^000000」が9個必要にゃ。";
+				mes "一度に100セットまで";
+				mes "渡すことができるにゃ。";
+				mes "「0」セットなら、取引は終わりにするにゃ。";
+				next;
+				input '@num;
+				set '@Weight,'@num*150;
+				set '@Price,'@num*9;
+				set '@Gain,'@num;
+				if('@num > '@max) {
+					mes "[調査風来猫]";
+					mes "え？";
+					mes "ちょっと多すぎにゃ～。";
+				close;
+				}
+					if('@num <= 0) {
+					mes "[調査風来猫]";
+					mes "またのご利用";
+					mes "お待ちしていますにゃ～";
+				close;
+				}
+				if(countitem('@costitem) < '@Price) {
+					mes "[調査風来猫]";
+					mes "^0000ff"+getitemname('@costitem)+"^000000が";
+					mes "足りないにゃ～";
+				close;
+				}
+				if(((MaxWeight - Weight)/10) <= '@Weight) {
+					mes "[調査風来猫]";
+					mes "^0000ff"+getitemname('@getitemB)+"^000000は";
+ 					mes "重量の空き" + ('@Weight) + "必要にゃ～。";
+					mes "荷物の整理をしてから来てにゃ～。";
+				close;
+				}
+				delitem '@costitem,'@price;
+				getitem2 '@getitemB,'@Gain,1,0,0,0,0,0,0,259200;
+				mes "[調査風来猫]";
+				mes "またのご利用";
+				mes "お待ちしていますにゃ～";
+				close;
+			case 3:
+				mes "[調査風来猫]";
+				mes "またのご利用";
+				mes "お待ちしていますにゃ～";
+				close;
+			}
+	case 2:
+		mes "[調査風来猫]";
+		mes "王級メロンの説明を聞く";
+		mes "食べると元気になる";
+		mes "王級メロンにゃ。";
+		mes "タダというわけには";
+		mes "いかないのだけれども";
+		mes "調査に協力してくれれば";
+		mes "王級メロンと交換してあげますにゃ。";
+		next;
+		mes "＜＜ラインナップ＞＞";
+		mes "■"+getitemname('@getitemA)+"";
+		mes "【^ff0000"+getitemname('@costitem)+"^000000】を";
+		mes "3個";
+		mes "■"+getitemname('@getitemB)+"";
+		mes "【^ff0000"+getitemname('@costitem)+"^000000】を";
+		mes "9個";
+		close;	
+	case 3:
+		mes "[調査風来猫]";
+		mes "話をやめる";
+		mes "またのご利用";
+		mes "お待ちしていますにゃ～";
+		close;
+	}
+}
+//騎乗は未実装
+yuno.gat,205,307,4	script	騎乗レンタル	105,{}
+yuno.gat,202,302,4	script	倉庫	464,{
+	if(Zeny < 40) {
+	mes "ゼニーが足りません";
+	close;
+	}
+	set Zeny,Zeny-40;
+	openstorage;
+}
+yuno.gat,205,316,4	script	カプラ職員	112,{
+	cutin "kafra_06",2;
+	set '@code,8;
+	set '@price,1200;
+	callfunc "KafraMain",0,0x1ff,"yuno.gat",205,316,"NULL",0,0,40,800,'@code,'@price;
+	close2;
+	cutin "kafra_05",255;
+	end;
+}
+yuno.gat,214,316,3	script	流しの治療師	569,{
+	mes "[流しの治療師]";
+	mes "ここはHPとSPの";
+	mes "回復サービスです。";
+	next;
+	mes "[流しの治療師]";
+	mes "^0000ffレベルが99以下^000000の";
+	mes "プレイヤーは無料で";
+	mes "^0000ff100以上の^000000場合は";
+	mes "^ff00005000ゼニー^000000をいただきます。";
+	mes "サービスを利用しますか？";
+	next;
+	switch(select("回復サービスを受ける","やっぱりやめる")) {
+	case 1:
+		if(BaseLevel <= 99) {
+		mes "[流しの治療師]";
+		mes "回復します。";
+		next;
+		mes "[流しの治療師]";
+		mes "またのご利用";
+		mes "お待ちしています。";
+		misceffect 14,1;
+		percentheal 100,100;
+		close;
+		} else {
+			if(Zeny < 5000) {
+			mes "[流しの治療師]";
+			mes "ゼニーが足りません";
+			close;
+			}
+			mes "[流しの治療師]";
+			mes "回復します。";
+			next;
+			mes "[流しの治療師]";
+			mes "またのご利用";
+			mes "お待ちしています。";
+			set Zeny,Zeny-5000;
+			misceffect 14,1;
+			percentheal 100,100;
+			close;
+			}
+	case 2:
+		mes "[流しの治療師]";
+		mes "またのご利用";
+		mes "お待ちしています。";
+		close;
+	}
+}
+//ミミミ装備の分析精錬に改修予定
+yuno.gat,197,291,3	script	ホルグレン	85,{
+	callfunc "Refine1","ホルグレン",21,23;
+	close;
+}
+yuno.gat,192,291,4	shop	道具商人	84,1750,611,501,502,503,504,506,645,656,601,602;
+
+const.txt 更新
+Job_StarEmperor	47
+Job_SoulReaper	48

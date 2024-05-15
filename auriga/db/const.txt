@@ -1,4 +1,4 @@
-// 職業定義値	patch1538+add 20240416
+// 職業定義値 patch1549対応 20240515 アップデート
 Job_Novice		0
 Job_Swordman		1
 Job_Magician		2
@@ -57,7 +57,8 @@ Job_Kagerou	43
 Job_Oboro	44
 Job_Rebellion	45
 Job_Summoner	46
-Job_SkyEmperor	47
+Job_StarEmperor	47
+Job_SoulReaper	48
 
 //Class定義値
 CLASS_NV	0
@@ -380,6 +381,12 @@ MaxSp		8	1
 PartnerId	57	1
 Cart		58	1
 DieCounter	59	1
+PlusStr		103
+PlusAgi		104
+PlusVit		105
+PlusInt		106
+PlusDex		107
+PlusLuk		108
 
 //PCグローバル変数
 PC_CLONESKILL_ID	500	1
@@ -648,12 +655,15 @@ Rct_Plant	3
 Rct_Insect	4
 Rct_Fish	5
 Rct_Demon	6
-Rct_Human	7
+Rct_DemiHuman	7
 Rct_Angel	8
 Rct_Dragon	9
-Rct_Boss	10
-Rct_NonBoss	11
-Rct_Player	12
+Rct_Player_Human	10
+Rct_Player_Doram	11
+Rct_Boss	12
+Rct_NonBoss	13
+Rct_Human	14
+Rct_Player	15
 Rct_All	10
 
 //属性
@@ -1119,3 +1129,4 @@ HAT_EF_black_thunder		219
 HAT_EF_C_ROS2023_Cape_2		220
 HAT_EF_C_15th_Nov_Helmet	221
 HAT_EF_Cosmic_Connection	222
+
