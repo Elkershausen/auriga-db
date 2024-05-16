@@ -1,3 +1,8 @@
+20240516	patch0179
+・29012-29176 ミス修正と最適化
+
+・関連するセット効果の修正と最適化 コメント追加
+
 20240515	patch0178
 ・テイミング商人NPCに 579#おいしい魚# 11616#美味しいお肉# 25233#綿の玉# 25377#豪華なペットフード# 追加(npc_town_izlude.sc npc_town_lighthalzen.sc npc_town_morocc.sc npc_town_payon.sc npc_town_yuno.sc npc_town_geffen.sc npc_town_moc_ruins.sc npc_town_prontera.sc)
 
