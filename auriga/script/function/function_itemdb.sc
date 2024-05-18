@@ -1,3 +1,4 @@
+//20240518 1549対応
 //20240507 防御無視 [一般・ボスモンスター][すべての種族]用ボーナス追加
 //20240427 312417#増幅された怨望#セット追記 テスト用設定追加 サンプル追記
 //20240426 反射ダメージ軽減(ロイヤル系) 310760#王の神威# 300314#理性と記憶の残滓# セット効果追記
@@ -161,7 +162,7 @@ function	script	MagicRate	{
 }
 
 //============================================================
-//物理攻撃時[全ての種族]のモンスターに与えるダメージ + '@val%
+//物理攻撃時[全ての種族]のモンスターに与えるダメージ + '@val% プレイヤーとドラム形除く
 //{ callfunc "MeleeRct_All",'@val; }
 
 function	script	MeleeRct_All	{
@@ -173,14 +174,14 @@ function	script	MeleeRct_All	{
 		bonus2 bAddRace,Rct_Insect,'@val;
 		bonus2 bAddRace,Rct_Fish,'@val;
 		bonus2 bAddRace,Rct_Demon,'@val;
-		bonus2 bAddRace,Rct_Human,'@val;
+		bonus2 bAddRace,Rct_DemiHuman,'@val;
 		bonus2 bAddRace,Rct_Angel,'@val;
 		bonus2 bAddRace,Rct_Dragon,'@val;
 	return;
 }
 
 //============================================================
-//魔法攻撃時[全ての種族]のモンスターに与えるダメージ + '@val%
+//魔法攻撃時[全ての種族]のモンスターに与えるダメージ + '@val% プレイヤーとドラム形除く
 //{ callfunc "MagicRct_All",'@val; }
 
 function	script	MagicRct_All	{
@@ -191,7 +192,7 @@ function	script	MagicRct_All	{
 		bonus2 bMagicAddRace,Rct_Plant,'@val;
 		bonus2 bMagicAddRace,Rct_Insect,'@val;
 		bonus2 bMagicAddRace,Rct_Fish,'@val;
-		bonus2 bMagicAddRace,Rct_Demon,'@val;
+		bonus2 bMagicAddRace,Rct_DemiHuman,'@val;
 		bonus2 bMagicAddRace,Rct_Human,'@val;
 		bonus2 bMagicAddRace,Rct_Angel,'@val;
 		bonus2 bMagicAddRace,Rct_Dragon,'@val;
@@ -221,7 +222,7 @@ function	script	IgnoreMDefRct_All	{
 }
 
 //============================================================
-//全ての種族のDEF 防御力 '@val%無視
+//[全ての種族]のモンスターのDEF 防御力 '@val%無視 プレイヤーとドラム形除く
 //{ callfunc "bonus2bIgnoreDefRace",'@val; }
 
 function	script	bonus2bIgnoreDefRace	{
@@ -233,7 +234,7 @@ function	script	bonus2bIgnoreDefRace	{
 		bonus2 bIgnoreDefRace,Rct_Insect,'@val;
 		bonus2 bIgnoreDefRace,Rct_Fish,'@val;
 		bonus2 bIgnoreDefRace,Rct_Demon,'@val;
-		bonus2 bIgnoreDefRace,Rct_Human,'@val;
+		bonus2 bIgnoreDefRace,Rct_DemiHuman,'@val;
 		bonus2 bIgnoreDefRace,Rct_Angel,'@val;
 		bonus2 bIgnoreDefRace,Rct_Dragon,'@val;
 
@@ -241,7 +242,7 @@ function	script	bonus2bIgnoreDefRace	{
 }
 
 //============================================================
-//全ての種族のMDEF 魔法防御力'@val%無視
+//[全ての種族]のモンスターのMDEF 魔法防御力'@val%無視 プレイヤーとドラム形除く
 //{ callfunc "bonus2bIgnoreMdefRace",'@val; }
 
 function	script	bonus2bIgnoreMdefRace	{
@@ -253,7 +254,7 @@ function	script	bonus2bIgnoreMdefRace	{
 		bonus2 bIgnoreMdefRace,Rct_Insect,'@val;
 		bonus2 bIgnoreMdefRace,Rct_Fish,'@val;
 		bonus2 bIgnoreMdefRace,Rct_Demon,'@val;
-		bonus2 bIgnoreMdefRace,Rct_Human,'@val;
+		bonus2 bIgnoreMdefRace,Rct_DemiHuman,'@val;
 		bonus2 bIgnoreMdefRace,Rct_Angel,'@val;
 		bonus2 bIgnoreMdefRace,Rct_Dragon,'@val;
 	return;
