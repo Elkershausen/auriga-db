@@ -1,3 +1,8 @@
+20240519	patch0181
+・item_dn.txt全体の記号記述の大規模な最適化実施
+
+・Baselevel BaseLevel 記述のぶれ修正しBaseLevelに統一
+
 20240518	patch0180
 ・29182-29547 ミス修正と最適化
 
