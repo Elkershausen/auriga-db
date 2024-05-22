@@ -2,7 +2,7 @@
 //ジュノーの北東に配置
 //ミミミミッションNPC ミッション転送員NPC スキルステータスリセットNPC 分析エンチャントNPC 分析精錬NPC 転職・転生サポート員NPC ミッション転送員NPCの土台として実装
 
-yuno.gat,201,325,5	script	調査風雷猫	10164,{
+yuno.gat,201,325,5	script	調査風来猫	10164,{
 	set '@max,100;
 	set '@costitem,7347;
 	set '@getitemA,23935;
@@ -197,15 +197,8 @@ yuno.gat,201,325,5	script	調査風雷猫	10164,{
 	}
 }
 //騎乗は未実装
-yuno.gat,205,307,4	script	騎乗レンタル	105,{}
-yuno.gat,202,302,4	script	倉庫	464,{
-	if(Zeny < 40) {
-	mes "ゼニーが足りません";
-	close;
-	}
-	set Zeny,Zeny-40;
-	openstorage;
-}
+
+//yuno.gat,202,302,4	script	倉庫	464,{//npc_signboard.scに実装//}
 yuno.gat,205,316,4	script	カプラ職員	112,{
 	cutin "kafra_06",2;
 	set '@code,8;
@@ -268,4 +261,18 @@ yuno.gat,197,291,3	script	ホルグレン	85,{
 	callfunc "Refine1","ホルグレン",21,23;
 	close;
 }
-yuno.gat,192,291,4	shop	道具商人	84,1750,611,501,502,503,504,506,645,656,601,602;
+yuno.gat,192,291,4	shop	道具商人	84,1750,611,501,502,503,504,506,645,656,601,602
+
+//実装作業中
+yuno.gat,205,307,4	script	騎乗レンタル	105,{
+
+	set '@Falcon,2500;
+	mes "[騎乗レンタル]";
+	mes "ここでは各種乗り物を";
+	mes "レンタルします";
+	next;
+	switch(select("ファルコン","ペコペコレンタル","ウォーグ","魔導ギア")) {
+	
+	}
+	close;
+}

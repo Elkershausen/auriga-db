@@ -1,44 +1,9 @@
+//20240522 [全ての種族]に全対応 410014 410015 #コル・コアヘッドフォン# 追記
 //20240518 1549対応
 //20240507 防御無視 [一般・ボスモンスター][すべての種族]用ボーナス追加
 //20240427 312417#増幅された怨望#セット追記 テスト用設定追加 サンプル追記
 //20240426 反射ダメージ軽減(ロイヤル系) 310760#王の神威# 300314#理性と記憶の残滓# セット効果追記
 //20240415 19108#ワイルドポリンライダー#追加
-
-//============================================================
-//テスト用func スクリプト
-//{ callfunc "test",'@flag,'@val; }
-//STR+5 INT+5 LUK+5 ---- { callfunc "test",(1+8+32),5; } or { callfunc "test",41,5; }
-//[HP+精錬値*10% SP+精錬値*10%] ---- { callfunc "test",(64+128),10*getequiprefinerycnt(); } or { callfunc "test",192,10*getequiprefinerycnt(); }
-
-function	script	test	{
-	set '@flag,getarg(0);
-	set '@val,getarg(1);
-	if('@flag&1) {
-	bonus bStr,'@val;
-	}
-	if('@flag&2) {
-	bonus bAgi,'@val;
-	}
-	if('@flag&4) {
-	bonus bVit,'@val;
-	}
-	if('@flag&8) {
-	bonus bInt,'@val;
-	}
-	if('@flag&16) {
-	bonus bDex,'@val;
-	}
-	if('@flag&32) {
-	bonus bLuk,'@val;
-	}
-	if('@flag&64) {
-	bonus bMaxHPrate,'@val;
-	}
-	if('@flag&128) {
-	bonus bMaxSPrate,'@val;
-	}
-	return;
-}
 
 //============================================================
 // 巨大なハエの羽
@@ -174,9 +139,9 @@ function	script	MeleeRct_All	{
 		bonus2 bAddRace,Rct_Insect,'@val;
 		bonus2 bAddRace,Rct_Fish,'@val;
 		bonus2 bAddRace,Rct_Demon,'@val;
-		bonus2 bAddRace,Rct_DemiHuman,'@val;
 		bonus2 bAddRace,Rct_Angel,'@val;
 		bonus2 bAddRace,Rct_Dragon,'@val;
+		bonus2 bAddRace,Rct_DemiHuman,'@val;
 	return;
 }
 
@@ -192,10 +157,10 @@ function	script	MagicRct_All	{
 		bonus2 bMagicAddRace,Rct_Plant,'@val;
 		bonus2 bMagicAddRace,Rct_Insect,'@val;
 		bonus2 bMagicAddRace,Rct_Fish,'@val;
-		bonus2 bMagicAddRace,Rct_DemiHuman,'@val;
-		bonus2 bMagicAddRace,Rct_Human,'@val;
+		bonus2 bMagicAddRace,Rct_Demon,'@val;
 		bonus2 bMagicAddRace,Rct_Angel,'@val;
 		bonus2 bMagicAddRace,Rct_Dragon,'@val;
+		bonus2 bMagicAddRace,Rct_DemiHuman,'@val;
 	return;
 }
 
@@ -205,8 +170,8 @@ function	script	MagicRct_All	{
 
 function	script	IgnoreDefRct_All	{
 	set '@val,getarg(0);
-		bonus2 bIgnoreDefRace,Rct_Boss,'@val;
-		bonus2 bIgnoreDefRace,Rct_NonBoss,'@val;
+	bonus2 bIgnoreDefRace,Rct_Boss,'@val;
+	bonus2 bIgnoreDefRace,Rct_NonBoss,'@val;
 	return;
 }
 
@@ -216,8 +181,8 @@ function	script	IgnoreDefRct_All	{
 
 function	script	IgnoreMDefRct_All	{
 	set '@val,getarg(0);
-		bonus2 bIgnoreMdefRace,Rct_Boss,'@val;
-		bonus2 bIgnoreMdefRace,Rct_NonBoss,'@val;
+	bonus2 bIgnoreMdefRace,Rct_Boss,'@val;
+	bonus2 bIgnoreMdefRace,Rct_NonBoss,'@val;
 	return;
 }
 
@@ -234,9 +199,9 @@ function	script	bonus2bIgnoreDefRace	{
 		bonus2 bIgnoreDefRace,Rct_Insect,'@val;
 		bonus2 bIgnoreDefRace,Rct_Fish,'@val;
 		bonus2 bIgnoreDefRace,Rct_Demon,'@val;
-		bonus2 bIgnoreDefRace,Rct_DemiHuman,'@val;
 		bonus2 bIgnoreDefRace,Rct_Angel,'@val;
 		bonus2 bIgnoreDefRace,Rct_Dragon,'@val;
+		bonus2 bIgnoreDefRace,Rct_DemiHuman,'@val;
 
 	return;
 }
@@ -254,9 +219,47 @@ function	script	bonus2bIgnoreMdefRace	{
 		bonus2 bIgnoreMdefRace,Rct_Insect,'@val;
 		bonus2 bIgnoreMdefRace,Rct_Fish,'@val;
 		bonus2 bIgnoreMdefRace,Rct_Demon,'@val;
-		bonus2 bIgnoreMdefRace,Rct_DemiHuman,'@val;
 		bonus2 bIgnoreMdefRace,Rct_Angel,'@val;
 		bonus2 bIgnoreMdefRace,Rct_Dragon,'@val;
+		bonus2 bIgnoreMdefRace,Rct_DemiHuman,'@val;
+	return;
+}
+
+//============================================================
+//[すべての種族]のモンスターから受ける物理ダメージ '@val%減 プレイヤー形とドラム形除く
+//{ callfunc "bonus2bSubRace",'@val; }
+
+function	script	bonus2 bSubRace	{
+	set '@val,getarg(0);
+		bonus2 bSubRace,Rct_Formless,'@val;
+		bonus2 bSubRace,Rct_Undead,'@val;
+		bonus2 bSubRace,Rct_Brute,'@val;
+		bonus2 bSubRace,Rct_Plant,'@val;
+		bonus2 bSubRace,Rct_Insect,'@val;
+		bonus2 bSubRace,Rct_Fish,'@val;
+		bonus2 bSubRace,Rct_Demon,'@val;
+		bonus2 bSubRace,Rct_Angel,'@val;
+		bonus2 bSubRace,Rct_Dragon,'@val;
+		bonus2 bSubRace,Rct_DemiHuman,'@val;
+	return;
+}
+
+//============================================================
+//[すべての種族]のモンスターから受ける魔法ダメージ '@val%減 プレイヤー形とドラム形除く
+//{ callfunc "bonus2bMagicSubRace",'@val; }
+
+function	script	bonus2bMagicSubRace	{
+	set '@val,getarg(0);
+		bonus2 bMagicSubRace,Rct_Formless,'@val;
+		bonus2 bMagicSubRace,Rct_Undead,'@val;
+		bonus2 bMagicSubRace,Rct_Brute,'@val;
+		bonus2 bMagicSubRace,Rct_Plant,'@val;
+		bonus2 bMagicSubRace,Rct_Insect,'@val;
+		bonus2 bMagicSubRace,Rct_Fish,'@val;
+		bonus2 bMagicSubRace,Rct_Demon,'@val;
+		bonus2 bMagicSubRace,Rct_Angel,'@val;
+		bonus2 bMagicSubRace,Rct_Dragon,'@val;
+		bonus2 bMagicSubRace,Rct_DemiHuman,'@val;
 	return;
 }
 
@@ -374,21 +377,81 @@ if(equippeditem(312417)) {
 }
 //============================================================
 //410028#ワンダーエッグバスケット#
+//{ callfunc "Wonder_Egg_Basket_A"; }
+function	script	Wonder_Egg_Basket_A	{
+	bonus bBaseAtk,200;
+	bonus bMatk,200;
+	bonus bAllStatus,10;
+	return;
+}
+
+//{ callfunc "Wonder_Egg_Basket_B"; }
+function	script	Wonder_Egg_Basket_B	{
+	bonus bBaseAtk,200;
+	bonus bMatk,200;
+	bonus bAllStatus,10;
+	bonus2 bSubSize,Size_Small,10;
+	bonus2 bSubSize,Size_Medium,10;
+	bonus2 bSubSize,Size_Big,10;
+	bonus2 bMagicSubSize,Size_Small,10;
+	bonus2 bMagicSubSize,Size_Medium,10;
+	bonus2 bMagicSubSize,Size_Big,10;
+	return;
+}
+
+//{ callfunc "Wonder_Egg_Basket_C"; }
+function	script	Wonder_Egg_Basket_C	{
+	bonus bBaseAtk,200;
+	bonus bMatk,200;
+	bonus bDef,150;
+	bonus bMdef,15;
+	return;
+}
 
 //============================================================
-//410015#コル・コアヘッドフォン
+//410014 410015 #コル・コアヘッドフォン#
+//{ callfunc "Cor_Core_Headset"; }
+function	script	Cor_Core_Headset	{
+	if(equippeditem(410014) || equippeditem(410015)) {
+		bonus bBaseAtk,200;
+		bonus bMatk,200;
+		}
+	return;
+}
 
 //============================================================
 //27002#包装されたボックスカード#
+//{ callfunc "Box_card_A"; }
+function	script	Box_card_A	{
+	bonus3 bAddMonsterDropItem,664,Rct_Boss,15;
+	bonus3 bAddMonsterDropItem,664,Rct_NonBoss,15;
+	bonus3 bAddMonsterDropItem,665,Rct_Boss,15;
+	bonus3 bAddMonsterDropItem,665,Rct_NonBoss,15;
+	bonus3 bAddMonsterDropItem,666,Rct_Boss,15;
+	bonus3 bAddMonsterDropItem,666,Rct_NonBoss,15;
+	return;
+}
+
+//{ callfunc "Box_card_B"; }
+function	script	Box_card_B	{
+	bonus3 bAddMonsterDropItem,664,Rct_Boss,30;
+	bonus3 bAddMonsterDropItem,664,Rct_NonBoss,30;
+	bonus3 bAddMonsterDropItem,665,Rct_Boss,30;
+	bonus3 bAddMonsterDropItem,665,Rct_NonBoss,30;
+	bonus3 bAddMonsterDropItem,666,Rct_Boss,30;
+	bonus3 bAddMonsterDropItem,666,Rct_NonBoss,30;
+	return;
+}
 
 //============================================================
 //27031#迷宮のバフォメットカード#
 
 //============================================================
-//27301#迷宮のドッペルゲンガーカード#
+//27032#迷宮のドラキュラカード#
 
 //============================================================
-//27032#迷宮のドラキュラカード#
+//27301#迷宮のドッペルゲンガーカード#
+
 
 //============================================================
 //bonus3 bAddMonsterDropItem
