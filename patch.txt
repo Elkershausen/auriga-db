@@ -14,6 +14,7 @@
 ・倉庫関連NPCを分離して実装(npc_melon.* npc_signboard.*
 ※signboard.lub の定義を土台に常設50zとイベント用40zでわけて実装
 
+・npcの間違い修正
 
 20240520	patch0182
 ・29547-29725 ミス修正と最適化

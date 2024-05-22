@@ -1,7 +1,7 @@
 //20240522 サインボードを土台に倉庫NPC実装
 
 -	script	倉庫#mimic50z	464,{
-	if(Zeny < 40) {
+	if(Zeny < 50) {
 	mes "ゼニーが足りません";
 	close;
 	}

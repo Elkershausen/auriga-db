@@ -229,7 +229,7 @@ function	script	bonus2bIgnoreMdefRace	{
 //[すべての種族]のモンスターから受ける物理ダメージ '@val%減 プレイヤー形とドラム形除く
 //{ callfunc "bonus2bSubRace",'@val; }
 
-function	script	bonus2 bSubRace	{
+function	script	bonus2bSubRace	{
 	set '@val,getarg(0);
 		bonus2 bSubRace,Rct_Formless,'@val;
 		bonus2 bSubRace,Rct_Undead,'@val;
