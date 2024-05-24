@@ -1,0 +1,2 @@
+ミス修正
+27031,card,迷宮のバフォメットカード,6,20,,10,,,,,,,2,,,,,{ /* ディーヴァ***セット効果起点 */ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; }

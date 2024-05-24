@@ -8046,7 +8046,7 @@
 27028,card,フレイムフリルドラカード,6,20,,10,,,,,,,136,,,,,{},{ if(readparam(bDex) >= 125) { bonus bAddLongWeaponDamage,4; } }
 27029,card,フレイムゴーレムカード,6,20,,10,,,,,,,2,,,,,{},{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; skill "SA_FLAMELAUNCHER",1; }
 27030,card,フレイムバグカード,6,20,,10,,,,,,,64,,,,,{},{ bonus2 bAddEleMagicDamageRate,Ele_Fire,3*getequiprefinerycnt(); }
-27031,card,迷宮のバフォメットカード,6,20,,10,,,,,,,2,,,,,{ /* ディーヴァ***セット効果起点 /* },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; }
+27031,card,迷宮のバフォメットカード,6,20,,10,,,,,,,2,,,,,{ /* ディーヴァ***セット効果起点 */ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; }
 27032,card,迷宮のドラキュラカード,6,20,,10,,,,,,,2,,,,,{ /* ミラージュ***セット効果起点 */ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; }
 27033,card,不滅の呪われた騎士カード,6,20,,10,,,,,,,64,,,,,{},{ bonus4 bAutoSpell,667,2,800,EAS_REVENGE|EAS_WEAPON|EAS_SHORT|EAS_LONG|EAS_MAGIC|EAS_NORMAL|EAS_SKILL|EAS_NOSP; if(equippeditem(27034)) { bonus2 bSubEle,Ele_Neutral,5; bonus4 bAutoSpell,667,2,1500,EAS_REVENGE|EAS_WEAPON|EAS_SHORT|EAS_LONG|EAS_MAGIC|EAS_NORMAL|EAS_SKILL|EAS_NOSP; } }
 27034,card,不滅のウィンドゴーストカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubEle,Ele_Neutral,15; bonus2 bAddEleMagicDamageRate,Ele_Wind,3*getequiprefinerycnt(); }
