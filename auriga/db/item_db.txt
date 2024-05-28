@@ -1,4 +1,4 @@
-//item_db.txt Auriga db_override patch1549+add 20240514 アップデート
+//item_db.txt Auriga db_override patch1549+add 20240528 アップデート
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript},{UnEquipScript}
 501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,1,,,{ itemheal rand(45,65),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(45,65)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(45,65)*(12/10),0; } },{}
 502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(105,145),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(105,145)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(105,145)*(12/10),0; } },{}
@@ -4396,6 +4396,7 @@
 10574,use,[2022年]ハロウィンチケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 25582,1,1,0,0,0,0,0,0,2419200; },{}
 10575,use,[2023年]特選ネコ缶(カニ)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 1000964,50,1,0,0,0,0,0,0,3715200; },{}
 10576,use,[2024年]特選ネコ缶(カニ)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240409 効果実装済み */ getitem2 1000964,1,1,0,0,0,0,0,0,3715200; },{}
+10577,use,[2024年]究極精錬お楽しみチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,604800; getitem2 1001223,1,1,0,0,0,0,0,0,604800; },{ /* 240528 効果実装済み */ }
 10598,use,[2020]BitCashチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 782,1; },{}
 10600,use,コスたまRoyal,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 10626,use,コスたまHairCollectionVII(暗色),2,0,,10,,,,,2074075135,2,,,1,,,{},{}
