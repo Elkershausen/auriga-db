@@ -1,3 +1,18 @@
+20240531	patch0191
+・28500-28506ミス修正と最適化
+
+・関連するセット効果の修正と最適化 コメント追加
+
+・readparam()の計算式で割るときに()でくくり計算を優先させるところを()でくくらなかったために計算結果が刻まれて出てくるミスを修正
+例
+13150,weapon,ブランチ,15,3000,,500,50:0,,5,3,268435456,2,34,1,1,18,1,{},{ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*(readparam(bInt)/10); if(readparam(bInt) >= 110) { bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",30; } }
+
+- bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*readparam(bInt)/10;
++ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*(readparam(bInt)/10);
+()をつけないと Intが2でも 7*2/10 = 14/10 = 1.4 = 1 となりInt10刻みで+7される効果にならない
+
+※同様のミスは精錬値とベースレベルのステータス計算でも出現するため優先して修正します
+
 20240530	patch0190
 ・28373-28499 28920 ミス修正と最適化
 
