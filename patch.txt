@@ -1,3 +1,8 @@
+20240603	patch0192
+・getequiprefinerycnt()/n getskilllv(" ")/n BaseLevel/n スキルレベル計算式で割るときに()でくくり計算を優先させるところを()でくくらなかったために計算結果が刻まれて出てくるミスを修正
+
+・if(getequipid(7) == || getequipid(8) == ) {} を使っているアクセサリーセット効果を equippeditem() に最適化
+
 20240531	patch0191
 ・28500-28506ミス修正と最適化
 

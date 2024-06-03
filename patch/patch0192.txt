@@ -1,0 +1,3 @@
+getequiprefinerycnt()/n getskilllv(" ")/n BaseLevel/n 計算式を修正
+
+if(getequipid(7) == || getequipid(8) == ) {} を使っているアクセサリーセット効果を equippeditem() に最適化
