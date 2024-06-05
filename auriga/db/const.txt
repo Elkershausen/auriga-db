@@ -1,4 +1,4 @@
-// 職業定義値 patch1549対応 20240515 アップデート
+// 職業定義値 patch1549 + add 20240604 アップデート
 Job_Novice		0
 Job_Swordman		1
 Job_Magician		2
@@ -1129,4 +1129,17 @@ HAT_EF_black_thunder		219
 HAT_EF_C_ROS2023_Cape_2		220
 HAT_EF_C_15th_Nov_Helmet	221
 HAT_EF_Cosmic_Connection	222
-
+HAT_EF_C_Baby_Gloom		223
+HAT_EF_WinterNightBells		224
+HAT_EF_NightSkyOfRutie		225
+FOOTPRINT_EF_BASE		226
+FOOTPRINT_EF_STR_BASE		227
+FOOTPRINT_EF_purplestar		228
+FOOTPRINT_EF_yellowstar		229
+FOOTPRINT_EF_redstar		230
+HAT_EF_RAINBOW_POISON_MASTER		231
+HAT_EF_C_Ancient_Rune		232
+HAT_EF_C_Dragon_Green_Aura		233
+HAT_EF_C_Dragon_Red_Aura		234
+HAT_EF_C_Dragon_Yellow_Aura		235
+HAT_EF_Interdimensional_Rift		236

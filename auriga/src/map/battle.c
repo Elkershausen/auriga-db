@@ -277,8 +277,7 @@ int battle_damage(struct block_list *bl,struct block_list *target,int damage,int
 		if((!(mode&MD_BOSS) && atn_rand()%10000 < sd->weapon_coma_ele[ele]) ||
 		   (!(mode&MD_BOSS) && atn_rand()%10000 < sd->weapon_coma_race[race]) ||
 		   (mode&MD_BOSS && atn_rand()%10000 < sd->weapon_coma_race[RCT_BOSS]) ||
-		   (!(mode&MD_BOSS) && atn_rand()%10000 < sd->weapon_coma_race[RCT_NONBOSS]) ||
-		   (tsd && atn_rand()%10000 < sd->weapon_coma_race[RCT_PLAYER]))
+		   (!(mode&MD_BOSS) && atn_rand()%10000 < sd->weapon_coma_race[RCT_NONBOSS]))
 		{
 			int hp = status_get_hp(target);
 			if(tsd)       pc_damage(bl,tsd,hp);
@@ -290,8 +289,7 @@ int battle_damage(struct block_list *bl,struct block_list *target,int damage,int
 		else if((!(mode&MD_BOSS) && atn_rand()%10000 < sd->weapon_coma_ele2[ele]) ||
 			(!(mode&MD_BOSS) && atn_rand()%10000 < sd->weapon_coma_race2[race]) ||
 			(mode&MD_BOSS && atn_rand()%10000 < sd->weapon_coma_race2[RCT_BOSS]) ||
-			(!(mode&MD_BOSS) && atn_rand()%10000 < sd->weapon_coma_race2[RCT_NONBOSS]) ||
-			(tsd && atn_rand()%10000 < sd->weapon_coma_race[RCT_PLAYER]))
+			(!(mode&MD_BOSS) && atn_rand()%10000 < sd->weapon_coma_race2[RCT_NONBOSS]))
 		{
 			int hp = status_get_hp(target) - 1;
 			if(tsd)       pc_damage(bl,tsd,hp);
@@ -463,6 +461,9 @@ static int battle_calc_damage(struct block_list *src, struct block_list *bl, int
 				(!(flag&BF_SKILL) && status_get_attack_element(src) != ELE_GHOST) )
 			damage = 0;
 		}
+
+		if( sc->data[SC_GRAVITYCONTROL].timer != -1 )
+			damage = 0;
 
 		if(damage > 0) {
 			int ele = (flag&BF_SKILL)? skill_get_pl(skill_num): status_get_attack_element(src);
@@ -689,6 +690,18 @@ static int battle_calc_damage(struct block_list *src, struct block_list *bl, int
 				damage = -scd->val2;
 			if(scd->val2 <= 0)
 				status_change_end(bl, SC_TUNAPARTY, -1);
+		}
+
+		// 次元の書(魔法盾)
+		if(sc->data[SC_DIMENSION2].timer != -1 && damage > 0) {
+			struct status_change_data *scd = &sc->data[SC_DIMENSION2];
+			scd->val2 -= damage;
+			if(scd->val2 >= 0)
+				damage = 0;
+			else
+				damage = -scd->val2;
+			if(scd->val2 <= 0)
+				status_change_end(bl, SC_DIMENSION2, -1);
 		}
 
 		// ダーククロー
@@ -959,6 +972,11 @@ static int battle_calc_damage(struct block_list *src, struct block_list *bl, int
 			}
 		}
 #endif
+		// 朔月脚
+		if(sc->data[SC_NEWMOON].timer != -1 && damage > 0) {
+			if((--sc->data[SC_NEWMOON].val2) <= 0)
+				status_change_end(bl, SC_NEWMOON, -1);
+		}
 		// うずくまる
 		if(sc->data[SC_SU_STOOP].timer != -1) {
 			// ストーンスキン、アンチマジックと競合しない
@@ -2024,7 +2042,10 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 		// 連撃が発動してなくて、通常攻撃・オートカウンター・シャープシューティング・影斬りならば
 		int cri = status_get_critical(src);
 		if(src_sd) {
-			cri += src_sd->critical_race[t_race];
+			if(target_sd && !pc_isdoram(target_sd))
+				cri += src_sd->critical_race[RCT_DEMIHUMAN];
+			else if(t_race < RCT_ALL)
+				cri += src_sd->critical_race[t_race];
 			if(src_sd->state.arrow_atk)
 				cri += src_sd->arrow_cri;
 			if(src_sd->status.weapon == WT_KATAR)
@@ -2039,12 +2060,17 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 			cri = cri * battle_config.enemy_critical_rate / 100;
 			if(cri < 1) cri = 1;
 		}
+		if(src_sd) {
+			if(target_sd && !pc_isdoram(target_sd))
+				cri += cri * (100 + src_sd->critical_race_rate[RCT_DEMIHUMAN]) / 100;
+			else if(t_race < RCT_ALL)
+				cri += cri * (100 + src_sd->critical_race_rate[t_race]) / 100;
+			if(cri < 1) cri = 1;
+		}
 		if(t_sc && t_sc->data[SC_SLEEP].timer != -1)
 			cri <<= 1;		// 睡眠中はクリティカルが倍に
 		if(sc && sc->data[SC_CAMOUFLAGE].timer != -1 && sc->data[SC_CAMOUFLAGE].val3 >= 0)	// カモフラージュ
 			cri += 1000 - (10 - sc->data[SC_CAMOUFLAGE].val3) * 100;
-		if(src_sd && pc_isdoram(src_sd) && t_race == RCT_HUMAN)
-			cri += 20;
 		if(calc_flag.autocounter)
 			cri = 1000;
 
@@ -2554,10 +2580,6 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 				// bIgnoreDef系判定
 				ignored_rate  = ignored_rate  - src_sd->ignore_def_ele[t_ele]  - src_sd->ignore_def_race[t_race]  - src_sd->ignore_def_enemy[t_enemy];
 				ignored_rate_ = ignored_rate_ - src_sd->ignore_def_ele_[t_ele] - src_sd->ignore_def_race_[t_race] - src_sd->ignore_def_enemy_[t_enemy];
-				if(target_sd) {
-					ignored_rate  -= src_sd->ignore_def_race[RCT_PLAYER];
-					ignored_rate_ -= src_sd->ignore_def_race_[RCT_PLAYER];
-				}
 				if(t_mode & MD_BOSS) {
 					ignored_rate  -= src_sd->ignore_def_race[RCT_BOSS];
 					ignored_rate_ -= src_sd->ignore_def_race_[RCT_BOSS];
@@ -2575,7 +2597,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 				// bDefRatioATK系判定
 				if(skill_num != AM_ACIDTERROR && ignored_rate > 0) {
 					int def_ratio = 0;
-					int mask = (1<<t_race) | ( (t_mode&MD_BOSS)? (1<<RCT_BOSS): (1<<RCT_NONBOSS))  | ( (target_sd)? (1<<RCT_PLAYER): 0 );
+					int mask = (1<<t_race) | ( (t_mode&MD_BOSS)? (1<<RCT_BOSS): (1<<RCT_NONBOSS));
 					int def_fix = t_def1 * ignored_rate / 100;
 
 					if(src_sd->def_ratio_atk_ele & (1<<t_ele) || src_sd->def_ratio_atk_race & mask || src_sd->def_ratio_atk_enemy & (1<<t_enemy) ||
@@ -2658,28 +2680,20 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 		if( src_sd && wd.damage > 0 && calc_flag.rh ) {
 			if(!src_sd->state.arrow_atk) {	// 弓矢以外
 				if(!battle_config.left_cardfix_to_right) {	// 左手カード補正設定無し
-					if(target_sd)
-						wd.damage = wd.damage*(100+src_sd->addrace[t_race]+src_sd->addrace[RCT_PLAYER])/100;	// 種族によるダメージ修正
-					else
-						wd.damage = wd.damage*(100+src_sd->addsize[t_size])/100;	// サイズによるダメージ修正
+					wd.damage = wd.damage*(100+src_sd->addrace[t_race])/100;	// 種族によるダメージ修正
+					wd.damage = wd.damage*(100+src_sd->addsize[t_size])/100;	// サイズによるダメージ修正
 					wd.damage = wd.damage*(100+src_sd->addele[t_ele])/100;	// 属性によるダメージ修正
 					wd.damage = wd.damage*(100+src_sd->addenemy[t_enemy])/100;	// 敵タイプによるダメージ修正
 					wd.damage = wd.damage*(100+src_sd->addgroup[t_group])/100;	// グループによるダメージ修正
 				} else {
-					if(target_sd)
-						wd.damage = wd.damage*(100+src_sd->addrace[t_race]+src_sd->addrace_[t_race]+src_sd->addrace[RCT_PLAYER]+src_sd->addrace_[RCT_PLAYER])/100;		// 種族によるダメージ修正(左手による追加あり)
-					else
-						wd.damage = wd.damage*(100+src_sd->addrace[t_race]+src_sd->addrace_[t_race])/100;		// 種族によるダメージ修正(左手による追加あり)
+					wd.damage = wd.damage*(100+src_sd->addrace[t_race]+src_sd->addrace_[t_race])/100;		// 種族によるダメージ修正(左手による追加あり)
 					wd.damage = wd.damage*(100+src_sd->addsize[t_size]+src_sd->addsize_[t_size])/100;		// サイズによるダメージ修正(左手による追加あり)
 					wd.damage = wd.damage*(100+src_sd->addele[t_ele]+src_sd->addele_[t_ele])/100;		// 属性によるダメージ修正(左手による追加あり)
 					wd.damage = wd.damage*(100+src_sd->addenemy[t_enemy]+src_sd->addenemy_[t_enemy])/100;	// 敵タイプによるダメージ修正(左手による追加あり)
 					wd.damage = wd.damage*(100+src_sd->addgroup[t_group]+src_sd->addgroup_[t_group])/100;	// グループによるダメージ修正(左手による追加あり)
 				}
 			} else { // 弓矢
-				if(target_sd)
-					wd.damage = wd.damage*(100+src_sd->addrace[t_race]+src_sd->arrow_addrace[t_race])/100;	// 種族によるダメージ修正(弓矢による追加あり)
-				else
-					wd.damage = wd.damage*(100+src_sd->addrace[t_race]+src_sd->arrow_addrace[t_race]+src_sd->addrace[RCT_PLAYER]+src_sd->arrow_addrace[RCT_PLAYER])/100;	// 種族によるダメージ修正(弓矢による追加あり)
+				wd.damage = wd.damage*(100+src_sd->addrace[t_race]+src_sd->arrow_addrace[t_race])/100;	// 種族によるダメージ修正(弓矢による追加あり)
 				wd.damage = wd.damage*(100+src_sd->addsize[t_size]+src_sd->arrow_addsize[t_size])/100;	// サイズによるダメージ修正(弓矢による追加あり)
 				wd.damage = wd.damage*(100+src_sd->addele[t_ele]+src_sd->arrow_addele[t_ele])/100;		// 属性によるダメージ修正(弓矢による追加あり)
 				wd.damage = wd.damage*(100+src_sd->addenemy[t_enemy]+src_sd->arrow_addenemy[t_enemy])/100;	// 敵タイプによるダメージ修正(弓矢による追加あり)
@@ -2722,10 +2736,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 		/* （RE）カードによる左手ダメージ追加処理 */
 		if( src_sd && wd.damage2 > 0 && calc_flag.lh ) {
 //			if(!battle_config.left_cardfix_to_right) {	// 左手カード補正設定無し
-				if(target_sd)
-					wd.damage2 = wd.damage2*(100+src_sd->addrace[t_race]+src_sd->addrace_[t_race]+src_sd->addrace[RCT_PLAYER]+src_sd->addrace_[RCT_PLAYER])/100;	// 種族によるダメージ修正左手
-				else
-					wd.damage2 = wd.damage2*(100+src_sd->addrace[t_race]+src_sd->addrace_[t_race])/100;	// 種族によるダメージ修正左手
+				wd.damage2 = wd.damage2*(100+src_sd->addrace[t_race]+src_sd->addrace_[t_race])/100;	// 種族によるダメージ修正左手
 				wd.damage2 = wd.damage2*(100+src_sd->addsize[t_size]+src_sd->addsize_[t_size])/100;	// サイズによるダメージ修正左手
 				wd.damage2 = wd.damage2*(100+src_sd->addele[t_ele]+src_sd->addele_[t_ele])/100;	// 属性によるダメージ修正左手
 				wd.damage2 = wd.damage2*(100+src_sd->addenemy[t_enemy]+src_sd->addenemy_[t_enemy])/100;	// 敵タイプによるダメージ修正左手
@@ -2799,14 +2810,14 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 		}
 
 		/* （RE）属性の適用 */
-		if(skill_num != MO_EXTREMITYFIST && skill_num != NJ_ISSEN) {
+		if(skill_num != MO_EXTREMITYFIST && skill_num != NJ_ISSEN && skill_num != SJ_NOVAEXPLOSING) {
 			wd.damage = battle_attr_fix(wd.damage, s_ele, status_get_element(target));
 			if(calc_flag.lh)
 				wd.damage2 = battle_attr_fix(wd.damage2, s_ele_, status_get_element(target));
 		}
 
 		/* （RE）属性補正 */
-		if( (sc || t_sc) && (wd.damage > 0 || wd.damage2 > 0) && skill_num != MO_EXTREMITYFIST && skill_num != NJ_ISSEN) {
+		if( (sc || t_sc) && (wd.damage > 0 || wd.damage2 > 0) && skill_num != MO_EXTREMITYFIST && skill_num != NJ_ISSEN && skill_num != SJ_NOVAEXPLOSING) {
 			cardfix = 100;
 			if(sc) {
 				// ボルケーノ
@@ -2984,18 +2995,10 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 		if( target_sd && (wd.damage > 0 || wd.damage2 > 0) && skill_num != CR_GRANDCROSS && skill_num != NPC_GRANDDARKNESS && skill_num != NPC_CRITICALSLASH && skill_num != NPC_EARTHQUAKE) {	// 対象がPCの場合
 			int s_race  = status_get_race(src);
 			cardfix = 100;
-			if(src_sd) {
-				if(t_sc && t_sc->data[SC_ANTI_M_BLAST].timer != -1)
-					cardfix = cardfix*(100-target_sd->subrace[s_race]-target_sd->subrace[RCT_PLAYER]-t_sc->data[SC_ANTI_M_BLAST].val2)/100;			// 種族によるダメージ耐性
-				else
-					cardfix = cardfix*(100-target_sd->subrace[s_race]-target_sd->subrace[RCT_PLAYER])/100;			// 種族によるダメージ耐性
-			}
+			if(t_sc && t_sc->data[SC_ANTI_M_BLAST].timer != -1)
+				cardfix = cardfix*(100-target_sd->subrace[s_race]-t_sc->data[SC_ANTI_M_BLAST].val2)/100;			// 種族によるダメージ耐性
 			else
 				cardfix = cardfix*(100-target_sd->subrace[s_race])/100;			// 種族によるダメージ耐性
-			if(!src_sd && pc_isdoram(target_sd) && s_race == RCT_HUMAN)
-				cardfix = cardfix*110/100;
-			else if(src_sd && pc_isdoram(target_sd))
-				cardfix = cardfix*110/100;
 			DMG_FIX( cardfix, 100 );	// カード補正によるダメージ減少
 		}
 
@@ -3064,6 +3067,10 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 			if(sc->data[SC_HEAT_BARREL].timer != -1)
 				add_rate += sc->data[SC_HEAT_BARREL].val3;
 		}
+		// ドラゴノロジー
+		if(src_sd && t_race == RCT_DRAGON && (skill = pc_checkskill(src_sd,SA_DRAGONOLOGY)) > 0)
+			add_rate += skill*4;
+
 #ifndef PRE_RENEWAL
 		switch( skill_num ) {
 		case NJ_SYURIKEN:	// 手裏剣投げ
@@ -4562,6 +4569,51 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 		case RL_FIRE_RAIN:		// ファイアーレイン
 			DMG_FIX( 500 + 500 * skill_lv, 100 );
 			break;
+		case SJ_PROMINENCEKICK:	// 紅焔脚
+			DMG_FIX( 650 + 50 * skill_lv, 100 );
+			break;
+		case SJ_SOLARBURST:	// 太陽爆発
+			{
+				int rate = ( 1000 + 220 * skill_lv ) * status_get_lv(src) / 100;
+				if(sc && sc->data[SC_LIGHTOFSUN].timer != -1 ) {
+					rate += ( rate * sc->data[SC_LIGHTOFSUN].val2 ) / 100;
+				}
+				DMG_FIX( rate, 100 );
+			}
+			break;
+		case SJ_NEWMOONKICK:	// 朔月脚
+			DMG_FIX( 1650 + 50 * skill_lv, 100 );
+			break;
+		case SJ_FULLMOONKICK:	// 満月脚
+			{
+				int rate = ( 500 + 150 * skill_lv ) * status_get_lv(src) / 100;
+				if(sc && sc->data[SC_LIGHTOFMOON].timer != -1 ) {
+					rate += ( rate * sc->data[SC_LIGHTOFMOON].val2 ) / 100;
+				}
+				DMG_FIX( rate, 100 );
+			}
+			break;
+		case SJ_FLASHKICK:	// 閃光脚
+			break;
+		case SJ_FALLINGSTAR_ATK:	// 流星落下
+		case SJ_FALLINGSTAR_ATK2:
+			{
+				int rate = ( 100 + 100 * skill_lv ) * status_get_lv(src) / 100;
+				if (sc && sc->data[SC_LIGHTOFSTAR].timer != -1 )
+					rate += ( rate * sc->data[SC_LIGHTOFSTAR].val2 ) / 100;
+				DMG_FIX( rate, 100 );
+			}
+			break;
+		case SJ_STAREMPEROR:		// 星帝降臨
+			DMG_FIX( 1500 + 500 * skill_lv, 100 );
+			break;
+		case SJ_NOVAEXPLOSING:	// 新星爆発
+			DMG_FIX( 500 + 500 * skill_lv, 100 );
+			DMG_ADD(status_get_max_hp(src) * skill_lv / 5  + status_get_max_sp(src) * skill_lv * 2);
+			break;
+		case SJ_BOOKOFCREATINGSTAR:	// 創星の書
+			DMG_FIX( 500 + 500 * skill_lv, 100 );
+			break;
 		case SU_BITE:	// かみつく
 			if(status_get_hp(target) / status_get_max_hp(target) * 100 <= 70) {
 				DMG_FIX( 1500, 100 );
@@ -4735,10 +4787,6 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 				// bIgnoreDef系判定
 				ignored_rate  = ignored_rate  - src_sd->ignore_def_ele[t_ele]  - src_sd->ignore_def_race[t_race]  - src_sd->ignore_def_enemy[t_enemy];
 				ignored_rate_ = ignored_rate_ - src_sd->ignore_def_ele_[t_ele] - src_sd->ignore_def_race_[t_race] - src_sd->ignore_def_enemy_[t_enemy];
-				if(target_sd) {
-					ignored_rate  -= src_sd->ignore_def_race[RCT_PLAYER];
-					ignored_rate_ -= src_sd->ignore_def_race_[RCT_PLAYER];
-				}
 				if(t_mode & MD_BOSS) {
 					ignored_rate  -= src_sd->ignore_def_race[RCT_BOSS];
 					ignored_rate_ -= src_sd->ignore_def_race_[RCT_BOSS];
@@ -4754,7 +4802,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 				}
 
 				if(skill_num != CR_GRANDCROSS && skill_num != AM_ACIDTERROR && skill_num != LG_RAYOFGENESIS) {
-					int mask = (1<<t_race) | ( (t_mode&MD_BOSS)? (1<<RCT_BOSS): (1<<RCT_NONBOSS))  | ( (target_sd)? (1<<RCT_PLAYER): 0 );
+					int mask = (1<<t_race) | ( (t_mode&MD_BOSS)? (1<<RCT_BOSS): (1<<RCT_NONBOSS));
 
 					// bDefRatioATK系、bIgnoreDef系が無いときのみ効果有り
 					if( !calc_flag.idef && ignored_rate == 100 && (src_sd->def_ratio_atk_ele & (1<<t_ele) || src_sd->def_ratio_atk_race & mask || src_sd->def_ratio_atk_enemy & (1<<t_enemy)) ) {
@@ -5277,29 +5325,20 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 		if(!calc_flag.nocardfix) {
 			if(!src_sd->state.arrow_atk) {	// 弓矢以外
 				if(!battle_config.left_cardfix_to_right) {	// 左手カード補正設定無し
-					if(target_sd)
-						cardfix = cardfix*(100+src_sd->addrace[t_race]+src_sd->addrace[RCT_PLAYER])/100;	// 種族によるダメージ修正
-					else
-						cardfix = cardfix*(100+src_sd->addrace[t_race])/100;	// 種族によるダメージ修正
+					cardfix = cardfix*(100+src_sd->addrace[t_race])/100;	// 種族によるダメージ修正
 					cardfix = cardfix*(100+src_sd->addele[t_ele])/100;	// 属性によるダメージ修正
 					cardfix = cardfix*(100+src_sd->addenemy[t_enemy])/100;	// 敵タイプによるダメージ修正
 					cardfix = cardfix*(100+src_sd->addsize[t_size])/100;	// サイズによるダメージ修正
 					cardfix = cardfix*(100+src_sd->addgroup[t_group])/100;	// グループによるダメージ修正
 				} else {
-					if(target_sd)
-						cardfix = cardfix*(100+src_sd->addrace[t_race]+src_sd->addrace_[t_race]+src_sd->addrace[RCT_PLAYER]+src_sd->addrace_[RCT_PLAYER])/100;		// 種族によるダメージ修正(左手による追加あり)
-					else
-						cardfix = cardfix*(100+src_sd->addrace[t_race]+src_sd->addrace_[t_race])/100;		// 種族によるダメージ修正(左手による追加あり)
+					cardfix = cardfix*(100+src_sd->addrace[t_race]+src_sd->addrace_[t_race])/100;		// 種族によるダメージ修正(左手による追加あり)
 					cardfix = cardfix*(100+src_sd->addele[t_ele]+src_sd->addele_[t_ele])/100;		// 属性によるダメージ修正(左手による追加あり)
 					cardfix = cardfix*(100+src_sd->addenemy[t_enemy]+src_sd->addenemy_[t_enemy])/100;	// 敵タイプによるダメージ修正(左手による追加あり)
 					cardfix = cardfix*(100+src_sd->addsize[t_size]+src_sd->addsize_[t_size])/100;		// サイズによるダメージ修正(左手による追加あり)
 					cardfix = cardfix*(100+src_sd->addgroup[t_group]+src_sd->addgroup_[t_group])/100;	// グループによるダメージ修正(左手による追加あり)
 				}
 			} else { // 弓矢
-				if(target_sd)
-					cardfix = cardfix*(100+src_sd->addrace[t_race]+src_sd->arrow_addrace[t_race]+src_sd->addrace[RCT_PLAYER]+src_sd->arrow_addrace[RCT_PLAYER])/100;	// 種族によるダメージ修正(弓矢による追加あり)
-				else
-					cardfix = cardfix*(100+src_sd->addrace[t_race]+src_sd->arrow_addrace[t_race])/100;	// 種族によるダメージ修正(弓矢による追加あり)
+				cardfix = cardfix*(100+src_sd->addrace[t_race]+src_sd->arrow_addrace[t_race])/100;	// 種族によるダメージ修正(弓矢による追加あり)
 				cardfix = cardfix*(100+src_sd->addele[t_ele]+src_sd->arrow_addele[t_ele])/100;		// 属性によるダメージ修正(弓矢による追加あり)
 				cardfix = cardfix*(100+src_sd->addenemy[t_enemy]+src_sd->arrow_addenemy[t_enemy])/100;	// 敵タイプによるダメージ修正(弓矢による追加あり)
 				cardfix = cardfix*(100+src_sd->addsize[t_size]+src_sd->arrow_addsize[t_size])/100;	// サイズによるダメージ修正(弓矢による追加あり)
@@ -5368,10 +5407,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 	if( src_sd && wd.damage2 > 0 && calc_flag.lh && !calc_flag.nocardfix ) {
 		cardfix = 100;
 		if(!battle_config.left_cardfix_to_right) {	// 左手カード補正設定無し
-			if(target_sd)
-				cardfix = cardfix*(100+src_sd->addrace_[t_race]+src_sd->addrace_[RCT_PLAYER])/100;	// 種族によるダメージ修正左手
-			else
-				cardfix = cardfix*(100+src_sd->addrace_[t_race])/100;	// 種族によるダメージ修正左手
+			cardfix = cardfix*(100+src_sd->addrace_[t_race])/100;	// 種族によるダメージ修正左手
 			cardfix = cardfix*(100+src_sd->addele_[t_ele])/100;	// 属性によるダメージ修正左手
 			cardfix = cardfix*(100+src_sd->addenemy_[t_enemy])/100;	// 敵タイプによるダメージ修正左手
 			cardfix = cardfix*(100+src_sd->addsize_[t_size])/100;	// サイズによるダメージ修正左手
@@ -5405,10 +5441,7 @@ static struct Damage battle_calc_weapon_attack(struct block_list *src,struct blo
 		int s_group = status_get_group(src);
 		int ele_type= status_get_elem_type(src);
 		cardfix = 100;
-		if(src_sd)
-			cardfix = cardfix*(100-target_sd->subrace[s_race]-target_sd->subrace[RCT_PLAYER])/100;			// 種族によるダメージ耐性
-		else
-			cardfix = cardfix*(100-target_sd->subrace[s_race])/100;			// 種族によるダメージ耐性
+		cardfix = cardfix*(100-target_sd->subrace[s_race])/100;			// 種族によるダメージ耐性
 		if (s_ele == ELE_NONE)
 			cardfix = cardfix*(100-target_sd->subele[ELE_NEUTRAL])/100;	// 属性無しの耐性は無属性
 		else
@@ -6185,10 +6218,7 @@ static struct Damage battle_calc_magic_attack(struct block_list *bl,struct block
 	/* （RE）カードによるダメージ追加処理 */
 	if(sd && mgd.damage > 0) {
 		cardfix = 100;
-		if(tsd)
-			cardfix = cardfix*(100+sd->magic_addrace[t_race]+sd->magic_addrace[RCT_PLAYER])/100;
-		else
-			cardfix = cardfix*(100+sd->magic_addrace[t_race])/100;
+		cardfix = cardfix*(100+sd->magic_addrace[t_race])/100;
 		cardfix = cardfix*(100+sd->magic_addele[t_ele])/100;
 		cardfix = cardfix*(100+sd->magic_addenemy[t_enemy])/100;
 		cardfix = cardfix*(100+sd->magic_addsize[t_size])/100;
@@ -6216,6 +6246,9 @@ static struct Damage battle_calc_magic_attack(struct block_list *bl,struct block
 		}
 #endif
 	}
+	// ドラゴノロジー
+	if(sd && t_race == RCT_DRAGON && pc_checkskill(sd,SA_DRAGONOLOGY) > 0)
+		add_rate += pc_checkskill(sd,SA_DRAGONOLOGY)*2;
 
 	/* ３．基本ダメージ計算(スキルごとに処理) */
 	switch(skill_num)
@@ -6705,7 +6738,7 @@ static struct Damage battle_calc_magic_attack(struct block_list *bl,struct block
 			normalmagic_flag = 0;
 			break;
 		case AB_JUDEX:		// ジュデックス
-			MATK_FIX( (360 + 48 * skill_lv) * status_get_lv(bl) / 100, 100 );
+			MATK_FIX( (450 + 30 * skill_lv) * status_get_lv(bl) / 100, 100 );
 			break;
 		case AB_ADORAMUS:	// アドラムス
 			MATK_FIX( (500 + 100 * skill_lv) * status_get_lv(bl) / 100, 100 );
@@ -6945,8 +6978,6 @@ static struct Damage battle_calc_magic_attack(struct block_list *bl,struct block
 		int rate = 100;
 		if(sd) {
 			rate = rate - sd->ignore_mdef_ele[t_ele] - sd->ignore_mdef_race[t_race] - sd->ignore_mdef_enemy[t_enemy];
-			if(tsd)
-				rate -= sd->ignore_mdef_race[RCT_PLAYER];
 			if(t_mode & MD_BOSS)
 				rate -= sd->ignore_mdef_race[RCT_BOSS];
 			else
@@ -7011,10 +7042,7 @@ static struct Damage battle_calc_magic_attack(struct block_list *bl,struct block
 	/* ５．カードによるダメージ追加処理 */
 	if(sd && mgd.damage > 0 && skill_num != NPC_EARTHQUAKE && skill_num != NPC_CANE_OF_EVIL_EYE) {
 		cardfix = 100;
-		if(tsd)
-			cardfix = cardfix*(100+sd->magic_addrace[t_race]+sd->magic_addrace[RCT_PLAYER])/100;
-		else
-			cardfix = cardfix*(100+sd->magic_addrace[t_race])/100;
+		cardfix = cardfix*(100+sd->magic_addrace[t_race])/100;
 		cardfix = cardfix*(100+sd->magic_addele[t_ele])/100;
 		cardfix = cardfix*(100+sd->magic_addenemy[t_enemy])/100;
 		cardfix = cardfix*(100+sd->magic_addsize[t_size])/100;
@@ -7058,10 +7086,7 @@ static struct Damage battle_calc_magic_attack(struct block_list *bl,struct block
 		cardfix = cardfix*(100-tsd->def_eleenemy[status_get_elem_type(bl)])/100;				// 敵属性によるダメージ耐性
 		cardfix = cardfix*(100-tsd->subenemy[status_get_enemy_type(bl)])/100;	// 敵タイプによるダメージ耐性
 		cardfix = cardfix*(100-tsd->magic_subsize[status_get_size(bl)])/100;		// サイズによるダメージ耐性
-		if(sd)
-			cardfix = cardfix*(100-tsd->magic_subrace[race]-tsd->magic_subrace[RCT_PLAYER])/100;
-		else
-			cardfix = cardfix*(100-tsd->magic_subrace[race])/100;
+		cardfix = cardfix*(100-tsd->magic_subrace[race])/100;
 		cardfix = cardfix*(100-tsd->long_attack_def_rate)/100;	// 遠距離耐性によるダメージ減少
 		if(status_get_mode(bl) & MD_BOSS)
 			cardfix = cardfix*(100-tsd->magic_subrace[RCT_BOSS])/100;
@@ -7517,10 +7542,7 @@ static struct Damage battle_calc_misc_attack(struct block_list *bl,struct block_
 			int cardfix = 100;
 			cardfix = cardfix*(100-tsd->subele[ele])/100;	// 属性によるダメージ耐性
 			cardfix = cardfix*(100-tsd->def_eleenemy[status_get_elem_type(bl)])/100;	// 敵属性によるダメージ耐性
-			if(sd)
-				cardfix = cardfix*(100-tsd->subrace[race]-tsd->subrace[RCT_PLAYER])/100;	// 種族によるダメージ耐性
-			else
-				cardfix = cardfix*(100-tsd->subrace[race])/100;	// 種族によるダメージ耐性
+			cardfix = cardfix*(100-tsd->subrace[race])/100;	// 種族によるダメージ耐性
 			cardfix = cardfix*(100-tsd->subenemy[status_get_enemy_type(bl)])/100;	// 敵タイプによるダメージ耐性
 			cardfix = cardfix*(100-tsd->subsize[status_get_size(bl)])/100;	// サイズによるダメージ耐性
 			cardfix = cardfix*(100-tsd->misc_def_rate)/100;
@@ -7973,6 +7995,10 @@ int battle_weapon_attack( struct block_list *src,struct block_list *target,unsig
 		if(sc->data[SC_UPHEAVAL].timer != -1 && (wd.flag&BF_SHORT) && (wd.damage > 0 || wd.damage2 > 0) && atn_rand()%10000 < 2500) {
 			skill_castend_damage_id(src,target,WZ_EARTHSPIKE,5,tick,flag);
 		}
+		// 流星落下
+		if (sc->data[SC_FALLINGSTAR].timer != -1 && (wd.flag&BF_WEAPON) && (wd.damage > 0 || wd.damage2 > 0) && atn_rand()%100 < sc->data[SC_FALLINGSTAR].val2) {
+			skill_castend_damage_id(src, target, SJ_FALLINGSTAR_ATK, sc->data[SC_FALLINGSTAR].val1, tick, flag);
+		}
 	}
 
 	// カードによるオートスペル
@@ -8394,6 +8420,22 @@ int battle_skill_attack(int attack_type,struct block_list* src,struct block_list
 				}
 				status_change_start(src,SC_COMBO,SR_FALLENEMPIRE,skilllv,0,0,delay,0);
 			}
+			if(delay > 0)
+			{
+				sd->ud.attackabletime = sd->ud.canmove_tick = tick + delay;
+				clif_combo_delay(src,delay);
+			}
+			break;
+		case SJ_PROMINENCEKICK:	// 紅焔脚
+			delay = 1000 - 4 * status_get_agi(src) - 2 * status_get_dex(src);
+			if( pc_checkskill(sd, SJ_SOLARBURST) )
+			{
+				delay += 300 * battle_config.combo_delay_rate /100;
+				// コンボ入力時間の最低保障追加
+				if(delay < battle_config.combo_delay_lower_limits)
+					delay = battle_config.combo_delay_lower_limits;
+			}
+			status_change_start(src,SC_COMBO,skillid,skilllv,0,0,delay,0);
 			if(delay > 0)
 			{
 				sd->ud.attackabletime = sd->ud.canmove_tick = tick + delay;
@@ -9647,6 +9689,7 @@ int battle_config_read(const char *cfgName)
 		{ "allow_skill_without_day",            &battle_config.allow_skill_without_day,            0        },
 		{ "save_feel_map",                      &battle_config.save_feel_map,                      1        },
 		{ "save_hate_mob",                      &battle_config.save_hate_mob,                      1        },
+		{ "allow_se_univ_skill_limit",          &battle_config.allow_se_univ_skill_limit,          1        },
 		{ "twilight_party_check",               &battle_config.twilight_party_check,               1        },
 		{ "alchemist_point_type",               &battle_config.alchemist_point_type,               0        },
 		{ "marionette_type",                    &battle_config.marionette_type,                    0        },

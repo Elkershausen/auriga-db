@@ -1,3 +1,14 @@
+20240606	patch0193
+・20240604 アップデート 実装(item_cardtype.* item_db.* item_db2.*)
+
+・hateffect 更新(const.* status.h)
+※accessoryid.lub accname.lub spriterobeid.lub spriterobename.lub tb_layer_priority.lub hateffectinfo.lub transparentitem.lub の更新が必要です
+※hateffectinfo.lub は[read datafolder first]が反映されないのでGRFを更新してください
+
+・28507-28560ミス修正と最適化
+
+・関連するセット効果の修正と最適化 コメント追加
+
 20240603	patch0192
 ・getequiprefinerycnt()/n getskilllv(" ")/n BaseLevel/n スキルレベル計算式で割るときに()でくくり計算を優先させるところを()でくくらなかったために計算結果が刻まれて出てくるミスを修正
 
