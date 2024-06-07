@@ -1,5 +1,5 @@
 20240607	patch0194
-・pc_ench_001.sc 実装
+・npc_ench_001.sc 実装
 ※どのようなNPCなのかはNPCを読んで下さい
 
 ・map.h hat_effectの上限数を更新(map.h
