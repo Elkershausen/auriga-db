@@ -1,3 +1,10 @@
+20240607	patch0194
+・pc_ench_001.sc 実装
+※どのようなNPCなのかはNPCを読んで下さい
+
+・map.h hat_effectの上限数を更新(map.h
+※更新しなくても一見動作していますが、設定が存在するので更新
+
 20240606	patch0193
 ・20240604 アップデート 実装(item_cardtype.* item_db.* item_db2.*)
 

@@ -1,0 +1,4 @@
+npc_ench_001.sc À‘•
+
+map.h
+#define MAX_HAT_EFFECT 236		//HAT_EFFECT‚ÌÅ‘å”
