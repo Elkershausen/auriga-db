@@ -1,3 +1,24 @@
+20240608	patch0195
+・28561-2828598 28920 ミス修正と最適化
+
+・関連するセット効果の修正と最適化 コメント追加
+
+・item_db2.txt 修正
+
+・iteminfo_en.lua 公開
+
+・classnum_db.txt 更新
+
+・db_editorレイヤー作成 Auriga item_db Editer Ver1.0.2.0用のMODファイル公開(class.conf const.conf item_bonus.conf scno.conf script.conf)
+※私が使っているものです
+※検索したら出てくるもので、他所で作られたものです
+※古いので6桁に対応していませんが、大体使えます
+※作業工程を減らすために最適化しています
+※4次職、拡張4次職まで対応しています
+
+・enchレイヤー作成 npc_ench_002.sc 追加
+※差分を追いかけながら比較するためのもので、今後revが進んだ分ファイルが増え、どの段階からでも差分を読めるようになります
+
 20240607	patch0194
 ・npc_ench_001.sc 実装
 ※どのようなNPCなのかはNPCを読んで下さい
