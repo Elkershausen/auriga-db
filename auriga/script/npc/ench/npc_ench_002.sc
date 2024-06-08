@@ -74,7 +74,7 @@ prontera.gat,155,150,4	script	ステータス表示	553,{
 }
 prontera.gat,153,150,4	script	エンチャントテスト	70,{
 	mes "[" +strnpcinfo(1)+ "]";
-	mes "対象装備をのIDを入力";
+	mes "対象装備のIDを入力";
 	next;
 	input '@item;
 	mes "[" +strnpcinfo(1)+ "]";
