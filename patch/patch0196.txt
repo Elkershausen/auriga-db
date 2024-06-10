@@ -1,0 +1,7 @@
+npc_ench_002.sc
+
+イラスト表示 cutin　追加
+
+時間表示関数　追加
+
+setarray　追加
