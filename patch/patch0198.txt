@@ -1,0 +1,101 @@
+◯ミス修正と最適化
+28704,weapon,砂漠の夕暮れ,5,20,,600,130:0,,1,4,4096,2,2,2,70,1,1,{ /* セット効果実装済み */ },{ if(equippeditem(13035)) { bonus bMaxHPrate,5; bonus bMaxSP,20; bonus bHit,10; bonus2 bAddSize,Size_Big,30; bonus3 bAutoActiveWeapon,13034,10,7000; if(checkactiveitem()) { misceffect 220,""; bonus bAspdAddRate,100; } } }
+28707,weapon,退魔神の短剣,5,56000,,900,120:0,,1,0,681533167,2,2,3,70,1,1,{ /* 物理・魔法攻撃[魔王モロク系モンスター]mob与受ダメージ */ },{}
+28708,weapon,迅雷剣,5,20,,1000,150:0,,1,3,681533167,2,2,3,50,1,1,{ /* セット効果実装済み */ },{ bonus bAtkEle,Ele_Wind; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Fish,10; bonus2 bAddEle,Ele_Water,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Fish,15; bonus2 bAddEle,Ele_Water,15; } if(equippeditem(490022)) { bonus2 bAddRace,Rct_Fish,20; bonus2 bMagicAddRace,Rct_Fish,20; bonus2 bAddEle,Ele_Water,20; bonus2 bMagicAddEle,Ele_Water,20; } }
+28709,weapon,[レンタル] 猟乱剣,5,0,,0,150:0,,1,0,681533167,2,2,3,50,1,1,{},{}
+28710,weapon,猫短剣・鯵,5,50000,,900,120:0,,1,0,681533167,2,2,3,40,1,0,{ /* 物理・魔法攻撃[地下排水路][暴窟王の洞窟]map与受ダメージ */ },{}
+28711,weapon,レクイエムダガー,5,100000,,400,100:100,,1,0,681533166,2,2,4,100,1,1,{ /* 物理攻撃[生体工学研究所][戦死者の墓]map与受ダメージ */ },{ bonus bUnbreakableWeapon,0; }
+28712,weapon,破滅を纏いし業剣,5,20,,600,120:0,,1,3,538926720,2,2,4,130,1,1,{ /* セット効果実装済み */ },{ bonus bAtkEle,Ele_Dark; bonus2 bAddSkillDamageRate,"GC_CROSSIMPACT",10; }
+28713,weapon,栄光を讃えし王剣,5,20,,600,120:0,,1,3,538926720,2,2,4,130,1,1,{ /* セット効果実装済み */ },{ bonus bAtkEle,Ele_Holy; bonus bAspdAddRate,5; if(equippeditem(28712)) { bonus bAspdAddRate,5; bonus2 bAddSkillDamageRate,"GC_CROSSIMPACT",10; } }
+28715,weapon,無双剣,5,20,,1000,150:0,,1,3,681533167,2,2,3,50,1,1,{ /* セット効果実装済み */ },{ bonus bAtkEle,Ele_Earth; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Brute,10; bonus2 bAddRace,Rct_Plant,10; bonus2 bAddEle,Ele_Wind,10; bonus2 bAddEle,Ele_Earth,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Brute,15; bonus2 bAddRace,Rct_Plant,15; bonus2 bAddEle,Ele_Wind,15; bonus2 bAddEle,Ele_Earth,15; } if(equippeditem(32234)) { bonus2 bAddRace,Rct_Brute,20; bonus2 bMagicAddRace,Rct_Brute,20; bonus2 bAddRace,Rct_Plant,20; bonus2 bMagicAddRace,Rct_Plant,20; bonus2 bAddEle,Ele_Wind,20; bonus2 bMagicAddEle,Ele_Wind,20; bonus2 bAddEle,Ele_Earth,20; bonus2 bMagicAddEle,Ele_Earth,20; } }
+28716,weapon,トゥースブレイド,5,20,,700,130:0,,1,3,2055918,2,2,4,55,1,1,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() >= 9) { bonus3 bAutoSelfSpell,"NPC_SLOWCAST",2,700; } else { bonus3 bAutoSelfSpell,"NPC_SLOWCAST",1,500; } }
+28717,weapon,ヴァルキリーナイフ,5,400000,,100,50:50,,1,4,681533167,2,2,4,70,1,1,{ /* 効果実装済み */ },{ if(getbaseclass(Class) == CLASS_NV) { bonus bBaseAtk,100; bonus bMatk,150; bonus bMaxHP,300; bonus bMaxSP,300; bonus bUseSPrate,-5; bonus bUnbreakableWeapon,0; bonus bMatk,15*getequiprefinerycnt(); bonus bInt,2*getequiprefinerycnt(); bonus bDex,2*getequiprefinerycnt(); bonus bCritical,7*getequiprefinerycnt(); bonus bAspdAddRate,10*getequiprefinerycnt(); bonus bMaxHP,200*getequiprefinerycnt(); bonus bMaxSP,20*getequiprefinerycnt(); bonus bAddCriticalDamage,getequiprefinerycnt(); bonus bDex,-(readparam(bDex)/10)*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bSubRace,Rct_Human,10; bonus2 bMagicSubRace,Rct_Human,10; } } if(getbaseclass(Class) == CLASS_MG) { bonus bMaxHP,200*getequiprefinerycnt(); bonus bMaxSP,20*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bSubRace,Rct_Human,10; bonus2 bMagicSubRace,Rct_Human,10; } } if(getbaseclass(Class) == CLASS_HT) { bonus bMaxHP,200; bonus bUseSPrate,-5; bonus bInt,2*getequiprefinerycnt(); bonus bDex,2*getequiprefinerycnt(); } if(getbaseclass(Class) == CLASS_BA) || (getbaseclass(Class) == CLASS_DC) { bonus bBaseAtk,100; bonus bUnbreakableWeapon,0; bonus bAspdAddRate,10*getequiprefinerycnt(); bonus bDex,-(readparam(bDex)/10)*getequiprefinerycnt(); } if(getbaseclass(Class) == CLASS_TF) { bonus bMatk,150; bonus bMaxSP,100; bonus bAddCriticalDamage,getequiprefinerycnt(); } }
+28718,weapon,布都御魂,5,20,,1000,120:160,,1,2,547315328,2,2,4,150,1,1,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Human,50; bonus2 bAddSkillCoolDown,"KO_SETSUDAN",-1000; bonus2 bAddSkillDamageRate,"KO_SETSUDAN",2*getequiprefinerycnt(); }
+28720,weapon,一碧剣,5,20,,1000,150:0,,1,3,681533167,2,2,3,50,1,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Water; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Formless,10; bonus2 bAddRace,Rct_Demon,10; bonus2 bAddEle,Ele_Fire,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Formless,15; bonus2 bAddRace,Rct_Demon,15; bonus2 bAddEle,Ele_Fire,15; } }
+28722,weapon,ディーヴァダガー,5,200000,,600,120:120,,1,1,547315328,2,2,4,150,1,1,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() >= 7) { bonus bBaseAtk,30; bonus bHit,5; } if(getequiprefinerycnt() >= 9) { bonus bBaseAtk,30; bonus bHit,5; } if(equippeditem(27031)) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bSplashRange,1; } }
+28723,weapon,ミラージュダガー,5,200000,,600,120:120,,5,1,547315328,2,2,4,150,1,1,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() >= 7) { bonus bBaseAtk,30; bonus bHit,5; } if(getequiprefinerycnt() >= 9) { bonus bBaseAtk,30; bonus bHit,5; } if(equippeditem(27032)) { bonus2 bSPDrainRate,10,5; } }
+28724,weapon,邪念のダガー,5,100000,,200,100:0,,1,0,547315328,2,2,4,100,1,1,{ /* 効果実装済み openupgrade対象 */ },{ bonus bBaseAtk,getequiprefinerycnt()*getequiprefinerycnt(); }
+28725,weapon,イリュージョン月光剣,5,20,,700,50:180,,1,1,673144448,2,2,4,150,1,1,{ /* 効果実装済み */ },{ bonus bMaxSPrate,10; bonus2 bSPDrainValue,100,3; if(BaseLevel >= 170) { bonus2 bSPDrainValue,100,1; } }
+28727,weapon,猟乱剣,5,20,,1000,150:0,,1,3,681533167,2,2,3,50,1,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Fire; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Insect,10; bonus2 bAddRace,Rct_DemiHuman,10; bonus2 bAddEle,Ele_Water,10; bonus2 bAddEle,Ele_Earth,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Insect,15; bonus2 bAddRace,Rct_DemiHuman,15; bonus2 bAddEle,Ele_Water,15; bonus2 bAddEle,Ele_Earth,15; } }
+28737,weapon,霧の妖刀,5,20,,600,120:0,,1,3,538926720,2,2,4,130,1,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Ghost; bonus bFlee,10; bonus2 bAddSkillCoolDown,"KO_BAKURETSU",-1000; bonus2 bAddSkillCoolDown,"KO_SETSUDAN",-1000; if(getequiprefinerycnt() >= 7) { bonus bFlee,20; } if(getequiprefinerycnt() >= 9) { bonus bFlee,20; } }
+28738,weapon,物影,5,20,,800,100:0,,1,3,536870912,2,2,4,130,1,1,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"NJ_KIRIKAGE",BaseLevel; bonus2 bAddSkillDamageRate,"NJ_KASUMIKIRI",3*BaseLevel; bonus bFlee,5*getskilllv("NJ_KASUMIKIRI"); bonus bCritical,5*getskilllv("NJ_KASUMIKIRI"); }
+28746,weapon,ブルートダマスカス,5,20,,0,120:0,,1,0,681533056,2,2,4,100,1,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddRace,Rct_Player,60; callfunc "bonus2bIgnoreDefRace",5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } }
+28753,weapon,アビスダガー,5,20,,600,120:120,,1,1,681533056,2,2,4,165,1,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; } if(equippeditem(27301)) { bonus bAspdAddRate,10; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } if(equippeditem(19451) || equippeditem(19452)) { bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddEle,Ele_All,15; bonus2 bMagicAddEle,Ele_All,15; } }
+28755,weapon,黒色-OS,5,20,,600,120:120,,1,0,536870912,2,2,4,150,1,1,{ /* セット効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,60; bonus2 bAddRace,Rct_NonBoss,60; bonus2 bAddSkillCoolDown,"KO_JYUMONJIKIRI",-300; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 10) { bonus bNoSizeFix,1; } }
+28761,weapon,緋色のアセイミー,5,20,,300,30:180,,1,1,673144448,2,2,4,130,1,1,{ /* [跳躍阻害] EFST_LEAPIMPAIRED 未実装 */ },{ bonus bAtkEle,Ele_Undead; skill "WZ_METEOR",1; if(getskilllv("SA_ABRACADABRA") >= 1) { bonus3 bAutoActiveMagic,28761,10000,10000; if(checkactiveitem()) { misceffect 220,""; } } bonus2 bAddEleMagicDamageRate,Ele_Fire,getequiprefinerycnt(); if(getequiprefinerycnt() >= 5) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bLongAtkDef,5; } if(getequiprefinerycnt() >= 7) { skill "WZ_METEOR",getequiprefinerycnt(); } if(getequiprefinerycnt() >= 9) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus bLongAtkDef,5; } }
+28762,weapon,イリュージョンバゼラルド,5,20,,500,120:120,,1,1,673144448,2,2,4,150,1,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Fire; bonus bAspdAddRate,10; bonus bInt,2*getequiprefinerycnt(); if(BaseLevel >= 170) { bonus3 bAutoSpell,"MG_FIREBALL",10,150; bonus bInt,3*getequiprefinerycnt(); } }
+28771,weapon,金属探知機Mk47,5,20,,400,120:120,,1,1,65536,2,2,4,100,1,1,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,RAND_ORE,Rct_NonBoss,100; bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if(getequiprefinerycnt() >= 7) { bonus2 bAddFixCastRate,"SO_SUMMON_TERA",-100; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleMagicDamageRate,Ele_Earth,50; } if(getequiprefinerycnt() >= 10) { bonus bInt,50; } }
+28772,weapon,宝石探知機Mk47,5,20,,400,120:120,,1,1,131072,2,2,4,130,1,1,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,RAND_JEWEL,Rct_NonBoss,100; bonus2 bMagicAddRace,Rct_Boss,60; bonus2 bMagicAddRace,Rct_NonBoss,60; if((getequiprefinerycnt() == 7) || (getequiprefinerycnt() == 8)) { bonus3 bAutoSpell,"WL_EARTHSTRAIN",3,500; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoSpell,"WL_EARTHSTRAIN",3,1000; } if(getequiprefinerycnt() >= 10) { callfunc "bonus2bIgnoreDefRace",100; callfunc "bonus2bIgnoreMdefRace",100; } }
+28776,weapon,ロイヤルマジシャンダガー,5,20,,600,120:120,,1,1,131072,2,2,4,185,1,1,{ /* 超越装備 */ },{ bonus bUnbreakableWeapon,0; callfunc "redamage"; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SC_FEINTBOMB",BaseLevel/2; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SC_FATALMENACE",BaseLevel/2; } callfunc "ounosini_A"; }
+28777,weapon,ジャッジメントスラッシャー,5,20,,600,120:120,,1,1,266240,2,2,4,100,1,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddSkillDamageRate,"ASC_METEORASSAULT",30; callfunc "riseikioku_A"; callfunc "zoufuku_A"; }
+28778,weapon,リペントスラッシャー,5,20,,600,120:120,,1,1,266240,2,2,4,100,1,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddSkillDamageRate,"ASC_BREAKER",30; callfunc "riseikioku_B"; callfunc "zoufuku_A"; }
+28779,weapon,シャークナイフ,5,20,,600,120:120,,1,1,131072,2,2,4,100,1,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddSkillDamageRate,"RG_BACKSTAP",30; callfunc "riseikioku_A"; callfunc "zoufuku_A"; }
+28780,weapon,プラチナムダガー,5,20,,600,120:120,,1,1,131072,2,2,4,100,1,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddSkillDamageRate,"RG_RAID",30; callfunc "riseikioku_A"; callfunc "zoufuku_A"; }
+28784,weapon,プロキオンダガー,5,20,,500,0:10,,1,1,681533167,2,2,4,1,1,1,{ /* ソウルリーパー */ },{ bonus bUnbreakableWeapon,0; bonus bMatk,50+BaseLevel; bonus bCastrate,-10; if(Job == Job_Soulreaper || Job == Job_SoulAscetic) { bonus bAspdAddRate,10; bonus2 bMagicAddRace,Rct_Boss,25; bonus2 bMagicAddRace,Rct_NonBoss,25; bonus2 bSubRace,Rct_Boss,10; bonus2 bMagicSubRace,Rct_Boss,10; bonus2 bAddEle,Ele_Dark,25; if(getequiprefinerycnt() >= 7) { callfunc "bonus2bIgnoreMdefRace",50; } if(getequiprefinerycnt() >= 9) { callfunc "bonus2bIgnoreMdefRace",50; } } if((Job == Job_Soulreaper || Job == Job_SoulAscetic) && equippeditem(29725)) { bonus2 bAddSkillDamageRate,"SP_SHA",25; bonus2 bAddSkillDamageRate,"SP_SPA",25; bonus2 bAddSkillDamageRate,"SP_SWHOO",25; } }
+
+◯関連のセット効果追記 アビス系武器 他修正
+1448,weapon,無双槍,5,20,,2000,140:0,,3,3,16514,2,2,3,50,4,1,{ /* セット効果実装済み */ },{ bonus bAtkEle,Ele_Earth; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Brute,10; bonus2 bAddRace,Rct_Plant,10; bonus2 bAddEle,Ele_Wind,10; bonus2 bAddEle,Ele_Earth,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Brute,15; bonus2 bAddRace,Rct_Plant,15; bonus2 bAddEle,Ele_Wind,15; bonus2 bAddEle,Ele_Earth,15; } if(equippeditem(32234)) { bonus2 bAddRace,Rct_Brute,20; bonus2 bMagicAddRace,Rct_Brute,20; bonus2 bAddRace,Rct_Plant,20; bonus2 bMagicAddRace,Rct_Plant,20; bonus2 bAddEle,Ele_Wind,20; bonus2 bMagicAddEle,Ele_Wind,20; bonus2 bAddEle,Ele_Earth,20; bonus2 bMagicAddEle,Ele_Earth,20; } }
+13133,weapon,無双銃,15,20,,1000,60:0,,5,2,268435456,2,34,3,50,17,1,{ /* 180分間弾に地属性を付与 */ },{ bonus bAtkEle,Ele_Earth; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Brute,10; bonus2 bAddRace,Rct_Plant,10; bonus2 bAddEle,Ele_Wind,10; bonus2 bAddEle,Ele_Earth,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Brute,15; bonus2 bAddRace,Rct_Plant,15; bonus2 bAddEle,Ele_Wind,15; bonus2 bAddEle,Ele_Earth,15; } if(equippeditem(32234)) { bonus2 bAddRace,Rct_Brute,20; bonus2 bMagicAddRace,Rct_Brute,20; bonus2 bAddRace,Rct_Plant,20; bonus2 bMagicAddRace,Rct_Plant,20; bonus2 bAddEle,Ele_Wind,20; bonus2 bMagicAddEle,Ele_Wind,20; bonus2 bAddEle,Ele_Earth,20; bonus2 bMagicAddEle,Ele_Earth,20; } }
+16055,weapon,無双鎚,5,20,,2000,130:0,,1,3,8701363,2,2,3,50,8,1,{ /* セット効果実装済み */ },{ bonus bAtkEle,Ele_Earth; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Brute,10; bonus2 bAddRace,Rct_Plant,10; bonus2 bAddEle,Ele_Wind,10; bonus2 bAddEle,Ele_Earth,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Brute,15; bonus2 bAddRace,Rct_Plant,15; bonus2 bAddEle,Ele_Wind,15; bonus2 bAddEle,Ele_Earth,15; } if(equippeditem(32234)) { bonus2 bAddRace,Rct_Brute,20; bonus2 bMagicAddRace,Rct_Brute,20; bonus2 bAddRace,Rct_Plant,20; bonus2 bMagicAddRace,Rct_Plant,20; bonus2 bAddEle,Ele_Wind,20; bonus2 bMagicAddEle,Ele_Wind,20; bonus2 bAddEle,Ele_Earth,20; bonus2 bMagicAddEle,Ele_Earth,20; } }
+18142,weapon,無双弓,8,20,,1500,120:0,,5,2,1706056,2,34,3,50,11,1,{ /* 180分間矢に地属性を付与 */ },{ bonus bAtkEle,Ele_Earth; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Brute,10; bonus2 bAddRace,Rct_Plant,10; bonus2 bAddEle,Ele_Wind,10; bonus2 bAddEle,Ele_Earth,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Brute,15; bonus2 bAddRace,Rct_Plant,15; bonus2 bAddEle,Ele_Wind,15; bonus2 bAddEle,Ele_Earth,15; } if(equippeditem(32234)) { bonus2 bAddRace,Rct_Brute,20; bonus2 bMagicAddRace,Rct_Brute,20; bonus2 bAddRace,Rct_Plant,20; bonus2 bMagicAddRace,Rct_Plant,20; bonus2 bAddEle,Ele_Wind,20; bonus2 bMagicAddEle,Ele_Wind,20; bonus2 bAddEle,Ele_Earth,20; bonus2 bMagicAddEle,Ele_Earth,20; } }
+26102,weapon,無双杖,5,20,,1000,160:145,,1,2,142705429,2,2,3,50,10,1,{ /* セット効果実装済み */ },{ bonus bAtkEle,Ele_Earth; if(getequiprefinerycnt() >= 7) { bonus2 bMagicAddRace,Rct_Brute,10; bonus2 bMagicAddRace,Rct_Plant,10; bonus2 bMagicAddEle,Ele_Wind,10; bonus2 bMagicAddEle,Ele_Earth,10; } if(getequiprefinerycnt() >= 9) { bonus2 bMagicAddRace,Rct_Brute,15; bonus2 bMagicAddRace,Rct_Plant,15; bonus2 bMagicAddEle,Ele_Wind,15; bonus2 bMagicAddEle,Ele_Earth,15; } if(equippeditem(32234)) { bonus2 bAddRace,Rct_Brute,20; bonus2 bMagicAddRace,Rct_Brute,20; bonus2 bAddRace,Rct_Plant,20; bonus2 bMagicAddRace,Rct_Plant,20; bonus2 bAddEle,Ele_Wind,20; bonus2 bMagicAddEle,Ele_Wind,20; bonus2 bAddEle,Ele_Earth,20; bonus2 bMagicAddEle,Ele_Earth,20; } }
+29045,ench,疾風,6,,,,,,,,,,65535,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddRace,Rct_Fish,15; bonus2 bMagicAddRace,Rct_Fish,15; bonus2 bAddEle,Ele_Water,15; bonus2 bMagicAddEle,Ele_Water,15; bonus3 bAutoActiveWeapon,29045,1200,10000; if(checkactiveitem()) { misceffect 221,""; bonus bAspdAddRate,70; bonus bCastrate,-70; bonus bSkillDelayRate,-70; } if(equippeditem(490022)) { bonus2 bAddRace,Rct_Fish,15; bonus2 bMagicAddRace,Rct_Fish,15; bonus2 bAddEle,Ele_Water,15; bonus2 bMagicAddEle,Ele_Water,15; } }
+29176,ench,天地,6,,,,,,,,,,65535,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddRace,Rct_Brute,15; bonus2 bMagicAddRace,Rct_Brute,15; bonus2 bAddRace,Rct_Plant,15; bonus2 bMagicAddRace,Rct_Plant,15; bonus2 bAddEle,Ele_Wind,15; bonus2 bMagicAddEle,Ele_Wind,15; bonus2 bAddEle,Ele_Earth,15; bonus2 bMagicAddEle,Ele_Earth,15; bonus4 bAutoActiveItem,29176,500,10000,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC|EAS_SKILL; if(equippeditem(32234)) { bonus2 bAddRace,Rct_Brute,15; bonus2 bMagicAddRace,Rct_Brute,15; bonus2 bAddRace,Rct_Plant,15; bonus2 bMagicAddRace,Rct_Plant,15; bonus2 bAddEle,Ele_Wind,15; bonus2 bMagicAddEle,Ele_Wind,15; bonus2 bAddEle,Ele_Earth,15; bonus2 bMagicAddEle,Ele_Earth,15; } }
+32234,acc,無双の指輪,4,20,,300,,0:0,,1,2074075135,2,136,,100,,0,{ /* 無双系セット効果起点 */ },{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddEle,Ele_Wind,10; bonus2 bAddEle,Ele_Earth,10; bonus2 bMagicAddEle,Ele_Wind,10; bonus2 bMagicAddEle,Ele_Earth,10; bonus2 bSubEle,Ele_Wind,5; bonus2 bSubEle,Ele_Earth,5; }
+410014,head,コル・コアヘッドフォン,4,20,,100,,5:3,,0,2074075135,2,512,,100,2017,0,{ /* OS系セット効果起点 短剣は2刀可能のため別 */ },{ bonus bSkillDelayRate,-10; if(equippeditem(28755)) { bonus bBaseAtk,200; bonus bMatk,200; } }
+410015,head,コル・コアヘッドフォン,4,20,,100,,5:3,,1,2074075135,2,512,,100,2017,0,{ /* OS系セット効果起点 短剣は2刀可能のため別 */ },{ bonus bSkillDelayRate,-10; if(equippeditem(28755)) { bonus bBaseAtk,200; bonus bMatk,200; } }
+490022,acc,迅雷の指輪,4,20,,300,,0:0,,1,2074075135,2,136,,100,,0,{ /* 迅雷系セット効果起点 */ },{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddEle,Ele_Water,10; bonus2 bMagicAddEle,Ele_Water,10; bonus2 bSubEle,Ele_Water,5; }
+
+◯倉庫を増加(npc_signboard.sc)
+//常設 50z-------------------------------------------------------------------------
+payon.gat,177,67,5	duplicate(倉庫#mimic50z)	倉庫#1001	464
+payon.gat,179,67,3	duplicate(倉庫#mimic50z)	倉庫#1002	464
+payon.gat,181,67,3	duplicate(倉庫#mimic50z)	倉庫#1003	464
+payon.gat,183,67,3	duplicate(倉庫#mimic50z)	倉庫#1004	464
+
+morocc.gat,179,56,5	duplicate(倉庫#mimic50z)	倉庫#1005	464
+morocc.gat,181,56,3	duplicate(倉庫#mimic50z)	倉庫#1006	464
+morocc.gat,183,56,3	duplicate(倉庫#mimic50z)	倉庫#1007	464
+morocc.gat,185,56,3	duplicate(倉庫#mimic50z)	倉庫#1008	464
+
+aldebaran.gat,167,122,5	duplicate(倉庫#mimic50z)	倉庫#1009	464
+aldebaran.gat,169,124,3	duplicate(倉庫#mimic50z)	倉庫#1010	464
+aldebaran.gat,171,126,3	duplicate(倉庫#mimic50z)	倉庫#1011	464
+aldebaran.gat,173,128,3	duplicate(倉庫#mimic50z)	倉庫#1012	464
+
+comodo.gat,162,177,5	duplicate(倉庫#mimic50z)	倉庫#1013	464
+comodo.gat,164,177,3	duplicate(倉庫#mimic50z)	倉庫#1014	464
+comodo.gat,166,177,3	duplicate(倉庫#mimic50z)	倉庫#1015	464
+comodo.gat,168,177,3	duplicate(倉庫#mimic50z)	倉庫#1016	464
+
+alberta.gat,144,62,5	duplicate(倉庫#mimic50z)	倉庫#1017	464
+alberta.gat,146,62,3	duplicate(倉庫#mimic50z)	倉庫#1018	464
+alberta.gat,148,62,3	duplicate(倉庫#mimic50z)	倉庫#1019	464
+alberta.gat,150,62,3	duplicate(倉庫#mimic50z)	倉庫#1020	464
+
+//イベント 40z-------------------------------------------------------------------------
+yuno.gat,199,300,5	duplicate(倉庫#mimic40z)	倉庫#1101	464
+yuno.gat,201,300,3	duplicate(倉庫#mimic40z)	倉庫#1102	464
+yuno.gat,203,300,3	duplicate(倉庫#mimic40z)	倉庫#1103	464
+yuno.gat,205,300,3	duplicate(倉庫#mimic40z)	倉庫#1104	464
+
+セキュアログインボーナスNPCにメモ記述
+//セキュアログインボーナス------------------------------------------------------
+
+-	script	ｾｷｭｱﾛｸﾞｲﾝﾎﾞｰﾅｽ#login	740,{
+	mes "[" +strnpcinfo(1)+ "]";
+	mes "特殊NPCによる転送サービス";
+	mes "転送可 街36箇所";
+	mes "異世界の街6箇所";
+	mes "次元の狭間 時の通路01 02";
+	mes "フレイムヴァレー";
+	mes "平ダンジョン";
+	mes "イリュージョンダンジョン";
+	mes "テラージョンダンジョン";
+	mes "メモリアルダンジョン";
+	mes "ビフロストタワー2箇所";
+	mes "カミダトンネル";
+	mes "イグドラシル中心部";
+	mes "修道院とかフィールド9箇所";
+	close;
+}

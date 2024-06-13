@@ -1,5 +1,5 @@
-//20240529 ステータス・スキルリセットNPC実装
 //20240522 サインボードを土台に倉庫NPC実装
+//20240613 ミミック倉庫を1箇所に4つ設置（見た目重視で機能は変わりません） セキュアログインボーナス基礎NPC設置
 
 //倉庫NPC-------------------------------------------------------------------------
 -	script	倉庫#mimic50z	464,{
@@ -12,18 +12,61 @@
 }
 
 //常設 50z-------------------------------------------------------------------------
-payon.gat,290,67,6	duplicate(倉庫#mimic50z)	倉庫#101	464
-morocc.gat,182,56,6	duplicate(倉庫#mimic50z)	倉庫#102	464
-aldebaran.gat,172,126,6	duplicate(倉庫#mimic50z)	倉庫#103	464
-comodo.gat,165,177,6	duplicate(倉庫#mimic50z)	倉庫#104	464
-alberta.gat,147,62,6	duplicate(倉庫#mimic50z)	倉庫#105	464
-lighthalzen.gat,169,124,6	duplicate(倉庫#mimic50z)	倉庫#106	464
-mid_camp.gat,46,163,6	duplicate(倉庫#mimic50z)	倉庫#107	464
-brasilis.gat,177,225,6	duplicate(倉庫#mimic50z)	倉庫#108	464
-ref_room01.gat,22,40,6	duplicate(倉庫#mimic50z)	倉庫#109	464
-ref_room02.gat,22,40,6	duplicate(倉庫#mimic50z)	倉庫#110	464
-malangdo.gat,184,139,6	duplicate(倉庫#mimic50z)	倉庫#111	464
-lasagna.gat,328,241,6	duplicate(倉庫#mimic50z)	倉庫#112	464
+payon.gat,177,67,5	duplicate(倉庫#mimic50z)	倉庫#1001	464
+payon.gat,179,67,3	duplicate(倉庫#mimic50z)	倉庫#1002	464
+payon.gat,181,67,3	duplicate(倉庫#mimic50z)	倉庫#1003	464
+payon.gat,183,67,3	duplicate(倉庫#mimic50z)	倉庫#1004	464
+
+morocc.gat,179,56,5	duplicate(倉庫#mimic50z)	倉庫#1005	464
+morocc.gat,181,56,3	duplicate(倉庫#mimic50z)	倉庫#1006	464
+morocc.gat,183,56,3	duplicate(倉庫#mimic50z)	倉庫#1007	464
+morocc.gat,185,56,3	duplicate(倉庫#mimic50z)	倉庫#1008	464
+
+aldebaran.gat,167,122,5	duplicate(倉庫#mimic50z)	倉庫#1009	464
+aldebaran.gat,169,124,3	duplicate(倉庫#mimic50z)	倉庫#1010	464
+aldebaran.gat,171,126,3	duplicate(倉庫#mimic50z)	倉庫#1011	464
+aldebaran.gat,173,128,3	duplicate(倉庫#mimic50z)	倉庫#1012	464
+
+comodo.gat,162,177,5	duplicate(倉庫#mimic50z)	倉庫#1013	464
+comodo.gat,164,177,3	duplicate(倉庫#mimic50z)	倉庫#1014	464
+comodo.gat,166,177,3	duplicate(倉庫#mimic50z)	倉庫#1015	464
+comodo.gat,168,177,3	duplicate(倉庫#mimic50z)	倉庫#1016	464
+
+alberta.gat,144,62,5	duplicate(倉庫#mimic50z)	倉庫#1017	464
+alberta.gat,146,62,3	duplicate(倉庫#mimic50z)	倉庫#1018	464
+alberta.gat,148,62,3	duplicate(倉庫#mimic50z)	倉庫#1019	464
+alberta.gat,150,62,3	duplicate(倉庫#mimic50z)	倉庫#1020	464
+
+lighthalzen.gat,172,124,5	duplicate(倉庫#mimic50z)	倉庫#1021	464
+lighthalzen.gat,170,124,3	duplicate(倉庫#mimic50z)	倉庫#1022	464
+lighthalzen.gat,168,124,3	duplicate(倉庫#mimic50z)	倉庫#1023	464
+lighthalzen.gat,166,124,3	duplicate(倉庫#mimic50z)	倉庫#1024	464
+
+mid_camp.gat,43,163,5	duplicate(倉庫#mimic50z)	倉庫#1025	464
+mid_camp.gat,45,163,3	duplicate(倉庫#mimic50z)	倉庫#1026	464
+mid_camp.gat,47,163,3	duplicate(倉庫#mimic50z)	倉庫#1027	464
+mid_camp.gat,49,163,3	duplicate(倉庫#mimic50z)	倉庫#1028	464
+
+brasilis.gat,174,225,5	duplicate(倉庫#mimic50z)	倉庫#1029	464
+brasilis.gat,176,225,3	duplicate(倉庫#mimic50z)	倉庫#1030	464
+brasilis.gat,178,225,3	duplicate(倉庫#mimic50z)	倉庫#1031	464
+brasilis.gat,180,225,3	duplicate(倉庫#mimic50z)	倉庫#1032	464
+
+ref_room01.gat,19,40,5	duplicate(倉庫#mimic50z)	倉庫#1033	464
+ref_room01.gat,21,40,3	duplicate(倉庫#mimic50z)	倉庫#1034	464
+ref_room01.gat,23,40,3	duplicate(倉庫#mimic50z)	倉庫#1035	464
+ref_room01.gat,25,40,3	duplicate(倉庫#mimic50z)	倉庫#1036	464
+
+ref_room02.gat,19,40,5	duplicate(倉庫#mimic50z)	倉庫#1037	464
+ref_room02.gat,21,40,3	duplicate(倉庫#mimic50z)	倉庫#1038	464
+ref_room02.gat,23,40,3	duplicate(倉庫#mimic50z)	倉庫#1039	464
+ref_room02.gat,25,40,3	duplicate(倉庫#mimic50z)	倉庫#1040	464
+
+lasagna.gat,325,241,5	duplicate(倉庫#mimic50z)	倉庫#1041	464
+lasagna.gat,327,241,3	duplicate(倉庫#mimic50z)	倉庫#1042	464
+lasagna.gat,329,241,3	duplicate(倉庫#mimic50z)	倉庫#1043	464
+lasagna.gat,331,241,3	duplicate(倉庫#mimic50z)	倉庫#1044	464
+
 //----------------------------------------------------------------------------------
 -	script	倉庫#mimic40z	464,{
 	if(Zeny < 40) {
@@ -35,7 +78,11 @@ lasagna.gat,328,241,6	duplicate(倉庫#mimic50z)	倉庫#112	464
 }
 
 //イベント 40z-------------------------------------------------------------------------
-yuno.gat,202,302,4	duplicate(倉庫#mimic40z)	倉庫#101	464
+yuno.gat,199,300,5	duplicate(倉庫#mimic40z)	倉庫#1101	464
+yuno.gat,201,300,3	duplicate(倉庫#mimic40z)	倉庫#1102	464
+yuno.gat,203,300,3	duplicate(倉庫#mimic40z)	倉庫#1103	464
+yuno.gat,205,300,3	duplicate(倉庫#mimic40z)	倉庫#1104	464
+
 //val_tea1.gat,290,352,4	duplicate(倉庫#mimic40z)	倉庫#000	464
 //march_01.gat,128,37,4	duplicate(倉庫#mimic40z)	倉庫#001	464
 //apr_main1.gat,135,64,4	duplicate(倉庫#mimic40z)	倉庫#002	464
@@ -98,3 +145,23 @@ lasagna.gat,313,229,6	duplicate(リセット職員#reset000)	リセット職員#101	554
 //ev_city.gat,244,324,6	duplicate(リセット職員#reset000)	リセット職員#102	121
 //ev_city.gat,116,315,6	duplicate(リセット職員#reset000)	リセット職員#103	121
 //ev_city.gat,175,148,6	duplicate(リセット職員#reset000)	リセット職員#104	121
+
+//セキュアログインボーナス------------------------------------------------------
+
+-	script	ｾｷｭｱﾛｸﾞｲﾝﾎﾞｰﾅｽ#login	740,{
+	mes "[" +strnpcinfo(1)+ "]";
+	mes "特殊NPCによる転送サービス";
+	mes "転送可 街36箇所";
+	mes "異世界の街6箇所";
+	mes "次元の狭間 時の通路01 02";
+	mes "フレイムヴァレー";
+	mes "平ダンジョン";
+	mes "イリュージョンダンジョン";
+	mes "テラージョンダンジョン";
+	mes "メモリアルダンジョン";
+	mes "ビフロストタワー2箇所";
+	mes "カミダトンネル";
+	mes "イグドラシル中心部";
+	mes "修道院とかフィールド9箇所";
+	close;
+}
