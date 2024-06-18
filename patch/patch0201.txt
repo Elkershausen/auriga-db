@@ -1,0 +1,37 @@
+item_db.txt
+313275,ench,潜在解放(ハイパーノービスVII),6,,,,,,,,,,65535,,,,,{ /* 240618 4次職 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"HN_DOUBLEBOWLINGBASH",-200; bonus2 bAddSkillCoolDown,"HN_MEGA_SONIC_BLOW",-200; } }
+313282,ench,潜在解放(スピリットハンドラーVII),6,,,,,,,,,,65535,,,,,{ /* 240618 4次職 */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SH_HYUN_ROK_CANNON",-100; } }
+400672,head,マーリン柄の丸帽子,4,20,,500,,10:0,,1,2074075008,2,256,,200,2543,1,{ /* 240618 4次職 */ },{ /* bonus bPow,3+getequiprefinerycnt(); */ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"HN_DOUBLEBOWLINGBASH",BaseLevel/10; bonus2 bAddSkillDamageRate,"HN_MEGA_SONIC_BLOW",BaseLevel/10; if(getequiprefinerycnt() >= 10) { bonus bPerfectHitAddRate,25; bonus bSkillDelayRate,-20; } }
+450373,armor,ふかふかフォーンローブ,4,20,,1000,,100:0,,1,1073741824,2,16,,200,,1,{ /* 240618 4次職 */ },{ bonus2 bSubRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus2 bAddSkillDamageRate,"SH_HYUN_ROK_CANNON",BaseLevel/10; bonus2 bAddSkillDamageRate,"SH_HYUN_ROKS_BREEZE",BaseLevel/10; if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; bonus bNoKnockback,0; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; bonus2 bAddSkillCoolDown,"SU_CN_POWDERING",-2500; bonus2 bAddSkillCoolDown,"SU_NYANGGRASS",-2500; } }
+460074,shield,グラキエースアラネア,4,20,,300,,60:0,,0,2074075135,2,32,,100,2,1,{ /* 240618 効果実装済み */ },{ bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_Player,35; bonus2 bMagicSubRace,Rct_Player,35; bonus bMaxHPrate,3*getequiprefinerycnt(); bonus bMaxSPrate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 5) { bonus bSpeedRate,25; } if(getequiprefinerycnt() >= 7) { bonus2 bFixCastrate,-70,0; } }
+460075,shield,プロンテラ軍の盾,4,20,,1200,,95:0,,0,2074075135,2,32,,100,2,1,{ /* 240618 一部の回復アイテム */ },{ bonus bMaxHPrate,15; bonus bMaxSPrate,15; bonus2 bSubRace,Rct_Player,35; bonus2 bMagicSubRace,Rct_Player,35; if(getequiprefinerycnt() >= 5) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } if(getequiprefinerycnt() >= 7) { callfunc "ItemdbAlmightySubHeal",0x7F,15; } }
+1001747,item,ロイヤル優待チケット,3,20,,10,,,,,,,,,,,,{ /* 240618 ノブレス インペリアル グレース NPC濃縮エルニウム消えない精錬  */ },{}
+
+item_db2.txt
+313275,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(ハイパーノービスVII)
+313282,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(スピリットハンドラーVII)
+400672,0,0,0,0,0,0,0,0,0,0,0,1	//条件なし	//マーリン柄の丸帽子
+450373,0,0,0,0,0,0,0,0,0,0,0,1	//条件なし	//ふかふかフォーンローブ
+460074,0,0,0,0,0,0,0,0,0,0,0,1	//条件なし	//グラキエースアラネア
+460075,0,0,1,0,0,1,1,0,0,0,0,1	//NPC・倉庫	//プロンテラ軍の盾
+1001747,0,0,1,1,0,1,1,0,0,1,0,0	//条件なし	//ロイヤル優待チケット
+
+item_cartype.txt
+313275,ench,潜在解放(ハイパーノービスVII),2
+313282,ench,潜在解放(スピリットハンドラーVII),2
+
+test記述
+getitem 313275,1;
+getitem 313282,1;
+getitem 400672,1;
+getitem 450373,1;
+getitem 460074,1;
+getitem 460075,1;
+getitem 1001747,1;
+
+classnum_db.txt
+400672#2523#	//マーリン柄の丸帽子
+460074#2#	//グラキエースアラネア
+460075#2#	//プロンテラ軍の盾
+
+312799 修正

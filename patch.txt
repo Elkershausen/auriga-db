@@ -1,3 +1,10 @@
+20240618	patch0201
+・20240618 アップデート実装(item_db.txt item_db2.txt item_cardtype.txt classnum_db.txt)
+
+・312799 AS発動率と記述修正
+
+・item_memo.txt 手間が増えるので廃止削除
+
 20240617	patch0200
 ・28903-28962 ミス修正と最適化 コメント追加
 
