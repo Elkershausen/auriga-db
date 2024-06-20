@@ -420,48 +420,14 @@ function	script	Cor_Core_Headset	{
 }
 
 //============================================================
-//27002#包装されたボックスカード#
-//{ callfunc "Box_card_A"; }
-function	script	Box_card_A	{
-	bonus3 bAddMonsterDropItem,664,Rct_Boss,15;
-	bonus3 bAddMonsterDropItem,664,Rct_NonBoss,15;
-	bonus3 bAddMonsterDropItem,665,Rct_Boss,15;
-	bonus3 bAddMonsterDropItem,665,Rct_NonBoss,15;
-	bonus3 bAddMonsterDropItem,666,Rct_Boss,15;
-	bonus3 bAddMonsterDropItem,666,Rct_NonBoss,15;
-	return;
-}
-
-//{ callfunc "Box_card_B"; }
-function	script	Box_card_B	{
-	bonus3 bAddMonsterDropItem,664,Rct_Boss,30;
-	bonus3 bAddMonsterDropItem,664,Rct_NonBoss,30;
-	bonus3 bAddMonsterDropItem,665,Rct_Boss,30;
-	bonus3 bAddMonsterDropItem,665,Rct_NonBoss,30;
-	bonus3 bAddMonsterDropItem,666,Rct_Boss,30;
-	bonus3 bAddMonsterDropItem,666,Rct_NonBoss,30;
-	return;
-}
-
-//============================================================
-//27031#迷宮のバフォメットカード#
-
-//============================================================
-//27032#迷宮のドラキュラカード#
-
-//============================================================
-//27301#迷宮のドッペルゲンガーカード#
-
-
-//============================================================
 //bonus3 bAddMonsterDropItem
-////{ callfunc "drop",'@drop,'@rate; }
+////{ callfunc "drop",'@id,'@rate; }
 
 function	script	drop	{
-	set '@drop,getarg(0);
+	set '@id,getarg(0);
 	set '@rate,getarg(1);
-		bonus3 bAddMonsterDropItem,'@drop,Rct_Boss,'@rate;
-		bonus3 bAddMonsterDropItem,'@drop,Rct_NonBoss,'@rate;
+		bonus3 bAddMonsterDropItem,'@id,Rct_Boss,'@rate;
+		bonus3 bAddMonsterDropItem,'@id,Rct_NonBoss,'@rate;
 	return;
 }
 
