@@ -3,7 +3,7 @@
 //20240507 防御無視 [一般・ボスモンスター][すべての種族]用ボーナス追加
 //20240427 312417#増幅された怨望#セット追記 テスト用設定追加 サンプル追記
 //20240426 反射ダメージ軽減(ロイヤル系) 310760#王の神威# 300314#理性と記憶の残滓# セット効果追記
-//20240415 19108#ワイルドポリンライダー#追加
+//20240415 19108#ワイルドポリンライダー#
 
 //============================================================
 // 巨大なハエの羽
@@ -553,6 +553,91 @@ if(getbaseclass(Class,2||3) == CLASS_GS) {
 	bonus3 bAddMonsterDropItem,12151,Rct_NonBoss,50;
 	bonus3 bAddMonsterDropItem,12150,Rct_NonBoss,50;
 	bonus3 bAddMonsterDropItem,12637,Rct_NonBoss,50;
+	}
+	return;
+}
+
+//============================================================
+//[虐殺]Lv1
+//{ callfunc "gyakusatuLv1"; }
+
+function	script	gyakusatuLv1	{
+	if(getequiprefinerycnt() >= 7) {
+		bonus2 bAddRace,Rct_Human,9;
+	}
+	if(getequiprefinerycnt() >= 8) {
+		bonus2 bAddRace,Rct_Human,16;
+	}
+	if(getequiprefinerycnt() >= 9) {
+		bonus2 bAddRace,Rct_Human,25;
+	}
+	if(getequiprefinerycnt() >= 10) {
+		bonus2 bAddRace,Rct_Human,36;
+	}
+	return;
+}
+
+//============================================================
+//[虐殺]Lv2
+//{ callfunc "gyakusatuLv2"; }
+
+function	script	gyakusatuLv2	{
+	if(getequiprefinerycnt() >= 7) {
+		bonus2 bAddRace,Rct_Human,16;
+	}
+	if(getequiprefinerycnt() >= 8) {
+		bonus2 bAddRace,Rct_Human,25;
+	}
+	if(getequiprefinerycnt() >= 9) {
+		bonus2 bAddRace,Rct_Human,36;
+	}
+	if(getequiprefinerycnt() >= 10) {
+		bonus2 bAddRace,Rct_Human,49;
+	}
+	return;
+}
+
+//============================================================
+//[破滅]Lv1
+//{ callfunc "hametuLv1"; }
+
+function	script	hametuLv1	{
+	if(getequiprefinerycnt() >= 7) {
+		bonus2 bMagicAddRace,Rct_Human,4;
+	}
+	if(getequiprefinerycnt() >= 8) {
+		bonus2 bMagicAddRace,Rct_Human,6;
+	}
+	if(getequiprefinerycnt() >= 9) {
+		bonus2 bMagicAddRace,Rct_Human,8;
+	}
+	if(getequiprefinerycnt() >= 10) {
+		bonus2 bMagicAddRace,Rct_Human,10;
+	}
+	return;
+}
+
+//============================================================
+//[祝福]Lv1
+//{ callfunc "shukufukuLv1"; }
+//対象スキルは仕様書の通りに設定
+
+function	script	shukufukuLv1	{
+	if(getequiprefinerycnt() >= 7) {
+		bonus2 bAddSkillDamageRate,"AL_HEAL",4;
+		bonus2 bAddSkillDamageRate,"PR_SANCTUARY",4;
+	}
+	if(getequiprefinerycnt() >= 8) {
+		bonus2 bAddSkillDamageRate,"AL_HEAL",6;
+		bonus2 bAddSkillDamageRate,"PR_SANCTUARY",6;
+	}
+	if(getequiprefinerycnt() >= 9) {
+		bonus2 bAddSkillDamageRate,"AL_HEAL",8;
+		bonus2 bAddSkillDamageRate,"PR_SANCTUARY",8;
+	}
+	if(getequiprefinerycnt() >= 10) {
+		bonus2 bAddSkillDamageRate,"AL_HEAL",10;
+		bonus2 bAddSkillDamageRate,"PR_SANCTUARY",10;
 	}
 	return;
 }
