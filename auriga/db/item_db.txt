@@ -1,4 +1,4 @@
-//item_db.txt Auriga db_override patch1549+add 20240618 アップデート
+//item_db.txt Auriga db_override patch1549+add 20240702 アップデート
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript},{UnEquipScript}
 501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,1,,,{ itemheal rand(45,65),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(45,65)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(45,65)*(12/10),0; } },{}
 502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(105,145),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(105,145)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(105,145)*(12/10),0; } },{}
@@ -10062,6 +10062,7 @@
 200409,use,[2024summer]歩羅七精錬フォースの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 6829,1,1,0,0,0,0,0,0,3024000; },{ /* 240604 効果実装済み */ }
 200410,use,[2024summer]ドレッシークーポンの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 7890,1,1,0,0,0,0,0,0,3024000; },{ /* 240604 効果実装済み */ }
 200421,use,コスたまCafe,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240604 効果実装済み */ },{ /* 420340 420341 480429 480450 410328 400669 400670 420339 31975 400668 */ }
+200424,use,コスたまGothic&LolitaIII,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240702 効果実装済み */ },{ /* 400565 400682 400684 410343 420344 420345 420347 480459 480460 480461 */ }
 300001,card,ポイゾナスカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bVit,1; bonus2 bResEff,Eff_Poison,10000; }
 300002,card,トキシャスカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; skill "AS_ENCHANTPOISON",1; }
 300003,card,ホワイトポルセリオカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WL_EARTHSTRAIN",50; }
@@ -11013,6 +11014,7 @@
 400526,cos,[衣装] 獅子王の兜(上段),4,20,,0,,0:0,,0,2074075135,2,1024,,1,202,0,{},{}
 400527,cos,[衣装] たれ猫（茶）,4,20,,0,,0:0,,0,2074075135,2,1024,,1,750,0,{},{}
 400556,head,異端審問官のヴェール,4,20,,500,,10:0,,1,2088832,2,256,,200,2447,1,{ /* 4次職 */ },{ bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddSkillDamageRate,getskilllv(IQ_MASSIVE_F_BLASTER),BaseLevel/10; bonus2 bAddSkillDamageRate,getskilllv("IQ_EXPOSION_BLASTER"),BaseLevel/10; }
+400565,cos,[衣装] ミニミニデビルリング,4,20,,0,,0:0,,0,2074075135,2,1024,,1,957,0,{ /* 240702 コスたまGothic&LolitaIII 効果実装済み */ },{}
 400566,head,アウェイキングブルーム,4,20,,500,,10:0,,1,2074075135,2,256,,100,2449,1,{},{ bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus bSkillDelayRate,-2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddEle,Ele_All,15; bonus bMaxHPrate,10; bonus bMaxSPrate,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEle,Ele_All,25; bonus bAllStatus,10; } }
 400567,cos,[衣装] アウェイキングブルーム,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2449,0,{},{}
 400581,head,情熱あふれるラビットリボン,4,20,,500,,10:0,,1,2074075008,2,256,,200,2484,1,{ /* 4次職 */ },{ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"TR_RHYTHMSHOOTING",BaseLevel/10; bonus2 bAddSkillDamageRate,"TR_ROSEBLOSSOM",BaseLevel/10; }
@@ -11040,6 +11042,8 @@
 400669,cos,[衣装] イエローヘッドドレス,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2537,0,{ /* 240604 コスたまCafe 効果実装済み */ },{}
 400670,cos,[衣装] 白猫カップ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2538,0,{ /* 240604 コスたまCafe 効果実装済み */ },{}
 400672,head,マーリン柄の丸帽子,4,20,,500,,10:0,,1,2074075008,2,256,,200,2543,1,{ /* 240618 4次職 */ },{ /* bonus bPow,3+getequiprefinerycnt(); */ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"HN_DOUBLEBOWLINGBASH",BaseLevel/10; bonus2 bAddSkillDamageRate,"HN_MEGA_SONIC_BLOW",BaseLevel/10; if(getequiprefinerycnt() >= 10) { bonus bPerfectHitAddRate,25; bonus bSkillDelayRate,-20; } }
+400682,cos,[衣装] 白猫のフード(上段),4,20,,0,,0:0,,0,2074075135,2,1024,,1,1052,0,{ /* 240702 コスたまGothic&LolitaIII 効果実装済み */ },{}
+400684,cos,[衣装] トビネズミのカチューシャ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2548,0,{ /* 240702 コスたまGothic&LolitaIII 効果実装済み */ },{}
 410000,head,轟鳴鼓,4,20,,300,,0:0,,0,2074075135,2,512,,100,1823,0,{},{ hateffect HAT_EF_ResonateTaego,TRUE; bonus2 bAddRace,Rct_Boss,2; bonus2 bAddRace,Rct_NonBoss,2; if(readparam(bStr) >= 90) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } if(readparam(bStr) >= 125) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; } },{ hateffect HAT_EF_ResonateTaego,FALSE; }
 410001,head,ファランクス,4,20,,800,,50:3,,0,2074075135,2,512,,100,1949,0,{},{ bonus2 bSubRace,Rct_Boss,1; bonus2 bSubRace,Rct_NonBoss,1; bonus2 bMagicSubRace,Rct_Boss,1; bonus2 bMagicSubRace,Rct_NonBoss,1; bonus2 bHPPenaltyTime,5000,-60; bonus2 bSPPenaltyTime,500,-6; if(readparam(bVit) >= 90) { bonus2 bSubRace,Rct_Boss,1; bonus2 bSubRace,Rct_NonBoss,1; bonus2 bMagicSubRace,Rct_Boss,1; bonus2 bMagicSubRace,Rct_NonBoss,1; bonus2 bHPPenaltyTime,5000,-90; bonus2 bSPPenaltyTime,500,-9; } if(readparam(bVit) >= 125) { bonus2 bSubRace,Rct_Boss,3; bonus2 bSubRace,Rct_NonBoss,3; bonus2 bMagicSubRace,Rct_Boss,3; bonus2 bMagicSubRace,Rct_NonBoss,3; bonus2 bHPPenaltyTime,5000,-150; bonus2 bSPPenaltyTime,500,-15; } }
 410002,head,セブン-イレブンヘッドホン,4,20,,200,,7:11,,0,2074075135,2,512,,100,1131,0,{},{ bonus bHPGainValue,150; bonus bSPGainValue,15; bonus bBaseAtk,BaseLevel; bonus bMatk,BaseLevel; }
@@ -11238,6 +11242,7 @@
 410328,cos,[衣装] ふわふわパン屋さん,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2536,0,{ /* 240604 コスたまCafe 効果実装済み */ },{}
 410340,head,インターディメンショナルリフト(エフェクトオフ),4,20,,100,,2:0,,0,2074075135,2,512,,100,2529,0,{ /* 240604 効果実装済み */ },{ bonus bBaseAtk,BaseLevel; bonus bMatk,BaseLevel; if(equippeditem(313327)) { bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bSubEle,Ele_Holy,5; bonus2 bSubEle,Ele_Poison,5; } }
 410341,head,インターディメンショナルリフト(エフェクトオフ),4,20,,100,,2:0,,1,2074075135,2,512,,100,2529,0,{ /* 240604 効果実装済み */ },{ bonus bBaseAtk,BaseLevel; bonus bMatk,BaseLevel; if(equippeditem(313327)) { bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bSubEle,Ele_Holy,5; bonus2 bSubEle,Ele_Poison,5; } }
+410343,cos,[衣装] 負傷兵の眼帯,4,20,,0,,0:0,,0,2074075135,2,2048,,1,772,0,{ /* 240702 コスたまGothic&LolitaIII 効果実装済み */ },{}
 420001,head,[レンタル] 八卦の封呪,4,0,,300,,0:0,,0,2074075135,2,1,,70,1901,0,{},{}
 420004,head,フォックスヘア,4,20,,300,,0:0,,0,2074075135,2,1,,130,1884,0,{},{ bonus2 bAddRace,Rct_Demon,20; bonus2 bMagicAddRace,Rct_Demon,20; bonus2 bResEff,Eff_Blind,10000; }
 420006,head,隷属の首輪,4,20,,300,,0:0,,0,2074075135,2,1,,70,2018,0,{},{ bonus2 bAddSize,Size_Small,4*(readparam(bStr) + readparam(bLuk))/50; bonus2 bAddSize,Size_Medium,4*(readparam(bStr) + readparam(bLuk))/50; bonus2 bAddSize,Size_Big,4*(readparam(bStr) + readparam(bLuk))/50; bonus bPerfectHitAddRate,5*(readparam(bStr) + readparam(bLuk))/50; }
@@ -11429,6 +11434,9 @@
 420339,cos,[衣装] ウインナー,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1022,0,{ /* 240604 コスたまCafe 効果実装済み */ },{}
 420340,cos,[衣装] キッチンカー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,2534,0,{ /* 240604 コスたまCafe 効果実装済み */ },{}
 420341,cos,[衣装] シニョンループ,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2535,0,{ /* 240604 コスたまCafe 効果実装済み */ },{}
+420344,cos,[衣装] ブックオブソーサリー,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2327,0,{ /* 240702 コスたまGothic&LolitaIII 効果実装済み */ },{}
+420345,cos,[衣装] リボン編み込みヘア,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2547,0,{ /* 240702 コスたまGothic&LolitaIII 効果実装済み */ },{}
+420347,cos,[衣装] 漆黒の薔薇,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2525,0,{ /* 240702 コスたまGothic&LolitaIII 効果実装済み */ },{}
 436006,cos,[衣装] ルガン変装道具,4,20,,0,,0:0,,0,2074075135,2,6144,,1,2144,0,{},{}
 436007,cos,[衣装] アーウィン防寒帽,4,20,,0,,0:0,,0,2074075135,2,6144,,1,2143,0,{},{}
 436010,cos,[衣装] スパイダリン,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2315,0,{},{}
@@ -11816,6 +11824,9 @@
 480443,cos,[衣装] ガーディアンオブアビス,4,20,,0,,0:0,,0,2074075135,2,8192,,1,2546,0,{ /* 240604 効果実装済み */ },{}
 480444,cos,[衣装] インターディメンショナルリフト(肩にかける物),4,20,,0,,0:0,,0,2074075135,2,8192,,1,2529,0,{ /* 240604 効果実装済み */ },{ hateffect HAT_EF_Interdimensional_Rift,TRUE; },{ hateffect HAT_EF_Interdimensional_Rift,FALSE; }
 480450,cos,[衣装] ハニーディッパー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,222,0,{ /* 240604 コスたまCafe 効果実装済み */ },{}
+480459,cos,[衣装] アークメイジワンド,4,20,,0,,0:0,,0,2074075135,2,8192,,1,226,0,{ /* 240702 コスたまGothic&LolitaIII 効果実装済み */ },{}
+480460,cos,[衣装] 薔薇のゴシックリボン,4,20,,0,,0:0,,0,2074075135,2,8192,,1,227,0,{ /* 240702 コスたまGothic&LolitaIII 効果実装済み */ },{}
+480461,cos,[衣装] ラグドールフェイスリュック,4,20,,0,,0:0,,0,2074075135,2,8192,,1,228,0,{ /* 240702 コスたまGothic&LolitaIII 効果実装済み */ },{}
 490009,acc,磨羯宮のリング,4,20,,100,,0:0,,0,2074075135,2,136,,1,,0,{},{ bonus bFlee2,10; bonus bMaxSP,100; bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddSpCost,"TF_BACKSLIDING",-2; if(Job == Job_ShadowChaser || Job == Job_AbyssChaser) { bonus bAspdAddRate,5; bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus bSkillDelayRate,-30; if(equippeditem(29725)) { bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bAddSkillDamageRate,"SC_TRIANGLESHOT",70; } } }
 490010,acc,処女宮のリング,4,20,,100,,0:0,,0,2074075135,2,136,,1,,0,{},{ bonus bAspdAddRate,5; bonus bMaxSP,100; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddEffMagic,Eff_Stun,1000; if(Job == Job_ArchBishop || Job == Job_Cardinal) { bonus bAspdAddRate,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddCastRate,"AB_JUDEX",-50; if(equippeditem(29725)) { bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bAddCastRate,"AB_JUDEX",-50; } } }
 490013,acc,悪鬼羅刹の指輪,4,20,,100,,0:0,,1,2074075135,2,136,,100,,0,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillCoolDown,2340,-3000; if(getskilllv(2328) == 5) { bonus2 bAddSpCost,2517,-35; bonus2 bAddSpCost,2336,-4; } if(getskilllv(2332) == 5) { bonus2 bAddSkillDamageRate,2517,30; bonus2 bAddSkillDamageRate,2336,100; } if(getskilllv(2518) == 5) { bonus bAspdAddRate,10; bonus bPerfectHitAddRate,15; } } }
@@ -12669,4 +12680,3 @@
 1100018,heal,夜市の綿菓子,0,20,,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_SIROMA_ICE_TEA,500000,20; },{}
 1100019,heal,とれたて野菜串,0,20,,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_MAGI,500000,10; },{}
 1100020,heal,直火焼ソーセージ,0,20,,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_MSTR,500000,10; },{}
-
