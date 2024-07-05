@@ -1,5 +1,5 @@
 20240705	patch0208
-・20240702 アップデート実装(item_db.txt item_db2.txt)
+・20240702 アップデート実装(item_db.txt item_db2.txt classnum_db.txt)
 ※accessoryid.lub accname.lub spriterobeid.lub spriterobename.lub tb_layer_priority.lub transparentitem.lub の更新が必要です
 
 20240701	patch0207
