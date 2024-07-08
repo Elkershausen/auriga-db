@@ -1,3 +1,23 @@
+20240708	patch0209
+・22000-22070 ミス修正と最適化 コメント追加
+
+・関連するセット効果の修正と最適化 コメント追加
+
+・以下のカード
+4165,card,ギグカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4167,card,ネレイドカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4180,card,ドリラーカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4182,card,ディアボリックカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4274,card,ゾンビマスターカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4289,card,キャタピラーカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4307,card,ビートルカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4308,card,三葉蟲カード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4316,card,フェイクエンジェルカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4329,card,フェンダークカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+HPSP回復ボーナス[bonus3 bDefeatHPDrainValue][bonus3 bDefeatSPDrainValue]は仕様書の[近接物理攻撃で倒した時]の条件を指定できず魔法攻撃でも効果が発生するため効果を未実装化
+
+※回復効果スクリプト全般が攻撃条件を指定できないので間違ったままのアイテムが多数あり、該当部分は全部未実装化しています
+
 20240705	patch0208
 ・20240702 アップデート実装(item_db.txt item_db2.txt classnum_db.txt)
 ※accessoryid.lub accname.lub spriterobeid.lub spriterobename.lub tb_layer_priority.lub transparentitem.lub の更新が必要です
