@@ -1,0 +1,101 @@
+◯ミス修正と最適化 コメント追加
+18000,ammo,キャノンボール,19,100,,10,100:0,,,,263168,2,32768,,,,,{ /* 効果実装済み */ },{}
+18001,ammo,ホーリーキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Holy; }
+18002,ammo,ダークキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Dark; }
+18003,ammo,ソウルキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Ghost; }
+18004,ammo,アイアンキャノンボール,19,500,,10,250:0,,,,263168,2,32768,,,,,{ /* 効果実装済み */ },{}
+18005,ammo,アイスキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Water; }
+18006,ammo,ライトニングキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; }
+18007,ammo,ストーンキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Earth; }
+18008,ammo,フレアキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Fire; }
+18103,weapon,ミスティックボウ,8,20,,1700,75:100,,5,0,1574912,2,34,3,105,11,1,{ /* 効果実装済み */ },{ bonus bInt,4; bonus2 bAddSpCost,"WM_SEVERE_RAINSTORM",-10; }
+18109,weapon,カタパルト,8,56000,,1100,150:0,,5,2,131072,2,34,4,100,11,1,{ /* 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SC_TRIANGLESHOT",2*getequiprefinerycnt(); bonus2 bAddSpCost,"SC_TRIANGLESHOT",2*getequiprefinerycnt(); }
+18110,weapon,大型クロスボウ,8,56000,,900,160:0,,5,2,2048,2,34,4,110,11,1,{ /* 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RA_ARROWSTORM",5*getequiprefinerycnt(); bonus2 bAddSpCost,"RA_ARROWSTORM",5*getequiprefinerycnt(); if(readparam(bAgi) >= 120) { bonus bAspd,1; } }
+300076,card,故障した警備型ベータカード,6,20,,10,,,,,,,2,,,,,{ /* 物理・魔法攻撃[貯蔵庫タルタロス上層][貯蔵庫タルタロス下層]map指定効果 */ },{}
+300077,card,故障した自動お掃除機Ωカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus2 bAddSpCost,"SR_SKYNETBLOW",-2; }
+300078,card,スウィーティカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillDamageRate,"RL_MASS_SPIRAL",BaseLevel; if(equippeditem(311883)) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillCoolDown,"RL_HAMMER_OF_GOD",-30000; } }
+300079,card,レッドペッパーカッパカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果重複 NPC_RAYOFGENESIS */ },{ bonus2 bSubEle,Ele_Wind,10; bonus2 bSubEle,Ele_Holy,10; bonus2 bResEff,Eff_Silence,5000; if(equippeditem(311883)) { bonus bMaxHPrate,15; bonus2 bSubEle,Ele_Wind,10; } }
+300080,card,レッドペッパーラムダカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddEle,Ele_Earth,3*((readparam(bStr) + readparam(bInt) + readparam(bDex))/10); bonus2 bMagicAddEle,Ele_Earth,3*((readparam(bStr) + readparam(bInt) + readparam(bDex))/10); if(equippeditem(311883)) { bonus bMaxHPRate,50; SKILL "WL_CRIMSONROCK",5; } }
+300081,card,研究助手自動人形カード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Plant,20; bonus2 bMagicSubRace,Rct_Plant,20; bonus2 bSubRace,Rct_Fish,20; bonus2 bMagicSubRace,Rct_Fish,20; if(equippeditem(300083)) { bonus2 bSubRace,Rct_Plant,5; bonus2 bMagicSubRace,Rct_Plant,5; bonus2 bSubRace,Rct_Fish,5; bonus2 bMagicSubRace,Rct_Fish,5; bonus2 bIgnoreDefRace,Rct_Plant,50; bonus2 bIgnoreDefRace,Rct_Fish,50; } if(equippeditem(300085)) { bonus2 bSubRace,Rct_Plant,5; bonus2 bMagicSubRace,Rct_Plant,5; bonus2 bSubRace,Rct_Fish,5; bonus2 bMagicSubRace,Rct_Fish,5; bonus2 bIgnoreMDefRace,Rct_Plant,50; bonus2 bIgnoreMDefRace,Rct_Fish,50; } }
+300082,card,上級研究助手自動人形カード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus2 bAddCastRate,"AB_ADORAMUS",-50; bonus2 bAddCastRate,"AB_JUDEX",-50; }
+300083,card,ドライラフレシアカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddRace,Rct_Plant,10; bonus2 bMagicAddRace,Rct_Fish,10; bonus2 bAddRace,Rct_Plant,10; bonus2 bMagicAddRace,Rct_Fish,10; }
+300084,card,上級ドライラフレシアカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Fish,getequiprefinerycnt(); if(getequiprefinerycnt() >=9) { bonus2 bAddRace,Rct_Fish,10; } }
+300085,card,特製アーノルディカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus2 bMagicAddRace,Rct_Plant,5; bonus2 bMagicAddRace,Rct_Fish,5; }
+300086,card,上級特製アーノルディカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WM_REVERBERATION",100; }
+300087,card,故障した庭師ベータカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bMatk,5; bonus2 bMagicAddSize,Size_Big,8; }
+300088,card,故障した上級庭師ベータカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus2 bAddSpCost,"TF_BACKSLIDING",-2; }
+300089,card,ベルポルタカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEleMagicDamageRate,Ele_Water,5; bonus2 bDefEleEnemy,Ele_Water,20; }
+300090,card,ベルポルテカード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEleMagicDamageRate,Ele_Fire,5; bonus2 bDefEleEnemy,Ele_Fire,20; }
+300091,card,パピラカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus bMdef,5; bonus2 bAddEle,Ele_Undead,10; bonus2 bCriticalRace,Rct_Undead,15; bonus2 bCriticalRace,Rct_Dragon,15; }
+300092,card,上級パピラカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEleMagicDamageRate,Ele_Poison,getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddEleMagicDamageRate,Ele_Poison,10; } }
+300093,card,パピラルバカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "ECL_PEONYMAMY",1; }
+300094,card,上級パピラルバカード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ bonus2 bAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Small,10; if(getequiprefinerycnt() >= 7) { bonus2 bSubSize,Size_Small,30; bonus2 bMagicSubSize,Size_Small,30; } }
+300095,card,パピラカイカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "ECL_SNOWFLIP",1; }
+300096,card,上級パピラカイカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEleMagicDamageRate,Ele_Water,getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddEleMagicDamageRate,Ele_Water,10; } }
+300097,card,ブルーアリエスカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bMatk,5*(readparam(bInt)/10); if(readparam(bInt) >= 130) { bonus bMatk,100; } if(equippeditem(300098)) { bonus bInt,10; } }
+300098,card,レッドアリエスカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus2 bMagicAddRace,Rct_Boss,3; bonus2 bMagicAddRace,Rct_NonBoss,3; }
+300099,card,シルヴァパピリアカード,6,20,,10,,,,,,,4,,,,,{ /* 猛毒状態 */ },{ bonus2 bSubEle,Ele_Earth,100; if(equippeditem(311883)) { bonus2 bSubEle,Ele_Nutral,20; skill "GN_BLOOD_SUCKER",5; } }
+300100,card,グランパピリアカード,6,20,,10,,,,,,,16,,,,,{ /* 一部の回復アイテム 魔法攻撃を受けた時状態異常にする */ },{ callfunc "ItemdbAlmightySubHeal",0x7F,2*getequiprefinerycnt(); if(equippeditem(311883)) { bonus bMaxHPRate,50; bonus2 bAddRevEff,Eff_Confusion,500; bonus2 bAddRevEff,Eff_Sleep,500; bonus2 bAddRevEff,Eff_Silence,500; bonus2 bAddRevEff,Eff_Curse,500; } }
+300101,card,故障した清掃型βカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus2 bAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Medium,10; if(getequiprefinerycnt() >= 7) { bonus2 bSubSize,Size_Medium,30; bonus2 bMagicSubSize,Size_Medium,30; } }
+300102,card,浴場管理者ベータカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RG_BACKSTAP",3*BaseLevel; }
+300103,card,青衿のヒメカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus2 bMagicAddEle,Ele_Dark,2*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Poison,2*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_Undead,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bMagicAddEle,Ele_Dark,10; bonus2 bMagicAddEle,Ele_Poison,10; bonus2 bMagicAddEle,Ele_Undead,10; } }
+300104,card,ブックワームカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEffMagic,Eff_Bleed,400; }
+300105,card,徘徊する魔導書カード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ skill "MG_SIGHT",1; }
+300106,card,レッドピタヤカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() <= 10) { skill "MG_FIREWALL",getequiprefinerycnt(); } else { skill "MG_FIREWALL",10; } }
+300107,card,ボスピタヤカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bSubEle,Ele_Poison,50; if(getequiprefinerycnt() >= 9) { bonus2 bSubEle,Ele_Earth,50; bonus bLongAtkDef,10; } if(equippeditem(311883)) { bonus2 bHPDrainRate,15,3; bonus2 bSubEle,Ele_Nutral,20; } }
+300108,card,下水ヴェネヌムカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "HW_NAPALMVULCAN",3; }
+300109,card,下水クランプカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bMatk,3*(readparam(bInt)/10); bonus bFlee,3*readparam(bInt); if(readparam(bInt) >= 125) { bonus bMatk,50; bonus bFlee,25; } bonus bMatk,3*(readparam(bAgi)/10); bonus bMaxHPRate,(readparam(bAgi)/10); if(readparam(bAgi) >= 125) { bonus bMatk,50; bonus bMaxHPRate,5; } }
+300110,card,下水ウォーターフォールカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; skill "SA_FROSTWEAPON",1; }
+300111,card,エリートベラレカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bAddSkillDamageRate,"GS_FULLBUSTER",BaseLevel; if(Job == Job_Rebellion || Job == Job_NightWatch) { bonus2 bAddSkillDamageRate,"GS_FULLBUSTER",BaseLevel; if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"GS_FULLBUSTER",BaseLevel; } } }
+300112,card,魔力中毒ドロールカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEffMagic,Eff_Freeze,500; }
+300113,card,解放された魔力カード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ callfunc "drop",990,100; callfunc "drop",991,100; callfunc "drop",992,100; callfunc "drop",993,100; }
+
+◯20240709 実装アイテム
+20250,cos,[衣装] 白銀に煌めく逆毛,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1317,0,{ /* 240709 効果実装済み */ },{}
+103237,use,スウィートメロンの箱(50個),2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 1000574,50; },{ /* 240709 効果実装済み */ }
+103238,use,ダークメロンの箱(50個),2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 1000581,50; },{ /* 240709 効果実装済み */ }
+103239,use,ウォーターメロンハートの箱(50個),2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 1000582,50; },{ /* 240709 効果実装済み */ }
+103240,use,濃縮メロンジャムの箱(150個),2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 1000597,150; },{ /* 240709 効果実装済み */ }
+400701,cos,[衣装] ファルファーレ自警団帽,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1368,0,{ /* 240709 効果実装済み */ },{}
+480408,cos,[衣装] 竜の翼,4,20,,0,,0:0,,0,2074075135,2,8192,,1,204,0,{ /* 240709 効果実装済み */ },{}
+1001790,item,煌めく銀の珠,3,0,,0,,,,,,,,,,,,{ /* 240709 効果実装済み */ },{}
+1001791,item,青之龍鱗,3,0,,0,,,,,,,,,,,,{ /* 240709 効果実装済み */ },{}
+1001792,item,キトゥンフルーツ,3,0,,0,,,,,,,,,,,,{ /* 240709 効果実装済み */ },{}
+1001793,item,イビルドラゴンウィング,3,0,,0,,,,,,,,,,,,{ /* 240709 効果実装済み */ },{}
+
+※調査中
+400700,cos,[衣装] 青龍の被り物,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2494,0,{ /* 240709 調査中 */ },{}
+
+item_db2.txt
+20250,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] 白銀に煌めく逆毛
+103237,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//スウィートメロンの箱(50個)
+103238,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ダークメロンの箱(50個)
+103239,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ウォーターメロンハートの箱(50個)
+103240,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//濃縮メロンジャムの箱(150個)
+400700,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] 青龍の被り物
+400701,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] ファルファーレ自警団帽
+480408,0,4,0,0,0,0,0,0,0,0,0,1	//衣	//[衣装] 竜の翼
+1001790,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//煌めく銀の珠
+1001791,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//青之龍鱗
+1001792,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//キトゥンフルーツ
+1001793,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//イビルドラゴンウィング
+
+classnum_db.txt
+20250#1317#	//[衣装] 白銀に煌めく逆毛
+400700#2494#	//[衣装] 青龍の被り物
+400701#1368#	//[衣装] ファルファーレ自警団帽
+480408#204#	//[衣装] 竜の翼
+
+20240709実装アイテム テスト用スクリプト
+getitem 20250,1;		//[衣装] 白銀に煌めく逆毛
+getitem 103237,1;		//スウィートメロンの箱(50個)
+getitem 103238,1;		//ダークメロンの箱(50個)
+getitem 103239,1;		//ウォーターメロンハートの箱(50個)
+getitem 103240,1;		//濃縮メロンジャムの箱(150個)
+getitem 400700,1;		//[衣装] 青龍の被り物
+getitem 400701,1;		//[衣装] ファルファーレ自警団帽
+getitem 480408,1;		//[衣装] 竜の翼
+getitem 1001790,1;		//煌めく銀の珠
+getitem 1001791,1;		//青之龍鱗
+getitem 1001792,1;		//キトゥンフルーツ
+getitem 1001793,1;		//イビルドラゴンウィング
