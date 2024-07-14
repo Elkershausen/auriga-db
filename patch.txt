@@ -1,3 +1,19 @@
+20240714	patch0213
+・22138-22178 ミス修正と最適化 コメント追加
+
+・関連するセット効果の修正と最適化 コメント追加
+
+・22174#スカラバハイヒール#を起点とする[再使用待機時間短縮効果が発動しない]効果は条件が複雑なため正しく動作しません
+
+・以下のアイテム
+4875,ench,熊の力,6,,,,,,,,,,65535,,,,,{ /* 実装中 */ },{ bonus4 bAutoActiveItem,4875,200,5000,EAS_REVENGE|EAS_NORMAL|EAS_SKILL; }
+4877,ench,光速,6,,,,,,,,,,65535,,,,,{ /* 実装中 */ },{ bonus4 bAutoActiveItem,4877,100,5000,EAS_ATTACK|EAS_WEAPON|EAS_NORMAL|EAS_SKILL; }
+4878,ench,鋼鎧,6,,,,,,,,,,65535,,,,,{ /* 実装中 */ },{ bonus4 bAutoActiveItem,4878,50,5000,EAS_REVENGE|EAS_NORMAL|EAS_SKILL; }
+4879,ench,大鷲の眼光,6,,,,,,,,,,65535,,,,,{ /* 実装中 */ },{ bonus4 bAutoActiveItem,4879,300,5000,EAS_ATTACK|EAS_WEAPON|EAS_NORMAL|EAS_SKILL; }
+4880,ench,幸運な日,6,,,,,,,,,,65535,,,,,{ /* 実装中 */ },{ bonus4 bAutoActiveItem,4880,100,5000,EAS_ATTACK|EAS_REVENGE|EAS_WEAPON|EAS_MAGIC|EAS_NORMAL|EAS_SKILL; }
+発動条件に近遠距離物理スキル攻撃がなかったので全部修正しました
+※従前の記述では素殴り攻撃・被ダメージでしか発動しません
+
 20240712	patch0212
 ・22105-22134 ミス修正と最適化 コメント追加
 
