@@ -1,3 +1,6 @@
+20240716	patch0214
+・20240716 アップデート実装(item_db.txt item_db2.txt item_cardtype.txt classnum_db.txt)
+
 20240714	patch0213
 ・22138-22178 ミス修正と最適化 コメント追加
 

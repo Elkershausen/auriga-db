@@ -1,0 +1,25 @@
+item_db.txt
+312939,ench,潜在解放(ウィンドホークVI),6,,,,,,,,,,65535,,,,,{ /* 2400716 4次職 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"WH_CRESCIVE_BOLT",-100; } }
+312978,ench,潜在解放(マイスターV),6,,,,,,,,,,65535,,,,,{ /* 2400716 4次職 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"MT_MIGHTY_SMASH",-200; } }
+400688,head,マグマイグニスキャップ,4,20,,500,,10:0,,1,2074075008,2,256,,200,2556,1,{ /* 2400716 4次職 効果実装済み */ },{ /*bonus bPow,3+getequiprefinerycnt();*/ bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"MT_AXE_STOMP",BaseLevel/10; bonus2 bAddSkillDamageRate,"MT_MIGHTY_SMASH",BaseLevel/10; bonus2 bAddSkillDamageRate,"MT_RUSH_QUAKE",BaseLevel/10; if(getequiprefinerycnt() >= 10) { bonus bPerfectHitRate,25; bonus bSkillDelayRate,-20; } }
+450379,armor,リュカントロポス,4,20,,1000,,100:0,,1,2048,2,16,,200,,1,{ /* 2400716 4次職 効果実装済み */ },{ bonus2 bSubRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus2 bAddSkillDamageRate,"WH_CRESCIVE_BOLT",BaseLevel/10; bonus2 bAddSkillDamageRate,"WH_GALESTORM",BaseLevel/10; bonus2 bAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; bonus2 bAddSkillCoolDown,"RA_ARROWSTORM",-200; } }
+460079,shield,メサルティム,4,20,,4000,,170:15,,0,16384,2,32,,100,2,1,{ /* 2400716 効果実装済み */ },{ bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus bMaxHPrate,3*getequiprefinerycnt(); bonus bMaxSPrate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 5) { bonus2 bSubEle,Ele_Ghost,25; } if(getequiprefinerycnt() >= 7) { bonus2 bSubEle,Ele_Poison,15; } }
+
+item_db2.txt
+312939,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(ウィンドホークVI)
+312978,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//潜在解放(マイスターV)
+400688,0,0,0,0,0,0,0,0,0,0,0,1	//条件なし	//マグマイグニスキャップ
+450379,0,0,0,0,0,0,0,0,0,0,0,1	//条件なし	//リュカントロポス
+460079,0,0,0,0,0,0,0,0,0,0,0,1	//条件なし	//メサルティム
+
+item_cartype.txt
+312939,ench,潜在解放(ウィンドホークVI),2
+312978,ench,潜在解放(マイスターV),2
+
+20240709実装アイテム テスト用スクリプト
+//20240716実装アイテム
+getitem 400688,1;		//マグマイグニスキャップ
+getitem 450379,1;		//リュカントロポス
+getitem 460079,1;		//メサルティム
+getitem 312939,1;		//潜在解放(ウィンドホークVI)
+getitem 312978,1;		//潜在解放(マイスターV)
