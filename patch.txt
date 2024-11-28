@@ -1,3 +1,6 @@
+20241128	patch0219
+・ clussnum_db.txt 更新漏れしたので追加
+
 20241128	patch0218
 ・20240917までのアイテム実装(item_db.txt item_db2.txt item_cardtype.txt clussnum_db.txt iteminfo_EN.lua)
 ※1000090 番号流用で入れ替え/移動制限が変わっています([2023]特別チケット(Autumn) -> [2024]特別チケット)
