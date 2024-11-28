@@ -1,3 +1,18 @@
+20241128	patch0218
+・20240917までのアイテム実装(item_db.txt item_db2.txt item_cardtype.txt clussnum_db.txt iteminfo_EN.lua)
+※1000090 番号流用で入れ替え/移動制限が変わっています([2023]特別チケット(Autumn) -> [2024]特別チケット)
+※特性ステータスの装備ボーナスの定義がないためエラーログが出ます
+※気になる場合は使わないでください(今後の実装を見越してます)
+※拡張4次職のスキルはコメントアウトしています(拡張4次職装備でもスキルを使わない場合は実装しています)
+
+・dropeffecttable.txt 新規実装
+
+・itemmoveinfov5.txt 廃止
+
+・src battle.* map.* 廃止
+
+・hateffectの定義追加(const.txt status.h)
+
 20241126	お知らせ
 iteminfo_EN.* にドロップエフェクトを追加できるコードを公開しました(wiki)
 

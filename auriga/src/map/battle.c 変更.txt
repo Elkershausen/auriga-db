@@ -1,5 +1,0 @@
-battle.c 6707行目
-
-		case AB_JUDEX:		// ジュデックス
-			MATK_FIX( (360 + 48 * skill_lv) * status_get_lv(bl) / 100, 100 );
-			break;

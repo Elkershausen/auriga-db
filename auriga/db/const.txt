@@ -1,4 +1,4 @@
-// 職業定義値 patch1549 + add 20240604 アップデート
+// 職業定義値
 Job_Novice		0
 Job_Swordman		1
 Job_Magician		2
@@ -1143,3 +1143,16 @@ HAT_EF_C_Dragon_Green_Aura		233
 HAT_EF_C_Dragon_Red_Aura		234
 HAT_EF_C_Dragon_Yellow_Aura		235
 HAT_EF_Interdimensional_Rift		236
+HAT_EF_C_CLB_SS_LL		237
+HAT_EF_Vacation			238
+HAT_EF_C_FH_Lostwing		239
+FOOTPRINT_EF_DogFoot		240
+HAT_EF_C_Auspicloud		241
+HAT_EF_AURA_OF_GHOST_S		242
+HAT_EF_C_ROS2024_Wing_1		243
+FOOTPRINT_EF_dumpling		244
+FOOTPRINT_EF_panda_basic	245
+FOOTPRINT_EF_panda_color	246
+HAT_EF_Atque_Poenitentia	247
+HAT_EF_Perm_Frost_Oblivion	248
+HAT_EF_Atque_Poenitentia2	249
