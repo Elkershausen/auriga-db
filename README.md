@@ -6,6 +6,6 @@
 <br>　→　https://github.com/Elkershausen/auriga-db/wiki<br>
 <br>
 ・テスト環境(新規用)をアップデート(20241123)<br><br>
-・iteminfoにドロップエフェクトを追加するコードをwikiに公開(20241126)<br><br>
+・iteminfoにドロップエフェクトを追加するコードをwikiに公開(20241126)<br>
 
 ・20241130 update(wiki)
