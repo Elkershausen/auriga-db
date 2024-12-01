@@ -1,0 +1,7 @@
+status.h コンパイルエラー修正
+
+	HAT_EF_Perm_Frost_Oblivion,
+	HAT_EF_Atque_Poenitentia2,	//249
+	HAT_EF_MAX
+
+※auriga1571対応です

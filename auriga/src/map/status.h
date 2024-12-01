@@ -2549,7 +2549,7 @@ enum {
 	FOOTPRINT_EF_panda_color,
 	HAT_EF_Atque_Poenitentia,
 	HAT_EF_Perm_Frost_Oblivion,
-	HAT_EF_Atque_Poenitentia2	//249
+	HAT_EF_Atque_Poenitentia2,	//249
 	HAT_EF_MAX
 };
 
