@@ -1,10 +1,4 @@
-//20240522 [全ての種族]に全対応 410014 410015 #コル・コアヘッドフォン# 追記
-//20240518 1549対応
-//20240507 防御無視 [一般・ボスモンスター][すべての種族]用ボーナス追加
-//20240427 312417#増幅された怨望#セット追記 テスト用設定追加 サンプル追記
-//20240426 反射ダメージ軽減(ロイヤル系) 310760#王の神威# 300314#理性と記憶の残滓# セット効果追記
-//20240415 19108#ワイルドポリンライダー#
-
+//20240924 グレイシア系装備追加
 //============================================================
 // 巨大なハエの羽
 function	script	ItemdbPartyCall	{
@@ -638,6 +632,218 @@ function	script	shukufukuLv1	{
 	if(getequiprefinerycnt() >= 10) {
 		bonus2 bAddSkillDamageRate,"AL_HEAL",10;
 		bonus2 bAddSkillDamageRate,"PR_SANCTUARY",10;
+	}
+	return;
+}
+
+//============================================================
+// グレイシア系両手武器
+//{ callfunc "Glacier202409"; }
+//超越段階の条件が実装できたら効果を追記してください
+function	script	Glacier202409	{
+	bonus2 bSubRace,Rct_Player,40;
+	bonus2 bMagicSubRace,Rct_Player,40;
+	bonus2 bAddRace,Rct_Formless,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Undead,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Brute,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Plant,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Fish,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Demon,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Angel,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Dragon,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_DemiHuman,6*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Formless,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Undead,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Brute,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Plant,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Insect,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Fish,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Demon,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Angel,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Dragon,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_DemiHuman,3*getequiprefinerycnt();
+	if(equippeditem(311439)) {
+		bonus2 bIgnoreDefRace,Rct_Formless,100;
+		bonus2 bIgnoreDefRace,Rct_Undead,100;
+		bonus2 bIgnoreDefRace,Rct_Brute,100;
+		bonus2 bIgnoreDefRace,Rct_Plant,100;
+		bonus2 bIgnoreDefRace,Rct_Insect,100;
+		bonus2 bIgnoreDefRace,Rct_Fish,100;
+		bonus2 bIgnoreDefRace,Rct_Demon,100;
+		bonus2 bIgnoreDefRace,Rct_Angel,100;
+		bonus2 bIgnoreDefRace,Rct_Dragon,100;
+		bonus2 bIgnoreDefRace,Rct_DemiHuman,100;
+		bonus2 bIgnoreMdefRace,Rct_Formless,100;
+		bonus2 bIgnoreMdefRace,Rct_Undead,100;
+		bonus2 bIgnoreMdefRace,Rct_Brute,100;
+		bonus2 bIgnoreMdefRace,Rct_Plant,100;
+		bonus2 bIgnoreMdefRace,Rct_Insect,100;
+		bonus2 bIgnoreMdefRace,Rct_Fish,100;
+		bonus2 bIgnoreMdefRace,Rct_Demon,100;
+		bonus2 bIgnoreMdefRace,Rct_Angel,100;
+		bonus2 bIgnoreMdefRace,Rct_Dragon,100;
+		bonus2 bIgnoreMdefRace,Rct_DemiHuman,100;
+		bonus bBaseAtk,BaseLevel;
+		bonus bMatk,BaseLevel;
+	}
+	return;
+}
+
+//============================================================
+// ディムグレイシア系両手武器
+//{ callfunc "D_Glacier202409"; }
+//超越段階の条件が実装できたら効果を追記してください
+function	script	D_Glacier202409	{
+	bonus2 bSubRace,Rct_Player,40;
+	bonus2 bMagicSubRace,Rct_Player,40;
+	bonus2 bAddRace,Rct_Formless,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Undead,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Brute,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Plant,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Fish,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Demon,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Angel,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Dragon,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_DemiHuman,6*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Formless,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Undead,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Brute,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Plant,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Insect,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Fish,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Demon,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Angel,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Dragon,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_DemiHuman,3*getequiprefinerycnt();
+	if(equippeditem(311439)) {
+		bonus2 bIgnoreDefRace,Rct_Formless,100;
+		bonus2 bIgnoreDefRace,Rct_Undead,100;
+		bonus2 bIgnoreDefRace,Rct_Brute,100;
+		bonus2 bIgnoreDefRace,Rct_Plant,100;
+		bonus2 bIgnoreDefRace,Rct_Insect,100;
+		bonus2 bIgnoreDefRace,Rct_Fish,100;
+		bonus2 bIgnoreDefRace,Rct_Demon,100;
+		bonus2 bIgnoreDefRace,Rct_Angel,100;
+		bonus2 bIgnoreDefRace,Rct_Dragon,100;
+		bonus2 bIgnoreDefRace,Rct_DemiHuman,100;
+		bonus2 bIgnoreMdefRace,Rct_Formless,100;
+		bonus2 bIgnoreMdefRace,Rct_Undead,100;
+		bonus2 bIgnoreMdefRace,Rct_Brute,100;
+		bonus2 bIgnoreMdefRace,Rct_Plant,100;
+		bonus2 bIgnoreMdefRace,Rct_Insect,100;
+		bonus2 bIgnoreMdefRace,Rct_Fish,100;
+		bonus2 bIgnoreMdefRace,Rct_Demon,100;
+		bonus2 bIgnoreMdefRace,Rct_Angel,100;
+		bonus2 bIgnoreMdefRace,Rct_Dragon,100;
+		bonus2 bIgnoreMdefRace,Rct_DemiHuman,100;
+		bonus bBaseAtk,BaseLevel;
+		bonus bMatk,BaseLevel;
+	}
+	return;
+}
+
+//============================================================
+// グレイシアベーシック系片手武器
+//{ callfunc "Glacier_B202409"; }
+//超越段階の条件が実装できたら効果を追記してください
+function	script	Glacier_B202409	{
+	bonus2 bSubRace,Rct_Player,10;
+	bonus2 bMagicSubRace,Rct_Player,10;
+	bonus2 bAddRace,Rct_Formless,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Undead,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Brute,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Plant,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Fish,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Demon,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Angel,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Dragon,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_DemiHuman,6*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Formless,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Undead,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Brute,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Plant,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Insect,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Fish,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Demon,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Angel,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Dragon,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_DemiHuman,3*getequiprefinerycnt();
+	if(equippeditem(311439)) {
+		bonus2 bIgnoreDefRace,Rct_Formless,100;
+		bonus2 bIgnoreDefRace,Rct_Undead,100;
+		bonus2 bIgnoreDefRace,Rct_Brute,100;
+		bonus2 bIgnoreDefRace,Rct_Plant,100;
+		bonus2 bIgnoreDefRace,Rct_Insect,100;
+		bonus2 bIgnoreDefRace,Rct_Fish,100;
+		bonus2 bIgnoreDefRace,Rct_Demon,100;
+		bonus2 bIgnoreDefRace,Rct_Angel,100;
+		bonus2 bIgnoreDefRace,Rct_Dragon,100;
+		bonus2 bIgnoreDefRace,Rct_DemiHuman,100;
+		bonus2 bIgnoreMdefRace,Rct_Formless,100;
+		bonus2 bIgnoreMdefRace,Rct_Undead,100;
+		bonus2 bIgnoreMdefRace,Rct_Brute,100;
+		bonus2 bIgnoreMdefRace,Rct_Plant,100;
+		bonus2 bIgnoreMdefRace,Rct_Insect,100;
+		bonus2 bIgnoreMdefRace,Rct_Fish,100;
+		bonus2 bIgnoreMdefRace,Rct_Demon,100;
+		bonus2 bIgnoreMdefRace,Rct_Angel,100;
+		bonus2 bIgnoreMdefRace,Rct_Dragon,100;
+		bonus2 bIgnoreMdefRace,Rct_DemiHuman,100;
+		bonus bBaseAtk,BaseLevel;
+		bonus bMatk,BaseLevel;
+	}
+	return;
+}
+
+//============================================================
+// ディムグレイシアグレイシアベーシック系片手武器
+//{ callfunc "D_Glacier_B202409"; }
+//超越段階の条件が実装できたら効果を追記してください
+function	script	D_Glacier_B202409	{
+	bonus2 bSubRace,Rct_Player,10;
+	bonus2 bMagicSubRace,Rct_Player,10;
+	bonus2 bAddRace,Rct_Formless,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Undead,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Brute,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Plant,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Fish,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Demon,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Angel,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_Dragon,6*getequiprefinerycnt();
+	bonus2 bAddRace,Rct_DemiHuman,6*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Formless,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Undead,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Brute,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Plant,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Insect,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Fish,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Demon,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Angel,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_Dragon,3*getequiprefinerycnt();
+	bonus2 bMagicAddRace,Rct_DemiHuman,3*getequiprefinerycnt();
+	if(equippeditem(311439)) {
+		bonus2 bIgnoreDefRace,Rct_Formless,100;
+		bonus2 bIgnoreDefRace,Rct_Undead,100;
+		bonus2 bIgnoreDefRace,Rct_Brute,100;
+		bonus2 bIgnoreDefRace,Rct_Plant,100;
+		bonus2 bIgnoreDefRace,Rct_Insect,100;
+		bonus2 bIgnoreDefRace,Rct_Fish,100;
+		bonus2 bIgnoreDefRace,Rct_Demon,100;
+		bonus2 bIgnoreDefRace,Rct_Angel,100;
+		bonus2 bIgnoreDefRace,Rct_Dragon,100;
+		bonus2 bIgnoreDefRace,Rct_DemiHuman,100;
+		bonus2 bIgnoreMdefRace,Rct_Formless,100;
+		bonus2 bIgnoreMdefRace,Rct_Undead,100;
+		bonus2 bIgnoreMdefRace,Rct_Brute,100;
+		bonus2 bIgnoreMdefRace,Rct_Plant,100;
+		bonus2 bIgnoreMdefRace,Rct_Insect,100;
+		bonus2 bIgnoreMdefRace,Rct_Fish,100;
+		bonus2 bIgnoreMdefRace,Rct_Demon,100;
+		bonus2 bIgnoreMdefRace,Rct_Angel,100;
+		bonus2 bIgnoreMdefRace,Rct_Dragon,100;
+		bonus2 bIgnoreMdefRace,Rct_DemiHuman,100;
+		bonus bBaseAtk,BaseLevel;
+		bonus bMatk,BaseLevel;
 	}
 	return;
 }

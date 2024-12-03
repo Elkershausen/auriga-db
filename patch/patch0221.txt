@@ -1,0 +1,407 @@
+item_db.txt
+9145,pet,コポの卵,4,20,,0,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+9146,pet,グレーアイスウィンドの卵,4,20,,0,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+9147,pet,ホワイトアイスウィンドの卵,4,20,,0,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+400414,cos,[衣装] 頼れるコポ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2356,0,{ /* 240926 効果実装済み */ },{}
+400415,cos,[衣装] オシャレコポ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2357,0,{ /* 240926 効果実装済み */ },{}
+410229,cos,[衣装] 蛇神の水晶,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2355,0,{ /* 240926 効果実装済み */ },{}
+420201,cos,[衣装] 白蛇妖のウィッグ,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2354,0,{ /* 240926 効果実装済み */ },{}
+480286,cos,[衣装] 蛇神の幻影,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{ /* 240926 不動 */ },{ hateffect HAT_EF_SERPENT_SHADOW,TRUE; },{ hateffect HAT_EF_SERPENT_SHADOW,FALSE; }
+300455,card,コポカード,6,20,,10,,,,,,,136,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddEleMagicDamageRate,Ele_Wind,10; }
+300456,card,アイスウィンドの卵カード,6,20,,10,,,,,,,16,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; if(getequiprefinerycnt() >= 8) { bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; } }
+300457,card,グレーアイスウィンドカード,6,20,,10,,,,,,,136,,,,,{ /* 240926 特性ステ */ },{ bonus bStr,5; if(readparam(bPow) >= 100) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; } }
+300458,card,ホワイトアイスウィンドカード,6,20,,10,,,,,,,136,,,,,{ /* 240926 特性ステ */ },{ bonus bInt,5; if(readparam(bSpl) >= 100) { bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; } }
+300459,card,ヨルムンガンド教団主教カード,6,20,,10,,,,,,,2,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bMagicAddRace,Rct_Boss,4; bonus2 bMagicAddRace,Rct_NonBoss,4; if(getlook(2) == 23) { bonus2 bMagicAddRace,Rct_Boss,2; bonus2 bMagicAddRace,Rct_NonBoss,2; if(getequiprefinerycnt() >= 10) { bonus2 bMagicAddRace,Rct_Boss,4; bonus2 bMagicAddRace,Rct_NonBoss,4; } } }
+300460,card,Jガーディアンカード,6,20,,10,,,,,,,2,,,,,{ /* 240926 物理・魔法攻撃[蛇神の根源 01][蛇神の根源 02][蛇神の根源 深い洞窟]map指定効果 */ },{}
+300461,card,怪しいアーウィン兵士カード,6,20,,10,,,,,,,2,,,,,{ /* 240926 物理・魔法攻撃[凍て付いた鱗の海辺][古代の氷の峡谷 西部][古代の氷の峡谷 東部]map指定効果 */ },{}
+300462,card,上級ルガン呪術師カード,6,20,,10,,,,,,,769,,,,,{ /* 240926 魔法攻撃倒した時HPSP回復 */ },{}
+300463,card,上級ルガン治療師カード,6,20,,10,,,,,,,4,,,,,{ /* 240926 効果実装済み */ },{ callfunc "ItemdbAlmightyHeal",0x7F,getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { callfunc "ItemdbAlmightyHeal",0x7F,10; } }
+300464,card,ヨルムンガンド教団術師カード,6,20,,10,,,,,,,2,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddEleMagicDamageRate,Ele_Wind,getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddEleMagicDamageRate,Ele_Wind,10; } }
+300465,card,ヨルムンガンド教団守衛カード,6,20,,10,,,,,,,64,,,,,{ /* 240926 効果実装済み */ },{ bonus bAddShortWeaponDamage,5; if(getequiprefinerycnt() >= 8) { bonus bAspdAddRate,5; } }
+300466,card,ルガンクリーナーカード,6,20,,10,,,,,,,136,,,,,{ /* 240926 特性ステ */ },{ bonus bCritical,5; if(readparam(bCrt) >= 100) { bonus bCritical,20; } }
+300467,card,天使ウミウシカード,6,20,,10,,,,,,,16,,,,,{ /* 240926 効果実装済み */ },{  bonus2 bAddRace,Rct_Demon,getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Demon,10; } }
+300468,card,雪ウサギウミウシカード,6,20,,10,,,,,,,136,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; bonus3 bAutoActiveWeapon,300468,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddEleWeaponDamageRate,Ele_Ghost,10; } }
+300469,card,メリベウミウシカード,6,20,,10,,,,,,,769,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bSubEle,Ele_Wind,10; if(getequiprefinerycnt() >= 8) { bonus bDef,50; bonus bMdef,10; } }
+300470,card,クマムシカード,6,20,,10,,,,,,,4,,,,,{ /* 240926 効果実装済み */ },{ bonus bAddLongWeaponDamage,5; if(getequipid(11) == 1756) { bonus2 bSubEle,Ele_Earth,50; } }
+300471,card,堕落した天使ウミウシカード,6,20,,10,,,,,,,64,,,,,{ /* 240926 セット効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(getequiprefinerycnt() >= 10) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } if(equippeditem(311439)) { bonus2 bResEff,Eff_Silence,10000; bonus2 bHPPenaltyTime,10000,-5000; bonus2 bSPPenaltyTime,10000,-100; } }
+300472,card,究極のラスガンドカード,6,20,,10,,,,,,,4,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddEleMagicDamageRate,Ele_Poison,50; bonus2 bSubEle,Ele_Poison,50; if(equippeditem(311439)) { bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bAddFixCastRate,"SO_CLOUD_KILL",-100; } }
+300473,card,雪嵐天使ウミウシカード,6,20,,10,,,,,,,64,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddRace,Rct_Fish,50; bonus2 bAddRace,Rct_Angel,50; bonus bMaxSPrate,-50; if(equippeditem(311439)) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; skill "AB_RENOVATIO",2; } }
+300474,card,ルガンチーフクリーナーカード,6,20,,10,,,,,,,2,,,,,{ /* 240926 物理攻撃倒した時HPSP回復 */ },{ bonus2 bHPDrainRate,1,20; if(equippeditem(311439)) { bonus bAddShortWeaponDamage,15; bonus bAddLongWeaponDamage,15; } }
+1001226,item,ルガンの上級魔力核,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001227,item,珊瑚で作られた腕輪,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001228,item,貝殻ヘアピン,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001229,item,海藻の腰帯,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001230,item,鱗の鎧の欠片,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001231,item,ちょっと酸っぱいぷにぷに蛍光細胞,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001232,item,すこし塩辛いぷにぷに蛍光細胞,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001233,item,ほどよく甘いぷにぷに蛍光細胞,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001234,item,クマムシの皮,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001235,item,怪生命体の歯,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001236,item,煌めく雪,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001237,pet,天使のしっぽ,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001238,item,神秘的な魔力の塊,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001239,item,折れた三叉槍,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001240,item,アーウィン二等兵の帽子,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001241,item,アーウィン一等兵の帽子,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001242,item,アーウィン上等兵の帽子,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001243,item,アーウィン鳥兵の帽子,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001244,item,大きな灰色の羽根,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001245,item,大きな白色の羽根,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001246,item,コポの頭の羽根,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001247,item,コポの卵の欠片,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001251,item,蛇神の鱗,3,20,,10,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001153,item,古代アイスウィンドの卵,3,20,,0,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001154,item,ヘビイチゴ,3,20,,0,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001217,item,神聖な猫のひげ,3,20,,0,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001218,item,魔力回収装置,3,20,,0,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+1001254,item,汚染されたユミルの心臓の欠片,3,20,,0,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
+102202,pet,まるまるとしたアイスフナムシ,2,20,,50,,,,,2074075135,2,,,1,,,{ /* 240926 [コポ]テイミングアイテム */ },{}
+102227,use,エンハンスキューブ(グレイシア),2,20,,10,,,,,2074075135,2,,,1,,,{ /* 240926 精錬値変化 */ },{}
+100900,use,転移の羽(イスガルド 氷の城),2,20,,0,,,,,2074075135,2,,,220,,,{ /* 240926 warp"イスガルド 氷の城" */ },{}
+600027,weapon,グレイシアツーハンドソード,9,20,,3400,280:230,,1,1,128,2,34,3,220,3,1,{ /* 240926 超越装備 */ },{ callfunc "Glacier202409"; }
+620017,weapon,グレイシアツーハンドアックス,9,20,,4000,320:200,,1,1,1024,2,34,3,220,7,1,{ /* 240926 超越装備 */ },{ callfunc "Glacier202409"; }
+630018,weapon,グレイシアランス,9,20,,3500,200:230,,3,1,128,2,34,3,220,5,1,{ /* 240926 超越装備 */ },{ callfunc "Glacier202409"; }
+640033,weapon,グレイシアスタッフ,9,20,,2400,120:270,,1,1,512,2,34,3,220,23,1,{ /* 240926 超越装備 */ },{ callfunc "Glacier202409"; }
+600030,weapon,ディムグレイシアツーハンドソード,9,20,,3400,280:230,,1,1,128,2,34,4,220,3,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier202409"; }
+610041,weapon,ディムグレイシアカタール,9,20,,2800,150:250,,1,1,4096,2,34,4,220,16,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier202409"; }
+620019,weapon,ディムグレイシアツーハンドアックス,9,20,,4000,320:200,,1,1,1024,2,34,4,220,7,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier202409"; }
+630019,weapon,ディムグレイシアランス,9,20,,3500,200:230,,3,1,128,2,34,4,220,5,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier202409"; }
+640034,weapon,ディムグレイシアスタッフ,9,20,,2400,120:270,,1,1,512,2,34,4,220,23,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier202409"; }
+650028,weapon,ディムグレイシア風魔手裏剣,9,20,,1500,150:160,,1,1,536870912,2,34,4,220,22,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier202409"; }
+700059,weapon,ディムグレイシアボウ,8,20,,900,160:170,,5,1,1705984,2,34,4,220,11,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier202409"; }
+311215,ench,氷華の魔力(アークメイジI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"AG_CRIMSON_ARROW",25; bonus2 bAddSkillDamageRate,"AG_FROZEN_SLASH",25; bonus2 bAddSkillDamageRate,"AG_STORM_CANNON",25; bonus2 bAddSkillDamageRate,"AG_ROCK_DOWN",25; }
+311216,ench,氷華の魔力(アークメイジII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"AG_SOUL_VC_STRIKE",25; bonus2 bAddSkillDamageRate,"AG_MYSTERY_ILLUSION",25; bonus2 bAddSkillDamageRate,"AG_DEADLY_PROJECTION",25; bonus2 bAddSkillDamageRate,"AG_ASTRAL_STRIKE",25; }
+311217,ench,氷華の魔力(アビスチェイサーI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"ABC_CHAIN_REACTION_SHOT",25; bonus2 bAddSkillDamageRate,"ABC_FRENZY_SHOT",25; }
+311218,ench,氷華の魔力(アビスチェイサーII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"ABC_FROM_THE_ABYSS_ATK",25; bonus2 bAddSkillDamageRate,"ABC_ABYSS_SQUARE",25; bonus2 bAddSkillDamageRate,"ABC_ABYSS_STRIKE",25; }
+311219,ench,氷華の魔力(アビスチェイサーIII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"ABC_ABYSS_DAGGER",25; bonus2 bAddSkillDamageRate,"ABC_UNLUCKY_RUSH",25; bonus2 bAddSkillDamageRate,"ABC_DEFT_STAB",25; }
+311220,ench,氷華の魔力(インクイジターI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"IQ_OLEUM_SANCTUM",25; bonus2 bAddSkillDamageRate,"IQ_EXPOSION_BLASTER",25; bonus2 bAddSkillDamageRate,"IQ_MASSIVE_F_BLASTER",25; }
+311221,ench,氷華の魔力(インクイジターII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"IQ_SECOND_FAITH",25; bonus2 bAddSkillDamageRate,"IQ_THIRD_PUNISH",25; bonus2 bAddSkillDamageRate,"IQ_SECOND_JUDGEMENT",25; bonus2 bAddSkillDamageRate,"IQ_THIRD_CONSECRATION",25; bonus2 bAddSkillDamageRate,"IQ_SECOND_FLAME",25; bonus2 bAddSkillDamageRate,"IQ_THIRD_FLAME_BOMB",25; }
+311222,ench,氷華の魔力(インペリアルガードI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"IG_OVERSLASH",25; bonus2 bAddSkillDamageRate,"IG_GRAND_JUDGEMENT",25; bonus2 bAddSkillDamageRate,"IG_SHIELD_SHOOTING",25; }
+311223,ench,氷華の魔力(インペリアルガードII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"IG_CROSS_RAIN",25; bonus2 bAddSkillDamageRate,"IG_JUDGEMENT_CROSS",25; }
+311224,ench,氷華の魔力(ウィンドホークI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WH_CRESCIVE_BOLT",25; bonus2 bAddSkillDamageRate,"WH_GALESTORM",25; }
+311225,ench,氷華の魔力(ウィンドホークII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WH_HAWKBOOMERANG",25; bonus2 bAddSkillDamageRate,"WH_HAWKRUSH",25; }
+311226,ench,氷華の魔力(ウィンドホークIII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WH_FLAMETRAP",25; bonus2 bAddSkillDamageRate,"WH_SWIFTTRAP",25; bonus2 bAddSkillDamageRate,"WH_SOLIDTRAP",25; bonus2 bAddSkillDamageRate,"WH_DEEPBLINDTRAP",25; }
+311227,ench,氷華の魔力(エレメンタルマスターI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"EM_CONFLAGRATION",25; bonus2 bAddSkillDamageRate,"EM_DIAMOND_STORM",25; bonus2 bAddSkillDamageRate,"EM_LIGHTNING_LAND",25; bonus2 bAddSkillDamageRate,"EM_TERRA_DRIVE",25; bonus2 bAddSkillDamageRate,"EM_VENOM_SWAMP",25; }
+311228,ench,氷華の魔力(カーディナルI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"CD_ARBITRIUM",25; bonus2 bAddSkillDamageRate,"CD_PNEUMATICUS_PROCELLA",25; bonus2 bAddSkillDamageRate,"CD_FRAMEN",25; }
+311229,ench,氷華の魔力(カーディナルII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"CD_PETITIO",25; bonus2 bAddSkillDamageRate,"CD_EFFLIGO",25; }
+311230,ench,氷華の魔力(シャドウクロスI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SHC_IMPACT_CRATER",25; bonus2 bAddSkillDamageRate,"SHC_SAVAGE_IMPACT",25; bonus2 bAddSkillDamageRate,"SHC_FATAL_SHADOW_CROW",25; }
+311231,ench,氷華の魔力(シャドウクロスII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SHC_DANCING_KNIFE",25; bonus2 bAddSkillDamageRate,"SHC_SHADOW_STAB",25; bonus2 bAddSkillDamageRate,"SHC_ETERNAL_SLASH",25; bonus2 bAddSkillDamageRate,"SHC_FATAL_SHADOW_CROW",25; }
+311232,ench,氷華の魔力(ドラゴンナイトI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"DK_HACKANDSLASHER",25; bonus2 bAddSkillDamageRate,"DK_MADNESS_CRUSHER",25; bonus2 bAddSkillDamageRate,"DK_DRAGONIC_AURA",25; }
+311233,ench,氷華の魔力(ドラゴンナイトII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"DK_SERVANTWEAPON_ATK",25; bonus2 bAddSkillDamageRate,"DK_SERVANT_W_PHANTOM",25; bonus2 bAddSkillDamageRate,"DK_SERVANT_W_DEMOL",25; }
+311234,ench,氷華の魔力(ドラゴンナイトIII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"DK_DRAGONIC_BREATH",25; bonus2 bAddSkillDamageRate,"DK_DRAGONIC_AURA",25; }
+311235,ench,氷華の魔力(トルバドゥール&トルヴェールI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"TR_RHYTHMSHOOTING",25; bonus2 bAddSkillDamageRate,"TR_ROSEBLOSSOM",25; }
+311236,ench,氷華の魔力(トルバドゥール&トルヴェールII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"TR_SOUNDBLEND",25; bonus2 bAddSkillDamageRate,"TR_METALIC_FURY",25; }
+311237,ench,氷華の魔力(バイオロI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_FIRE",25; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_WATER",25; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_GROUND",25; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_WIND",25; }
+311238,ench,氷華の魔力(バイオロII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"BO_EXPLOSIVE_POWDER",25; }
+311239,ench,氷華の魔力(バイオロIII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"BO_MAYHEMIC_THORNS",25; }
+311240,ench,氷華の魔力(マイスターI),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"MT_AXE_STOMP",25; bonus2 bAddSkillDamageRate,"MT_MIGHTY_SMASH",25; bonus2 bAddSkillDamageRate,"MT_RUSH_QUAKE",25; }
+311241,ench,氷華の魔力(マイスターII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"MT_SPARK_BLASTER",25; bonus2 bAddSkillDamageRate,"MT_TRIPLE_LASER",25; }
+311242,ench,氷華の魔力(スピリットハンドラーI),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"SH_CHUL_HO_SONIC_CLAW",25; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",25; bonus2 bAddSkillDamageRate,"SH_HOGOGONG_STRIKE",25; }
+311243,ench,氷華の魔力(スピリットハンドラーII),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"SH_HYUN_ROK_CANNON",25; bonus2 bAddSkillDamageRate,"SH_HYUN_ROKS_BREEZE",25; }
+311244,ench,氷華の魔力(ソウルアセティックI),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLUE_DRAGON",25; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_WHITE_TIGER",25; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_RED_PHOENIX",25; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLACK_TORTOISE",25; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",25; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",25; }
+311245,ench,氷華の魔力(ソウルアセティックII),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_SOUL_STEALING",25; bonus2 bAddSkillDamageRate,"SOA_EXORCISM_OF_MALICIOUS_SOUL",25; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",25; }
+311246,ench,氷華の魔力(ナイトウォッチI),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",25; bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",25; bonus2 bAddSkillDamageRate,"NW_MAGAZINE_FOR_ONE",25; bonus2 bAddSkillDamageRate,"NW_THE_VIGILANTE_AT_NIGHT",25; bonus2 bAddSkillDamageRate,"NW_WILD_FIRE",25; }
+311247,ench,氷華の魔力(ナイトウォッチII),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"NW_BASIC_GRENADE",25; bonus2 bAddSkillDamageRate,"NW_HASTY_FIRE_IN_THE_HOLE",25; bonus2 bAddSkillDamageRate,"NW_GRENADES_DROPPING",25; bonus2 bAddSkillDamageRate,"NW_MISSION_BOMBARD",25; }
+311248,ench,氷華の魔力(ハイパーノービスI),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"HN_JUPITEL_THUNDER_STORM",25; bonus2 bAddSkillDamageRate,"HN_HELLS_DRIVE",25; bonus2 bAddSkillDamageRate,"HN_NAPALM_VULCAN_STRIKE",25; }
+311249,ench,氷華の魔力(ハイパーノービスII),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"HN_SHIELD_CHAIN_RUSH",25; bonus2 bAddSkillDamageRate,"HN_SPIRAL_PIERCE_MAX",25; }
+311250,ench,氷華の魔力(ハイパーノービスIII),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"HN_DOUBLEBOWLINGBASH",25; bonus2 bAddSkillDamageRate,"HN_MEGA_SONIC_BLOW",25; }
+311251,ench,氷華の魔力(蜃気楼&不知火I),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"SS_KAGEGARI",25; bonus2 bAddSkillDamageRate,"SS_KAGENOMAI",25; bonus2 bAddSkillDamageRate,"SS_KAGEGISSEN",25; bonus2 bAddSkillDamageRate,"SS_KAGEAKUMU",25; }
+311252,ench,氷華の魔力(蜃気楼&不知火II),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"SS_KUNAIWAIKYOKU",25; bonus2 bAddSkillDamageRate,"SS_KUNAIKAITEN",25; bonus2 bAddSkillDamageRate,"SS_KUNAIKUSSETSU",25; bonus2 bAddSkillDamageRate,"SS_HITOUAKUMU",25; }
+311253,ench,氷華の魔力(蜃気楼&不知火III),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"SS_SEKIENHOU",25; bonus2 bAddSkillDamageRate,"SS_REIKETSUHOU",25; bonus2 bAddSkillDamageRate,"SS_RAIDENPOU",25; bonus2 bAddSkillDamageRate,"SS_KINRYUUHOU",25; bonus2 bAddSkillDamageRate,"SS_ANTENPOU",25; bonus2 bAddSkillDamageRate,"SS_ANKOKURYUUAKUMU",25; }
+311254,ench,氷華の魔力(天帝I),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"SKE_TWINKLING_GALAXY",25; bonus2 bAddSkillDamageRate,"SKE_STAR_BURST",25; bonus2 bAddSkillDamageRate,"SKE_STAR_CANNON",25; }
+311255,ench,氷華の魔力(天帝II),6,,,,,,,,,,65535,,,,,{ /* 240926 拡張4次 */ },{ bonus2 bAddSkillDamageRate,"SKE_RISING_SUN",25; bonus2 bAddSkillDamageRate,"SKE_NOON_BLAST",25; bonus2 bAddSkillDamageRate,"SKE_SUNSET_BLAST",25; bonus2 bAddSkillDamageRate,"SKE_RISING_MOON",25; bonus2 bAddSkillDamageRate,"SKE_MIDNIGHT_KICK",25; bonus2 bAddSkillDamageRate,"SKE_DAWN_BREAK",25; }
+810010,weapon,グレイシアライフル,15,20,,850,170:0,,5,1,268435456,2,34,3,220,18,1,{ /* 240926 超越装備 */ },{ callfunc "Glacier202409"; }
+820008,weapon,グレイシアショットガン,15,20,,3000,180:0,,5,1,268435456,2,34,3,220,20,1,{ /* 240926 超越装備 */ },{ bonus bSplashRange,1; callfunc "Glacier202409"; }
+830013,weapon,グレイシアガトリングガン,15,20,,2500,120:0,,5,1,268435456,2,34,3,220,19,1,{ /* 240926 超越装備 */ },{ callfunc "Glacier202409"; }
+840009,weapon,グレイシアグレネードガン,15,20,,1400,210:0,,5,1,268435456,2,34,3,220,21,1,{ /* 240926 超越装備 */ },{ callfunc "Glacier202409"; }
+800015,weapon,ディムグレイシアハンドガン,15,20,,350,70:0,,5,1,268435456,2,34,4,220,17,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier202409"; }
+810015,weapon,ディムグレイシアライフル,15,20,,850,170:0,,5,1,268435456,2,34,4,220,18,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier202409"; }
+820011,weapon,ディムグレイシアショットガン,15,20,,3000,180:0,,5,1,268435456,2,34,4,220,20,1,{ /* 240926 超越装備 */ },{ bonus bSplashRange,1; callfunc "D_Glacier202409"; }
+830015,weapon,ディムグレイシアガトリングガン,15,20,,2500,120:0,,5,1,268435456,2,34,4,220,19,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier202409"; }
+840010,weapon,ディムグレイシアグレネードガン,15,20,,1400,210:0,,5,1,268435456,2,34,4,220,21,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier202409"; }
+510062,weapon,グレイシアダガー,5,20,,600,120:120,,1,1,536870912,2,2,3,220,1,1,{ /* 240926 超越装備 */ },{ callfunc "Glacier_B202409"; }
+500054,weapon,ディムグレイシアソード,5,20,,1200,150:130,,1,1,262144,2,2,4,220,2,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+500055,weapon,ディムグレイシアベーシックソード,5,20,,1200,150:130,,1,1,8388608,2,2,4,220,2,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+510075,weapon,ディムグレイシアナイフ,5,20,,600,120:120,,1,1,135168,2,2,4,220,1,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+510076,weapon,ディムグレイシアダガー,5,20,,600,120:120,,1,1,536870912,2,2,4,220,1,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+520021,weapon,ディムグレイシアアックス,5,20,,1800,180:110,,1,1,1024,2,2,4,220,6,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+530034,weapon,ディムグレイシアスピア,5,20,,1800,150:110,,3,1,16512,2,2,4,220,4,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+540056,weapon,ディムグレイシアブック,5,20,,800,120:140,,1,1,33620224,2,2,4,220,15,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+550089,weapon,ディムグレイシアワンド,5,20,,300,60:180,,1,1,134316800,2,2,4,220,10,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+550090,weapon,ディムグレイシアフォックステイル,5,20,,400,150:180,,1,1,1073741824,2,2,4,220,100,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+560037,weapon,ディムグレイシアナックル,5,20,,400,140:100,,1,1,32768,2,2,4,220,12,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+570032,weapon,ディムグレイシアバイオリン,5,20,,250,180:120,,1,1,524288,2,2,4,220,13,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+580033,weapon,ディムグレイシアウィップ,5,20,,500,150:120,,2,1,1048576,2,2,4,220,14,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+590047,weapon,ディムグレイシアメイス,5,20,,1500,150:110,,1,1,256,2,2,4,220,8,1,{ /* 240926 超越装備 */ },{ callfunc "D_Glacier_B202409"; }
+101186,use,ディムグレイシア作成方法1,2,20,,0,,,,,2074075135,2,,,1,,,{ /* 240926 ench関与 */ },{}
+101638,use,ディムグレイシア作成方法2,2,20,,0,,,,,2074075135,2,,,1,,,{ /* 240926 ench関与 */ },{}
+450264,armor,グレイシアアーマー,4,20,,1200,,150:0,,1,2074075135,2,16,,240,,1,{ /* 240926 超越装備 */ },{ bonus2 bSubRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; callfunc "MeleeRct_All",4*getequiprefinerycnt(); callfunc "MagicRct_All",4*getequiprefinerycnt(); if(equippeditem(311439)) { bonus bDef,300; bonus bMdef,30; } }
+450266,robe,グレイシアマント,4,20,,1000,,60:0,,1,2074075135,2,4,,240,0,1,{ /* 240926 超越装備 */ },{ bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bAllStatus,getequiprefinerycnt(); if(equippeditem(311439)) { bonus bAspdAddRate,20; bonus bSkillDelayRate,20; } }
+470196,shoes,グレイシアブーツ,4,20,,600,,20:0,,1,2074075135,2,64,,240,,1,{ /* 240926 超越装備 */ },{ bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus bMaxHPrate,4*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,4*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,4*getequiprefinerycnt(); if(equippeditem(311439)) { bonus bSkillDelayRate,-40; } }
+311256,ench,氷華の魔力(ルーンナイトII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",15; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",15; if(getequiprefinerycnt() > 8) { bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",20; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",20; } if(getequiprefinerycnt() > 9) { bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",40; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",40; } if(getequiprefinerycnt() > 10) { bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",75; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",75; } }
+311257,ench,氷華の魔力(ウォーロックII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WL_CRIMSONROCK",5; bonus2 bAddSkillDamageRate,"WL_SOULEXPANSION",5; bonus2 bAddSkillDamageRate,"WL_EARTHSTRAIN",10; bonus2 bAddSkillDamageRate,"WL_JACKFROST",15; bonus2 bAddSkillDamageRate,"WL_FROSTMISTY",15; bonus2 bAddSkillDamageRate,"WL_HELLINFERNO",15; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"WL_CRIMSONROCK",10; bonus2 bAddSkillDamageRate,"WL_SOULEXPANSION",10; bonus2 bAddSkillDamageRate,"WL_EARTHSTRAIN",15; bonus2 bAddSkillDamageRate,"WL_JACKFROST",20; bonus2 bAddSkillDamageRate,"WL_FROSTMISTY",20; bonus2 bAddSkillDamageRate,"WL_HELLINFERNO",20; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"WL_CRIMSONROCK",15; bonus2 bAddSkillDamageRate,"WL_SOULEXPANSION",15; bonus2 bAddSkillDamageRate,"WL_EARTHSTRAIN",25; bonus2 bAddSkillDamageRate,"WL_JACKFROST",40; bonus2 bAddSkillDamageRate,"WL_FROSTMISTY",40; bonus2 bAddSkillDamageRate,"WL_HELLINFERNO",40; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"WL_CRIMSONROCK",30; bonus2 bAddSkillDamageRate,"WL_SOULEXPANSION",30; bonus2 bAddSkillDamageRate,"WL_EARTHSTRAIN",50; bonus2 bAddSkillDamageRate,"WL_JACKFROST",75; bonus2 bAddSkillDamageRate,"WL_FROSTMISTY",75; bonus2 bAddSkillDamageRate,"WL_HELLINFERNO",75; } }
+311258,ench,氷華の魔力(レンジャーII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RA_ARROWSTORM",5; bonus2 bAddSkillDamageRate,"RA_AIMEDBOLT",5; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"RA_ARROWSTORM",5; bonus2 bAddSkillDamageRate,"RA_AIMEDBOLT",5; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"RA_ARROWSTORM",5; bonus2 bAddSkillDamageRate,"RA_AIMEDBOLT",5; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"RA_ARROWSTORM",15; bonus2 bAddSkillDamageRate,"RA_AIMEDBOLT",15; } }
+311259,ench,氷華の魔力(アークビショップII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"AB_ADORAMUS",15; bonus2 bAddSkillDamageRate,"AB_JUDEX",15; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"AB_ADORAMUS",20; bonus2 bAddSkillDamageRate,"AB_JUDEX",20; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"AB_ADORAMUS",40; bonus2 bAddSkillDamageRate,"AB_JUDEX",40; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"AB_ADORAMUS",75; bonus2 bAddSkillDamageRate,"AB_JUDEX",75; } }
+311260,ench,氷華の魔力(メカニックIII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"NC_AXETORNADO",15; bonus2 bAddSkillDamageRate,"NC_AXEBOOMERANG",15; bonus2 bAddSkillDamageRate,"NC_POWERSWING",15; bonus2 bAddSkillDamageRate,"NC_ARMSCANNON",5; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"NC_AXETORNADO",20; bonus2 bAddSkillDamageRate,"NC_AXEBOOMERANG",20; bonus2 bAddSkillDamageRate,"NC_POWERSWING",20; bonus2 bAddSkillDamageRate,"NC_ARMSCANNON",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NC_AXETORNADO",40; bonus2 bAddSkillDamageRate,"NC_AXEBOOMERANG",40; bonus2 bAddSkillDamageRate,"NC_POWERSWING",40; bonus2 bAddSkillDamageRate,"NC_ARMSCANNON",15; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"NC_AXETORNADO",75; bonus2 bAddSkillDamageRate,"NC_AXEBOOMERANG",75; bonus2 bAddSkillDamageRate,"NC_POWERSWING",75; bonus2 bAddSkillDamageRate,"NC_ARMSCANNON",30; } }
+311261,ench,氷華の魔力(ギロチンクロスII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"GC_CROSSIMPACT",15; bonus2 bAddSkillDamageRate,"GC_CROSSRIPPERSLASHER",15; bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",15; bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",5; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"GC_CROSSIMPACT",20; bonus2 bAddSkillDamageRate,"GC_CROSSRIPPERSLASHER",20; bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",20; bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",5; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"GC_CROSSIMPACT",40; bonus2 bAddSkillDamageRate,"GC_CROSSRIPPERSLASHER",40; bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",40; bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",5; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"GC_CROSSIMPACT",75; bonus2 bAddSkillDamageRate,"GC_CROSSRIPPERSLASHER",75; bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",75; bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",15; } }
+311262,ench,氷華の魔力(ロイヤルガードIII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"LG_EARTHDRIVE",10; bonus2 bAddSkillDamageRate,"LG_CANNONSPEAR",10; bonus2 bAddSkillDamageRate,"LG_SHIELDPRESS",10; bonus2 bAddSkillDamageRate,"LG_RAYOFGENESIS",10; bonus2 bAddSkillDamageRate,"LG_BANISHINGPOINT",20; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"LG_EARTHDRIVE",15; bonus2 bAddSkillDamageRate,"LG_CANNONSPEAR",15; bonus2 bAddSkillDamageRate,"LG_SHIELDPRESS",15; bonus2 bAddSkillDamageRate,"LG_RAYOFGENESIS",15; bonus2 bAddSkillDamageRate,"LG_BANISHINGPOINT",50; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"LG_EARTHDRIVE",25; bonus2 bAddSkillDamageRate,"LG_CANNONSPEAR",25; bonus2 bAddSkillDamageRate,"LG_SHIELDPRESS",25; bonus2 bAddSkillDamageRate,"LG_RAYOFGENESIS",25; bonus2 bAddSkillDamageRate,"LG_BANISHINGPOINT",75; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"LG_EARTHDRIVE",50; bonus2 bAddSkillDamageRate,"LG_CANNONSPEAR",50; bonus2 bAddSkillDamageRate,"LG_SHIELDPRESS",50; bonus2 bAddSkillDamageRate,"LG_RAYOFGENESIS",50; bonus2 bAddSkillDamageRate,"LG_BANISHINGPOINT",150; } }
+311263,ench,氷華の魔力(ソーサラーII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SO_EARTHGRAVE",10; bonus2 bAddSkillDamageRate,"SO_VARETYR_SPEAR",10; bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",10; bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",10; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"SO_EARTHGRAVE",15; bonus2 bAddSkillDamageRate,"SO_VARETYR_SPEAR",15; bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",15; bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",15; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SO_EARTHGRAVE",25; bonus2 bAddSkillDamageRate,"SO_VARETYR_SPEAR",25; bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",25; bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",25; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SO_EARTHGRAVE",50; bonus2 bAddSkillDamageRate,"SO_VARETYR_SPEAR",50; bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",50; bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",50; } }
+311264,ench,氷華の魔力(ミンストレル&ワンダラーIII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WM_SEVERE_RAINSTORM",10; bonus2 bAddSkillDamageRate,"WM_METALICSOUND",10; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"WM_SEVERE_RAINSTORM",15; bonus2 bAddSkillDamageRate,"WM_METALICSOUND",15; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"WM_SEVERE_RAINSTORM",25; bonus2 bAddSkillDamageRate,"WM_METALICSOUND",25; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"WM_SEVERE_RAINSTORM",50; bonus2 bAddSkillDamageRate,"WM_METALICSOUND",50; } }
+311265,ench,氷華の魔力(修羅II),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SR_HOWLINGOFLION",10; bonus2 bAddSkillDamageRate,"SR_SKYNETBLOW",10; bonus2 bAddSkillDamageRate,"SR_RAMPAGEBLASTER",15; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"SR_HOWLINGOFLION",15; bonus2 bAddSkillDamageRate,"SR_SKYNETBLOW",15; bonus2 bAddSkillDamageRate,"SR_RAMPAGEBLASTER",20; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SR_HOWLINGOFLION",25; bonus2 bAddSkillDamageRate,"SR_SKYNETBLOW",25; bonus2 bAddSkillDamageRate,"SR_RAMPAGEBLASTER",40; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SR_HOWLINGOFLION",50; bonus2 bAddSkillDamageRate,"SR_SKYNETBLOW",50; bonus2 bAddSkillDamageRate,"SR_RAMPAGEBLASTER",75; } }
+311266,ench,氷華の魔力(ジェネティックII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"GN_CARTCANNON",15; bonus2 bAddSkillDamageRate,"GN_CART_TORNADO",15; bonus2 bAddSkillDamageRate,"GN_SPORE_EXPLOSION",15; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"GN_CARTCANNON",20; bonus2 bAddSkillDamageRate,"GN_CART_TORNADO",20; bonus2 bAddSkillDamageRate,"GN_SPORE_EXPLOSION",20; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"GN_CARTCANNON",40; bonus2 bAddSkillDamageRate,"GN_CART_TORNADO",40; bonus2 bAddSkillDamageRate,"GN_SPORE_EXPLOSION",40; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"GN_CARTCANNON",75; bonus2 bAddSkillDamageRate,"GN_CART_TORNADO",75; bonus2 bAddSkillDamageRate,"GN_SPORE_EXPLOSION",75; } }
+311267,ench,氷華の魔力(シャドウチェイサーIII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SC_TRIANGLESHOT",10; bonus2 bAddSkillDamageRate,"SC_FATALMENACE",10; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"SC_TRIANGLESHOT",15; bonus2 bAddSkillDamageRate,"SC_FATALMENACE",15; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SC_TRIANGLESHOT",25; bonus2 bAddSkillDamageRate,"SC_FATALMENACE",25; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SC_TRIANGLESHOT",50; bonus2 bAddSkillDamageRate,"SC_FATALMENACE",50; } }
+311268,ench,氷華の魔力(サモナーIII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SU_LUNATICCARROTBEAT",5; bonus2 bAddSkillDamageRate,"SU_SVG_SPIRIT",5; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"SU_LUNATICCARROTBEAT",10; bonus2 bAddSkillDamageRate,"SU_SVG_SPIRIT",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SU_LUNATICCARROTBEAT",15; bonus2 bAddSkillDamageRate,"SU_SVG_SPIRIT",15; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SU_LUNATICCARROTBEAT",30; bonus2 bAddSkillDamageRate,"SU_SVG_SPIRIT",30; } }
+311269,ench,氷華の魔力(サモナーIV),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SU_CN_METEOR",5; bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",5; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"SU_CN_METEOR",10; bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SU_CN_METEOR",15; bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",15; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SU_CN_METEOR",30; bonus2 bAddSkillDamageRate,"SU_SV_STEMSPEAR",30; } }
+311270,ench,氷華の魔力(影狼&朧II),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"KO_JYUMONJIKIRI",5; bonus2 bAddSkillDamageRate,"KO_BAKURETSU",5; bonus2 bAddSkillDamageRate,"KO_HAPPOKUNAI",5; bonus2 bAddSkillDamageRate,"KO_HUUMARANKA",5; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"KO_JYUMONJIKIRI",10; bonus2 bAddSkillDamageRate,"KO_BAKURETSU",10; bonus2 bAddSkillDamageRate,"KO_HAPPOKUNAI",10; bonus2 bAddSkillDamageRate,"KO_HUUMARANKA",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"KO_JYUMONJIKIRI",15; bonus2 bAddSkillDamageRate,"KO_BAKURETSU",15; bonus2 bAddSkillDamageRate,"KO_HAPPOKUNAI",15; bonus2 bAddSkillDamageRate,"KO_HUUMARANKA",15; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"KO_JYUMONJIKIRI",30; bonus2 bAddSkillDamageRate,"KO_BAKURETSU",30; bonus2 bAddSkillDamageRate,"KO_HAPPOKUNAI",30; bonus2 bAddSkillDamageRate,"KO_HUUMARANKA",30; } }
+311271,ench,氷華の魔力(リベリオンII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RL_FIREDANCE",5; bonus2 bAddSkillDamageRate,"RL_MASS_SPIRAL",10; bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",10; bonus2 bAddSkillDamageRate,"RL_BANISHING_BUSTER",10; bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",10; bonus2 bAddSkillDamageRate,"RL_D_TAIL",10; bonus2 bAddSkillDamageRate,"RL_FIRE_RAIN",15; bonus2 bAddSkillDamageRate,"RL_R_TRIP",15; bonus2 bAddSkillDamageRate,"RL_H_MINE",15; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"RL_FIREDANCE",10; bonus2 bAddSkillDamageRate,"RL_MASS_SPIRAL",15; bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",15; bonus2 bAddSkillDamageRate,"RL_BANISHING_BUSTER",15; bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",15; bonus2 bAddSkillDamageRate,"RL_D_TAIL",15; bonus2 bAddSkillDamageRate,"RL_FIRE_RAIN",20; bonus2 bAddSkillDamageRate,"RL_R_TRIP",20; bonus2 bAddSkillDamageRate,"RL_H_MINE",20; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"RL_FIREDANCE",15; bonus2 bAddSkillDamageRate,"RL_MASS_SPIRAL",25; bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",25; bonus2 bAddSkillDamageRate,"RL_BANISHING_BUSTER",25; bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",25; bonus2 bAddSkillDamageRate,"RL_D_TAIL",25; bonus2 bAddSkillDamageRate,"RL_FIRE_RAIN",40; bonus2 bAddSkillDamageRate,"RL_R_TRIP",40; bonus2 bAddSkillDamageRate,"RL_H_MINE",40; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"RL_FIREDANCE",30; bonus2 bAddSkillDamageRate,"RL_MASS_SPIRAL",50; bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",50; bonus2 bAddSkillDamageRate,"RL_BANISHING_BUSTER",50; bonus2 bAddSkillDamageRate,"RL_SLUGSHOT",50; bonus2 bAddSkillDamageRate,"RL_D_TAIL",50; bonus2 bAddSkillDamageRate,"RL_FIRE_RAIN",75; bonus2 bAddSkillDamageRate,"RL_R_TRIP",75; bonus2 bAddSkillDamageRate,"RL_H_MINE",75; } }
+311272,ench,氷華の魔力(星帝II),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SJ_SOLARBURST",5; bonus2 bAddSkillDamageRate,"SJ_FULLMOONKICK",5; bonus2 bAddSkillDamageRate,"SJ_FALLINGSTAR",5; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"SJ_SOLARBURST",5; bonus2 bAddSkillDamageRate,"SJ_FULLMOONKICK",5; bonus2 bAddSkillDamageRate,"SJ_FALLINGSTAR",5; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SJ_SOLARBURST",5; bonus2 bAddSkillDamageRate,"SJ_FULLMOONKICK",5; bonus2 bAddSkillDamageRate,"SJ_FALLINGSTAR",5; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SJ_SOLARBURST",15; bonus2 bAddSkillDamageRate,"SJ_FULLMOONKICK",15; bonus2 bAddSkillDamageRate,"SJ_FALLINGSTAR",15; } }
+311273,ench,氷華の魔力(ソウルリーパーII),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SP_SPA",5; bonus2 bAddSkillDamageRate,"SP_SWHOO",5; bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",5; if(getequiprefinerycnt() >= 8) { bonus2 bAddSkillDamageRate,"SP_SPA",10; bonus2 bAddSkillDamageRate,"SP_SWHOO",10; bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"SP_SPA",15; bonus2 bAddSkillDamageRate,"SP_SWHOO",15; bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",15; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SP_SPA",30; bonus2 bAddSkillDamageRate,"SP_SWHOO",30; bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",30; } }
+311343,ench,氷華の魔力(毒属性耐性),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bSubEle,Ele_Poison,50; }
+311344,ench,氷華の魔力(聖属性耐性),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bSubEle,Ele_Holy,50; }
+311345,ench,氷華の魔力(念属性耐性),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bSubEle,Ele_Ghost,50; }
+
+item_db2.txt
+9145,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//コポの卵
+9146,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//グレーアイスウィンドの卵
+9147,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ホワイトアイスウィンドの卵
+400414,0,4,0,0,0,0,0,0,0,0,0,0	//衣	//[衣装] 頼れるコポ
+400415,0,4,0,0,0,0,0,0,0,0,0,0	//衣	//[衣装] オシャレコポ
+410229,0,4,0,0,0,0,0,0,0,0,0,0	//衣	//[衣装] 蛇神の水晶
+420201,0,4,0,0,0,0,0,0,0,0,0,0	//衣	//[衣装] 白蛇妖のウィッグ
+480286,0,4,0,0,0,0,0,0,0,0,0,0	//衣	//[衣装] 蛇神の幻影
+300455,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//コポカード
+300456,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//アイスウィンドの卵カード
+300457,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//グレーアイスウィンドカード
+300458,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//ホワイトアイスウィンドカード
+300459,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//ヨルムンガンド教団主教カード
+300460,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//Jガーディアンカード
+300461,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//怪しいアーウィン兵士カード
+300462,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//上級ルガン呪術師カード
+300463,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//上級ルガン治療師カード
+300464,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//ヨルムンガンド教団術師カード
+300465,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//ヨルムンガンド教団守衛カード
+300466,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//ルガンクリーナーカード
+300467,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//天使ウミウシカード
+300468,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//雪ウサギウミウシカード
+300469,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//メリベウミウシカード
+300470,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//クマムシカード
+300471,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//堕落した天使ウミウシカード
+300472,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//究極のラスガンドカード
+300473,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//雪嵐天使ウミウシカード
+300474,0,0,0,0,0,0,0,0,0,1,0,1	//カード	//ルガンチーフクリーナーカード
+1001226,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//ルガンの上級魔力核
+1001227,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//珊瑚で作られた腕輪
+1001228,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//貝殻ヘアピン
+1001229,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//海藻の腰帯
+1001230,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//鱗の鎧の欠片
+1001231,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//ちょっと酸っぱいぷにぷに蛍光細胞
+1001232,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//すこし塩辛いぷにぷに蛍光細胞
+1001233,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//ほどよく甘いぷにぷに蛍光細胞
+1001234,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//クマムシの皮
+1001235,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//怪生命体の歯
+1001236,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//煌めく雪
+1001237,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//天使のしっぽ
+1001238,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//神秘的な魔力の塊
+1001239,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//折れた三叉槍
+1001240,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//アーウィン二等兵の帽子
+1001241,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//アーウィン一等兵の帽子
+1001242,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//アーウィン上等兵の帽子
+1001243,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//アーウィン鳥兵の帽子
+1001244,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//大きな灰色の羽根
+1001245,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//大きな白色の羽根
+1001246,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//コポの頭の羽根
+1001247,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//コポの卵の欠片
+1001251,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//蛇神の鱗
+1001153,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//古代アイスウィンドの卵
+1001154,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ヘビイチゴ
+1001217,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//神聖な猫のひげ
+1001218,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//魔力回収装置
+1001254,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//汚染されたユミルの心臓の欠片
+102202,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//まるまるとしたアイスフナムシ
+102227,0,0,0,0,0,0,0,0,0,1,0,0	//買取	//エンハンスキューブ(グレイシア)
+100900,0,0,0,0,0,0,0,0,5000,0,1,0	//CD・消耗	//転移の羽(イスガルド 氷の城)
+600027,2,0,0,0,0,0,0,0,0,0,0,0	//転	//グレイシアツーハンドソード
+620017,2,0,0,0,0,0,0,0,0,0,0,0	//転	//グレイシアツーハンドアックス
+630018,2,0,0,0,0,0,0,0,0,0,0,0	//転	//グレイシアランス
+640033,2,0,0,0,0,0,0,0,0,0,0,0	//転	//グレイシアスタッフ
+600030,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアツーハンドソード
+610041,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアカタール
+620019,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアツーハンドアックス
+630019,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアランス
+640034,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアスタッフ
+650028,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ディムグレイシア風魔手裏剣
+700059,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアボウ
+311215,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(アークメイジI)
+311216,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(アークメイジII)
+311217,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(アビスチェイサーI)
+311218,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(アビスチェイサーII)
+311219,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(アビスチェイサーIII)
+311220,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(インクイジターI)
+311221,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(インクイジターII)
+311222,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(インペリアルガードI)
+311223,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(インペリアルガードII)
+311224,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ウィンドホークI)
+311225,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ウィンドホークII)
+311226,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ウィンドホークIII)
+311227,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(エレメンタルマスターI)
+311228,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(カーディナルI)
+311229,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(カーディナルII)
+311230,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(シャドウクロスI)
+311231,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(シャドウクロスII)
+311232,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ドラゴンナイトI)
+311233,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ドラゴンナイトII)
+311234,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ドラゴンナイトIII)
+311235,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(トルバドゥール&トルヴェールI)
+311236,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(トルバドゥール&トルヴェールII)
+311237,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(バイオロI)
+311238,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(バイオロII)
+311239,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(バイオロIII)
+311240,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(マイスターI)
+311241,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(マイスターII)
+311242,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(スピリットハンドラーI)
+311243,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(スピリットハンドラーII)
+311244,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ソウルアセティックI)
+311245,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ソウルアセティックII)
+311246,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ナイトウォッチI)
+311247,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ナイトウォッチII)
+311248,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ハイパーノービスI)
+311249,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ハイパーノービスII)
+311250,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ハイパーノービスIII)
+311251,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(蜃気楼&不知火I)
+311252,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(蜃気楼&不知火II)
+311253,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(蜃気楼&不知火III)
+311254,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(天帝I)
+311255,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(天帝II)
+810010,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//グレイシアライフル
+820008,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//グレイシアショットガン
+830013,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//グレイシアガトリングガン
+840009,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//グレイシアグレネードガン
+800015,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ディムグレイシアハンドガン
+810015,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ディムグレイシアライフル
+820011,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ディムグレイシアショットガン
+830015,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ディムグレイシアガトリングガン
+840010,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ディムグレイシアグレネードガン
+510062,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//グレイシアダガー
+500054,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアソード
+500055,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ディムグレイシアベーシックソード
+510075,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアナイフ
+510076,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ディムグレイシアダガー
+520021,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアアックス
+530034,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアスピア
+540056,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアブック
+550089,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアワンド
+550090,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ディムグレイシアフォックステイル
+560037,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアナックル
+570032,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアバイオリン
+580033,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアウィップ
+590047,2,0,0,0,0,0,0,0,0,0,0,0	//転	//ディムグレイシアメイス
+101186,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ディムグレイシア作成方法1
+101638,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//ディムグレイシア作成方法2
+450264,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//グレイシアアーマー
+450266,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//グレイシアマント
+470196,0,0,0,0,0,0,0,0,0,0,0,0	//条件なし	//グレイシアブーツ
+311256,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ルーンナイトII)
+311257,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ウォーロックII)
+311258,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(レンジャーII)
+311259,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(アークビショップII)
+311260,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(メカニックIII)
+311261,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ギロチンクロスII)
+311262,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ロイヤルガードIII)
+311263,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ソーサラーII)
+311264,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ミンストレル&ワンダラーIII)
+311265,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(修羅II)
+311266,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ジェネティックII)
+311267,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(シャドウチェイサーIII)
+311268,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(サモナーIII)
+311269,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(サモナーIV)
+311270,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(影狼&朧II)
+311271,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(リベリオンII)
+311272,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(星帝II)
+311273,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(ソウルリーパーII)
+311343,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(毒属性耐性)
+311344,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(聖属性耐性)
+311345,0,0,1,1,1,1,1,0,0,0,0,0	//EN	//氷華の魔力(念属性耐性)
+
+item_cartype.txt
+300455,card,コポカード,0
+300456,card,アイスウィンドの卵カード,0
+300457,card,グレーアイスウィンドカード,0
+300458,card,ホワイトアイスウィンドカード,0
+300459,card,ヨルムンガンド教団主教カード,1
+300460,card,Jガーディアンカード,1
+300461,card,怪しいアーウィン兵士カード,1
+300462,card,上級ルガン呪術師カード,0
+300463,card,上級ルガン治療師カード,0
+300464,card,ヨルムンガンド教団術師カード,1
+300465,card,ヨルムンガンド教団守衛カード,0
+300466,card,ルガンクリーナーカード,0
+300467,card,天使ウミウシカード,0
+300468,card,雪ウサギウミウシカード,0
+300469,card,メリベウミウシカード,0
+300470,card,クマムシカード,0
+300471,card,堕落した天使ウミウシカード,0
+300472,card,究極のラスガンドカード,0
+300473,card,雪嵐天使ウミウシカード,0
+300474,card,ルガンチーフクリーナーカード,1
+311215,ench,氷華の魔力(アークメイジI),2
+311216,ench,氷華の魔力(アークメイジII),2
+311217,ench,氷華の魔力(アビスチェイサーI),2
+311218,ench,氷華の魔力(アビスチェイサーII),2
+311219,ench,氷華の魔力(アビスチェイサーIII),2
+311220,ench,氷華の魔力(インクイジターI),2
+311221,ench,氷華の魔力(インクイジターII),2
+311222,ench,氷華の魔力(インペリアルガードI),2
+311223,ench,氷華の魔力(インペリアルガードII),2
+311224,ench,氷華の魔力(ウィンドホークI),2
+311225,ench,氷華の魔力(ウィンドホークII),2
+311226,ench,氷華の魔力(ウィンドホークIII),2
+311227,ench,氷華の魔力(エレメンタルマスターI),2
+311228,ench,氷華の魔力(カーディナルI),2
+311229,ench,氷華の魔力(カーディナルII),2
+311230,ench,氷華の魔力(シャドウクロスI),2
+311231,ench,氷華の魔力(シャドウクロスII),2
+311232,ench,氷華の魔力(ドラゴンナイトI),2
+311233,ench,氷華の魔力(ドラゴンナイトII),2
+311234,ench,氷華の魔力(ドラゴンナイトIII),2
+311235,ench,氷華の魔力(トルバドゥール&トルヴェールI),2
+311236,ench,氷華の魔力(トルバドゥール&トルヴェールII),2
+311237,ench,氷華の魔力(バイオロI),2
+311238,ench,氷華の魔力(バイオロII),2
+311239,ench,氷華の魔力(バイオロIII),2
+311240,ench,氷華の魔力(マイスターI),2
+311241,ench,氷華の魔力(マイスターII),2
+311242,ench,氷華の魔力(スピリットハンドラーI),2
+311243,ench,氷華の魔力(スピリットハンドラーII),2
+311244,ench,氷華の魔力(ソウルアセティックI),2
+311245,ench,氷華の魔力(ソウルアセティックII),2
+311246,ench,氷華の魔力(ナイトウォッチI),2
+311247,ench,氷華の魔力(ナイトウォッチII),2
+311248,ench,氷華の魔力(ハイパーノービスI),2
+311249,ench,氷華の魔力(ハイパーノービスII),2
+311250,ench,氷華の魔力(ハイパーノービスIII),2
+311251,ench,氷華の魔力(蜃気楼&不知火I),2
+311252,ench,氷華の魔力(蜃気楼&不知火II),2
+311253,ench,氷華の魔力(蜃気楼&不知火III),2
+311254,ench,氷華の魔力(天帝I),2
+311255,ench,氷華の魔力(天帝II),2
+311256,ench,氷華の魔力(ルーンナイトII),2
+311257,ench,氷華の魔力(ウォーロックII),2
+311258,ench,氷華の魔力(レンジャーII),2
+311259,ench,氷華の魔力(アークビショップII),2
+311260,ench,氷華の魔力(メカニックIII),2
+311261,ench,氷華の魔力(ギロチンクロスII),2
+311262,ench,氷華の魔力(ロイヤルガードIII),2
+311263,ench,氷華の魔力(ソーサラーII),2
+311264,ench,氷華の魔力(ミンストレル&ワンダラーIII),2
+311265,ench,氷華の魔力(修羅II),2
+311266,ench,氷華の魔力(ジェネティックII),2
+311267,ench,氷華の魔力(シャドウチェイサーIII),2
+311268,ench,氷華の魔力(サモナーIII),2
+311269,ench,氷華の魔力(サモナーIV),2
+311270,ench,氷華の魔力(影狼&朧II),2
+311271,ench,氷華の魔力(リベリオンII),2
+311272,ench,氷華の魔力(星帝II),2
+311273,ench,氷華の魔力(ソウルリーパーII),2
+311343,ench,氷華の魔力(毒属性耐性),2
+311344,ench,氷華の魔力(聖属性耐性),2
+311345,ench,氷華の魔力(念属性耐性),2

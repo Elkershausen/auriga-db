@@ -1,3 +1,17 @@
+20241203	patch0221
+・20240924 EP20 大型アップデート アイテム実装(item_db.txt item_db2.txt item_cardtype.txt function_itemdb.sc classnum_db.txt dropeffecttable.txt)
+
+・買取露天のデータ更新(item_db2.txt)
+
+・item_db2.txt 修正
+
+※EP実装武器にcallfunc使っています
+※超越の効果は未実装ですが、今後callfunc内に追加することで実装でき作業工程数を90％削減できます
+※収集アイテムは移動制限がないドロップアイテムなので売値が設定されているはずです
+※時間がなく売値設定を見送りましたので今後実装する開発者にお願いします
+
+・480286#[衣装] 蛇神の幻影# 表示されません
+
 20241201	patch0220
 ・status.h コンパイルエラー修正
 ・個別のパッチノートがなかったので追加(patch0218 patch0219)
