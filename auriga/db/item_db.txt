@@ -1,5 +1,32 @@
-//item_db.txt Auriga db_override patch1571+add 20241008 アップデート
+//item_db.txt Auriga db_override patch1571+add 20241022 アップデート
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript},{UnEquipScript}
+9188,pet,タイムホルダーの卵,4,20,,0,,,,,,,,,,,,{ /* 241015 *//* ペットにセット効果 */ },{}
+9189,pet,時計塔管理者の卵,4,20,,0,,,,,,,,,,,,{ /* 241015 *//* ペットにセット効果 */ },{}
+9190,pet,クロックの卵,4,20,,0,,,,,,,,,,,,{ /* 241015 *//* ペットにセット効果 */ },{}
+1001779,item,ペット用銀の懐中時計,3,20,,10,,,,,,,,,,,,{ /* 241015 [タイムホルダー]進化 */ },{}
+1001780,item,ペット用時計塔のカギ,3,20,,10,,,,,,,,,,,,{ /* 241015 [時計塔管理者]進化 */ },{}
+1001782,item,タイムホルダー交換チケット,3,0,,0,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
+1001783,item,時計塔管理者交換チケット,3,0,,0,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
+1001784,item,クロック交換チケット,3,0,,0,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
+103219,use,時計の潤滑油,2,,,0,,,,,2074075135,2,,,1,,,{ /* 241015 効果実装済み */ pet 1269; },{}
+410205,cos,[衣装] マルブロン・ミニミー,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2306,0,{ /* 241015 効果実装済み */ },{}
+1001016,item,ストレス緩和ゼリー,3,0,,0,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
+1001043,item,クリトゥラ学園ぬいぐるみ,3,0,,0,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
+101834,use,幻想叢書カード(マルブロン),2,,,0,,,,,2074075135,2,,,1,,,{ /* 241015 [マルブロンの幻影]出現 */ },{}
+400721,head,桜の白魔女帽子,4,20,,500,,10,,1,2074075008,2,256,,200,2582,1,{ /* 241015 拡張4次 */ },{ bonus bSpl,3+getequiprefinerycnt(); bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"SS_SEKIENHOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_REIKETSUHOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_RAIDENPOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_KINRYUUHOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_ANTENPOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_ANKOKURYUUAKUMU",BaseLevel/10; if(getequiprefinerycnt() >= 10) { bonus bSkillDelayRate,-20; callfunc "bonus2bIgnoreMdefRace",50; } }
+400722,head,白い機械植物帽,4,20,,500,,10,,1,2074075008,2,256,,200,2583,1,{ /* 241015 拡張4次 */ },{ bonus bPow,3+getequiprefinerycnt(); bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"BO_EXPLOSIVE_POWDER",BaseLevel/10; if(getequiprefinerycnt() >= 10) { bonus bPerfectHitAddRate,25; bonus bSkillDelayRate,-20; } }
+450410,armor,ヘイトレッドダークネス,4,20,,1000,,100,,1,4096,2,16,,200,,1,{ /* 241015 効果実装済み */ },{ bonus2 bSubRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus2 bAddSkillDamageRate,"SHC_DANCING_KNIFE",BaseLevel/10; bonus2 bAddSkillDamageRate,"SHC_SHADOW_STAB",BaseLevel/10; bonus2 bAddSkillDamageRate,"SHC_ETERNAL_SLASH",BaseLevel/10; bonus2 bAddSkillDamageRate,"SHC_FATAL_SHADOW_CROW",BaseLevel/10; bonus2 bAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",BaseLevel/3; } }
+450411,armor,ティルナノーグ,4,20,,1000,,100,,1,65536,2,16,,200,,1,{ /* 241015 効果実装済み */ },{ bonus2 bSubRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus2 bAddSkillDamageRate,"EM_CONFLAGRATION",BaseLevel/10; bonus2 bAddSkillDamageRate,"EM_DIAMOND_STORM",BaseLevel/10; bonus2 bAddSkillDamageRate,"EM_LIGHTNING_LAND",BaseLevel/10; bonus2 bAddSkillDamageRate,"EM_TERRA_DRIVE",BaseLevel/10; bonus2 bAddSkillDamageRate,"EM_VENOM_SWAMP",BaseLevel/10; bonus2 bAddSkillDamageRate,"EM_ELEMENTAL_BUSTER",BaseLevel/10; bonus2 bMagicAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; bonus2 bAddFixCastRate,"SO_PSYCHIC_WAVE",-100; } }
+313284,ench,潜在解放(シャドウクロスVII),6,,,0,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SHC_ETERNAL_SLASH",-200; } }
+312943,ench,潜在解放(エレメンタルマスターVI),6,,,0,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"EM_ELEMENTAL_BUSTER",-200; } }
+312974,ench,潜在解放(蜃気楼&不知火IV),6,,,0,,,,,,,65535,,,,,{ /* 241015 拡張4次 */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SS_SEKIENHOU",-300; bonus2 bAddSkillCoolDown,"SS_RAIDENPOU",-300; } }
+312956,ench,潜在解放(バイオロV),6,,,0,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"BO_EXPLOSIVE_POWDER",-200; } }
+
+200363,use,[2024]復刻コスたまの箱(Season4),2,,,0,,,,,2074075135,2,,,1,,,{ /* 241022 効果実装済み */ getitem2 1001195,1,1,0,0,0,0,0,0,7948800; },{}
+200364,use,[2024]復刻コスたま引換券(Season4)11個の箱,2,,,0,,,,,2074075135,2,,,1,,,{ /* 241022 効果実装済み */ getitem2 1001195,11,1,0,0,0,0,0,0,7948800; },{}
+410240,cos,[衣装] 白兎神,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2388,0,{ /* 241022 効果実装済み */ },{}
+480488,cos,[衣装] ユンケアの翼,4,20,,0,,0:0,,0,2074075135,2,8192,,1,241,0,{ /* 241022 効果実装済み */ },{}
+
 501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,1,,,{ itemheal rand(45,65),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(45,65)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(45,65)*(12/10),0; } },{}
 502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(105,145),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(105,145)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(105,145)*(12/10),0; } },{}
 503,heal,黄ポーション,0,550,,130,,,,,2074075135,2,,,1,,,{ itemheal rand(175,235),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(175,235)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(175,235)*(12/10),0; } },{}
@@ -13034,30 +13061,30 @@
 1000948,item,古いネクタイ,3,0,,0,,,,,,,,,,,,{ /* 241008 効果実装済み */ },{}
 101837,use,幻想叢書カード(イーブル),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241008 [イーブルの幻影]出現 */ },{}
 
-9188,pet,タイムホルダーの卵,4,20,,0,,,,,,,,,,,,{ /* 241015 *//* ペットにセット効果 */ },{}
-9189,pet,時計塔管理者の卵,4,20,,0,,,,,,,,,,,,{ /* 241015 *//* ペットにセット効果 */ },{}
-9190,pet,クロックの卵,4,20,,0,,,,,,,,,,,,{ /* 241015 *//* ペットにセット効果 */ },{}
-1001779,item,ペット用銀の懐中時計,3,20,,10,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
-1001780,item,ペット用時計塔のカギ,3,20,,10,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
+9188,pet,タイムホルダーの卵,4,20,,0,,,,,,,,,,,,{ /* 241015 ペットにセット効果 */ },{}
+9189,pet,時計塔管理者の卵,4,20,,0,,,,,,,,,,,,{ /* 241015 ペットにセット効果 */ },{}
+9190,pet,クロックの卵,4,20,,0,,,,,,,,,,,,{ /* 241015 ペットにセット効果 */ },{}
+1001779,item,ペット用銀の懐中時計,3,20,,10,,,,,,,,,,,,{ /* 241015 [タイムホルダー]進化 */ },{}
+1001780,item,ペット用時計塔のカギ,3,20,,10,,,,,,,,,,,,{ /* 241015 [時計塔管理者]進化 */ },{}
 1001782,item,タイムホルダー交換チケット,3,0,,0,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
 1001783,item,時計塔管理者交換チケット,3,0,,0,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
 1001784,item,クロック交換チケット,3,0,,0,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
-103219,use,時計の潤滑油,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241015 効果実装済み */ },{}
+103219,use,時計の潤滑油,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241015 効果実装済み */ pet 1269; },{}
 410205,cos,[衣装] マルブロン・ミニミー,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2306,0,{ /* 241015 効果実装済み */ },{}
 1001016,item,ストレス緩和ゼリー,3,0,,0,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
 1001043,item,クリトゥラ学園ぬいぐるみ,3,0,,0,,,,,,,,,,,,{ /* 241015 効果実装済み */ },{}
-101834,use,幻想叢書カード(マルブロン),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241015 効果実装済み */ },{}
-400721,head,桜の白魔女帽子,4,20,,500,,10:0,,1,2074075008,2,256,,200,2582,1,{ /* 241015 効果実装済み */ },{}
-400722,head,白い機械植物帽,4,20,,500,,10:0,,1,2074075008,2,256,,200,2583,1,{ /* 241015 効果実装済み */ },{}
-450410,armor,ヘイトレッドダークネス,4,20,,1000,,100:0,,1,4096,2,16,,200,,1,{ /* 241015 効果実装済み */ },{}
-450411,armor,ティルナノーグ,4,20,,1000,,100:0,,1,65536,2,16,,200,,1,{ /* 241015 効果実装済み */ },{}
-313284,ench,潜在解放(シャドウクロスVII),6,,,,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{}
-312943,ench,潜在解放(エレメンタルマスターVI),6,,,,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{}
-312974,ench,潜在解放(蜃気楼&不知火IV),6,,,,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{}
-312956,ench,潜在解放(バイオロV),6,,,,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{}
+101834,use,幻想叢書カード(マルブロン),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241015 [マルブロンの幻影]出現 */ },{}
+400721,head,桜の白魔女帽子,4,20,,500,,10:0,,1,2074075008,2,256,,200,2582,1,{ /* 241015 拡張4次 */ },{ bonus bSpl,3+getequiprefinerycnt(); bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"SS_SEKIENHOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_REIKETSUHOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_RAIDENPOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_KINRYUUHOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_ANTENPOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_ANKOKURYUUAKUMU",BaseLevel/10; if(getequiprefinerycnt() >= 10) { bonus bSkillDelayRate,-20; callfunc "bonus2bIgnoreMdefRace",50; } }
+400722,head,白い機械植物帽,4,20,,500,,10:0,,1,2074075008,2,256,,200,2583,1,{ /* 241015 拡張4次 */ },{ bonus bPow,3+getequiprefinerycnt(); bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; bonus2 bAddSkillDamageRate,"BO_EXPLOSIVE_POWDER",BaseLevel/10; if(getequiprefinerycnt() >= 10) { bonus bPerfectHitAddRate,25; bonus bSkillDelayRate,-20; } }
+450410,armor,ヘイトレッドダークネス,4,20,,1000,,100:0,,1,4096,2,16,,200,,1,{ /* 241015 効果実装済み */ },{ bonus2 bSubRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus2 bAddSkillDamageRate,"SHC_DANCING_KNIFE",BaseLevel/10; bonus2 bAddSkillDamageRate,"SHC_SHADOW_STAB",BaseLevel/10; bonus2 bAddSkillDamageRate,"SHC_ETERNAL_SLASH",BaseLevel/10; bonus2 bAddSkillDamageRate,"SHC_FATAL_SHADOW_CROW",BaseLevel/10; bonus2 bAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",BaseLevel/3; } }
+450411,armor,ティルナノーグ,4,20,,1000,,100:0,,1,65536,2,16,,200,,1,{ /* 241015 効果実装済み */ },{ bonus2 bSubRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus2 bAddSkillDamageRate,"EM_CONFLAGRATION",BaseLevel/10; bonus2 bAddSkillDamageRate,"EM_DIAMOND_STORM",BaseLevel/10; bonus2 bAddSkillDamageRate,"EM_LIGHTNING_LAND",BaseLevel/10; bonus2 bAddSkillDamageRate,"EM_TERRA_DRIVE",BaseLevel/10; bonus2 bAddSkillDamageRate,"EM_VENOM_SWAMP",BaseLevel/10; bonus2 bAddSkillDamageRate,"EM_ELEMENTAL_BUSTER",BaseLevel/10; bonus2 bMagicAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; bonus2 bAddFixCastRate,"SO_PSYCHIC_WAVE",-100; } }
+313284,ench,潜在解放(シャドウクロスVII),6,,,,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SHC_ETERNAL_SLASH",-200; } }
+312943,ench,潜在解放(エレメンタルマスターVI),6,,,,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"EM_ELEMENTAL_BUSTER",-200; } }
+312974,ench,潜在解放(蜃気楼&不知火IV),6,,,,,,,,,,65535,,,,,{ /* 241015 拡張4次 */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SS_SEKIENHOU",-300; bonus2 bAddSkillCoolDown,"SS_RAIDENPOU",-300; } }
+312956,ench,潜在解放(バイオロV),6,,,,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"BO_EXPLOSIVE_POWDER",-200; } }
 
-200363,use,[2024]復刻コスたまの箱(Season4),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241022 効果実装済み */ },{}
-200364,use,[2024]復刻コスたま引換券(Season4)11個の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241022 効果実装済み */ },{}
+200363,use,[2024]復刻コスたまの箱(Season4),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241022 効果実装済み */ getitem2 1001195,1,1,0,0,0,0,0,0,7948800; },{}
+200364,use,[2024]復刻コスたま引換券(Season4)11個の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241022 効果実装済み */ getitem2 1001195,11,1,0,0,0,0,0,0,7948800; },{}
 410240,cos,[衣装] 白兎神,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2388,0,{ /* 241022 効果実装済み */ },{}
 480488,cos,[衣装] ユンケアの翼,4,20,,0,,0:0,,0,2074075135,2,8192,,1,241,0,{ /* 241022 効果実装済み */ },{}
 
