@@ -1,4 +1,4 @@
-//item_db.txt Auriga db_override patch1571+add 20241126 アップデート
+//item_db.txt Auriga db_override patch1573+add 20241210 アップデート
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript},{UnEquipScript}
 501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,1,,,{ itemheal rand(45,65),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(45,65)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(45,65)*(12/10),0; } },{}
 502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(105,145),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(105,145)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(105,145)*(12/10),0; } },{}
@@ -12695,17 +12695,18 @@
 1100018,heal,夜市の綿菓子,0,20,,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_SIROMA_ICE_TEA,500000,20; },{}
 1100019,heal,とれたて野菜串,0,20,,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_MAGI,500000,10; },{}
 1100020,heal,直火焼ソーセージ,0,20,,20,,,,,2074075135,2,,,1,,,{ itemheal 1100,65; sc_end SC_Blind; sc_end SC_Hallucination; sc_end SC_Confusion; sc_end SC_Silence; sc_end SC_Poison; sc_end SC_Curse; sc_end SC_Bleed; sc_end SC_DPoison; sc_end 397; sc_start SC_MSTR,500000,10; },{}
+//--------------------------------------------
 200361,use,[2024]復刻コスたまの箱(Season3),2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 1001194,1,1,0,0,0,0,0,0,7948800; },{ /* 240723 効果実装済み */ }
 200362,use,[2024]復刻コスたま引換券(Season3)11個の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 1001194,11,1,0,0,0,0,0,0,7948800; },{ /* 240723 効果実装済み */ }
 480237,cos,[衣装] 天狗の刀,4,20,,0,,0:0,,0,2074075135,2,8192,,1,158,0,{ /* 240723 効果実装済み */ },{}
 480473,cos,[衣装] 堕ちた大神官ヒバムの悪霊,4,20,,0,,0:0,,0,2074075135,2,8192,,1,233,0,{ /* 240723 効果実装済み */ },{}
-
+//--------------------------------------------
 400683,cos,[衣装] ベルフラワー,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2550,0,{ /* 240730 効果実装済み */ },{}
 420346,cos,[衣装] 天使のラズベリーウィッグ,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2549,0,{ /* 240730 効果実装済み */ },{}
 480456,cos,[衣装] 観葉植物お出かけセット,4,20,,0,,0:0,,0,2074075135,2,8192,,1,223,0,{ /* 240730 効果実装済み */ },{}
 480457,cos,[衣装] ガラパゴアクアリウム,4,20,,0,,0:0,,0,2074075135,2,8192,,1,224,0,{ /* 240730 効果実装済み */ },{}
 480458,cos,[衣装] フォーリンヘヴンロストウィング,4,20,,0,,0:0,,0,2074075135,2,8192,,1,225,0,{ /* 240730 効果実装済み */ },{ hateffect HAT_EF_C_FH_Lostwing,TRUE; },{ hateffect HAT_EF_C_FH_Lostwing,FALSE; }
-
+//--------------------------------------------
 200437,use,コスたまSeasideV,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240806 効果実装済み */ },{ /* 400491 400703 400704 410290 410353 420352 420353 430005 480476 480477 */ }
 400491,cos,[衣装] シトラスバンダナ,4,20,,0,,0:0,,0,2074075135,2,2048,,1,778,0,{ /* 240806 コスたまSeasideV 効果実装済み */ },{}
 400703,cos,[衣装] アルタイルハット,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2426,0,{ /* 240806 コスたまSeasideV 効果実装済み */ },{}
@@ -12727,7 +12728,7 @@
 1001811,item,改良型濃縮シャドウダイト,3,0,,0,,,,,,,,,,,,{ /* 240806 効果実装済み */ },{}
 1001812,item,濃縮シャドウダイト,3,0,,0,,,,,,,,,,,,{ /* 240806 効果実装済み */ },{}
 480483,robe,ディスカーディドケープ,4,20,,400,,50:5,,0,2074075135,2,4,,100,0,1,{ /* 240806 物理・魔法攻撃[廃棄実験体遊技場ルドゥス4階]map指定効果 街マップモンスター変身 */ },{ bonus2 bSubEle,Ele_Fire,50; bonus2 bSubEle,Ele_Ghost,50; }
-
+//--------------------------------------------
 9185,pet,ランドグリスの卵,3,20,,10,,,,,,,,,,,,{ /* 240813 効果実装済み */ },{}
 9186,pet,エンジェゴルトブルーの卵,3,20,,10,,,,,,,,,,,,{ /* 240813 効果実装済み */ },{}
 9187,pet,スケゴルトブラウンの卵,3,20,,10,,,,,,,,,,,,{ /* 240813 効果実装済み */ },{}
@@ -12756,7 +12757,7 @@
 25342,item,体に良いハーブ,3,20,,10,,,,,,,,,,,,{ /* 240813 効果実装済み */ },{}
 25841,item,なめらかな麺,3,20,,10,,,,,,,,,,,,{ /* 240813 効果実装済み */ },{}
 1001741,item,夏スイカ,3,20,,10,,,,,,,,,,,,{ /* 240813 効果実装済み */ },{}
-
+//--------------------------------------------
 600031,weapon,フラッシュクロウソード,9,20,,3400,280:230,,1,4,128,2,34,4,220,3,1,{ /* 240827 効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,60; bonus2 bAddRace,Rct_NonBoss,60; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",250; } }
 610042,weapon,フラッシュナットブレイカー,9,20,,2800,150:250,,1,4,4096,2,34,4,220,16,1,{ /* 240827 効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,60; bonus2 bAddRace,Rct_NonBoss,60; bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",500; } }
 610054,weapon,モカダスデスト,9,20,,2800,150:250,,1,1,4096,2,34,4,220,16,1,{ /* 240827 4次職 */ },{ bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_Player,45; bonus2 bMagicSubRace,Rct_Player,45; bonus2 bSubEle,Ele_Holy,15; bonus2 bAddRace,Rct_Boss,13*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,13*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"SHC_IMPACT_CRATER",25; bonus2 bAddSkillDamageRate,"SHC_SAVAGE_IMPACT",25; bonus2 bAddSkillDamageRate,"SHC_FATAL_SHADOW_CROW",25; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoActiveWeapon,610054,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bHPRatePenaltyTime,1000,-10; } } if(getequiprefinerycnt() >= 10) { /*bonus bPow,20; */ } }
@@ -12826,7 +12827,7 @@
 103325,use,アイシクルアシッドボトルの箱,2,20,,250,,,,,2074075135,2,,,1,,,{ /* 240827 効果実装済み */ getitem 1000279,500; },{}
 103326,use,ゲイルアシッドボトルの箱,2,20,,250,,,,,2074075135,2,,,1,,,{ /* 240827 効果実装済み */ getitem 1000278,500; },{}
 103327,use,アースアシッドボトルの箱,2,20,,250,,,,,2074075135,2,,,1,,,{ /* 240827 効果実装済み */ getitem 1000277,500; },{}
-
+//--------------------------------------------
 200457,use,コスたまAnimalsX,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 240906 効果実装済み */ },{ /* 400708 400709 400712 410357 410358 410359 420359 420360 480486 480487 */ }
 400708,cos,[衣装] ウルフオフィサーハット,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2177,0,{ /* 240906 コスたまAnimalsX 効果実装済み */ },{}
 400709,cos,[衣装] お座りイヌ(白),4,20,,0,,0:0,,0,2074075135,2,1024,,1,2574,0,{ /* 240906 コスたまAnimalsX 効果実装済み */ },{}
@@ -12838,14 +12839,14 @@
 420360,cos,[衣装] ベルキャットヘア,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2573,0,{ /* 240906 コスたまAnimalsX 効果実装済み */ },{}
 480486,cos,[衣装] 柴犬の尻尾,4,20,,0,,0:0,,0,2074075135,2,8192,,1,239,0,{ /* 240906 コスたまAnimalsX 効果実装済み */ },{}
 480487,cos,[衣装] 肉球リュック,4,20,,0,,0:0,,0,2074075135,2,8192,,1,240,0,{ /* 240906 コスたまAnimalsX 効果実装済み */ },{}
-
+//--------------------------------------------
 400711,head,百花の愛,4,20,,500,,10:0,,1,2074075135,2,256,,220,2575,1,{ /* 240917 効果実装済み */ },{ bonus bPow,3; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bAddSkillDamageRate,"SHC_IMPACT_CRATER",BaseLevel/10; bonus2 bAddSkillDamageRate,"SHC_SAVAGE_IMPACT",BaseLevel/10; bonus2 bAddSkillDamageRate,"SHC_FATAL_SHADOW_CROW",BaseLevel/10; bonus bPow,getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus bCritical,25; bonus bSkillDelayRate,-20; } }
 450404,armor,ブーゲンビリア,4,20,,1000,,100:0,,1,134217728,2,16,,220,,1,{ /* 240917 拡張4次 */ },{ /* bonus2 bSubRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLUE_DRAGON",BaseLevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_WHITE_TIGER",BaseLevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_RED_PHOENIX",BaseLevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_BLACK_TORTOISE",BaseLevel/10; bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",BaseLevel/10; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",BaseLevel/10; bonus2 bMagicAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; bonus2 bAddSkillCastTime,"SP_CURSEEXPLOSION",-500; } */ }
 490602,acc,パワーマシンアーム,4,20,,100,,0:0,,1,2074075008,2,136,,220,,0,{ /* 240917 効果実装済み */ },{ bonus bPow,3; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bPerfectHitAddRate,25; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillDamageRate,"NC_AXETORNADO",BaseLevel/2; bonus2 bAddSkillDamageRate,"NC_AXEBOOMERANG",BaseLevel/2; bonus2 bAddSkillDamageRate,"NC_POWERSWING",BaseLevel/2; bonus2 bAddSkillDamageRate,"MT_AXE_STOMP",BaseLevel/10; bonus2 bAddSkillDamageRate,"MT_MIGHTY_SMASH",BaseLevel/10; bonus2 bAddSkillDamageRate,"MT_RUSH_QUAKE",BaseLevel/10; }
 312980,ench,潜在解放(ソウルアセティックV),6,,,,,,,,,,65535,,,,,{ /* 240917 拡張4次 */ },{ /* if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SOA_TALISMAN_OF_FOUR_BEARING_GOD",-200; bonus2 bAddSkillCoolDown,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",-200; } */ }
 313283,ench,潜在解放(シャドウクロスVI),6,,,,,,,,,,65535,,,,,{ /* 240917 セット効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SHC_IMPACT_CRATER",-300; } }
 313198,ench,潜在解放(マイスターVI),6,,,,,,,,,,65535,,,,,{ /* 240917 セット効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"MT_MIGHTY_SMASH",-100; } }
-
+//--------------------------------------------
 9145,pet,コポの卵,4,20,,0,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
 9146,pet,グレーアイスウィンドの卵,4,20,,0,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
 9147,pet,ホワイトアイスウィンドの卵,4,20,,0,,,,,,,,,,,,{ /* 240926 効果実装済み */ },{}
@@ -13006,7 +13007,7 @@
 311343,ench,氷華の魔力(毒属性耐性),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bSubEle,Ele_Poison,50; }
 311344,ench,氷華の魔力(聖属性耐性),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bSubEle,Ele_Holy,50; }
 311345,ench,氷華の魔力(念属性耐性),6,,,,,,,,,,65535,,,,,{ /* 240926 効果実装済み */ },{ bonus2 bSubEle,Ele_Ghost,50; }
-
+//--------------------------------------------
 200458,use,コスたまHalloweenVIII,2,20,,10,,,,,2074075135,2,,,1,,,{ /* 241001 効果実装済み */ },{ /* 400716 410011 410360 420365 420366 420367 480492 480493 480494 410206 */ }
 400716,cos,[衣装] 橙の猫耳魔女帽子,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2580,0,{ /* 241001 コスたまHalloweenVIII 効果実装済み */ },{}
 410011,cos,[衣装] 闇の目隠し,4,20,,0,,0:0,,0,2074075135,2,2048,,1,187,0,{ /* 241001 コスたまHalloweenVIII 効果実装済み */ },{}
@@ -13021,7 +13022,7 @@
 1000941,item,封印の包帯,3,0,,0,,,,,,,,,,,,{ /* 241001 効果実装済み */ },{}
 1000945,item,深淵の鏡,3,0,,0,,,,,,,,,,,,{ /* 241001 効果実装済み */ },{}
 101835,use,幻想叢書カード(レハール),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241001 [レハールの幻影]出現 */ },{}
-
+//--------------------------------------------
 200429,use,[2024]特別チケットの箱(Autumn),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241008 効果実装済み */ getitem2 1001803,1,1,0,0,0,0,0,0,3024000; },{}
 1001781,item,キューペットボックス抽選券X,3,0,,0,,,,,,,,,,,,{ /* 241008 効果実装済み */ },{}
 1001803,item,[2024]特別チケット(Autumn),3,0,,0,,,,,,,,,,,,{ /* 241008 効果実装済み */ },{}
@@ -13032,7 +13033,7 @@
 1000946,item,フォークスプーン,3,0,,0,,,,,,,,,,,,{ /* 241008 効果実装済み */ },{}
 1000948,item,古いネクタイ,3,0,,0,,,,,,,,,,,,{ /* 241008 効果実装済み */ },{}
 101837,use,幻想叢書カード(イーブル),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241008 [イーブルの幻影]出現 */ },{}
-
+//--------------------------------------------
 9188,pet,タイムホルダーの卵,4,20,,0,,,,,,,,,,,,{ /* 241015 ペットにセット効果 */ },{}
 9189,pet,時計塔管理者の卵,4,20,,0,,,,,,,,,,,,{ /* 241015 ペットにセット効果 */ },{}
 9190,pet,クロックの卵,4,20,,0,,,,,,,,,,,,{ /* 241015 ペットにセット効果 */ },{}
@@ -13054,12 +13055,12 @@
 312943,ench,潜在解放(エレメンタルマスターVI),6,,,,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"EM_ELEMENTAL_BUSTER",-200; } }
 312974,ench,潜在解放(蜃気楼&不知火IV),6,,,,,,,,,,65535,,,,,{ /* 241015 拡張4次 */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SS_SEKIENHOU",-300; bonus2 bAddSkillCoolDown,"SS_RAIDENPOU",-300; } }
 312956,ench,潜在解放(バイオロV),6,,,,,,,,,,65535,,,,,{ /* 241015 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"BO_EXPLOSIVE_POWDER",-200; } }
-
+//--------------------------------------------
 200363,use,[2024]復刻コスたまの箱(Season4),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241022 効果実装済み */ getitem2 1001195,1,1,0,0,0,0,0,0,7948800; },{}
 200364,use,[2024]復刻コスたま引換券(Season4)11個の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241022 効果実装済み */ getitem2 1001195,11,1,0,0,0,0,0,0,7948800; },{}
 410240,cos,[衣装] 白兎神,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2388,0,{ /* 241022 効果実装済み */ },{}
 480488,cos,[衣装] ユンケアの翼,4,20,,0,,0:0,,0,2074075135,2,8192,,1,241,0,{ /* 241022 効果実装済み */ },{}
-
+//--------------------------------------------
 600014,weapon,ポエニテンティア・エンシス,9,20,,3400,280:230,,1,1,128,2,34,4,200,3,1,{ /* 241029 超越装備 */ },{ callfunc "MeleeRct_All",13*getequiprefinerycnt(); if(equippeditem(311074)) { bonus2 bAddSkillDamageRate,"DK_HACKANDSLASHER",25; bonus2 bAddSkillDamageRate,"DK_STORMSLASH",25; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; } }
 640014,weapon,ポエニテンティア・テルメス,9,20,,2400,120:270,,1,1,512,2,34,4,200,23,1,{ /* 241029 超越装備 */ },{ callfunc "MagicRct_All",10*getequiprefinerycnt(); if(equippeditem(311074)) { bonus2 bAddSkillDamageRate,"AG_SOUL_VC_STRIKE",25; bonus2 bAddSkillDamageRate,"AG_MYSTERY_ILLUSION",25; bonus2 bAddSkillDamageRate,"AG_DEADLY_PROJECTION",25; bonus2 bAddSkillDamageRate,"AG_ASTRAL_STRIKE",25; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; } }
 300192,card,魔剣士サクライカード,6,20,,10,,,,,,,16,,,,,{ /* 241029 効果実装済み */ },{ bonus2 bSubEle,Ele_Earth,10; bonus2 bSubEle,Ele_Poison,10; if(equippeditem(311074) == 0) { bonus3 bAutoActiveWeapon,300192,100,1; } else bonus3 bAutoActiveWeapon,300192,200,1; if(checkactiveitem()) { misceffect 220,""; sc_start 481,10000,1; } }
@@ -13119,7 +13120,7 @@
 550060,weapon,ポエニテンティア・ラムス,5,20,,300,60:180,,1,1,134217728,2,2,4,200,10,1,{ /* 241029 超越装備 拡張4次 */ },{ callfunc "MagicRct_All",10*getequiprefinerycnt(); if(equippeditem(311074)) { bonus2 bAddSkillDamageRate,"SOA_TALISMAN_OF_SOUL_STEALING",25; bonus2 bAddSkillDamageRate,"SOA_EXORCISM_OF_MALICIOUS_SOUL",25; bonus2 bAddSkillDamageRate,"SOA_CIRCLE_OF_DIRECTIONS_AND_ELEMENTALS",25; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; } }
 550061,weapon,ポエニテンティア・プランタ,5,20,,400,150:180,,1,1,1073741824,2,2,4,200,100,1,{ /* 241029 超越装備 拡張4次 */ },{ callfunc "MagicRct_All",10*getequiprefinerycnt(); if(equippeditem(311074)) { bonus2 bAddSkillDamageRate,"SH_HYUN_ROK_CANNON",25; bonus2 bAddSkillDamageRate,"SH_HYUN_ROKS_BREEZE",25; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; } }
 420380,cos,[衣装] ニブルレオンマスク,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1806,0,{ /* 241029 効果実装済み */ },{}
-
+//--------------------------------------------
 1001862,item,22ndスーベニアメダル(1G),3,0,,0,,,,,,,,,,,,{ /* 241112 効果実装済み */ },{}
 1001863,item,22ndスーベニアメダル(1M),3,0,,0,,,,,,,,,,,,{ /* 241112 効果実装済み */ },{}
 1001864,item,22ndスーベニアメダル(1K),3,0,,0,,,,,,,,,,,,{ /* 241112 効果実装済み */ },{}
@@ -13143,7 +13144,7 @@
 1001870,item,グレーアイスウィンド交換チケット,3,0,,0,,,,,,,,,,,,{ /* 241112 効果実装済み */ },{}
 1001871,item,ホワイトアイスウィンド交換チケット,3,0,,0,,,,,,,,,,,,{ /* 241112 効果実装済み */ },{}
 12325,use,初心者用拡大鏡,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 241112 効果実装済み */ itemskill "MC_IDENTIFY",1,"拡大鏡"; },{}
-
+//--------------------------------------------
 1001885,item,ペコペコの肉,3,20,,10,,,,,,,,,,,,{ /* 241126 効果実装済み */ },{}
 103660,heal,ペコペコのモロク風煮込み,2,20,,500,,,,,2074075135,2,,,1,,,{ /* 241126 [重複しない] */ },{}
 103661,heal,ペコペコのモロク風煮込み(試食),2,0,,500,,,,,2074075135,2,,,1,,,{ /* 241126 [重複しない] */ },{}
@@ -13242,3 +13243,34 @@
 103564,use,浄化図面の束(取引不可),2,0,,1,,,,,2074075135,2,,,1,,,{ /* 241126 効果実装済み */ set '@24zumenbox,rand(0,18); if('@24zumenbox == 0) { getitem 1000476,1; } if('@24zumenbox == 1) { getitem 1000478,1; } if('@24zumenbox == 2) { getitem 1000479,1; } if('@24zumenbox == 3) { getitem 1000481,1; } if('@24zumenbox == 4) { getitem 1000484,1; } if('@24zumenbox == 5) { getitem 1000486,1; } if('@24zumenbox == 6) { getitem 1000487,1; } if('@24zumenbox == 7) { getitem 1000489,1; } if('@24zumenbox == 8) { getitem 1000492,1; } if('@24zumenbox == 9) { getitem 1000493,1; } if('@24zumenbox == 10) { getitem 1000495,1; } if('@24zumenbox == 11) { getitem 1000497,1; } if('@24zumenbox == 12) { getitem 1000498,1; } if('@24zumenbox == 13) { getitem 1000480,1; } if('@24zumenbox == 14) { getitem 1000485,1; } if('@24zumenbox == 15) { getitem 1000689,1; } if('@24zumenbox == 16) { getitem 1000693,1; } if('@24zumenbox == 17) { getitem 1000694,1; } if('@24zumenbox == 18) { getitem 1000697,1; } },{}
 103565,use,時間のサークレットの箱,2,0,,1,,,,,2074075135,2,,,1,,,{ /* 241126 効果実装済み */ set '@24circlet_of_time_box,rand(0,17); if('@24circlet_of_time_box == 0) { getitem 19474,1; } if('@24circlet_of_time_box == 1) { getitem 19475,1; } if('@24circlet_of_time_box == 2) { getitem 19476,1; } if('@24circlet_of_time_box == 3) { getitem 19477,1; } if('@24circlet_of_time_box == 4) { getitem 19478,1; } if('@24circlet_of_time_box == 5) { getitem 19479,1; } if('@24circlet_of_time_box == 6) { getitem 19480,1; } if('@24circlet_of_time_box == 7) { getitem 19481,1; } if('@24circlet_of_time_box == 8) { getitem 19482,1; } if('@24circlet_of_time_box == 9) { getitem 19483,1; } if('@24circlet_of_time_box == 10) { getitem 19484,1; } if('@24circlet_of_time_box == 11) { getitem 19485,1; } if('@24circlet_of_time_box == 12) { getitem 19486,1; } if('@24circlet_of_time_box == 13) { getitem 19487,1; } if('@24circlet_of_time_box == 14) { getitem 19488,1; } if('@24circlet_of_time_box == 15) { getitem 19489,1; } if('@24circlet_of_time_box == 16) { getitem 19491,1; } if('@24circlet_of_time_box == 17) { getitem 19492,1; } },{}
 103566,use,時間のサークレットの箱(取引不可),2,0,,1,,,,,2074075135,2,,,1,,,{ /* 241126 効果実装済み */ set '@24circlet_of_time_box,rand(0,17); if('@24circlet_of_time_box == 0) { getitem 19474,1; } if('@24circlet_of_time_box == 1) { getitem 19475,1; } if('@24circlet_of_time_box == 2) { getitem 19476,1; } if('@24circlet_of_time_box == 3) { getitem 19477,1; } if('@24circlet_of_time_box == 4) { getitem 19478,1; } if('@24circlet_of_time_box == 5) { getitem 19479,1; } if('@24circlet_of_time_box == 6) { getitem 19480,1; } if('@24circlet_of_time_box == 7) { getitem 19481,1; } if('@24circlet_of_time_box == 8) { getitem 19482,1; } if('@24circlet_of_time_box == 9) { getitem 19483,1; } if('@24circlet_of_time_box == 10) { getitem 19484,1; } if('@24circlet_of_time_box == 11) { getitem 19485,1; } if('@24circlet_of_time_box == 12) { getitem 19486,1; } if('@24circlet_of_time_box == 13) { getitem 19487,1; } if('@24circlet_of_time_box == 14) { getitem 19488,1; } if('@24circlet_of_time_box == 15) { getitem 19489,1; } if('@24circlet_of_time_box == 16) { getitem 19491,1; } if('@24circlet_of_time_box == 17) { getitem 19492,1; } },{}
+//--------------------------------------------
+200497,use,コスたまHairCollectionX(明色),2,0,,10,,,,,2074075135,2,,,1,,,{ /* 241210 効果実装済み */ },{ /* 420393 420394 420397 420398 420399 420400 420405 420406 420407 420408 420413 420414 420415 420416 */ }
+200498,use,コスたまHairCollectionX(暗色),2,0,,10,,,,,2074075135,2,,,1,,,{ /* 241210 効果実装済み */ },{ /* 420395 420396 420401 420402 420403 420404 420409 420410 420411 420412 420417 420418 420419 420420 */ }
+420393,cos,[衣装] ストレートツーサイドアップ(ブロンド),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2610,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420394,cos,[衣装] ストレートツーサイドアップ(ブロンドピンク),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2611,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420395,cos,[衣装] ストレートツーサイドアップ(シルバー),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2612,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420396,cos,[衣装] ストレートツーサイドアップ(ブラックピンク),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2613,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420397,cos,[衣装] ハイパーノービスポニー(青緑),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2614,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420398,cos,[衣装] ハイパーノービスポニー(黄),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2615,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420399,cos,[衣装] ハイパーノービスポニー(桜),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2616,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420400,cos,[衣装] ハイパーノービスポニー(水色),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2617,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420401,cos,[衣装] ハイパーノービスポニー(薄紫),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2618,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420402,cos,[衣装] ハイパーノービスポニー(漆黒),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2619,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420403,cos,[衣装] ハイパーノービスポニー(白),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2620,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420404,cos,[衣装] ハイパーノービスポニー(紅),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2621,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420405,cos,[衣装] レンジャーウルフショート(青緑),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2622,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420406,cos,[衣装] レンジャーウルフショート(黄),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2623,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420407,cos,[衣装] レンジャーウルフショート(桜),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2624,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420408,cos,[衣装] レンジャーウルフショート(水色),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2625,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420409,cos,[衣装] レンジャーウルフショート(薄紫),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2626,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420410,cos,[衣装] レンジャーウルフショート(漆黒),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2627,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420411,cos,[衣装] レンジャーウルフショート(白),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2628,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420412,cos,[衣装] レンジャーウルフショート(紅),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2629,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420413,cos,[衣装] ワンダラーカール(青緑),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2630,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420414,cos,[衣装] ワンダラーカール(黄),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2631,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420415,cos,[衣装] ワンダラーカール(桜),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2632,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420416,cos,[衣装] ワンダラーカール(水色),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2633,0,{ /* 241210 効果実装済み コスたまHairCollectionX(明色) */ },{}
+420417,cos,[衣装] ワンダラーカール(薄紫),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2634,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420418,cos,[衣装] ワンダラーカール(漆黒),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2635,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420419,cos,[衣装] ワンダラーカール(スノーホワイト),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2636,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
+420420,cos,[衣装] ワンダラーカール(紅),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2637,0,{ /* 241210 効果実装済み コスたまHairCollectionX(暗色) */ },{}
