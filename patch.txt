@@ -1,3 +1,6 @@
+20241213	patch0227
+・item_cardtype.txt 更新
+
 20241213	patch0226
 ・20241210までのアイテム実装(item_db.txt)
 
