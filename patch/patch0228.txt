@@ -1,4 +1,4 @@
-// ID,Upper,Zone,Dropable,Sellable,Storageable,GuildStorageable,Cartable,Delay,Cooldown,Buyingable,Nonconsume,DropEffect Auriga db_override patch1573+add 20241210 アップデート
+item_db2.txt
 501,0,0,0,0,0,0,0,0,0,0,0,0	//赤ポーション
 502,0,0,0,0,0,0,0,0,0,0,0,0	//紅ポーション
 503,0,0,0,0,0,0,0,0,0,0,0,0	//黄ポーション
