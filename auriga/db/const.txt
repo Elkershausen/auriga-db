@@ -72,13 +72,13 @@ Job_ELEMENTALMASTER	58
 Job_INQUISITOR		59
 Job_TROUBADOUR		60
 Job_TROUVERE		61
-Job_SOULASCETIC		62
-Job_SHINKIRO		63
-Job_SHIRANUI		64
-Job_NIGHTWATCH		65
-Job_HYPERNOVICE		66
-Job_SPIRITHANDLER	67
-Job_SKYEMPEROR		68
+Job_SKYEMPEROR		62
+Job_SOULASCETIC		63
+Job_SHINKIRO		64
+Job_SHIRANUI		65
+Job_NIGHTWATCH		66
+Job_HYPERNOVICE		67
+Job_SPIRITHANDLER	68
 
 //ClassíËã`íl
 CLASS_NV	0
@@ -437,6 +437,12 @@ bVit		15
 bInt		16
 bDex		17
 bLuk		18
+bPow		19
+bSta		20
+bWis		21
+bSpl		22
+bCon		23
+bCrt		24
 bAtk		41
 bAtk2		42
 bMatk1		43
@@ -648,6 +654,8 @@ bItemNoUse	2008
 bFixDamage	2009
 bNoKnockback	2010
 bNoGearFuel	2011
+
+
 
 //bonusånñΩóﬂÇÃèÛë‘àŸèÌ
 Eff_Stone	0
