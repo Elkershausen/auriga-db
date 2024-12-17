@@ -1,3 +1,8 @@
+20241217	patch0230
+・20241217 アップデート実装 (item_db.txt item_db2.txt item_cardtype.txt)
+
+・classnum_db.txt 更新
+
 20241216	patch0229
 ・item_db2.txt 修正
 ・300000番台のカードで4次職要素のあるものを実装、初期実装時のミス修正とコメント追記を実施(300001-300297)

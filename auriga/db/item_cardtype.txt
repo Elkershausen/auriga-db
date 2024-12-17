@@ -1,4 +1,4 @@
-//ID,Name,Jname,Composition_Type Auriga db_override patch1573+add 20241210 アップデート
+//ID,Name,Jname,Composition_Type Auriga db_override patch1574 + add 20241217 アップデート
 4001,card,ポリンカード,0
 4002,card,ファブルカード,1
 4003,card,プパカード,0
@@ -2381,3 +2381,6 @@
 313491,ench,潜在解放(ウィンドホークIX),2
 313492,ench,潜在解放(ウィンドホークX),2
 313450,ench,潜在解放(ウィンドホークXI),2
+313460,ench,潜在解放(インペリアルガードXI),2
+313446,ench,潜在解放(ドラゴンナイトX),2
+313479,ench,潜在解放(蜃気楼&不知火X),2
