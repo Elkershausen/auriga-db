@@ -1,4 +1,4 @@
-//item_db.txt Auriga db_override patch1574 + add 20241220 アップデート
+//item_db.txt Auriga db_override patch1574 + add 20241224 アップデート
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript},{UnEquipScript}
 501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,1,,,{ itemheal rand(45,65),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(45,65)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(45,65)*(12/10),0; } },{}
 502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(105,145),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(105,145)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(105,145)*(12/10),0; } },{}
@@ -13283,3 +13283,6 @@
 313460,ench,潜在解放(インペリアルガードXI),6,,,,,,,,,,65535,,,,,{ /* 241217 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"IG_JUDGEMENT_CROSS",-100; } }
 313446,ench,潜在解放(ドラゴンナイトX),6,,,,,,,,,,65535,,,,,{ /* 241217 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"DK_DRAGONIC_BREATH",-200; } }
 313479,ench,潜在解放(蜃気楼&不知火X),6,,,,,,,,,,65535,,,,,{ /* 241217 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SS_REIKETSUHOU",-300; bonus2 bAddSkillCoolDown,"SS_KINRYUUHOU",-300; } }
+//--------------------------------------------
+20111,cos,[衣装] とぐろを巻いた白蛇帽,4,0,,0,,0:0,,0,2074075135,2,1024,,1,1259,0,{ /* 241224 効果実装済み */ },{}
+1001910,item,年賀状2025年,3,0,,10,,,,,,,,,,,,{ /* 241224 効果実装済み */ },{}
