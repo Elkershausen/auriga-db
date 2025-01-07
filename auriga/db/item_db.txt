@@ -1,4 +1,4 @@
-//item_db.txt Auriga db_override patch1574 + add 20241224 アップデート
+//item_db.txt Auriga db_override patch1576 + add 20250107 アップデート
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript},{UnEquipScript}
 501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,1,,,{ itemheal rand(45,65),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(45,65)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(45,65)*(12/10),0; } },{}
 502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(105,145),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(105,145)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(105,145)*(12/10),0; } },{}
@@ -12779,7 +12779,7 @@
 300449,card,ティンバーズカード,6,20,,10,,,,,,,16,,,,,{ /* 240827 効果実装済み */ },{ bonus2 bAddRace,Rct_Plant,getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Plant,10; } }
 300450,card,ルニレカード,6,20,,10,,,,,,,16,,,,,{ /* 240827 効果実装済み */ },{ bonus2 bMagicAddRace,Rct_Boss,2*readparam(bint)/10; bonus2 bMagicAddRace,Rct_NonBoss,2*readparam(bint)/10; if(readparam(bInt) >= 130) { bonus2 bMagicAddRace,Rct_Boss,20; bonus2 bMagicAddRace,Rct_NonBoss,20; } if(equippeditem(311439)) { bonus bMaxHPrate,50; skill "WL_CHAINLIGHTNING",5; } }
 1001198,item,汚染の根源,3,20,,10,,,,,,,,,,,,{ /* 240827 効果実装済み */ },{}
-1001199,item,汚染の欠片,3,20,,10,,,,,,,,,,,,{ /* 240827 効果実装済み */ },{}
+1001199,item,汚染の欠片,3,50000,,10,,,,,,,,,,,,{ /* 240827 効果実装済み */ },{}
 1001200,item,汚染の結晶,3,20,,10,,,,,,,,,,,,{ /* 240827 効果実装済み */ },{}
 1001201,item,神官の聖金,3,20,,1,,,,,,,,,,,,{ /* 240827 効果実装済み */ },{}
 1001202,item,神官の聖水,3,20,,1,,,,,,,,,,,,{ /* 240827 効果実装済み */ },{}
@@ -13286,3 +13286,7 @@
 //--------------------------------------------
 20111,cos,[衣装] とぐろを巻いた白蛇帽,4,0,,0,,0:0,,0,2074075135,2,1024,,1,1259,0,{ /* 241224 効果実装済み */ },{}
 1001910,item,年賀状2025年,3,0,,10,,,,,,,,,,,,{ /* 241224 効果実装済み */ },{}
+//--------------------------------------------
+200501,use,[2025年]究極精錬お楽しみチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250107 効果実装済み */ getitem2 1001924,1,1,0,0,0,0,0,0,3628800; },{}
+1001923,item,キューペットボックス抽選券XI,3,0,,0,,,,,,,,,,,,{ /* 250107 効果実装済み */ },{}
+1001924,item,究極精錬お楽しみチケット,3,0,,0,,,,,,,,,,,,{ /* 250107 効果実装済み */ },{}

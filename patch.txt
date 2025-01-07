@@ -1,3 +1,8 @@
+20250107	patch0233
+・20250107 アップデート実装(item_db.txt item_db2.txt)
+・ミョルニール地下洞窟の収集品の価格を一つ更新
+・5 min auriga_0013.zip 更新
+
 20241224	patch0232
 ・20241224 アップデート実装(item_db.txt item_db2.txt classnum_db.txt)
 

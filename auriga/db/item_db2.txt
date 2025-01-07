@@ -1,4 +1,4 @@
-// ID,Upper,Zone,Dropable,Sellable,Storageable,GuildStorageable,Cartable,Delay,Cooldown,Buyingable,Nonconsume,DropEffect Auriga db_override patch1574 + add 20241224 アップデート
+// ID,Upper,Zone,Dropable,Sellable,Storageable,GuildStorageable,Cartable,Delay,Cooldown,Buyingable,Nonconsume,DropEffect Auriga db_override patch1576 + add 20250107 アップデート
 501,0,0,0,0,0,0,0,0,0,0,0,0	//赤ポーション
 502,0,0,0,0,0,0,0,0,0,0,0,0	//紅ポーション
 503,0,0,0,0,0,0,0,0,0,0,0,0	//黄ポーション
@@ -13285,3 +13285,7 @@
 //--------------------------------------------	
 20111,0,4,0,0,0,0,0,0,0,0,0,0	//[衣装] とぐろを巻いた白蛇帽
 1001910,0,0,0,0,0,1,1,0,0,0,0,0	//年賀状2025年
+//--------------------------------------------	
+200501,0,0,1,1,0,1,1,0,0,0,0,0	//[2025年]究極精錬お楽しみチケットの箱
+1001923,0,0,1,1,0,1,1,0,0,0,0,0	//キューペットボックス抽選券XI
+1001924,0,0,1,1,0,1,1,0,0,0,0,0	//究極精錬お楽しみチケット
