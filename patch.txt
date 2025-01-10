@@ -1,3 +1,7 @@
+20250110	patch0236
+・mob_db.txt を整理し、未実装分をmob_db_add.txt に集約
+・mob_db.txt は今特性ステータス追加の仕様変更が見込まれるので一旦削除する
+
 20250109	patch0235
 ・20754-20899の関与するアイテムの不具合修正(item_db.txt)
 ・MOBスキル [Mクラウドキル] 使うように修正(mob_skill_add.txt)
