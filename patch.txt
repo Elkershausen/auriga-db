@@ -1,5 +1,5 @@
 20250115	patch0238
-・20240114 アイテム実装(item_db.txt item_db2.txt item_cardtype.txt)
+・20250114 アイテム実装(item_db.txt item_db2.txt item_cardtype.txt)
 
 20250112	patch0237
 ・20900-20999と関与するアイテムの不具合修正(item_db.txt)
