@@ -1,4 +1,4 @@
-//20240924 ƒOƒŒƒCƒVƒAŒn‘•”õ’Ç‰Á
+//20250118 XV
 //============================================================
 // ‹‘å‚ÈƒnƒG‚Ì‰H
 function	script	ItemdbPartyCall	{
@@ -847,3 +847,135 @@ function	script	D_Glacier_B202409	{
 	}
 	return;
 }
+
+//============================================================
+//[‘S‚Ä‚Ìí‘°]‚Ìƒ‚ƒ“ƒXƒ^[‚ÌMres “Á«–‚–@–hŒä—Í'@val%–³‹ ƒvƒŒƒCƒ„[‚Æƒhƒ‰ƒ€Œ`œ‚­
+//{ callfunc "bonus2bIgnoreMresRace",'@val; }
+
+function	script	bonus2bIgnoreMresRace	{
+	set '@val,getarg(0);
+		bonus2 bIgnoreMresRace,Rct_Formless,'@val;
+		bonus2 bIgnoreMresRace,Rct_Undead,'@val;
+		bonus2 bIgnoreMresRace,Rct_Brute,'@val;
+		bonus2 bIgnoreMresRace,Rct_Plant,'@val;
+		bonus2 bIgnoreMresRace,Rct_Insect,'@val;
+		bonus2 bIgnoreMresRace,Rct_Fish,'@val;
+		bonus2 bIgnoreMresRace,Rct_Demon,'@val;
+		bonus2 bIgnoreMresRace,Rct_Angel,'@val;
+		bonus2 bIgnoreMresRace,Rct_Dragon,'@val;
+		bonus2 bIgnoreMresRace,Rct_DemiHuman,'@val;
+	return;
+}
+
+//============================================================
+//18133#v—‹‹|# 18142#–³‘o‹|# 18144#ˆê•É‹|# 18152#—Â—‹|#‚ÌƒZƒbƒgŒø‰Ê‚Ì‘®«•t—^‚ğ—LŒø‚É‚·‚éê‡ ‚±‚±‚©‚ç
+//–î[1750]-[1774]‘S•”‘Sí‚É’Ç‹L
+//{ callfunc "arrow_ele"; }
+//‘ÎÛ‚Ì‹|‘•”õA–î‚Ì‘®«‚ğ[SC_WindWeapon][SC_GroundWeapon][SC_WaterWeapon][SC_FireWeapon]‚É‚µA‘•”õ‚µ‚Ä‚¢‚È‚¢ê‡‚ÍŒ³‚Ì‘®«[bonus bAtkEle,‘®«;]‚ª—LŒø‚É‚È‚é
+//‘®«‚Ìİ’è‚ª‚È‚¢–î‚É‚à’Ç‹L‚µA‚»‚Ì‘¼‚Ì‘•”õŒø‰Ê‚Íc‚·
+//—á
+//1750,ammo,–î,10,1,,1,25:0,,,,1706056,2,32768,,1,,,{},{ callfunc "arrow_ele"; }
+//1751,ammo,‹â‚Ì–î,10,3,,2,30:0,,,,1706056,2,32768,,1,,,{},{ callfunc "arrow_ele"; }
+//1760,ammo,ƒtƒ‰ƒbƒVƒ…ƒAƒ[,10,10,,3,1:0,,,,1706056,2,32768,,1,,,{},{ callfunc "arrow_ele"; bonus2 bAddEff,Eff_Blind,2000; }
+
+function	script	arrow_ele	{
+	if((equippeditem(18133) == 0) || (equippeditem(18142) == 0) || (equippeditem(18144) == 0) || (equippeditem(18152) == 0)) {
+		if(getequipid(11) == 1751) { bonus bAtkEle,Ele_Holy; }
+		if(getequipid(11) == 1752) { bonus bAtkEle,Ele_Fire; }
+		if(getequipid(11) == 1754) { bonus bAtkEle,Ele_Water; }
+		if(getequipid(11) == 1755) { bonus bAtkEle,Ele_Wind; }
+		if(getequipid(11) == 1756) { bonus bAtkEle,Ele_Earth; }
+		if(getequipid(11) == 1757) { bonus bAtkEle,Ele_Ghost; }
+		if(getequipid(11) == 1759) { bonus bAtkEle,Ele_Water; }
+		if(getequipid(11) == 1762) { bonus bAtkEle,Ele_Poison; }
+		if(getequipid(11) == 1763) { bonus bAtkEle,Ele_Poison; }
+		if(getequipid(11) == 1766) { bonus bAtkEle,Ele_Holy; }
+		if(getequipid(11) == 1767) { bonus bAtkEle,Ele_Dark; }
+		if(getequipid(11) == 1772) { bonus bAtkEle,Ele_Holy; }
+		}
+	if(equippeditem(18133)) { sc_start SC_WindWeapon,10800000,1; }
+	if(equippeditem(18142)) { sc_start SC_GroundWeapon,10800000,1; }
+	if(equippeditem(18144)) { sc_start SC_WaterWeapon,10800000,1; }
+	if(equippeditem(18152)) { sc_start SC_FireWeapon,10800000,1; }
+	return;
+}
+
+//18133#v—‹‹|# 18142#–³‘o‹|# 18144#ˆê•É‹|# 18152#—Â—‹|# ‚ğŠO‚µ‚½‚Æ‚«‚ÉƒZƒbƒgŒø‰Ê‚Ì‘®«•t—^‚ğÁ‚·‹Lq
+//{ callfunc "arrow_off"; } ‘ÎÛ‹|‚É’Ç‹L
+function	script	arrow_off	{
+if((getequipid(11) >= 1750) || (getequipid(11) <= 1774)) {
+	if(equippeditem(18133)) {
+		bonus bAutoStatusCalcPc,SC_WindWeapon;
+		sc_end SC_WindWeapon;
+		}
+	if(equippeditem(18142)) {
+		bonus bAutoStatusCalcPc,SC_GroundWeapon;
+		sc_end SC_GroundWeapon;
+		}
+	if(equippeditem(18144)) {
+		bonus bAutoStatusCalcPc,SC_WaterWeapon;
+		sc_end WaterWeapon;
+		}
+	if(equippeditem(18152)) {
+		bonus bAutoStatusCalcPc,SC_FireWeapon;
+		sc_end SC_FireWeapon;
+		}
+	}
+	return;
+}
+
+//18133#v—‹‹|# 18142#–³‘o‹|# 18144#ˆê•É‹|# 18152#—Â—‹|#‚ÌƒZƒbƒgŒø‰Ê‚Ì‘®«•t—^‚ğ—LŒø‚É‚·‚éê‡ ‚±‚±‚Ü‚Å
+
+//============================================================
+//13130#v—‹e# 13133#–³‘oe# 13139#ˆê•Ée# 13143#—Â—e#‚ÌƒZƒbƒgŒø‰Ê‚Ì‘®«•t—^‚ğ—LŒø‚É‚·‚éê‡ ‚±‚±‚©‚ç
+//’e[13200]-[13232]‘S•”‘Sí‚É’Ç‹L
+//ƒXƒtƒBƒAŒn 13201 13202 À‘•”p~‚³‚ê‚Ä‚¢‚Ü‚·
+//{ callfunc "ammo_ele"; }
+
+function	script	ammo_ele	{
+	if((equippeditem(13130) == 0) || (equippeditem(13133) == 0) || (equippeditem(13139) == 0) || (equippeditem(13143) == 0)) {
+		if(getequipid(11) == 13216) { bonus bAtkEle,Ele_Fire; }
+		if(getequipid(11) == 13217) { bonus bAtkEle,Ele_Water; }
+		if(getequipid(11) == 13218) { bonus bAtkEle,Ele_Wind; }
+		if(getequipid(11) == 13219) { bonus bAtkEle,Ele_Earth; }
+		if(getequipid(11) == 13220) { bonus bAtkEle,Ele_Holy; }
+		if(getequipid(11) == 13221) { bonus bAtkEle,Ele_Holy; }
+		if(getequipid(11) == 13228) { bonus bAtkEle,Ele_Fire; }
+		if(getequipid(11) == 13229) { bonus bAtkEle,Ele_Wind; }
+		if(getequipid(11) == 13230) { bonus bAtkEle,Ele_Water; }
+		if(getequipid(11) == 13231) { bonus bAtkEle,Ele_Poison; }
+		if(getequipid(11) == 13232) { bonus bAtkEle,Ele_Dark; }
+		}
+	if(equippeditem(13130)) { sc_start SC_WindWeapon,10800000,1; }
+	if(equippeditem(13133)) { sc_start SC_GroundWeapon,10800000,1; }
+	if(equippeditem(13139)) { sc_start SC_WaterWeapon,10800000,1; }
+	if(equippeditem(13143)) { sc_start SC_FireWeapon,10800000,1; }
+	return;
+}
+
+//13130#v—‹e# 13133#–³‘oe# 13139#ˆê•Ée# 13143#—Â—e#
+//{ callfunc "ammo_off"; } ‘ÎÛ‹|‚É’Ç‹L
+
+function	script	ammo_off	{
+if((getequipid(11) >= 13200) || (getequipid(11) <= 13132)) {
+	if(equippeditem(13130)) {
+		bonus bAutoStatusCalcPc,SC_WindWeapon;
+		sc_end SC_WindWeapon;
+		}
+	if(equippeditem(13133)) {
+		bonus bAutoStatusCalcPc,SC_GroundWeapon;
+		sc_end SC_GroundWeapon;
+		}
+	if(equippeditem(13139)) {
+		bonus bAutoStatusCalcPc,SC_WaterWeapon;
+		sc_end WaterWeapon;
+		}
+	if(equippeditem(13143)) {
+		bonus bAutoStatusCalcPc,SC_FireWeapon;
+		sc_end SC_FireWeapon;
+		}
+	}
+	return;
+}
+
+//13130#v—‹e# 13133#–³‘oe# 13139#ˆê•Ée# 13143#—Â—e#‚ÌƒZƒbƒgŒø‰Ê‚Ì‘®«•t—^‚ğ—LŒø‚É‚·‚éê‡ ‚±‚±‚Ü‚Å
