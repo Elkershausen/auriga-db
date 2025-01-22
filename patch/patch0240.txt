@@ -1,0 +1,174 @@
+item_db.txt
+310969,ench,潜在覚醒(爆裂苦無I),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"KO_BAKURETSU",BaseLevel/5; if(equippeditem(29509)) { bonus2 bAddSkillDamageRate,"KO_BAKURETSU",BaseLevel/2; if(equippeditem(450117) || equippeditem(490206)) { bonus2 bAddSkillDamageRate,"KO_BAKURETSU",-BaseLevel/2; } } }
+313291,ench,潜在覚醒(ダーククローI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509) || equippeditem(29371)) { bonus2 bAddSkillCoolDown,"GC_DARKCROW",-30000; } }
+313745,ench,潜在解放(アークビショップIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29371)) { bonus3 bAutoSpell,"AB_ADORAMUS",getskilllv("AB_ADORAMUS"),100; bonus3 bAutoSpell,"AB_JUDEX",getskilllv("AB_JUDEX"),100; } }
+313746,ench,潜在解放(ウォーロックIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddFixCastRate,"WL_CRIMSONROCK",-100; bonus2 bAddFixCastRate,"WL_CHAINLIGHTNING",-100; bonus2 bAddSkillCoolDown,"WL_TELEKINESIS_INTENSE",-260000; } },{ sc_end 635; }
+313747,ench,潜在解放(ギロチンクロスIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"GC_DARKCROW",-60000; bonus2 bAddSkillCoolDown,"GC_ROLLINGCUTTER",-200; if((equippeditem(480134) || equippeditem(470130) || equippeditem(22134) || equippeditem(22223)) == 0) { bonus2 bAddSkillCoolDown,"GC_HALLUCINATIONWALK",-45000; } } }
+313748,ench,潜在解放(サモナーIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddFixCastRate,"SU_SCAROFTAROU",-100; } if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SU_LUNATICCARROTBEAT",-100; } }
+313749,ench,潜在解放(ジェネティックIII),6,,,,,,,,,,65535,,,,,{ /* 250121 固定詠唱 +n秒 */ },{ if(equippeditem(29509)) { if((equippeditem(450100) || equippeditem(490206)) == 0) { bonus2 bAddSkillCoolDown,"GN_MANDRAGORA",-16000; } } }
+313750,ench,潜在解放(シャドウチェイサーIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddFixCastRate,"SC_AUTOSHADOWSPELL",-100; bonus3 bAutoSpell2,"SO_PSYCHIC_WAVE",5,100; bonus3 bAutoSpell2,"WL_CHAINLIGHTNING",5,100; } }
+313751,ench,潜在解放(ソウルリーパーIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddFixCastRate,"SP_SPA",-100; bonus2 bAddFixCastRate,"SP_SHA",-100; bonus2 bAddFixCastRate,"SP_SWHOO",-100; } if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SP_CURSEEXPLOSION",-1000; } }
+313752,ench,潜在解放(ソーサラーIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddFixCastRate,"SO_PSYCHIC_WAVE",-100; bonus2 bAddFixCastRate,"SO_DIAMONDDUST",-100; } if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SO_VARETYR_SPEAR",-1000; bonus2 bAddSkillCoolDown,"SO_DIAMONDDUST",-1000; } }
+313753,ench,潜在解放(ミンストレル&ワンダラーII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddFixCastRate,"WM_SEVERE_RAINSTORM",-100; } bonus4 bAutoActiveSkill,"WM_SEVERE_RAINSTORM",313753,10000,20000; if(checkactiveitem()) { misceffect 220,""; sc_starte 631,20000,5; } },{ sc_end 631; }
+313754,ench,潜在解放(メカニックIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddCastRate,"NC_ARMSCANNON",-100; bonus2 bAddCastRate,"NC_COLDSLOWER",-100; bonus2 bAddCastRate,"NC_FLAMELAUNCHER",-100; bonus bNoGearFuel,0; } }
+313755,ench,潜在解放(リベリオンIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"RL_C_MARKER",-1000; bonus2 bAddSkillCoolDown,"RL_RICHS_COIN",-3000; bonus3 bAutoSpell,"RL_D_TAIL",getskilllv("RL_D_TAIL"),100; } }
+313756,ench,潜在解放(ルーンナイトIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"RK_IGNITIONBREAK",-3000; bonus2 bAddSkillCoolDown,"RK_SONICWAVE",-200; bonus2 bAddSkillCoolDown,"RK_HUNDREDSPEAR",-1000; } }
+313757,ench,潜在解放(レンジャーIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"RA_ARROWSTORM",-500; bonus2 bAddSkillCoolDown,"RA_UNLIMIT",-300000; } },{ sc_end 631; }
+313758,ench,潜在解放(ロイヤルガードIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"LG_CANNONSPEAR",-2000; bonus2 bAddSkillCoolDown,"LG_PINPOINTATTACK",-5000; } }
+313759,ench,潜在解放(影狼&朧II),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"KO_IZAYOI",-60000; bonus2 bAddSkillCoolDown,"KO_BAKURETSU",-1000; } }
+313760,ench,潜在解放(修羅III),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SR_ASSIMILATEPOWER",-3000; bonus2 bAddSkillCoolDown,"SR_KNUCKLEARROW",-200; bonus4 bAutoActiveSkill,"SR_KNUCKLEARROW",313760,10000,3000; bonus4 bAutoActiveSkill,"SR_SKYNETBLOW",313760,10000,3000; if(checkactiveitem()) { misceffect 220,""; bonus bFlee2,95; } } }
+313761,ench,潜在解放(星帝III),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SJ_BOOKOFDIMENSION",-9000; bonus2 bAddSkillCoolDown,"SJ_BOOKOFCREATINGSTAR",-2000; } }
+313762,ench,潜在覚醒(ハンドレッドスピアI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RK_HUNDREDSPEAR",BaseLevel/3; if(equippeditem(29509)) { bonus4 bAutoActiveSkill,"RK_HUNDREDSPEAR",313762,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"RK_HUNDREDSPEAR",-59; } } }
+313763,ench,潜在覚醒(チェーンライトニングI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WL_CHAINLIGHTNING",BaseLevel/3; if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"WL_CHAINLIGHTNING",-1000; } }
+313764,ench,潜在覚醒(フェイントボムI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SC_FEINTBOMB",BaseLevel/2; if(equippeditem(29509)) { bonus4 bAutoActiveSkill,"SC_FEINTBOMB",313764,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"SC_FEINTBOMB",-29; } } }
+313765,ench,潜在覚醒(ピンポイントアタックI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"LG_PINPOINTATTACK",BaseLevel/3; if(equippeditem(29509)) { bonus4 bAutoActiveSkill,"LG_PINPOINTATTACK",313765,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"LG_PINPOINTATTACK",-49; } } }
+313766,ench,潜在覚醒(コールドスローワーI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"NC_COLDSLOWER",BaseLevel/5; if(equippeditem(29509)) { bonus4 bAutoActiveSkill,"NC_COLDSLOWER",313766,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"NC_COLDSLOWER",-19; } } }
+313768,ench,潜在覚醒(デュプレライトII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MELEE",2*BaseLevel; bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MAGIC",2*BaseLevel; if(equippeditem(29371)) { bonus2 bAddFixCastRate,"AB_DUPLELIGHT",-100; } }
+313769,ench,潜在覚醒(ダイヤモンドダストII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",BaseLevel/3; if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SO_DIAMONDDUST",-4000; } }
+313770,ench,潜在覚醒(クレイジーウィードI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"GN_CRAZYWEED",BaseLevel/5; if(equippeditem(29509)) { if(equippeditem(450100) || equippeditem(19453) == 0) { bonus2 bAddSkillCoolDown,"GN_CRAZYWEED",-4500; } } }
+313771,ench,潜在覚醒(修羅身弾I),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SR_KNUCKLEARROW",BaseLevel/2; if(equippeditem(29509)) { bonus2 bAddSkillDamageRate,"SR_KNUCKLEARROW",2*BaseLevel; if(equippeditem(400307)) { bonus2 bAddSkillDamageRate,"SR_KNUCKLEARROW",-2*BaseLevel; } if(readparam(450097) && readparam(490206)) { bonus2 bAddSkillDamageRate,"SR_KNUCKLEARROW",-2*BaseLevel; } } }
+313772,ench,潜在覚醒(星帝降臨I),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SJ_STAREMPEROR",BaseLevel/3; if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SJ_STAREMPEROR",-2500; } }
+313773,ench,潜在覚醒(エスフII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SP_SWHOO",BaseLevel/5; if(equippeditem(29371)) { bonus2 bAddSkillDamageRate,"SP_SWHOO",BaseLevel/2; if(equippeditem(450119) && equippeditem(490206)) { bonus2 bAddSkillDamageRate,"SP_SWHOO",-BaseLevel/2; } } }
+313775,ench,潜在覚醒(ドラゴンテイルI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RL_D_TAIL",BaseLevel/3; if(equippeditem(29509)) { if(equippeditem(28239) == 0) { bonus2 bAddSkillCoolDown,"RL_D_TAIL",-4500; } } }
+313776,ench,潜在覚醒(タロウの傷I),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SU_SCAROFTAROU",BaseLevel/5; if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SU_SCAROFTAROU",-12500; if(equippeditem(450072) || equippeditem(450106)) { bonus2 bAddSkillCoolDown,"SU_SCAROFTAROU",12500; } } }
+
+item_db2.txt
+310969,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(爆裂苦無I)
+313291,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(ダーククローI)
+313745,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(アークビショップIII)
+313746,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ウォーロックIII)
+313747,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ギロチンクロスIII)
+313748,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(サモナーIII)
+313749,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ジェネティックIII)
+313750,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(シャドウチェイサーIII)
+313751,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ソウルリーパーIII)
+313752,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ソーサラーIII)
+313753,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ミンストレル&ワンダラーII)
+313754,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(メカニックIII)
+313755,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(リベリオンIII)
+313756,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ルーンナイトIII)
+313757,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(レンジャーIII)
+313758,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ロイヤルガードIII)
+313759,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(影狼&朧II)
+313760,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(修羅III)
+313761,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(星帝III)
+313762,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(ハンドレッドスピアI)
+313763,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(チェーンライトニングI)
+313764,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(フェイントボムI)
+313765,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(ピンポイントアタックI)
+313766,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(コールドスローワーI)
+313768,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(デュプレライトII)
+313769,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(ダイヤモンドダストII)
+313770,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(クレイジーウィードI)
+313771,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(修羅身弾I)
+313772,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(星帝降臨I)
+313773,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(エスフII)
+313775,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(ドラゴンテイルI)
+313776,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(タロウの傷I)
+
+item_cardtype.txt
+310969,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(爆裂苦無I)
+313291,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(ダーククローI)
+313745,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(アークビショップIII)
+313746,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ウォーロックIII)
+313747,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ギロチンクロスIII)
+313748,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(サモナーIII)
+313749,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ジェネティックIII)
+313750,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(シャドウチェイサーIII)
+313751,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ソウルリーパーIII)
+313752,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ソーサラーIII)
+313753,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ミンストレル&ワンダラーII)
+313754,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(メカニックIII)
+313755,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(リベリオンIII)
+313756,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ルーンナイトIII)
+313757,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(レンジャーIII)
+313758,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(ロイヤルガードIII)
+313759,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(影狼&朧II)
+313760,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(修羅III)
+313761,0,0,0,0,0,0,0,0,0,0,0,0	//潜在解放(星帝III)
+313762,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(ハンドレッドスピアI)
+313763,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(チェーンライトニングI)
+313764,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(フェイントボムI)
+313765,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(ピンポイントアタックI)
+313766,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(コールドスローワーI)
+313768,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(デュプレライトII)
+313769,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(ダイヤモンドダストII)
+313770,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(クレイジーウィードI)
+313771,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(修羅身弾I)
+313772,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(星帝降臨I)
+313773,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(エスフII)
+313775,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(ドラゴンテイルI)
+313776,0,0,0,0,0,0,0,0,0,0,0,0	//潜在覚醒(タロウの傷I)
+
+追加スキル
+NPC_TARGET_MARKER
+NPC_AIMED_SHOWER
+NPC_BLAZING_ERUPTION
+NPC_BLOCK_SEAL,
+NPC_BLOCK_EXPLOSION
+NPC_FROST_FIELD
+NPC_LIGHTNING_JUDGEMENT
+NPC_GROGGY_ON
+NPC_RESET_EFST
+
+追加状態異常
+[EFST_IDs.EFST_NIGHTMARE] = "EFST_NIGHTMARE.tga",
+[EFST_IDs.EFST_TARGET_MARKER] = "滴顕草原朕.tga",
+[EFST_IDs.EFST_BLOCK_SEAL] = "REBOUND.TGA",
+[EFST_IDs.EFST_FROST_STORM] = "EFST_MISTYFROST.tga",
+[EFST_IDs.EFST_GROGGY] = "BD_Stun.tga"
+[EFST_IDs.EFST_WARM_SHIELD] = "ALL_RAY_OF_PROTECTION.TGA"
+
+StateIconList[EFST_IDs.EFST_TARGET_MARKER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ターゲットマーカー", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "特定スキルの発動対象になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BLOCK_SEAL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ブロックシール", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FROST_STORM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "フロストフィールド", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "1度だけ" },
+		{ "ライトニングジャッジメント" },
+		{ "で受けるダメージ増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GROGGY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "待機", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WARM_SHIELD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ウォームシールド", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "1度だけ" },
+		{ "フロストフィールド" },
+		{ "を無効化" }
+	}
+}

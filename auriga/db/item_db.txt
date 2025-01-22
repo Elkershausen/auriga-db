@@ -1,4 +1,4 @@
-//item_db.txt Auriga db_override patch1576 + add 20250114 アップデート
+//item_db.txt Auriga db_override patch1576 + add 20250121 アップデート
 //ID,Name,Jname,Type,Price,Sell,Weight,ATK,DEF,Range,Slot,Job,Gender,Loc,wLV,eLV,View,Refine,{UseScript},{EquipScript},{UnEquipScript}
 501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,1,,,{ itemheal rand(45,65),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(45,65)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(45,65)*(12/10),0; } },{}
 502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(105,145),0; if(equippeditem(4331) && equippeditem(19018)) { itemheal rand(105,145)*(11/10),0; } if(equippeditem(2488)) { itemheal rand(105,145)*(12/10),0; } },{}
@@ -5475,55 +5475,55 @@
 16089,weapon,ウルティオ-OS,5,20,,1500,150:110,,1,0,256,2,2,4,150,8,1,{},{ bonus2 bAddEle,Ele_All,20; bonus2 bMagicAddEle,Ele_All,20; bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MELEE",7*BaseLevel; bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MAGIC",7*BaseLevel; if(getequiprefinerycnt() >= 7) { bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } if(getequiprefinerycnt() >= 10) { skill "BS_ADRENALINE",5; } }
 16098,weapon,獅子宮のメイス,5,20,,400,10:0,,1,1,8701363,2,2,4,1,8,1,{},{ bonus bUnbreakableWeapon,0; bonus bBaseAtk,50; bonus bCastrate,-10; bonus bBaseAtk,BaseLevel; if(Job == Job_Shura || Job == Job_Inquisitor) { bonus bAspdAddRate,10; bonus bCastrate,-5; bonus2 bAddRace,Rct_Boss,50; bonus2 bAddRace,Rct_NonBoss,50; if(getequiprefinerycnt() >= 7) { callfunc "bonus2bIgnoreDefRace",50; } if(getequiprefinerycnt() >= 9) { callfunc "bonus2bIgnoreDefRace",50; } if(equippeditem(29725)) { bonus2 bAddSkillCoolDown,"SR_SKYNETBLOW",-200; } } }
 16099,weapon,ラヴァーハンマー,5,20,,1500,150:110,,1,1,256,2,2,4,175,8,1,{},{ bonus2 bAddRace,Rct_Boss,110; bonus2 bAddRace,Rct_NonBoss,110; skill "NC_POWERSWING",3; if(getequiprefinerycnt() >= 7) { skill "NC_POWERSWING",getskilllv("NC_POWERSWING"); } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NC_POWERSWING",BaseLevel; } if(getequiprefinerycnt() >= 10) { bonus4 bSkillAutoSpell,"NC_POWERSWING","NC_MAGMA_ERUPTION",5,100; } }
-16156,use,ポリン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6157,1; },{}
-16157,use,ドロップス交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6158,1; },{}
-16158,use,ポポリン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6159,1; },{}
-16159,use,ルナティック交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6160,1; },{}
-16160,use,ピッキ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6161,1; },{}
-16161,use,ペコペコ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6162,1; },{}
-16162,use,サベージベベ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6163,1; },{}
-16163,use,スポア交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6164,1; },{}
-16164,use,ポイズンスポア交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6165,1; },{}
-16165,use,チョンチョン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6166,1; },{}
-16166,use,スチールチョンチョン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6167,1; },{}
-16167,use,グラウンドプティット交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6168,1; },{}
-16168,use,デビルチ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6169,1; },{}
-16169,use,イシス交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6170,1; },{}
-16170,use,スモーキー交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6171,1; },{}
-16171,use,ドケビ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6172,1; },{}
-16172,use,子デザートウルフ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6173,1; },{}
-16173,use,ヨーヨー交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6174,1; },{}
-16174,use,ソヒー交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6175,1; },{}
-16175,use,ロッカー交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6176,1; },{}
-16176,use,ハンターフライ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6177,1; },{}
-16177,use,オークウォリアー交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6178,1; },{}
-16178,use,バフォメットJr交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6179,1; },{}
-16179,use,ムナック交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6180,1; },{}
-16180,use,ボンゴン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6181,1; },{}
-16181,use,クリスマスゴブリン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6182,1; },{}
-16182,use,モチリン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6183,1; },{}
-16183,use,ジルタス交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6184,1; },{}
-16184,use,アリス交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6185,1; },{}
-16570,use,マッスル騎士団旅情編の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6344,1; },{}
-16607,use,バブルガム(2個)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 12210,2; },{}
-16608,use,バブルガム(4個)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 12210,4; },{}
-16633,use,バブルガム+の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 12562,10; },{}
-16653,use,戦闘教範75の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 12563,10; },{}
-16674,use,身代わりの護符の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 6413,10; },{}
-16682,use,騎乗用手綱の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 12622,1; },{}
-17104,use,改良型濃縮オリデオコンの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6240,1; },{}
-17105,use,改良型濃縮エルニウムの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6241,1; },{}
-17161,use,ドモヴォイブリーダーの証の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6550,1; },{}
-17165,use,かき氷BOX(50杯),2,3000,,1500,,,,,2074075135,2,,,1,,,{ getitem2 12784,50,1,0,0,0,0,0,0,604800; },{}
-17183,use,マジカルウォッチの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6582,1; },{}
+16156,use,ポリン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6157,1; },{ /* 効果実装済み */ }
+16157,use,ドロップス交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6158,1; },{ /* 効果実装済み */ }
+16158,use,ポポリン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6159,1; },{ /* 効果実装済み */ }
+16159,use,ルナティック交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6160,1; },{ /* 効果実装済み */ }
+16160,use,ピッキ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6161,1; },{ /* 効果実装済み */ }
+16161,use,ペコペコ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6162,1; },{ /* 効果実装済み */ }
+16162,use,サベージベベ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6163,1; },{ /* 効果実装済み */ }
+16163,use,スポア交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6164,1; },{ /* 効果実装済み */ }
+16164,use,ポイズンスポア交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6165,1; },{ /* 効果実装済み */ }
+16165,use,チョンチョン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6166,1; },{ /* 効果実装済み */ }
+16166,use,スチールチョンチョン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6167,1; },{ /* 効果実装済み */ }
+16167,use,グラウンドプティット交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6168,1; },{ /* 効果実装済み */ }
+16168,use,デビルチ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6169,1; },{ /* 効果実装済み */ }
+16169,use,イシス交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6170,1; },{ /* 効果実装済み */ }
+16170,use,スモーキー交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6171,1; },{ /* 効果実装済み */ }
+16171,use,ドケビ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6172,1; },{ /* 効果実装済み */ }
+16172,use,子デザートウルフ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6173,1; },{ /* 効果実装済み */ }
+16173,use,ヨーヨー交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6174,1; },{ /* 効果実装済み */ }
+16174,use,ソヒー交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6175,1; },{ /* 効果実装済み */ }
+16175,use,ロッカー交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6176,1; },{ /* 効果実装済み */ }
+16176,use,ハンターフライ交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6177,1; },{ /* 効果実装済み */ }
+16177,use,オークウォリアー交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6178,1; },{ /* 効果実装済み */ }
+16178,use,バフォメットJr交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6179,1; },{ /* 効果実装済み */ }
+16179,use,ムナック交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6180,1; },{ /* 効果実装済み */ }
+16180,use,ボンゴン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6181,1; },{ /* 効果実装済み */ }
+16181,use,クリスマスゴブリン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6182,1; },{ /* 効果実装済み */ }
+16182,use,モチリン交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6183,1; },{ /* 効果実装済み */ }
+16183,use,ジルタス交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6184,1; },{ /* 効果実装済み */ }
+16184,use,アリス交換チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6185,1; },{ /* 効果実装済み */ }
+16570,use,マッスル騎士団旅情編の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6344,1; },{ /* 効果実装済み */ }
+16607,use,バブルガム(2個)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 12210,2; },{ /* 効果実装済み */ }
+16608,use,バブルガム(4個)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 12210,4; },{ /* 効果実装済み */ }
+16633,use,バブルガム+の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 12562,10; },{ /* 効果実装済み */ }
+16653,use,戦闘教範75の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 12563,10; },{ /* 効果実装済み */ }
+16674,use,身代わりの護符の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 6413,10; },{ /* 効果実装済み */ }
+16682,use,騎乗用手綱の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 12622,1; },{ /* 効果実装済み */ }
+17104,use,改良型濃縮オリデオコンの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6240,1; },{ /* 効果実装済み */ }
+17105,use,改良型濃縮エルニウムの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6241,1; },{ /* 効果実装済み */ }
+17161,use,ドモヴォイブリーダーの証の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6550,1; },{ /* 効果実装済み */ }
+17165,use,かき氷BOX(50杯),2,3000,,1500,,,,,2074075135,2,,,1,,,{ getitem2 22723,50,1,0,0,0,0,0,0,604800; },{ /* 効果実装済み */ }
+17183,use,マジカルウォッチの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6582,1; },{ /* 効果実装済み */ }
 17213,use,古の黄色い箱,2,20,,100,,,,,2074075135,2,,,1,,,{ /* 青箱系 */ },{}
-17214,use,マジカルブックの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント用アイテムで名前が変わったため該当するアイテムなし */ },{}
-17215,use,マジカルブックの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント用アイテムで名前が変わったため該当するアイテムなし */ },{}
-17216,use,かき氷BOX(150杯),2,9000,,4500,,,,,2074075135,2,,,1,,,{ getitem2 12784,150,1,0,0,0,0,0,0,604800; },{}
-17217,use,ドーナツBOX(50個),2,0,,1500,,,,,2074075135,2,,,1,,,{ getitem2 12784,50,1,0,0,0,0,0,0,604800; },{}
-17218,use,ドーナツBOX(150個),2,0,,4500,,,,,2074075135,2,,,1,,,{ getitem2 12784,150,1,0,0,0,0,0,0,604800; },{}
-17219,use,マジカルアップルの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6680,1; },{}
-17220,use,スペシャルクエストチケットの箱,2,0,,100,,,,,2074075135,2,,,1,,,{ getitem 6998,1; },{}
+17214,use,マジカルブックの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント専用 */ },{}
+17215,use,マジカルブックの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント専用 */ },{}
+17216,use,かき氷BOX(150杯),2,9000,,4500,,,,,2074075135,2,,,1,,,{ getitem2 22723,150,1,0,0,0,0,0,0,604800; },{ /* 効果実装済み */ }
+17217,use,ドーナツBOX(50個),2,0,,1500,,,,,2074075135,2,,,1,,,{ getitem2 12784,50,1,0,0,0,0,0,0,604800; },{ /* 効果実装済み */ }
+17218,use,ドーナツBOX(150個),2,0,,4500,,,,,2074075135,2,,,1,,,{ getitem2 12784,150,1,0,0,0,0,0,0,604800; },{ /* 効果実装済み */ }
+17219,use,マジカルアップルの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 6680,1; },{ /* 効果実装済み */ }
+17220,use,スペシャルクエストチケットの箱,2,0,,100,,,,,2074075135,2,,,1,,,{ getitem 6998,1; },{ /* 効果実装済み */ }
 17243,use,コスたまClassic,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17249,use,コスたまClassicII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17250,use,コスたまClassicIII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -5531,10 +5531,10 @@
 17267,use,コスたまCollection,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17268,use,コスたまAnniversary,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17269,use,コスたまXmasParty,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
-17276,use,マジカルフラワーの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント用アイテムで名前が変わったため該当するアイテムなし */ },{}
+17276,use,マジカルフラワーの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント専用 */ },{}
 17280,use,コスたまNewYear,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
-17289,use,ヴェルゼブブの羽の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 14645,1,1,0,0,0,0,0,0,864000; },{}
-17290,use,オルレアンのフルコースの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 14646,5; },{}
+17289,use,ヴェルゼブブの羽の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 14645,1,1,0,0,0,0,0,0,864000; },{ /* 効果実装済み */ }
+17290,use,オルレアンのフルコースの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 14646,5; },{ /* 効果実装済み */ }
 17291,use,コスたまGirlsSelection,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17295,use,コスたまBoysSelection,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17300,use,コスたまHolyDarkness,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -5543,7 +5543,7 @@
 17323,use,コスたまShinobi,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17324,use,コスたまBurning,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17325,use,コスたまHorror,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
-17336,use,ジェレミーの美容クーポンの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 6707,1; },{}
+17336,use,ジェレミーの美容クーポンの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 6707,1; },{ /* 効果実装済み */ }
 17428,use,コスたまMoonRabbit,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17434,use,コスたまHalloween,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17436,use,コスたまGothic,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -5551,7 +5551,7 @@
 17448,use,コスたまToyBox,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17461,use,コスたまFrozen,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17462,use,コスたまWingII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
-17463,use,スペシャルクエストしいたけの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25081,1; },{}
+17463,use,スペシャルクエストしいたけの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25081,1; },{ /* 効果実装済み */ }
 17470,use,コスたまHelmCollection,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17476,use,コスたまGirlsSelectionⅡ,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17481,use,コスたまFlowerGarden,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -5561,7 +5561,7 @@
 17506,use,コスたまAutumnParty,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17514,use,コスたまHalloweenII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17517,use,コスたまAnimals,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
-17518,use,ファミ通クエストチケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 6918,1; },{}
+17518,use,ファミ通クエストチケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 6918,1; },{ /* 効果実装済み */ }
 17523,use,コスたまMystic,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17528,use,コスたまFrozenII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17546,use,コスたまGirlsSelectionIII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -5573,16 +5573,16 @@
 17596,use,コスたまHairCollection(青赤黄緑),2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17597,use,コスたまHairCollection(黒白紅紫),2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17611,use,コスたまSteampunk,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
-17619,use,究極精錬チケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 6952,1; },{}
-17620,use,イベントチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 7381,5; },{}
-17621,use,キャンペーンクエストチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 7382,1,1,0,0,0,0,0,0,1900800; },{}
-17622,use,プラロック精錬フォースの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント用アイテムで名前が変わったため該当するアイテムなし */ },{}
-17623,use,[2017年]究極精錬チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,3110400; },{}
-17624,use,高級オイルの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 6861,1,1,0,0,0,0,0,0,2505600; },{}
-17625,use,タイニーチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント用アイテムで名前が変わったため該当するアイテムなし */ },{}
-17626,use,[2017年]プラロック精錬フォースの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント用アイテムで名前が変わったため該当するアイテムなし */ },{}
-17627,use,[15th]復刻コスたまシールの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 25441,1,1,0,0,0,0,0,0,3196800; },{}
-17634,use,コスチュームチェンジチケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 6959,1; },{}
+17619,use,究極精錬チケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,2505600; },{ /* 効果実装済み */ }
+17620,use,イベントチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 7381,1,1,0,0,0,0,0,0,1296000; },{ /* 効果実装済み */ }
+17621,use,キャンペーンクエストチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 7382,1,1,0,0,0,0,0,0,1900800; },{ /* 効果実装済み */ }
+17622,use,プラロック精錬フォースの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント専用 */ },{}
+17623,use,[2017年]究極精錬チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,3110400; },{ /* 効果実装済み */ }
+17624,use,高級オイルの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 6861,1,1,0,0,0,0,0,0,2505600; },{ /* 効果実装済み */ }
+17625,use,タイニーチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント専用 */ },{}
+17626,use,[2017年]プラロック精錬フォースの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント専用 */ },{}
+17627,use,[15th]復刻コスたまシールの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 25441,1,1,0,0,0,0,0,0,3196800; },{ /* 効果実装済み */ }
+17634,use,コスチュームチェンジチケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 6959,1; },{ /* 効果実装済み */ }
 17635,use,コスたまHolyDarknessII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17638,use,コスたまCharacters,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17641,use,コスたまNewYearII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -5590,8 +5590,8 @@
 17664,use,コスたま2012Selection,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17670,use,コスたまFlowerGardenII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17678,use,コスたまAnimalsIII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
-17679,use,[ガンスリンガー系専用] マジカルソウルの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25202,1; },{}
-17680,use,[ガンスリンガー系専用] 反逆の証の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25203,1; },{}
+17679,use,[ガンスリンガー系専用] マジカルソウルの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25202,1; },{ /* 効果実装済み */ }
+17680,use,[ガンスリンガー系専用] 反逆の証の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25203,1; },{ /* 効果実装済み */ }
 17687,use,コスたまGirlsSelectionIV,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17693,use,コスたまMonstersIII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17696,use,コスたまGirlsSelection,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -5614,7 +5614,7 @@
 17750,use,コスたまCharactersII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17762,use,コスたまMofuMofu,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17767,use,コスたまGothicIII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
-17780,use,特選ネコ缶(マグロ)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 25308,1; },{}
+17780,use,特選ネコ缶(マグロ)の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem 25308,1; },{ /* 効果実装済み */ }
 17781,use,コスたまHairCollectionIII(青赤黄緑),2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17782,use,コスたまHairCollectionIII(黒白紅紫),2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17785,use,コスたまVariations,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -5650,16 +5650,16 @@
 17836,use,コスたまBoysSelectionII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17889,use,コスたまHalloweenIII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17899,use,コスたまMysticII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
-17904,use,[2018]復刻コスたまシールの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 25441,1,1,0,0,0,0,0,0,3196800; },{}
-17905,use,[2018年]究極精錬チケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,3628800; },{}
-17906,use,[2018年]高級オイルの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 6861,1,1,0,0,0,0,0,0,3715200; },{}
-17907,use,[2018summer]プラロック精錬フォースの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント用アイテムで名前が変わったため該当するアイテムなし */ },{}
-17908,use,信頼の証の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 25573,1,1,0,0,0,0,0,0,604800; },{}
-17909,use,[16thPKG]プラロック精錬フォースの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント用アイテムで名前が変わったため該当するアイテムなし */ },{}
-17910,use,[2019年]究極精錬チケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,3628800; },{}
-17911,use,[2019年]高級オイルの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 6861,1,1,0,0,0,0,0,0,3715200; },{}
+17904,use,[2018]復刻コスたまシールの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 25441,1,1,0,0,0,0,0,0,3196800; },{ /* 効果実装済み */ }
+17905,use,[2018年]究極精錬チケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,3628800; },{ /* 効果実装済み */ }
+17906,use,[2018年]高級オイルの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 6861,1,1,0,0,0,0,0,0,3715200; },{ /* 効果実装済み */ }
+17907,use,[2018summer]プラロック精錬フォースの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント専用 */ },{}
+17908,use,信頼の証の箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 25573,1,1,0,0,0,0,0,0,604800; },{ /* 効果実装済み */ }
+17909,use,[16thPKG]プラロック精錬フォースの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* イベント専用 */ },{}
+17910,use,[2019年]究極精錬チケットの箱,2,0,,10,,,,,2074075135,2,,,1,,,{ getitem2 6952,1,1,0,0,0,0,0,0,3628800; },{ /* 効果実装済み */ }
+17911,use,[2019年]高級オイルの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 6861,1,1,0,0,0,0,0,0,3715200; },{ /* 効果実装済み */ }
 17912,use,ハッピークリスマスバッグ,2,20,,200,,,,,2074075135,2,,,1,,,{ /* イリュージョン武器イグドラシルの実種 宝箱 人形系 不思議な石片 ヨルムンガンドの花 */ },{}
-17913,use,[2019]復刻コスたまシールの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 25441,1,1,0,0,0,0,0,0,3801600; },{}
+17913,use,[2019]復刻コスたまシールの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem2 25441,1,1,0,0,0,0,0,0,3801600; },{ /* 効果実装済み */ }
 17922,use,コスたまFrozenIII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17934,use,コスたまGothic&Lolita,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17942,use,コスたまSpringPartyII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
@@ -5673,9 +5673,9 @@
 17992,use,コスたまMysticIII,2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17993,use,コスたまHairCollectionIV(明色),2,0,,10,,,,,2074075135,2,,,1,,,{},{}
 17994,use,コスたまHairCollectionIV(暗色),2,0,,10,,,,,2074075135,2,,,1,,,{},{}
-17995,use,修羅VIPチケットの箱 [転生アコライト(モンク)系専用],2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25794,1; },{}
-17996,use,修羅ソウルの箱 [転生アコライト(モンク)系専用],2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25795,1; },{}
-17997,use,転生チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25796,1; },{}
+17995,use,修羅VIPチケットの箱 [転生アコライト(モンク)系専用],2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25794,1; },{ /* 効果実装済み */ }
+17996,use,修羅ソウルの箱 [転生アコライト(モンク)系専用],2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25795,1; },{ /* 効果実装済み */ }
+17997,use,転生チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ getitem 25796,1; },{ /* 効果実装済み */ }
 17998,use,コスたまMonstersVI,2,0,,0,,,,,2074075135,2,,,1,,,{},{}
 18000,ammo,キャノンボール,19,100,,10,100:0,,,,263168,2,32768,,,,,{ /* 効果実装済み */ },{}
 18001,ammo,ホーリーキャノンボール,19,200,,10,120:0,,,,263168,2,32768,,,,,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Holy; }
@@ -7550,12 +7550,12 @@
 23993,use,黄色の思念体ボックス,2,20,,10,,,,,2074075135,2,,,1,,,{ set '@23993,rand(0,10); if('@23993 == 0) { getitem 2063,1; } else if('@23993 == 1) { getitem 18193,1; } else if('@23993 == 2) { getitem 18195,1; } else if('@23993 == 3) { getitem 26169,1; } else if('@23993 == 4) { getitem 26217,1; } else if('@23993 == 5) { getitem 28048,1; } else if('@23993 == 6) { getitem 32028,1; } else if('@23993 == 7) { getitem 32030,1; } else if('@23993 == 8) { getitem 32112,1; } else if('@23993 == 9) { getitem 32404,1; } else if('@23993 == 10) { getitem 32406,1; } },{}
 23994,use,赤色の思念体ボックス,2,20,,10,,,,,2074075135,2,,,1,,,{ set '@23994,rand(0,13); if('@23994 == 0) { getitem 1868,1; } else if('@23994 == 1) { getitem 2062,1; } else if('@23994 == 2) { getitem 18194,1; } else if('@23994 == 3) { getitem 21057,1; } else if('@23994 == 4) { getitem 26171,1; } else if('@23994 == 5) { getitem 26218,1; } else if('@23994 == 6) { getitem 28142,1; } else if('@23994 == 7) { getitem 28637,1; } else if('@23994 == 8) { getitem 28777,1; } else if('@23994 == 9) { getitem 28778,1; } else if('@23994 == 10) { getitem 28779,1; } else if('@23994 == 11) { getitem 32029,1; } else if('@23994 == 12) { getitem 32113,1; } else if('@23994 == 13) { getitem 32355,1; } },{}
 24422,cos,[衣装] ファイアーレッドエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_LEVEL160_RED,TRUE; },{ hateffect HAT_EF_LEVEL160_RED,FALSE; }
-24772,shadow,[シャドウ] オルタネイトウェポン,4,20,,0,,,,0,2088832,2,131072,,200,,1,{},{ bonus bBaseAtk,10*getequiprefinerycnt(); bonus bMatk,10*getequiprefinerycnt(); }
-24773,shadow,[シャドウ] オルタネイトアーマー,4,20,,0,,,,0,2088832,2,65536,,200,,1,{},{ bonus bMaxHP,200*getequiprefinerycnt(); }
-24774,shadow,[シャドウ] オルタネイトシューズ,4,20,,0,,,,0,2088832,2,524288,,200,,1,{},{ bonus bMaxSP,20*getequiprefinerycnt(); }
-24775,shadow,[シャドウ] オルタネイトシールド,4,20,,0,,,,0,2088832,2,262144,,200,,1,{},{ bonus bDef,15*getequiprefinerycnt(); }
-24776,shadow,[シャドウ] オルタネイトイヤリング,4,20,,0,,,,0,2088832,2,2097152,,200,,1,{},{ bonus2 bMagicAddRace,Rct_Boss,getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,getequiprefinerycnt(); }
-24777,shadow,[シャドウ] オルタネイトペンダント,4,20,,0,,,,0,2088832,2,1048576,,200,,1,{},{ bonus2 bAddRace,Rct_Boss,getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,getequiprefinerycnt(); }
+24772,shadow,[シャドウ] オルタネイトウェポン,4,20,,0,,,,,2074075008,2,131072,,200,,1,{},{ bonus bBaseAtk,10*getequiprefinerycnt(); bonus bMatk,10*getequiprefinerycnt(); }
+24773,shadow,[シャドウ] オルタネイトアーマー,4,20,,0,,,,,2074075008,2,65536,,200,,1,{},{ bonus bMaxHP,200*getequiprefinerycnt(); }
+24774,shadow,[シャドウ] オルタネイトシューズ,4,20,,0,,,,,2074075008,2,524288,,200,,1,{},{ bonus bMaxSP,20*getequiprefinerycnt(); }
+24775,shadow,[シャドウ] オルタネイトシールド,4,20,,0,,,,,2074075008,2,262144,,200,,1,{},{ bonus bDef,15*getequiprefinerycnt(); }
+24776,shadow,[シャドウ] オルタネイトイヤリング,4,20,,0,,,,,2074075008,2,2097152,,200,,1,{},{ bonus2 bMagicAddRace,Rct_Boss,getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,getequiprefinerycnt(); }
+24777,shadow,[シャドウ] オルタネイトペンダント,4,20,,0,,,,,2074075008,2,1048576,,200,,1,{},{ bonus2 bAddRace,Rct_Boss,getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,getequiprefinerycnt(); }
 25018,item,武器交換チケット,3,0,,0,,,,,,,,,,,,{},{}
 25019,item,防具交換チケット,3,0,,0,,,,,,,,,,,,{},{}
 25020,item,卒業証書,3,0,,0,,,,,,,,,,,,{},{}
@@ -13176,12 +13176,12 @@
 31736,cos,[衣装] ポップコーンかつら,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1895,0,{ /* 241126 効果実装済み */ },{}
 400466,cos,[衣装] 虹色ポップコーンかつら,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2400,0,{ /* 241126 効果実装済み */ },{}
 410069,cos,[衣装] ポップコーン君,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2142,0,{ /* 241126 効果実装済み */ },{}
-24930,shadow,[シャドウ] シーズナルウェポン,4,20,,0,,0:0,,,2074075008,2,131072,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,10; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,20; } }
-24931,shadow,[シャドウ] シーズナルシールド,4,20,,0,,0:0,,,2074075008,2,65536,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,5; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,10; } }
-24932,shadow,[シャドウ] シーズナルアーマー,4,20,,0,,0:0,,,2074075008,2,524288,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,5; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,10; } }
-24933,shadow,[シャドウ] シーズナルシューズ,4,20,,0,,0:0,,,2074075008,2,262144,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,5; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,10; } }
-24934,shadow,[シャドウ] シーズナルイヤリング,4,20,,0,,0:0,,,2074075008,2,2097152,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,5; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,10; } }
-24935,shadow,[シャドウ] シーズナルペンダント,4,20,,0,,0:0,,,2074075008,2,1048576,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,5; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,10; } }
+24930,shadow,[シャドウ] シーズナルウェポン,4,20,,0,,,,,2074075008,2,131072,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,10; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,20; } }
+24931,shadow,[シャドウ] シーズナルシールド,4,20,,0,,,,,2074075008,2,65536,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,5; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,10; } }
+24932,shadow,[シャドウ] シーズナルアーマー,4,20,,0,,,,,2074075008,2,524288,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,5; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,10; } }
+24933,shadow,[シャドウ] シーズナルシューズ,4,20,,0,,,,,2074075008,2,262144,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,5; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,10; } }
+24934,shadow,[シャドウ] シーズナルイヤリング,4,20,,0,,,,,2074075008,2,2097152,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,5; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,10; } }
+24935,shadow,[シャドウ] シーズナルペンダント,4,20,,0,,,,,2074075008,2,1048576,,200,,1,{ /* 241126 効果実装済み */ },{ bonus bSPrecovRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSPrecovRate,5; } if(getequiprefinerycnt() >= 9) { bonus bSPrecovRate,10; } }
 450415,armor,ラグナロクワールドシャツ,4,20,,100,,20:0,,0,2074075135,2,16,,1,,1,{ /* 241126 効果実装済み */ },{ bonus bAllStatus,20; }
 313506,ench,潜在解放(アビスチェイサーX),6,,,,,,,,,,65535,,,,,{ /* 241126 効果実装済み */ },{ bonus2 bAddSpCost,"ABC_CHAIN_REACTION_SHOT",-5; bonus2 bAddSpCost,"ABC_FRENZY_SHOT",-3; if(getequiprefinerycnt() >= 7) { bonus2 bAddSpCost,"ABC_CHAIN_REACTION_SHOT",-6; bonus2 bAddSpCost,"ABC_FRENZY_SHOT",-4; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSpCost,"ABC_CHAIN_REACTION_SHOT",-6; bonus2 bAddSpCost,"ABC_FRENZY_SHOT",-4; } }
 313507,ench,潜在解放(アビスチェイサーXI),6,,,,,,,,,,65535,,,,,{ /* 241126 効果実装済み */ },{ bonus2 bAddSpCost,"ABC_ABYSS_SQUARE",-6; bonus2 bAddSpCost,"ABC_ABYSS_STRIKE",-10; if(getequiprefinerycnt() >= 7) { bonus2 bAddSpCost,"ABC_ABYSS_SQUARE",-7; bonus2 bAddSpCost,"ABC_ABYSS_STRIKE",-10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSpCost,"ABC_ABYSS_SQUARE",-7; bonus2 bAddSpCost,"ABC_ABYSS_STRIKE",-10; } }
@@ -13286,7 +13286,7 @@
 //--------------------------------------------
 20111,cos,[衣装] とぐろを巻いた白蛇帽,4,0,,0,,0:0,,0,2074075135,2,1024,,1,1259,0,{ /* 241224 効果実装済み */ },{}
 1001910,item,年賀状2025年,3,0,,10,,,,,,,,,,,,{ /* 241224 効果実装済み */ },{}
-//--------------------------------------------
+//-- 2025 開始 --------------------------------------------
 200501,use,[2025年]究極精錬お楽しみチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250107 効果実装済み */ getitem2 1001924,1,1,0,0,0,0,0,0,3628800; },{}
 1001923,item,キューペットボックス抽選券XI,3,0,,0,,,,,,,,,,,,{ /* 250107 効果実装済み */ },{}
 1001924,item,究極精錬お楽しみチケット,3,0,,0,,,,,,,,,,,,{ /* 250107 効果実装済み */ },{}
@@ -13319,4 +13319,36 @@
 1001921,item,タナトスの絶望交換チケット,3,0,,0,,,,,,,,,,,,{ /* 250114 効果実装済み */ },{}
 1001922,item,タナトスの苦悩交換チケット,3,0,,0,,,,,,,,,,,,{ /* 250114 効果実装済み */ },{}
 103825,use,虹色のカギ,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250114 効果実装済み */ pet 1707; },{}
-
+//--------------------------------------------
+310969,ench,潜在覚醒(爆裂苦無I),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"KO_BAKURETSU",BaseLevel/5; if(equippeditem(29509)) { bonus2 bAddSkillDamageRate,"KO_BAKURETSU",BaseLevel/2; if(equippeditem(450117) || equippeditem(490206)) { bonus2 bAddSkillDamageRate,"KO_BAKURETSU",-BaseLevel/2; } } }
+313291,ench,潜在覚醒(ダーククローI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509) || equippeditem(29371)) { bonus2 bAddSkillCoolDown,"GC_DARKCROW",-30000; } }
+313745,ench,潜在解放(アークビショップIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29371)) { bonus3 bAutoSpell,"AB_ADORAMUS",getskilllv("AB_ADORAMUS"),100; bonus3 bAutoSpell,"AB_JUDEX",getskilllv("AB_JUDEX"),100; } }
+313746,ench,潜在解放(ウォーロックIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddFixCastRate,"WL_CRIMSONROCK",-100; bonus2 bAddFixCastRate,"WL_CHAINLIGHTNING",-100; bonus2 bAddSkillCoolDown,"WL_TELEKINESIS_INTENSE",-260000; } },{ sc_end 635; }
+313747,ench,潜在解放(ギロチンクロスIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"GC_DARKCROW",-60000; bonus2 bAddSkillCoolDown,"GC_ROLLINGCUTTER",-200; if((equippeditem(480134) || equippeditem(470130) || equippeditem(22134) || equippeditem(22223)) == 0) { bonus2 bAddSkillCoolDown,"GC_HALLUCINATIONWALK",-45000; } } }
+313748,ench,潜在解放(サモナーIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddFixCastRate,"SU_SCAROFTAROU",-100; } if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SU_LUNATICCARROTBEAT",-100; } }
+313749,ench,潜在解放(ジェネティックIII),6,,,,,,,,,,65535,,,,,{ /* 250121 固定詠唱 +n秒 */ },{ if(equippeditem(29509)) { if((equippeditem(450100) || equippeditem(490206)) == 0) { bonus2 bAddSkillCoolDown,"GN_MANDRAGORA",-16000; } } }
+313750,ench,潜在解放(シャドウチェイサーIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddFixCastRate,"SC_AUTOSHADOWSPELL",-100; bonus3 bAutoSpell2,"SO_PSYCHIC_WAVE",5,100; bonus3 bAutoSpell2,"WL_CHAINLIGHTNING",5,100; } }
+313751,ench,潜在解放(ソウルリーパーIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddFixCastRate,"SP_SPA",-100; bonus2 bAddFixCastRate,"SP_SHA",-100; bonus2 bAddFixCastRate,"SP_SWHOO",-100; } if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SP_CURSEEXPLOSION",-1000; } }
+313752,ench,潜在解放(ソーサラーIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddFixCastRate,"SO_PSYCHIC_WAVE",-100; bonus2 bAddFixCastRate,"SO_DIAMONDDUST",-100; } if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SO_VARETYR_SPEAR",-1000; bonus2 bAddSkillCoolDown,"SO_DIAMONDDUST",-1000; } }
+313753,ench,潜在解放(ミンストレル&ワンダラーII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddFixCastRate,"WM_SEVERE_RAINSTORM",-100; } bonus4 bAutoActiveSkill,"WM_SEVERE_RAINSTORM",313753,10000,20000; if(checkactiveitem()) { misceffect 220,""; sc_starte 631,20000,5; } },{ sc_end 631; }
+313754,ench,潜在解放(メカニックIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddCastRate,"NC_ARMSCANNON",-100; bonus2 bAddCastRate,"NC_COLDSLOWER",-100; bonus2 bAddCastRate,"NC_FLAMELAUNCHER",-100; bonus bNoGearFuel,0; } }
+313755,ench,潜在解放(リベリオンIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"RL_C_MARKER",-1000; bonus2 bAddSkillCoolDown,"RL_RICHS_COIN",-3000; bonus3 bAutoSpell,"RL_D_TAIL",getskilllv("RL_D_TAIL"),100; } }
+313756,ench,潜在解放(ルーンナイトIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"RK_IGNITIONBREAK",-3000; bonus2 bAddSkillCoolDown,"RK_SONICWAVE",-200; bonus2 bAddSkillCoolDown,"RK_HUNDREDSPEAR",-1000; } }
+313757,ench,潜在解放(レンジャーIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"RA_ARROWSTORM",-500; bonus2 bAddSkillCoolDown,"RA_UNLIMIT",-300000; } },{ sc_end 631; }
+313758,ench,潜在解放(ロイヤルガードIII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"LG_CANNONSPEAR",-2000; bonus2 bAddSkillCoolDown,"LG_PINPOINTATTACK",-5000; } }
+313759,ench,潜在解放(影狼&朧II),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"KO_IZAYOI",-60000; bonus2 bAddSkillCoolDown,"KO_BAKURETSU",-1000; } }
+313760,ench,潜在解放(修羅III),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SR_ASSIMILATEPOWER",-3000; bonus2 bAddSkillCoolDown,"SR_KNUCKLEARROW",-200; bonus4 bAutoActiveSkill,"SR_KNUCKLEARROW",313760,10000,3000; bonus4 bAutoActiveSkill,"SR_SKYNETBLOW",313760,10000,3000; if(checkactiveitem()) { misceffect 220,""; bonus bFlee2,95; } } }
+313761,ench,潜在解放(星帝III),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SJ_BOOKOFDIMENSION",-9000; bonus2 bAddSkillCoolDown,"SJ_BOOKOFCREATINGSTAR",-2000; } }
+313762,ench,潜在覚醒(ハンドレッドスピアI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RK_HUNDREDSPEAR",BaseLevel/3; if(equippeditem(29509)) { bonus4 bAutoActiveSkill,"RK_HUNDREDSPEAR",313762,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"RK_HUNDREDSPEAR",-59; } } }
+313763,ench,潜在覚醒(チェーンライトニングI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WL_CHAINLIGHTNING",BaseLevel/3; if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"WL_CHAINLIGHTNING",-1000; } }
+313764,ench,潜在覚醒(フェイントボムI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SC_FEINTBOMB",BaseLevel/2; if(equippeditem(29509)) { bonus4 bAutoActiveSkill,"SC_FEINTBOMB",313764,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"SC_FEINTBOMB",-29; } } }
+313765,ench,潜在覚醒(ピンポイントアタックI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"LG_PINPOINTATTACK",BaseLevel/3; if(equippeditem(29509)) { bonus4 bAutoActiveSkill,"LG_PINPOINTATTACK",313765,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"LG_PINPOINTATTACK",-49; } } }
+313766,ench,潜在覚醒(コールドスローワーI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"NC_COLDSLOWER",BaseLevel/5; if(equippeditem(29509)) { bonus4 bAutoActiveSkill,"NC_COLDSLOWER",313766,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bAddSpCost,"NC_COLDSLOWER",-19; } } }
+313768,ench,潜在覚醒(デュプレライトII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MELEE",2*BaseLevel; bonus2 bAddSkillDamageRate,"AB_DUPLELIGHT_MAGIC",2*BaseLevel; if(equippeditem(29371)) { bonus2 bAddFixCastRate,"AB_DUPLELIGHT",-100; } }
+313769,ench,潜在覚醒(ダイヤモンドダストII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",BaseLevel/3; if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SO_DIAMONDDUST",-4000; } }
+313770,ench,潜在覚醒(クレイジーウィードI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"GN_CRAZYWEED",BaseLevel/5; if(equippeditem(29509)) { if(equippeditem(450100) || equippeditem(19453) == 0) { bonus2 bAddSkillCoolDown,"GN_CRAZYWEED",-4500; } } }
+313771,ench,潜在覚醒(修羅身弾I),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SR_KNUCKLEARROW",BaseLevel/2; if(equippeditem(29509)) { bonus2 bAddSkillDamageRate,"SR_KNUCKLEARROW",2*BaseLevel; if(equippeditem(400307)) { bonus2 bAddSkillDamageRate,"SR_KNUCKLEARROW",-2*BaseLevel; } if(readparam(450097) && readparam(490206)) { bonus2 bAddSkillDamageRate,"SR_KNUCKLEARROW",-2*BaseLevel; } } }
+313772,ench,潜在覚醒(星帝降臨I),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SJ_STAREMPEROR",BaseLevel/3; if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SJ_STAREMPEROR",-2500; } }
+313773,ench,潜在覚醒(エスフII),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SP_SWHOO",BaseLevel/5; if(equippeditem(29371)) { bonus2 bAddSkillDamageRate,"SP_SWHOO",BaseLevel/2; if(equippeditem(450119) && equippeditem(490206)) { bonus2 bAddSkillDamageRate,"SP_SWHOO",-BaseLevel/2; } } }
+313775,ench,潜在覚醒(ドラゴンテイルI),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RL_D_TAIL",BaseLevel/3; if(equippeditem(29509)) { if(equippeditem(28239) == 0) { bonus2 bAddSkillCoolDown,"RL_D_TAIL",-4500; } } }
+313776,ench,潜在覚醒(タロウの傷I),6,,,,,,,,,,65535,,,,,{ /* 250121 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SU_SCAROFTAROU",BaseLevel/5; if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SU_SCAROFTAROU",-12500; if(equippeditem(450072) || equippeditem(450106)) { bonus2 bAddSkillCoolDown,"SU_SCAROFTAROU",12500; } } }
