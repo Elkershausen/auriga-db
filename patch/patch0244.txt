@@ -1,0 +1,116 @@
+item_db.txt
+200526,use,[2025]復刻コスたまの箱(Season1),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250128 効果実装済み */ getitem2 1001192,1,1,0,0,0,0,0,0,7948800; },{}
+200527,use,[2025]復刻コスたま引換券(Season1)11個の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250128 効果実装済み */ getitem2 1001192,11,1,0,0,0,0,0,0,7948800; },{}
+20628,cos,[衣装] ブルーピタヤリュック,4,0,,0,,0:0,,0,2074075135,2,8192,,1,246,0,{ /* 250128 効果実装済み */ },{}
+480472,cos,[衣装] 大きなリボンウサギ,4,0,,0,,0:0,,0,2074075135,2,8192,,1,232,0,{ /* 250128 効果実装済み */ },{}
+480345,robe,神獣のマント：春,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_DemiHuman,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bPow,getequiprefinerycnt(); if(readparam(bPow) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480345,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480346,robe,神獣のマント：夏,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_DemiHuman,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bCon,getequiprefinerycnt(); if(readparam(bCon) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480346,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480347,robe,神獣のマント：秋,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_DemiHuman,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bSpl,getequiprefinerycnt(); if(readparam(bSpl) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480347,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480348,robe,神獣のマント：冬,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_DemiHuman,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bCrt,getequiprefinerycnt(); if(readparam(bCrt) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480348,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480349,robe,生命の循環：春,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_DemiHuman,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bPow,2*getequiprefinerycnt(); if(readparam(bPow) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480349,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480350,robe,生命の循環：夏,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_DemiHuman,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bCon,2*getequiprefinerycnt(); if(readparam(bCon) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480350,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480351,robe,生命の循環：秋,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_DemiHuman,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bSpl,2*getequiprefinerycnt(); if(readparam(bSpl) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480351,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+item_db.txt
+480352,robe,生命の循環：冬,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_DemiHuman,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bCrt,2*getequiprefinerycnt(); if(readparam(bCrt) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480352,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+310727,ench,星雲の精髄(力1),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bStr,10; if(readparam(bStr) >= 100) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; } }
+310728,ench,星雲の精髄(力2),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bStr,10; if(readparam(bStr) >= 100) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } }
+310729,ench,星雲の精髄(力3),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bStr,10; if(readparam(bStr) >= 100) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,310729,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+310730,ench,星雲の精髄(技巧1),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bDex,10; if(readparam(bDex) >= 100) { if(getlook(2) == 11) { bonus bAddLongWeaponDamage,5; } } }
+310731,ench,星雲の精髄(技巧2),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bDex,10; if(readparam(bDex) >= 100) { if(getlook(2) == 11) { bonus bAddLongWeaponDamage,10; } } }
+310732,ench,星雲の精髄(技巧3),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bDex,10; if(readparam(bDex) >= 100) { if(getlook(2) == 11) { bonus bAddLongWeaponDamage,10; } } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,310732,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+310733,ench,星雲の精髄(俊敏1),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bAgi,10; if(readparam(bAgi) >= 100) { bonus bPerfectHitAddRate,5; } }
+310734,ench,星雲の精髄(俊敏2),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bAgi,10; if(readparam(bAgi) >= 100) { bonus bPerfectHitAddRate,10; } }
+310735,ench,星雲の精髄(俊敏3),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bAgi,10; if(readparam(bAgi) >= 100) { bonus bPerfectHitAddRate,10; } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,310735,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+310736,ench,星雲の精髄(知力1),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bInt,10; if(readparam(bInt) >= 100) { bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; } }
+310737,ench,星雲の精髄(知力2),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bInt,10; if(readparam(bInt) >= 100) { bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; } }
+310738,ench,星雲の精髄(知力3),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bInt,10; if(readparam(bInt) >= 100) { bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,310738,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+310739,ench,星雲の精髄(幸運1),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bLuk,10; if(readparam(bLuk) >= 100) { bonus bAddCriticalDamage,5; } }
+310740,ench,星雲の精髄(幸運2),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bLuk,10; if(readparam(bLuk) >= 100) { bonus bAddCriticalDamage,10; } }
+310741,ench,星雲の精髄(幸運3),6,,,,,,,,,,65535,,,,,{ /* 250128 効果実装済み */ },{ bonus bLuk,10; if(readparam(bLuk) >= 100) { bonus bAddCriticalDamage,10; } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,310741,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+310742,ench,星雲の精髄(体力1),6,,,,,,,,,,65535,,,,,{ /* 250128 一部の回復アイテム */ },{ bonus bVit,10; if(readparam(bVit) >= 100) { callfunc "ItemdbAlmightySubHeal",0x7F,5; } }
+310743,ench,星雲の精髄(体力2),6,,,,,,,,,,65535,,,,,{ /* 250128 一部の回復アイテム */ },{ bonus bVit,10; if(readparam(bVit) >= 100) { callfunc "ItemdbAlmightySubHeal",0x7F,10; } }
+310744,ench,星雲の精髄(体力3),6,,,,,,,,,,65535,,,,,{ /* 250128 一部の回復アイテム */ },{ bonus bVit,10; if(readparam(bVit) >= 100) { callfunc "ItemdbAlmightySubHeal",0x7F,10; } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,310744,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+1001440,item,春の精気,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001441,item,夏の精気,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001442,item,秋の精気,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001443,item,冬の精気,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001444,item,フローラルペガサスのたてがみ,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001445,item,フローラルペガサスの象徴,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001447,item,コーラルマリンの尻尾,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001448,item,コーラルマリンの珊瑚,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001450,item,メイプルツリーの葉,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001451,item,メイプルツリーの枝,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001453,item,モナークペンギンの外套,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001454,item,モナークペンギンの氷結晶,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001456,item,生命の循環,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001459,item,生命の真理,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+1001460,item,生命の光,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
+//102514,use,生命の循環：季節作成,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250128 不明 */ },{}
+
+item_db2.txt
+200526,0,0,1,1,0,1,1,0,0,0,0,0	//[2025]復刻コスたまの箱(Season1)
+200527,0,0,1,1,0,1,1,0,0,0,0,0	//[2025]復刻コスたま引換券(Season1)11個の箱
+20628,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] ブルーピタヤリュック
+480472,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] 大きなリボンウサギ
+480345,0,0,1,0,0,1,1,0,0,0,0,0	//神獣のマント：春
+480346,0,0,1,0,0,1,1,0,0,0,0,0	//神獣のマント：夏
+480347,0,0,1,0,0,1,1,0,0,0,0,0	//神獣のマント：秋
+480348,0,0,1,0,0,1,1,0,0,0,0,0	//神獣のマント：冬
+480349,0,0,0,0,0,0,0,0,0,0,0,0	//生命の循環：春
+480350,0,0,0,0,0,0,0,0,0,0,0,0	//生命の循環：夏
+480351,0,0,0,0,0,0,0,0,0,0,0,0	//生命の循環：秋
+480352,0,0,0,0,0,0,0,0,0,0,0,0	//生命の循環：冬
+310727,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(力1)
+310728,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(力2)
+310729,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(力3)
+310730,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(技巧1)
+310731,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(技巧2)
+310732,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(技巧3)
+310733,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(俊敏1)
+310734,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(俊敏2)
+310735,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(俊敏3)
+310736,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(知力1)
+310737,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(知力2)
+310738,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(知力3)
+310739,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(幸運1)
+310740,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(幸運2)
+310741,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(幸運3)
+310742,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(体力1)
+310743,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(体力2)
+310744,0,0,0,0,0,0,0,0,0,0,0,0	//星雲の精髄(体力3)
+1001440,0,0,1,0,0,1,1,0,0,0,0,0	//春の精気
+1001441,0,0,1,0,0,1,1,0,0,0,0,0	//夏の精気
+1001442,0,0,1,0,0,1,1,0,0,0,0,0	//秋の精気
+1001443,0,0,1,0,0,1,1,0,0,0,0,0	//冬の精気
+1001444,0,0,1,0,0,1,1,0,0,0,0,0	//フローラルペガサスのたてがみ
+1001445,0,0,0,0,0,0,0,0,0,1,0,0	//フローラルペガサスの象徴
+1001447,0,0,1,0,0,1,1,0,0,0,0,0	//コーラルマリンの尻尾
+1001448,0,0,0,0,0,0,0,0,0,1,0,0	//コーラルマリンの珊瑚
+1001450,0,0,1,0,0,1,1,0,0,0,0,0	//メイプルツリーの葉
+1001451,0,0,0,0,0,0,0,0,0,1,0,0	//メイプルツリーの枝
+1001453,0,0,1,0,0,1,1,0,0,0,0,0	//モナークペンギンの外套
+1001454,0,0,0,0,0,0,0,0,0,1,0,0	//モナークペンギンの氷結晶
+1001456,0,0,0,0,0,0,0,0,0,1,0,0	//生命の循環
+1001459,0,0,0,0,0,0,0,0,0,1,0,0	//生命の真理
+1001460,0,0,1,0,0,1,1,0,0,0,0,0	//生命の光
+//102514,0,0,0,0,0,0,0,0,0,0,0,0	//生命の循環：季節作成
+
+item_cardtype.txt
+310727,ench,星雲の精髄(力1),2
+310728,ench,星雲の精髄(力2),2
+310729,ench,星雲の精髄(力3),2
+310730,ench,星雲の精髄(技巧1),2
+310731,ench,星雲の精髄(技巧2),2
+310732,ench,星雲の精髄(技巧3),2
+310733,ench,星雲の精髄(俊敏1),2
+310734,ench,星雲の精髄(俊敏2),2
+310735,ench,星雲の精髄(俊敏3),2
+310736,ench,星雲の精髄(知力1),2
+310737,ench,星雲の精髄(知力2),2
+310738,ench,星雲の精髄(知力3),2
+310739,ench,星雲の精髄(幸運1),2
+310740,ench,星雲の精髄(幸運2),2
+310741,ench,星雲の精髄(幸運3),2
+310742,ench,星雲の精髄(体力1),2
+310743,ench,星雲の精髄(体力2),2
+310744,ench,星雲の精髄(体力3),2
