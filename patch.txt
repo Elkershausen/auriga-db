@@ -1,3 +1,6 @@
+20250201	patch0245
+・480345 - 480352 間違いを修正
+
 20250131	patch0244
 ・20250128 アイテム実装(item_db.txt item_db2.txt item_cardtype.txt)
 
