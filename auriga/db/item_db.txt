@@ -13304,7 +13304,7 @@
 480521,cos,[衣装] 白狐の尻尾,4,20,,0,,0:0,,0,2074075135,2,8192,,1,255,0,{ /* 250114 コスたまFrozenVIII 効果実装済み */ },{}
 420432,cos,[衣装] ベビーアザラシ,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2653,0,{ /* 250114 コスたまFrozenVIII 効果実装済み */ },{}
 450425,armor,ストライプホーリーローブ,4,20,,1000,,100:0,,1,256,2,16,,200,,1,{ /* 250121 効果実装済み */ },{ bonus2 bSubRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus2 bAddSkillDamageRate,"CD_ARBITRIUM",BaseLevel/10; bonus2 bAddSkillDamageRate,"CD_PNEUMATICUS_PROCELLA",BaseLevel/10; bonus2 bAddSkillDamageRate,"CD_FRAMEN",BaseLevel/10; bonus2 bMagicAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; bonus2 bAddFixCastRate,"AB_PRAEFATIO",-100; bonus2 bAddFixCastRate,"AB_RENOVATIO",-100; } if(getequiprefinerycnt() >= 10) { bonus2 bMagicAddEle,Ele_All,15; } }
-480516,robe,ブレッシングオブイグドラシル,4,20,,1000,,60:0,,0,2074075135,2,4,,100,253,1,{ /* 250114 効果実装済み */ },{ bonus bAllStatus,3; bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus2 bSubEle,Ele_Neutral,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSkillDelayRate,-25; bonus2 bSubEle,Ele_Neutral,15; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,20; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; } if(equippeditem(400213)) { bonus bAllStatus,10; bonus bTigereye,0; } if(equippeditem(490380) || equippeditem(490381)) { bonus bAllStatus,10; bonus bRestartFullRecover,0; } }
+480516,robe,ブレッシングオブイグドラシル,4,20,,1000,,60:0,,0,2074075135,2,4,,100,0,1,{ /* 250114 効果実装済み */ },{ bonus bAllStatus,3; bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus2 bSubEle,Ele_Neutral,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSkillDelayRate,-25; bonus2 bSubEle,Ele_Neutral,15; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,20; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; } if(equippeditem(400213)) { bonus bAllStatus,10; bonus bTigereye,0; } if(equippeditem(490380) || equippeditem(490381)) { bonus bAllStatus,10; bonus bRestartFullRecover,0; } }
 490655,acc,てちてちにゃんこのもこふわソックス,4,20,,100,,0:0,,1,2074075008,2,136,,200,,0,{ /* 250114 効果実装済み */ },{ bonus bPow,3; bonus bCritical,50; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillDamageRate,"SU_LUNATICCARROTBEAT",BaseLevel/5; bonus2 bAddSkillDamageRate,"SU_SVG_SPIRIT",BaseLevel/5; bonus2 bAddSkillDamageRate,"SH_CHUL_HO_SONIC_CLAW",BaseLevel/10; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",BaseLevel/10; bonus2 bAddSkillDamageRate,"SH_HOGOGONG_STRIKE",BaseLevel/10; }
 490656,acc,レリックランタン,4,20,,100,,0:0,,1,2074075008,2,136,,200,,0,{ /* 250114 効果実装済み */ },{ bonus bPow,3; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bPerfectHitAddRate,25; bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddSkillDamageRate,"GN_CARTCANNON",BaseLevel/2; bonus2 bAddSkillDamageRate,"GN_CART_TORNADO",BaseLevel/2; bonus2 bAddSkillDamageRate,"BO_EXPLOSIVE_POWDER",BaseLevel/10; }
 313466,ench,潜在解放(バイオロXI),6,,,,,,,,,,65535,,,,,{ /* 250114 セット効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"BO_EXPLOSIVE_POWDER",-100; } }
@@ -13399,3 +13399,37 @@
 1001459,item,生命の真理,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
 1001460,item,生命の光,3,20,,1,,,,,,,,,,,,{ /* 250128 効果実装済み */ },{}
 //102514,use,生命の循環：季節作成,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250128 不明 */ },{}
+//--------------------------------------------
+400763,cos,[衣装] ローズバルーン,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1033,0,{ /* 250204 効果実装済み */ },{}
+300603,card,ディエンカード,6,20,,10,,,,,,,769,,,,,{ /* 250204 効果実装済み */ },{ bonus bPerfectHitAddRate,10; }
+300604,card,リードシーカード,6,20,,10,,,,,,,136,,,,,{ /* 250204 効果実装済み */ },{ bonus bAspdAddRate,5; }
+300605,card,コトネスカード,6,20,,10,,,,,,,2,,,,,{ /* 250204 効果実装済み */ },{ if(getlook(2) == 12) { bonus bHit,-10-getequiprefinerycnt(); bonus bCritical,10+getequiprefinerycnt(); bonus bAddCriticalDamage,10+getequiprefinerycnt(); } }
+300606,card,リベリオン・ディエンカード,6,20,,10,,,,,,,64,,,,,{ /* 250204 効果実装済み */ },{ callfunc "bonus2bIgnoreDefRace",10; if(getequiprefinerycnt() >= 7) { callfunc "bonus2bIgnoreDefRace",15;} if(getequiprefinerycnt() >= 9) { callfunc "bonus2bIgnoreDefRace",25;} }
+300607,card,リベリオン・リードシーカード,6,20,,10,,,,,,,64,,,,,{ /* 250204 効果実装済み */ },{ bonus bMaxHPrate,10; if(getequiprefinerycnt() >= 8) { bonus bFlee2,5; } }
+300608,card,リベリオン・コトネスカード,6,20,,10,,,,,,,769,,,,,{ /* 250204 効果実装済み */ },{ bonus bLuk,getequiprefinerycnt(); bonus bCritical,getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus bLuk,5; bonus bCritical,5; } }
+300615,card,リベリオン・ディエン(サイン入り)カード,6,20,,10,,,,,,,136,,,,,{ /* 250204 効果実装済み */ },{ bonus bPerfectHitAddRate,100; }
+300616,card,リベリオン・コトネス(サイン入り)カード,6,20,,10,,,,,,,136,,,,,{ /* 250204 効果実装済み */ },{ bonus2 bSubSkillDamageRate,"NPC_CRITICALSLASH",50; bonus4 bAutoActiveItem,300616,100,30000,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 19,120000,10; } }
+300617,card,リベリオン・リードシー(サイン入り)カード,6,20,,10,,,,,,,136,,,,,{ /* 250204 効果実装済み */ },{ bonus bFlee,100; }
+1001932,item,サイン会チケット(ディエン),3,0,,10,,,,,,,,,,,,{ /* 250204 効果実装済み */ },{}
+1001933,item,サイン会チケット(コトネス),3,0,,10,,,,,,,,,,,,{ /* 250204 効果実装済み */ },{}
+1001934,item,サイン会チケット(リードシー),3,0,,10,,,,,,,,,,,,{ /* 250204 効果実装済み */ },{}
+1001935,item,円熟した黄金リンゴ,3,0,,10,,,,,,,,,,,,{ /* 250204 効果実装済み */ },{}
+1001936,item,解き放たれし龍鱗,3,0,,10,,,,,,,,,,,,{ /* 250204 効果実装済み */ },{}
+1001937,item,高級濃縮発酵バター,3,0,,10,,,,,,,,,,,,{ /* 250204 効果実装済み */ },{}
+103895,heal,ディエンが愛する黄金リンゴ焼き,0,0,,10,,,,,2074075135,2,,,200,,,{ /* 250204 [60秒間必中攻撃 + 100%]*/ percentheal 100,100; },{ /* EFST_SWEETSFAIR_ATK */ }
+103896,heal,コトネスが惚れ込む龍鱗大福,0,0,,10,,,,,2074075135,2,,,200,,,{ /* 250204 効果実装済み */ percentheal 100,100; sc_start 19,120000,10; misceffect 112,""; },{ /* EFST_SWEETSFAIR_ATK */ }
+103897,heal,リードシーを魅了した濃厚バタークッキー,0,0,,10,,,,,2074075135,2,,,200,,,{ /* 250204 [60秒間Flee + 100]*/ percentheal 100,100; },{ /* EFST_SWEETSFAIR_ATK */ }
+103892,use,ロイヤルチョコパック(ディエン),2,0,,200,,,,,2074075135,2,,,1,,,{ /* 250204 イベント専用 */ getitem 12234,1; },{}
+103893,use,ロイヤルチョコパック(コトネス),2,0,,200,,,,,2074075135,2,,,1,,,{ /* 250204 イベント専用 */ getitem 12234,1; },{}
+103894,use,ロイヤルチョコパック(リードシー),2,0,,200,,,,,2074075135,2,,,1,,,{ /* 250204 イベント専用 */ getitem 12234,1; },{}
+200563,use,コスたまCuteIV,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 250204 効果実装済み */ },{ /* 400761 400762 410387 410388 420061 420433 420434 420435 480524 480525 */ }
+400761,cos,[衣装] ワークキャップ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1793,0,{ /* 250204 コスたまCuteIV 効果実装済み */ },{}
+400762,cos,[衣装] レッドヘッドドレス,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2657,0,{ /* 250204 コスたまCuteIV 効果実装済み */ },{}
+410387,cos,[衣装] メイドフリル,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2656,0,{ /* 250204 コスたまCuteIV 効果実装済み */ },{}
+410388,cos,[衣装] 戦乙女の羽耳,4,20,,0,,0:0,,0,2074075135,2,2048,,1,1185,0,{ /* 250204 コスたまCuteIV 効果実装済み */ },{}
+420061,cos,[衣装] アークビショップポニー(桜),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2110,0,{ /* 250204 コスたまCuteIV 効果実装済み */ },{}
+420433,cos,[衣装] あみあみリボンローツイン,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2654,0,{ /* 250204 コスたまCuteIV 効果実装済み */ },{}
+420434,cos,[衣装] あみあみリボンローツイン(装飾無し),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2655,0,{ /* 250204 コスたまCuteIV 効果実装済み */ },{}
+420435,cos,[衣装] ストロベリードーナツ,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2658,0,{ /* 250204 コスたまCuteIV 効果実装済み */ },{}
+480524,cos,[衣装] 大きなテディベア,4,20,,0,,0:0,,0,2074075135,2,8192,,1,253,0,{ /* 250204 コスたまCuteIV 効果実装済み */ },{}
+480525,cos,[衣装] ピタヤガーデングラスパフェ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,257,0,{ /* 250204 コスたまCuteIV 効果実装済み */ },{}
