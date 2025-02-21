@@ -1,3 +1,8 @@
+2025/02/22	patch0255
+・12312 - 12964 アイテムの不具合修正(item_db.txt)
+
+・傭兵基本データのIDを修正(merc_db.txt)
+
 2025/02/19	patch0254
 ・2024/02/18 新規アイテム実装(item_db.txt item_cardtype.txt classnum_db.txt)
 
