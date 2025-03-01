@@ -1,3 +1,10 @@
+2025/03/01	patch0257
+・2024年の環境を構築するための準備
+
+・msgstringtableフォルダ新設
+
+・msgstringtable.csvに対応するコード公開
+
 2025/02/27	patch0256
 ・スキル取得できない不具合を修正(skill_tree.txt)
 
