@@ -1,955 +1,976 @@
+2025/03/04	patch0258
+* 2025/03/04 æ–°è¦ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…(item_db.txt item_db2.txt classnum_db.txt)
+
+* 2024å¹´ç’°å¢ƒã§è¡¨ç¤ºç¢ºèªã§ããŸè¡£è£…è£…å‚™ã«å®Ÿè£…ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ (item_db.txt)
+
+* ã„ãã¤ã‹ã®ã‚¢ã‚¤ãƒ†ãƒ ã®NPCå£²å€¤ã‚’æ›´æ–°(item_db.txt)
+
+* 4æ¬¡è·/æ‹¡å¼µ4æ¬¡è·ã®classå®šç¾©ã‚’è¿½åŠ (const.txt)
+
+* msgstringtable_decoded.txt æœ€æ–°ã®ã‚‚ã®ã«æ›´æ–°(msgstringtable)
+
+* python313ç”¨ã®base64ã‚³ãƒ³ãƒãƒ¼ãƒˆã‚³ãƒ¼ãƒ‰å®Ÿè£…(python313convert.py)
+
+* [5 min aurigaãƒ‘ãƒƒã‚¯]ãƒ†ã‚¹ãƒˆç’°å¢ƒã‚’æ›´æ–°ã— [ç™¾å°ºç«¿é ­ auriga 0001] ã«ãƒŠãƒ³ãƒãƒªãƒ³ã‚°ãƒªã‚»ãƒƒãƒˆã‚’å®Ÿæ–½
+
+* 2024/02/15 Î²ãƒ†ã‚¹ãƒˆç’°å¢ƒã‚’å®Ÿè£…(ãƒ­ã‚°ã‚¤ãƒ³å¯èƒ½)
+
+* 2024/06/19 Î±ãƒ†ã‚¹ãƒˆç’°å¢ƒã‚’å®Ÿè£…(èµ·å‹•å¯èƒ½)
+
+* ä»Šå¾Œã¯2024å¹´ç’°å¢ƒã‚’ç©æ¥µçš„ã«ä½¿ã£ã¦ã„ãã¾ã™
+
 2025/03/01	patch0257
-E2024”N‚ÌŠÂ‹«‚ð\’z‚·‚é‚½‚ß‚Ì€”õ
+ãƒ»2024å¹´ã®ç’°å¢ƒã‚’æ§‹ç¯‰ã™ã‚‹ãŸã‚ã®æº–å‚™
 
-EmsgstringtableƒtƒHƒ‹ƒ_VÝ
+ãƒ»msgstringtableãƒ•ã‚©ãƒ«ãƒ€æ–°è¨­
 
-Emsgstringtable.csv‚É‘Î‰ž‚·‚éƒR[ƒhŒöŠJ
+ãƒ»msgstringtable.csvã«å¯¾å¿œã™ã‚‹ã‚³ãƒ¼ãƒ‰å…¬é–‹
 
 2025/02/27	patch0256
-EƒXƒLƒ‹Žæ“¾‚Å‚«‚È‚¢•s‹ï‡‚ðC³(skill_tree.txt)
+ãƒ»ã‚¹ã‚­ãƒ«å–å¾—ã§ããªã„ä¸å…·åˆã‚’ä¿®æ­£(skill_tree.txt)
 
-¦ƒXƒLƒ‹ƒcƒŠ[‚ÌŽd—l•ÏX‚Å‚¨‚»‚ç‚­‘z’è‚µ‚Ä‚¢‚é [K“¾ðŒ‚ª‚È‚¢ƒXƒLƒ‹‚ÍÈ—ª‚·‚é] ‚Æ‚¢‚¤Ý’è‚ª‚¤‚Ü‚­“Ç‚Ýž‚ß‚È‚¢‚Ì‚ªŒ´ˆö‚Å‚·
-¦‘S•”‚ÌƒXƒLƒ‹‚É6‚Â‚Ü‚ÅƒXƒLƒ‹K“¾ðŒ‚ð‹Lq‚µ‚Ü‚µ‚½
-¦ƒXƒsƒŠƒbƒgƒnƒ“ƒhƒ‰[‚Ì[ƒ^ƒCƒK[ƒXƒ‰ƒbƒVƒ…][ƒ}ƒŠƒ“ƒtƒFƒXƒeƒBƒoƒ‹][ƒTƒ“ƒhƒtƒFƒXƒeƒBƒoƒ‹][ƒfƒBƒA[ƒLƒƒƒmƒ“]‚ÍK“¾ðŒƒXƒLƒ‹‚ª9‚Â‚ ‚é‚½‚ßŽd—l•ÏX‚µ‚Ä‚à‘«‚è‚È‚¢ó‘Ô‚Å‚µ‚½
-¦Žb’è‚Æ‚µ‚ÄðŒ‚ðí‚Á‚Ä6‚Â‚É‚µ‚ÄK“¾‚ªi‚Þ‚æ‚¤‚É‚µ‚Ü‚µ‚½
-¦¡ŒãC³‚ªŒ©ž‚Ü‚ê‚é‚Ì‚Å‚»‚ê‚Ü‚Å‚Ì‘Î‰ž‚Å‚·
-¦6000”Ô‘ä‚Ì4ŽŸE’Ç‰ÁƒXƒLƒ‹‚Í2022-06-02ˆÈ~‚ÌŠÂ‹«•K{‚È‚Ì‚ÅŽæ“¾‚Å‚«‚È‚¢‚Ì‚ÍŽd—l‚Å‚·
+â€»ã‚¹ã‚­ãƒ«ãƒ„ãƒªãƒ¼ã®ä»•æ§˜å¤‰æ›´ã§ãŠãã‚‰ãæƒ³å®šã—ã¦ã„ã‚‹ [ç¿’å¾—æ¡ä»¶ãŒãªã„ã‚¹ã‚­ãƒ«ã¯çœç•¥ã™ã‚‹] ã¨ã„ã†è¨­å®šãŒã†ã¾ãèª­ã¿è¾¼ã‚ãªã„ã®ãŒåŽŸå› ã§ã™
+â€»å…¨éƒ¨ã®ã‚¹ã‚­ãƒ«ã«6ã¤ã¾ã§ã‚¹ã‚­ãƒ«ç¿’å¾—æ¡ä»¶ã‚’è¨˜è¿°ã—ã¾ã—ãŸ
+â€»ã‚¹ãƒ”ãƒªãƒƒãƒˆãƒãƒ³ãƒ‰ãƒ©ãƒ¼ã®[ã‚¿ã‚¤ã‚¬ãƒ¼ã‚¹ãƒ©ãƒƒã‚·ãƒ¥][ãƒžãƒªãƒ³ãƒ•ã‚§ã‚¹ãƒ†ã‚£ãƒãƒ«][ã‚µãƒ³ãƒ‰ãƒ•ã‚§ã‚¹ãƒ†ã‚£ãƒãƒ«][ãƒ‡ã‚£ã‚¢ãƒ¼ã‚­ãƒ£ãƒŽãƒ³]ã¯ç¿’å¾—æ¡ä»¶ã‚¹ã‚­ãƒ«ãŒ9ã¤ã‚ã‚‹ãŸã‚ä»•æ§˜å¤‰æ›´ã—ã¦ã‚‚è¶³ã‚Šãªã„çŠ¶æ…‹ã§ã—ãŸ
+â€»æš«å®šã¨ã—ã¦æ¡ä»¶ã‚’å‰Šã£ã¦6ã¤ã«ã—ã¦ç¿’å¾—ãŒé€²ã‚€ã‚ˆã†ã«ã—ã¾ã—ãŸ
+â€»ä»Šå¾Œä¿®æ­£ãŒè¦‹è¾¼ã¾ã‚Œã‚‹ã®ã§ãã‚Œã¾ã§ã®å¯¾å¿œã§ã™
+â€»6000ç•ªå°ã®4æ¬¡è·è¿½åŠ ã‚¹ã‚­ãƒ«ã¯2022-06-02ä»¥é™ã®ç’°å¢ƒå¿…é ˆãªã®ã§å–å¾—ã§ããªã„ã®ã¯ä»•æ§˜ã§ã™
 
 2025/02/22	patch0255
-E12312 - 12964 ƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
+ãƒ»12312 - 12964 ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
 
-E—b•ºŠî–{ƒf[ƒ^‚ÌID‚ðC³(merc_db.txt)
+ãƒ»å‚­å…µåŸºæœ¬ãƒ‡ãƒ¼ã‚¿ã®IDã‚’ä¿®æ­£(merc_db.txt)
 
 2025/02/19	patch0254
-E2024/02/18 V‹KƒAƒCƒeƒ€ŽÀ‘•(item_db.txt item_cardtype.txt classnum_db.txt)
+ãƒ»2024/02/18 æ–°è¦ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…(item_db.txt item_cardtype.txt classnum_db.txt)
 
-E12000 - 12260 ƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
+ãƒ»12000 - 12260 ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
 
-¦12215 - 12220 ƒXƒyƒVƒƒƒ‹ƒAƒCƒeƒ€‚Ì[Žg—pðŒ][Žg—p‘ÎÛ][G”}ƒAƒCƒeƒ€][‰r¥ƒJƒbƒg]•s‘«‚µ‚Ä‚¢‚½ðŒ‚ðÄŒ»‰Â”\‚È”ÍˆÍ‚Å’Ç‹L‚µ‚Ü‚µ‚½
-¦12023#Žü”NŒy‰s•¨Û# –¢ŽÀ‘•‚ÌƒAƒCƒeƒ€‚Å‚·‚ªÁ–Õ‚·‚é‚Æ–¢’è‹`ƒGƒtƒFƒNƒg‚ª”­¶‚µAstrƒtƒ@ƒCƒ‹‚ª‘«‚è‚¸d—ÍƒGƒ‰[‚Å—Ž‚¿‚Ü‚·‚Ì‚ÅŽûW•i‚É•ÏX‚µ‚Ä—˜—p‚Å‚«‚È‚¢‚æ‚¤‚É‚µ‚Ä‚¢‚Ü‚·
+â€»12215 - 12220 ã‚¹ãƒšã‚·ãƒ£ãƒ«ã‚¢ã‚¤ãƒ†ãƒ ã®[ä½¿ç”¨æ¡ä»¶][ä½¿ç”¨å¯¾è±¡][è§¦åª’ã‚¢ã‚¤ãƒ†ãƒ ][è© å”±ã‚«ãƒƒãƒˆ]ä¸è¶³ã—ã¦ã„ãŸæ¡ä»¶ã‚’å†ç¾å¯èƒ½ãªç¯„å›²ã§è¿½è¨˜ã—ã¾ã—ãŸ
+â€»12023#å‘¨å¹´è»½é‹­ç‰©è±¡# æœªå®Ÿè£…ã®ã‚¢ã‚¤ãƒ†ãƒ ã§ã™ãŒæ¶ˆè€—ã™ã‚‹ã¨æœªå®šç¾©ã‚¨ãƒ•ã‚§ã‚¯ãƒˆãŒç™ºç”Ÿã—ã€strãƒ•ã‚¡ã‚¤ãƒ«ãŒè¶³ã‚Šãšé‡åŠ›ã‚¨ãƒ©ãƒ¼ã§è½ã¡ã¾ã™ã®ã§åŽé›†å“ã«å¤‰æ›´ã—ã¦åˆ©ç”¨ã§ããªã„ã‚ˆã†ã«ã—ã¦ã„ã¾ã™
 
-EƒfƒB[ƒ”ƒ@Œn•Ší‚ÉƒhƒƒbƒvƒGƒtƒFƒNƒg‚ð’Ç‰Á(dropeffecttable.txt)
+ãƒ»ãƒ‡ã‚£ãƒ¼ãƒ´ã‚¡ç³»æ­¦å™¨ã«ãƒ‰ãƒ­ãƒƒãƒ—ã‚¨ãƒ•ã‚§ã‚¯ãƒˆã‚’è¿½åŠ (dropeffecttable.txt)
 
-Eiteminfo ƒtƒHƒ‹ƒ_ VÝ
-EƒAƒCƒeƒ€à–¾‚ÉURL‚ªŠÜ‚Ü‚ê‚éê‡AŠY“–ƒAƒCƒeƒ€‚ÉG‚ê‚é‚ÆƒNƒ‰ƒCƒAƒ“ƒg‚ª—Ž‚¿‚é•s‹ï‡‚ð—}Ž~‚·‚éƒR[ƒh‚ð’Ç‹L(Writer.cs)
-¦<URL> <INFO> ‚Æ‚¢‚¤‹Lq‚Ì‚ ‚éƒAƒCƒeƒ€‚ª‘ÎÛ‚Å‚·
+ãƒ»iteminfo ãƒ•ã‚©ãƒ«ãƒ€ æ–°è¨­
+ãƒ»ã‚¢ã‚¤ãƒ†ãƒ èª¬æ˜Žã«URLãŒå«ã¾ã‚Œã‚‹å ´åˆã€è©²å½“ã‚¢ã‚¤ãƒ†ãƒ ã«è§¦ã‚Œã‚‹ã¨ã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆãŒè½ã¡ã‚‹ä¸å…·åˆã‚’æŠ‘æ­¢ã™ã‚‹ã‚³ãƒ¼ãƒ‰ã‚’è¿½è¨˜(Writer.cs)
+â€»<URL> <INFO> ã¨ã„ã†è¨˜è¿°ã®ã‚ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ãŒå¯¾è±¡ã§ã™
 
 2025/02/16	patch0253
-E13300 - 13499 ‚ÆŠÖ—^‚·‚éƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
+ãƒ»13300 - 13499 ã¨é–¢ä¸Žã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
 
 2025/02/14	patch0252
-E13200 - 13294 ƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
+ãƒ»13200 - 13294 ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
 
-E4ŽŸEƒXƒLƒ‹ŠÖ˜AƒAƒCƒeƒ€‚Ì‚¢‚­‚Â‚©‚Ì”„’l‚ð0‚ÉÝ’è(item_db.txt)
+ãƒ»4æ¬¡è·ã‚¹ã‚­ãƒ«é–¢é€£ã‚¢ã‚¤ãƒ†ãƒ ã®ã„ãã¤ã‹ã®å£²å€¤ã‚’0ã«è¨­å®š(item_db.txt)
 
-¦êt–¾Šú‚É–¢’èî•ñ‚ðŒ³‚É•s–¾Šm‚È‚Ü‚ÜŽÀ‘•‚µ‚æ‚¤‚Æ‚µA‚»‚ÌŒãC³‚³‚ê‚È‚¢‚Ü‚Ü•ú’u‚³‚ê‚½ƒAƒCƒeƒ€‚ªŽUŒ©‚µ‚Ä‚¢‚Ü‚·(2-2ŽŸE/”EŽÒ/ƒKƒ“ƒXƒŠƒ“ƒK[ŽÀ‘•“–Žž‚ÌƒAƒCƒeƒ€)
-¦‘¶Ý‚µ‚È‚¢ƒf[ƒ^‚â‰\‚Ìˆæ‚ðo‚È‚¢Œø‰Ê‚ÍA‚±‚ê‚©‚ç—ˆ‚éŽáŽèŠJ”­ŽÒ‚ªŽžŠÔ‚ð‚©‚¯‚Ä’²‚×‚½‚è¬—‚µ‚È‚¢‚æ‚¤‚Éíœ‚µ‚Ä‚¢‚Ü‚·
-¦ŒÃ‚¢ƒAƒCƒeƒ€‚É[Žb’è]‚Æ‚¢‚¤Œ¾—t‚ªŽg‚í‚ê‚Ä‚¨‚èC³‚ðŠú‘Ò‚·‚é‚à‚Ì‚Å‚·‚ªŽÀÛ‚ÍC³‚³‚ê‚¸A’²‚×‚éŽè’i‚àŽ¸‚í‚ê‚Ä‚¢‚é‚½‚ßŽáŽèŠJ”­ŽÒ‚ªŽžŠÔ‚ð‚©‚¯‚Ä’²‚×‚½‚è¬—‚µ‚È‚¢‚æ‚¤‚Éíœ‚µ‚Ä‚¢‚Ü‚·
-¦ŒÃ‚¢ƒAƒCƒeƒ€(‚¨‚¨‚æ‚»2015”NˆÈ‘O)‚Ì”’l‚ª‚í‚©‚ç‚È‚¢Šm—¦Œø‰Ê‚Í¡‰ñ‚Ì’²¸‚ÅŠ®—¹‚Æ‚È‚è‚Ü‚·(’²‚×‚Ä‚à‰½‚ào‚Ä‚«‚Ü‚¹‚ñ)
+â€»é»Žæ˜ŽæœŸã«æœªå®šæƒ…å ±ã‚’å…ƒã«ä¸æ˜Žç¢ºãªã¾ã¾å®Ÿè£…ã—ã‚ˆã†ã¨ã—ã€ãã®å¾Œä¿®æ­£ã•ã‚Œãªã„ã¾ã¾æ”¾ç½®ã•ã‚ŒãŸã‚¢ã‚¤ãƒ†ãƒ ãŒæ•£è¦‹ã—ã¦ã„ã¾ã™(2-2æ¬¡è·/å¿è€…/ã‚¬ãƒ³ã‚¹ãƒªãƒ³ã‚¬ãƒ¼å®Ÿè£…å½“æ™‚ã®ã‚¢ã‚¤ãƒ†ãƒ )
+â€»å­˜åœ¨ã—ãªã„ãƒ‡ãƒ¼ã‚¿ã‚„å™‚ã®åŸŸã‚’å‡ºãªã„åŠ¹æžœã¯ã€ã“ã‚Œã‹ã‚‰æ¥ã‚‹è‹¥æ‰‹é–‹ç™ºè€…ãŒæ™‚é–“ã‚’ã‹ã‘ã¦èª¿ã¹ãŸã‚Šæ··ä¹±ã—ãªã„ã‚ˆã†ã«å‰Šé™¤ã—ã¦ã„ã¾ã™
+â€»å¤ã„ã‚¢ã‚¤ãƒ†ãƒ ã«[æš«å®š]ã¨ã„ã†è¨€è‘‰ãŒä½¿ã‚ã‚Œã¦ãŠã‚Šä¿®æ­£ã‚’æœŸå¾…ã™ã‚‹ã‚‚ã®ã§ã™ãŒå®Ÿéš›ã¯ä¿®æ­£ã•ã‚Œãšã€èª¿ã¹ã‚‹æ‰‹æ®µã‚‚å¤±ã‚ã‚Œã¦ã„ã‚‹ãŸã‚è‹¥æ‰‹é–‹ç™ºè€…ãŒæ™‚é–“ã‚’ã‹ã‘ã¦èª¿ã¹ãŸã‚Šæ··ä¹±ã—ãªã„ã‚ˆã†ã«å‰Šé™¤ã—ã¦ã„ã¾ã™
+â€»å¤ã„ã‚¢ã‚¤ãƒ†ãƒ (ãŠãŠã‚ˆã2015å¹´ä»¥å‰)ã®æ•°å€¤ãŒã‚ã‹ã‚‰ãªã„ç¢ºçŽ‡åŠ¹æžœã¯ä»Šå›žã®èª¿æŸ»ã§å®Œäº†ã¨ãªã‚Šã¾ã™(èª¿ã¹ã¦ã‚‚ä½•ã‚‚å‡ºã¦ãã¾ã›ã‚“)
 
 2025/02/12	patch0251
-E13000 - 13187 ‚ÆŠÖ—^‚·‚éƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
+ãƒ»13000 - 13187 ã¨é–¢ä¸Žã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
 
 2025/02/10	patch0250
-E13500 - 14902 ƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
+ãƒ»13500 - 14902 ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
 
 20250209	patch0249
-E15100 - 15906 ‚ÆŠÖ—^‚·‚éƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
+ãƒ»15100 - 15906 ã¨é–¢ä¸Žã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
 
 20250206	patch0248
-E15044 - 15099 ‚ÆŠÖ—^‚·‚éƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
+ãƒ»15044 - 15099 ã¨é–¢ä¸Žã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
 
 20250204	patch0247
-E20250204 V‹KƒAƒCƒeƒ€ŽÀ‘•(item_db.txt item_db2.txt item_cardtype.txt dropeffecttable.txt classnum_db.txt)
+ãƒ»20250204 æ–°è¦ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…(item_db.txt item_db2.txt item_cardtype.txt dropeffecttable.txt classnum_db.txt)
 
-EƒoƒOƒiƒE‚Ìweaponclass‚ªŠÔˆá‚Á‚Ä‚¢‚½‚Ì‚ÅC³(classnum_db.txt)
+ãƒ»ãƒã‚°ãƒŠã‚¦ã®weaponclassãŒé–“é•ã£ã¦ã„ãŸã®ã§ä¿®æ­£(classnum_db.txt)
 
-EƒuƒŒƒbƒVƒ“ƒOƒIƒuƒCƒOƒhƒ‰ƒVƒ‹(Œ¨) view’l C³(classnum_db.txt)
+ãƒ»ãƒ–ãƒ¬ãƒƒã‚·ãƒ³ã‚°ã‚ªãƒ–ã‚¤ã‚°ãƒ‰ãƒ©ã‚·ãƒ«(è‚©) viewå€¤ ä¿®æ­£(classnum_db.txt)
 
 20250201	patch0246
-E15032 - 15043 ‚ÆŠÖ—^‚·‚éƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
-¦2011”N ‚ÌƒAƒCƒeƒ€‚Å‚·
+ãƒ»15032 - 15043 ã¨é–¢ä¸Žã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
+â€»2011å¹´é ƒã®ã‚¢ã‚¤ãƒ†ãƒ ã§ã™
 
 20250201	patch0245
-E480345 - 480352 ŠÔˆá‚¢‚ðC³
+ãƒ»480345 - 480352 é–“é•ã„ã‚’ä¿®æ­£
 
 20250131	patch0244
-E20250128 ƒAƒCƒeƒ€ŽÀ‘•(item_db.txt item_db2.txt item_cardtype.txt)
+ãƒ»20250128 ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…(item_db.txt item_db2.txt item_cardtype.txt)
 
-E313770 –¼‘O•ÏX
+ãƒ»313770 åå‰å¤‰æ›´
 
-¦ƒZƒbƒgŒø‰Êd•¡”­¶‚Ì’²®‚ª‘å‚«‚È•‰’S‚Ì‚½‚ßAƒT[ƒo[ƒTƒCƒh‚Ì‘Î‰ž‘Ò‚¿‚É‚µ‚Ü‚·
-¦ƒGƒ“ƒ`ƒƒƒ“ƒgA“ªA•ŠíAƒAƒNƒZƒTƒŠ‚ÉŠÖ—^‚·‚éƒZƒbƒgŒø‰Ê‚Éd•¡‚Ì‰Â”\«‚ª‚ ‚è‚Ü‚·
+â€»ã‚»ãƒƒãƒˆåŠ¹æžœé‡è¤‡ç™ºç”Ÿã®èª¿æ•´ãŒå¤§ããªè² æ‹…ã®ãŸã‚ã€ã‚µãƒ¼ãƒãƒ¼ã‚µã‚¤ãƒ‰ã®å¯¾å¿œå¾…ã¡ã«ã—ã¾ã™
+â€»ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆã€é ­ã€æ­¦å™¨ã€ã‚¢ã‚¯ã‚»ã‚µãƒªã«é–¢ä¸Žã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã«é‡è¤‡ã®å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™
 
 20250127	patch0243
-E15000 - 15030 ‚ÆŠÖ—^‚·‚éƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
+ãƒ»15000 - 15030 ã¨é–¢ä¸Žã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
 
 20250125	patch0242
-E16000 - 16099 19167 •s‹ï‡C³(item_db.txt)
+ãƒ»16000 - 16099 19167 ä¸å…·åˆä¿®æ­£(item_db.txt)
 
 20250123	patch0241
-E20250121 Œø‰Ê‚ª’Ç‰Á‚³‚ê‚½ƒAƒCƒeƒ€‚ÌC³ŽÀ‘•(item_db.txt)
+ãƒ»20250121 åŠ¹æžœãŒè¿½åŠ ã•ã‚ŒãŸã‚¢ã‚¤ãƒ†ãƒ ã®ä¿®æ­£å®Ÿè£…(item_db.txt)
 
-EGvG§ŒÀƒAƒCƒeƒ€‚Ì’Ç‰Á˜R‚ê‚ðC³‚µA§ŒÀ‚Ì‚È‚­‚È‚Á‚½ƒAƒCƒeƒ€‚ðŒ©‚Â‚¯‚½‚Ì‚Åƒtƒ‰ƒO‚ðíœ(item_db2.txt)
-¦2023”N‚ÌƒAƒbƒvƒf[ƒg‚ðÌ—p‚µ‚Ä‚¢‚Ü‚·
-¦Ôƒƒr[ƒ}ƒbƒv‚Ì§ŒÀ‚ÍˆÙ‚È‚é‚½‚ß–¢ŽÀ‘•‚Å‚·
-¦ƒ^[ƒ{ƒgƒ‰ƒbƒN‚Ì§ŒÀ‚ÍŽc‚µ‚Ä‚¢‚Ü‚·
-¦PvP§ŒÀ‚ÍG‚Á‚Ä‚¢‚Ü‚¹‚ñ
+ãƒ»GvGåˆ¶é™ã‚¢ã‚¤ãƒ†ãƒ ã®è¿½åŠ æ¼ã‚Œã‚’ä¿®æ­£ã—ã€åˆ¶é™ã®ãªããªã£ãŸã‚¢ã‚¤ãƒ†ãƒ ã‚’è¦‹ã¤ã‘ãŸã®ã§ãƒ•ãƒ©ã‚°ã‚’å‰Šé™¤(item_db2.txt)
+â€»2023å¹´ã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã‚’æŽ¡ç”¨ã—ã¦ã„ã¾ã™
+â€»ç ¦ãƒ­ãƒ“ãƒ¼ãƒžãƒƒãƒ—ã®åˆ¶é™ã¯ç•°ãªã‚‹ãŸã‚æœªå®Ÿè£…ã§ã™
+â€»ã‚¿ãƒ¼ãƒœãƒˆãƒ©ãƒƒã‚¯ã®åˆ¶é™ã¯æ®‹ã—ã¦ã„ã¾ã™
+â€»PvPåˆ¶é™ã¯è§¦ã£ã¦ã„ã¾ã›ã‚“
 
-EŒÍ–Ø‚ÌŽ} ŒŒ“h‚ç‚ê‚½ŒÃ–Ø‚ÌŽ} ƒ|ƒŠƒ“ƒ{ƒbƒNƒX‚Ì§ŒÀƒtƒ‰ƒO‚ð 128 ‚É•ÏX(item_db2.txt)
-¦Ž}Œn‚ÍŽg—p‚ªê—pƒ}ƒbƒv‚Ì‚Ý‚Æ‚È‚Á‚½‚Ì‚Å‘¼‚Ìƒtƒ‰ƒO‚Í•s—v‚Æ”»’f
+ãƒ»æž¯æœ¨ã®æž è¡€å¡—ã‚‰ã‚ŒãŸå¤æœ¨ã®æž ãƒãƒªãƒ³ãƒœãƒƒã‚¯ã‚¹ã®åˆ¶é™ãƒ•ãƒ©ã‚°ã‚’ 128 ã«å¤‰æ›´(item_db2.txt)
+â€»æžç³»ã¯ä½¿ç”¨ãŒå°‚ç”¨ãƒžãƒƒãƒ—ã®ã¿ã¨ãªã£ãŸã®ã§ä»–ã®ãƒ•ãƒ©ã‚°ã¯ä¸è¦ã¨åˆ¤æ–­
 
-EƒGƒ“ƒ`ƒƒƒ“ƒgŒnƒAƒCƒeƒ€‚ÉÝ’è‚³‚ê‚Ä‚¢‚½ˆÚ“®§ŒÀ‚ð‘Síœ(item_db2.txt)
-¦ˆÚ“®§ŒÀ‚Ì‹Lq‚ª‚È‚¢‚½‚ß‚Å‚·
+ãƒ»ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆç³»ã‚¢ã‚¤ãƒ†ãƒ ã«è¨­å®šã•ã‚Œã¦ã„ãŸç§»å‹•åˆ¶é™ã‚’å…¨å‰Šé™¤(item_db2.txt)
+â€»ç§»å‹•åˆ¶é™ã®è¨˜è¿°ãŒãªã„ãŸã‚ã§ã™
 
 20250122	patch0240
-E20250121 ƒAƒCƒeƒ€ŽÀ‘•(item_db.txt item_db2.txt item_cardtype.txt)
-E’Ç‰Á‚³‚ê‚½NPCƒXƒLƒ‹‚Æó‘ÔˆÙí‚ðƒƒ‚
-¦Œø‰Ê‚ª’Ç‰Á‚³‚ê‚½ƒAƒCƒeƒ€‚ÍŒã“úŽÀ‘•
+ãƒ»20250121 ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…(item_db.txt item_db2.txt item_cardtype.txt)
+ãƒ»è¿½åŠ ã•ã‚ŒãŸNPCã‚¹ã‚­ãƒ«ã¨çŠ¶æ…‹ç•°å¸¸ã‚’ãƒ¡ãƒ¢
+â€»åŠ¹æžœãŒè¿½åŠ ã•ã‚ŒãŸã‚¢ã‚¤ãƒ†ãƒ ã¯å¾Œæ—¥å®Ÿè£…
 
-E16156 - 17999 •s‹ï‡C³(item_db.txt)
+ãƒ»16156 - 17999 ä¸å…·åˆä¿®æ­£(item_db.txt)
 
-E‘•”õƒŒƒxƒ‹100ˆÈã‚Ì•Ší–h‹ï‚Ì‘•”õ§ŒÀ‚Ì[“]¶E]‚ð‘S•”íœ(item_db2.txt)
-¦’²¸‚µ‚½Œ‹‰ÊA3ŽŸEˆÈã‚Í“]¶E‚Å‚Í‚È‚¢‚Æ”»’f‚µ‚Ü‚µ‚½
-¦ƒŒƒxƒ‹90-99‚Í[–¢“]¶E][“]¶E][3ŽŸE]‚ª¬Ý‚µ‚Ä‚¨‚èAƒŒƒxƒ‹89ˆÈ‰º‚Í3ŽŸE‚ª‘¶Ý‚µ‚È‚¢‚Ì‚ÅˆÛŽ‚µ‚Ä‚¢‚Ü‚·
-¦‘•”õ‚Ì‹““®‚É•Ï‰»‚Í‚ ‚è‚Ü‚¹‚ñ‚ªA¡ŒãŽÀ‘•‚Ì•‰’SŒyŒ¸‚Æ‚È‚è‚Ü‚·
+ãƒ»è£…å‚™ãƒ¬ãƒ™ãƒ«100ä»¥ä¸Šã®æ­¦å™¨é˜²å…·ã®è£…å‚™åˆ¶é™ã®[è»¢ç”Ÿè·]ã‚’å…¨éƒ¨å‰Šé™¤(item_db2.txt)
+â€»èª¿æŸ»ã—ãŸçµæžœã€3æ¬¡è·ä»¥ä¸Šã¯è»¢ç”Ÿè·ã§ã¯ãªã„ã¨åˆ¤æ–­ã—ã¾ã—ãŸ
+â€»ãƒ¬ãƒ™ãƒ«90-99ã¯[æœªè»¢ç”Ÿè·][è»¢ç”Ÿè·][3æ¬¡è·]ãŒæ··åœ¨ã—ã¦ãŠã‚Šã€ãƒ¬ãƒ™ãƒ«89ä»¥ä¸‹ã¯3æ¬¡è·ãŒå­˜åœ¨ã—ãªã„ã®ã§ç¶­æŒã—ã¦ã„ã¾ã™
+â€»è£…å‚™ã®æŒ™å‹•ã«å¤‰åŒ–ã¯ã‚ã‚Šã¾ã›ã‚“ãŒã€ä»Šå¾Œå®Ÿè£…ã®è² æ‹…è»½æ¸›ã¨ãªã‚Šã¾ã™
 
-Eˆß‘•‘•”õ‘S•”‚Ì[GvGƒ}ƒbƒv•s‰Â]‚Ì§ŒÀ‚ðíœ‚µAGvG§ŒÀ‚ª‚ ‚éƒAƒCƒeƒ€‚ÉV‚½‚Éƒtƒ‰ƒO‚ð’Ç‰Á(item_db2.txt)
-¦‘ÎÛmapflag‚É“ü‚é‚Æˆß‘•‘•”õ‚ÌŒ©‚½–Ú‚ªÁ‚¦‚Ü‚·(hateffect‚ÍˆÛŽ‚³‚ê‚Ü‚·)
-¦2021”N‚ÉŽÀ‘•‚³‚ê‚Ä‚¢‚é ver 1456 mapflagunocostumev ‚ª‹@”\‚µ‚Ä‚¢‚Ü‚·‚ª‹Lq‚ª‚È‚¢‚½‚ßAŒã“úmapflag‚ð’Ç‰Á—\’è
+ãƒ»è¡£è£…è£…å‚™å…¨éƒ¨ã®[GvGãƒžãƒƒãƒ—ä¸å¯]ã®åˆ¶é™ã‚’å‰Šé™¤ã—ã€GvGåˆ¶é™ãŒã‚ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã«æ–°ãŸã«ãƒ•ãƒ©ã‚°ã‚’è¿½åŠ (item_db2.txt)
+â€»å¯¾è±¡mapflagã«å…¥ã‚‹ã¨è¡£è£…è£…å‚™ã®è¦‹ãŸç›®ãŒæ¶ˆãˆã¾ã™(hateffectã¯ç¶­æŒã•ã‚Œã¾ã™)
+â€»2021å¹´ã«å®Ÿè£…ã•ã‚Œã¦ã„ã‚‹ ver 1456 mapflagã€Œnocostumeã€ ãŒæ©Ÿèƒ½ã—ã¦ã„ã¾ã™ãŒè¨˜è¿°ãŒãªã„ãŸã‚ã€å¾Œæ—¥mapflagã‚’è¿½åŠ äºˆå®š
 
 20250118	patch0239
-E18103-18198‚ÌŠÖ—^‚·‚éƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
+ãƒ»18103-18198ã®é–¢ä¸Žã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
 
-Ecallfunc ‚É ‹|[v—‹‹|][–³‘o‹|][ˆê•É‹|][—Â—‹|] e[v—‹e][–³‘oe][ˆê•Ée][—Â—e] ‚ÌƒZƒbƒgŒø‰Ê‚ÌŽÀ‘•ƒIƒvƒVƒ‡ƒ“‚ð’Ç‰Á(function_itemdb.sc)
-¦–î‚Æ’e‚Ì‘®«‚ª•Ï‰»‚·‚éƒZƒbƒgŒø‰Ê‚Å‚·‚ªA“Š±Œn•”ˆÊ‚Í‘•”õƒ{[ƒiƒX‚Ì‹Lq‚É§ŒÀ‚ª‚ ‚é‚½‚ß callfunc ‚ÅŽÀ‘•‚µA‘S•”‚Ì‹|eE‹Æ‚É‰e‹¿‚ªo‚é‚Ì‚ÅŽÀ‘•ƒIƒvƒVƒ‡ƒ“‚Æ‚µ‚Ü‚µ‚½
-¦[bonus bAutoStatusCalcPc] ­‚µ•sˆÀ’è‚ÈŠ‚à‚ ‚é‚Ì‚Å–{ŽÀ‘•‚ÍŒ©‘—‚è‚Ü‚µ‚½‚ªAƒZƒbƒgŒø‰Ê‚ÅŠú‘Ò‚³‚ê‚é“®ì‚ÍŠm”F‚µ‚Ä‚¢‚Ü‚·‚Ì‚ÅŽŽ‚µ‚Ä‚Ý‚Ä‚­‚¾‚³‚¢
+ãƒ»callfunc ã« å¼“[è¿…é›·å¼“][ç„¡åŒå¼“][ä¸€ç¢§å¼“][çŒŸä¹±å¼“] éŠƒ[è¿…é›·éŠƒ][ç„¡åŒéŠƒ][ä¸€ç¢§éŠƒ][çŒŸä¹±éŠƒ] ã®ã‚»ãƒƒãƒˆåŠ¹æžœã®å®Ÿè£…ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’è¿½åŠ (function_itemdb.sc)
+â€»çŸ¢ã¨å¼¾ã®å±žæ€§ãŒå¤‰åŒ–ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã§ã™ãŒã€æŠ•æ“²ç³»éƒ¨ä½ã¯è£…å‚™ãƒœãƒ¼ãƒŠã‚¹ã®è¨˜è¿°ã«åˆ¶é™ãŒã‚ã‚‹ãŸã‚ callfunc ã§å®Ÿè£…ã—ã€å…¨éƒ¨ã®å¼“éŠƒè·æ¥­ã«å½±éŸ¿ãŒå‡ºã‚‹ã®ã§å®Ÿè£…ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã¨ã—ã¾ã—ãŸ
+â€»[bonus bAutoStatusCalcPc] å°‘ã—ä¸å®‰å®šãªæ‰€ã‚‚ã‚ã‚‹ã®ã§æœ¬å®Ÿè£…ã¯è¦‹é€ã‚Šã¾ã—ãŸãŒã€ã‚»ãƒƒãƒˆåŠ¹æžœã§æœŸå¾…ã•ã‚Œã‚‹å‹•ä½œã¯ç¢ºèªã—ã¦ã„ã¾ã™ã®ã§è©¦ã—ã¦ã¿ã¦ãã ã•ã„
 
 20250115	patch0238
-E20250114 ƒAƒCƒeƒ€ŽÀ‘•(item_db.txt item_db2.txt item_cardtype.txt)
+ãƒ»20250114 ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…(item_db.txt item_db2.txt item_cardtype.txt)
 
 20250112	patch0237
-E20900-20999‚ÆŠÖ—^‚·‚éƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
+ãƒ»20900-20999ã¨é–¢ä¸Žã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
 
 20250110	patch0236
-Emob_db.txt ‚ð®—‚µA–¢ŽÀ‘••ª‚ðmob_db_add.txt ‚ÉW–ñ
-Emob_db.txt ‚Í¡“Á«ƒXƒe[ƒ^ƒX’Ç‰Á‚ÌŽd—l•ÏX‚ªŒ©ž‚Ü‚ê‚é‚Ì‚Åˆê’Uíœ‚·‚é
+ãƒ»mob_db.txt ã‚’æ•´ç†ã—ã€æœªå®Ÿè£…åˆ†ã‚’mob_db_add.txt ã«é›†ç´„
+ãƒ»mob_db.txt ã¯ä»Šç‰¹æ€§ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹è¿½åŠ ã®ä»•æ§˜å¤‰æ›´ãŒè¦‹è¾¼ã¾ã‚Œã‚‹ã®ã§ä¸€æ—¦å‰Šé™¤ã™ã‚‹
 
 20250109	patch0235
-E20754-20899‚ÌŠÖ—^‚·‚éƒAƒCƒeƒ€‚Ì•s‹ï‡C³(item_db.txt)
-EMOBƒXƒLƒ‹ [MƒNƒ‰ƒEƒhƒLƒ‹] Žg‚¤‚æ‚¤‚ÉC³(mob_skill_add.txt)
-EŽÀ‘•‚ðl‚¦‚Ä‚¢‚éMOB‚ÉŠÖ‚·‚éƒRƒƒ“ƒg’Ç‹L(mob_skill_add.txt)
+ãƒ»20754-20899ã®é–¢ä¸Žã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£(item_db.txt)
+ãƒ»MOBã‚¹ã‚­ãƒ« [Mã‚¯ãƒ©ã‚¦ãƒ‰ã‚­ãƒ«] ä½¿ã†ã‚ˆã†ã«ä¿®æ­£(mob_skill_add.txt)
+ãƒ»å®Ÿè£…ã‚’è€ƒãˆã¦ã„ã‚‹MOBã«é–¢ã™ã‚‹ã‚³ãƒ¡ãƒ³ãƒˆè¿½è¨˜(mob_skill_add.txt)
 
 20250107	patch0234
-E20700”Ô‘ä‚ÆŠÖ—^‚·‚éƒAƒCƒeƒ€‚Ì•s‹ï‡C³
+ãƒ»20700ç•ªå°ã¨é–¢ä¸Žã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸å…·åˆä¿®æ­£
 
 20250107	patch0233
-E20250107 ƒAƒbƒvƒf[ƒgŽÀ‘•(item_db.txt item_db2.txt)
-Eƒ~ƒ‡ƒ‹ƒj[ƒ‹’n‰º“´ŒA‚ÌŽûW•i‚Ì‰¿Ši‚ðˆê‚ÂXV
-E5 min auriga_0013.zip XV
+ãƒ»20250107 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£…(item_db.txt item_db2.txt)
+ãƒ»ãƒŸãƒ§ãƒ«ãƒ‹ãƒ¼ãƒ«åœ°ä¸‹æ´žçªŸã®åŽé›†å“ã®ä¾¡æ ¼ã‚’ä¸€ã¤æ›´æ–°
+ãƒ»5 min auriga_0013.zip æ›´æ–°
 
 20241224	patch0232
-E20241224 ƒAƒbƒvƒf[ƒgŽÀ‘•(item_db.txt item_db2.txt classnum_db.txt)
+ãƒ»20241224 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£…(item_db.txt item_db2.txt classnum_db.txt)
 
-ü”N“àXV‚ÍI—¹‚Å‚·
-ü20240107V‹KƒAƒbƒvƒf[ƒg‚æ‚èXVÄŠJ‚µ‚Ü‚·
-ü–¾“ú‚©‚ç”N–¾‚¯‚ÌƒAƒbƒvƒf[ƒg‚Ü‚Å‹x‚Ý‚Ü‚·
-ü2024XVŠ®—¹Œã‚É‘Sƒf[ƒ^Šm’è‚Æ‚µA”N–¾‚¯‚ÉƒeƒXƒgŠÂ‹«‚Ì‘åŒ^ƒAƒbƒvƒf[ƒg‚ð—\’è‚µ‚Ä‚¢‚Ü‚·
+â—¯å¹´å†…æ›´æ–°ã¯çµ‚äº†ã§ã™
+â—¯20240107æ–°è¦ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã‚ˆã‚Šæ›´æ–°å†é–‹ã—ã¾ã™
+â—¯æ˜Žæ—¥ã‹ã‚‰å¹´æ˜Žã‘ã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã¾ã§ä¼‘ã¿ã¾ã™
+â—¯2024æ›´æ–°å®Œäº†å¾Œã«å…¨ãƒ‡ãƒ¼ã‚¿ç¢ºå®šã¨ã—ã€å¹´æ˜Žã‘ã«ãƒ†ã‚¹ãƒˆç’°å¢ƒã®å¤§åž‹ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã‚’äºˆå®šã—ã¦ã„ã¾ã™
 
 20241220	patch0231
-Eclassnum.db •s‘«•ª‚Ì•â‘«
+ãƒ»classnum.db ä¸è¶³åˆ†ã®è£œè¶³
 
-E‚‚ÌclassŒ©’¼‚µ
+ãƒ»ç›¾ã®classè¦‹ç›´ã—
 
-E”L‚¶‚á‚ç‚µ‚Ì•Šíclass‚ªŠÔˆá‚Á‚Ä‚¢‚½‚Ì‚ÅC³(item_db.txt)
+ãƒ»çŒ«ã˜ã‚ƒã‚‰ã—ã®æ­¦å™¨classãŒé–“é•ã£ã¦ã„ãŸã®ã§ä¿®æ­£(item_db.txt)
 
-E300000”Ô‘ä ‚¢‚­‚Â‚©4ŽŸE‘Î‰ž ƒ~ƒXC³(item_db.txt)
+ãƒ»300000ç•ªå° ã„ãã¤ã‹4æ¬¡è·å¯¾å¿œ ãƒŸã‚¹ä¿®æ­£(item_db.txt)
 
-üƒX[ƒp[ƒm[ƒrƒX ƒeƒRƒ“ Œ¹ ƒ\ƒEƒ‹ƒŠƒ“ƒJ[@ƒXƒe[ƒ^ƒX‘‹‚ÌE‹Æ–¼‚ª•¶Žš‰»‚¯‚µ‚Ä‚¢‚é‚Ì‚ðC³—\’è‚Å‚·(‹N“®‚ÉŽxá‚Í‚ ‚è‚Ü‚¹‚ñ‚Ì‚Å2024”N‚ÌluaXV‚ªŠm’è‚µ‚Ä‚©‚çC³)
-ü‹C‚É‚È‚éê‡‚Í msgstringtable.txt 1116s–Ú‚©‚ç“ú–{Œê‚ð‰pŽš‚É•ÏX
+â—¯ã‚¹ãƒ¼ãƒ‘ãƒ¼ãƒŽãƒ¼ãƒ“ã‚¹ ãƒ†ã‚³ãƒ³ æ‹³è– ã‚½ã‚¦ãƒ«ãƒªãƒ³ã‚«ãƒ¼ã€€ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹çª“ã®è·æ¥­åãŒæ–‡å­—åŒ–ã‘ã—ã¦ã„ã‚‹ã®ã‚’ä¿®æ­£äºˆå®šã§ã™(èµ·å‹•ã«æ”¯éšœã¯ã‚ã‚Šã¾ã›ã‚“ã®ã§2024å¹´ã®luaæ›´æ–°ãŒç¢ºå®šã—ã¦ã‹ã‚‰ä¿®æ­£)
+â—¯æ°—ã«ãªã‚‹å ´åˆã¯ msgstringtable.txt 1116è¡Œç›®ã‹ã‚‰æ—¥æœ¬èªžã‚’è‹±å­—ã«å¤‰æ›´
 
 20241217	patch0230
-E20241217 ƒAƒbƒvƒf[ƒgŽÀ‘• (item_db.txt item_db2.txt item_cardtype.txt)
+ãƒ»20241217 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£… (item_db.txt item_db2.txt item_cardtype.txt)
 
-Eclassnum_db.txt XV
+ãƒ»classnum_db.txt æ›´æ–°
 
 20241216	patch0229
-Eitem_db2.txt C³
-E300000”Ô‘ä‚ÌƒJ[ƒh‚Å4ŽŸE—v‘f‚Ì‚ ‚é‚à‚Ì‚ðŽÀ‘•A‰ŠúŽÀ‘•Žž‚Ìƒ~ƒXC³‚ÆƒRƒƒ“ƒg’Ç‹L‚ðŽÀŽ{(300001-300297)
-¦Mres–³Ž‹‚ÌŒø‰Ê‚Í–¢‹Lq
+ãƒ»item_db2.txt ä¿®æ­£
+ãƒ»300000ç•ªå°ã®ã‚«ãƒ¼ãƒ‰ã§4æ¬¡è·è¦ç´ ã®ã‚ã‚‹ã‚‚ã®ã‚’å®Ÿè£…ã€åˆæœŸå®Ÿè£…æ™‚ã®ãƒŸã‚¹ä¿®æ­£ã¨ã‚³ãƒ¡ãƒ³ãƒˆè¿½è¨˜ã‚’å®Ÿæ–½(300001-300297)
+â€»Mresç„¡è¦–ã®åŠ¹æžœã¯æœªè¨˜è¿°
 
-Econst.txt ‚ðÅ“K‰»‚µŠg’£4ŽŸE‚ð•\Ž¦‚Å‚«‚é‚æ‚¤‚ÉC³
-¦•\Ž¦‚Í‚Å‚«‚Ü‚µ‚½
+ãƒ»const.txt ã‚’æœ€é©åŒ–ã—æ‹¡å¼µ4æ¬¡è·ã‚’è¡¨ç¤ºã§ãã‚‹ã‚ˆã†ã«ä¿®æ­£
+â€»è¡¨ç¤ºã¯ã§ãã¾ã—ãŸ
 
-üì‹Æis’†‚ÌŽ–€(Work In Progress)
-EƒLƒƒƒ‰ƒNƒ^[ƒXƒƒbƒg‚ð9‚©‚ç15‚É‚·‚é‚½‚ß‚ÌƒeƒXƒg’†(Œ»Ý12ƒLƒƒƒ‰‚Ü‚ÅŠg’£)
-EPACKETVER 20220831 ‹N“®ƒeƒXƒg’†
-Eclientinfo.xml ‚ÌŠg’£
-E2022athena.grf ‚ÌXV
-EƒeƒXƒgŠÂ‹«‚Ì’Ç‰ÁƒŠƒ\[ƒX‚ÌÅ“K‰»
+â—¯ä½œæ¥­é€²è¡Œä¸­ã®äº‹é …(Work In Progress)
+ãƒ»ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã‚¹ãƒ­ãƒƒãƒˆã‚’9ã‹ã‚‰15ã«ã™ã‚‹ãŸã‚ã®ãƒ†ã‚¹ãƒˆä¸­(ç¾åœ¨12ã‚­ãƒ£ãƒ©ã¾ã§æ‹¡å¼µ)
+ãƒ»PACKETVER 20220831 èµ·å‹•ãƒ†ã‚¹ãƒˆä¸­
+ãƒ»clientinfo.xml ã®æ‹¡å¼µ
+ãƒ»2022athena.grf ã®æ›´æ–°
+ãƒ»ãƒ†ã‚¹ãƒˆç’°å¢ƒã®è¿½åŠ ãƒªã‚½ãƒ¼ã‚¹ã®æœ€é©åŒ–
 
-üì‹Æ—\’è‚ÌŽ–€
-EPACKETVER 20221024 ‚Ì’²¸(rathenaŽQÆ)
-Ezero client ‚Ì’²¸
+â—¯ä½œæ¥­äºˆå®šã®äº‹é …
+ãƒ»PACKETVER 20221024 ã®èª¿æŸ»(rathenaå‚ç…§)
+ãƒ»zero client ã®èª¿æŸ»
 
 20241215	patch0228
-Eitem_db2.txt XV
-¦20241210‚ÌÅV‚Ìî•ñ‚ðŽg‚Á‚ÄˆÚ“®§ŒÀ‚Æ”ƒŽæ˜I“V‰Â”Û‚Ì‘S•”‚Ì’è‹`‚ðŒ©’¼‚µ‚Ü‚µ‚½
-¦[ˆÚ“®§ŒÀ‚ª‚ ‚Á‚½‚Í‚¸][ˆê”ÊƒJ[ƒh‚ÉˆÚ“®§ŒÀ‚ª‚ ‚é][Žg‚í‚ê‚Ä‚¢‚È‚¢ƒAƒCƒeƒ€‚¾‚ªˆÚ“®§ŒÀ‚ª‚ ‚é]‚Æ‚¢‚Á‚½‚à‚Ì‚ª‚ ‚è‚Ü‚·‚ªƒf[ƒ^‚ð‚»‚Ì‚Ü‚Ü”½‰f‚µ‚½Œ‹‰Ê‚É‚È‚Á‚Ä‚Ü‚·
-¦[RODEXƒVƒXƒeƒ€][ƒI[ƒNƒVƒ‡ƒ“ƒVƒXƒeƒ€]‚ÍŽÀ‘•‚ª‚ ‚è‚Ü‚¹‚ñ‚ª[ˆÚ“®§ŒÀ‚ÍƒAƒJƒEƒ“ƒgŠÔˆÚ“®§ŒÀ‚Æ“Ç‚Ý‘Ö‚¦‚ç‚ê‚é]‚Æ‚¢‚¤‰ðŽß‚ð‚µ‚Ä‚¢‚Ü‚·
-¦dropeffect‚ÉŠÖ‚µ‚Äitem_db2.txt‚Ìƒtƒ‰ƒO‚ÍƒGƒtƒFƒNƒg‚Ì1”Ô‚ª•\Ž¦‚³‚êŽÀ‘•‚ÌŒoˆÜ‚â”wŒi‚ª‚í‚©‚ç‚È‚¢‚½‚ßƒJ[ƒh‚Ì‚Ý‚ÌÝ’è‚É•ÏX‚µ‚Ü‚µ‚½(«—ˆŠg’£‚âŽd—l•ÏX‚ðŒ©ž‚ñ‚Å‚¢‚Ü‚·)
+ãƒ»item_db2.txt æ›´æ–°
+â€»20241210ã®æœ€æ–°ã®æƒ…å ±ã‚’ä½¿ã£ã¦ç§»å‹•åˆ¶é™ã¨è²·å–éœ²å¤©å¯å¦ã®å…¨éƒ¨ã®å®šç¾©ã‚’è¦‹ç›´ã—ã¾ã—ãŸ
+â€»[ç§»å‹•åˆ¶é™ãŒã‚ã£ãŸã¯ãš][ä¸€èˆ¬ã‚«ãƒ¼ãƒ‰ã«ç§»å‹•åˆ¶é™ãŒã‚ã‚‹][ä½¿ã‚ã‚Œã¦ã„ãªã„ã‚¢ã‚¤ãƒ†ãƒ ã ãŒç§»å‹•åˆ¶é™ãŒã‚ã‚‹]ã¨ã„ã£ãŸã‚‚ã®ãŒã‚ã‚Šã¾ã™ãŒãƒ‡ãƒ¼ã‚¿ã‚’ãã®ã¾ã¾åæ˜ ã—ãŸçµæžœã«ãªã£ã¦ã¾ã™
+â€»[RODEXã‚·ã‚¹ãƒ†ãƒ ][ã‚ªãƒ¼ã‚¯ã‚·ãƒ§ãƒ³ã‚·ã‚¹ãƒ†ãƒ ]ã¯å®Ÿè£…ãŒã‚ã‚Šã¾ã›ã‚“ãŒ[ç§»å‹•åˆ¶é™ã¯ã‚¢ã‚«ã‚¦ãƒ³ãƒˆé–“ç§»å‹•åˆ¶é™ã¨èª­ã¿æ›¿ãˆã‚‰ã‚Œã‚‹]ã¨ã„ã†è§£é‡ˆã‚’ã—ã¦ã„ã¾ã™
+â€»dropeffectã«é–¢ã—ã¦item_db2.txtã®ãƒ•ãƒ©ã‚°ã¯ã‚¨ãƒ•ã‚§ã‚¯ãƒˆã®1ç•ªãŒè¡¨ç¤ºã•ã‚Œå®Ÿè£…ã®çµŒç·¯ã‚„èƒŒæ™¯ãŒã‚ã‹ã‚‰ãªã„ãŸã‚ã‚«ãƒ¼ãƒ‰ã®ã¿ã®è¨­å®šã«å¤‰æ›´ã—ã¾ã—ãŸ(å°†æ¥æ‹¡å¼µã‚„ä»•æ§˜å¤‰æ›´ã‚’è¦‹è¾¼ã‚“ã§ã„ã¾ã™)
 
 20241213	patch0227
-Eitem_cardtype.txt XV
+ãƒ»item_cardtype.txt æ›´æ–°
 
 20241213	patch0226
-E20241210‚Ü‚Å‚ÌƒAƒCƒeƒ€ŽÀ‘•(item_db.txt)
+ãƒ»20241210ã¾ã§ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…(item_db.txt)
 
-Eclassnum_db.txt dropeffecttable.txt XV
+ãƒ»classnum_db.txt dropeffecttable.txt æ›´æ–°
 
-EŽŸ‰ñƒAƒbƒvƒf[ƒg‚©‚ç4ŽŸEƒAƒCƒeƒ€‚ÌC³‚É’…Žè‚µ‚Ü‚·
+ãƒ»æ¬¡å›žã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã‹ã‚‰4æ¬¡è·ã‚¢ã‚¤ãƒ†ãƒ ã®ä¿®æ­£ã«ç€æ‰‹ã—ã¾ã™
 
 20241212	patch0225
-E20241126‚Ü‚Å‚ÌƒAƒCƒeƒ€ŽÀ‘•
+ãƒ»20241126ã¾ã§ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
 
-EƒfƒBƒ€ƒOƒŒƒCƒVƒAŒnƒAƒCƒeƒ€‚ÉƒZƒbƒgŒø‰Ê’Ç‰Á
+ãƒ»ãƒ‡ã‚£ãƒ ã‚°ãƒ¬ã‚¤ã‚·ã‚¢ç³»ã‚¢ã‚¤ãƒ†ãƒ ã«ã‚»ãƒƒãƒˆåŠ¹æžœè¿½åŠ 
 
-E‚½‚Ü‚Á‚Ä‚¢‚½‰Ä-HƒAƒCƒeƒ€‚Ì‘SŽÀ‘•Š®—¹
+ãƒ»ãŸã¾ã£ã¦ã„ãŸå¤-ç§‹ã‚¢ã‚¤ãƒ†ãƒ ã®å…¨å®Ÿè£…å®Œäº†
 
 20241209	patch0224
-E20241112‚Ü‚Å‚ÌƒAƒCƒeƒ€ŽÀ‘•
+ãƒ»20241112ã¾ã§ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
 
 20241207	patch0223
-E20241022‚Ü‚Å‚ÌƒAƒCƒeƒ€ŽÀ‘•
+ãƒ»20241022ã¾ã§ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
 
 20241205	patch0222
-E20241116‚Ü‚Å‚ÌƒAƒCƒeƒ€‚Ì’è‹`’Ç‰Á‚µŠî‘bŒø‰ÊŽÀ‘•
+ãƒ»20241116ã¾ã§ã®ã‚¢ã‚¤ãƒ†ãƒ ã®å®šç¾©è¿½åŠ ã—åŸºç¤ŽåŠ¹æžœå®Ÿè£…
 
-E20241008‚Ü‚Å‚ÌƒAƒCƒeƒ€‚ÌŒø‰ÊŽÀ‘•
-¦ˆß‘•‘•”õ‚Í20241126‚Ü‚Å‘S•”Žg‚¦‚Ü‚·
-¦item_db2.txt ‚ÍŒ»Ý‘S–ÊŒ©’¼‚µ’†‚É‚Â‚«XV‚µ‚Ä‚¢‚Ü‚¹‚ñ
+ãƒ»20241008ã¾ã§ã®ã‚¢ã‚¤ãƒ†ãƒ ã®åŠ¹æžœå®Ÿè£…
+â€»è¡£è£…è£…å‚™ã¯20241126ã¾ã§å…¨éƒ¨ä½¿ãˆã¾ã™
+â€»item_db2.txt ã¯ç¾åœ¨å…¨é¢è¦‹ç›´ã—ä¸­ã«ã¤ãæ›´æ–°ã—ã¦ã„ã¾ã›ã‚“
 
-E12325 ‰SŽÒ—pƒ”ƒFƒ‹ƒ[ƒuƒu‚Ì‰H -> ‰SŽÒ—pŠg‘å‹¾ ƒAƒCƒeƒ€•ÏX‚³‚ê‚Ä‚¢‚é‚Ì‚Åˆê’Uíœ
+ãƒ»12325 åˆå¿ƒè€…ç”¨ãƒ´ã‚§ãƒ«ã‚¼ãƒ–ãƒ–ã®ç¾½ -> åˆå¿ƒè€…ç”¨æ‹¡å¤§é¡ ã‚¢ã‚¤ãƒ†ãƒ å¤‰æ›´ã•ã‚Œã¦ã„ã‚‹ã®ã§ä¸€æ—¦å‰Šé™¤
 
-EŽÀ‘•‚³‚ê‚Ä‚¢‚é4ŽŸE‚ªŽg‚¦‚é‚æ‚¤‚Éconst.txt ‚É‰¼‚É’è‹`’Ç‹L
-¦Šg’£4ŽŸE‚Í’è‹`‚Ì‚Ý‚Å‚·
+ãƒ»å®Ÿè£…ã•ã‚Œã¦ã„ã‚‹4æ¬¡è·ãŒä½¿ãˆã‚‹ã‚ˆã†ã«const.txt ã«ä»®ã«å®šç¾©è¿½è¨˜
+â€»æ‹¡å¼µ4æ¬¡è·ã¯å®šç¾©ã®ã¿ã§ã™
 
 20241203	patch0221
-E20240924 EP20 ‘åŒ^ƒAƒbƒvƒf[ƒg ƒAƒCƒeƒ€ŽÀ‘•(item_db.txt item_db2.txt item_cardtype.txt function_itemdb.sc classnum_db.txt dropeffecttable.txt)
+ãƒ»20240924 EP20 å¤§åž‹ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…(item_db.txt item_db2.txt item_cardtype.txt function_itemdb.sc classnum_db.txt dropeffecttable.txt)
 
-E”ƒŽæ˜I“V‚Ìƒf[ƒ^XV(item_db2.txt)
+ãƒ»è²·å–éœ²å¤©ã®ãƒ‡ãƒ¼ã‚¿æ›´æ–°(item_db2.txt)
 
-Eitem_db2.txt C³
+ãƒ»item_db2.txt ä¿®æ­£
 
-¦EPŽÀ‘••Ší‚ÉcallfuncŽg‚Á‚Ä‚¢‚Ü‚·
-¦’´‰z‚ÌŒø‰Ê‚Í–¢ŽÀ‘•‚Å‚·‚ªA¡Œãcallfunc“à‚É’Ç‰Á‚·‚é‚±‚Æ‚ÅŽÀ‘•‚Å‚«ì‹ÆH’ö”‚ð90“íŒ¸‚Å‚«‚Ü‚·
-¦ŽûWƒAƒCƒeƒ€‚ÍˆÚ“®§ŒÀ‚ª‚È‚¢ƒhƒƒbƒvƒAƒCƒeƒ€‚È‚Ì‚Å”„’l‚ªÝ’è‚³‚ê‚Ä‚¢‚é‚Í‚¸‚Å‚·
-¦ŽžŠÔ‚ª‚È‚­”„’lÝ’è‚ðŒ©‘—‚è‚Ü‚µ‚½‚Ì‚Å¡ŒãŽÀ‘•‚·‚éŠJ”­ŽÒ‚É‚¨Šè‚¢‚µ‚Ü‚·
+â€»EPå®Ÿè£…æ­¦å™¨ã«callfuncä½¿ã£ã¦ã„ã¾ã™
+â€»è¶…è¶Šã®åŠ¹æžœã¯æœªå®Ÿè£…ã§ã™ãŒã€ä»Šå¾Œcallfuncå†…ã«è¿½åŠ ã™ã‚‹ã“ã¨ã§å®Ÿè£…ã§ãä½œæ¥­å·¥ç¨‹æ•°ã‚’90ï¼…å‰Šæ¸›ã§ãã¾ã™
+â€»åŽé›†ã‚¢ã‚¤ãƒ†ãƒ ã¯ç§»å‹•åˆ¶é™ãŒãªã„ãƒ‰ãƒ­ãƒƒãƒ—ã‚¢ã‚¤ãƒ†ãƒ ãªã®ã§å£²å€¤ãŒè¨­å®šã•ã‚Œã¦ã„ã‚‹ã¯ãšã§ã™
+â€»æ™‚é–“ãŒãªãå£²å€¤è¨­å®šã‚’è¦‹é€ã‚Šã¾ã—ãŸã®ã§ä»Šå¾Œå®Ÿè£…ã™ã‚‹é–‹ç™ºè€…ã«ãŠé¡˜ã„ã—ã¾ã™
 
-E480286#[ˆß‘•] ŽÖ_‚ÌŒ¶‰e# •\Ž¦‚³‚ê‚Ü‚¹‚ñ
+ãƒ»480286#[è¡£è£…] è›‡ç¥žã®å¹»å½±# è¡¨ç¤ºã•ã‚Œã¾ã›ã‚“
 
 20241201	patch0220
-Estatus.h ƒRƒ“ƒpƒCƒ‹ƒGƒ‰[C³
-EŒÂ•Ê‚Ìƒpƒbƒ`ƒm[ƒg‚ª‚È‚©‚Á‚½‚Ì‚Å’Ç‰Á(patch0218 patch0219)
+ãƒ»status.h ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚¨ãƒ©ãƒ¼ä¿®æ­£
+ãƒ»å€‹åˆ¥ã®ãƒ‘ãƒƒãƒãƒŽãƒ¼ãƒˆãŒãªã‹ã£ãŸã®ã§è¿½åŠ (patch0218 patch0219)
 
 20241128	patch0219
-E clussnum_db.txt XV˜R‚ê‚µ‚½‚Ì‚Å’Ç‰Á
+ãƒ» clussnum_db.txt æ›´æ–°æ¼ã‚Œã—ãŸã®ã§è¿½åŠ 
 
 20241128	patch0218
-E20240917‚Ü‚Å‚ÌƒAƒCƒeƒ€ŽÀ‘•(item_db.txt item_db2.txt item_cardtype.txt clussnum_db.txt iteminfo_EN.lua)
-¦1000090 ”Ô†—¬—p‚Å“ü‚ê‘Ö‚¦/ˆÚ“®§ŒÀ‚ª•Ï‚í‚Á‚Ä‚¢‚Ü‚·([2023]“Á•Êƒ`ƒPƒbƒg(Autumn) -> [2024]“Á•Êƒ`ƒPƒbƒg)
-¦“Á«ƒXƒe[ƒ^ƒX‚Ì‘•”õƒ{[ƒiƒX‚Ì’è‹`‚ª‚È‚¢‚½‚ßƒGƒ‰[ƒƒO‚ªo‚Ü‚·
-¦‹C‚É‚È‚éê‡‚ÍŽg‚í‚È‚¢‚Å‚­‚¾‚³‚¢(¡Œã‚ÌŽÀ‘•‚ðŒ©‰z‚µ‚Ä‚Ü‚·)
-¦Šg’£4ŽŸE‚ÌƒXƒLƒ‹‚ÍƒRƒƒ“ƒgƒAƒEƒg‚µ‚Ä‚¢‚Ü‚·(Šg’£4ŽŸE‘•”õ‚Å‚àƒXƒLƒ‹‚ðŽg‚í‚È‚¢ê‡‚ÍŽÀ‘•‚µ‚Ä‚¢‚Ü‚·)
+ãƒ»20240917ã¾ã§ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…(item_db.txt item_db2.txt item_cardtype.txt clussnum_db.txt iteminfo_EN.lua)
+â€»1000090 ç•ªå·æµç”¨ã§å…¥ã‚Œæ›¿ãˆ/ç§»å‹•åˆ¶é™ãŒå¤‰ã‚ã£ã¦ã„ã¾ã™([2023]ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆ(Autumn) -> [2024]ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆ)
+â€»ç‰¹æ€§ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã®è£…å‚™ãƒœãƒ¼ãƒŠã‚¹ã®å®šç¾©ãŒãªã„ãŸã‚ã‚¨ãƒ©ãƒ¼ãƒ­ã‚°ãŒå‡ºã¾ã™
+â€»æ°—ã«ãªã‚‹å ´åˆã¯ä½¿ã‚ãªã„ã§ãã ã•ã„(ä»Šå¾Œã®å®Ÿè£…ã‚’è¦‹è¶Šã—ã¦ã¾ã™)
+â€»æ‹¡å¼µ4æ¬¡è·ã®ã‚¹ã‚­ãƒ«ã¯ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã—ã¦ã„ã¾ã™(æ‹¡å¼µ4æ¬¡è·è£…å‚™ã§ã‚‚ã‚¹ã‚­ãƒ«ã‚’ä½¿ã‚ãªã„å ´åˆã¯å®Ÿè£…ã—ã¦ã„ã¾ã™)
 
-Edropeffecttable.txt V‹KŽÀ‘•
+ãƒ»dropeffecttable.txt æ–°è¦å®Ÿè£…
 
-Eitemmoveinfov5.txt ”pŽ~
+ãƒ»itemmoveinfov5.txt å»ƒæ­¢
 
-Esrc battle.* map.* ”pŽ~
+ãƒ»src battle.* map.* å»ƒæ­¢
 
-Ehateffect‚Ì’è‹`’Ç‰Á(const.txt status.h)
+ãƒ»hateffectã®å®šç¾©è¿½åŠ (const.txt status.h)
 
-20241126	‚¨’m‚ç‚¹
-iteminfo_EN.* ‚ÉƒhƒƒbƒvƒGƒtƒFƒNƒg‚ð’Ç‰Á‚Å‚«‚éƒR[ƒh‚ðŒöŠJ‚µ‚Ü‚µ‚½(wiki)
+20241126	ãŠçŸ¥ã‚‰ã›
+iteminfo_EN.* ã«ãƒ‰ãƒ­ãƒƒãƒ—ã‚¨ãƒ•ã‚§ã‚¯ãƒˆã‚’è¿½åŠ ã§ãã‚‹ã‚³ãƒ¼ãƒ‰ã‚’å…¬é–‹ã—ã¾ã—ãŸ(wiki)
 
-20241123	 ‚¨’m‚ç‚¹
-ƒeƒXƒgŠÂ‹«‚ðƒAƒbƒvƒf[ƒg‚µ‚Ü‚µ‚½(wiki)
+20241123	 ãŠçŸ¥ã‚‰ã›
+ãƒ†ã‚¹ãƒˆç’°å¢ƒã‚’ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã—ã¾ã—ãŸ(wiki)
 
-20241119	‚¨’m‚ç‚¹
-grf‚Ì“Ç‚Ýž‚Ý–â‘è‚Í‰ðŒˆ‚Ì–Úˆ‚ª‚Â‚«A‚±‚ê‚©‚çŠÈˆÕ‚È•û–@‚Å’N‚Å‚àŽÀs‰Â”\‚Èì‹ÆƒmƒEƒnƒE‚ðì‚è‚Ü‚·
-–â‘è‚ÍŽÀsƒtƒ@ƒCƒ‹‚ª32bit‚È‚Ì‚Å’Pˆê‚Å4GB‚ð’´‚¦‚égrf‚ðˆµ‚¦‚È‚¢Ž–‚É‚ ‚èAgrfŽ©‘Ì‚ÌŽd—l‚Æ‚È‚è‚Ü‚·
-‚È‚Ì‚Ågrf‚ð•ªŠ„‚·‚é‚±‚Æ‚Å‰ðŒˆ‚µ‚Ü‚·‚ªƒAƒbƒvƒf[ƒg·•ª‚Ìˆµ‚¢‚ª–Ê“|‚É‚È‚è‚Ü‚·
-‚Ü‚½grf editor ‚à4GBˆÈã‚Í“Ç‚Ýž‚ß‚È‚¢‚½‚ßA4GB–¢–ž‚Ìó‘Ô‚ª•K—v‚É‚È‚è‚Ü‚·
-‚»‚Ì‚ ‚½‚è‚ð¡®—‚µ‚Ä‚¢‚Ü‚·
+20241119	ãŠçŸ¥ã‚‰ã›
+grfã®èª­ã¿è¾¼ã¿å•é¡Œã¯è§£æ±ºã®ç›®å‡¦ãŒã¤ãã€ã“ã‚Œã‹ã‚‰ç°¡æ˜“ãªæ–¹æ³•ã§èª°ã§ã‚‚å®Ÿè¡Œå¯èƒ½ãªä½œæ¥­ãƒŽã‚¦ãƒã‚¦ã‚’ä½œã‚Šã¾ã™
+å•é¡Œã¯å®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ãŒ32bitãªã®ã§å˜ä¸€ã§4GBã‚’è¶…ãˆã‚‹grfã‚’æ‰±ãˆãªã„äº‹ã«ã‚ã‚Šã€grfè‡ªä½“ã®ä»•æ§˜ã¨ãªã‚Šã¾ã™
+ãªã®ã§grfã‚’åˆ†å‰²ã™ã‚‹ã“ã¨ã§è§£æ±ºã—ã¾ã™ãŒã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå·®åˆ†ã®æ‰±ã„ãŒé¢å€’ã«ãªã‚Šã¾ã™
+ã¾ãŸgrf editor ã‚‚4GBä»¥ä¸Šã¯èª­ã¿è¾¼ã‚ãªã„ãŸã‚ã€4GBæœªæº€ã®çŠ¶æ…‹ãŒå¿…è¦ã«ãªã‚Šã¾ã™
+ãã®ã‚ãŸã‚Šã‚’ä»Šæ•´ç†ã—ã¦ã„ã¾ã™
 
-ƒeƒXƒgŠÂ‹«‚ÌXV‚ÍŽg‚¦‚»‚¤‚ÈŽÀsƒtƒ@ƒCƒ‹‚Ì“ú•t‚ð’T‚è‚È‚ª‚çW‚ß‚Ä‚¢‚éó‘Ô‚Å‚·
+ãƒ†ã‚¹ãƒˆç’°å¢ƒã®æ›´æ–°ã¯ä½¿ãˆãã†ãªå®Ÿè¡Œãƒ•ã‚¡ã‚¤ãƒ«ã®æ—¥ä»˜ã‚’æŽ¢ã‚ŠãªãŒã‚‰é›†ã‚ã¦ã„ã‚‹çŠ¶æ…‹ã§ã™
 
-20241118	‚¨’m‚ç‚¹
-Œ»Ý9ŒŽ‚Ì‘åŒ^ƒAƒbƒvƒf[ƒg‚Ågrf‚ÌŽd—l•ÏX‚ª‚ ‚èAgrf‚ª“Ç‚Ýž‚ß‚È‚¢‚½‚ß‹N“®Žž‚ÉƒGƒ‰[‚ªo‚é‚Æ‚¢‚¤Ž–‚Ü‚Å“Á’è‚Ü‚µ‚½
-ƒT[ƒo[ƒTƒCƒh‚Å4ŽŸE‚ÌŽÀ‘•‚ª‚ ‚Á‚½‚½‚ßA“®ìŠÂ‹«‚ÌXV‚ðl‚¦‚Ä‚¢‚Ü‚·
-“®ìŠÂ‹«‚ð2022-2023‚­‚ç‚¢‚ÉXVAgrf‚ÌŽd—l•ÏX‘Î‰ž‚Ì‚½‚ß’²¸’†‚Å‚·
-rathena‚ðŒ©‚È‚ª‚çì‹Æ‚µ‚Ü‚·‚ªAŒ‹\‚ÈŽžŠÔ‚ª‚©‚©‚é‚ÆŽv‚¢‚Ü‚·
+20241118	ãŠçŸ¥ã‚‰ã›
+ç¾åœ¨9æœˆã®å¤§åž‹ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã§grfã®ä»•æ§˜å¤‰æ›´ãŒã‚ã‚Šã€grfãŒèª­ã¿è¾¼ã‚ãªã„ãŸã‚èµ·å‹•æ™‚ã«ã‚¨ãƒ©ãƒ¼ãŒå‡ºã‚‹ã¨ã„ã†äº‹ã¾ã§ç‰¹å®šã¾ã—ãŸ
+ã‚µãƒ¼ãƒãƒ¼ã‚µã‚¤ãƒ‰ã§4æ¬¡è·ã®å®Ÿè£…ãŒã‚ã£ãŸãŸã‚ã€å‹•ä½œç’°å¢ƒã®æ›´æ–°ã‚’è€ƒãˆã¦ã„ã¾ã™
+å‹•ä½œç’°å¢ƒã‚’2022-2023ãã‚‰ã„ã«æ›´æ–°ã€grfã®ä»•æ§˜å¤‰æ›´å¯¾å¿œã®ãŸã‚èª¿æŸ»ä¸­ã§ã™
+rathenaã‚’è¦‹ãªãŒã‚‰ä½œæ¥­ã—ã¾ã™ãŒã€çµæ§‹ãªæ™‚é–“ãŒã‹ã‹ã‚‹ã¨æ€ã„ã¾ã™
 
-20241002	‚¨’m‚ç‚¹
-ƒpƒ\ƒRƒ“ŒÌá‚ÆŒÂl‚ÌÅ—DæŽ–€‚ª”­¶‚µ‚Ä‚¢‚é‚½‚ßXV‚ÌÄŠJ‚ª‚Å‚«‚Ü‚¹‚ñ
-¡‚Í‚WŒŽ‚Ì‘åŒ^ƒAƒbƒvƒf[ƒg‚ÌŽÀ‘•ì‹Æ‚Å’†’f‚µ‚Ä‚¢‚Ü‚·
-ÄŠJ–ÚˆÀ‚Í‚QTŠÔ`‚P‚PŒŽˆÈ~‚É‚È‚è‚Ü‚·
+20241002	ãŠçŸ¥ã‚‰ã›
+ãƒ‘ã‚½ã‚³ãƒ³æ•…éšœã¨å€‹äººã®æœ€å„ªå…ˆäº‹é …ãŒç™ºç”Ÿã—ã¦ã„ã‚‹ãŸã‚æ›´æ–°ã®å†é–‹ãŒã§ãã¾ã›ã‚“
+ä»Šã¯ï¼˜æœˆã®å¤§åž‹ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã®å®Ÿè£…ä½œæ¥­ã§ä¸­æ–­ã—ã¦ã„ã¾ã™
+å†é–‹ç›®å®‰ã¯ï¼’é€±é–“ï½žï¼‘ï¼‘æœˆä»¥é™ã«ãªã‚Šã¾ã™
 
 
-20240723	‚¨’m‚ç‚¹
-˜A“ú‚Ì–Ò‹‚Å‘Ì—Í‚ª’D‚í‚ê”M‘Ñ–é‚ÅQ•s‘«‚ª‘±‚¢‚Ä‚¢‚é‚½‚ß–Ò‹‚ªI‚í‚é‚Ü‚ÅXV‚ð‹xŽ~‚µ‚Ü‚·
+20240723	ãŠçŸ¥ã‚‰ã›
+é€£æ—¥ã®çŒ›æš‘ã§ä½“åŠ›ãŒå¥ªã‚ã‚Œç†±å¸¯å¤œã§å¯ä¸è¶³ãŒç¶šã„ã¦ã„ã‚‹ãŸã‚çŒ›æš‘ãŒçµ‚ã‚ã‚‹ã¾ã§æ›´æ–°ã‚’ä¼‘æ­¢ã—ã¾ã™
 
-–ÚˆÀ‚ÍÅ‚‹C‰·25“x–¢–ž@Å’á‹C‰·20“x–¢–ž@‚Å‚·
+ç›®å®‰ã¯æœ€é«˜æ°—æ¸©25åº¦æœªæº€ã€€æœ€ä½Žæ°—æ¸©20åº¦æœªæº€ã€€ã§ã™
 
 
 20240720	patch0217
-E21003-21063 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»21003-21063 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
 20240720	patch0216
-E22213-22244 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»22213-22244 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-E22174#ƒXƒJƒ‰ƒoƒnƒCƒq[ƒ‹#‚ð‹N“_‚Æ‚·‚é[ÄŽg—p‘Ò‹@ŽžŠÔ’ZkŒø‰Ê‚ª”­“®‚µ‚È‚¢]Œø‰ÊŽÀ‘•
+ãƒ»22174#ã‚¹ã‚«ãƒ©ãƒãƒã‚¤ãƒ’ãƒ¼ãƒ«#ã‚’èµ·ç‚¹ã¨ã™ã‚‹[å†ä½¿ç”¨å¾…æ©Ÿæ™‚é–“çŸ­ç¸®åŠ¹æžœãŒç™ºå‹•ã—ãªã„]åŠ¹æžœå®Ÿè£…
 
 20240718	patch0215
-E22183-22212 22245 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»22183-22212 22245 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-E20240716‚Ìitem_db2.txt C³
+ãƒ»20240716ã®item_db2.txt ä¿®æ­£
 
 20240716	patch0214
-E20240716 ƒAƒbƒvƒf[ƒgŽÀ‘•(item_db.txt item_db2.txt item_cardtype.txt classnum_db.txt)
+ãƒ»20240716 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£…(item_db.txt item_db2.txt item_cardtype.txt classnum_db.txt)
 
 20240714	patch0213
-E22138-22178 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»22138-22178 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-E22174#ƒXƒJƒ‰ƒoƒnƒCƒq[ƒ‹#‚ð‹N“_‚Æ‚·‚é[ÄŽg—p‘Ò‹@ŽžŠÔ’ZkŒø‰Ê‚ª”­“®‚µ‚È‚¢]Œø‰Ê‚ÍðŒ‚ª•¡ŽG‚È‚½‚ß³‚µ‚­“®ì‚µ‚Ü‚¹‚ñ
+ãƒ»22174#ã‚¹ã‚«ãƒ©ãƒãƒã‚¤ãƒ’ãƒ¼ãƒ«#ã‚’èµ·ç‚¹ã¨ã™ã‚‹[å†ä½¿ç”¨å¾…æ©Ÿæ™‚é–“çŸ­ç¸®åŠ¹æžœãŒç™ºå‹•ã—ãªã„]åŠ¹æžœã¯æ¡ä»¶ãŒè¤‡é›‘ãªãŸã‚æ­£ã—ãå‹•ä½œã—ã¾ã›ã‚“
 
-EˆÈ‰º‚ÌƒAƒCƒeƒ€
-4875,ench,ŒF‚Ì—Í,6,,,,,,,,,,65535,,,,,{ /* ŽÀ‘•’† */ },{ bonus4 bAutoActiveItem,4875,200,5000,EAS_REVENGE|EAS_NORMAL|EAS_SKILL; }
-4877,ench,Œõ‘¬,6,,,,,,,,,,65535,,,,,{ /* ŽÀ‘•’† */ },{ bonus4 bAutoActiveItem,4877,100,5000,EAS_ATTACK|EAS_WEAPON|EAS_NORMAL|EAS_SKILL; }
-4878,ench,|ŠZ,6,,,,,,,,,,65535,,,,,{ /* ŽÀ‘•’† */ },{ bonus4 bAutoActiveItem,4878,50,5000,EAS_REVENGE|EAS_NORMAL|EAS_SKILL; }
-4879,ench,‘å˜h‚ÌŠáŒõ,6,,,,,,,,,,65535,,,,,{ /* ŽÀ‘•’† */ },{ bonus4 bAutoActiveItem,4879,300,5000,EAS_ATTACK|EAS_WEAPON|EAS_NORMAL|EAS_SKILL; }
-4880,ench,K‰^‚È“ú,6,,,,,,,,,,65535,,,,,{ /* ŽÀ‘•’† */ },{ bonus4 bAutoActiveItem,4880,100,5000,EAS_ATTACK|EAS_REVENGE|EAS_WEAPON|EAS_MAGIC|EAS_NORMAL|EAS_SKILL; }
-”­“®ðŒ‚É‹ß‰“‹——£•¨—ƒXƒLƒ‹UŒ‚‚ª‚È‚©‚Á‚½‚Ì‚Å‘S•”C³‚µ‚Ü‚µ‚½
-¦]‘O‚Ì‹Lq‚Å‚Í‘f‰£‚èUŒ‚E”íƒ_ƒ[ƒW‚Å‚µ‚©”­“®‚µ‚Ü‚¹‚ñ
+ãƒ»ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ 
+4875,ench,ç†Šã®åŠ›,6,,,,,,,,,,65535,,,,,{ /* å®Ÿè£…ä¸­ */ },{ bonus4 bAutoActiveItem,4875,200,5000,EAS_REVENGE|EAS_NORMAL|EAS_SKILL; }
+4877,ench,å…‰é€Ÿ,6,,,,,,,,,,65535,,,,,{ /* å®Ÿè£…ä¸­ */ },{ bonus4 bAutoActiveItem,4877,100,5000,EAS_ATTACK|EAS_WEAPON|EAS_NORMAL|EAS_SKILL; }
+4878,ench,é‹¼éŽ§,6,,,,,,,,,,65535,,,,,{ /* å®Ÿè£…ä¸­ */ },{ bonus4 bAutoActiveItem,4878,50,5000,EAS_REVENGE|EAS_NORMAL|EAS_SKILL; }
+4879,ench,å¤§é·²ã®çœ¼å…‰,6,,,,,,,,,,65535,,,,,{ /* å®Ÿè£…ä¸­ */ },{ bonus4 bAutoActiveItem,4879,300,5000,EAS_ATTACK|EAS_WEAPON|EAS_NORMAL|EAS_SKILL; }
+4880,ench,å¹¸é‹ãªæ—¥,6,,,,,,,,,,65535,,,,,{ /* å®Ÿè£…ä¸­ */ },{ bonus4 bAutoActiveItem,4880,100,5000,EAS_ATTACK|EAS_REVENGE|EAS_WEAPON|EAS_MAGIC|EAS_NORMAL|EAS_SKILL; }
+ç™ºå‹•æ¡ä»¶ã«è¿‘é è·é›¢ç‰©ç†ã‚¹ã‚­ãƒ«æ”»æ’ƒãŒãªã‹ã£ãŸã®ã§å…¨éƒ¨ä¿®æ­£ã—ã¾ã—ãŸ
+â€»å¾“å‰ã®è¨˜è¿°ã§ã¯ç´ æ®´ã‚Šæ”»æ’ƒãƒ»è¢«ãƒ€ãƒ¡ãƒ¼ã‚¸ã§ã—ã‹ç™ºå‹•ã—ã¾ã›ã‚“
 
 20240712	patch0212
-E22105-22134 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»22105-22134 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-¦22132#‰Î—‹‘å_ŒC# 22134#Ž·sŽÒ‚ÌƒVƒ…[ƒY# ƒZƒbƒgŒø‰Ê•¡ŽG‰»‚Ì‚½‚ßŽÀ‘•¸“x‚Í’á‚¢‚Å‚·
+â€»22132#ç«é›·å¤§ç¥žé´# 22134#åŸ·è¡Œè€…ã®ã‚·ãƒ¥ãƒ¼ã‚º# ã‚»ãƒƒãƒˆåŠ¹æžœè¤‡é›‘åŒ–ã®ãŸã‚å®Ÿè£…ç²¾åº¦ã¯ä½Žã„ã§ã™
 
 20240711	patch0211
-E22071-22104 22120 22225 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»22071-22104 22120 22225 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
 20240709	patch0210
-E18000-18110 300076-300113 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»18000-18110 300076-300113 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-E20240709ƒAƒbƒvƒf[ƒgŽÀ‘•(item_db.txt item_db2.txt)
-¦400700#[ˆß‘•] Â—´‚Ì”í‚è•¨# classnum = 2494 ‚Å•\Ž¦‚³‚ê‚Ü‚¹‚ñ
-¦“ª‘•”õ‚Ìƒf[ƒ^ƒtƒHƒ‹ƒ_‚ð‘S•”Šm”F‚µAkr‚ÌŽÀ‘•ƒf[ƒ^‚à’²‚×‚½‚Ì‚Å‚·‚ª‰ðŒˆ‚µ‚Ä‚¢‚Ü‚¹‚ñ
-¦lua act spr •R‚Ã‚¯‚éŠî‘b’è‹`‚Æ•\Ž¦ƒf[ƒ^‚ÍŠm”F‚µ‚Ä‚¢‚é‚Ì‚Å’²¸’†‚Æ‚È‚è‚Ü‚·
+ãƒ»20240709ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£…(item_db.txt item_db2.txt)
+â€»400700#[è¡£è£…] é’é¾ã®è¢«ã‚Šç‰©# classnum = 2494 ã§è¡¨ç¤ºã•ã‚Œã¾ã›ã‚“
+â€»é ­è£…å‚™ã®ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚©ãƒ«ãƒ€ã‚’å…¨éƒ¨ç¢ºèªã—ã€krã®å®Ÿè£…ãƒ‡ãƒ¼ã‚¿ã‚‚èª¿ã¹ãŸã®ã§ã™ãŒè§£æ±ºã—ã¦ã„ã¾ã›ã‚“
+â€»lua act spr ç´ã¥ã‘ã‚‹åŸºç¤Žå®šç¾©ã¨è¡¨ç¤ºãƒ‡ãƒ¼ã‚¿ã¯ç¢ºèªã—ã¦ã„ã‚‹ã®ã§èª¿æŸ»ä¸­ã¨ãªã‚Šã¾ã™
 
-Eclassnum_db.txtXV
+ãƒ»classnum_db.txtæ›´æ–°
 
-EitemInfo_EN.lua XV
+ãƒ»itemInfo_EN.lua æ›´æ–°
 
 20240708	patch0209
-E22000-22070 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»22000-22070 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EˆÈ‰º‚ÌƒJ[ƒh
-4165,card,ƒMƒOƒJ[ƒh,6,20,,10,,,,,,,2,,,,,{ /* ‹ßÚ•¨—UŒ‚‚ÅŽw’èŽí‘°“|‚µ‚½ŽžHPSP‰ñ•œ */ },{ bonus bSPPenaltyUnrig,5; }
-4167,card,ƒlƒŒƒCƒhƒJ[ƒh,6,20,,10,,,,,,,2,,,,,{ /* ‹ßÚ•¨—UŒ‚‚ÅŽw’èŽí‘°“|‚µ‚½ŽžHPSP‰ñ•œ */ },{ bonus bSPPenaltyUnrig,5; }
-4180,card,ƒhƒŠƒ‰[ƒJ[ƒh,6,20,,10,,,,,,,2,,,,,{ /* ‹ßÚ•¨—UŒ‚‚ÅŽw’èŽí‘°“|‚µ‚½ŽžHPSP‰ñ•œ */ },{ bonus bSPPenaltyUnrig,5; }
-4182,card,ƒfƒBƒAƒ{ƒŠƒbƒNƒJ[ƒh,6,20,,10,,,,,,,2,,,,,{ /* ‹ßÚ•¨—UŒ‚‚ÅŽw’èŽí‘°“|‚µ‚½ŽžHPSP‰ñ•œ */ },{ bonus bSPPenaltyUnrig,5; }
-4274,card,ƒ]ƒ“ƒrƒ}ƒXƒ^[ƒJ[ƒh,6,20,,10,,,,,,,2,,,,,{ /* ‹ßÚ•¨—UŒ‚‚ÅŽw’èŽí‘°“|‚µ‚½ŽžHPSP‰ñ•œ */ },{ bonus bSPPenaltyUnrig,5; }
-4289,card,ƒLƒƒƒ^ƒsƒ‰[ƒJ[ƒh,6,20,,10,,,,,,,2,,,,,{ /* ‹ßÚ•¨—UŒ‚‚ÅŽw’èŽí‘°“|‚µ‚½ŽžHPSP‰ñ•œ */ },{ bonus bSPPenaltyUnrig,5; }
-4307,card,ƒr[ƒgƒ‹ƒJ[ƒh,6,20,,10,,,,,,,2,,,,,{ /* ‹ßÚ•¨—UŒ‚‚ÅŽw’èŽí‘°“|‚µ‚½ŽžHPSP‰ñ•œ */ },{ bonus bSPPenaltyUnrig,5; }
-4308,card,ŽO—tå³ƒJ[ƒh,6,20,,10,,,,,,,2,,,,,{ /* ‹ßÚ•¨—UŒ‚‚ÅŽw’èŽí‘°“|‚µ‚½ŽžHPSP‰ñ•œ */ },{ bonus bSPPenaltyUnrig,5; }
-4316,card,ƒtƒFƒCƒNƒGƒ“ƒWƒFƒ‹ƒJ[ƒh,6,20,,10,,,,,,,2,,,,,{ /* ‹ßÚ•¨—UŒ‚‚ÅŽw’èŽí‘°“|‚µ‚½ŽžHPSP‰ñ•œ */ },{ bonus bSPPenaltyUnrig,5; }
-4329,card,ƒtƒFƒ“ƒ_[ƒNƒJ[ƒh,6,20,,10,,,,,,,2,,,,,{ /* ‹ßÚ•¨—UŒ‚‚ÅŽw’èŽí‘°“|‚µ‚½ŽžHPSP‰ñ•œ */ },{ bonus bSPPenaltyUnrig,5; }
-HPSP‰ñ•œƒ{[ƒiƒX[bonus3 bDefeatHPDrainValue][bonus3 bDefeatSPDrainValue]‚ÍŽd—l‘‚Ì[‹ßÚ•¨—UŒ‚‚Å“|‚µ‚½Žž]‚ÌðŒ‚ðŽw’è‚Å‚«‚¸–‚–@UŒ‚‚Å‚àŒø‰Ê‚ª”­¶‚·‚é‚½‚ßŒø‰Ê‚ð–¢ŽÀ‘•‰»
+ãƒ»ä»¥ä¸‹ã®ã‚«ãƒ¼ãƒ‰
+4165,card,ã‚®ã‚°ã‚«ãƒ¼ãƒ‰,6,20,,10,,,,,,,2,,,,,{ /* è¿‘æŽ¥ç‰©ç†æ”»æ’ƒã§æŒ‡å®šç¨®æ—å€’ã—ãŸæ™‚HPSPå›žå¾© */ },{ bonus bSPPenaltyUnrig,5; }
+4167,card,ãƒãƒ¬ã‚¤ãƒ‰ã‚«ãƒ¼ãƒ‰,6,20,,10,,,,,,,2,,,,,{ /* è¿‘æŽ¥ç‰©ç†æ”»æ’ƒã§æŒ‡å®šç¨®æ—å€’ã—ãŸæ™‚HPSPå›žå¾© */ },{ bonus bSPPenaltyUnrig,5; }
+4180,card,ãƒ‰ãƒªãƒ©ãƒ¼ã‚«ãƒ¼ãƒ‰,6,20,,10,,,,,,,2,,,,,{ /* è¿‘æŽ¥ç‰©ç†æ”»æ’ƒã§æŒ‡å®šç¨®æ—å€’ã—ãŸæ™‚HPSPå›žå¾© */ },{ bonus bSPPenaltyUnrig,5; }
+4182,card,ãƒ‡ã‚£ã‚¢ãƒœãƒªãƒƒã‚¯ã‚«ãƒ¼ãƒ‰,6,20,,10,,,,,,,2,,,,,{ /* è¿‘æŽ¥ç‰©ç†æ”»æ’ƒã§æŒ‡å®šç¨®æ—å€’ã—ãŸæ™‚HPSPå›žå¾© */ },{ bonus bSPPenaltyUnrig,5; }
+4274,card,ã‚¾ãƒ³ãƒ“ãƒžã‚¹ã‚¿ãƒ¼ã‚«ãƒ¼ãƒ‰,6,20,,10,,,,,,,2,,,,,{ /* è¿‘æŽ¥ç‰©ç†æ”»æ’ƒã§æŒ‡å®šç¨®æ—å€’ã—ãŸæ™‚HPSPå›žå¾© */ },{ bonus bSPPenaltyUnrig,5; }
+4289,card,ã‚­ãƒ£ã‚¿ãƒ”ãƒ©ãƒ¼ã‚«ãƒ¼ãƒ‰,6,20,,10,,,,,,,2,,,,,{ /* è¿‘æŽ¥ç‰©ç†æ”»æ’ƒã§æŒ‡å®šç¨®æ—å€’ã—ãŸæ™‚HPSPå›žå¾© */ },{ bonus bSPPenaltyUnrig,5; }
+4307,card,ãƒ“ãƒ¼ãƒˆãƒ«ã‚«ãƒ¼ãƒ‰,6,20,,10,,,,,,,2,,,,,{ /* è¿‘æŽ¥ç‰©ç†æ”»æ’ƒã§æŒ‡å®šç¨®æ—å€’ã—ãŸæ™‚HPSPå›žå¾© */ },{ bonus bSPPenaltyUnrig,5; }
+4308,card,ä¸‰è‘‰èŸ²ã‚«ãƒ¼ãƒ‰,6,20,,10,,,,,,,2,,,,,{ /* è¿‘æŽ¥ç‰©ç†æ”»æ’ƒã§æŒ‡å®šç¨®æ—å€’ã—ãŸæ™‚HPSPå›žå¾© */ },{ bonus bSPPenaltyUnrig,5; }
+4316,card,ãƒ•ã‚§ã‚¤ã‚¯ã‚¨ãƒ³ã‚¸ã‚§ãƒ«ã‚«ãƒ¼ãƒ‰,6,20,,10,,,,,,,2,,,,,{ /* è¿‘æŽ¥ç‰©ç†æ”»æ’ƒã§æŒ‡å®šç¨®æ—å€’ã—ãŸæ™‚HPSPå›žå¾© */ },{ bonus bSPPenaltyUnrig,5; }
+4329,card,ãƒ•ã‚§ãƒ³ãƒ€ãƒ¼ã‚¯ã‚«ãƒ¼ãƒ‰,6,20,,10,,,,,,,2,,,,,{ /* è¿‘æŽ¥ç‰©ç†æ”»æ’ƒã§æŒ‡å®šç¨®æ—å€’ã—ãŸæ™‚HPSPå›žå¾© */ },{ bonus bSPPenaltyUnrig,5; }
+HPSPå›žå¾©ãƒœãƒ¼ãƒŠã‚¹[bonus3 bDefeatHPDrainValue][bonus3 bDefeatSPDrainValue]ã¯ä»•æ§˜æ›¸ã®[è¿‘æŽ¥ç‰©ç†æ”»æ’ƒã§å€’ã—ãŸæ™‚]ã®æ¡ä»¶ã‚’æŒ‡å®šã§ããšé­”æ³•æ”»æ’ƒã§ã‚‚åŠ¹æžœãŒç™ºç”Ÿã™ã‚‹ãŸã‚åŠ¹æžœã‚’æœªå®Ÿè£…åŒ–
 
-¦‰ñ•œŒø‰ÊƒXƒNƒŠƒvƒg‘S”Ê‚ªUŒ‚ðŒ‚ðŽw’è‚Å‚«‚È‚¢‚Ì‚ÅŠÔˆá‚Á‚½‚Ü‚Ü‚ÌƒAƒCƒeƒ€‚ª‘½”‚ ‚èAŠY“–•”•ª‚Í‘S•”–¢ŽÀ‘•‰»‚µ‚Ä‚¢‚Ü‚·
+â€»å›žå¾©åŠ¹æžœã‚¹ã‚¯ãƒªãƒ—ãƒˆå…¨èˆ¬ãŒæ”»æ’ƒæ¡ä»¶ã‚’æŒ‡å®šã§ããªã„ã®ã§é–“é•ã£ãŸã¾ã¾ã®ã‚¢ã‚¤ãƒ†ãƒ ãŒå¤šæ•°ã‚ã‚Šã€è©²å½“éƒ¨åˆ†ã¯å…¨éƒ¨æœªå®Ÿè£…åŒ–ã—ã¦ã„ã¾ã™
 
 20240705	patch0208
-E20240702 ƒAƒbƒvƒf[ƒgŽÀ‘•(item_db.txt item_db2.txt classnum_db.txt)
-¦accessoryid.lub accname.lub spriterobeid.lub spriterobename.lub tb_layer_priority.lub transparentitem.lub ‚ÌXV‚ª•K—v‚Å‚·
+ãƒ»20240702 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£…(item_db.txt item_db2.txt classnum_db.txt)
+â€»accessoryid.lub accname.lub spriterobeid.lub spriterobename.lub tb_layer_priority.lub transparentitem.lub ã®æ›´æ–°ãŒå¿…è¦ã§ã™
 
 20240701	patch0207
-E22600-26218 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»22600-26218 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-Efunction_itemdb.sc ‚É [‹sŽE]Lv1 [‹sŽE]Lv2 [”j–Å]Lv1 [j•Ÿ]Lv1 ’Ç‰Á
+ãƒ»function_itemdb.sc ã« [è™æ®º]Lv1 [è™æ®º]Lv2 [ç ´æ»…]Lv1 [ç¥ç¦]Lv1 è¿½åŠ 
 
-¦‹}«’°‰Š‚Å‘Ì’²•s—Ç‚Ì‚½‚ß‰ñ•œ‚·‚é‚Ü‚ÅXV‹xŽ~
+â€»æ€¥æ€§è…¸ç‚Žã§ä½“èª¿ä¸è‰¯ã®ãŸã‚å›žå¾©ã™ã‚‹ã¾ã§æ›´æ–°ä¼‘æ­¢
 
 20240625	patch0206
-E27300-27412 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»27300-27412 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
 20240625	patch0205
-EƒAƒCƒeƒ€ˆÚ“®§ŒÀ‚ÌƒƒbƒZ[ƒWŽÀ‘•(mgstringtable.txt)
-¦ƒeƒXƒgŠÂ‹«‚ÉŽÀ‘•Ï‚Ý‚Å‚·‚ª˜a–ó‚³‚ê‚Ä‚¢‚é‚Ì‚ÅŽŸ‰ñƒeƒXƒgŠÂ‹«XV‚Å’u‚«Š·‚¦—\’è
+ãƒ»ã‚¢ã‚¤ãƒ†ãƒ ç§»å‹•åˆ¶é™ã®ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸å®Ÿè£…(mgstringtable.txt)
+â€»ãƒ†ã‚¹ãƒˆç’°å¢ƒã«å®Ÿè£…æ¸ˆã¿ã§ã™ãŒå’Œè¨³ã•ã‚Œã¦ã„ã‚‹ã®ã§æ¬¡å›žãƒ†ã‚¹ãƒˆç’°å¢ƒæ›´æ–°ã§ç½®ãæ›ãˆäºˆå®š
 
-Eitemmoveinfov5.txt ŽÀ‘•
-¦ƒeƒXƒgŠÂ‹«‚ÉŽÀ‘•Ï‚Ý‚Å‚·
-¦’†g‚Í“¯‚¶‚Å‚·
+ãƒ»itemmoveinfov5.txt å®Ÿè£…
+â€»ãƒ†ã‚¹ãƒˆç’°å¢ƒã«å®Ÿè£…æ¸ˆã¿ã§ã™
+â€»ä¸­èº«ã¯åŒã˜ã§ã™
 
-EƒAƒCƒeƒ€®—ñƒƒbƒZ[ƒW’Ç‰Á(mgstringtable.txt)
+ãƒ»ã‚¢ã‚¤ãƒ†ãƒ æ•´åˆ—ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸è¿½åŠ (mgstringtable.txt)
 
 20240624	patch0204
-E27127-27299 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»27127-27299 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-E300000”Ô‘ä C³Šm”FÏ‚Ý‚ÉƒRƒƒ“ƒg’Ç‰Á
+ãƒ»300000ç•ªå° ä¿®æ­£ç¢ºèªæ¸ˆã¿ã«ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
 20240622	patch0203
-E27040-27126 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»27040-27126 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-E300000”Ô‘ä C³Šm”FÏ‚Ý‚ÉƒRƒƒ“ƒg’Ç‰Á
+ãƒ»300000ç•ªå° ä¿®æ­£ç¢ºèªæ¸ˆã¿ã«ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EmapŽw’èŒø‰Ê‚ÌƒRƒƒ“ƒg’Ç‹L
+ãƒ»mapæŒ‡å®šåŠ¹æžœã®ã‚³ãƒ¡ãƒ³ãƒˆè¿½è¨˜
 
-E–‚–@UŒ‚Žž‚ÉHPSP‰ñ•œŒø‰Ê‚ÉƒRƒƒ“ƒg’Ç‹L
+ãƒ»é­”æ³•æ”»æ’ƒæ™‚ã«HPSPå›žå¾©åŠ¹æžœã«ã‚³ãƒ¡ãƒ³ãƒˆè¿½è¨˜
 
 20240620	patch0202
-E27000-27039 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»27000-27039 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-Efunction_itemdb.sc ®—ŽÀŽ{
+ãƒ»function_itemdb.sc æ•´ç†å®Ÿæ–½
 
-¦[bonus3 bAddMonsterDropItem]‚Íˆê”Ô‚‚¢‚à‚Ì‚¾‚¯—LŒø‚È‚Ì‚ÅAS‚Ì‚æ‚¤‚É•¡”‚ÌŠÖ”‚Å•ª—£‚µ‚ÄðŒ‚ð‘g‚Ý‡‚í‚¹‚é•K—v‚ª‚ ‚è‚Ü‚¹‚ñ(if‚¾‚¯‚Å‘«‚è‚é)
-¦if(getlook(2) == 3||5||7) {} ‚Æ‚¢‚¤‹Lq‚Í‹@”\‚µ‚È‚¢‚½‚ßif(getlook(2) == 3|| getlook(2) ==  5|| getlook(2) ==  7) {} ‚Æ•ªŠ„‚·‚é
-¦[get****  == ðŒ”] Œn‚ÌŠÖ”‚ÍðŒ”‚ð ”||”||” ‚ÅˆêŠ‡‚Å‚«‚È‚¢‚Ì‚Å•ªŠ„‹Lq‚ª•K—v
-¦ƒAƒNƒZƒTƒŠ‚ÆƒJ[ƒh‚ÌƒZƒbƒgŒø‰Ê‚Í•¡”‘•”õ‚ÅƒZƒbƒgŒø‰Ê‚ªd•¡‚µ‚ÄoŒ»‚·‚é‚Ì‚ÅƒAƒNƒZƒTƒŠ‘¤‚É‹Lq‚·‚éH•v‚ª•K—v‚Å‚·
-¦ƒpƒ^[ƒ“‚Í@•ŠíƒJ[ƒh8–‡ ƒAƒNƒZƒTƒŠ2‚Â •Ší2Ží [“ªã’†‰º ŠZ Œ¨ •Ší ‚ ŒC ƒAƒNƒZ2 ‚É“¯‚¶ƒGƒ“ƒ`ƒƒ1–‡‚Æ‰¼’è] ‚ª‚ ‚é‚½‚ßŒ»sŽd—l‚Å‚Í[ƒZƒbƒgŒø‰Ê‚Í1‘g‚ÌŒ´‘¥]‚ªŽÀ‘•‚Å‚«‚Ü‚¹‚ñ
-¦29371#^—‚Ì‰ð•ú# 29509#‹Œ†# 311439#ˆÙ‹«‚Ì“ŠŽÒ# 311072#‹NŒ¹‚Ì‰¤# 311073#–Lõ‚Ì—_# 311074#‰p—Y‚ÌŠM‰Ì# 311075#–ïÐ‚Ì–‚«# ƒZƒbƒgŒø‰Ê‹N“_‚Æ‚È‚éƒGƒ“ƒ`ƒƒ‚É’ˆÓ‚ª•K—v
+â€»[bonus3 bAddMonsterDropItem]ã¯ä¸€ç•ªé«˜ã„ã‚‚ã®ã ã‘æœ‰åŠ¹ãªã®ã§ASã®ã‚ˆã†ã«è¤‡æ•°ã®é–¢æ•°ã§åˆ†é›¢ã—ã¦æ¡ä»¶ã‚’çµ„ã¿åˆã‚ã›ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã›ã‚“(ifã ã‘ã§è¶³ã‚Šã‚‹)
+â€»if(getlook(2) == 3||5||7) {} ã¨ã„ã†è¨˜è¿°ã¯æ©Ÿèƒ½ã—ãªã„ãŸã‚if(getlook(2) == 3|| getlook(2) ==  5|| getlook(2) ==  7) {} ã¨åˆ†å‰²ã™ã‚‹
+â€»[get****  == æ¡ä»¶æ•°] ç³»ã®é–¢æ•°ã¯æ¡ä»¶æ•°ã‚’ æ•°||æ•°||æ•° ã§ä¸€æ‹¬ã§ããªã„ã®ã§åˆ†å‰²è¨˜è¿°ãŒå¿…è¦
+â€»ã‚¢ã‚¯ã‚»ã‚µãƒªã¨ã‚«ãƒ¼ãƒ‰ã®ã‚»ãƒƒãƒˆåŠ¹æžœã¯è¤‡æ•°è£…å‚™ã§ã‚»ãƒƒãƒˆåŠ¹æžœãŒé‡è¤‡ã—ã¦å‡ºç¾ã™ã‚‹ã®ã§ã‚¢ã‚¯ã‚»ã‚µãƒªå´ã«è¨˜è¿°ã™ã‚‹å·¥å¤«ãŒå¿…è¦ã§ã™
+â€»ãƒ‘ã‚¿ãƒ¼ãƒ³ã¯ã€€æ­¦å™¨ã‚«ãƒ¼ãƒ‰8æžš ã‚¢ã‚¯ã‚»ã‚µãƒª2ã¤ æ­¦å™¨2ç¨® [é ­ä¸Šä¸­ä¸‹ éŽ§ è‚© æ­¦å™¨ ç›¾ é´ ã‚¢ã‚¯ã‚»2 ã«åŒã˜ã‚¨ãƒ³ãƒãƒ£1æžšã¨ä»®å®š] ãŒã‚ã‚‹ãŸã‚ç¾è¡Œä»•æ§˜ã§ã¯[ã‚»ãƒƒãƒˆåŠ¹æžœã¯1çµ„ã®åŽŸå‰‡]ãŒå®Ÿè£…ã§ãã¾ã›ã‚“
+â€»29371#çœŸç†ã®è§£æ”¾# 29509#è±ªå‚‘# 311439#ç•°å¢ƒã®çµ±è½„è€…# 311072#èµ·æºã®çŽ‹# 311073#è±Šç©£ã®å¥³ç¥ž# 311074#è‹±é›„ã®å‡±æ­Œ# 311075#åŽ„ç½ã®é­”å°†# ã‚»ãƒƒãƒˆåŠ¹æžœèµ·ç‚¹ã¨ãªã‚‹ã‚¨ãƒ³ãƒãƒ£ã«æ³¨æ„ãŒå¿…è¦
 
 20240618	patch0201
-E20240618 ƒAƒbƒvƒf[ƒgŽÀ‘•(item_db.txt item_db2.txt item_cardtype.txt classnum_db.txt)
+ãƒ»20240618 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£…(item_db.txt item_db2.txt item_cardtype.txt classnum_db.txt)
 
-E312799 AS”­“®—¦‚Æ‹LqC³
+ãƒ»312799 ASç™ºå‹•çŽ‡ã¨è¨˜è¿°ä¿®æ­£
 
-Eitem_memo.txt ŽèŠÔ‚ª‘‚¦‚é‚Ì‚Å”pŽ~íœ
+ãƒ»item_memo.txt æ‰‹é–“ãŒå¢—ãˆã‚‹ã®ã§å»ƒæ­¢å‰Šé™¤
 
 20240617	patch0200
-E28903-28962 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»28903-28962 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
 20240615	patch0199
-EŒÃ‚¢ƒJ[ƒh’  XV(item_random.txt)
-¦20150721ƒAƒbƒvƒf[ƒg‚É‘Î‰ž
-¦•ê”2000ŒÂ‚Ì‚Ü‚Æ‚Ü‚Á‚½î•ñ(2024)‚ðƒf[ƒ^‰»‚µ‚Ä®—
-¦oŒ»—¦‚ð3‚Â‚ÌƒOƒ‹[ƒv‚É‚í‚¯‚ÄŽÀ‘Ô‚É‹ß‚­‚È‚é‚æ‚¤’²®(ŒÂ•ÊÝ’è—¦‚Å‚Í‚È‚­‘S‘Ì‚ÌŒ‹‰Ê‚ðdŽ‹‚µ‚½‚Ì‚Å”Žš‚Éª‹’‚Í‚ ‚è‚Ü‚¹‚ñ)
-¦[100645 Žµ‰¤‰Æƒ`ƒ‡ƒRƒpƒbƒN]‚É‹Lq‚Ì[‡Aƒ‚ƒ“ƒXƒ^[ƒJ[ƒh 459Ží]‚ðª‹’‚ÉoŒ»459Ží‚Æ”»’f‚µ‚Ü‚µ‚½
-¦‡Œv460Ží‚É‚È‚Á‚½‚Ì‚ÅA1–‡o‚Ä‚±‚È‚¢‰Â”\«‚ª‚ ‚è‚Ü‚·(ŒÂ•Ê’²¸‚Í”ñí‚ÉŽžŠÔ‚©‚©‚èA459Ží‚àŠm’è‚Å‚Í‚È‚¢‚½‚ß’²¸ŒÀŠE‚Å‚·)
+ãƒ»å¤ã„ã‚«ãƒ¼ãƒ‰å¸³ æ›´æ–°(item_random.txt)
+â€»20150721ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã«å¯¾å¿œ
+â€»æ¯æ•°2000å€‹ã®ã¾ã¨ã¾ã£ãŸæƒ…å ±(2024)ã‚’ãƒ‡ãƒ¼ã‚¿åŒ–ã—ã¦æ•´ç†
+â€»å‡ºç¾çŽ‡ã‚’3ã¤ã®ã‚°ãƒ«ãƒ¼ãƒ—ã«ã‚ã‘ã¦å®Ÿæ…‹ã«è¿‘ããªã‚‹ã‚ˆã†èª¿æ•´(å€‹åˆ¥è¨­å®šçŽ‡ã§ã¯ãªãå…¨ä½“ã®çµæžœã‚’é‡è¦–ã—ãŸã®ã§æ•°å­—ã«æ ¹æ‹ ã¯ã‚ã‚Šã¾ã›ã‚“)
+â€»[100645 ä¸ƒçŽ‹å®¶ãƒãƒ§ã‚³ãƒ‘ãƒƒã‚¯]ã«è¨˜è¿°ã®[â‘¡ãƒ¢ãƒ³ã‚¹ã‚¿ãƒ¼ã‚«ãƒ¼ãƒ‰ 459ç¨®]ã‚’æ ¹æ‹ ã«å‡ºç¾459ç¨®ã¨åˆ¤æ–­ã—ã¾ã—ãŸ
+â€»åˆè¨ˆ460ç¨®ã«ãªã£ãŸã®ã§ã€1æžšå‡ºã¦ã“ãªã„å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™(å€‹åˆ¥èª¿æŸ»ã¯éžå¸¸ã«æ™‚é–“ã‹ã‹ã‚Šã€459ç¨®ã‚‚ç¢ºå®šã§ã¯ãªã„ãŸã‚èª¿æŸ»é™ç•Œã§ã™)
 
-E20150721 ƒAƒbƒvƒf[ƒg‚Í [ŒÃ‚­Â‚¢” ][ŒÃ‚¢Ž‡F‚Ì” ][•óÎ” ][ƒRƒCƒ“ƒzƒ‹ƒ_[][ƒ_ƒCƒ„ŒðŠ·ƒNƒGƒXƒg]‚ª‘ÎÛ‚È‚Ì‚ÅŽc‚è‚àXV‚µ‚Ü‚·
+ãƒ»20150721 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã¯ [å¤ãé’ã„ç®±][å¤ã„ç´«è‰²ã®ç®±][å®çŸ³ç®±][ã‚³ã‚¤ãƒ³ãƒ›ãƒ«ãƒ€ãƒ¼][ãƒ€ã‚¤ãƒ¤äº¤æ›ã‚¯ã‚¨ã‚¹ãƒˆ]ãŒå¯¾è±¡ãªã®ã§æ®‹ã‚Šã‚‚æ›´æ–°ã—ã¾ã™
 
 20240613	patch0198
-E28704-28784 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»28704-28784 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-Enpc_signboard.sc XV
+ãƒ»npc_signboard.sc æ›´æ–°
 
 20240611	patch0197
-E28602-28643 ƒ~ƒXC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»28602-28643 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-EƒAƒrƒXŒn•Ší ƒZƒbƒgŒø‰ÊC³ •Ší”j‰óOP’Ç‹L
+ãƒ»ã‚¢ãƒ“ã‚¹ç³»æ­¦å™¨ ã‚»ãƒƒãƒˆåŠ¹æžœä¿®æ­£ æ­¦å™¨ç ´å£ŠOPè¿½è¨˜
 
 20240609	patch0196
-Enpc_ench_002.sc 3‚Â‚ÌŠÖ”’Ç‰Á
+ãƒ»npc_ench_002.sc 3ã¤ã®é–¢æ•°è¿½åŠ 
 
 
 20240608	patch0195
-E28561-28598 28920 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»28561-28598 28920 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-Eitem_db2.txt C³
+ãƒ»item_db2.txt ä¿®æ­£
 
-Eiteminfo_en.lua ŒöŠJ
+ãƒ»iteminfo_en.lua å…¬é–‹
 
-Eclassnum_db.txt XV
+ãƒ»classnum_db.txt æ›´æ–°
 
-Edb_editorƒŒƒCƒ„[ì¬ Auriga item_db Editer Ver1.0.2.0—p‚ÌMODƒtƒ@ƒCƒ‹ŒöŠJ(class.conf const.conf item_bonus.conf scno.conf script.conf)
-¦Ž„‚ªŽg‚Á‚Ä‚¢‚é‚à‚Ì‚Å‚·
-¦ŒŸõ‚µ‚½‚ço‚Ä‚­‚é‚à‚Ì‚ÅA‘¼Š‚Åì‚ç‚ê‚½‚à‚Ì‚Å‚·
-¦ŒÃ‚¢‚Ì‚Å6Œ…‚É‘Î‰ž‚µ‚Ä‚¢‚Ü‚¹‚ñ‚ªA‘å‘ÌŽg‚¦‚Ü‚·
-¦ì‹ÆH’ö‚ðŒ¸‚ç‚·‚½‚ß‚ÉÅ“K‰»‚µ‚Ä‚¢‚Ü‚·
-¦4ŽŸEAŠg’£4ŽŸE‚Ü‚Å‘Î‰ž‚µ‚Ä‚¢‚Ü‚·
+ãƒ»db_editorãƒ¬ã‚¤ãƒ¤ãƒ¼ä½œæˆ Auriga item_db Editer Ver1.0.2.0ç”¨ã®MODãƒ•ã‚¡ã‚¤ãƒ«å…¬é–‹(class.conf const.conf item_bonus.conf scno.conf script.conf)
+â€»ç§ãŒä½¿ã£ã¦ã„ã‚‹ã‚‚ã®ã§ã™
+â€»æ¤œç´¢ã—ãŸã‚‰å‡ºã¦ãã‚‹ã‚‚ã®ã§ã€ä»–æ‰€ã§ä½œã‚‰ã‚ŒãŸã‚‚ã®ã§ã™
+â€»å¤ã„ã®ã§6æ¡ã«å¯¾å¿œã—ã¦ã„ã¾ã›ã‚“ãŒã€å¤§ä½“ä½¿ãˆã¾ã™
+â€»ä½œæ¥­å·¥ç¨‹ã‚’æ¸›ã‚‰ã™ãŸã‚ã«æœ€é©åŒ–ã—ã¦ã„ã¾ã™
+â€»4æ¬¡è·ã€æ‹¡å¼µ4æ¬¡è·ã¾ã§å¯¾å¿œã—ã¦ã„ã¾ã™
 
-EenchƒŒƒCƒ„[ì¬ npc_ench_002.sc ’Ç‰Á
-¦·•ª‚ð’Ç‚¢‚©‚¯‚È‚ª‚ç”äŠr‚·‚é‚½‚ß‚Ì‚à‚Ì‚ÅA¡Œãrev‚ªi‚ñ‚¾•ªƒtƒ@ƒCƒ‹‚ª‘‚¦A‚Ç‚Ì’iŠK‚©‚ç‚Å‚à·•ª‚ð“Ç‚ß‚é‚æ‚¤‚É‚È‚è‚Ü‚·
+ãƒ»enchãƒ¬ã‚¤ãƒ¤ãƒ¼ä½œæˆ npc_ench_002.sc è¿½åŠ 
+â€»å·®åˆ†ã‚’è¿½ã„ã‹ã‘ãªãŒã‚‰æ¯”è¼ƒã™ã‚‹ãŸã‚ã®ã‚‚ã®ã§ã€ä»Šå¾ŒrevãŒé€²ã‚“ã åˆ†ãƒ•ã‚¡ã‚¤ãƒ«ãŒå¢—ãˆã€ã©ã®æ®µéšŽã‹ã‚‰ã§ã‚‚å·®åˆ†ã‚’èª­ã‚ã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã™
 
 20240607	patch0194
-Enpc_ench_001.sc ŽÀ‘•
-¦‚Ç‚Ì‚æ‚¤‚ÈNPC‚È‚Ì‚©‚ÍNPC‚ð“Ç‚ñ‚Å‰º‚³‚¢
+ãƒ»npc_ench_001.sc å®Ÿè£…
+â€»ã©ã®ã‚ˆã†ãªNPCãªã®ã‹ã¯NPCã‚’èª­ã‚“ã§ä¸‹ã•ã„
 
-Emap.h hat_effect‚ÌãŒÀ”‚ðXV(map.h
-¦XV‚µ‚È‚­‚Ä‚àˆêŒ©“®ì‚µ‚Ä‚¢‚Ü‚·‚ªAÝ’è‚ª‘¶Ý‚·‚é‚Ì‚ÅXV
+ãƒ»map.h hat_effectã®ä¸Šé™æ•°ã‚’æ›´æ–°(map.h
+â€»æ›´æ–°ã—ãªãã¦ã‚‚ä¸€è¦‹å‹•ä½œã—ã¦ã„ã¾ã™ãŒã€è¨­å®šãŒå­˜åœ¨ã™ã‚‹ã®ã§æ›´æ–°
 
 20240606	patch0193
-E20240604 ƒAƒbƒvƒf[ƒg ŽÀ‘•(item_cardtype.* item_db.* item_db2.*)
+ãƒ»20240604 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ å®Ÿè£…(item_cardtype.* item_db.* item_db2.*)
 
-Ehateffect XV(const.* status.h)
-¦accessoryid.lub accname.lub spriterobeid.lub spriterobename.lub tb_layer_priority.lub hateffectinfo.lub transparentitem.lub ‚ÌXV‚ª•K—v‚Å‚·
-¦hateffectinfo.lub ‚Í[read datafolder first]‚ª”½‰f‚³‚ê‚È‚¢‚Ì‚ÅGRF‚ðXV‚µ‚Ä‚­‚¾‚³‚¢
+ãƒ»hateffect æ›´æ–°(const.* status.h)
+â€»accessoryid.lub accname.lub spriterobeid.lub spriterobename.lub tb_layer_priority.lub hateffectinfo.lub transparentitem.lub ã®æ›´æ–°ãŒå¿…è¦ã§ã™
+â€»hateffectinfo.lub ã¯[read datafolder first]ãŒåæ˜ ã•ã‚Œãªã„ã®ã§GRFã‚’æ›´æ–°ã—ã¦ãã ã•ã„
 
-E28507-28560ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»28507-28560ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
 20240603	patch0192
-Egetequiprefinerycnt()/n getskilllv(" ")/n BaseLevel/n ƒXƒLƒ‹ƒŒƒxƒ‹ŒvŽZŽ®‚ÅŠ„‚é‚Æ‚«‚É()‚Å‚­‚­‚èŒvŽZ‚ð—Dæ‚³‚¹‚é‚Æ‚±‚ë‚ð()‚Å‚­‚­‚ç‚È‚©‚Á‚½‚½‚ß‚ÉŒvŽZŒ‹‰Ê‚ª‚Ü‚ê‚Äo‚Ä‚­‚éƒ~ƒX‚ðC³
+ãƒ»getequiprefinerycnt()/n getskilllv(" ")/n BaseLevel/n ã‚¹ã‚­ãƒ«ãƒ¬ãƒ™ãƒ«è¨ˆç®—å¼ã§å‰²ã‚‹ã¨ãã«()ã§ããã‚Šè¨ˆç®—ã‚’å„ªå…ˆã•ã›ã‚‹ã¨ã“ã‚ã‚’()ã§ããã‚‰ãªã‹ã£ãŸãŸã‚ã«è¨ˆç®—çµæžœãŒåˆ»ã¾ã‚Œã¦å‡ºã¦ãã‚‹ãƒŸã‚¹ã‚’ä¿®æ­£
 
-Eif(getequipid(7) == || getequipid(8) == ) {} ‚ðŽg‚Á‚Ä‚¢‚éƒAƒNƒZƒTƒŠ[ƒZƒbƒgŒø‰Ê‚ð equippeditem() ‚ÉÅ“K‰»
+ãƒ»if(getequipid(7) == || getequipid(8) == ) {} ã‚’ä½¿ã£ã¦ã„ã‚‹ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ã‚»ãƒƒãƒˆåŠ¹æžœã‚’ equippeditem() ã«æœ€é©åŒ–
 
 20240531	patch0191
-E28500-28506ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»28500-28506ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-Ereadparam()‚ÌŒvŽZŽ®‚ÅŠ„‚é‚Æ‚«‚É()‚Å‚­‚­‚èŒvŽZ‚ð—Dæ‚³‚¹‚é‚Æ‚±‚ë‚ð()‚Å‚­‚­‚ç‚È‚©‚Á‚½‚½‚ß‚ÉŒvŽZŒ‹‰Ê‚ª‚Ü‚ê‚Äo‚Ä‚­‚éƒ~ƒX‚ðC³
-—á
-13150,weapon,ƒuƒ‰ƒ“ƒ`,15,3000,,500,50:0,,5,3,268435456,2,34,1,1,18,1,{},{ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*(readparam(bInt)/10); if(readparam(bInt) >= 110) { bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",30; } }
+ãƒ»readparam()ã®è¨ˆç®—å¼ã§å‰²ã‚‹ã¨ãã«()ã§ããã‚Šè¨ˆç®—ã‚’å„ªå…ˆã•ã›ã‚‹ã¨ã“ã‚ã‚’()ã§ããã‚‰ãªã‹ã£ãŸãŸã‚ã«è¨ˆç®—çµæžœãŒåˆ»ã¾ã‚Œã¦å‡ºã¦ãã‚‹ãƒŸã‚¹ã‚’ä¿®æ­£
+ä¾‹
+13150,weapon,ãƒ–ãƒ©ãƒ³ãƒ,15,3000,,500,50:0,,5,3,268435456,2,34,1,1,18,1,{},{ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*(readparam(bInt)/10); if(readparam(bInt) >= 110) { bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",30; } }
 
 - bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*readparam(bInt)/10;
 + bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*(readparam(bInt)/10);
-()‚ð‚Â‚¯‚È‚¢‚Æ Int‚ª2‚Å‚à 7*2/10 = 14/10 = 1.4 = 1 ‚Æ‚È‚èInt10‚Ý‚Å+7‚³‚ê‚éŒø‰Ê‚É‚È‚ç‚È‚¢
+()ã‚’ã¤ã‘ãªã„ã¨ IntãŒ2ã§ã‚‚ 7*2/10 = 14/10 = 1.4 = 1 ã¨ãªã‚ŠInt10åˆ»ã¿ã§+7ã•ã‚Œã‚‹åŠ¹æžœã«ãªã‚‰ãªã„
 
-¦“¯—l‚Ìƒ~ƒX‚Í¸˜B’l‚Æƒx[ƒXƒŒƒxƒ‹‚ÌƒXƒe[ƒ^ƒXŒvŽZ‚Å‚àoŒ»‚·‚é‚½‚ß—Dæ‚µ‚ÄC³‚µ‚Ü‚·
+â€»åŒæ§˜ã®ãƒŸã‚¹ã¯ç²¾éŒ¬å€¤ã¨ãƒ™ãƒ¼ã‚¹ãƒ¬ãƒ™ãƒ«ã®ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹è¨ˆç®—ã§ã‚‚å‡ºç¾ã™ã‚‹ãŸã‚å„ªå…ˆã—ã¦ä¿®æ­£ã—ã¾ã™
 
 20240530	patch0190
-E28373-28499 28920 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»28373-28499 28920 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
 20240529	patch0189
-EƒXƒLƒ‹EƒXƒe[ƒ^ƒXNPCŽÀ‘•(npc_signboard.sc)
+ãƒ»ã‚¹ã‚­ãƒ«ãƒ»ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹NPCå®Ÿè£…(npc_signboard.sc)
 
-E‘qŒÉNPC‚ðƒ‰ƒU[ƒjƒƒ‚Æƒ}ƒ‰ƒ““‡‚ÉŠg’£Ý’è
-¦Œ»Ý‚Ì‘qŒÉƒVƒXƒeƒ€‚ÍãŒÀ600’PˆÊ‚Å3‚ÂA‘¼ƒ[ƒ‹ƒh‚Æ˜I“Vê—pƒT[ƒo[‚ÉˆÚ“®‰Â”\‚ÈãˆÊ‘qŒÉ‚ª1‚Â‚Ì‰^—p‚Å‚·‚ª‘Î‰ž‚µ‚Ä‚¢‚Ü‚¹‚ñ‚Ì‚Åƒ~ƒ~ƒbƒN‘qŒÉNPC‚Í‚»‚ê‚¼‚ê1‚Â‚Å‚·
+ãƒ»å€‰åº«NPCã‚’ãƒ©ã‚¶ãƒ¼ãƒ‹ãƒ£ã¨ãƒžãƒ©ãƒ³å³¶ã«æ‹¡å¼µè¨­å®š
+â€»ç¾åœ¨ã®å€‰åº«ã‚·ã‚¹ãƒ†ãƒ ã¯ä¸Šé™600å˜ä½ã§3ã¤ã€ä»–ãƒ¯ãƒ¼ãƒ«ãƒ‰ã¨éœ²å¤©å°‚ç”¨ã‚µãƒ¼ãƒãƒ¼ã«ç§»å‹•å¯èƒ½ãªä¸Šä½å€‰åº«ãŒ1ã¤ã®é‹ç”¨ã§ã™ãŒå¯¾å¿œã—ã¦ã„ã¾ã›ã‚“ã®ã§ãƒŸãƒŸãƒƒã‚¯å€‰åº«NPCã¯ãã‚Œãžã‚Œ1ã¤ã§ã™
 
 20240528	patch0188
-E20240528 ƒAƒbƒvƒf[ƒgŽÀ‘•
-¦10577#[2024”N]‹†‹É¸˜B‚¨Šy‚µ‚Ýƒ`ƒPƒbƒg‚Ì” # ‚Ì‚ÝV‹KŽÀ‘•‚Å‚·
+ãƒ»20240528 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£…
+â€»10577#[2024å¹´]ç©¶æ¥µç²¾éŒ¬ãŠæ¥½ã—ã¿ãƒã‚±ãƒƒãƒˆã®ç®±# ã®ã¿æ–°è¦å®Ÿè£…ã§ã™
 
 20240526	patch0187
-E28342-28372 28551 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»28342-28372 28551 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
-¦ƒCƒ“ƒyƒŠƒAƒ‹*** ƒZƒbƒgŒø‰Ê‚ÍƒZƒbƒgæƒAƒCƒeƒ€‚É•ÊƒAƒCƒeƒ€‚ÌƒZƒbƒg‚ªÝ’è‚³‚êA•Ê‚ÌƒZƒbƒgŒø‰Ê‚ÌƒAƒCƒeƒ€‚Ìæ‚ÉX‚É•Ê‚ÉƒZƒbƒgƒAƒCƒeƒ€‚ªÝ’è‚³‚êAƒZƒbƒgŒø‰ÊŽ©‘Ì‚ª“ü‚ê‘Ö‚í‚èA‘½dƒZƒbƒgŒø‰Ê‚Æ‚È‚èÅ[•”‚Ü‚Å‘S—e‚ªŒ©‚¦‚¸ƒZƒbƒgŒø‰Ê‚ÌŠÇ—‚ªŒ»sŽd—l‚Å‚Í¢“ï‚È‚½‚ß•”•ªŽÀ‘•‚Æ‚È‚è‚Ü‚·
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
+â€»ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«*** ã‚»ãƒƒãƒˆåŠ¹æžœã¯ã‚»ãƒƒãƒˆå…ˆã‚¢ã‚¤ãƒ†ãƒ ã«åˆ¥ã‚¢ã‚¤ãƒ†ãƒ ã®ã‚»ãƒƒãƒˆãŒè¨­å®šã•ã‚Œã€åˆ¥ã®ã‚»ãƒƒãƒˆåŠ¹æžœã®ã‚¢ã‚¤ãƒ†ãƒ ã®å…ˆã«æ›´ã«åˆ¥ã«ã‚»ãƒƒãƒˆã‚¢ã‚¤ãƒ†ãƒ ãŒè¨­å®šã•ã‚Œã€ã‚»ãƒƒãƒˆåŠ¹æžœè‡ªä½“ãŒå…¥ã‚Œæ›¿ã‚ã‚Šã€å¤šé‡ã‚»ãƒƒãƒˆåŠ¹æžœã¨ãªã‚Šæœ€æ·±éƒ¨ã¾ã§å…¨å®¹ãŒè¦‹ãˆãšã‚»ãƒƒãƒˆåŠ¹æžœã®ç®¡ç†ãŒç¾è¡Œä»•æ§˜ã§ã¯å›°é›£ãªãŸã‚éƒ¨åˆ†å®Ÿè£…ã¨ãªã‚Šã¾ã™
 
-Eƒuƒ‹[ƒgŒnƒAƒCƒeƒ€ 29649 29650 310506 310507 [‘S‚Ä‚ÌŽí‘°]‚ÌDEFEMDEF–³Ž‹ callfunc‚ðŽg‚¢Å“K‰»
+ãƒ»ãƒ–ãƒ«ãƒ¼ãƒˆç³»ã‚¢ã‚¤ãƒ†ãƒ  29649 29650 310506 310507 [å…¨ã¦ã®ç¨®æ—]ã®DEFãƒ»MDEFç„¡è¦– callfuncã‚’ä½¿ã„æœ€é©åŒ–
 
 20240526	patch0186
-E28300-28340 28350 28432 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»28300-28340 28350 28432 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-E[Rct_DemiHuman] ‚ð [Rct_Human] ‚Éƒ[ƒ‹ƒoƒbƒN
-¦\•ª‚È—‰ð‚Ì‚È‚¢‚Ü‚Ü‘‚¢‚½‚Ì‚Åˆê’U–ß‚µ‚ÄŒã“úŽÀ‘•‚µ‚Ü‚·
-¦1549ˆÈ‘O‚Ìƒo[ƒWƒ‡ƒ“‚Å‚àŽg‚¦‚é‚æ‚¤‚É‚È‚è‚Ü‚·‚ªŒÀ’è“I‚Å‚·
+ãƒ»[Rct_DemiHuman] ã‚’ [Rct_Human] ã«ãƒ­ãƒ¼ãƒ«ãƒãƒƒã‚¯
+â€»ååˆ†ãªç†è§£ã®ãªã„ã¾ã¾æ›¸ã„ãŸã®ã§ä¸€æ—¦æˆ»ã—ã¦å¾Œæ—¥å®Ÿè£…ã—ã¾ã™
+â€»1549ä»¥å‰ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§ã‚‚ä½¿ãˆã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã™ãŒé™å®šçš„ã§ã™
 
-Eƒƒƒ“Œn‘•”õ‚ÌŠˆ«‰»ðŒ‚ÉƒXƒLƒ‹Žg—pE’ÊíUŒ‚‚Ì’Ç‹L
+ãƒ»ãƒ¡ãƒ­ãƒ³ç³»è£…å‚™ã®æ´»æ€§åŒ–æ¡ä»¶ã«ã‚¹ã‚­ãƒ«ä½¿ç”¨ãƒ»é€šå¸¸æ”»æ’ƒã®è¿½è¨˜
 
-Eƒƒƒ“Œn‘•”õ‚Ì[‘S‚Ä‚ÌŽí‘°]‚ÌDEFEMDEF–³Ž‹ callfunc‚ðŽg‚¢Å“K‰»
+ãƒ»ãƒ¡ãƒ­ãƒ³ç³»è£…å‚™ã®[å…¨ã¦ã®ç¨®æ—]ã®DEFãƒ»MDEFç„¡è¦– callfuncã‚’ä½¿ã„æœ€é©åŒ–
 
-EE‹ÆƒpƒbƒP[ƒWŒn‚Ì•Ší‚Ì[‘S‚Ä‚ÌŽí‘°]‚ÌDEFEMDEF–³Ž‹ callfunc‚ðŽg‚¢Å“K‰»
-¦‘¼‚ÌŒø‰ÊŠm”F‚ÍŒã“ú
+ãƒ»è·æ¥­ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ç³»ã®æ­¦å™¨ã®[å…¨ã¦ã®ç¨®æ—]ã®DEFãƒ»MDEFç„¡è¦– callfuncã‚’ä½¿ã„æœ€é©åŒ–
+â€»ä»–ã®åŠ¹æžœç¢ºèªã¯å¾Œæ—¥
 
 20240525	patch0185
-E27031 “Ç‚Ýž‚ß‚È‚­‚È‚é‹Lqƒ~ƒXC³
+ãƒ»27031 èª­ã¿è¾¼ã‚ãªããªã‚‹è¨˜è¿°ãƒŸã‚¹ä¿®æ­£
 
 20240524	patch0184
-E28108-28259 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»28108-28259 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-E27031 27032 27301 ƒRƒƒ“ƒg’Ç‹L
+ãƒ»27031 27032 27301 ã‚³ãƒ¡ãƒ³ãƒˆè¿½è¨˜
 
-E4175 ’²¸‚µ‚½‚Ì‚Å–{ŽÀ‘•
+ãƒ»4175 èª¿æŸ»ã—ãŸã®ã§æœ¬å®Ÿè£…
 
 20240522	patch0183
-E28003-28049 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»28003-28049 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-E1169 1174 C³
+ãƒ»1169 1174 ä¿®æ­£
 
-Ecallfunc Šg’£
-¦[‚·‚×‚Ä‚ÌŽí‘°] + [•¨—E–‚–@ƒ_ƒ[ƒW‘‰Á][•¨—E–‚–@Žó‚¯‚éƒ_ƒ[ƒWŒ¸­][DEFEMDEF–³Ž‹] ‚Ì6ƒpƒ^[ƒ“’Ç‹L(‹Lq—Ê90%íŒ¸ ‹Lq‚ÌŽèŠÔíŒ¸)
-¦410014 410015 [ƒRƒ‹EƒRƒAƒwƒbƒhƒtƒHƒ“] ‘ÎÛƒAƒCƒeƒ€‚ª‘½‚¢‚½‚ßÝ’è
+ãƒ»callfunc æ‹¡å¼µ
+â€»[ã™ã¹ã¦ã®ç¨®æ—] + [ç‰©ç†ãƒ»é­”æ³•ãƒ€ãƒ¡ãƒ¼ã‚¸å¢—åŠ ][ç‰©ç†ãƒ»é­”æ³•å—ã‘ã‚‹ãƒ€ãƒ¡ãƒ¼ã‚¸æ¸›å°‘][DEFãƒ»MDEFç„¡è¦–] ã®6ãƒ‘ã‚¿ãƒ¼ãƒ³è¿½è¨˜(è¨˜è¿°é‡90%å‰Šæ¸› è¨˜è¿°ã®æ‰‹é–“å‰Šæ¸›)
+â€»410014 410015 [ã‚³ãƒ«ãƒ»ã‚³ã‚¢ãƒ˜ãƒƒãƒ‰ãƒ•ã‚©ãƒ³] å¯¾è±¡ã‚¢ã‚¤ãƒ†ãƒ ãŒå¤šã„ãŸã‚è¨­å®š
 
-Efunction_itemdb_add.sc V‹KŽÀ‘•
-¦ŒÂ•Ê‚ÌŠÂ‹«‚Å’Ç‹L‚µ‚½‚¢ê‡‚ÉŽg‚¤‚±‚Æ‚ð‘z’è‚µ‚Ä‚¢‚Ü‚·
-¦ˆµ‚¢‚ÍNPCƒXƒNƒŠƒvƒg‚Æ“¯‚¶‚È‚Ì‚ÅŽg‚¢‚½‚¢ê‡‚É“Ç‚Ýž‚Ü‚¹‚Ä‰º‚³‚¢
+ãƒ»function_itemdb_add.sc æ–°è¦å®Ÿè£…
+â€»å€‹åˆ¥ã®ç’°å¢ƒã§è¿½è¨˜ã—ãŸã„å ´åˆã«ä½¿ã†ã“ã¨ã‚’æƒ³å®šã—ã¦ã„ã¾ã™
+â€»æ‰±ã„ã¯NPCã‚¹ã‚¯ãƒªãƒ—ãƒˆã¨åŒã˜ãªã®ã§ä½¿ã„ãŸã„å ´åˆã«èª­ã¿è¾¼ã¾ã›ã¦ä¸‹ã•ã„
 
-E‘qŒÉŠÖ˜ANPC‚ð•ª—£‚µ‚ÄŽÀ‘•(npc_melon.* npc_signboard.*
-¦signboard.lub ‚Ì’è‹`‚ð“y‘ä‚ÉíÝ50z‚ÆƒCƒxƒ“ƒg—p40z‚Å‚í‚¯‚ÄŽÀ‘•
+ãƒ»å€‰åº«é–¢é€£NPCã‚’åˆ†é›¢ã—ã¦å®Ÿè£…(npc_melon.* npc_signboard.*
+â€»signboard.lub ã®å®šç¾©ã‚’åœŸå°ã«å¸¸è¨­50zã¨ã‚¤ãƒ™ãƒ³ãƒˆç”¨40zã§ã‚ã‘ã¦å®Ÿè£…
 
-Enpc‚ÌŠÔˆá‚¢C³
+ãƒ»npcã®é–“é•ã„ä¿®æ­£
 
 20240520	patch0182
-E29547-29725 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»29547-29725 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
 20240519	patch0181
-Eitem_dn.txt‘S‘Ì‚Ì‹L†‹Lq‚Ì‘å‹K–Í‚ÈÅ“K‰»ŽÀŽ{
+ãƒ»item_dn.txtå…¨ä½“ã®è¨˜å·è¨˜è¿°ã®å¤§è¦æ¨¡ãªæœ€é©åŒ–å®Ÿæ–½
 
-EBaselevel BaseLevel ‹Lq‚Ì‚Ô‚êC³‚µBaseLevel‚É“ˆê
+ãƒ»Baselevel BaseLevel è¨˜è¿°ã®ã¶ã‚Œä¿®æ­£ã—BaseLevelã«çµ±ä¸€
 
 20240518	patch0180
-E29182-29547 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»29182-29547 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-E2554 5208 15145 18652 29042 HPSP‹zŽûŒnƒAƒCƒeƒ€‚ÆƒGƒ“ƒ`ƒƒƒ“ƒg‚ÌƒZƒbƒgŒø‰Ê‚Å[HPSP‹zŽû‚ª”­“®‚µ‚È‚¢]‚Éƒ~ƒX‚ðŒ©‚Â‚¯‚½‚Ì‚ÅÄ“xC³
-¦ŒÃ‚¢ƒZƒbƒgŒø‰Ê‚ª•Ê‚ÌƒAƒCƒeƒ€‚ÆƒZƒbƒg‚É‚È‚Á‚½‚ç[ŒÃ‚¢ƒZƒbƒgŒø‰Ê‚ª][•Ê‚ÌƒAƒCƒeƒ€‚Å“¯Ží‚ÌƒZƒbƒgŒø‰Ê‚ð’Ç‰Á‚·‚é‚±‚Æ‚Å] [ŒÃ‚¢ƒZƒbƒgŒø‰Ê‚ªV‚µ‚¢ƒZƒbƒgŒø‰Ê‚Æd•¡‚µ‚ÄƒQ[ƒ€ƒoƒ‰ƒ“ƒX‚ª•ö‚ê‚é‚½‚ß] [ŒÃ‚¢ƒZƒbƒgŒø‰Ê‚ªÁ–Å‚·‚é] ‚Æ‚¢‚¤ƒZƒbƒgŒø‰Ê‚ÌŽÀ‘•—¦‚Í10%–¢–ž‚Å‚·
+ãƒ»2554 5208 15145 18652 29042 HPSPå¸åŽç³»ã‚¢ã‚¤ãƒ†ãƒ ã¨ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆã®ã‚»ãƒƒãƒˆåŠ¹æžœã§[HPSPå¸åŽãŒç™ºå‹•ã—ãªã„]ã«ãƒŸã‚¹ã‚’è¦‹ã¤ã‘ãŸã®ã§å†åº¦ä¿®æ­£
+â€»å¤ã„ã‚»ãƒƒãƒˆåŠ¹æžœãŒåˆ¥ã®ã‚¢ã‚¤ãƒ†ãƒ ã¨ã‚»ãƒƒãƒˆã«ãªã£ãŸã‚‰[å¤ã„ã‚»ãƒƒãƒˆåŠ¹æžœãŒ][åˆ¥ã®ã‚¢ã‚¤ãƒ†ãƒ ã§åŒç¨®ã®ã‚»ãƒƒãƒˆåŠ¹æžœã‚’è¿½åŠ ã™ã‚‹ã“ã¨ã§] [å¤ã„ã‚»ãƒƒãƒˆåŠ¹æžœãŒæ–°ã—ã„ã‚»ãƒƒãƒˆåŠ¹æžœã¨é‡è¤‡ã—ã¦ã‚²ãƒ¼ãƒ ãƒãƒ©ãƒ³ã‚¹ãŒå´©ã‚Œã‚‹ãŸã‚] [å¤ã„ã‚»ãƒƒãƒˆåŠ¹æžœãŒæ¶ˆæ»…ã™ã‚‹] ã¨ã„ã†ã‚»ãƒƒãƒˆåŠ¹æžœã®å®Ÿè£…çŽ‡ã¯10%æœªæº€ã§ã™
 
-Ecallfunc‚ðXV(function_itemdb.sc)
+ãƒ»callfuncã‚’æ›´æ–°(function_itemdb.sc)
 
 20240516	patch0179
-E29012-29176 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»29012-29176 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EŠÖ˜A‚·‚éƒZƒbƒgŒø‰Ê‚ÌC³‚ÆÅ“K‰» ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»é–¢é€£ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœã®ä¿®æ­£ã¨æœ€é©åŒ– ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
 20240515	patch0178
-EƒeƒCƒ~ƒ“ƒO¤lNPC‚É 579#‚¨‚¢‚µ‚¢‹›# 11616#”ü–¡‚µ‚¢‚¨“÷# 25233#–È‚Ì‹Ê# 25377#‹‰Ø‚Èƒyƒbƒgƒt[ƒh# ’Ç‰Á(npc_town_izlude.sc npc_town_lighthalzen.sc npc_town_morocc.sc npc_town_payon.sc npc_town_yuno.sc npc_town_geffen.sc npc_town_moc_ruins.sc npc_town_prontera.sc)
+ãƒ»ãƒ†ã‚¤ãƒŸãƒ³ã‚°å•†äººNPCã« 579#ãŠã„ã—ã„é­š# 11616#ç¾Žå‘³ã—ã„ãŠè‚‰# 25233#ç¶¿ã®çŽ‰# 25377#è±ªè¯ãªãƒšãƒƒãƒˆãƒ•ãƒ¼ãƒ‰# è¿½åŠ (npc_town_izlude.sc npc_town_lighthalzen.sc npc_town_morocc.sc npc_town_payon.sc npc_town_yuno.sc npc_town_geffen.sc npc_town_moc_ruins.sc npc_town_prontera.sc)
 
-E20140819ƒAƒbƒvƒf[ƒg‘Î‰ž [ƒAƒCƒXƒNƒŠ[ƒ€] w“ü”ãŒÀ500‚É‘‰Á(npc_quest_ice.sc)
+ãƒ»20140819ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå¯¾å¿œ [ã‚¢ã‚¤ã‚¹ã‚¯ãƒªãƒ¼ãƒ ] è³¼å…¥æ•°ä¸Šé™500ã«å¢—åŠ (npc_quest_ice.sc)
 
-E20140819ƒAƒbƒvƒf[ƒg‘Î‰ž ŒðŠ·NPC[‰©‹à‚ÌŽè‚ÌƒrƒŠ[ƒi]‚Ì[‰·‚©‚¢g’ƒ][ŠÃ‚¢‚¨‰ÙŽq]w“ü”‘‰ÁEŠŽd—Ê§ŒÀ‚Ìˆ—’Ç‹L(npc_town_lutie.sc
+ãƒ»20140819ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå¯¾å¿œ äº¤æ›NPC[é»„é‡‘ã®æ‰‹ã®ãƒ“ãƒªãƒ¼ãƒŠ]ã®[æ¸©ã‹ã„ç´…èŒ¶][ç”˜ã„ãŠè“å­]è³¼å…¥æ•°å¢—åŠ ãƒ»æ‰€æŒé‡é‡åˆ¶é™ã®å‡¦ç†è¿½è¨˜(npc_town_lutie.sc
 
-Eƒ~ƒ~ƒ~‚Ìƒ~ƒbƒVƒ‡ƒ“ƒ}ƒXƒ^[ ŠÖ˜ANPC‚Ì“y‘ä‚Æ‚È‚éNPC‰¼ŽÀ‘•(npc_melon.sc)
-¦ŒÀ’èƒCƒxƒ“ƒg‚Å‚·‚ªA2024”NŒ»ÝŽå—v—v‘f‚Æ‚È‚è‰„’·‚ðŒJ‚è•Ô‚µ‚Ä‚¢‚éƒCƒxƒ“ƒg‚Ì‚½‚ßŽù—v‚ª‚ ‚é‚Æ”»’f‚µA—DæŽÀ‘•‚ðŒˆ‚ß‚Ü‚µ‚½
-¦“®ìŒ‹‰Ê‚ðdŽ‹‚µ‚ÄŽÀ‘•‚µ‚½‚Ì‚Å•\Ž¦ƒƒbƒZ[ƒW‚â‹““®‚Í‰¼ŽÀ‘•‚Å‚·(ŽžŠÔ‚ª‚©‚©‚èlŽè•s‘«‚Ì‚½‚ßŠ®‘SŽÀ‘•‚Í¢“ï)
-¦ƒ~ƒ~ƒ~ƒ~ƒbƒVƒ‡ƒ“‚ÍŠÖ˜Aƒ‚ƒ“ƒXƒ^[‚âMD‚ÌŽÀ‘•‚à•K—v‚È‚½‚ß¡Œã‚ÌŽÀ‘•‰Û‘è‚Æ‚È‚è‚Ü‚·
-¦ƒAƒCƒeƒ€‚Í‘S•”ŽÀ‘•‚³‚ê‚Ä‚¢‚Ü‚·
-¦Žg—pŠ´‚ðƒeƒXƒg‚·‚éê‡‚ÍˆÈ‰º‚ÌƒAƒCƒeƒ€‚ðÁ”ï‚·‚é‚±‚Æ‚Å ¸˜B’l7 ƒGƒ“ƒ`ƒƒƒ“ƒg•t‚« ‚Å“üŽè‚Å‚«‚Ü‚·(‘¼‚ÌƒAƒCƒeƒ€‚âNPC‚É’Ç‹L‚µ‚Ä‚à‚¢‚¢‚Å‚·)
-200384,use,ƒRƒX‚½‚ÜFlowerGardenIV,2,,,10,,,,,2074075135,2,,,1,,,{ getitem2 400012,1,1,7,0,29372,27412,310650,310650,0; getitem2 22235,1,1,7,0,29373,29373,27412,310650,0; getitem2 20974,1,1,7,0,29214,27397,29373,311422,0; getitem2 20977,1,1,7,0,29216,27397,29373,311422,0; getitem2 20978,1,1,7,0,29215,27397,29373,311422,0; getitem2 20979,1,1,7,0,29217,27397,29373,311422,0; getitem2 32268,1,1,0,0,29373,311421,27412,310650,0; getitem2 32269,1,1,0,0,29373,311421,27412,310650,0; getitem2 400013,1,1,0,0,4949,4815,4869,4900,0; },{}
+ãƒ»ãƒŸãƒŸãƒŸã®ãƒŸãƒƒã‚·ãƒ§ãƒ³ãƒžã‚¹ã‚¿ãƒ¼ é–¢é€£NPCã®åœŸå°ã¨ãªã‚‹NPCä»®å®Ÿè£…(npc_melon.sc)
+â€»é™å®šã‚¤ãƒ™ãƒ³ãƒˆã§ã™ãŒã€2024å¹´ç¾åœ¨ä¸»è¦è¦ç´ ã¨ãªã‚Šå»¶é•·ã‚’ç¹°ã‚Šè¿”ã—ã¦ã„ã‚‹ã‚¤ãƒ™ãƒ³ãƒˆã®ãŸã‚éœ€è¦ãŒã‚ã‚‹ã¨åˆ¤æ–­ã—ã€å„ªå…ˆå®Ÿè£…ã‚’æ±ºã‚ã¾ã—ãŸ
+â€»å‹•ä½œçµæžœã‚’é‡è¦–ã—ã¦å®Ÿè£…ã—ãŸã®ã§è¡¨ç¤ºãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚„æŒ™å‹•ã¯ä»®å®Ÿè£…ã§ã™(æ™‚é–“ãŒã‹ã‹ã‚Šäººæ‰‹ä¸è¶³ã®ãŸã‚å®Œå…¨å®Ÿè£…ã¯å›°é›£)
+â€»ãƒŸãƒŸãƒŸãƒŸãƒƒã‚·ãƒ§ãƒ³ã¯é–¢é€£ãƒ¢ãƒ³ã‚¹ã‚¿ãƒ¼ã‚„MDã®å®Ÿè£…ã‚‚å¿…è¦ãªãŸã‚ä»Šå¾Œã®å®Ÿè£…èª²é¡Œã¨ãªã‚Šã¾ã™
+â€»ã‚¢ã‚¤ãƒ†ãƒ ã¯å…¨éƒ¨å®Ÿè£…ã•ã‚Œã¦ã„ã¾ã™
+â€»ä½¿ç”¨æ„Ÿã‚’ãƒ†ã‚¹ãƒˆã™ã‚‹å ´åˆã¯ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ ã‚’æ¶ˆè²»ã™ã‚‹ã“ã¨ã§ ç²¾éŒ¬å€¤7 ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆä»˜ã ã§å…¥æ‰‹ã§ãã¾ã™(ä»–ã®ã‚¢ã‚¤ãƒ†ãƒ ã‚„NPCã«è¿½è¨˜ã—ã¦ã‚‚ã„ã„ã§ã™)
+200384,use,ã‚³ã‚¹ãŸã¾FlowerGardenIV,2,,,10,,,,,2074075135,2,,,1,,,{ getitem2 400012,1,1,7,0,29372,27412,310650,310650,0; getitem2 22235,1,1,7,0,29373,29373,27412,310650,0; getitem2 20974,1,1,7,0,29214,27397,29373,311422,0; getitem2 20977,1,1,7,0,29216,27397,29373,311422,0; getitem2 20978,1,1,7,0,29215,27397,29373,311422,0; getitem2 20979,1,1,7,0,29217,27397,29373,311422,0; getitem2 32268,1,1,0,0,29373,311421,27412,310650,0; getitem2 32269,1,1,0,0,29373,311421,27412,310650,0; getitem2 400013,1,1,0,0,4949,4815,4869,4900,0; },{}
 
-Epatch1549‚ÅŽÀ‘•‚³‚ê‚½¯’é‚É“]E‚Å‚«‚é‚æ‚¤‚Éconst.txt XV
-¦@jobchange ‚Å“]E‚Å‚«‚Ü‚·
-¦ƒ\ƒEƒ‹ƒŠ[ƒp[‚à•\Ž¦‚¾‚¯‚³‚ê‚é‚Ì‚Å’è‹`‚Æ‚µ‚Ä’Ç‹L(ƒXƒLƒ‹‚Í–¢ŽÀ‘•‚Å‚·)
-¦‘•”õƒAƒCƒeƒ€‚ÍŽÀ‘•ó‘Ô‚Å‚·
+ãƒ»patch1549ã§å®Ÿè£…ã•ã‚ŒãŸæ˜Ÿå¸ã«è»¢è·ã§ãã‚‹ã‚ˆã†ã«const.txt æ›´æ–°
+â€»@jobchange ã§è»¢è·ã§ãã¾ã™
+â€»ã‚½ã‚¦ãƒ«ãƒªãƒ¼ãƒ‘ãƒ¼ã‚‚è¡¨ç¤ºã ã‘ã•ã‚Œã‚‹ã®ã§å®šç¾©ã¨ã—ã¦è¿½è¨˜(ã‚¹ã‚­ãƒ«ã¯æœªå®Ÿè£…ã§ã™)
+â€»è£…å‚™ã‚¢ã‚¤ãƒ†ãƒ ã¯å®Ÿè£…çŠ¶æ…‹ã§ã™
 
 20240514	patch0177
-E20240514 ƒAƒbƒvƒf[ƒgŽÀ‘•(item_db.* item_db2.* item_cartype.*)
-¦200377 ’è‹`‚Ì‚Ý‚Åƒf[ƒ^‚ª‚È‚©‚Á‚½‚½‚ß‰¼ŽÀ‘•
-¦410265#[ˆß‘•] ƒŠƒ“ƒOi”íŒ‚j# ‚Íƒ_ƒ[ƒW‚ðŽó‚¯‚½‚Æ‚«‚Ì‚Ý•\Ž¦‚³‚ê‚Ü‚·(lua‚ÌXV‚Í•s—v‚Å‚·)
-¦102800#ƒnƒCƒXƒs[ƒh#‚Í”n’û‚Æ“¯‚¶Ý’è(ŠúŠÔŒÀ’è‚Åî•ñ‚ª‚È‚¢‚½‚ß)
+ãƒ»20240514 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£…(item_db.* item_db2.* item_cartype.*)
+â€»200377 å®šç¾©ã®ã¿ã§ãƒ‡ãƒ¼ã‚¿ãŒãªã‹ã£ãŸãŸã‚ä»®å®Ÿè£…
+â€»410265#[è¡£è£…] ãƒªãƒ³ã‚°ï¼ˆè¢«æ’ƒï¼‰# ã¯ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’å—ã‘ãŸã¨ãã®ã¿è¡¨ç¤ºã•ã‚Œã¾ã™(luaã®æ›´æ–°ã¯ä¸è¦ã§ã™)
+â€»102800#ãƒã‚¤ã‚¹ãƒ”ãƒ¼ãƒ‰#ã¯é¦¬è¹„ã¨åŒã˜è¨­å®š(æœŸé–“é™å®šã§æƒ…å ±ãŒãªã„ãŸã‚)
 
-E–{ŽÀ‘•‚æ‚èdb‚ð1549‚É‘Î‰ž‚Ì‚½‚ßˆÈ‘O‚Ìƒo[ƒWƒ‡ƒ“‚Å‚Í“®ì‚µ‚È‚¢ƒAƒCƒeƒ€‚ªo‚Ä‚«‚Ü‚·
+ãƒ»æœ¬å®Ÿè£…ã‚ˆã‚Šdbã‚’1549ã«å¯¾å¿œã®ãŸã‚ä»¥å‰ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§ã¯å‹•ä½œã—ãªã„ã‚¢ã‚¤ãƒ†ãƒ ãŒå‡ºã¦ãã¾ã™
 
-Epatch0175‚ÅŽÀ‘•‚µ‚½‚à‚Ì‚ÅƒX[ƒp[ƒm[ƒrƒX(ŒÀŠE“Ë”j)‚Ìskill_tree_add.*‚Å“o˜^ƒXƒLƒ‹‚ª‘½‚·‚¬‚éƒGƒ‰[‚ª1549‚ÉƒAƒbƒvƒf[ƒg‚µ‚½‚ço‚Ü‚·
-¦Œ´ˆö‚Í1E‹Æ‚ÅŽg‚¦‚éƒXƒLƒ‹‚ÌãŒÀ”‚É‚È‚èAíœƒXƒLƒ‹‚ðÁ‚³‚È‚¢ê‡‚É‹N‚±‚è‚Ü‚·‚Ì‚Åíœ‘ÎÛƒXƒLƒ‹ 119 120 121 ‚ðskill_tree.*‚©‚çÁ‚µ‚Ä‰º‚³‚¢
-¦Œ»Ý–¢ŽÀ‘•‚Ìƒm[ƒrƒXŒnVƒXƒLƒ‹ 5075 5076 5077 ‚ÅƒGƒ‰[‚ªo‚é‚Ì‚ÅƒRƒƒ“ƒgƒAƒEƒg‚µ‚Ä‚­‚¾‚³‚¢
+ãƒ»patch0175ã§å®Ÿè£…ã—ãŸã‚‚ã®ã§ã‚¹ãƒ¼ãƒ‘ãƒ¼ãƒŽãƒ¼ãƒ“ã‚¹(é™ç•Œçªç ´)ã®skill_tree_add.*ã§ç™»éŒ²ã‚¹ã‚­ãƒ«ãŒå¤šã™ãŽã‚‹ã‚¨ãƒ©ãƒ¼ãŒ1549ã«ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã—ãŸã‚‰å‡ºã¾ã™
+â€»åŽŸå› ã¯1è·æ¥­ã§ä½¿ãˆã‚‹ã‚¹ã‚­ãƒ«ã®ä¸Šé™æ•°ã«ãªã‚Šã€å‰Šé™¤ã‚¹ã‚­ãƒ«ã‚’æ¶ˆã•ãªã„å ´åˆã«èµ·ã“ã‚Šã¾ã™ã®ã§å‰Šé™¤å¯¾è±¡ã‚¹ã‚­ãƒ« 119 120 121 ã‚’skill_tree.*ã‹ã‚‰æ¶ˆã—ã¦ä¸‹ã•ã„
+â€»ç¾åœ¨æœªå®Ÿè£…ã®ãƒŽãƒ¼ãƒ“ã‚¹ç³»æ–°ã‚¹ã‚­ãƒ« 5075 5076 5077 ã§ã‚¨ãƒ©ãƒ¼ãŒå‡ºã‚‹ã®ã§ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã—ã¦ãã ã•ã„
 
 
 20240512	patch0176
-E31000-31015 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»31000-31015 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
 20240511	patch0175
-E20221004 ƒXƒLƒ‹’²®ƒAƒbƒvƒf[ƒgŽÀ‘•(skill_cast_db_add.* skill_db_add.* skill_require_db_add.* skill_tree_add.*)
-¦[ƒXƒLƒ‹ƒŒƒxƒ‹][‰r¥ŽžŠÔ][ŒÅ’è‰r¥ŽžŠÔ][ÄŽg—p‘Ò‹@ŽžŠÔ][ƒXƒLƒ‹ƒfƒBƒŒƒC][Á”ïSP][Á”ïHP][Á”ï‹C’e][ƒXƒLƒ‹ŽË’ö][ƒ_ƒ[ƒW•ªŠ„•\Ž¦][•Ší§ŒÀ]
-¦2010”N‚ÌƒXƒLƒ‹’²®‚à”½‰f‚µ‚Ä‚¢‚Ü‚·
-¦[CR_GRANDCROSS]ƒ_ƒ[ƒW•ªŠ„•\Ž¦‚ÌÝ’è’l‚ª 5 ‚Æ‹Lq‚³‚ê‚Ä‚¢‚ÄŽd—l‘‚É‚Í [6 ’P”­HIT][8 ‘½’iHIT]‚Å5‚ÌÝ’è‚Í‚È‚¢‚½‚ßŠÔˆá‚¢‚Æ”»’f‚µƒXƒLƒ‹‚ÌŽd—l‚ð‚æ‚­“Ç‚Ý(0.3•bŠÔŠu‚Å3‰ñUŒ‚‚Å‘½’iHIT‚Ìˆ—‚Å‚Í‚È‚¢)6‚ÉC³
-¦[SA_AUTOSPELL,ƒI[ƒgƒ}ƒWƒVƒƒƒ“ƒXƒyƒ‹][NC_TRAININGAXE,•€’b˜B][GN_TRAINING_SWORD,Œ•’b˜B][GN_CARTBOOST,‰ü‘¢ƒJ[ƒgƒu[ƒXƒg] ƒXƒLƒ‹–¼•ÏX‘Î‰ž
+ãƒ»20221004 ã‚¹ã‚­ãƒ«èª¿æ•´ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£…(skill_cast_db_add.* skill_db_add.* skill_require_db_add.* skill_tree_add.*)
+â€»[ã‚¹ã‚­ãƒ«ãƒ¬ãƒ™ãƒ«][è© å”±æ™‚é–“][å›ºå®šè© å”±æ™‚é–“][å†ä½¿ç”¨å¾…æ©Ÿæ™‚é–“][ã‚¹ã‚­ãƒ«ãƒ‡ã‚£ãƒ¬ã‚¤][æ¶ˆè²»SP][æ¶ˆè²»HP][æ¶ˆè²»æ°—å¼¾][ã‚¹ã‚­ãƒ«å°„ç¨‹][ãƒ€ãƒ¡ãƒ¼ã‚¸åˆ†å‰²è¡¨ç¤º][æ­¦å™¨åˆ¶é™]
+â€»2010å¹´ã®ã‚¹ã‚­ãƒ«èª¿æ•´ã‚‚åæ˜ ã—ã¦ã„ã¾ã™
+â€»[CR_GRANDCROSS]ãƒ€ãƒ¡ãƒ¼ã‚¸åˆ†å‰²è¡¨ç¤ºã®è¨­å®šå€¤ãŒ 5 ã¨è¨˜è¿°ã•ã‚Œã¦ã„ã¦ä»•æ§˜æ›¸ã«ã¯ [6 å˜ç™ºHIT][8 å¤šæ®µHIT]ã§5ã®è¨­å®šã¯ãªã„ãŸã‚é–“é•ã„ã¨åˆ¤æ–­ã—ã‚¹ã‚­ãƒ«ã®ä»•æ§˜ã‚’ã‚ˆãèª­ã¿(0.3ç§’é–“éš”ã§3å›žæ”»æ’ƒã§å¤šæ®µHITã®å‡¦ç†ã§ã¯ãªã„)6ã«ä¿®æ­£
+â€»[SA_AUTOSPELL,ã‚ªãƒ¼ãƒˆãƒžã‚¸ã‚·ãƒ£ãƒ³ã‚¹ãƒšãƒ«][NC_TRAININGAXE,æ–§é›éŒ¬][GN_TRAINING_SWORD,å‰£é›éŒ¬][GN_CARTBOOST,æ”¹é€ ã‚«ãƒ¼ãƒˆãƒ–ãƒ¼ã‚¹ãƒˆ] ã‚¹ã‚­ãƒ«åå¤‰æ›´å¯¾å¿œ
 
-EƒR[ƒh‚ÉŠÖ—^‚µ‚È‚¢•”•ª‚ð20240510Œ»ÝŠm”F‚Å‚«‚éÅVŽd—l‚É•ÏX‘Î‰žŠ®—¹‚µ‚Ü‚µ‚½
-¦ƒXƒLƒ‹‚Ì”ÍˆÍ•ÏX‚ÍŒã“ú‘Î‰ž—\’è
-¦‘å‹K–ÍƒAƒbƒvƒf[ƒgˆÈŠO‚ÅC³‚³‚ê‚½¬‹K–Í‚ÈŽd—l•ÏX‚Í’²¸’ÇÕ‚ÉŽžŠÔ‚ª‚©‚©‚é‚½‚ßAŒ©‚Â‚¯‚½‚ç’€ŽŸ•ÏX‚ÅC³—\’è
+ãƒ»ã‚³ãƒ¼ãƒ‰ã«é–¢ä¸Žã—ãªã„éƒ¨åˆ†ã‚’20240510ç¾åœ¨ç¢ºèªã§ãã‚‹æœ€æ–°ä»•æ§˜ã«å¤‰æ›´å¯¾å¿œå®Œäº†ã—ã¾ã—ãŸ
+â€»ã‚¹ã‚­ãƒ«ã®ç¯„å›²å¤‰æ›´ã¯å¾Œæ—¥å¯¾å¿œäºˆå®š
+â€»å¤§è¦æ¨¡ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆä»¥å¤–ã§ä¿®æ­£ã•ã‚ŒãŸå°è¦æ¨¡ãªä»•æ§˜å¤‰æ›´ã¯èª¿æŸ»è¿½è·¡ã«æ™‚é–“ãŒã‹ã‹ã‚‹ãŸã‚ã€è¦‹ã¤ã‘ãŸã‚‰é€æ¬¡å¤‰æ›´ã§ä¿®æ­£äºˆå®š
  
 20240510	patch0174
-E20200128 ƒXƒLƒ‹’²®‚Å•ÏX‚Ì‚ ‚Á‚½ƒXƒLƒ‹‚Ì‚¤‚¿AŠg’£E‚ÌƒXƒLƒ‹‚ÅƒRƒ“ƒpƒCƒ‹‚ð•K—v‚Æ‚µ‚È‚¢•”•ª‚ÌƒAƒbƒvƒf[ƒg ŽÀ‘•(skill_cast_db_add.* skill_db_add.* skill_require_db_add.* skill_tree_add.*)
-¦[ƒXƒLƒ‹ƒŒƒxƒ‹][‰r¥ŽžŠÔ][ŒÅ’è‰r¥ŽžŠÔ][ÄŽg—p‘Ò‹@ŽžŠÔ][ƒXƒLƒ‹ƒfƒBƒŒƒC][Á”ïSP][Á”ïHP][Á”ï‹C’e][ƒXƒLƒ‹ŽË’ö][ƒ_ƒ[ƒW•ªŠ„•\Ž¦][•Ší§ŒÀ]
-¦UŒ‚ŒnƒXƒLƒ‹‚Íbattle.c‚É‘‚©‚ê‚Ä‚¢‚é•ª‚Í‚»‚Ì‚Ü‚Ü‚ÅƒXƒLƒ‹ƒŒƒxƒ‹‚ª‘‚¦‚½•ªUŒ‚—Í‚âUŒ‚ƒ_ƒ[ƒW‚ª‘‚¦‚Ü‚·
-¦ƒ_ƒ[ƒW‘‰ÁŠ„‡Ž©‘Ì‚Í‚»‚Ì‚Ü‚Ü‚Å‚·
-¦ƒŠƒxƒŠƒIƒ“‚ÌƒXƒLƒ‹‚Åˆê•”Œ»sŽd—l‚É‹ß‚¢’è‹`‚ª‚ ‚è‚Ü‚µ‚½‚ªÌ‚ÌXVó‹µ‚ð’²‚×‚é‚Ì‚É–c‘å‚ÈŽžŠÔ‚ª‚©‚©‚é‚Ì‚ÅŒ»sŽd—l‚ðŽÀ‘•
-¦”EŽÒƒXƒLƒ‹‚Å2010”N‚ÌƒAƒbƒvƒf[ƒg‘Î‰ž‚µ‚Ä‚È‚¢‚à‚Ì‚ª‚ ‚èA‘¼‚Ì1ŽŸ2ŽŸŠg’£EƒXƒLƒ‹‚à2010”N‚ÌƒAƒbƒvƒf[ƒg–¢‘Î‰ž‚Ì‰Â”\«‚ª‚ ‚è‚Ü‚·
-¦[NJ_KASUMIKIRI]‚ÍŽd—l‘‚É]‚¢ŽË’ö1‚É‘‚«Š·‚¦‚Ä‚¢‚Ü‚·
+ãƒ»20200128 ã‚¹ã‚­ãƒ«èª¿æ•´ã§å¤‰æ›´ã®ã‚ã£ãŸã‚¹ã‚­ãƒ«ã®ã†ã¡ã€æ‹¡å¼µè·ã®ã‚¹ã‚­ãƒ«ã§ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚’å¿…è¦ã¨ã—ãªã„éƒ¨åˆ†ã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ å®Ÿè£…(skill_cast_db_add.* skill_db_add.* skill_require_db_add.* skill_tree_add.*)
+â€»[ã‚¹ã‚­ãƒ«ãƒ¬ãƒ™ãƒ«][è© å”±æ™‚é–“][å›ºå®šè© å”±æ™‚é–“][å†ä½¿ç”¨å¾…æ©Ÿæ™‚é–“][ã‚¹ã‚­ãƒ«ãƒ‡ã‚£ãƒ¬ã‚¤][æ¶ˆè²»SP][æ¶ˆè²»HP][æ¶ˆè²»æ°—å¼¾][ã‚¹ã‚­ãƒ«å°„ç¨‹][ãƒ€ãƒ¡ãƒ¼ã‚¸åˆ†å‰²è¡¨ç¤º][æ­¦å™¨åˆ¶é™]
+â€»æ”»æ’ƒç³»ã‚¹ã‚­ãƒ«ã¯battle.cã«æ›¸ã‹ã‚Œã¦ã„ã‚‹åˆ†ã¯ãã®ã¾ã¾ã§ã‚¹ã‚­ãƒ«ãƒ¬ãƒ™ãƒ«ãŒå¢—ãˆãŸåˆ†æ”»æ’ƒåŠ›ã‚„æ”»æ’ƒãƒ€ãƒ¡ãƒ¼ã‚¸ãŒå¢—ãˆã¾ã™
+â€»ãƒ€ãƒ¡ãƒ¼ã‚¸å¢—åŠ å‰²åˆè‡ªä½“ã¯ãã®ã¾ã¾ã§ã™
+â€»ãƒªãƒ™ãƒªã‚ªãƒ³ã®ã‚¹ã‚­ãƒ«ã§ä¸€éƒ¨ç¾è¡Œä»•æ§˜ã«è¿‘ã„å®šç¾©ãŒã‚ã‚Šã¾ã—ãŸãŒæ˜”ã®æ›´æ–°çŠ¶æ³ã‚’èª¿ã¹ã‚‹ã®ã«è†¨å¤§ãªæ™‚é–“ãŒã‹ã‹ã‚‹ã®ã§ç¾è¡Œä»•æ§˜ã‚’å®Ÿè£…
+â€»å¿è€…ã‚¹ã‚­ãƒ«ã§2010å¹´ã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå¯¾å¿œã—ã¦ãªã„ã‚‚ã®ãŒã‚ã‚Šã€ä»–ã®1æ¬¡2æ¬¡æ‹¡å¼µè·ã‚¹ã‚­ãƒ«ã‚‚2010å¹´ã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆæœªå¯¾å¿œã®å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™
+â€»[NJ_KASUMIKIRI]ã¯ä»•æ§˜æ›¸ã«å¾“ã„å°„ç¨‹1ã«æ›¸ãæ›ãˆã¦ã„ã¾ã™
 
-EƒX[ƒp[ƒm[ƒrƒX(ŒÀŠE“Ë”j)‚ÅŽg‚¦‚é‚æ‚¤‚É‚È‚Á‚½ƒXƒLƒ‹‚ð’Ç‰Á(skill_tree_add.*)
-¦íœ‚³‚ê‚½ƒXƒLƒ‹‚ª‚ ‚è‚Ü‚·‚ªadd‚Åíœ‚Í‘Î‰ž‚Å‚«‚È‚¢‚Ì‚Å‚²Ž©g‚ÌŠÂ‹«‚Å’²ß‚µ‚Ä‰º‚³‚¢
-¦ƒXƒLƒ‹Œn‚àadd‚©‚ç–{ŽÀ‘•‚É“ü‚ê‘Ö‚¦‚éó‘Ô‚É‚·‚é—\’è‚Å‚·(Œ»Ý’²®’†)
+ãƒ»ã‚¹ãƒ¼ãƒ‘ãƒ¼ãƒŽãƒ¼ãƒ“ã‚¹(é™ç•Œçªç ´)ã§ä½¿ãˆã‚‹ã‚ˆã†ã«ãªã£ãŸã‚¹ã‚­ãƒ«ã‚’è¿½åŠ (skill_tree_add.*)
+â€»å‰Šé™¤ã•ã‚ŒãŸã‚¹ã‚­ãƒ«ãŒã‚ã‚Šã¾ã™ãŒaddã§å‰Šé™¤ã¯å¯¾å¿œã§ããªã„ã®ã§ã”è‡ªèº«ã®ç’°å¢ƒã§èª¿ç¯€ã—ã¦ä¸‹ã•ã„
+â€»ã‚¹ã‚­ãƒ«ç³»ã‚‚addã‹ã‚‰æœ¬å®Ÿè£…ã«å…¥ã‚Œæ›¿ãˆã‚‹çŠ¶æ…‹ã«ã™ã‚‹äºˆå®šã§ã™(ç¾åœ¨èª¿æ•´ä¸­)
 
-¦ŽŸ‰ñ‚Í2010”N‚ÌƒXƒLƒ‹’²®‚ÆŒ©”ä‚×‚È‚ª‚ç2022”N‚ÌƒXƒLƒ‹’²®‚ÌŽÀ‘•‚ð—\’è‚µ‚Ä‚¢‚Ü‚·
+â€»æ¬¡å›žã¯2010å¹´ã®ã‚¹ã‚­ãƒ«èª¿æ•´ã¨è¦‹æ¯”ã¹ãªãŒã‚‰2022å¹´ã®ã‚¹ã‚­ãƒ«èª¿æ•´ã®å®Ÿè£…ã‚’äºˆå®šã—ã¦ã„ã¾ã™
 
 
 20240509	patch0173
-Eclassnum_db.txt XV
+ãƒ»classnum_db.txt æ›´æ–°
 
-Ecallfunc XV [ˆê•”‚Ìƒ_ƒ[ƒW‚ð”½ŽË‚·‚éŒø‰Ê‚ÅŽó‚¯‚éƒ_ƒ[ƒWŒyŒ¸%]Œø‰Ê‚Ì‘ÎÛƒXƒLƒ‹‚É[ƒŠƒWƒFƒNƒgƒ\[ƒh]’Ç‰Á
-¦ƒƒCƒ„ƒ‹Œn‘•”õ‚ÌƒAƒbƒvƒf[ƒg‚É‘ÎÛ‚Æ‚È‚éƒXƒLƒ‹ƒŠƒXƒg‚ª‚ ‚Á‚½‚½‚ß‚±‚ê‚Å‘S•”‚Æ‚È‚è‚Ü‚·
-¦[NPC_MAXPAIN][Œ¶p -žOŒ¶‘z-][ƒfƒXƒoƒEƒ“ƒh]‚Í‘ÎÛ‚Å‚Í‚ ‚è‚Ü‚¹‚ñ
+ãƒ»callfunc æ›´æ–° [ä¸€éƒ¨ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’åå°„ã™ã‚‹åŠ¹æžœã§å—ã‘ã‚‹ãƒ€ãƒ¡ãƒ¼ã‚¸è»½æ¸›%]åŠ¹æžœã®å¯¾è±¡ã‚¹ã‚­ãƒ«ã«[ãƒªã‚¸ã‚§ã‚¯ãƒˆã‚½ãƒ¼ãƒ‰]è¿½åŠ 
+â€»ãƒ­ã‚¤ãƒ¤ãƒ«ç³»è£…å‚™ã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã«å¯¾è±¡ã¨ãªã‚‹ã‚¹ã‚­ãƒ«ãƒªã‚¹ãƒˆãŒã‚ã£ãŸãŸã‚ã“ã‚Œã§å…¨éƒ¨ã¨ãªã‚Šã¾ã™
+â€»[NPC_MAXPAIN][å¹»è¡“ -æœ§å¹»æƒ³-][ãƒ‡ã‚¹ãƒã‚¦ãƒ³ãƒ‰]ã¯å¯¾è±¡ã§ã¯ã‚ã‚Šã¾ã›ã‚“
 
-E[ƒvƒŒƒCƒ„[‚É‚Í”­“®‚µ‚È‚¢]Œø‰Ê‚Ì‘Î‰žŠ®—¹
-¦ƒvƒŒƒCƒ„[Ží‘° ƒhƒ‰ƒ€Ží‘° lŠÔŒnƒ‚ƒ“ƒXƒ^[‚ÉƒAƒbƒvƒf[ƒg‚ª1547‚Å‚ ‚è‚Ü‚µ‚½‚ª‹““®‚Í‘å‘Ì“¯‚¶‚Å‚·
-¦‡ŽŸ‘‚«Š·‚¦‘Î‰ž‚ð—\’è
+ãƒ»[ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã«ã¯ç™ºå‹•ã—ãªã„]åŠ¹æžœã®å¯¾å¿œå®Œäº†
+â€»ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ç¨®æ— ãƒ‰ãƒ©ãƒ ç¨®æ— äººé–“ç³»ãƒ¢ãƒ³ã‚¹ã‚¿ãƒ¼ã«ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆãŒ1547ã§ã‚ã‚Šã¾ã—ãŸãŒæŒ™å‹•ã¯å¤§ä½“åŒã˜ã§ã™
+â€»é †æ¬¡æ›¸ãæ›ãˆå¯¾å¿œã‚’äºˆå®š
 
-E32028 C³
+ãƒ»32028 ä¿®æ­£
 
-E20200128 ƒXƒLƒ‹’²®‚Å•ÏX‚Ì‚ ‚Á‚½ƒXƒLƒ‹‚Ì‚¤‚¿A3ŽŸE‚ÌƒXƒLƒ‹‚ÅƒRƒ“ƒpƒCƒ‹‚ð•K—v‚Æ‚µ‚È‚¢•”•ª‚ÌƒAƒbƒvƒf[ƒg ŽÀ‘•(skill_cast_db_add.* skill_db_add.* skill_require_db_add.* skill_tree_add.*)
-¦[ƒXƒLƒ‹ƒŒƒxƒ‹][‰r¥ŽžŠÔ][ŒÅ’è‰r¥ŽžŠÔ][ÄŽg—p‘Ò‹@ŽžŠÔ][ƒXƒLƒ‹ƒfƒBƒŒƒC][Á”ïSP][Á”ïHP][Á”ï‹C’e][ƒXƒLƒ‹ŽË’ö][ƒ_ƒ[ƒW•ªŠ„•\Ž¦][•Ší§ŒÀ]
-¦UŒ‚ŒnƒXƒLƒ‹‚Íbattle.c‚É‘‚©‚ê‚Ä‚¢‚é•ª‚Í‚»‚Ì‚Ü‚Ü‚ÅƒXƒLƒ‹ƒŒƒxƒ‹‚ª‘‚¦‚½•ªUŒ‚—Í‚âUŒ‚ƒ_ƒ[ƒW‚ª‘‚¦‚Ü‚·
-¦ƒ_ƒ[ƒW‘‰ÁŠ„‡Ž©‘Ì‚Í‚»‚Ì‚Ü‚Ü‚Å‚·
-¦[ƒgƒ‰ƒbƒvŒ¤‹†]‚ÌInt‘‰ÁŒø‰Ê‚Í[ƒXƒLƒ‹ƒŒƒxƒ‹*1]‹Lq‚È‚Ì‚ÅLv10‚ÅInt+10‚É‚È‚è‚Ü‚·
-¦•t‘ÑŒø‰Ê‚Ì•ÏX‚Í–¢ŽÀ‘•‚Å‚·([3•bŠÔƒAƒCƒeƒ€‚ªE‚¦‚È‚­‚È‚é][‹|‚Ìê‡UŒ‚—Í‚ª‘‰Á‚·‚é][ƒJƒEƒ“ƒ^[ƒXƒ‰ƒbƒVƒ…ó‘Ô‚É‚È‚é][–‚–@UŒ‚ƒ_ƒ[ƒW‚Ì‚Ý‚É‚È‚é]‚È‚Ç)
+ãƒ»20200128 ã‚¹ã‚­ãƒ«èª¿æ•´ã§å¤‰æ›´ã®ã‚ã£ãŸã‚¹ã‚­ãƒ«ã®ã†ã¡ã€3æ¬¡è·ã®ã‚¹ã‚­ãƒ«ã§ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã‚’å¿…è¦ã¨ã—ãªã„éƒ¨åˆ†ã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ å®Ÿè£…(skill_cast_db_add.* skill_db_add.* skill_require_db_add.* skill_tree_add.*)
+â€»[ã‚¹ã‚­ãƒ«ãƒ¬ãƒ™ãƒ«][è© å”±æ™‚é–“][å›ºå®šè© å”±æ™‚é–“][å†ä½¿ç”¨å¾…æ©Ÿæ™‚é–“][ã‚¹ã‚­ãƒ«ãƒ‡ã‚£ãƒ¬ã‚¤][æ¶ˆè²»SP][æ¶ˆè²»HP][æ¶ˆè²»æ°—å¼¾][ã‚¹ã‚­ãƒ«å°„ç¨‹][ãƒ€ãƒ¡ãƒ¼ã‚¸åˆ†å‰²è¡¨ç¤º][æ­¦å™¨åˆ¶é™]
+â€»æ”»æ’ƒç³»ã‚¹ã‚­ãƒ«ã¯battle.cã«æ›¸ã‹ã‚Œã¦ã„ã‚‹åˆ†ã¯ãã®ã¾ã¾ã§ã‚¹ã‚­ãƒ«ãƒ¬ãƒ™ãƒ«ãŒå¢—ãˆãŸåˆ†æ”»æ’ƒåŠ›ã‚„æ”»æ’ƒãƒ€ãƒ¡ãƒ¼ã‚¸ãŒå¢—ãˆã¾ã™
+â€»ãƒ€ãƒ¡ãƒ¼ã‚¸å¢—åŠ å‰²åˆè‡ªä½“ã¯ãã®ã¾ã¾ã§ã™
+â€»[ãƒˆãƒ©ãƒƒãƒ—ç ”ç©¶]ã®Intå¢—åŠ åŠ¹æžœã¯[ã‚¹ã‚­ãƒ«ãƒ¬ãƒ™ãƒ«*1]è¨˜è¿°ãªã®ã§Lv10ã§Int+10ã«ãªã‚Šã¾ã™
+â€»ä»˜å¸¯åŠ¹æžœã®å¤‰æ›´ã¯æœªå®Ÿè£…ã§ã™([3ç§’é–“ã‚¢ã‚¤ãƒ†ãƒ ãŒæ‹¾ãˆãªããªã‚‹][å¼“ã®å ´åˆæ”»æ’ƒåŠ›ãŒå¢—åŠ ã™ã‚‹][ã‚«ã‚¦ãƒ³ã‚¿ãƒ¼ã‚¹ãƒ©ãƒƒã‚·ãƒ¥çŠ¶æ…‹ã«ãªã‚‹][é­”æ³•æ”»æ’ƒãƒ€ãƒ¡ãƒ¼ã‚¸ã®ã¿ã«ãªã‚‹]ãªã©)
 
 20240507	patch0172
-E20240507 ƒAƒbƒvƒf[ƒgŽÀ‘•(item_db.* item_db2.*)
-¦luaXV‚Í•s—v‚Å‚·‚ª0423‚æ‚è‘O‚Ì‚Ü‚Ü‚Ìê‡‚ÍXV‚µ‚Ä‰º‚³‚¢
+ãƒ»20240507 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£…(item_db.* item_db2.*)
+â€»luaæ›´æ–°ã¯ä¸è¦ã§ã™ãŒ0423ã‚ˆã‚Šå‰ã®ã¾ã¾ã®å ´åˆã¯æ›´æ–°ã—ã¦ä¸‹ã•ã„
 
-E***‚ÌŽv”O‘ÌƒVƒ…[ƒY —«‚Æ‹L‰¯‚ÌŽcŸæ ‘•‚³‚ê‚½‰…–] ‚Ì5Œ…”Ô‘äƒZƒbƒg‘•”õ‚ð®—C³
+ãƒ»***ã®æ€å¿µä½“ã‚·ãƒ¥ãƒ¼ã‚º ç†æ€§ã¨è¨˜æ†¶ã®æ®‹æ»“ å¢—å¹…ã•ã‚ŒãŸæ€¨æœ› ã®5æ¡ç•ªå°ã‚»ãƒƒãƒˆè£…å‚™ã‚’æ•´ç†ä¿®æ­£
 
-E–hŒä–³Ž‹‚ÉŠÖ—^‚·‚é callfunc Šg’£
-¦–hŒä–³Ž‹‚Ì‘ÎÛ‰ðŽß‚ª•”•ª“I‚ÉŠÔˆá‚Á‚Ä‚¢‚½‚½‚ß¡ŒãC³—\’è(’P“Æ‚Ì“®ì‚Í‚µ‚Ä‚¢‚ÄAC³”‚Í‘½‚­‚È‚¢‚Å‚·)
+ãƒ»é˜²å¾¡ç„¡è¦–ã«é–¢ä¸Žã™ã‚‹ callfunc æ‹¡å¼µ
+â€»é˜²å¾¡ç„¡è¦–ã®å¯¾è±¡è§£é‡ˆãŒéƒ¨åˆ†çš„ã«é–“é•ã£ã¦ã„ãŸãŸã‚ä»Šå¾Œä¿®æ­£äºˆå®š(å˜ç‹¬ã®å‹•ä½œã¯ã—ã¦ã„ã¦ã€ä¿®æ­£æ•°ã¯å¤šããªã„ã§ã™)
 
-Eƒ}ƒbƒvŽw’èŒø‰Ê‚ÌƒRƒƒ“ƒg‚ð®—‚µŒŸõŒø—¦‚ðŒüã
+ãƒ»ãƒžãƒƒãƒ—æŒ‡å®šåŠ¹æžœã®ã‚³ãƒ¡ãƒ³ãƒˆã‚’æ•´ç†ã—æ¤œç´¢åŠ¹çŽ‡ã‚’å‘ä¸Š
 
 20240429	patch0171
-E32247-32408 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»32247-32408 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EƒZƒbƒgŒø‰Ê‚ÌÅ“K‰»
+ãƒ»ã‚»ãƒƒãƒˆåŠ¹æžœã®æœ€é©åŒ–
 
-E[***‚ÌŽv”O‘ÌƒVƒ…[ƒY] Å“K‰»ŽÀŽ{
+ãƒ»[***ã®æ€å¿µä½“ã‚·ãƒ¥ãƒ¼ã‚º] æœ€é©åŒ–å®Ÿæ–½
 
-E5000”Ô‘ä 300000”Ô‘ä ”Ž®‚Ì•\‹L‚Ì‚Ô‚ê‚ðC³‚µ“ˆê‰»(¡Œã‚Ì‘åŒ^ƒAƒbƒvƒf[ƒg‚É”õ‚¦‚ÄˆêŠ‡ŒŸõEˆêŠ‡C³‚ª—eˆÕ‚É‚Å‚«‚é‚æ‚¤‚É)
+ãƒ»5000ç•ªå° 300000ç•ªå° æ•°å¼ã®è¡¨è¨˜ã®ã¶ã‚Œã‚’ä¿®æ­£ã—çµ±ä¸€åŒ–(ä»Šå¾Œã®å¤§åž‹ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã«å‚™ãˆã¦ä¸€æ‹¬æ¤œç´¢ãƒ»ä¸€æ‹¬ä¿®æ­£ãŒå®¹æ˜“ã«ã§ãã‚‹ã‚ˆã†ã«)
 
-ŽŸ‰ñƒAƒbƒvƒf[ƒg 5/7—\’è
+æ¬¡å›žã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ 5/7äºˆå®š
 
 20240427	patch0170
-E32203-32246 ƒAƒNƒZƒTƒŠ[‚Ìƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»32203-32246 ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ã®ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EŠÖ˜AƒZƒbƒgŒø‰Ê‚ÌÅ“K‰»
+ãƒ»é–¢é€£ã‚»ãƒƒãƒˆåŠ¹æžœã®æœ€é©åŒ–
 
-EcallfuncŠg’£
-¦312417#‘•‚³‚ê‚½‰…–]# ƒeƒXƒg—p‚Ì‹Lq ŠÔˆá‚¢‚Ì‘½‚¢[•¨—UŒ‚‚Å—^‚¦‚éƒ_ƒ[ƒW][–‚–@UŒ‚‚Å—^‚¦‚éƒ_ƒ[ƒW][•¨—UŒ‚Žž[‘S‚Ä‚ÌŽí‘°]‚Ìƒ‚ƒ“ƒXƒ^[‚É—^‚¦‚éƒ_ƒ[ƒW][–‚–@UŒ‚Žž[‘S‚Ä‚ÌŽí‘°]‚Ìƒ‚ƒ“ƒXƒ^[‚É—^‚¦‚éƒ_ƒ[ƒW]’Ç‹L
-¦ŠÔˆá‚¢‚Ì‘½‚¢‹Lq‚Í“––Ê‚ÍƒTƒ“ƒvƒ‹ˆµ‚¢‚ÅŽg‚¢‚Ü‚¹‚ñ‚ª•po‚·‚é‹Lq‚Å‚ ‚èŠÔˆá‚¢‚â‚·‚¢‚½‚ßŽg‚¤‚±‚Æ‚à‘z’è‚µ‚Ä’Ç‰Á‚µ‚Ü‚µ‚½(Žg‚¦‚Îç’·‚Æ‚È‚é‘•”õ‹Lq‚ðíŒ¸‚Å‚«Aì‹ÆH’ö‚ªŒ¸‚èAƒ~ƒX‚ð–h‚¬A‹““®‚Ì³Šm‚³‚ª‘‚µ‚Ü‚·)
+ãƒ»callfuncæ‹¡å¼µ
+â€»312417#å¢—å¹…ã•ã‚ŒãŸæ€¨æœ›# ãƒ†ã‚¹ãƒˆç”¨ã®è¨˜è¿° é–“é•ã„ã®å¤šã„[ç‰©ç†æ”»æ’ƒã§ä¸Žãˆã‚‹ãƒ€ãƒ¡ãƒ¼ã‚¸][é­”æ³•æ”»æ’ƒã§ä¸Žãˆã‚‹ãƒ€ãƒ¡ãƒ¼ã‚¸][ç‰©ç†æ”»æ’ƒæ™‚[å…¨ã¦ã®ç¨®æ—]ã®ãƒ¢ãƒ³ã‚¹ã‚¿ãƒ¼ã«ä¸Žãˆã‚‹ãƒ€ãƒ¡ãƒ¼ã‚¸][é­”æ³•æ”»æ’ƒæ™‚[å…¨ã¦ã®ç¨®æ—]ã®ãƒ¢ãƒ³ã‚¹ã‚¿ãƒ¼ã«ä¸Žãˆã‚‹ãƒ€ãƒ¡ãƒ¼ã‚¸]è¿½è¨˜
+â€»é–“é•ã„ã®å¤šã„è¨˜è¿°ã¯å½“é¢ã¯ã‚µãƒ³ãƒ—ãƒ«æ‰±ã„ã§ä½¿ã„ã¾ã›ã‚“ãŒé »å‡ºã™ã‚‹è¨˜è¿°ã§ã‚ã‚Šé–“é•ã„ã‚„ã™ã„ãŸã‚ä½¿ã†ã“ã¨ã‚‚æƒ³å®šã—ã¦è¿½åŠ ã—ã¾ã—ãŸ(ä½¿ãˆã°å†—é•·ã¨ãªã‚‹è£…å‚™è¨˜è¿°ã‚’å‰Šæ¸›ã§ãã€ä½œæ¥­å·¥ç¨‹ãŒæ¸›ã‚Šã€ãƒŸã‚¹ã‚’é˜²ãŽã€æŒ™å‹•ã®æ­£ç¢ºã•ãŒå¢—ã—ã¾ã™)
 
-EöÝ‰ð•ú(ƒCƒ“ƒyƒŠƒAƒ‹ƒK[ƒhIV)‚ÌƒI[ƒgƒXƒyƒ‹—¦‚Æmisceffect‚ª”»–¾‚µ‚½‚Ì‚ÅC³
+ãƒ»æ½œåœ¨è§£æ”¾(ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ã‚¬ãƒ¼ãƒ‰IV)ã®ã‚ªãƒ¼ãƒˆã‚¹ãƒšãƒ«çŽ‡ã¨misceffectãŒåˆ¤æ˜Žã—ãŸã®ã§ä¿®æ­£
 
 20240426	patch0169
-E32000 •Ší‚Ìƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»32000 æ­¦å™¨ã®ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-E[Rct_Human]‚ð[ƒvƒŒƒCƒ„[‚É‚Í”­“®‚µ‚È‚¢]‚Æ‚¢‚¤Œø‰Ê‚ªŠÜ‚Ü‚ê‚Ä‚¢‚é‚Æ(Rct_Player‚Ì‹Lq•s—v)Š¨ˆá‚¢‚µ‚Ä‚¢‚½‚Ì‚Å6Œ…‚æ‚è‘å‚«‚¢ƒAƒCƒeƒ€‚É“K—p
-¦5Œ…‘ä‚Ì‘ÎÛƒAƒCƒeƒ€‚Í14-5ŒÂ’ö“x‚Å¡Œã‚ÌC³‚ÆÅ“K‰»‚ÅŽÀ‘•‚µ‚Ä‚¢‚Ü‚·
+ãƒ»[Rct_Human]ã‚’[ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã«ã¯ç™ºå‹•ã—ãªã„]ã¨ã„ã†åŠ¹æžœãŒå«ã¾ã‚Œã¦ã„ã‚‹ã¨(Rct_Playerã®è¨˜è¿°ä¸è¦)å‹˜é•ã„ã—ã¦ã„ãŸã®ã§6æ¡ã‚ˆã‚Šå¤§ãã„ã‚¢ã‚¤ãƒ†ãƒ ã«é©ç”¨
+â€»5æ¡å°ã®å¯¾è±¡ã‚¢ã‚¤ãƒ†ãƒ ã¯14-5å€‹ç¨‹åº¦ã§ä»Šå¾Œã®ä¿®æ­£ã¨æœ€é©åŒ–ã§å®Ÿè£…ã—ã¦ã„ã¾ã™
 
-E[ˆê•”‚Ìƒ_ƒ[ƒW‚ð”½ŽË‚·‚éŒø‰Ê‚ÅŽó‚¯‚éƒ_ƒ[ƒW][310760#‰¤‚Ì_ˆÐ#ƒZƒbƒgŒø‰Ê][300314#—«‚Æ‹L‰¯‚ÌŽcŸæ#ƒZƒbƒgŒø‰Ê]‚ª‚»‚ê‚¼‚ê‹¤’Ê‚¾‚Á‚½‚Ì‚Åfunction_db.sc‚É‹Lq‚µç’·‚È‘•”õƒ{[ƒiƒXíŒ¸‚Æì‹ÆH’ö’Zk‰»ŽÀŽ{(function_db.sc)
-¦‚·‚Å‚ÉŽÀ‘•Ï‚Ý‚ÌƒAƒCƒeƒ€‚Í¡Œã‚ÌƒAƒbƒvƒf[ƒg‚Å“ü‚ê‘Ö‚¦—\’è
-¦[ƒGƒ“ƒ`ƒƒƒ“ƒg]+[ƒJ[ƒhEƒAƒCƒeƒ€]‚Ì‘å—ÊƒZƒbƒg‘g‚Ý‡‚í‚¹‚ª‚ ‚é‚à‚Ì‚É’€ŽŸ“K—p—\’è
+ãƒ»[ä¸€éƒ¨ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’åå°„ã™ã‚‹åŠ¹æžœã§å—ã‘ã‚‹ãƒ€ãƒ¡ãƒ¼ã‚¸][310760#çŽ‹ã®ç¥žå¨#ã‚»ãƒƒãƒˆåŠ¹æžœ][300314#ç†æ€§ã¨è¨˜æ†¶ã®æ®‹æ»“#ã‚»ãƒƒãƒˆåŠ¹æžœ]ãŒãã‚Œãžã‚Œå…±é€šã ã£ãŸã®ã§function_db.scã«è¨˜è¿°ã—å†—é•·ãªè£…å‚™ãƒœãƒ¼ãƒŠã‚¹å‰Šæ¸›ã¨ä½œæ¥­å·¥ç¨‹çŸ­ç¸®åŒ–å®Ÿæ–½(function_db.sc)
+â€»ã™ã§ã«å®Ÿè£…æ¸ˆã¿ã®ã‚¢ã‚¤ãƒ†ãƒ ã¯ä»Šå¾Œã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã§å…¥ã‚Œæ›¿ãˆäºˆå®š
+â€»[ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆ]+[ã‚«ãƒ¼ãƒ‰ãƒ»ã‚¢ã‚¤ãƒ†ãƒ ]ã®å¤§é‡ã‚»ãƒƒãƒˆçµ„ã¿åˆã‚ã›ãŒã‚ã‚‹ã‚‚ã®ã«é€æ¬¡é©ç”¨äºˆå®š
 
-E4000-4999 == ()  >= ‚Ì”Ž®‚Ì•\‹L‚Ì‚Ô‚ê‚ðC³‚µ“ˆê‰»(¡Œã‚Ì‘åŒ^ƒAƒbƒvƒf[ƒg‚É”õ‚¦‚ÄˆêŠ‡ŒŸõEˆêŠ‡C³‚ª—eˆÕ‚É‚Å‚«‚é‚æ‚¤‚É)
+ãƒ»4000-4999 == ()  >= ã®æ•°å¼ã®è¡¨è¨˜ã®ã¶ã‚Œã‚’ä¿®æ­£ã—çµ±ä¸€åŒ–(ä»Šå¾Œã®å¤§åž‹ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã«å‚™ãˆã¦ä¸€æ‹¬æ¤œç´¢ãƒ»ä¸€æ‹¬ä¿®æ­£ãŒå®¹æ˜“ã«ã§ãã‚‹ã‚ˆã†ã«)
 
 20240424	patch0168
-E19400-19499 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»19400-19499 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EƒZƒbƒgŒø‰ÊÝ’è‚³‚ê‚Ä‚¢‚éê‡‚ÍƒZƒbƒgŒø‰Ê’Ç‰Á
+ãƒ»ã‚»ãƒƒãƒˆåŠ¹æžœè¨­å®šã•ã‚Œã¦ã„ã‚‹å ´åˆã¯ã‚»ãƒƒãƒˆåŠ¹æžœè¿½åŠ 
 
 20240423	patch0167
-E20240423 ƒAƒbƒvƒf[ƒgŽÀ‘•(item_db.* item_db2.*)
-¦ˆß‘•Œ¨‘•”õ‚ÉV‹Kview’l‚ ‚è‚Ü‚·‚Ì‚ÅŠÖ˜Alua‚ÌXV•K—v‚Å‚·
-¦19570 ƒOƒ[ƒoƒ‹ƒAƒCƒeƒ€ ‚ÅŽg‚í‚ê‚Ä‚¢‚½”Ô†‚Ìƒ[ƒJƒ‹ŽÀ‘•‚Å‚·
+ãƒ»20240423 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆå®Ÿè£…(item_db.* item_db2.*)
+â€»è¡£è£…è‚©è£…å‚™ã«æ–°è¦viewå€¤ã‚ã‚Šã¾ã™ã®ã§é–¢é€£luaã®æ›´æ–°å¿…è¦ã§ã™
+â€»19570 ã‚°ãƒ­ãƒ¼ãƒãƒ«ã‚¢ã‚¤ãƒ†ãƒ  ã§ä½¿ã‚ã‚Œã¦ã„ãŸç•ªå·ã®ãƒ­ãƒ¼ã‚«ãƒ«å®Ÿè£…ã§ã™
 
-E25260 28387 NPC‰¿Ši‚ª0‚Æ”»–¾‚µ‚½‚Ì‚ÅXV
+ãƒ»25260 28387 NPCä¾¡æ ¼ãŒ0ã¨åˆ¤æ˜Žã—ãŸã®ã§æ›´æ–°
 
 20240421	patch0166
-E19200-19399 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»19200-19399 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-E‘SŠpƒXƒy[ƒX‚ª¬‚´‚Á‚Ä‚¢‚½‚Ì‚ðC³
+ãƒ»å…¨è§’ã‚¹ãƒšãƒ¼ã‚¹ãŒæ··ã–ã£ã¦ã„ãŸã®ã‚’ä¿®æ­£
 
-E501- 2999 == ()  >= ‚Ì”Ž®‚Ì•\‹L‚Ì‚Ô‚ê‚ðC³‚µ“ˆê‰»(¡Œã‚Ì‘åŒ^ƒAƒbƒvƒf[ƒg‚É”õ‚¦‚ÄˆêŠ‡ŒŸõEˆêŠ‡C³‚ª—eˆÕ‚É‚Å‚«‚é‚æ‚¤‚É)
+ãƒ»501- 2999 == ()  >= ã®æ•°å¼ã®è¡¨è¨˜ã®ã¶ã‚Œã‚’ä¿®æ­£ã—çµ±ä¸€åŒ–(ä»Šå¾Œã®å¤§åž‹ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã«å‚™ãˆã¦ä¸€æ‹¬æ¤œç´¢ãƒ»ä¸€æ‹¬ä¿®æ­£ãŒå®¹æ˜“ã«ã§ãã‚‹ã‚ˆã†ã«)
 
 20240419	patch0165
-E“o˜^‚³‚ê‚Ä‚¢‚éƒXƒLƒ‹–¼‚ª4‚Â[PA_SHIELDCHAIN][SL_SKA][GC_RESEARCHNEWPOISON][WA_SYMPHONY_OF_LOVER]ŠÔˆá‚Á‚Ä‚¢‚é‚Ì‚Åitem_db.txt‚É‚ ‚é•ª‚ðC³
+ãƒ»ç™»éŒ²ã•ã‚Œã¦ã„ã‚‹ã‚¹ã‚­ãƒ«åãŒ4ã¤[PA_SHIELDCHAIN][SL_SKA][GC_RESEARCHNEWPOISON][WA_SYMPHONY_OF_LOVER]é–“é•ã£ã¦ã„ã‚‹ã®ã§item_db.txtã«ã‚ã‚‹åˆ†ã‚’ä¿®æ­£
 
--480,5,8,1,0,0,5,5,no,0,0,0,weapon,0,PA_SHIELCHAIN,ƒV[ƒ‹ƒhƒ`ƒF[ƒ“
-+480,5,8,1,0,0,5,5,no,0,0,0,weapon,0,PA_SHIELDCHAIN,ƒV[ƒ‹ƒhƒ`ƒF[ƒ“
--472,9,6,1,0,1,3,1,yes,0,0,0,magic,0,SL_SKASL_SKA,ƒGƒXƒJ
-+472,9,6,1,0,1,3,1,yes,0,0,0,magic,0,SL_SKA,ƒGƒXƒJ
--2024,0,0,0,0,0,10,0,no,0,0,0,none,0,GC_RESEARCHNWPOISON,V“ÅŒ¤‹†
-+2024,0,0,0,0,0,10,0,no,0,0,0,none,0,GC_RESEARCHNEWPOISON,V“ÅŒ¤‹†
+-480,5,8,1,0,0,5,5,no,0,0,0,weapon,0,PA_SHIELCHAIN,ã‚·ãƒ¼ãƒ«ãƒ‰ãƒã‚§ãƒ¼ãƒ³
++480,5,8,1,0,0,5,5,no,0,0,0,weapon,0,PA_SHIELDCHAIN,ã‚·ãƒ¼ãƒ«ãƒ‰ãƒã‚§ãƒ¼ãƒ³
+-472,9,6,1,0,1,3,1,yes,0,0,0,magic,0,SL_SKASL_SKA,ã‚¨ã‚¹ã‚«
++472,9,6,1,0,1,3,1,yes,0,0,0,magic,0,SL_SKA,ã‚¨ã‚¹ã‚«
+-2024,0,0,0,0,0,10,0,no,0,0,0,none,0,GC_RESEARCHNWPOISON,æ–°æ¯’ç ”ç©¶
++2024,0,0,0,0,0,10,0,no,0,0,0,none,0,GC_RESEARCHNEWPOISON,æ–°æ¯’ç ”ç©¶
 
-¦[WA_SYMPHONY_OF_LOVE]‚Ílua‚Å‚Í[WA_SYMPHONY_OF_LOVER]‚Å“o˜^Ž©‘Ì‚ª‘S•”ˆá‚Á‚Ä‚¢‚é‚½‚ß“®ì‚µ‚Ä‚¢‚Ü‚·
-¦ŠÔˆá‚Á‚½‚Ü‚Ü‚¾‚Æ«—ˆ•s‹ï‡‚ªo‚é‰Â”\«‚ª‚ ‚è‚Ü‚·
--2351,0,6,4,0,1,5,1,yes,0,0,0,misc,0,WA_SYMPHONY_OF_LOVE,—öl‚½‚¿‚Ìˆ×‚ÌƒVƒ“ƒtƒHƒj[
-+2351,0,6,4,0,1,5,1,yes,0,0,0,misc,0,WA_SYMPHONY_OF_LOVER,—öl‚½‚¿‚Ìˆ×‚ÌƒVƒ“ƒtƒHƒj[
+â€»[WA_SYMPHONY_OF_LOVE]ã¯luaã§ã¯[WA_SYMPHONY_OF_LOVER]ã§ç™»éŒ²è‡ªä½“ãŒå…¨éƒ¨é•ã£ã¦ã„ã‚‹ãŸã‚å‹•ä½œã—ã¦ã„ã¾ã™
+â€»é–“é•ã£ãŸã¾ã¾ã ã¨å°†æ¥ä¸å…·åˆãŒå‡ºã‚‹å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™
+-2351,0,6,4,0,1,5,1,yes,0,0,0,misc,0,WA_SYMPHONY_OF_LOVE,æ‹äººãŸã¡ã®ç‚ºã®ã‚·ãƒ³ãƒ•ã‚©ãƒ‹ãƒ¼
++2351,0,6,4,0,1,5,1,yes,0,0,0,misc,0,WA_SYMPHONY_OF_LOVER,æ‹äººãŸã¡ã®ç‚ºã®ã‚·ãƒ³ãƒ•ã‚©ãƒ‹ãƒ¼
 
 20240418	patch0164
-EƒAƒbƒvƒf[ƒgî•ñ‚ð®—‚µ‰ß‹Ž‚Ìpatchƒtƒ@ƒCƒ‹‚ð‰ß‹Žƒf[ƒ^‚Æ‚µ‚ÄˆÚ“®
+ãƒ»ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆæƒ…å ±ã‚’æ•´ç†ã—éŽåŽ»ã®patchãƒ•ã‚¡ã‚¤ãƒ«ã‚’éŽåŽ»ãƒ‡ãƒ¼ã‚¿ã¨ã—ã¦ç§»å‹•
 
-E311308 C³
+ãƒ»311308 ä¿®æ­£
 
-E19170-19199 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»19170-19199 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EhateffectŠÖ˜A‚Ìƒ\[ƒXƒf[ƒ^ŒöŠJ(const.txt status.h)
-¦patch1538‚ðŽg‚Á‚½Ž„‚ÌŠÂ‹«‚Æ“¯‚¶‚ÅÅV‚ÌƒGƒtƒFƒNƒg‘•”õ‚ÌŽÀ‘•‚É•K—v‚Å‚·
+ãƒ»hateffecté–¢é€£ã®ã‚½ãƒ¼ã‚¹ãƒ‡ãƒ¼ã‚¿å…¬é–‹(const.txt status.h)
+â€»patch1538ã‚’ä½¿ã£ãŸç§ã®ç’°å¢ƒã¨åŒã˜ã§æœ€æ–°ã®ã‚¨ãƒ•ã‚§ã‚¯ãƒˆè£…å‚™ã®å®Ÿè£…ã«å¿…è¦ã§ã™
 
-E2020”NƒAƒbƒvƒf[ƒg‚Ì3ŽŸEƒXƒLƒ‹Žd—l’²®‚ÅƒA[ƒNƒrƒVƒ‡ƒbƒvƒXƒLƒ‹‚ÌÅVŽd—lŽÀ‘•(skill_db_add.* skill_require_db_add.* skill_cast_db_add.* skill_tree_add.* battle.c)
-¦ƒA[ƒNƒrƒVƒ‡ƒbƒvƒXƒLƒ‹[AB_JUDEX][AB_RENOVATIO]‚ÌƒXƒLƒ‹Žd—l’²®‚ðŽÀ‘•‚µ‚Ä‚Ý‚Ü‚µ‚½
-¦‚Ç‚Ìƒtƒ@ƒCƒ‹‚ª‚Ç‚Ì–ðŠ„‚È‚Ì‚©‚ð’m‚èA’N‚É‚à—Š‚ç‚¸Ž©—Í‚Å‘Î‰ž‚Å‚«‚é‚æ‚¤‚É‚È‚é‚Ì‚ª–Ú“I‚È‚Ì‚Å·•ª”äŠr‚ÌƒAƒvƒŠ‚ðŽg‚Á‚Ä‰½‚ª•Ï‚í‚Á‚Ä‚¢‚é‚Ì‚©Šm”F‚µ‚Ä‰º‚³‚¢(•Ï‚í‚Á‚Ä‚È‚¢‚à‚Ì‚à‚ ‚è‚Ü‚·‚ª”äŠr‚Ì‚½‚ß‚É’Ç‹L‚µ‚Ä‚¢‚Ü‚·)
-¦ƒ\[ƒX‚ð‘‚«Š·‚¦‚ÄƒRƒ“ƒpƒCƒ‹‚ª•K—v‚È‚Ì‚ÍƒWƒ…ƒfƒbƒNƒX‚Ìƒ_ƒ[ƒW”{—¦‚ª•Ï‚í‚Á‚½•”•ª‚Ì‚Ý‚Å1‰ÓŠ‚¾‚¯‚Å‚·‚ªbattle.c‚ð‘‚«Š·‚¦‚È‚­‚Ä‚à‹ß‚¢“®ì‚Í‚µ‚Ü‚·
-¦ƒŒƒmƒ”ƒ@ƒeƒBƒI‚ÍŽd—l’Ê‚è‚Ì“®ì‚É‚È‚Á‚Ä‚¢‚é‚ÆŽv‚¢‚Ü‚·
-¦‘¼‚ÌƒXƒLƒ‹‚à‚Å‚«‚»‚¤‚È‚à‚Ì‚©‚çŽÀ‘•‚µ‚Ä‚¢‚«‚Ü‚·
+ãƒ»2020å¹´ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã®3æ¬¡è·ã‚¹ã‚­ãƒ«ä»•æ§˜èª¿æ•´ã§ã‚¢ãƒ¼ã‚¯ãƒ“ã‚·ãƒ§ãƒƒãƒ—ã‚¹ã‚­ãƒ«ã®æœ€æ–°ä»•æ§˜å®Ÿè£…(skill_db_add.* skill_require_db_add.* skill_cast_db_add.* skill_tree_add.* battle.c)
+â€»ã‚¢ãƒ¼ã‚¯ãƒ“ã‚·ãƒ§ãƒƒãƒ—ã‚¹ã‚­ãƒ«[AB_JUDEX][AB_RENOVATIO]ã®ã‚¹ã‚­ãƒ«ä»•æ§˜èª¿æ•´ã‚’å®Ÿè£…ã—ã¦ã¿ã¾ã—ãŸ
+â€»ã©ã®ãƒ•ã‚¡ã‚¤ãƒ«ãŒã©ã®å½¹å‰²ãªã®ã‹ã‚’çŸ¥ã‚Šã€èª°ã«ã‚‚é ¼ã‚‰ãšè‡ªåŠ›ã§å¯¾å¿œã§ãã‚‹ã‚ˆã†ã«ãªã‚‹ã®ãŒç›®çš„ãªã®ã§å·®åˆ†æ¯”è¼ƒã®ã‚¢ãƒ—ãƒªã‚’ä½¿ã£ã¦ä½•ãŒå¤‰ã‚ã£ã¦ã„ã‚‹ã®ã‹ç¢ºèªã—ã¦ä¸‹ã•ã„(å¤‰ã‚ã£ã¦ãªã„ã‚‚ã®ã‚‚ã‚ã‚Šã¾ã™ãŒæ¯”è¼ƒã®ãŸã‚ã«è¿½è¨˜ã—ã¦ã„ã¾ã™)
+â€»ã‚½ãƒ¼ã‚¹ã‚’æ›¸ãæ›ãˆã¦ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ãŒå¿…è¦ãªã®ã¯ã‚¸ãƒ¥ãƒ‡ãƒƒã‚¯ã‚¹ã®ãƒ€ãƒ¡ãƒ¼ã‚¸å€çŽ‡ãŒå¤‰ã‚ã£ãŸéƒ¨åˆ†ã®ã¿ã§1ç®‡æ‰€ã ã‘ã§ã™ãŒbattle.cã‚’æ›¸ãæ›ãˆãªãã¦ã‚‚è¿‘ã„å‹•ä½œã¯ã—ã¾ã™
+â€»ãƒ¬ãƒŽãƒ´ã‚¡ãƒ†ã‚£ã‚ªã¯ä»•æ§˜é€šã‚Šã®å‹•ä½œã«ãªã£ã¦ã„ã‚‹ã¨æ€ã„ã¾ã™
+â€»ä»–ã®ã‚¹ã‚­ãƒ«ã‚‚ã§ããã†ãªã‚‚ã®ã‹ã‚‰å®Ÿè£…ã—ã¦ã„ãã¾ã™
 
 20240417	patch0163
-E20240416 ƒAƒbƒvƒf[ƒg•ªŽÀ‘•(item_db.* item_db2.* item_cartype.* item_memo.* classnum_db.*)
+ãƒ»20240416 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆåˆ†å®Ÿè£…(item_db.* item_db2.* item_cartype.* item_memo.* classnum_db.*)
 
-EƒAƒNƒZƒTƒŠ‚Å(1)(2)‚Ì‘•”õŽw’è‚ª‚ ‚é‚à‚Ì‚Å¶‰EŠÔˆá‚Á‚Ä‚¢‚½‚Ì‚ª‚ ‚é‚Ì‚ÅC³
+ãƒ»ã‚¢ã‚¯ã‚»ã‚µãƒªã§(1)(2)ã®è£…å‚™æŒ‡å®šãŒã‚ã‚‹ã‚‚ã®ã§å·¦å³é–“é•ã£ã¦ã„ãŸã®ãŒã‚ã‚‹ã®ã§ä¿®æ­£
 
 20240415	patch0162
-Ebonus4 bAutoSpell ‚ÌðŒ‚ÉNOSPƒIƒvƒVƒ‡ƒ“‚ð•t‚¯‚È‚©‚Á‚½‚Ì‚ðC³
-¦ƒI[ƒgƒXƒyƒ‹‚ÍSP‚ðÁ”ï‚µ‚È‚¢‚Æ‚¢‚¤‰ðŽß‚ªbonus4 bAutoSpell‚É‚à“K—p‚³‚ê‚Ä‚¢‚é‚ÆŽv‚¢ž‚ñ‚¾‚Ì‚ªŒ´ˆö‚Å‚·
-¦‚±‚±‚ÅŽÀ‘•‚µ‚½•ª‚Æ‚È‚è‚Ü‚·
+ãƒ»bonus4 bAutoSpell ã®æ¡ä»¶ã«NOSPã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’ä»˜ã‘ãªã‹ã£ãŸã®ã‚’ä¿®æ­£
+â€»ã‚ªãƒ¼ãƒˆã‚¹ãƒšãƒ«ã¯SPã‚’æ¶ˆè²»ã—ãªã„ã¨ã„ã†è§£é‡ˆãŒbonus4 bAutoSpellã«ã‚‚é©ç”¨ã•ã‚Œã¦ã„ã‚‹ã¨æ€ã„è¾¼ã‚“ã ã®ãŒåŽŸå› ã§ã™
+â€»ã“ã“ã§å®Ÿè£…ã—ãŸåˆ†ã¨ãªã‚Šã¾ã™
 
 20240415	patch0161
-E19135-19167 ƒ~ƒXC³‚ÆÅ“K‰»
-¦¸˜B’l‚ÅŒø‰Ê‚ª’Ç‰Á‚³‚ê‚éê‡‚Í“Á‚É‹Lq‚ª‚È‚¢ê‡‚Í¸˜B‚³‚ê‚é‘O‚ÌŠî–{Œø‰Ê‚Í‚»‚Ì‚Ü‚Ü‚É[’Ç‰Á‚·‚é]‚Ì‚Å[’Ç‰Á‚·‚é•ª‚¾‚¯]‹Lq‚µ‚Ä‚­‚¾‚³‚¢
-¦¸˜BŒø‰Ê‚ÅƒI[ƒgƒXƒyƒ‹‚ÌŒø‰Ê‚ªŠÖ—^‚·‚éê‡‚Í“Á‚ÉTd‚Éà–¾‚ð“Ç‚Ý—‰ð‚ð[‚ßAŠú‘Ò‚³‚ê‚éŒø‰Ê‚ðl‚¦‚È‚ª‚çŽÀ‘•‚ð‚µ‚Ä‚­‚¾‚³‚¢
-¦‚Â‚Ü‚èà–¾‚Ì’Ê‚è‚É‘‚­‚æ‚¤‚É‚µ‚½‚çŠÔˆá‚¢‚Í‰ñ”ð‚³‚ê‚Ü‚·
-¦‘¼‚ÌŒø‰Ê‚àà–¾‚É‘‚¢‚Ä‚ ‚é‡”Ô’Ê‚è‚Éã‚©‚ç‘‚¢‚Ä‰º‚³‚¢(ðŒ‚É‚æ‚Á‚Ä‚Í‘OŒã‚·‚é•K—v‚à‚ ‚é)
-¦‚½‚¾‚µ[•Ší–h‹ï‚Ì”j‰óƒIƒvƒVƒ‡ƒ“][•Ší‚Ì‘®«]‚Í”ñí‚É–Y‚ê‚â‚·‚¢‚Ì‚Å•K‚¸æ“ª‚É‘‚¢‚Ä‰º‚³‚¢
+ãƒ»19135-19167 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
+â€»ç²¾éŒ¬å€¤ã§åŠ¹æžœãŒè¿½åŠ ã•ã‚Œã‚‹å ´åˆã¯ç‰¹ã«è¨˜è¿°ãŒãªã„å ´åˆã¯ç²¾éŒ¬ã•ã‚Œã‚‹å‰ã®åŸºæœ¬åŠ¹æžœã¯ãã®ã¾ã¾ã«[è¿½åŠ ã™ã‚‹]ã®ã§[è¿½åŠ ã™ã‚‹åˆ†ã ã‘]è¨˜è¿°ã—ã¦ãã ã•ã„
+â€»ç²¾éŒ¬åŠ¹æžœã§ã‚ªãƒ¼ãƒˆã‚¹ãƒšãƒ«ã®åŠ¹æžœãŒé–¢ä¸Žã™ã‚‹å ´åˆã¯ç‰¹ã«æ…Žé‡ã«èª¬æ˜Žã‚’èª­ã¿ç†è§£ã‚’æ·±ã‚ã€æœŸå¾…ã•ã‚Œã‚‹åŠ¹æžœã‚’è€ƒãˆãªãŒã‚‰å®Ÿè£…ã‚’ã—ã¦ãã ã•ã„
+â€»ã¤ã¾ã‚Šèª¬æ˜Žã®é€šã‚Šã«æ›¸ãã‚ˆã†ã«ã—ãŸã‚‰é–“é•ã„ã¯å›žé¿ã•ã‚Œã¾ã™
+â€»ä»–ã®åŠ¹æžœã‚‚èª¬æ˜Žã«æ›¸ã„ã¦ã‚ã‚‹é †ç•ªé€šã‚Šã«ä¸Šã‹ã‚‰æ›¸ã„ã¦ä¸‹ã•ã„(æ¡ä»¶ã«ã‚ˆã£ã¦ã¯å‰å¾Œã™ã‚‹å¿…è¦ã‚‚ã‚ã‚‹)
+â€»ãŸã ã—[æ­¦å™¨é˜²å…·ã®ç ´å£Šã‚ªãƒ—ã‚·ãƒ§ãƒ³][æ­¦å™¨ã®å±žæ€§]ã¯éžå¸¸ã«å¿˜ã‚Œã‚„ã™ã„ã®ã§å¿…ãšå…ˆé ­ã«æ›¸ã„ã¦ä¸‹ã•ã„
 
 20240414	patch0160
-E19000-19125 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»19000-19125 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-E1730 1731 1732 1733 1752 1754 1755 1756 5253 5289 5405 5766 5933 18137 18138 18139 18140 19321 20799
-ƒZƒbƒgŒø‰ÊŽÀ‘•‚Ì‚½‚ß’²®
+ãƒ»1730 1731 1732 1733 1752 1754 1755 1756 5253 5289 5405 5766 5933 18137 18138 18139 18140 19321 20799
+ã‚»ãƒƒãƒˆåŠ¹æžœå®Ÿè£…ã®ãŸã‚èª¿æ•´
 
-EŽÀ‘•‚ðŒ©‘—‚Á‚Ä‚¢‚½#ƒƒCƒ‹ƒhƒ|ƒŠƒ“ƒ‰ƒCƒ_[#ŽÀ‘•‚½‚ß‚É script\function\function_itemdb.sc ‚É 19108#ƒƒCƒ‹ƒhƒ|ƒŠƒ“ƒ‰ƒCƒ_[#‚ÌŒø‰Ê‚ð’Ç‹L
+ãƒ»å®Ÿè£…ã‚’è¦‹é€ã£ã¦ã„ãŸ#ãƒ¯ã‚¤ãƒ«ãƒ‰ãƒãƒªãƒ³ãƒ©ã‚¤ãƒ€ãƒ¼#å®Ÿè£…ãŸã‚ã« script\function\function_itemdb.sc ã« 19108#ãƒ¯ã‚¤ãƒ«ãƒ‰ãƒãƒªãƒ³ãƒ©ã‚¤ãƒ€ãƒ¼#ã®åŠ¹æžœã‚’è¿½è¨˜
 
 20240412	patch0159
-E18800-18999 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»18800-18999 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
-EŠî‘bƒf[ƒ^‚Ì•s‘«‚ð‚¢‚­‚Â‚©C³
+ãƒ»åŸºç¤Žãƒ‡ãƒ¼ã‚¿ã®ä¸è¶³ã‚’ã„ãã¤ã‹ä¿®æ­£
 
-E¶‘ÌHŠwŒ¤‹†Š‚Ì‹L˜^i4thƒ‚[ƒhj240409ƒAƒbƒvƒf[ƒg mobƒf[ƒ^’è‹`ŽÀ‘•
+ãƒ»ç”Ÿä½“å·¥å­¦ç ”ç©¶æ‰€ã®è¨˜éŒ²ï¼ˆ4thãƒ¢ãƒ¼ãƒ‰ï¼‰240409ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ mobãƒ‡ãƒ¼ã‚¿å®šç¾©å®Ÿè£…
 
-Emobƒf[ƒ^‚ð®—‚µmob_db_add.txt‚©‚çmob_db.txt‚ÉˆÚ“®
+ãƒ»mobãƒ‡ãƒ¼ã‚¿ã‚’æ•´ç†ã—mob_db_add.txtã‹ã‚‰mob_db.txtã«ç§»å‹•
 
-E2510#WATERMELON_1#‚Ìƒf[ƒ^‚ÉƒAƒCƒeƒ€ŒŸØ—p‚Ìmobƒf[ƒ^‚ðÝ’è
-¦ASPD193‘Š“–DEX9999‚Å•¨—UŒ‚‚ð‚µ‚Ä‚«‚Ü‚· ATK100‚ÅÝ’è ƒCƒ“ƒfƒ…ƒA‚ÌÝ’è‚ðŽg‚í‚È‚¢‚Æ“®‚¯‚È‚­‚È‚è‚Ü‚·
+ãƒ»2510#WATERMELON_1#ã®ãƒ‡ãƒ¼ã‚¿ã«ã‚¢ã‚¤ãƒ†ãƒ æ¤œè¨¼ç”¨ã®mobãƒ‡ãƒ¼ã‚¿ã‚’è¨­å®š
+â€»ASPD193ç›¸å½“DEX9999ã§ç‰©ç†æ”»æ’ƒã‚’ã—ã¦ãã¾ã™ ATK100ã§è¨­å®š ã‚¤ãƒ³ãƒ‡ãƒ¥ã‚¢ã®è¨­å®šã‚’ä½¿ã‚ãªã„ã¨å‹•ã‘ãªããªã‚Šã¾ã™
 
-E‰©‹àå³‚ÌƒNƒ[ƒ“ƒf[ƒ^‚ð20240409‚Ì”z’u•ÏX‚É”º‚¢A20189#H_GOLDEN_BUG# 21328#MD_T_GOLDEN_BUG#‚ÉÝ’èAƒhƒƒbƒvƒf[ƒ^‚ðÅV‚ÉXV
+ãƒ»é»„é‡‘èŸ²ã®ã‚¯ãƒ­ãƒ¼ãƒ³ãƒ‡ãƒ¼ã‚¿ã‚’20240409ã®é…ç½®å¤‰æ›´ã«ä¼´ã„ã€20189#H_GOLDEN_BUG# 21328#MD_T_GOLDEN_BUG#ã«è¨­å®šã€ãƒ‰ãƒ­ãƒƒãƒ—ãƒ‡ãƒ¼ã‚¿ã‚’æœ€æ–°ã«æ›´æ–°
 
-Emob_skill_db_add.txt XV
+ãƒ»mob_skill_db_add.txt æ›´æ–°
 
-Enpc_list.sc XV(¶‘ÌHŠwŒ¤‹†Š‚Ì‹L˜^i4thƒ‚[ƒhj240409 ƒAƒbƒvƒf[ƒg)
+ãƒ»npc_list.sc æ›´æ–°(ç”Ÿä½“å·¥å­¦ç ”ç©¶æ‰€ã®è¨˜éŒ²ï¼ˆ4thãƒ¢ãƒ¼ãƒ‰ï¼‰240409 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ)
 
-E2013”N‚ÌƒAƒbƒvƒf[ƒg‚ÅŽÀ‘•‚³‚ê‚Ä‚¢‚½ŒÍ–Ø‚ÌŽ}ŒnƒAƒCƒeƒ€‚ÍƒTƒ‚ƒ“ƒp[ƒNƒ}ƒbƒvˆÈŠO‚ÅŽg‚¦‚È‚­‚È‚éŽd—l‚Ìƒ}ƒbƒvƒtƒ‰ƒO‚ðŽÀ‘•(eda.sc)
-¦Žw’è7ƒ}ƒbƒvˆÈŠO‘S‚Ä‚Ìƒ}ƒbƒv‚ÅŒÍ–Ø‚ÌŽ}AŒŒ“h‚ç‚ê‚½ŒÍ–Ø‚ÌŽ}Aƒ|ƒŠƒ“ƒ{ƒbƒNƒX‚ªŽg‚¦‚È‚­‚È‚è‚Ü‚·
+ãƒ»2013å¹´ã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã§å®Ÿè£…ã•ã‚Œã¦ã„ãŸæž¯æœ¨ã®æžç³»ã‚¢ã‚¤ãƒ†ãƒ ã¯ã‚µãƒ¢ãƒ³ãƒ‘ãƒ¼ã‚¯ãƒžãƒƒãƒ—ä»¥å¤–ã§ä½¿ãˆãªããªã‚‹ä»•æ§˜ã®ãƒžãƒƒãƒ—ãƒ•ãƒ©ã‚°ã‚’å®Ÿè£…(eda.sc)
+â€»æŒ‡å®š7ãƒžãƒƒãƒ—ä»¥å¤–å…¨ã¦ã®ãƒžãƒƒãƒ—ã§æž¯æœ¨ã®æžã€è¡€å¡—ã‚‰ã‚ŒãŸæž¯æœ¨ã®æžã€ãƒãƒªãƒ³ãƒœãƒƒã‚¯ã‚¹ãŒä½¿ãˆãªããªã‚Šã¾ã™
 
-EƒTƒ‚ƒ“ƒp[ƒN‚ÉˆÚ“®‚·‚éNPC‚ð‰¼Ý’è(npc_summonpark.sc)
-¦–{—ˆ‚Ì“®ì‚Æ‚Íˆá‚¢AˆÚ“®‚Å‚«‚é‚¾‚¯‚ÌƒeƒXƒg—pNPC‚Å‚·
-¦ƒ}ƒbƒv‚Ì“Ç‚Ýž‚ÝÝ’è‚ð‹Lq‚µ‚Ä‚¢‚Ü‚·‚Ì‚Å’Ç‰ÁÝ’è‚µ‚Ä‰º‚³‚¢
+ãƒ»ã‚µãƒ¢ãƒ³ãƒ‘ãƒ¼ã‚¯ã«ç§»å‹•ã™ã‚‹NPCã‚’ä»®è¨­å®š(npc_summonpark.sc)
+â€»æœ¬æ¥ã®å‹•ä½œã¨ã¯é•ã„ã€ç§»å‹•ã§ãã‚‹ã ã‘ã®ãƒ†ã‚¹ãƒˆç”¨NPCã§ã™
+â€»ãƒžãƒƒãƒ—ã®èª­ã¿è¾¼ã¿è¨­å®šã‚’è¨˜è¿°ã—ã¦ã„ã¾ã™ã®ã§è¿½åŠ è¨­å®šã—ã¦ä¸‹ã•ã„
 
 20240410	patch0158
-Eƒ}ƒbƒvƒtƒ‰ƒO‚ÌXV(mapflag.* mapflag_memorial.*)
-¦ƒ|ƒ^ƒƒ‚ Ž€–Sƒyƒiƒ‹ƒeƒB–³Œø
+ãƒ»ãƒžãƒƒãƒ—ãƒ•ãƒ©ã‚°ã®æ›´æ–°(mapflag.* mapflag_memorial.*)
+â€»ãƒã‚¿ãƒ¡ãƒ¢ æ­»äº¡ãƒšãƒŠãƒ«ãƒ†ã‚£ç„¡åŠ¹
 
-Eƒƒ‚ƒŠƒAƒ‹ƒ_ƒ“ƒWƒ‡ƒ“‚ÌƒŠƒXƒg‰»(mapflag_memorial.*)
+ãƒ»ãƒ¡ãƒ¢ãƒªã‚¢ãƒ«ãƒ€ãƒ³ã‚¸ãƒ§ãƒ³ã®ãƒªã‚¹ãƒˆåŒ–(mapflag_memorial.*)
 
-EƒyƒbƒgŒnNPC‚É[•sR‚Èƒ{ƒgƒ‹]”Ì”„€–Ú‚É’Ç‰Á(npc_town_payon.* npc_town_izlude.* npc_town_lighthalzen.* npc_town_geffen.* npc_town_morocc.* npc_town_yuno.*)
+ãƒ»ãƒšãƒƒãƒˆç³»NPCã«[ä¸å¯©ãªãƒœãƒˆãƒ«]è²©å£²é …ç›®ã«è¿½åŠ (npc_town_payon.* npc_town_izlude.* npc_town_lighthalzen.* npc_town_geffen.* npc_town_morocc.* npc_town_yuno.*)
 
-EƒXƒNƒŠƒvƒg“à‚Ì•s—v‚Èî•ñ‚ðíœAŽÀ‘•ŠÖ˜Aî•ñ‚ðƒRƒƒ“ƒg‚µ®—
-¦ŽžŠÔ‚ª‚©‚©‚é‚¾‚¯‚ÌˆÓ–¡‚Ì‚È‚¢‰ß‹Ž‚ÌŠµK‚ðŽáŽèŠJ”­ŽÒ‚ª^Ž—‚È‚¢‚æ‚¤‚É‚·‚é‚½‚ß
-¦ŽáŽèŠJ”­ŽÒ‚É•K—v‚È‚Ì‚ÍŽÀ‘•‚ÉŠÖ‚·‚éV‚µ‚¢î•ñ‚È‚Ì‚ÅŒ»ÝŠJ”­‚ÉŠÖ‚í‚Á‚Ä‚¢‚él‚à•s—v‚È‚±‚Æ‚ð‘‚­‚Ì‚Í‚â‚ß‚ÄÁ‚µ‚Ü‚µ‚å‚¤
-¦ƒRƒƒ“ƒg‚ð‘‚­‚Æ‚«‚Í“Ç‚ÝŽè‚ÌŽ–‚ðl‚¦‚Ä“ú–{Œê‚ÅŠÈŒ‰‚É‘‚­‚æ‚¤S‚ª‚¯‚Ü‚µ‚å‚¤(ŒÅ—L‘¢Œê‚ª‘½‚¢‚Ì‚É‰p’PŒê1‚Â‘‚¢‚Ä‚à‚È‚ñ‚È‚Ì‚©“`‚í‚è‚Ü‚¹‚ñ)
+ãƒ»ã‚¹ã‚¯ãƒªãƒ—ãƒˆå†…ã®ä¸è¦ãªæƒ…å ±ã‚’å‰Šé™¤ã€å®Ÿè£…é–¢é€£æƒ…å ±ã‚’ã‚³ãƒ¡ãƒ³ãƒˆã—æ•´ç†
+â€»æ™‚é–“ãŒã‹ã‹ã‚‹ã ã‘ã®æ„å‘³ã®ãªã„éŽåŽ»ã®æ…£ç¿’ã‚’è‹¥æ‰‹é–‹ç™ºè€…ãŒçœŸä¼¼ãªã„ã‚ˆã†ã«ã™ã‚‹ãŸã‚
+â€»è‹¥æ‰‹é–‹ç™ºè€…ã«å¿…è¦ãªã®ã¯å®Ÿè£…ã«é–¢ã™ã‚‹æ–°ã—ã„æƒ…å ±ãªã®ã§ç¾åœ¨é–‹ç™ºã«é–¢ã‚ã£ã¦ã„ã‚‹äººã‚‚ä¸è¦ãªã“ã¨ã‚’æ›¸ãã®ã¯ã‚„ã‚ã¦æ¶ˆã—ã¾ã—ã‚‡ã†
+â€»ã‚³ãƒ¡ãƒ³ãƒˆã‚’æ›¸ãã¨ãã¯èª­ã¿æ‰‹ã®äº‹ã‚’è€ƒãˆã¦æ—¥æœ¬èªžã§ç°¡æ½”ã«æ›¸ãã‚ˆã†å¿ƒãŒã‘ã¾ã—ã‚‡ã†(å›ºæœ‰é€ èªžãŒå¤šã„ã®ã«è‹±å˜èªž1ã¤æ›¸ã„ã¦ã‚‚ãªã‚“ãªã®ã‹ä¼ã‚ã‚Šã¾ã›ã‚“)
 
 20240409	patch0157
-E20240409 ƒAƒbƒvƒf[ƒgƒAƒCƒeƒ€ ŽÀ‘•(item_db.* item_db2.* item_cartype.*)
+ãƒ»20240409 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã‚¢ã‚¤ãƒ†ãƒ  å®Ÿè£…(item_db.* item_db2.* item_cartype.*)
 
 
 20240408	patch0156
-E18700-18799 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»18700-18799 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
 20240406	patch0155
-E18500-18699 ƒ~ƒXC³‚ÆÅ“K‰»
-¦ƒyƒbƒg‚Ìe–§“x‚Í 0-100/101-250/251-750/751-900/901-1000 ‚Ì‹æØ‚è‚¾‚Æ‰ðŽß‚µ‚Ä‚¢‚Ü‚·‚ªŽd—l‘‚É‘‚¢‚Ä‚¢‚Ü‚¹‚ñ
-¦‰ñ•œƒAƒCƒeƒ€‚Ìgroup‚É’Ç‰Á‚³‚ê‚½ƒOƒ‹[ƒv‚ªŽd—l‘‚É‘‚©‚ê‚Ä‚¢‚È‚¢‚Å‚·‚ª13‚Í‰SŽÒ—pƒ|[ƒVƒ‡ƒ“‚ç‚µ‚¢‚Å‚·
-¦[ˆê•”‚Ì‰ñ•œƒAƒCƒeƒ€]‚Í[itemheal‚ðŽg‚¢percenheal‚ðœ‚­‰ñ•œƒAƒCƒeƒ€‘S•”‚É‰e‹¿‚·‚é‘•”õƒ{[ƒiƒX]‚Æ‚¢‚¤î•ñ‚ðŠm”F‚µ‚Ü‚µ‚½
+ãƒ»18500-18699 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
+â€»ãƒšãƒƒãƒˆã®è¦ªå¯†åº¦ã¯ 0-100/101-250/251-750/751-900/901-1000 ã®åŒºåˆ‡ã‚Šã ã¨è§£é‡ˆã—ã¦ã„ã¾ã™ãŒä»•æ§˜æ›¸ã«æ›¸ã„ã¦ã„ã¾ã›ã‚“
+â€»å›žå¾©ã‚¢ã‚¤ãƒ†ãƒ ã®groupã«è¿½åŠ ã•ã‚ŒãŸã‚°ãƒ«ãƒ¼ãƒ—ãŒä»•æ§˜æ›¸ã«æ›¸ã‹ã‚Œã¦ã„ãªã„ã§ã™ãŒ13ã¯åˆå¿ƒè€…ç”¨ãƒãƒ¼ã‚·ãƒ§ãƒ³ã‚‰ã—ã„ã§ã™
+â€»[ä¸€éƒ¨ã®å›žå¾©ã‚¢ã‚¤ãƒ†ãƒ ]ã¯[itemhealã‚’ä½¿ã„percenhealã‚’é™¤ãå›žå¾©ã‚¢ã‚¤ãƒ†ãƒ å…¨éƒ¨ã«å½±éŸ¿ã™ã‚‹è£…å‚™ãƒœãƒ¼ãƒŠã‚¹]ã¨ã„ã†æƒ…å ±ã‚’ç¢ºèªã—ã¾ã—ãŸ
 
 20240404	patch0154
-E5978 5987-5999 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»5978 5987-5999 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
 20240404	patch0153
-E5600-5986 ƒ~ƒXC³‚ÆÅ“K‰»
+ãƒ»5600-5986 ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
 
 20240403	patch0152
-E•Û—¯‚µ‚Ä‚¢‚½(••ˆó‚³‚ê‚½)ƒ”ƒFƒ‹ƒ[ƒuƒuƒJ[ƒh (••ˆó‚³‚ê‚½)‘Â‚¿‚½‘å_Š¯ƒqƒoƒ€ƒJ[ƒh‚ÆŠÖŒWƒAƒCƒeƒ€‚ÌŽÀ‘•
+ãƒ»ä¿ç•™ã—ã¦ã„ãŸ(å°å°ã•ã‚ŒãŸ)ãƒ´ã‚§ãƒ«ã‚¼ãƒ–ãƒ–ã‚«ãƒ¼ãƒ‰ (å°å°ã•ã‚ŒãŸ)å •ã¡ãŸå¤§ç¥žå®˜ãƒ’ãƒãƒ ã‚«ãƒ¼ãƒ‰ã¨é–¢ä¿‚ã‚¢ã‚¤ãƒ†ãƒ ã®å®Ÿè£…
 
-E••ˆó‚³‚ê‚½ƒ”ƒFƒ‹ƒ[ƒuƒuƒJ[ƒh‚Ìitem_cardtype.txt‚ðC³
+ãƒ»å°å°ã•ã‚ŒãŸãƒ´ã‚§ãƒ«ã‚¼ãƒ–ãƒ–ã‚«ãƒ¼ãƒ‰ã®item_cardtype.txtã‚’ä¿®æ­£
 
-Eƒƒƒ“Œn•Ší‚Ìƒ~ƒXC³‚ÆÅ“K‰»
-¦Šˆ«‰»—¦‚ªu‚©‚È‚èo‚év‚Æ‚¢‚¤•¡”‚ÌÚ×î•ñ‚ð–ÚŽ‹Šm”F‚µ•¨—–‚–@‹¤‚É5%‚ÉÝ’è(Žg—pŠ´‚ÍÅ“K‚Å‚µ‚½‚Ì‚ÅŠm’è‚Å‚¢‚¢‚ÆŽv‚¢‚Ü‚·)
-¦misceffect‚Í—Î‚Ì—Ö‚Å’T‚µ‚½‚¯‚ÇŒ©‚Â‚©‚ç‚È‚©‚Á‚½‚Ì‚Å—Îƒ|[ƒVƒ‡ƒ“‚ÌƒGƒtƒFƒNƒg‚Å‰¼Ý’è‚Å‚·
-¦–‚–@UŒ‚Žž‚Éshowmessage "–Lì™ƒƒ```ƒ“!!"; •\Ž¦‚³‚ê‚Ü‚¹‚ñ‚ªƒXƒLƒ‹–¼‚Éã‘‚«‚³‚ê‚é‚½‚ß‚Å‚·
+ãƒ»ãƒ¡ãƒ­ãƒ³ç³»æ­¦å™¨ã®ãƒŸã‚¹ä¿®æ­£ã¨æœ€é©åŒ–
+â€»æ´»æ€§åŒ–çŽ‡ãŒã€Œã‹ãªã‚Šå‡ºã‚‹ã€ã¨ã„ã†è¤‡æ•°ã®è©³ç´°æƒ…å ±ã‚’ç›®è¦–ç¢ºèªã—ç‰©ç†é­”æ³•å…±ã«5%ã«è¨­å®š(ä½¿ç”¨æ„Ÿã¯æœ€é©ã§ã—ãŸã®ã§ç¢ºå®šã§ã„ã„ã¨æ€ã„ã¾ã™)
+â€»misceffectã¯ç·‘ã®è¼ªã§æŽ¢ã—ãŸã‘ã©è¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸã®ã§ç·‘ãƒãƒ¼ã‚·ãƒ§ãƒ³ã®ã‚¨ãƒ•ã‚§ã‚¯ãƒˆã§ä»®è¨­å®šã§ã™
+â€»é­”æ³•æ”»æ’ƒæ™‚ã«showmessage "è±Šä½œâ˜†ãƒ¡ãƒ­ï½žï½žï½žãƒ³!!"; è¡¨ç¤ºã•ã‚Œã¾ã›ã‚“ãŒã‚¹ã‚­ãƒ«åã«ä¸Šæ›¸ãã•ã‚Œã‚‹ãŸã‚ã§ã™
 
-E–î”Ì”„NPC‚Ì“ú•t‚ðC³(‹““®‚É•Ï‰»‚È‚µ)
+ãƒ»çŸ¢è²©å£²NPCã®æ—¥ä»˜ã‚’ä¿®æ­£(æŒ™å‹•ã«å¤‰åŒ–ãªã—)
 
 20240402	patch0151
-E20240402 ƒAƒbƒvƒf[ƒg ŽÀ‘•(item_db.* item_db2.* item_memo.*)
-¦accessoryid.* accname.* spriterobeid.* spriterobename.* tb_layer_priority.* transparentitem.* iteminfo.* ‚ðŠeŽ©XV‚µdata\luafiles514\lua files\[datainfo][transparentitem]“¯‚¶ŠK‘w‚É”z’u‚µ‚Ä‰º‚³‚¢
-¦ƒeƒXƒgŠÂ‹«‚Í[read data folder first]‚Ìƒpƒbƒ`‚ð—˜—p‚µ‚Ä‚¢‚é‚Ì‚Ågrf‚ðXV‚µ‚È‚­‚Ä‚à‚¢‚¢‚Å‚·
-¦hateffect‚ÍXV‚ ‚è‚Ü‚¹‚ñ
+ãƒ»20240402 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ å®Ÿè£…(item_db.* item_db2.* item_memo.*)
+â€»accessoryid.* accname.* spriterobeid.* spriterobename.* tb_layer_priority.* transparentitem.* iteminfo.* ã‚’å„è‡ªæ›´æ–°ã—data\luafiles514\lua files\[datainfo][transparentitem]åŒã˜éšŽå±¤ã«é…ç½®ã—ã¦ä¸‹ã•ã„
+â€»ãƒ†ã‚¹ãƒˆç’°å¢ƒã¯[read data folder first]ã®ãƒ‘ãƒƒãƒã‚’åˆ©ç”¨ã—ã¦ã„ã‚‹ã®ã§grfã‚’æ›´æ–°ã—ãªãã¦ã‚‚ã„ã„ã§ã™
+â€»hateffectã¯æ›´æ–°ã‚ã‚Šã¾ã›ã‚“
 
-Eitemmoveinfov5.txt XV(data\itemmoveinfov5.txt)
-¦dataƒtƒHƒ‹ƒ_’¼‰º‚É”z’u‚µAƒAƒCƒeƒ€‰æ–Ê‚Ì‰º‚É•\Ž¦‚³‚ê‚éˆÚ“®§ŒÀ‚Ì•\Ž¦‚ÉŽg‚¢‚Ü‚·
-¦20240326ƒeƒXƒgŠÂ‹«‚ÌXV‚ÅŽÀ‘•
-¦•\Ž¦‚Ì‚Ý‚ÅŽÀÛ‹““®‚É‚Í‰e‹¿‚µ‚Ü‚¹‚ñ‚Ì‚ÅXV‚ð‹}‚ª‚È‚­‚Ä‚à–â‘è‚ ‚è‚Ü‚¹‚ñ
-¦ƒeƒXƒgŠÂ‹«‚Í[read data folder first]‚Ìƒpƒbƒ`‚ð—˜—p‚µ‚Ä‚¢‚é‚Ì‚Ågrf‚ðXV‚µ‚È‚­‚Ä‚à‚¢‚¢‚Å‚·
+ãƒ»itemmoveinfov5.txt æ›´æ–°(data\itemmoveinfov5.txt)
+â€»dataãƒ•ã‚©ãƒ«ãƒ€ç›´ä¸‹ã«é…ç½®ã—ã€ã‚¢ã‚¤ãƒ†ãƒ ç”»é¢ã®ä¸‹ã«è¡¨ç¤ºã•ã‚Œã‚‹ç§»å‹•åˆ¶é™ã®è¡¨ç¤ºã«ä½¿ã„ã¾ã™
+â€»20240326ãƒ†ã‚¹ãƒˆç’°å¢ƒã®æ›´æ–°ã§å®Ÿè£…
+â€»è¡¨ç¤ºã®ã¿ã§å®Ÿéš›æŒ™å‹•ã«ã¯å½±éŸ¿ã—ã¾ã›ã‚“ã®ã§æ›´æ–°ã‚’æ€¥ãŒãªãã¦ã‚‚å•é¡Œã‚ã‚Šã¾ã›ã‚“
+â€»ãƒ†ã‚¹ãƒˆç’°å¢ƒã¯[read data folder first]ã®ãƒ‘ãƒƒãƒã‚’åˆ©ç”¨ã—ã¦ã„ã‚‹ã®ã§grfã‚’æ›´æ–°ã—ãªãã¦ã‚‚ã„ã„ã§ã™
 
-E[•—‚Ì–î][ŠâÎ‚Ì–î][…»‚Ì–î]‚ð”Ì”„ŒnNPC‚É’Ç‰Á([alb2trea.gat][ein_in01.gat][lhz_in03.gat] npc_town_alberta.* npc_town_einbroch.* npc_town_lighthalzen.*)
-¦20151222ƒAƒbƒvƒf[ƒg‚ÅŽÀ‘•‚³‚ê‚Ä‚¢‚é—v‘f‚Å‚·
-¦‚»‚Ì‚Ü‚Üã‘‚«‚µ‚Ä‰º‚³‚¢
+ãƒ»[é¢¨ã®çŸ¢][å²©çŸ³ã®çŸ¢][æ°´æ™¶ã®çŸ¢]ã‚’è²©å£²ç³»NPCã«è¿½åŠ ([alb2trea.gat][ein_in01.gat][lhz_in03.gat] npc_town_alberta.* npc_town_einbroch.* npc_town_lighthalzen.*)
+â€»20151222ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã§å®Ÿè£…ã•ã‚Œã¦ã„ã‚‹è¦ç´ ã§ã™
+â€»ãã®ã¾ã¾ä¸Šæ›¸ãã—ã¦ä¸‹ã•ã„
 
 20240401	patch0150
-E5400-5599 5653 C³‚ÆÅ“K‰»
-¦Œø‰Ê‚ª‘S•”ˆá‚¤‚à‚Ì‚ª‚ ‚èA‰ß‹Ž‚É‚È‚³‚ê‚½ƒOƒ[ƒoƒ‹ŒnƒAƒCƒeƒ€‚Ì•s–¾î•ñŽÀ‘•‚Ì–¼Žc‚¾‚ÆŽv‚í‚ê‚é
-¦¡‰ñ‚ÍŒÂ•Ê‚É’²‚×‚é‚ª10”NˆÈãŒo‰ß‚·‚éƒAƒCƒeƒ€‚ÌƒI[ƒgƒXƒyƒ‹—¦‚ÆƒAƒCƒeƒ€ƒhƒƒbƒv—¦‚Í“üŽèŽè’i‚È‚­î•ñ‚È‚¢‚½‚ß’ÇÕ‚Í•s—v
-¦Šî–{“I‚É10”NˆÈãŒo‰ß‚Å–¾‹L‚³‚ê‚Ä‚¢‚È‚¢Šm—¦‚Íî•ñ‚ªo‚Ä‚­‚é‚±‚Æ‚ª‚È‚¢‚Ì‚Å‘S•”’ÇÕ•s—v‚Æ”»’f
+ãƒ»5400-5599 5653 ä¿®æ­£ã¨æœ€é©åŒ–
+â€»åŠ¹æžœãŒå…¨éƒ¨é•ã†ã‚‚ã®ãŒã‚ã‚Šã€éŽåŽ»ã«ãªã•ã‚ŒãŸã‚°ãƒ­ãƒ¼ãƒãƒ«ç³»ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸æ˜Žæƒ…å ±å®Ÿè£…ã®åæ®‹ã ã¨æ€ã‚ã‚Œã‚‹
+â€»ä»Šå›žã¯å€‹åˆ¥ã«èª¿ã¹ã‚‹ãŒ10å¹´ä»¥ä¸ŠçµŒéŽã™ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®ã‚ªãƒ¼ãƒˆã‚¹ãƒšãƒ«çŽ‡ã¨ã‚¢ã‚¤ãƒ†ãƒ ãƒ‰ãƒ­ãƒƒãƒ—çŽ‡ã¯å…¥æ‰‹æ‰‹æ®µãªãæƒ…å ±ãªã„ãŸã‚è¿½è·¡ã¯ä¸è¦
+â€»åŸºæœ¬çš„ã«10å¹´ä»¥ä¸ŠçµŒéŽã§æ˜Žè¨˜ã•ã‚Œã¦ã„ãªã„ç¢ºçŽ‡ã¯æƒ…å ±ãŒå‡ºã¦ãã‚‹ã“ã¨ãŒãªã„ã®ã§å…¨éƒ¨è¿½è·¡ä¸è¦ã¨åˆ¤æ–­
 
 20240331	patch0149
-E“ª‘•”õƒJ[ƒh‚Ì¸˜B’lŒø‰Ê‚Ì•”ˆÊŽw’è‚ðAŽ©g‚Ì¸˜B’l‚ðŽQÆ‚·‚éê‡‚Ì‹Lq‚ðÅ“K‰»‚µAŠÔˆá‚¢‚Ì—U”­Œ´ˆö‚ðœ‹Ž
+ãƒ»é ­è£…å‚™ã‚«ãƒ¼ãƒ‰ã®ç²¾éŒ¬å€¤åŠ¹æžœã®éƒ¨ä½æŒ‡å®šã‚’ã€è‡ªèº«ã®ç²¾éŒ¬å€¤ã‚’å‚ç…§ã™ã‚‹å ´åˆã®è¨˜è¿°ã‚’æœ€é©åŒ–ã—ã€é–“é•ã„ã®èª˜ç™ºåŽŸå› ã‚’é™¤åŽ»
 
-EC³‰ÓŠ‚ª‚Æ‚Ä‚à‘½‚¢‚½‚ßA‘•”õ•i‚Ì‘S”ŒŸ¸‚ðŽÀŽ{‚·‚é•ûŒü‚É“]Š·(¡‰ñ‚Í5001-5399‚Ü‚Å)
+ãƒ»ä¿®æ­£ç®‡æ‰€ãŒã¨ã¦ã‚‚å¤šã„ãŸã‚ã€è£…å‚™å“ã®å…¨æ•°æ¤œæŸ»ã‚’å®Ÿæ–½ã™ã‚‹æ–¹å‘ã«è»¢æ›(ä»Šå›žã¯5001-5399ã¾ã§)
 
-E2010”N ‚©‚ç‚ÌƒAƒCƒeƒ€‚É•s‹ï‡‚ª‚Æ‚Ä‚à‘½‚¢‚Ì‚Å‰½‚ðC³‚µ‚½‚Ì‚©‚à’Ç‹L
+ãƒ»2010å¹´é ƒã‹ã‚‰ã®ã‚¢ã‚¤ãƒ†ãƒ ã«ä¸å…·åˆãŒã¨ã¦ã‚‚å¤šã„ã®ã§ä½•ã‚’ä¿®æ­£ã—ãŸã®ã‹ã‚‚è¿½è¨˜
 
-E¸˜B’l‚ÉŠÖ‚µ‚Ä‹Lq‚Ç‚¨‚è‚É‘‚¢‚Ä‚¢‚È‚¢‚à‚Ì‚Í“®ì‚µ‚Ä‚¢‚Ä‚à‘‚«Š·‚¦iƒAƒCƒeƒ€à–¾‚Ç‚¨‚è‚É‘‚©‚È‚¢‚­‚¹iŒ‹‰ÊŠÔˆá‚¦‚Ä‚µ‚Ü‚¤j‚ð‚±‚ê‚©‚ç‚ÌŽáŽèŠJ”­ŽÒ‚ª‚Â‚¯‚È‚¢‚æ‚¤‚ÉC³j
+ãƒ»ç²¾éŒ¬å€¤ã«é–¢ã—ã¦è¨˜è¿°ã©ãŠã‚Šã«æ›¸ã„ã¦ã„ãªã„ã‚‚ã®ã¯å‹•ä½œã—ã¦ã„ã¦ã‚‚æ›¸ãæ›ãˆï¼ˆã‚¢ã‚¤ãƒ†ãƒ èª¬æ˜Žã©ãŠã‚Šã«æ›¸ã‹ãªã„ãã›ï¼ˆçµæžœé–“é•ãˆã¦ã—ã¾ã†ï¼‰ã‚’ã“ã‚Œã‹ã‚‰ã®è‹¥æ‰‹é–‹ç™ºè€…ãŒã¤ã‘ãªã„ã‚ˆã†ã«ä¿®æ­£ï¼‰
 
 
 20240328	patch0148
-Eitem_db2_add.txt íœ
+ãƒ»item_db2_add.txt å‰Šé™¤
 
-EŒC‚ÆƒJ[ƒh‚Ì¸˜B’lŒø‰Ê‚Ì•”ˆÊŽw’è‚ðAŽ©g‚Ì¸˜B’l‚ðŽQÆ‚·‚éê‡‚Ì‹Lq‚ðÅ“K‰»‚µAŠÔˆá‚¢‚Ì—U”­Œ´ˆö‚ðœ‹Ž
+ãƒ»é´ã¨ã‚«ãƒ¼ãƒ‰ã®ç²¾éŒ¬å€¤åŠ¹æžœã®éƒ¨ä½æŒ‡å®šã‚’ã€è‡ªèº«ã®ç²¾éŒ¬å€¤ã‚’å‚ç…§ã™ã‚‹å ´åˆã®è¨˜è¿°ã‚’æœ€é©åŒ–ã—ã€é–“é•ã„ã®èª˜ç™ºåŽŸå› ã‚’é™¤åŽ»
 
-EŠÔˆá‚¢‚ÌC³
+ãƒ»é–“é•ã„ã®ä¿®æ­£
 
-E‚¢‚­‚Â‚©‚ÉƒZƒbƒgŒø‰Ê’Ç‰Á
+ãƒ»ã„ãã¤ã‹ã«ã‚»ãƒƒãƒˆåŠ¹æžœè¿½åŠ 
 
-EƒTƒoƒCƒoƒ‹ƒAƒCƒeƒ€‚ð‘SƒŠƒ[ƒN‚µC³AƒZƒbƒgŒø‰Ê‚ð‘S®—
+ãƒ»ã‚µãƒã‚¤ãƒãƒ«ã‚¢ã‚¤ãƒ†ãƒ ã‚’å…¨ãƒªãƒ¯ãƒ¼ã‚¯ã—ä¿®æ­£ã€ã‚»ãƒƒãƒˆåŠ¹æžœã‚’å…¨æ•´ç†
 //1618
 1618,2509
 1618,20813
@@ -979,2820 +1000,2820 @@ HPSP‰ñ•œƒ{[ƒiƒX[bonus3 bDefeatHPDrainValue][bonus3 bDefeatSPDrainValue]‚ÍŽd—l‘
 470005,19020
 470005,20813
 
-E(••ˆó)ƒAƒ‚ƒ“ƒ‰[ƒJ[ƒh‚ÆƒAƒvƒ[ƒYƒTƒ“ƒ_ƒ‹‚ÌƒZƒbƒgŒø‰Ê‚ÌÅ“K‰»
+ãƒ»(å°å°)ã‚¢ãƒ¢ãƒ³ãƒ©ãƒ¼ã‚«ãƒ¼ãƒ‰ã¨ã‚¢ãƒ—ãƒ­ãƒ¼ã‚ºã‚µãƒ³ãƒ€ãƒ«ã®ã‚»ãƒƒãƒˆåŠ¹æžœã®æœ€é©åŒ–
 
 20240326	patch0147
-E[•¨—ƒ_ƒ[ƒW‘‰Á]‚Ì‹Lq[shortweapondamagerate. longweapondamagerate.] ‚ð[bonus2 bAddRace,Rct_Boss,*; bonus2 bAddRace,Rct_NonBoss,*;]‚É‘‚«Š·‚¦‚µ‚ÄÅ“K‰»
+ãƒ»[ç‰©ç†ãƒ€ãƒ¡ãƒ¼ã‚¸å¢—åŠ ]ã®è¨˜è¿°[shortweapondamagerate. longweapondamagerate.] ã‚’[bonus2 bAddRace,Rct_Boss,*; bonus2 bAddRace,Rct_NonBoss,*;]ã«æ›¸ãæ›ãˆã—ã¦æœ€é©åŒ–
 
-EŒø‰Ê‚Ì•s‘«‚ð•âŠ®
+ãƒ»åŠ¹æžœã®ä¸è¶³ã‚’è£œå®Œ
 
-E3ŽŸE“]E‚Å“¾‚é‘•”õ•i‚Ì2795‚Ì”„’l‚ª0‚Æ”»–¾‚µ‚½‚Ì‚ÅC³
+ãƒ»3æ¬¡è·è»¢è·ã§å¾—ã‚‹è£…å‚™å“ã®2795ã®å£²å€¤ãŒ0ã¨åˆ¤æ˜Žã—ãŸã®ã§ä¿®æ­£
 
-Eƒƒƒ“* ‰ñ•œƒAƒCƒeƒ€‚ÌŽg—pŽžƒGƒtƒFƒNƒg‚ðŠm”F‚µ‚½‚Ì‚ÅC³
-¦‰ß‹Ž‚Ì“¯—lƒAƒCƒeƒ€‚àƒGƒtƒFƒNƒg‚ª‚ ‚é‚Æ‘z’è‚µ‚Ä‚¢‚é‚ª‚·‚Å‚ÉÁ–Å‚µ‚Ä‚¢‚é‚Ì‚Å‚»‚Ì‚Ü‚Ü
+ãƒ»ãƒ¡ãƒ­ãƒ³* å›žå¾©ã‚¢ã‚¤ãƒ†ãƒ ã®ä½¿ç”¨æ™‚ã‚¨ãƒ•ã‚§ã‚¯ãƒˆã‚’ç¢ºèªã—ãŸã®ã§ä¿®æ­£
+â€»éŽåŽ»ã®åŒæ§˜ã‚¢ã‚¤ãƒ†ãƒ ã‚‚ã‚¨ãƒ•ã‚§ã‚¯ãƒˆãŒã‚ã‚‹ã¨æƒ³å®šã—ã¦ã„ã‚‹ãŒã™ã§ã«æ¶ˆæ»…ã—ã¦ã„ã‚‹ã®ã§ãã®ã¾ã¾
 
-E•—–‚Žè— Œ•‚ÌƒZƒbƒgŒø‰ÊŽÀ‘•
+ãƒ»é¢¨é­”æ‰‹è£å‰£ã®ã‚»ãƒƒãƒˆåŠ¹æžœå®Ÿè£…
 
 20240325	patch0146
-Emob_db_add.txt XV
-¦ì‹Æ“r’†‚Å‚·‚ªd•¡‚ðíœ
+ãƒ»mob_db_add.txt æ›´æ–°
+â€»ä½œæ¥­é€”ä¸­ã§ã™ãŒé‡è¤‡ã‚’å‰Šé™¤
 
-Eó‘ÔˆÙí‚ÆNPC‚ÌƒŠƒXƒgì¬(efstids_db.txt npclist.txt)
-¦ŠCŠO‚Ìî•ñƒTƒCƒg‚ð—Š‚ç‚È‚­‚Ä‚à‚æ‚­‚È‚è‚Ü‚·
+ãƒ»çŠ¶æ…‹ç•°å¸¸ã¨NPCã®ãƒªã‚¹ãƒˆä½œæˆ(efstids_db.txt npclist.txt)
+â€»æµ·å¤–ã®æƒ…å ±ã‚µã‚¤ãƒˆã‚’é ¼ã‚‰ãªãã¦ã‚‚ã‚ˆããªã‚Šã¾ã™
 
-ENPC‚Æmob‚Ì•\Ž¦ƒTƒ“ƒvƒ‹‚Æ‚µ‚Ämap‚É”z’u‚µ‚Ä‚¢‚éƒXƒNƒŠƒvƒgŒöŠJ(npc_list.sc)
-¦ŠCŠO‚Ìî•ñƒTƒCƒg‚ð—Š‚ç‚È‚­‚Ä‚à‚æ‚­‚È‚è‚Ü‚·
-¦ƒ[ƒJƒ‹ŠÂ‹«‚ÅŽÀ‘•‰Â”\‚ÈNPC‚Æmob‚ðƒ‚ƒƒN‹ß•Ó‚É”z’u‚µ‚Ä‚¢‚Ü‚·
-¦NPC•\Ž¦–¼‚ÉNPCŒÅ—L”Ô†‚ðŽg‚Á‚Ä‚¢‚é‚Ì‚Å’²‚×‚éì‹Æ‚ªŒyŒ¸‚³‚ê‚Ü‚·
-¦’è‹`‚Ì‚Ý‚Å–¢ŽÀ‘•‚Ì‚à‚Ì‚ÍƒRƒƒ“ƒgƒAƒEƒg‚µ‚Ä‚¢‚Ü‚·‚ª•\Ž¦‚³‚ê‚é‚à‚Ì‚à‚ ‚è‚Ü‚·(map_npc_add.grf)
-¦•\Ž¦ƒ^ƒCƒ~ƒ“ƒO‚ÅƒGƒ‰[‚ªo‚éê‡‚ª‚ ‚è‚Ü‚·‚ªƒŠƒƒO‚µ‚Ä‚­‚¾‚³‚¢
-¦240319Œ»Ý‚Ì jobidentity.* jobname.* npcidentity.* ‚ðŠî€‚É‚µ‚Ä‚¢‚Ü‚·(XV‚µ‚È‚¢‚Æ’è‹`‚Ì‘«‚è‚È‚¢NPC‚ÌêŠ‚ÅƒGƒ‰[‚ªo‚Ü‚·)
-¦‹ß“ú’†‚É‘Î‰ž‚·‚éƒeƒXƒgŠÂ‹«‚ðƒAƒbƒvƒf[ƒg—\’è
+ãƒ»NPCã¨mobã®è¡¨ç¤ºã‚µãƒ³ãƒ—ãƒ«ã¨ã—ã¦mapã«é…ç½®ã—ã¦ã„ã‚‹ã‚¹ã‚¯ãƒªãƒ—ãƒˆå…¬é–‹(npc_list.sc)
+â€»æµ·å¤–ã®æƒ…å ±ã‚µã‚¤ãƒˆã‚’é ¼ã‚‰ãªãã¦ã‚‚ã‚ˆããªã‚Šã¾ã™
+â€»ãƒ­ãƒ¼ã‚«ãƒ«ç’°å¢ƒã§å®Ÿè£…å¯èƒ½ãªNPCã¨mobã‚’ãƒ¢ãƒ­ã‚¯è¿‘è¾ºã«é…ç½®ã—ã¦ã„ã¾ã™
+â€»NPCè¡¨ç¤ºåã«NPCå›ºæœ‰ç•ªå·ã‚’ä½¿ã£ã¦ã„ã‚‹ã®ã§èª¿ã¹ã‚‹ä½œæ¥­ãŒè»½æ¸›ã•ã‚Œã¾ã™
+â€»å®šç¾©ã®ã¿ã§æœªå®Ÿè£…ã®ã‚‚ã®ã¯ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã—ã¦ã„ã¾ã™ãŒè¡¨ç¤ºã•ã‚Œã‚‹ã‚‚ã®ã‚‚ã‚ã‚Šã¾ã™(map_npc_add.grf)
+â€»è¡¨ç¤ºã‚¿ã‚¤ãƒŸãƒ³ã‚°ã§ã‚¨ãƒ©ãƒ¼ãŒå‡ºã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ãŒãƒªãƒ­ã‚°ã—ã¦ãã ã•ã„
+â€»240319ç¾åœ¨ã® jobidentity.* jobname.* npcidentity.* ã‚’åŸºæº–ã«ã—ã¦ã„ã¾ã™(æ›´æ–°ã—ãªã„ã¨å®šç¾©ã®è¶³ã‚Šãªã„NPCã®å ´æ‰€ã§ã‚¨ãƒ©ãƒ¼ãŒå‡ºã¾ã™)
+â€»è¿‘æ—¥ä¸­ã«å¯¾å¿œã™ã‚‹ãƒ†ã‚¹ãƒˆç’°å¢ƒã‚’ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆäºˆå®š
 
-Etest.sc npc_test.sc ­‚µC³
+ãƒ»test.sc npc_test.sc å°‘ã—ä¿®æ­£
 
 20240323	patch0145
-EŠÔˆá‚¢‚ÌC³
+ãƒ»é–“é•ã„ã®ä¿®æ­£
 
-E‚¢‚­‚Â‚©‚ÉƒZƒbƒgŒø‰Ê’Ç‰Á
+ãƒ»ã„ãã¤ã‹ã«ã‚»ãƒƒãƒˆåŠ¹æžœè¿½åŠ 
 
-EŠZ‚ÆƒJ[ƒh‚Ì¸˜B’lŒø‰Ê‚Ì•”ˆÊŽw’è‚ðAŽ©g‚Ì¸˜B’l‚ðŽQÆ‚·‚éê‡‚Ì‹Lq‚ðÅ“K‰»‚µAŠÔˆá‚¢‚Ì—U”­Œ´ˆö‚ðœ‹Ž
+ãƒ»éŽ§ã¨ã‚«ãƒ¼ãƒ‰ã®ç²¾éŒ¬å€¤åŠ¹æžœã®éƒ¨ä½æŒ‡å®šã‚’ã€è‡ªèº«ã®ç²¾éŒ¬å€¤ã‚’å‚ç…§ã™ã‚‹å ´åˆã®è¨˜è¿°ã‚’æœ€é©åŒ–ã—ã€é–“é•ã„ã®èª˜ç™ºåŽŸå› ã‚’é™¤åŽ»
 
 20240321	patch0144
-EŠÔˆá‚¢‚ÌC³
+ãƒ»é–“é•ã„ã®ä¿®æ­£
 
-E‚¢‚­‚Â‚©‚ÉƒZƒbƒgŒø‰Ê’Ç‰Á
+ãƒ»ã„ãã¤ã‹ã«ã‚»ãƒƒãƒˆåŠ¹æžœè¿½åŠ 
 
-E‚ƒJ[ƒh‚ÌÅ“K‰»
+ãƒ»ç›¾ã‚«ãƒ¼ãƒ‰ã®æœ€é©åŒ–
 
-EŒ¨‚É‚©‚¯‚é‚à‚Ì‚ÆƒJ[ƒh‚Ì¸˜B’lŒø‰Ê‚Ì•”ˆÊŽw’è‚ðAŽ©g‚Ì¸˜B’l‚ðŽQÆ‚·‚éê‡‚Ì‹Lq‚ðÅ“K‰»‚µAŠÔˆá‚¢‚Ì—U”­Œ´ˆö‚ðœ‹Ž
+ãƒ»è‚©ã«ã‹ã‘ã‚‹ã‚‚ã®ã¨ã‚«ãƒ¼ãƒ‰ã®ç²¾éŒ¬å€¤åŠ¹æžœã®éƒ¨ä½æŒ‡å®šã‚’ã€è‡ªèº«ã®ç²¾éŒ¬å€¤ã‚’å‚ç…§ã™ã‚‹å ´åˆã®è¨˜è¿°ã‚’æœ€é©åŒ–ã—ã€é–“é•ã„ã®èª˜ç™ºåŽŸå› ã‚’é™¤åŽ»
 
 20240320	patch0143
-EŠÔˆá‚¢‚ÌC³
+ãƒ»é–“é•ã„ã®ä¿®æ­£
 
-E‚‚Ì¸˜B’lŒø‰Ê‚Ì•”ˆÊŽw’è‚ðAŽ©g‚Ì¸˜B’l‚ðŽQÆ‚·‚éê‡‚Ì‹Lq‚ðÅ“K‰»‚µAŠÔˆá‚¢‚Ì—U”­Œ´ˆö‚ðœ‹Ž
+ãƒ»ç›¾ã®ç²¾éŒ¬å€¤åŠ¹æžœã®éƒ¨ä½æŒ‡å®šã‚’ã€è‡ªèº«ã®ç²¾éŒ¬å€¤ã‚’å‚ç…§ã™ã‚‹å ´åˆã®è¨˜è¿°ã‚’æœ€é©åŒ–ã—ã€é–“é•ã„ã®èª˜ç™ºåŽŸå› ã‚’é™¤åŽ»
 
-E2115#ƒ”ƒ@ƒ‹ƒLƒŠ[ƒV[ƒ‹ƒh# ƒZƒbƒgŒø‰Ê‚Ì¸˜B‚ÅDEFŒ¸­‚ª‘‚©‚ê‚Ä‚¢‚È‚©‚Á‚½‚½‚ß‘S‘‚«Š·‚¦(2024”NŒ»Ý‚à—˜—p‚³‚ê‚Ä‚¢‚é‰ŠúŽÀ‘•ƒAƒCƒeƒ€‚È‚Ì‚ÅÄŒŸØ‚µ‚Ü‚µ‚½)
+ãƒ»2115#ãƒ´ã‚¡ãƒ«ã‚­ãƒªãƒ¼ã‚·ãƒ¼ãƒ«ãƒ‰# ã‚»ãƒƒãƒˆåŠ¹æžœã®ç²¾éŒ¬ã§DEFæ¸›å°‘ãŒæ›¸ã‹ã‚Œã¦ã„ãªã‹ã£ãŸãŸã‚å…¨æ›¸ãæ›ãˆ(2024å¹´ç¾åœ¨ã‚‚åˆ©ç”¨ã•ã‚Œã¦ã„ã‚‹åˆæœŸå®Ÿè£…ã‚¢ã‚¤ãƒ†ãƒ ãªã®ã§å†æ¤œè¨¼ã—ã¾ã—ãŸ)
 
 
 20240319	patch0142
-EŠÔˆá‚¢‚ÌC³
+ãƒ»é–“é•ã„ã®ä¿®æ­£
 
-E•Ší‚Æ•ŠíƒJ[ƒh‚Ì¸˜B’lŒø‰Ê‚Ì•”ˆÊŽw’è‚ðAŽ©g‚Ì¸˜B’l‚ðŽQÆ‚·‚éê‡‚Ì‹Lq‚ðÅ“K‰»‚µAŠÔˆá‚¢‚Ì—U”­Œ´ˆö‚ðœ‹Ž
+ãƒ»æ­¦å™¨ã¨æ­¦å™¨ã‚«ãƒ¼ãƒ‰ã®ç²¾éŒ¬å€¤åŠ¹æžœã®éƒ¨ä½æŒ‡å®šã‚’ã€è‡ªèº«ã®ç²¾éŒ¬å€¤ã‚’å‚ç…§ã™ã‚‹å ´åˆã®è¨˜è¿°ã‚’æœ€é©åŒ–ã—ã€é–“é•ã„ã®èª˜ç™ºåŽŸå› ã‚’é™¤åŽ»
 
 20240318	patch0141
-EƒAƒCƒeƒ€‚Ì‘•”õŒø‰Ê‚Ì‚Ô‚êC³‚ÆÅ“K‰»
+ãƒ»ã‚¢ã‚¤ãƒ†ãƒ ã®è£…å‚™åŠ¹æžœã®ã¶ã‚Œä¿®æ­£ã¨æœ€é©åŒ–
 
-EŒø‰Ê‚Ìˆá‚Á‚Ä‚¢‚é‚à‚Ì‚ÍC³
+ãƒ»åŠ¹æžœã®é•ã£ã¦ã„ã‚‹ã‚‚ã®ã¯ä¿®æ­£
 
-E18969#ƒxƒŒ[BOSS–XŽq# Œø‰Ê‚ª18985#’¹Žë‚ÌŒÄŽq#‚Æ“¯‚¶‚É‚È‚Á‚Ä‚¢‚½‚½‚ßŒø‰Êíœ
-¦Œã“úŽÀ‘•—\’è
+ãƒ»18969#ãƒ™ãƒ¬ãƒ¼BOSSå¸½å­# åŠ¹æžœãŒ18985#é³¥ç‹©ã®å‘¼å­#ã¨åŒã˜ã«ãªã£ã¦ã„ãŸãŸã‚åŠ¹æžœå‰Šé™¤
+â€»å¾Œæ—¥å®Ÿè£…äºˆå®š
 
 
 20240317	patch0140
-EƒCƒxƒ“ƒg—p‚Ì3%‰ñ•œÜ‚Æ“üŽè‚·‚é” ‚ÌNPC”„’l‚ð0‚É•ÏX
+ãƒ»ã‚¤ãƒ™ãƒ³ãƒˆç”¨ã®3%å›žå¾©å‰¤ã¨å…¥æ‰‹ã™ã‚‹ç®±ã®NPCå£²å€¤ã‚’0ã«å¤‰æ›´
 
-EƒAƒCƒeƒ€‚Ì‘•”õŒø‰Ê‚Ì‚Ô‚êC³‚ÆÅ“K‰»
+ãƒ»ã‚¢ã‚¤ãƒ†ãƒ ã®è£…å‚™åŠ¹æžœã®ã¶ã‚Œä¿®æ­£ã¨æœ€é©åŒ–
 
-E‹LqŒë‚è‚ðC³
+ãƒ»è¨˜è¿°èª¤ã‚Šã‚’ä¿®æ­£
 
 20240316	patch0139
-E1150 1335 2042 2043 2044 2045 2124 2134 2524 2908 2963 2991 2992 19391 27083 300102 300178 300184 300190 410004
-E[•¨—ƒ_ƒ[ƒW‚ª n%‘] ‚Ì‹Lq‚É‚Ô‚ê‚ª‚ ‚é‚Ì‚Å [bonus bAddShortWeaponDamage,n; bonus bAddLongWeaponDamage,n;] ‚ðŽg‚Á‚Ä‚¢‚é‹Lq‚ð[bonus2 bAddRace,Rct_Boss,n; bonus2 bAddRace,Rct_NonBoss,n;]‚É‘‚«Š·‚¦‚Ä“ˆê
+ãƒ»1150 1335 2042 2043 2044 2045 2124 2134 2524 2908 2963 2991 2992 19391 27083 300102 300178 300184 300190 410004
+ãƒ»[ç‰©ç†ãƒ€ãƒ¡ãƒ¼ã‚¸ãŒ n%å¢—] ã®è¨˜è¿°ã«ã¶ã‚ŒãŒã‚ã‚‹ã®ã§ [bonus bAddShortWeaponDamage,n; bonus bAddLongWeaponDamage,n;] ã‚’ä½¿ã£ã¦ã„ã‚‹è¨˜è¿°ã‚’[bonus2 bAddRace,Rct_Boss,n; bonus2 bAddRace,Rct_NonBoss,n;]ã«æ›¸ãæ›ãˆã¦çµ±ä¸€
 
-E[‘SƒXƒe[ƒ^ƒX +n]‚ð‘‚«Š·‚¦
+ãƒ»[å…¨ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ +n]ã‚’æ›¸ãæ›ãˆ
 
-E¸˜B’l‚ðŽQÆ‚·‚éŽž‚É‹Lq‚³‚ê‚Ä‚¢‚éƒAƒCƒeƒ€Ž©g‚ðŽQÆ‚·‚é‚Æ‚«‚Í‘•”õ•”ˆÊ‚ðÈ—ª‚Å‚«‚é‚Æ‚¢‚¤‹Lq‚É‘‚«Š·‚¦
-¦‘½”‚ ‚é‚Ì‚ÆƒZƒbƒgŒø‰Ê‚É‚æ‚Á‚Ä‘•”õ•”ˆÊŽw’è‚ª•K—v‚Èê‡‚à‚ ‚é‚½‚ß¡ŒãŒŸ“¢
+ãƒ»ç²¾éŒ¬å€¤ã‚’å‚ç…§ã™ã‚‹æ™‚ã«è¨˜è¿°ã•ã‚Œã¦ã„ã‚‹ã‚¢ã‚¤ãƒ†ãƒ è‡ªèº«ã‚’å‚ç…§ã™ã‚‹ã¨ãã¯è£…å‚™éƒ¨ä½ã‚’çœç•¥ã§ãã‚‹ã¨ã„ã†è¨˜è¿°ã«æ›¸ãæ›ãˆ
+â€»å¤šæ•°ã‚ã‚‹ã®ã¨ã‚»ãƒƒãƒˆåŠ¹æžœã«ã‚ˆã£ã¦è£…å‚™éƒ¨ä½æŒ‡å®šãŒå¿…è¦ãªå ´åˆã‚‚ã‚ã‚‹ãŸã‚ä»Šå¾Œæ¤œè¨Ž
 
-E‘•”õŒø‰Ê‚ª‘«‚è‚È‚¢‚à‚Ì‚ª‚ ‚é‚Ì‚ÅC³
+ãƒ»è£…å‚™åŠ¹æžœãŒè¶³ã‚Šãªã„ã‚‚ã®ãŒã‚ã‚‹ã®ã§ä¿®æ­£
 
 20240316	patch0138
-E5918 5966 15409 15423 18823 18959 19024 19141 19155 19299 19306 19381 19391 19470 20922 20931 20942 20975 22195 22232 26218 27406 28502 32258 410004 450010
-E[ƒvƒŒƒCƒ„[‚©‚çŽó‚¯‚éƒ_ƒ[ƒW +n%‘] ‚Ì‹Lq‚É‚Ô‚ê‚ª‚ ‚é‚Ì‚Å [bonus2 bSubEnemy,Emy_Pc,n;]‚ðŽg‚Á‚Ä‚¢‚é‹Lq‚ð[bonus2 bSubRace,Rct_Player,n; bonus2 bMagicSubRace,Rct_Player,n;]‚É‘‚«Š·‚¦‚Ä“ˆê
+ãƒ»5918 5966 15409 15423 18823 18959 19024 19141 19155 19299 19306 19381 19391 19470 20922 20931 20942 20975 22195 22232 26218 27406 28502 32258 410004 450010
+ãƒ»[ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‹ã‚‰å—ã‘ã‚‹ãƒ€ãƒ¡ãƒ¼ã‚¸ +n%å¢—] ã®è¨˜è¿°ã«ã¶ã‚ŒãŒã‚ã‚‹ã®ã§ [bonus2 bSubEnemy,Emy_Pc,n;]ã‚’ä½¿ã£ã¦ã„ã‚‹è¨˜è¿°ã‚’[bonus2 bSubRace,Rct_Player,n; bonus2 bMagicSubRace,Rct_Player,n;]ã«æ›¸ãæ›ãˆã¦çµ±ä¸€
 
-E13000  410000 ­‚µC³
+ãƒ»13000  410000 å°‘ã—ä¿®æ­£
 
 20240314	patch0137
-EƒAƒCƒeƒ€‚ÌŒø‰Ê­‚µC³(item_db.txt)
+ãƒ»ã‚¢ã‚¤ãƒ†ãƒ ã®åŠ¹æžœå°‘ã—ä¿®æ­£(item_db.txt)
 
-Eif(Job == Job_XXXX) {} ‚ÅEŽw’è‚µ‚Ä‚¢‚éƒAƒCƒeƒ€‚ð4ŽŸEEŠg’£4ŽŸE‚É‚à‘Î‰ž‚·‚é‚½‚ß‚É4ŽŸE‚Ì‹Lq‚ð‰¼Ý’è(item_db.txt)
+ãƒ»if(Job == Job_XXXX) {} ã§è·æŒ‡å®šã—ã¦ã„ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã‚’4æ¬¡è·ãƒ»æ‹¡å¼µ4æ¬¡è·ã«ã‚‚å¯¾å¿œã™ã‚‹ãŸã‚ã«4æ¬¡è·ã®è¨˜è¿°ã‚’ä»®è¨­å®š(item_db.txt)
 
 20240312	patch0136
-E240312 ƒAƒbƒvƒf[ƒg ŽÀ‘•(item_db.txt item_db2.txt item_cardtype.txt classnum_db.txt)
+ãƒ»240312 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ å®Ÿè£…(item_db.txt item_db2.txt item_cardtype.txt classnum_db.txt)
 
 20240312	patch0135
-E’´‰z‘•”õ‚Ì®—‚ÆƒRƒƒ“ƒg‚Ì’Ç‰Á(item_db.txt item_memo.txt)
+ãƒ»è¶…è¶Šè£…å‚™ã®æ•´ç†ã¨ã‚³ãƒ¡ãƒ³ãƒˆã®è¿½åŠ (item_db.txt item_memo.txt)
 
-E***‹{‚Ì*** E‹ÆŒnƒAƒCƒeƒ€‚Ì®—(item_db.txt item_memo.txt)
+ãƒ»***å®®ã®*** è·æ¥­ç³»ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†(item_db.txt item_memo.txt)
 
-E•Šíclass‚ðÅ“K‰»‚µ•s—vƒf[ƒ^‚ðíœ(classnum_db.txt)
+ãƒ»æ­¦å™¨classã‚’æœ€é©åŒ–ã—ä¸è¦ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤(classnum_db.txt)
 
 20240310	patch0134
-E29371#^—‚ÌŠJ•ú#‚ÌƒZƒbƒgŒø‰Ê‚Ì‘ÎÛƒAƒCƒeƒ€‚ÌŒø‰ÊŒ©’¼‚µ‚Ä‘S‘Ì“I‚ÉC³(item_db.txt)
+ãƒ»29371#çœŸç†ã®é–‹æ”¾#ã®ã‚»ãƒƒãƒˆåŠ¹æžœã®å¯¾è±¡ã‚¢ã‚¤ãƒ†ãƒ ã®åŠ¹æžœè¦‹ç›´ã—ã¦å…¨ä½“çš„ã«ä¿®æ­£(item_db.txt)
 
-E4309#ƒtƒFƒAƒŠ[ƒtƒJ[ƒh# ƒJ[ƒh‚ÌŽd—l•ÏX‚ª10”N‘O‚És‚í‚ê‚Ä‚¢‚½‚Ì‚ÅŒ»Žd—l‚ÉC³i–³Œ`Ží‘° >> –³‘®«j(item_db.txt)
+ãƒ»4309#ãƒ•ã‚§ã‚¢ãƒªãƒ¼ãƒ•ã‚«ãƒ¼ãƒ‰# ã‚«ãƒ¼ãƒ‰ã®ä»•æ§˜å¤‰æ›´ãŒ10å¹´å‰ã«è¡Œã‚ã‚Œã¦ã„ãŸã®ã§ç¾ä»•æ§˜ã«ä¿®æ­£ï¼ˆç„¡å½¢ç¨®æ— >> ç„¡å±žæ€§ï¼‰(item_db.txt)
 
-E9514 9529 23981 ƒ‰ƒ“ƒ_ƒ€ƒIƒvƒVƒ‡ƒ“ŽÀ‘•‚É‡‚í‚¹‚ÄŒø‰Ê‚Ì’Ç‰ÁŽÀ‘•(item_db.txt)
+ãƒ»9514 9529 23981 ãƒ©ãƒ³ãƒ€ãƒ ã‚ªãƒ—ã‚·ãƒ§ãƒ³å®Ÿè£…ã«åˆã‚ã›ã¦åŠ¹æžœã®è¿½åŠ å®Ÿè£…(item_db.txt)
 
-E480317#ƒ}ƒWƒbƒNƒRƒ“ƒvƒŒƒbƒVƒ‡ƒ“# C³‚Æ‹Lq‚ÌÅ“K‰»(item_db.txt)
+ãƒ»480317#ãƒžã‚¸ãƒƒã‚¯ã‚³ãƒ³ãƒ—ãƒ¬ãƒƒã‚·ãƒ§ãƒ³# ä¿®æ­£ã¨è¨˜è¿°ã®æœ€é©åŒ–(item_db.txt)
 
-E‘¼‚¢‚­‚Â‚©Œø‰Ê‚ÌC³(item_db.txt)
+ãƒ»ä»–ã„ãã¤ã‹åŠ¹æžœã®ä¿®æ­£(item_db.txt)
 
-Eitem_randopt_db.lua Šm”F‚Å‚«‚é‘SƒAƒCƒeƒ€‚ðŽÀ‘•
-¦Œø‰Ê‚ð‘S•”’²‚×‚Ü‚µ‚½‚ªî•ñ‚ª­‚È‚¢‚½‚ßoŒ»‚·‚é”’l‚Í”»–¾‚µ‚½”ÍˆÍ‚ÅŽÀ‘•‚µ‚½‚½‚ß‰¼Ý’è‚Æ‚È‚è‚Ü‚·
-¦ƒ‰ƒ“ƒ_ƒ€‚ÅŒø‰Ê‚ð‘I‚Ô‹““®‚ªæ“ª‚©‚ç‡”Ô‚É’Š‘I‚·‚é‚æ‚¤‚ÅŒã‚ë‚ÌŒø‰Ê‚Ù‚Ço‚É‚­‚­‚È‚Á‚Ä‚¢‚Ü‚·i‚¢‚í‚ä‚éƒRƒ“ƒrƒjˆê”Ô‚­‚¶Œ`Ž®’Š‘Ij
-¦ƒƒCƒ‹ƒXƒNƒ[ƒ‹I (100283) ‡ŒvoŒ»—¦‚Í•ª•ê10000‚É‚È‚é‚æ‚¤‚É‚µ‚Ä‚¢‚Ä‚ào‚Ä‚±‚È‚¢ê‡‚ª•p”É‚É‹N‚±‚é
-¦ƒIƒvƒVƒ‡ƒ“Œø‰Ê‚Ì•t—^‚Æ“¯Žž‚ÉƒAƒCƒeƒ€‚ð•ÏX‚·‚é—v‘f [Š•‰ü‘¢‘•’u(Type1) (100532)] ‚Í–¢ŽÀ‘•
-¦¸˜B’l‚ð•ÏX‚·‚éŒø‰Ê‚Í–¢ŽÀ‘•
+ãƒ»item_randopt_db.lua ç¢ºèªã§ãã‚‹å…¨ã‚¢ã‚¤ãƒ†ãƒ ã‚’å®Ÿè£…
+â€»åŠ¹æžœã‚’å…¨éƒ¨èª¿ã¹ã¾ã—ãŸãŒæƒ…å ±ãŒå°‘ãªã„ãŸã‚å‡ºç¾ã™ã‚‹æ•°å€¤ã¯åˆ¤æ˜Žã—ãŸç¯„å›²ã§å®Ÿè£…ã—ãŸãŸã‚ä»®è¨­å®šã¨ãªã‚Šã¾ã™
+â€»ãƒ©ãƒ³ãƒ€ãƒ ã§åŠ¹æžœã‚’é¸ã¶æŒ™å‹•ãŒå…ˆé ­ã‹ã‚‰é †ç•ªã«æŠ½é¸ã™ã‚‹ã‚ˆã†ã§å¾Œã‚ã®åŠ¹æžœã»ã©å‡ºã«ãããªã£ã¦ã„ã¾ã™ï¼ˆã„ã‚ã‚†ã‚‹ã‚³ãƒ³ãƒ“ãƒ‹ä¸€ç•ªãã˜å½¢å¼æŠ½é¸ï¼‰
+â€»ãƒ¡ã‚¤ãƒ«ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«I (100283) åˆè¨ˆå‡ºç¾çŽ‡ã¯åˆ†æ¯10000ã«ãªã‚‹ã‚ˆã†ã«ã—ã¦ã„ã¦ã‚‚å‡ºã¦ã“ãªã„å ´åˆãŒé »ç¹ã«èµ·ã“ã‚‹
+â€»ã‚ªãƒ—ã‚·ãƒ§ãƒ³åŠ¹æžœã®ä»˜ä¸Žã¨åŒæ™‚ã«ã‚¢ã‚¤ãƒ†ãƒ ã‚’å¤‰æ›´ã™ã‚‹è¦ç´  [å…œæ”¹é€ è£…ç½®(Type1) (100532)] ã¯æœªå®Ÿè£…
+â€»ç²¾éŒ¬å€¤ã‚’å¤‰æ›´ã™ã‚‹åŠ¹æžœã¯æœªå®Ÿè£…
 
-Elapineupgrade_db.txt C³
+ãƒ»lapineupgrade_db.txt ä¿®æ­£
 
-Eitem_db_add.txt Žg‚í‚È‚­‚È‚Á‚½‚Ì‚Å‘S•”Á‚µ‚Ä”’Ž†‰»(¡Œã‚Íitem_db.txt‚ðC³‚µ‚Ü‚·)
+ãƒ»item_db_add.txt ä½¿ã‚ãªããªã£ãŸã®ã§å…¨éƒ¨æ¶ˆã—ã¦ç™½ç´™åŒ–(ä»Šå¾Œã¯item_db.txtã‚’ä¿®æ­£ã—ã¾ã™)
 
 20240307	patch0133
-Eitem_db.txt ­‚µC³
+ãƒ»item_db.txt å°‘ã—ä¿®æ­£
 
 
 20240306	patch0132
-EƒAƒrƒXƒŒƒCƒN’n‰º“´ŒA 04/‘å—êƒƒfƒBƒ^ƒeƒBƒI ‚ÉoŒ»mob‚ð‰¼Ý’è
+ãƒ»ã‚¢ãƒ“ã‚¹ãƒ¬ã‚¤ã‚¯åœ°ä¸‹æ´žçªŸ 04/å¤§æµ´å ´ãƒ¡ãƒ‡ã‚£ã‚¿ãƒ†ã‚£ã‚ª ã«å‡ºç¾mobã‚’ä»®è¨­å®š
 
-EƒAƒrƒXƒŒƒCƒN’n‰º“´ŒA 04/‘å—êƒƒfƒBƒ^ƒeƒBƒI ‚ÉˆÚ“®‚Å‚«‚éŠÈˆÕNPC‚ð‰¼ŽÀ‘•(ƒvƒƒ“ƒeƒ‰’†‰›‚Ì“ì¼‚É‰¼Ý)
+ãƒ»ã‚¢ãƒ“ã‚¹ãƒ¬ã‚¤ã‚¯åœ°ä¸‹æ´žçªŸ 04/å¤§æµ´å ´ãƒ¡ãƒ‡ã‚£ã‚¿ãƒ†ã‚£ã‚ª ã«ç§»å‹•ã§ãã‚‹ç°¡æ˜“NPCã‚’ä»®å®Ÿè£…(ãƒ—ãƒ­ãƒ³ãƒ†ãƒ©ä¸­å¤®ã®å—è¥¿ã«ä»®è¨­)
 
-¦ƒeƒXƒgƒvƒŒƒC‚ª‰Â”\‚Èó‘Ô‚ð–Ú•W‚ÉŽÀ‘•
-¦mob‚ÍV4ŽŸEƒXƒe[ƒ^ƒX‚ðœ‚­ƒXƒe[ƒ^ƒX/ƒhƒƒbƒv/ƒXƒLƒ‹‚ÍŽÀ‘•
-¦SP’l‚Í‚í‚©‚ç‚È‚©‚Á‚½‚Ì‚Å‰¼Ý’è
-¦Ú×‚È‹““®‚Í‚í‚©‚ç‚È‚¢‚Ì‚Å“¯–¼‚ÌŽÀ‘•Ï‚Ýmob‚ðŽQl‚É‰¼Ý’è(amotion delay attack idle “™)
-¦ŠÖ˜Aƒ}ƒbƒv‚ÉƒGƒ‰[‚È‚­“ü‚ê‚½‚Ì‚Å“Ç‚Ýž‚ÝŽÀ‘•‚µ‚½‚Ì‚ÅŽU•à‚Å‚«‚Ü‚·
-¦NPCƒXƒLƒ‹‚ÌMƒNƒ‰ƒEƒhƒLƒ‹‚Í–¢ŽÀ‘•‚È‚Ì‚ÅƒRƒƒ“ƒgƒAƒEƒg
-¦ƒfƒCƒŠ[ƒNƒGƒXƒg‚Ì‘ÎÛƒ}ƒbƒv(**_j.gat)‚Æ‰½‚à‚È‚¢•½ƒ}ƒbƒv‚ª‚ ‚è‚Ü‚·
-¦ƒNƒGƒXƒg‚ÍŽÀ‘•‚µ‚Ä‚¢‚Ü‚¹‚ñ‚ª“¢”°ƒNƒGƒXƒg/ƒfƒCƒŠ[ƒNƒGƒXƒg‚ðŽÀ‘•–Ú•W‚ÉŒ¤‹†’†‚Å‚·
+â€»ãƒ†ã‚¹ãƒˆãƒ—ãƒ¬ã‚¤ãŒå¯èƒ½ãªçŠ¶æ…‹ã‚’ç›®æ¨™ã«å®Ÿè£…
+â€»mobã¯æ–°4æ¬¡è·ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã‚’é™¤ãã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹/ãƒ‰ãƒ­ãƒƒãƒ—/ã‚¹ã‚­ãƒ«ã¯å®Ÿè£…
+â€»SPå€¤ã¯ã‚ã‹ã‚‰ãªã‹ã£ãŸã®ã§ä»®è¨­å®š
+â€»è©³ç´°ãªæŒ™å‹•ã¯ã‚ã‹ã‚‰ãªã„ã®ã§åŒåã®å®Ÿè£…æ¸ˆã¿mobã‚’å‚è€ƒã«ä»®è¨­å®š(amotion delay attack idle ç­‰)
+â€»é–¢é€£ãƒžãƒƒãƒ—ã«ã‚¨ãƒ©ãƒ¼ãªãå…¥ã‚ŒãŸã®ã§èª­ã¿è¾¼ã¿å®Ÿè£…ã—ãŸã®ã§æ•£æ­©ã§ãã¾ã™
+â€»NPCã‚¹ã‚­ãƒ«ã®Mã‚¯ãƒ©ã‚¦ãƒ‰ã‚­ãƒ«ã¯æœªå®Ÿè£…ãªã®ã§ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆ
+â€»ãƒ‡ã‚¤ãƒªãƒ¼ã‚¯ã‚¨ã‚¹ãƒˆã®å¯¾è±¡ãƒžãƒƒãƒ—(**_j.gat)ã¨ä½•ã‚‚ãªã„å¹³ãƒžãƒƒãƒ—ãŒã‚ã‚Šã¾ã™
+â€»ã‚¯ã‚¨ã‚¹ãƒˆã¯å®Ÿè£…ã—ã¦ã„ã¾ã›ã‚“ãŒè¨Žä¼ã‚¯ã‚¨ã‚¹ãƒˆ/ãƒ‡ã‚¤ãƒªãƒ¼ã‚¯ã‚¨ã‚¹ãƒˆã‚’å®Ÿè£…ç›®æ¨™ã«ç ”ç©¶ä¸­ã§ã™
 
 20240305	patch0131
-E20240305 ƒAƒbƒvƒf[ƒg 510148 510149 560006 560065 590085 590083 ŽÀ‘•(item_db.txt item_db2.txt item_memo.txt)
-¦4ŽŸEƒXƒLƒ‹Œø‰Ê‚Í–¢ŽÀ‘•
+ãƒ»20240305 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆ 510148 510149 560006 560065 590085 590083 å®Ÿè£…(item_db.txt item_db2.txt item_memo.txt)
+â€»4æ¬¡è·ã‚¹ã‚­ãƒ«åŠ¹æžœã¯æœªå®Ÿè£…
 
-Eclassnum_db.txt XV
+ãƒ»classnum_db.txt æ›´æ–°
 
-Elapineupgrade_db.txt C³
+ãƒ»lapineupgrade_db.txt ä¿®æ­£
 
 20240304	patch0130
-E679 6905 15381 19156 29371 300019 310945 310946 480293 650003 650016 C³
+ãƒ»679 6905 15381 19156 29371 300019 310945 310946 480293 650003 650016 ä¿®æ­£
 
-E2450 2487 ƒZƒtƒBƒƒXƒgƒVƒ…[ƒY ŽÀ‘•
+ãƒ»2450 2487 ã‚»ãƒ•ã‚£ãƒ­ã‚¹ãƒˆã‚·ãƒ¥ãƒ¼ã‚º å®Ÿè£…
 
-E[***‹{‚Ì***] ƒAƒCƒeƒ€‚Ì29725#ƒ]ƒfƒBƒAƒbƒN#‚ðŽ²‚Æ‚·‚éƒZƒbƒgŒø‰Ê‚ª‘S•””²‚¯‚Ä‚¢‚½‚Ì‚Å’Ç‹LŽÀ‘•
-¦ƒAƒCƒeƒ€ˆê——
-‹à‹‹{		15425 20971 22230 1100 19473 32264 
-ƒ|ƒ‹ƒbƒNƒX	15447 20983 2400 15823 28643 32293
-ƒvƒƒLƒIƒ“	15448 20984 22242 28784 32294 15824
-“Á‘Iƒhƒ‰ƒ€	15277 20917 22187 28577 28578 28579
-Ž‚Žq‹{		15408 20951 22213 16098 32247 28589 28590 28591
-“V”‰‹{		15418 20970 22227 1150 19468 32261
-‹ŠI‹{		15412 20954 22216 1335 19449 32253
-‘o‹›‹{		450133 470038 480041 490034 640006 5514
-”’—r‹{		450129 470024 480022 490028 32031 5546
-‘oŽ™‹{		450130 470032 480026 490032 570004 5569
-ˆ—‹{		450015 470014 480009 490010 640002 5599
-l”n‹{		450140 470045 480050 490041 700010 5739
-“Vå™‹{		15424 20976 22233 28047 32267 19471
-•ó•r‹{		15426 20972 22231 26167 32666 19496
-–ã¹‹{		450011 470010 480006 490009 700004
-‚Ù‚©		410158 410159 420270
+ãƒ»[***å®®ã®***] ã‚¢ã‚¤ãƒ†ãƒ ã®29725#ã‚¾ãƒ‡ã‚£ã‚¢ãƒƒã‚¯#ã‚’è»¸ã¨ã™ã‚‹ã‚»ãƒƒãƒˆåŠ¹æžœãŒå…¨éƒ¨æŠœã‘ã¦ã„ãŸã®ã§è¿½è¨˜å®Ÿè£…
+â€»ã‚¢ã‚¤ãƒ†ãƒ ä¸€è¦§
+é‡‘ç‰›å®®		15425 20971 22230 1100 19473 32264 
+ãƒãƒ«ãƒƒã‚¯ã‚¹	15447 20983 2400 15823 28643 32293
+ãƒ—ãƒ­ã‚­ã‚ªãƒ³	15448 20984 22242 28784 32294 15824
+ç‰¹é¸ãƒ‰ãƒ©ãƒ 	15277 20917 22187 28577 28578 28579
+ç…å­å®®		15408 20951 22213 16098 32247 28589 28590 28591
+å¤©ç§¤å®®		15418 20970 22227 1150 19468 32261
+å·¨èŸ¹å®®		15412 20954 22216 1335 19449 32253
+åŒé­šå®®		450133 470038 480041 490034 640006 5514
+ç™½ç¾Šå®®		450129 470024 480022 490028 32031 5546
+åŒå…å®®		450130 470032 480026 490032 570004 5569
+å‡¦å¥³å®®		450015 470014 480009 490010 640002 5599
+äººé¦¬å®®		450140 470045 480050 490041 700010 5739
+å¤©èŽå®®		15424 20976 22233 28047 32267 19471
+å®ç“¶å®®		15426 20972 22231 26167 32666 19496
+ç£¨ç¾¯å®®		450011 470010 480006 490009 700004
+ã»ã‹		410158 410159 420270
 
-E[ƒAƒrƒXƒŒƒCƒN’n‰º“´ŒA 04]ƒ}ƒbƒvŽÀ‘•€”õ(mob_group_db.txt)
-¦MD‚Å‚Í‚È‚¢•’Êƒ_ƒ“ƒWƒ‡ƒ“‚ÅƒJ[ƒhƒAƒCƒeƒ€‚ÍŽÀ‘•‚µ‚Ä‚¨‚èƒ}ƒbƒv‚É“ü‚ê‚½‚Ì‚Å‘I‘ð
+ãƒ»[ã‚¢ãƒ“ã‚¹ãƒ¬ã‚¤ã‚¯åœ°ä¸‹æ´žçªŸ 04]ãƒžãƒƒãƒ—å®Ÿè£…æº–å‚™(mob_group_db.txt)
+â€»MDã§ã¯ãªã„æ™®é€šãƒ€ãƒ³ã‚¸ãƒ§ãƒ³ã§ã‚«ãƒ¼ãƒ‰ã‚¢ã‚¤ãƒ†ãƒ ã¯å®Ÿè£…ã—ã¦ãŠã‚Šãƒžãƒƒãƒ—ã«å…¥ã‚ŒãŸã®ã§é¸æŠž
 
-Elapineupgrade_db.txt XV
-¦23815 100348 100349 ‚Í’Ç‰Á‚µ‚½‚¾‚¯‚È‚Ì‚ÅŽg‚¦‚Ü‚·
-¦‚Ù‚©‚Í‚±‚ê‚©‚ç’²¸
+ãƒ»lapineupgrade_db.txt æ›´æ–°
+â€»23815 100348 100349 ã¯è¿½åŠ ã—ãŸã ã‘ãªã®ã§ä½¿ãˆã¾ã™
+â€»ã»ã‹ã¯ã“ã‚Œã‹ã‚‰èª¿æŸ»
 
 20240302	patch0129
-EŠî‘bî•ñ‚Ì®—
+ãƒ»åŸºç¤Žæƒ…å ±ã®æ•´ç†
 
-Eitem_db.txt ŽÀ‘•(item_db.txt)
+ãƒ»item_db.txt å®Ÿè£…(item_db.txt)
 
-Eitem_db2.txt ŽÀ‘•
+ãƒ»item_db2.txt å®Ÿè£…
 
-‚Ù‚©‚Ípatch0129‚ð“Ç‚ñ‚Å‰º‚³‚¢
+ã»ã‹ã¯patch0129ã‚’èª­ã‚“ã§ä¸‹ã•ã„
 
 20240229	patch0128
-E100000”Ô‘äŽc‚è‚ðŽÀ‘• ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»100000ç•ªå°æ®‹ã‚Šã‚’å®Ÿè£… ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-E1100006 ŽÀ‘•
+ãƒ»1100006 å®Ÿè£…
 
-E4908-4925 ƒZƒbƒgŒø‰ÊŽÀ‘•
+ãƒ»4908-4925 ã‚»ãƒƒãƒˆåŠ¹æžœå®Ÿè£…
 
-E1308 1475 1599 2199 2653 5105 5106 ƒf[ƒ^‚ª‚È‚­‰ß‹Ž‚ÉŽÀ‘•‚ÌŒ`Õ‚Ì‚È‚¢ƒAƒCƒeƒ€‚ð–¢ŽÀ‘•‰»‚µŽûW•iˆµ‚¢‚É•ÏX
+ãƒ»1308 1475 1599 2199 2653 5105 5106 ãƒ‡ãƒ¼ã‚¿ãŒãªãéŽåŽ»ã«å®Ÿè£…ã®å½¢è·¡ã®ãªã„ã‚¢ã‚¤ãƒ†ãƒ ã‚’æœªå®Ÿè£…åŒ–ã—åŽé›†å“æ‰±ã„ã«å¤‰æ›´
 
-E22506 ‹Lq•ÏX
+ãƒ»22506 è¨˜è¿°å¤‰æ›´
 
-EƒAƒCƒeƒ€Œø‰Ê‚Ì‹Lq‚Ì‚È‚¢‚à‚Ì‚Ì’²¸Š®—¹(–Ú•W‚Æ‚µ‚Ä‚¢‚½‘SŽÀ‘•ó‘Ô‚Å‚·)
-¦ŽÀ‘••Û—¯‚³‚ê‚Ä‚¢‚é‚à‚Ì‚ª‚ ‚è‚Ü‚·(300334 311071 ‘¼ƒRƒƒ“ƒg‚É‚ ‚éƒAƒCƒeƒ€)
-¦ŽÀ‘•‚Å‚«‚È‚¢‚à‚Ì‚ÍƒRƒƒ“ƒg‚ð‚Å‚«‚é‚¾‚¯’Ç‰Á
-¦ŽÀ‘•Ï‚Ý‚ÅŒø‰Ê‚Ìˆá‚¤‚à‚ÌA‘«‚è‚È‚¢‚à‚Ì‚Í¡‰ñ‚ÌŽÀ‘•‚Ì‘ÎÛŠO‚Å‚·
-¦Šî‘bƒf[ƒ^‚Í’²®’†(•Ší–h‹ï‚ÌŒø‰Ê‚É‰e‹¿‚Í‚Ù‚Ú‚ ‚è‚Ü‚¹‚ñ)
-¦ˆÚ“®§ŒÀ‚Í‘S”’²¸’†(item_db2.txt)
-¦‹ß“ú’†‚Éitem_db.txt‚Æ‚µ‚Ä‰^—pŠJŽn
+ãƒ»ã‚¢ã‚¤ãƒ†ãƒ åŠ¹æžœã®è¨˜è¿°ã®ãªã„ã‚‚ã®ã®èª¿æŸ»å®Œäº†(ç›®æ¨™ã¨ã—ã¦ã„ãŸå…¨å®Ÿè£…çŠ¶æ…‹ã§ã™)
+â€»å®Ÿè£…ä¿ç•™ã•ã‚Œã¦ã„ã‚‹ã‚‚ã®ãŒã‚ã‚Šã¾ã™(300334 311071 ä»–ã‚³ãƒ¡ãƒ³ãƒˆã«ã‚ã‚‹ã‚¢ã‚¤ãƒ†ãƒ )
+â€»å®Ÿè£…ã§ããªã„ã‚‚ã®ã¯ã‚³ãƒ¡ãƒ³ãƒˆã‚’ã§ãã‚‹ã ã‘è¿½åŠ 
+â€»å®Ÿè£…æ¸ˆã¿ã§åŠ¹æžœã®é•ã†ã‚‚ã®ã€è¶³ã‚Šãªã„ã‚‚ã®ã¯ä»Šå›žã®å®Ÿè£…ã®å¯¾è±¡å¤–ã§ã™
+â€»åŸºç¤Žãƒ‡ãƒ¼ã‚¿ã¯èª¿æ•´ä¸­(æ­¦å™¨é˜²å…·ã®åŠ¹æžœã«å½±éŸ¿ã¯ã»ã¼ã‚ã‚Šã¾ã›ã‚“)
+â€»ç§»å‹•åˆ¶é™ã¯å…¨æ•°èª¿æŸ»ä¸­(item_db2.txt)
+â€»è¿‘æ—¥ä¸­ã«item_db.txtã¨ã—ã¦é‹ç”¨é–‹å§‹
 
-20230820 ŠJŽn 20240229 Š®—¹
+20230820 é–‹å§‹ 20240229 å®Œäº†
 
 20240228	patch0127
-E501-2500 –¢ŽÀ‘••ªŽÀ‘•
+ãƒ»501-2500 æœªå®Ÿè£…åˆ†å®Ÿè£…
 
-E13000”Ô‘ä‚Ì•Ší‚ÌŠî‘bƒf[ƒ^‚ª˜R‚ê‚Ä‚¢‚½‚Ì‚ÅC³
+ãƒ»13000ç•ªå°ã®æ­¦å™¨ã®åŸºç¤Žãƒ‡ãƒ¼ã‚¿ãŒæ¼ã‚Œã¦ã„ãŸã®ã§ä¿®æ­£
 
-EÁ–Õ•i‚ÉŽg—p‰Â”\ƒŒƒxƒ‹‚ª‹ó—“‚Ì‚à‚Ì‚É‘S•”Lv1‚ðÝ’è
+ãƒ»æ¶ˆè€—å“ã«ä½¿ç”¨å¯èƒ½ãƒ¬ãƒ™ãƒ«ãŒç©ºæ¬„ã®ã‚‚ã®ã«å…¨éƒ¨Lv1ã‚’è¨­å®š
 
-E‘S‘Ì“I‚ÈŠî‘bƒf[ƒ^‚Ì®—(”„’l)
+ãƒ»å…¨ä½“çš„ãªåŸºç¤Žãƒ‡ãƒ¼ã‚¿ã®æ•´ç†(å£²å€¤)
 
-E‚‚ÌƒOƒ‰ƒtƒBƒbƒN‚ªo‚È‚¢ƒAƒCƒeƒ€‚ª‚ ‚é‚Ì‚ð–â‘è‚ðC³(classnum_db.txt)
-¦‚‚Ìview 5 ‚ª•\Ž¦‚³‚ê‚È‚¢‚Å‚·‚ªŒ´ˆö•s–¾
-¦E‹Æ‚É‚æ‚Á‚Ä•\Ž¦‚³‚ê‚È‚¢‚Ì‚ª‚Ü‚¾‚ ‚é‚©‚à‚µ‚ê‚Ü‚¹‚ñ
+ãƒ»ç›¾ã®ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ãŒå‡ºãªã„ã‚¢ã‚¤ãƒ†ãƒ ãŒã‚ã‚‹ã®ã‚’å•é¡Œã‚’ä¿®æ­£(classnum_db.txt)
+â€»ç›¾ã®view 5 ãŒè¡¨ç¤ºã•ã‚Œãªã„ã§ã™ãŒåŽŸå› ä¸æ˜Ž
+â€»è·æ¥­ã«ã‚ˆã£ã¦è¡¨ç¤ºã•ã‚Œãªã„ã®ãŒã¾ã ã‚ã‚‹ã‹ã‚‚ã—ã‚Œã¾ã›ã‚“
 
-ERct_All ‚ªŽg‚¦‚È‚¢–hŒä–³Ž‹ƒ{[ƒiƒX‚ÆƒAƒCƒeƒ€ƒhƒƒbƒv‚ÆŒoŒ±’l‚Ì‹LqC³
+ãƒ»Rct_All ãŒä½¿ãˆãªã„é˜²å¾¡ç„¡è¦–ãƒœãƒ¼ãƒŠã‚¹ã¨ã‚¢ã‚¤ãƒ†ãƒ ãƒ‰ãƒ­ãƒƒãƒ—ã¨çµŒé¨“å€¤ã®è¨˜è¿°ä¿®æ­£
 
-¦5Œ…”Ô‘ä‚Í‚±‚ê‚Å‘å‘Ì‘S•”‚Å‚·
-¦100000”Ô‘ä‚ÌÁ–Õ•i‚ª‚Ü‚¾Žc‚Á‚Ä‚¢‚é‚Ì‚Å–¾“úˆÈ~ŽÀ‘•—\’è
+â€»5æ¡ç•ªå°ã¯ã“ã‚Œã§å¤§ä½“å…¨éƒ¨ã§ã™
+â€»100000ç•ªå°ã®æ¶ˆè€—å“ãŒã¾ã æ®‹ã£ã¦ã„ã‚‹ã®ã§æ˜Žæ—¥ä»¥é™å®Ÿè£…äºˆå®š
 
 20240227	patch0126
-E600011 C³
+ãƒ»600011 ä¿®æ­£
 
-E2426-2999 ŽÀ‘•
+ãƒ»2426-2999 å®Ÿè£…
 
-E501 502 503 504 513 569 ƒZƒbƒgŒø‰Ê‚É‡‚í‚¹‚ÄC³
+ãƒ»501 502 503 504 513 569 ã‚»ãƒƒãƒˆåŠ¹æžœã«åˆã‚ã›ã¦ä¿®æ­£
 
-EŠî‘bƒf[ƒ^‚Ì®—
+ãƒ»åŸºç¤Žãƒ‡ãƒ¼ã‚¿ã®æ•´ç†
 
-E18 ‹­‰»‘•”õ‚ÌŽí•Ê‚ð[‹­‰»‘•”õƒAƒCƒeƒ€]‚Æ–¾‹L‚³‚ê‚Ä‚¢‚é‚à‚Ì‚ð“üŽè‚Å‚«‚éÁ–Õ•i‚É“K—p
-¦ƒRƒX‚½‚Ü‚â‚»‚Ì‘¼•Ší‚âƒu[ƒXƒgƒAƒCƒeƒ€‚Ìo‚é” Œn‚Íˆê—¥Á–Õ•i‚É•ÏX
-¦Â” AŽ‡” ‚È‚Ç‘•”õ•iˆÈŠO‚ào‚éÁ–Õ•i‚â‰ñ•œŒø‰Ê‚ª“¯Žž‚Éo‚éƒAƒCƒeƒ€‚ðu‘•”õ•i‚ªo‚év‚Æ‚¢‚¤ðŒ‚Å•ª‚¯‚é‚±‚Æ‚ª‚Å‚«‚È‚¢‚©‚ç‚Å‚·
-¦•s‹ï‡‚ªo‚éê‡‚Í•ÏX‚µ‚Ü‚·
+ãƒ»18 å¼·åŒ–è£…å‚™ã®ç¨®åˆ¥ã‚’[å¼·åŒ–è£…å‚™ã‚¢ã‚¤ãƒ†ãƒ ]ã¨æ˜Žè¨˜ã•ã‚Œã¦ã„ã‚‹ã‚‚ã®ã‚’å…¥æ‰‹ã§ãã‚‹æ¶ˆè€—å“ã«é©ç”¨
+â€»ã‚³ã‚¹ãŸã¾ã‚„ãã®ä»–æ­¦å™¨ã‚„ãƒ–ãƒ¼ã‚¹ãƒˆã‚¢ã‚¤ãƒ†ãƒ ã®å‡ºã‚‹ç®±ç³»ã¯ä¸€å¾‹æ¶ˆè€—å“ã«å¤‰æ›´
+â€»é’ç®±ã€ç´«ç®±ãªã©è£…å‚™å“ä»¥å¤–ã‚‚å‡ºã‚‹æ¶ˆè€—å“ã‚„å›žå¾©åŠ¹æžœãŒåŒæ™‚ã«å‡ºã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã‚’ã€Œè£…å‚™å“ãŒå‡ºã‚‹ã€ã¨ã„ã†æ¡ä»¶ã§åˆ†ã‘ã‚‹ã“ã¨ãŒã§ããªã„ã‹ã‚‰ã§ã™
+â€»ä¸å…·åˆãŒå‡ºã‚‹å ´åˆã¯å¤‰æ›´ã—ã¾ã™
 
 20240227	patch0125
-E102723 1ŒŽ‚É’è‹`‚Ì‚ÝŽÀ‘•‚³‚ê‚Ä‚¢‚½”Ô†‚ÉƒeƒCƒ~ƒ“ƒOƒAƒCƒeƒ€ŽÀ‘•
+ãƒ»102723 1æœˆã«å®šç¾©ã®ã¿å®Ÿè£…ã•ã‚Œã¦ã„ãŸç•ªå·ã«ãƒ†ã‚¤ãƒŸãƒ³ã‚°ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
 
-E”ƒŽæ˜I“VXV(item_db2_add.txt)
+ãƒ»è²·å–éœ²å¤©æ›´æ–°(item_db2_add.txt)
 
 20240226	patch0124
-E10000”Ô‘ä 11000”Ô‘ä 12000”Ô‘ä ŽÀ‘•
+ãƒ»10000ç•ªå° 11000ç•ªå° 12000ç•ªå° å®Ÿè£…
 
-E13089 C³
+ãƒ»13089 ä¿®æ­£
 
 20240225	patch0123
-E12018-12573  13000”Ô‘ä 14000”Ô‘ä ŽÀ‘•
-¦12186 C³
+ãƒ»12018-12573  13000ç•ªå° 14000ç•ªå° å®Ÿè£…
+â€»12186 ä¿®æ­£
 
 20240224	patch0122
-E15013 15014 15024 15062 15063 15064 15066 15114 15241 15242 15243 15244 15245
+ãƒ»15013 15014 15024 15062 15063 15064 15066 15114 15241 15242 15243 15244 15245
 15283 15298 15299 15301 15349 15374 15375 15381 15386 15387 15405 15407 15417
-15419 15420 15422 ŽÀ‘•
+15419 15420 15422 å®Ÿè£…
 
-E2206 2407 2494 4302 4324 4561 5888
-13465 20924 22193 28927 29724 300400 300407 ŠÖ˜AƒAƒCƒeƒ€‚ÌC³
+ãƒ»2206 2407 2494 4302 4324 4561 5888
+13465 20924 22193 28927 29724 300400 300407 é–¢é€£ã‚¢ã‚¤ãƒ†ãƒ ã®ä¿®æ­£
 
-EŠî‘bƒf[ƒ^C³
+ãƒ»åŸºç¤Žãƒ‡ãƒ¼ã‚¿ä¿®æ­£
 
-ERct_All ‚ªŽg‚¦‚È‚¢‘•”õƒ{[ƒiƒX‚ÅŽg‚Á‚Ä‚¢‚½•”•ª‚ÌC³(–hŒä–³Ž‹ƒ{[ƒiƒX)
+ãƒ»Rct_All ãŒä½¿ãˆãªã„è£…å‚™ãƒœãƒ¼ãƒŠã‚¹ã§ä½¿ã£ã¦ã„ãŸéƒ¨åˆ†ã®ä¿®æ­£(é˜²å¾¡ç„¡è¦–ãƒœãƒ¼ãƒŠã‚¹)
 
-¦15000”Ô‘ä ŽÀ‘•Š®—¹
+â€»15000ç•ªå° å®Ÿè£…å®Œäº†
 
 20240223	patch0121
-E16003	16025	16052	16570	16633
+ãƒ»16003	16025	16052	16570	16633
 17183	17213	17214	17215	17276	17622	17625	17626	17907	17909
 18000	18004	18118	18131	18135	18143	18163	18193	18194	18195	18196	18197	18598	18620	18658	18721	18732	18733	18734	18866
 19436	19437	19438	19440	19441	19442	19443	19444	19445	19446	19451	19452	19455	19456	19460	19462	19469	19495
-ŽÀ‘•
+å®Ÿè£…
 
-EŽÀ‘•‚É”º‚¢ 1629 1675 2374 2375 2433 2537 2729 4143 4374 22174 300321 300395 311071 C³
+ãƒ»å®Ÿè£…ã«ä¼´ã„ 1629 1675 2374 2375 2433 2537 2729 4143 4374 22174 300321 300395 311071 ä¿®æ­£
 
-¦16000”Ô‘ä 17000”Ô‘ä 18000”Ô‘ä 19000”Ô‘ä ŽÀ‘•Š®—¹
+â€»16000ç•ªå° 17000ç•ªå° 18000ç•ªå° 19000ç•ªå° å®Ÿè£…å®Œäº†
 
-E19331 ’´‰z‘•”õ’Ç‰Á
+ãƒ»19331 è¶…è¶Šè£…å‚™è¿½åŠ 
 
-EÄŒfƒŠƒXƒg’Ç‰Á(¯ÀŒn‘•”õ ƒ”ƒFƒXƒp[Œn‘•”õ ƒAƒrƒXŒn‘•”õ)
+ãƒ»å†æŽ²ãƒªã‚¹ãƒˆè¿½åŠ (æ˜Ÿåº§ç³»è£…å‚™ ãƒ´ã‚§ã‚¹ãƒ‘ãƒ¼ç³»è£…å‚™ ã‚¢ãƒ“ã‚¹ç³»è£…å‚™)
 
 20240222	patch0120
-E18000”Ô‘ä 19000”Ô‘ä Šî‘bƒf[ƒ^­‚µ®—
+ãƒ»18000ç•ªå° 19000ç•ªå° åŸºç¤Žãƒ‡ãƒ¼ã‚¿å°‘ã—æ•´ç†
 
-E19018 19050 19081 19108 19175 19269 19311 19314 19321 19324 19325 19327 19329 19342
-19367 19385 19386 19387 19390 19394 19395 19407 19410 19411 19412 ŽÀ‘•
+ãƒ»19018 19050 19081 19108 19175 19269 19311 19314 19321 19324 19325 19327 19329 19342
+19367 19385 19386 19387 19390 19394 19395 19407 19410 19411 19412 å®Ÿè£…
 
-E501 502 503 504 569 ƒZƒbƒgŒø‰ÊŽÀ‘•(‰ñ•œƒAƒCƒeƒ€‚Í¡Œã‚àƒZƒbƒgŒø‰Ê‚Ì’Ç‰Á‚ ‚è)
+ãƒ»501 502 503 504 569 ã‚»ãƒƒãƒˆåŠ¹æžœå®Ÿè£…(å›žå¾©ã‚¢ã‚¤ãƒ†ãƒ ã¯ä»Šå¾Œã‚‚ã‚»ãƒƒãƒˆåŠ¹æžœã®è¿½åŠ ã‚ã‚Š)
 
-E19311 ’´‰z‘•”õƒŠƒXƒg‚ÉÄŒf
+ãƒ»19311 è¶…è¶Šè£…å‚™ãƒªã‚¹ãƒˆã«å†æŽ²
 
-E19108 ƒƒCƒ‹ƒhƒ|ƒŠƒ“ƒ‰ƒCƒ_[ ðŒ‚ª‘½‚·‚¬‚Å‹Lq‚ª’·‚·‚¬‚é‚½‚ß{equipscript}“®ì•s‰Â
+ãƒ»19108 ãƒ¯ã‚¤ãƒ«ãƒ‰ãƒãƒªãƒ³ãƒ©ã‚¤ãƒ€ãƒ¼ æ¡ä»¶ãŒå¤šã™ãŽã§è¨˜è¿°ãŒé•·ã™ãŽã‚‹ãŸã‚{equipscript}å‹•ä½œä¸å¯
 { { if((Job == Job_SuperNovice) || (Job == Job_ExpandedSuperNovice) || (Job == Job_HyperNovice)) { bonus3 bAddMonsterDropItem,12709,Rct_All,50; } if((Job == Job_Knight) || (Upper == UPPER_HIGH) || (Job == Job_RuneKnight) || (Job == Job_Dragon_Knight)) { bonus3 bAddMonsterDropItem,714,Rct_All,50; bonus3 bAddMonsterDropItem,7002,Rct_All,50; bonus3 bAddMonsterDropItem,7002,Rct_All,50; bonus3 bAddMonsterDropItem,7069,Rct_All,50; bonus3 bAddMonsterDropItem,7030,Rct_All,50; bonus3 bAddMonsterDropItem,7221,Rct_All,50; bonus3 bAddMonsterDropItem,7210,Rct_All,50; bonus3 bAddMonsterDropItem,7123,Rct_All,50; bonus3 bAddMonsterDropItem,1035,Rct_All,50; bonus3 bAddMonsterDropItem,518,Rct_All,50; bonus3 bAddMonsterDropItem,7938,Rct_All,50; bonus3 bAddMonsterDropItem,7099,Rct_All,50; bonus3 bAddMonsterDropItem,1048,Rct_All,50; bonus3 bAddMonsterDropItem,1096,Rct_All,50; bonus3 bAddMonsterDropItem,7097,Rct_All,50; bonus3 bAddMonsterDropItem,716,Rct_All,50; } if((Job == Job_Crusader) || (Upper == UPPER_HIGH) || (Job == Job_RoyalGuard) || (Job == Job_ImpeRrial_Guard)) { bonus3 bAddMonsterDropItem,536,Rct_All,50; bonus3 bAddMonsterDropItem,534,Rct_All,50; bonus3 bAddMonsterDropItem,532,Rct_All,50; bonus3 bAddMonsterDropItem,531,Rct_All,50; } if((Job == Job_Wizard) || (Upper == UPPER_HIGH) || (Job == Job_Warlock) || (Job == Job_Arch_Mage)) { bonus3 bAddMonsterDropItem,715,Rct_All,50; bonus3 bAddMonsterDropItem,716,Rct_All,50; bonus3 bAddMonsterDropItem,717,Rct_All,50; } if((Job == Job_Sage) || (Upper == UPPER_HIGH) || (Job == Job_Sorcerer) || (Job == Job_Elemental_Master)) { bonus3 bAddMonsterDropItem,947,Rct_All,50; bonus3 bAddMonsterDropItem,946,Rct_All,50; bonus3 bAddMonsterDropItem,1013,Rct_All,50; bonus3 bAddMonsterDropItem,904,Rct_All,50; } if((Job == Job_Hunter) || (Upper == UPPER_HIGH) || (Job == Job_Ranger) || (Job == Job_Windhawk)) { bonus3 bAddMonsterDropItem,12008,Rct_All,50; bonus3 bAddMonsterDropItem,12012,Rct_All,50; bonus3 bAddMonsterDropItem,12010,Rct_All,50; bonus3 bAddMonsterDropItem,12011,Rct_All,50; bonus3 bAddMonsterDropItem,23061,Rct_All,50; } if((Job == Job_Bard) || (Job == Job_Dancer) || (Upper == UPPER_HIGH) || (Job == Job_Minstrel) || (Job == Job_Wanderer) || (Job == Job_Troubadour) || (Job == Job_Trouvere)) { bonus3 bAddMonsterDropItem,12008,Rct_All,50; bonus3 bAddMonsterDropItem,12012,Rct_All,50; bonus3 bAddMonsterDropItem,12010,Rct_All,50; bonus3 bAddMonsterDropItem,12011,Rct_All,50; bonus3 bAddMonsterDropItem,23061,Rct_All,50; } if((Job == Job_Priest) || (Upper == UPPER_HIGH) || (Job == Job_ArchBishop) || (Job == Job_Cardinal)) { bonus3 bAddMonsterDropItem,523,Rct_All,50; } if((Job == Job_Monk) || (Upper == UPPER_HIGH) || (Job == Job_Shura) || (Job == Job_Inquisitor)) { bonus3 bAddMonsterDropItem,605,Rct_All,50; } if((Job == Job_Assassin) || (Upper == UPPER_HIGH) || (Job == Job_Guillotine) || (Job == Job_Shadow_Cross)) { bonus3 bAddMonsterDropItem,7003,Rct_All,50; bonus3 bAddMonsterDropItem,709,Rct_All,50; bonus3 bAddMonsterDropItem,7155,Rct_All,50; bonus3 bAddMonsterDropItem,7033,Rct_All,50; bonus3 bAddMonsterDropItem,7937,Rct_All,50; bonus3 bAddMonsterDropItem,7936,Rct_All,50; bonus3 bAddMonsterDropItem,7935,Rct_All,50; bonus3 bAddMonsterDropItem,7934,Rct_All,50; bonus3 bAddMonsterDropItem,7933,Rct_All,50; bonus3 bAddMonsterDropItem,7932,Rct_All,50; bonus3 bAddMonsterDropItem,950,Rct_All,50; bonus3 bAddMonsterDropItem,7565,Rct_All,50; bonus3 bAddMonsterDropItem,957,Rct_All,50; } if((Job == Job_Rogue) || (Upper == UPPER_HIGH) || (Job == Job_ShadowChaser) || (Job == Job_Abyss_Chaser)) { bonus3 bAddMonsterDropItem,23059,Rct_All,50; bonus3 bAddMonsterDropItem,23060,Rct_All,50; } if((Job == Job_Blacksmith) || (Upper == UPPER_HIGH) || (Job == Job_Mechanic) || (Job == Job_Meister)) { bonus3 bAddMonsterDropItem,999,Rct_All,50; bonus3 bAddMonsterDropItem,998,Rct_All,50; bonus3 bAddMonsterDropItem,7054,Rct_All,50; } }
-‚±‚êˆÈã’Ç‹L‚·‚é‚Æ‹LqŒÀŠE‚ÅƒGƒ‰[
+ã“ã‚Œä»¥ä¸Šè¿½è¨˜ã™ã‚‹ã¨è¨˜è¿°é™ç•Œã§ã‚¨ãƒ©ãƒ¼
 if((Job == Job_Alchemist) || (Upper == UPPER_HIGH) || (Job == Job_Genetic) || (Job == Job_Biolo)) { bonus3 bAddMonsterDropItem,507,Rct_All,50; bonus3 bAddMonsterDropItem,508,Rct_All,50; bonus3 bAddMonsterDropItem,509,Rct_All,50; bonus3 bAddMonsterDropItem,510,Rct_All,50; bonus3 bAddMonsterDropItem,511,Rct_All,50; bonus3 bAddMonsterDropItem,952,Rct_All,50; bonus3 bAddMonsterDropItem,1061,Rct_All,50; bonus3 bAddMonsterDropItem,1017,Rct_All,50; } if((Job == Job_StarGladiator) || (Job == Job_StarEmperor) || (Job == Job_Sky_Emperor)) { bonus3 bAddMonsterDropItem,994,Rct_All,50; bonus3 bAddMonsterDropItem,995,Rct_All,50; bonus3 bAddMonsterDropItem,996,Rct_All,50; bonus3 bAddMonsterDropItem,997,Rct_All,50; bonus3 bAddMonsterDropItem,1000,Rct_All,50; bonus3 bAddMonsterDropItem,1001,Rct_All,50; } if((Job == Job_SoulLinker) || (Job == Job_Soulreaper) || (Job == Job_Soul_Ascetic)) { bonus3 bAddMonsterDropItem,748,Rct_All,50; bonus3 bAddMonsterDropItem,732,Rct_All,50; bonus3 bAddMonsterDropItem,929,Rct_All,50; } if(getbaseclass(Class) == CLASS_NJ) { bonus3 bAddMonsterDropItem,12638,Rct_All,50; bonus3 bAddMonsterDropItem,12639,Rct_All,50; bonus3 bAddMonsterDropItem,12640,Rct_All,50; } if(getbaseclass(Class) == CLASS_GS) { bonus3 bAddMonsterDropItem,12151,Rct_All,50; bonus3 bAddMonsterDropItem,12150,Rct_All,50; bonus3 bAddMonsterDropItem,12637,Rct_All,50;  if((Job == Job_Novice) || (Job == Job_Swordman) || (Job == Job_Magician) || (Job == Job_Archer) || (Job == Job_Acolyte) || (Job == Job_Merchant) || (Job == Job_Thief) || (Job == Job_Summoner) || (Job == Job_Spirit_Handler) || (Job == Job_Taekwon)) { bonus3 bAddMonsterDropItem,522,Rct_All,50; }
-¦callfunc‚ðŽg‚¤‚©E‹Æ‚ÌðŒ‹Lq‚ðŠÈ‘f‚É‚·‚é‚©ˆêŽž•Ï”‚ðŽg‚¤‚©ŒŸ“¢‰Û‘è
+â€»callfuncã‚’ä½¿ã†ã‹è·æ¥­ã®æ¡ä»¶è¨˜è¿°ã‚’ç°¡ç´ ã«ã™ã‚‹ã‹ä¸€æ™‚å¤‰æ•°ã‚’ä½¿ã†ã‹æ¤œè¨Žèª²é¡Œ
 
 20240221	patch0119
-E312034 312303 C³
+ãƒ»312034 312303 ä¿®æ­£
 
-E20700-21999 Œ¨‚É‚©‚¯‚é‚à‚Ì —¼ŽèŒ• ŽÀ‘•
+ãƒ»20700-21999 è‚©ã«ã‹ã‘ã‚‹ã‚‚ã® ä¸¡æ‰‹å‰£ å®Ÿè£…
 
-EŒ¨‚É‚©‚¯‚é‚à‚Ì‚Í“ª‘•”õ‚Æ“¯—l‚ÉviewID‚ª‚ ‚é‚Ì‚ÅƒOƒ‰ƒtƒBƒbƒN‚Ì‚È‚¢‚à‚Ì‚É0‚ðÝ’è
+ãƒ»è‚©ã«ã‹ã‘ã‚‹ã‚‚ã®ã¯é ­è£…å‚™ã¨åŒæ§˜ã«viewIDãŒã‚ã‚‹ã®ã§ã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã®ãªã„ã‚‚ã®ã«0ã‚’è¨­å®š
 
-E20000”Ô‘äˆÈ~‚Ìitem_db2_add.txt XV
+ãƒ»20000ç•ªå°ä»¥é™ã®item_db2_add.txt æ›´æ–°
 
 20240219	patch0118
-E22687 C³
+ãƒ»22687 ä¿®æ­£
 
-E22000-22499 ŒCŒnƒAƒCƒeƒ€ŽÀ‘•
+ãƒ»22000-22499 é´ç³»ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
 
-Eƒvƒƒ“ƒeƒ‰ŒR***@”òs‘D***@ƒyƒ‹ƒƒbƒN*** ŽÀ‘•
+ãƒ»ãƒ—ãƒ­ãƒ³ãƒ†ãƒ©è»***ã€€é£›è¡Œèˆ¹***ã€€ãƒšãƒ«ãƒ­ãƒƒã‚¯*** å®Ÿè£…
 
-EƒŒƒNƒGƒCƒ€ŒnƒAƒCƒeƒ€ ƒRƒƒ“ƒg’Ç‰Á
+ãƒ»ãƒ¬ã‚¯ã‚¨ã‚¤ãƒ ç³»ã‚¢ã‚¤ãƒ†ãƒ  ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-E22212 4145 311071 ðŒ‚ª•¡ŽG‚È‚½‚ßŽÀ‘•¢“ï •Û—¯
+ãƒ»22212 4145 311071 æ¡ä»¶ãŒè¤‡é›‘ãªãŸã‚å®Ÿè£…å›°é›£ ä¿ç•™
 
-E22174 450092 480064  ðŒ‚ª•¡ŽG‚È‚½‚ßŽÀ‘•¢“ï •Û—¯
+ãƒ»22174 450092 480064  æ¡ä»¶ãŒè¤‡é›‘ãªãŸã‚å®Ÿè£…å›°é›£ ä¿ç•™
 
 20240217	patch0117
-E470008 470009 ðŒƒXƒLƒ‹‚ÌŽw’è‚ðC³
+ãƒ»470008 470009 æ¡ä»¶ã‚¹ã‚­ãƒ«ã®æŒ‡å®šã‚’ä¿®æ­£
 
-E22500-23999 Á–Õ ‰ñ•œ ” ƒAƒCƒeƒ€‚ÌŠî‘bƒf[ƒ^•âŠ®‚ÆŒø‰ÊŽÀ‘•(item_db_add.* item_db2_add.*)
-¦ŽÀ‘•‚Å‚«‚È‚¢‚à‚Ì‚ÍƒRƒƒ“ƒg‚ð’Ç‹L‚µ‚Ä‚¢‚Ü‚·
-¦Â” Œn‚ÍŠm’è‚Å‚«‚é‚à‚Ì‚ð item_random.txt ‚ðŽg‚í‚¸‚É{use script}“à‚ÅŽÀ‘•iŠT‚Ë10-30ŒÂ‚Ü‚Å‚Ìƒ‰ƒ“ƒ_ƒ€j
-¦23994#ÂF‚ÌŽv”O‘Ì‚Ì” #‚ÍŽw’è•ŠíˆÈŠO‚ÉŽûW•i‚ªo‚é‚½‚ß–¢ŽÀ‘•(ÔE‰© ‚ÍŽÀ‘•)
+ãƒ»22500-23999 æ¶ˆè€— å›žå¾© ç®±ã‚¢ã‚¤ãƒ†ãƒ ã®åŸºç¤Žãƒ‡ãƒ¼ã‚¿è£œå®Œã¨åŠ¹æžœå®Ÿè£…(item_db_add.* item_db2_add.*)
+â€»å®Ÿè£…ã§ããªã„ã‚‚ã®ã¯ã‚³ãƒ¡ãƒ³ãƒˆã‚’è¿½è¨˜ã—ã¦ã„ã¾ã™
+â€»é’ç®±ç³»ã¯ç¢ºå®šã§ãã‚‹ã‚‚ã®ã‚’ item_random.txt ã‚’ä½¿ã‚ãšã«{use script}å†…ã§å®Ÿè£…ï¼ˆæ¦‚ã­10-30å€‹ã¾ã§ã®ãƒ©ãƒ³ãƒ€ãƒ ï¼‰
+â€»23994#é’è‰²ã®æ€å¿µä½“ã®ç®±#ã¯æŒ‡å®šæ­¦å™¨ä»¥å¤–ã«åŽé›†å“ãŒå‡ºã‚‹ãŸã‚æœªå®Ÿè£…(èµ¤ãƒ»é»„ ã¯å®Ÿè£…)
 
 20240215	patch0116
-E•ÚƒAƒCƒeƒ€‚ÌŽË’öC³
+ãƒ»éž­ã‚¢ã‚¤ãƒ†ãƒ ã®å°„ç¨‹ä¿®æ­£
 
-E25000”Ô‘ä‚ÌˆÚ“®ðŒ‚ð’²‚×‚ÄŠî‘bƒf[ƒ^‚Æitem_db2_add.txt‚É”½‰f
+ãƒ»25000ç•ªå°ã®ç§»å‹•æ¡ä»¶ã‚’èª¿ã¹ã¦åŸºç¤Žãƒ‡ãƒ¼ã‚¿ã¨item_db2_add.txtã«åæ˜ 
 
-E26000”Ô‘äˆÈ~‚Å”²‚¯‚Ä‚¢‚½•Ší–h‹ï‚ÌŠî‘bƒf[ƒ^‚Ì”½‰f
+ãƒ»26000ç•ªå°ä»¥é™ã§æŠœã‘ã¦ã„ãŸæ­¦å™¨é˜²å…·ã®åŸºç¤Žãƒ‡ãƒ¼ã‚¿ã®åæ˜ 
 
-E[ƒyƒbƒg—p]‚ÅŽn‚Ü‚éƒAƒCƒeƒ€‚ÌŠî‘bƒf[ƒ^C³
+ãƒ»[ãƒšãƒƒãƒˆç”¨]ã§å§‹ã¾ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã®åŸºç¤Žãƒ‡ãƒ¼ã‚¿ä¿®æ­£
 
-Eitem_db2.txt ‚©‚çƒOƒ[ƒoƒ‹ƒf[ƒ^‚Ì•ªíœ
+ãƒ»item_db2.txt ã‹ã‚‰ã‚°ãƒ­ãƒ¼ãƒãƒ«ãƒ‡ãƒ¼ã‚¿ã®åˆ†å‰Šé™¤
 
 20240214	patch0115
-Eˆß‘•ƒAƒCƒeƒ€‚Ì®—ŽÀŽ{(ƒŒƒ“ƒ^ƒ‹ˆß‘•œ‚­)
+ãƒ»è¡£è£…ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†å®Ÿæ–½(ãƒ¬ãƒ³ã‚¿ãƒ«è¡£è£…é™¤ã)
 
 20240214	patch0114
-Edb‚Ì‘S‘Ì“I®—‚ðŽÀŽ{
+ãƒ»dbã®å…¨ä½“çš„æ•´ç†ã‚’å®Ÿæ–½
 
-E”Ô†‚Ì‹æØ‚è‚ðˆêŽž“P‹Ž
+ãƒ»ç•ªå·ã®åŒºåˆ‡ã‚Šã‚’ä¸€æ™‚æ’¤åŽ»
 
-EÄŒfƒAƒCƒeƒ€‚Ì®—
+ãƒ»å†æŽ²ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
-E¸˜B‚Å‚«‚È‚¢‚Ì‚ª•W€‚ÌƒAƒNƒZƒTƒŠ‚Æ“ª’†‰º’i‚É¸˜B•s‰Â 0 ‚Ìƒf[ƒ^‚ð’Ç‹L
+ãƒ»ç²¾éŒ¬ã§ããªã„ã®ãŒæ¨™æº–ã®ã‚¢ã‚¯ã‚»ã‚µãƒªã¨é ­ä¸­ä¸‹æ®µã«ç²¾éŒ¬ä¸å¯ 0 ã®ãƒ‡ãƒ¼ã‚¿ã‚’è¿½è¨˜
 
 20240213	patch0113
-E20240213 ƒ[ƒJƒ‹ƒpƒbƒ` ŽÀ‘•(item_db_add.txt item_cardtype.txt item_db2_add.txt)
-¦312964 312970 312973 400601 400602 410302 490501
+ãƒ»20240213 ãƒ­ãƒ¼ã‚«ãƒ«ãƒ‘ãƒƒãƒ å®Ÿè£…(item_db_add.txt item_cardtype.txt item_db2_add.txt)
+â€»312964 312970 312973 400601 400602 410302 490501
 
 20240213	patch0112
-E26168 26169 26170 26171 26177 26204 26217 26218 310321 ŽÀ‘•
+ãƒ»26168 26169 26170 26171 26177 26204 26217 26218 310321 å®Ÿè£…
 
-E25000”Ô‘äŽûW•i‚ÌŠî‘bƒf[ƒ^C³ item_db2‚Ìî•ñ’²¸(Œø‰Ê‚ÌŽÀ‘•‚ª‚È‚¢‚Ì‚ÅƒRƒƒ“ƒgƒAƒEƒg‚Ì‚Ü‚Ü)
+ãƒ»25000ç•ªå°åŽé›†å“ã®åŸºç¤Žãƒ‡ãƒ¼ã‚¿ä¿®æ­£ item_db2ã®æƒ…å ±èª¿æŸ»(åŠ¹æžœã®å®Ÿè£…ãŒãªã„ã®ã§ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã®ã¾ã¾)
 
-E’´‰z‘•”õ’Ç‰Á
+ãƒ»è¶…è¶Šè£…å‚™è¿½åŠ 
 
 20240212	patch0111
-E26016 26103 26143 26144 26152 26163 27049 27117 27118 27299 27301 27302 27392 ŽÀ‘•
-¦5Œ…”Ô†‚ÌƒJ[ƒhŒn‘SŽÀ‘•Š®—¹i20240206Œ»Ýj
-¦27000-32999”Ô‘ä‘SŽÀ‘•Š®—¹
-¦–¢ŽÀ‘•‚ÌƒJ[ƒh‚Í6Œ…‚Ì3–‡
-300334#••ˆó‚³‚ê‚½‘Â‚¿‚½‘å_Š¯ƒqƒoƒ€ƒJ[ƒh# 311071#••ˆó‚³‚ê‚½ƒ”ƒFƒ‹ƒ[ƒuƒuƒJ[ƒh# ŽÀ‘•‚ª“ï‚µ‚¢‚½‚ß•Û—¯’†
-310321#ƒVƒ“ƒ\ƒE‚Ì‰¤# ŽÀ‘•—\’è
+ãƒ»26016 26103 26143 26144 26152 26163 27049 27117 27118 27299 27301 27302 27392 å®Ÿè£…
+â€»5æ¡ç•ªå·ã®ã‚«ãƒ¼ãƒ‰ç³»å…¨å®Ÿè£…å®Œäº†ï¼ˆ20240206ç¾åœ¨ï¼‰
+â€»27000-32999ç•ªå°å…¨å®Ÿè£…å®Œäº†
+â€»æœªå®Ÿè£…ã®ã‚«ãƒ¼ãƒ‰ã¯6æ¡ã®3æžš
+300334#å°å°ã•ã‚ŒãŸå •ã¡ãŸå¤§ç¥žå®˜ãƒ’ãƒãƒ ã‚«ãƒ¼ãƒ‰# 311071#å°å°ã•ã‚ŒãŸãƒ´ã‚§ãƒ«ã‚¼ãƒ–ãƒ–ã‚«ãƒ¼ãƒ‰# å®Ÿè£…ãŒé›£ã—ã„ãŸã‚ä¿ç•™ä¸­
+310321#ã‚·ãƒ³ã‚½ã‚¦ã®çŽ‹# å®Ÿè£…äºˆå®š
 
-E300392 400556 C³
+ãƒ»300392 400556 ä¿®æ­£
 
-ƒAƒCƒeƒ€‚Ì‘SŽÀ‘•Š®—¹—\’è(Œø‰Ê‚ð–„‚ß‚éj‚Í2ŒŽ––-3ŒŽã{‚Å‚·
+ã‚¢ã‚¤ãƒ†ãƒ ã®å…¨å®Ÿè£…å®Œäº†äºˆå®š(åŠ¹æžœã‚’åŸ‹ã‚ã‚‹ï¼‰ã¯2æœˆæœ«-3æœˆä¸Šæ—¬ã§ã™
 
 20240211	patch0110
-E800003 820002 830003 840002 1001471 1100006 C³
+ãƒ»800003 820002 830003 840002 1001471 1100006 ä¿®æ­£
 
-E27000”Ô‘ä 29000”Ô‘ä 31000”Ô‘ä ƒJ[ƒh‚ÌŠî‘bƒf[ƒ^®—
-EƒJ[ƒh‚ÌŽÀ‘•Ï‚Ý•ª‚ðƒRƒƒ“ƒgƒAƒEƒg
+ãƒ»27000ç•ªå° 29000ç•ªå° 31000ç•ªå° ã‚«ãƒ¼ãƒ‰ã®åŸºç¤Žãƒ‡ãƒ¼ã‚¿æ•´ç†
+ãƒ»ã‚«ãƒ¼ãƒ‰ã®å®Ÿè£…æ¸ˆã¿åˆ†ã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆ
 
-E100000”Ô‘äˆÈ~‚É240206ƒAƒbƒvƒf[ƒg‚Ü‚Å‚Ìƒf[ƒ^‚ð®—‚µ‚Ä”½‰f
+ãƒ»100000ç•ªå°ä»¥é™ã«240206ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã¾ã§ã®ãƒ‡ãƒ¼ã‚¿ã‚’æ•´ç†ã—ã¦åæ˜ 
 
-Eitem_db2_add.txt‚Æitem_db2.txt‚Ìƒf[ƒ^‚Ì“‡®—
+ãƒ»item_db2_add.txtã¨item_db2.txtã®ãƒ‡ãƒ¼ã‚¿ã®çµ±åˆæ•´ç†
 
-Eitem_cardtype.txt 240206ƒAƒbƒvƒf[ƒg‚Ü‚Å”½‰f‚µ‘SŽÀ‘•Š®—¹
-¦ƒJ[ƒh‚Í‚Ü‚¾–¢ŽÀ‘•‚ª‚ ‚è‚Ü‚·
+ãƒ»item_cardtype.txt 240206ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã¾ã§åæ˜ ã—å…¨å®Ÿè£…å®Œäº†
+â€»ã‚«ãƒ¼ãƒ‰ã¯ã¾ã æœªå®Ÿè£…ãŒã‚ã‚Šã¾ã™
 
 20240210	patch0109
-E28615 28618 28637 28707 28709 28710 28711 28738 28761 28777 28778 28779 28780 28911 28917 28919 28950 ŽÀ‘•
-¦28709 28917 28919 ƒŒƒ“ƒ^ƒ‹ƒAƒCƒeƒ€‚Í”Ô†‚ªd•¡‚µ‚ÄƒAƒCƒeƒ€‚ª“ü‚ê‘Ö‚í‚éê‡‚ª‚ ‚è‹C‚Ã‚©‚È‚¢‰Â”\«‚ª‚ ‚é‚½‚ß–¢ŽÀ‘•
+ãƒ»28615 28618 28637 28707 28709 28710 28711 28738 28761 28777 28778 28779 28780 28911 28917 28919 28950 å®Ÿè£…
+â€»28709 28917 28919 ãƒ¬ãƒ³ã‚¿ãƒ«ã‚¢ã‚¤ãƒ†ãƒ ã¯ç•ªå·ãŒé‡è¤‡ã—ã¦ã‚¢ã‚¤ãƒ†ãƒ ãŒå…¥ã‚Œæ›¿ã‚ã‚‹å ´åˆãŒã‚ã‚Šæ°—ã¥ã‹ãªã„å¯èƒ½æ€§ãŒã‚ã‚‹ãŸã‚æœªå®Ÿè£…
 
-E28708 200026 C³
+ãƒ»28708 200026 ä¿®æ­£
 
-E100000”Ô‘ä 200000”Ô‘ä Šî‘bƒf[ƒ^‚Ì®—
-¦”„’l‚ð20‚É“ˆêAŽæˆø‚Å‚«‚È‚¢ƒAƒCƒeƒ€‚Í”„’l‚É0‚ðÝ’è
+ãƒ»100000ç•ªå° 200000ç•ªå° åŸºç¤Žãƒ‡ãƒ¼ã‚¿ã®æ•´ç†
+â€»å£²å€¤ã‚’20ã«çµ±ä¸€ã€å–å¼•ã§ããªã„ã‚¢ã‚¤ãƒ†ãƒ ã¯å£²å€¤ã«0ã‚’è¨­å®š
 
 20240209	patch0108
-E28484 28500 28504 28513 28554 28555 28556 28557 28560 ŽÀ‘•
-¦28486 28494 ƒŒƒ“ƒ^ƒ‹ƒAƒCƒeƒ€‚Í”Ô†‚ªd•¡‚µ‚ÄƒAƒCƒeƒ€‚ª“ü‚ê‘Ö‚í‚éê‡‚ª‚ ‚è‹C‚Ã‚©‚È‚¢‰Â”\«‚ª‚ ‚é‚½‚ß–¢ŽÀ‘•
+ãƒ»28484 28500 28504 28513 28554 28555 28556 28557 28560 å®Ÿè£…
+â€»28486 28494 ãƒ¬ãƒ³ã‚¿ãƒ«ã‚¢ã‚¤ãƒ†ãƒ ã¯ç•ªå·ãŒé‡è¤‡ã—ã¦ã‚¢ã‚¤ãƒ†ãƒ ãŒå…¥ã‚Œæ›¿ã‚ã‚‹å ´åˆãŒã‚ã‚Šæ°—ã¥ã‹ãªã„å¯èƒ½æ€§ãŒã‚ã‚‹ãŸã‚æœªå®Ÿè£…
 
-E420233 480092 ˆß‘•‘•”õ‚Ì‘•”õ•”ˆÊ‚Æhateffect‚ÌC³
+ãƒ»420233 480092 è¡£è£…è£…å‚™ã®è£…å‚™éƒ¨ä½ã¨hateffectã®ä¿®æ­£
 
-E•½s¢ŠE‚ÌƒOƒ‰ƒXƒgƒwƒCƒ€‘•”õ(ƒƒCƒ„ƒ‹*** ƒK[ƒfƒBƒAƒ“***)‚Ì[ˆê•”‚Ìƒ_ƒ[ƒW‚ð”½ŽË‚·‚éŒø‰Ê‚ÅŽó‚¯‚éƒ_ƒ[ƒW]‚Ì‘ÎÛƒXƒLƒ‹‚É"SL_KAITE" "SR_CRESCENTELBOW" ‚ð’Ç‰Á
+ãƒ»å¹³è¡Œä¸–ç•Œã®ã‚°ãƒ©ã‚¹ãƒˆãƒ˜ã‚¤ãƒ è£…å‚™(ãƒ­ã‚¤ãƒ¤ãƒ«*** ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³***)ã®[ä¸€éƒ¨ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’åå°„ã™ã‚‹åŠ¹æžœã§å—ã‘ã‚‹ãƒ€ãƒ¡ãƒ¼ã‚¸]ã®å¯¾è±¡ã‚¹ã‚­ãƒ«ã«"SL_KAITE" "SR_CRESCENTELBOW" ã‚’è¿½åŠ 
 
-E•½s¢ŠE‚ÌƒOƒ‰ƒXƒgƒwƒCƒ€‘•”õ(ƒƒCƒ„ƒ‹*** ƒK[ƒfƒBƒAƒ“***)‘•”õ‚ª’´‰zƒVƒXƒeƒ€‚Ì‘ÎÛ‚É‚È‚Á‚½‚½‚ßƒRƒƒ“ƒg‚Å’Ç‹L
+ãƒ»å¹³è¡Œä¸–ç•Œã®ã‚°ãƒ©ã‚¹ãƒˆãƒ˜ã‚¤ãƒ è£…å‚™(ãƒ­ã‚¤ãƒ¤ãƒ«*** ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³***)è£…å‚™ãŒè¶…è¶Šã‚·ã‚¹ãƒ†ãƒ ã®å¯¾è±¡ã«ãªã£ãŸãŸã‚ã‚³ãƒ¡ãƒ³ãƒˆã§è¿½è¨˜
 
-E•½s¢ŠE‚ÌƒOƒ‰ƒXƒgƒwƒCƒ€‘•”õ(ƒƒCƒ„ƒ‹*** ƒK[ƒfƒBƒAƒ“***)‘•”õ‚Ìˆê——‚ð®—‚µ‚Ädb‰º•”‚ÉÄŒf
+ãƒ»å¹³è¡Œä¸–ç•Œã®ã‚°ãƒ©ã‚¹ãƒˆãƒ˜ã‚¤ãƒ è£…å‚™(ãƒ­ã‚¤ãƒ¤ãƒ«*** ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³***)è£…å‚™ã®ä¸€è¦§ã‚’æ•´ç†ã—ã¦dbä¸‹éƒ¨ã«å†æŽ²
 
-E’´‰z‘•ƒVƒXƒeƒ€‘ÎÛƒAƒCƒeƒ€‚Ìˆê——‚ð®—‚µ‚Ädb‰º•”‚ÉÄŒf
+ãƒ»è¶…è¶Šè£…ã‚·ã‚¹ãƒ†ãƒ å¯¾è±¡ã‚¢ã‚¤ãƒ†ãƒ ã®ä¸€è¦§ã‚’æ•´ç†ã—ã¦dbä¸‹éƒ¨ã«å†æŽ²
 
-E100000”Ô‘ä 200000”Ô‘ä aegis–¼‚ðuse‚É•ÏX
-¦ƒAƒCƒeƒ€•ª—Þ‚Ì‚½‚ß‚Ì”CˆÓ‹Lq‚Æ‚µ‚ÄŽg‚Á‚Ä‚¢‚é‚½‚ß“®ì‚â‹““®Aˆµ‚¢‚É‚ÍŠÖ—^‚µ‚Ü‚¹‚ñ
+ãƒ»100000ç•ªå° 200000ç•ªå° aegisåã‚’useã«å¤‰æ›´
+â€»ã‚¢ã‚¤ãƒ†ãƒ åˆ†é¡žã®ãŸã‚ã®ä»»æ„è¨˜è¿°ã¨ã—ã¦ä½¿ã£ã¦ã„ã‚‹ãŸã‚å‹•ä½œã‚„æŒ™å‹•ã€æ‰±ã„ã«ã¯é–¢ä¸Žã—ã¾ã›ã‚“
 
 20240206	patch0107
-E20240206 ƒAƒbƒvƒf[ƒg•ªƒAƒCƒeƒ€ŽÀ‘•(item_db_add.txt item_db2_add.txt item_cardtype.txt)
-ŽŽŒ±“I‚ÉƒAƒCƒeƒ€‚ÉŽÀ‘•“úEŠÖ˜Aî•ñiƒRƒX‚½‚ÜEƒCƒxƒ“ƒgj‚ðƒRƒƒ“ƒgƒAƒEƒg‚É‹Lq
-’N‚ªŒ©‚Ä‚à‰½‚ª‚¢‚Â‰½‚ÉŠÖ˜A‚µ‚ÄŽÀ‘•‚µ‚½‚Ì‚©‚í‚©‚é‚æ‚¤‚É‚·‚é‚Ì‚ª–Ú“I‚Å‚·
+ãƒ»20240206 ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆåˆ†ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…(item_db_add.txt item_db2_add.txt item_cardtype.txt)
+è©¦é¨“çš„ã«ã‚¢ã‚¤ãƒ†ãƒ ã«å®Ÿè£…æ—¥ãƒ»é–¢é€£æƒ…å ±ï¼ˆã‚³ã‚¹ãŸã¾ãƒ»ã‚¤ãƒ™ãƒ³ãƒˆï¼‰ã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã«è¨˜è¿°
+èª°ãŒè¦‹ã¦ã‚‚ä½•ãŒã„ã¤ä½•ã«é–¢é€£ã—ã¦å®Ÿè£…ã—ãŸã®ã‹ã‚ã‹ã‚‹ã‚ˆã†ã«ã™ã‚‹ã®ãŒç›®çš„ã§ã™
 
-EŽÀ‘•‚Å‚«‚È‚¢ƒAƒCƒeƒ€‚ÍŽÀ‘•‚Å‚«‚È‚¢—v‘f‚ðƒRƒƒ“ƒg‹Lq
+ãƒ»å®Ÿè£…ã§ããªã„ã‚¢ã‚¤ãƒ†ãƒ ã¯å®Ÿè£…ã§ããªã„è¦ç´ ã‚’ã‚³ãƒ¡ãƒ³ãƒˆè¨˜è¿°
 
-Ebuyingstore‚Ì‹Lq˜R‚ê‚É‘Î‰ž(item_db2_add.txt)
-¡‚Ü‚Å‚Ì•ª‚à”½‰f‚·‚é‚½‚ßŒ»Ýitem_db2_add.txt‚ð®—’†
+ãƒ»buyingstoreã®è¨˜è¿°æ¼ã‚Œã«å¯¾å¿œ(item_db2_add.txt)
+ä»Šã¾ã§ã®åˆ†ã‚‚åæ˜ ã™ã‚‹ãŸã‚ç¾åœ¨item_db2_add.txtã‚’æ•´ç†ä¸­
 
-Eˆß‘•“ª‘•”õ/ˆß‘•Œ¨‘•”õ/ˆß‘•hateffect ’è‹`‚ª’Ç‰Á‚³‚ê‚Ä‚¢‚é‚Ì‚ÅXV•K—v(*.lub)
+ãƒ»è¡£è£…é ­è£…å‚™/è¡£è£…è‚©è£…å‚™/è¡£è£…hateffect å®šç¾©ãŒè¿½åŠ ã•ã‚Œã¦ã„ã‚‹ã®ã§æ›´æ–°å¿…è¦(*.lub)
 
 20240205	patch0106
-28373 ŽÀ‘•
-ƒA[ƒeƒBƒtƒ@ƒNƒgŒnƒAƒCƒeƒ€‚ÅƒAƒ‹ƒeƒBƒƒbƒgƒ‚[ƒhƒ`ƒFƒ“ƒWƒƒ[‚ÌƒZƒbƒgŒø‰Ê‚Í‘SŽÀ‘•
-item_db_add.txt ‰º•”‚É®—‚µ‚ÄÄŒf
+28373 å®Ÿè£…
+ã‚¢ãƒ¼ãƒ†ã‚£ãƒ•ã‚¡ã‚¯ãƒˆç³»ã‚¢ã‚¤ãƒ†ãƒ ã§ã‚¢ãƒ«ãƒ†ã‚£ãƒ¡ãƒƒãƒˆãƒ¢ãƒ¼ãƒ‰ãƒã‚§ãƒ³ã‚¸ãƒ£ãƒ¼ã®ã‚»ãƒƒãƒˆåŠ¹æžœã¯å…¨å®Ÿè£…
+item_db_add.txt ä¸‹éƒ¨ã«æ•´ç†ã—ã¦å†æŽ²
 
 20240203	patch0105
-28373#ƒAƒ‹ƒeƒBƒƒbƒgƒ‚[ƒhƒ`ƒFƒ“ƒWƒƒ[# ƒZƒbƒg‚Ì’Ç‰Á•ª‚Ì‰¼ŽÀ‘•Š®—¹
-28373#ƒAƒ‹ƒeƒBƒƒbƒgƒ‚[ƒhƒ`ƒFƒ“ƒWƒƒ[# ‘S•”‘•”õ‚µ‚½‚Æ‚«‚ÌƒZƒbƒgŒø‰Ê‚ð‚Ç‚±‚É‘‚­‚Ì‚©l‚¦’†
-ŒC‘•”õ‚Ì‘•”õ•”ˆÊ‚ªŠÔˆá‚Á‚Ä‚¢‚½‚Ì‚ðC³
+28373#ã‚¢ãƒ«ãƒ†ã‚£ãƒ¡ãƒƒãƒˆãƒ¢ãƒ¼ãƒ‰ãƒã‚§ãƒ³ã‚¸ãƒ£ãƒ¼# ã‚»ãƒƒãƒˆã®è¿½åŠ åˆ†ã®ä»®å®Ÿè£…å®Œäº†
+28373#ã‚¢ãƒ«ãƒ†ã‚£ãƒ¡ãƒƒãƒˆãƒ¢ãƒ¼ãƒ‰ãƒã‚§ãƒ³ã‚¸ãƒ£ãƒ¼# å…¨éƒ¨è£…å‚™ã—ãŸã¨ãã®ã‚»ãƒƒãƒˆåŠ¹æžœã‚’ã©ã“ã«æ›¸ãã®ã‹è€ƒãˆä¸­
+é´è£…å‚™ã®è£…å‚™éƒ¨ä½ãŒé–“é•ã£ã¦ã„ãŸã®ã‚’ä¿®æ­£
 
 20240202	patch0104
-ˆß‘•‘•”õ‚ðC³
+è¡£è£…è£…å‚™ã‚’ä¿®æ­£
 
-28236 28237 28238 28239 28307 28308 28387 28388 28390 28393 ŽÀ‘•
+28236 28237 28238 28239 28307 28308 28387 28388 28390 28393 å®Ÿè£…
 
-28373#ƒAƒ‹ƒeƒBƒƒbƒgƒ‚[ƒhƒ`ƒFƒ“ƒWƒƒ[# ŽÀ‘•‚Ì‚½‚ß ‘ÎÛƒAƒCƒeƒ€‚ÉƒZƒbƒgŒø‰Ê’Ç‹LE‹Lq®—
-‘ÎÛƒAƒCƒeƒ€ [2476 2575 2884 15037] [2480 2581 2891 15043] [2009 2013 2469 2861 15027] [2008 2012 2468 2860 15026] [2007 2011 2467 2859 15025] [2010 2014 2470 2862 15028] [2478 2578 2887 15039
-¦‚Ü‚¾‘S•”ŽÀ‘•‚µ‚Ä‚¢‚È‚¢‚½‚ßŒo‰ß‚Æ‚È‚è‚Ü‚·
+28373#ã‚¢ãƒ«ãƒ†ã‚£ãƒ¡ãƒƒãƒˆãƒ¢ãƒ¼ãƒ‰ãƒã‚§ãƒ³ã‚¸ãƒ£ãƒ¼# å®Ÿè£…ã®ãŸã‚ å¯¾è±¡ã‚¢ã‚¤ãƒ†ãƒ ã«ã‚»ãƒƒãƒˆåŠ¹æžœè¿½è¨˜ãƒ»è¨˜è¿°æ•´ç†
+å¯¾è±¡ã‚¢ã‚¤ãƒ†ãƒ  [2476 2575 2884 15037] [2480 2581 2891 15043] [2009 2013 2469 2861 15027] [2008 2012 2468 2860 15026] [2007 2011 2467 2859 15025] [2010 2014 2470 2862 15028] [2478 2578 2887 15039
+â€»ã¾ã å…¨éƒ¨å®Ÿè£…ã—ã¦ã„ãªã„ãŸã‚çµŒéŽã¨ãªã‚Šã¾ã™
 
 20240201	patch0103
-20240130 ƒ[ƒJƒ‹ƒpƒbƒ` ŽÀ‘•
-item_cardtype.txt XV
+20240130 ãƒ­ãƒ¼ã‚«ãƒ«ãƒ‘ãƒƒãƒ å®Ÿè£…
+item_cardtype.txt æ›´æ–°
 
-420158 1001471 C³
+420158 1001471 ä¿®æ­£
 
 20240129	patch0102
-ƒf[ƒ^“‡‚ÌŽž‚Éo‚½•s‹ï‡‚ð‘S‘Ì“I‚ÉC³
+ãƒ‡ãƒ¼ã‚¿çµ±åˆã®æ™‚ã«å‡ºãŸä¸å…·åˆã‚’å…¨ä½“çš„ã«ä¿®æ­£
 
 28205 28206 28207 28208 28209 28210 28211 28212 28212 28214
 28219 28220 28221 28222
 28227 28228 28229 28230 28231 28232 28233 28234
-e‘•”õŽÀ‘•
+éŠƒè£…å‚™å®Ÿè£…
 
 20240128	patch0101
-28108 28111 28112 28127 28142 —¼Žè•€‘•”õŽÀ‘•
-28136 28140 ”„’lEUŒ‚—Í‚È‚Ç‚ÌŠî‘bƒf[ƒ^‚ð’Ç‹L‚µ‚ÄŽg‚¦‚é‚æ‚¤‚ÉŽÀ‘•
+28108 28111 28112 28127 28142 ä¸¡æ‰‹æ–§è£…å‚™å®Ÿè£…
+28136 28140 å£²å€¤ãƒ»æ”»æ’ƒåŠ›ãªã©ã®åŸºç¤Žãƒ‡ãƒ¼ã‚¿ã‚’è¿½è¨˜ã—ã¦ä½¿ãˆã‚‹ã‚ˆã†ã«å®Ÿè£…
 
-15282 21063 25505 25506 25507 25509 231219ƒ[ƒJƒ‹ƒpƒbƒ`•ª‚Ìƒf[ƒ^ˆÚsŽž‚ÉŠî‘bƒf[ƒ^‚ªÁ‚¦‚½‚Ì‚ÅC³
+15282 21063 25505 25506 25507 25509 231219ãƒ­ãƒ¼ã‚«ãƒ«ãƒ‘ãƒƒãƒåˆ†ã®ãƒ‡ãƒ¼ã‚¿ç§»è¡Œæ™‚ã«åŸºç¤Žãƒ‡ãƒ¼ã‚¿ãŒæ¶ˆãˆãŸã®ã§ä¿®æ­£
 
-29000”Ô‘ä ƒJ[ƒh‚ÆƒGƒ“ƒ`ƒƒƒ“ƒgƒAƒCƒeƒ€‚ÌŠî‘bƒf[ƒ^‚ð‘SŒ©’¼‚µE‘•”õ•”ˆÊ‚ðC³
-C³‚ªL”ÍˆÍ‚É‹y‚ñ‚¾‚Ì‚Å‘SƒRƒƒ“ƒgƒAƒEƒg‰ðœ
+29000ç•ªå° ã‚«ãƒ¼ãƒ‰ã¨ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆã‚¢ã‚¤ãƒ†ãƒ ã®åŸºç¤Žãƒ‡ãƒ¼ã‚¿ã‚’å…¨è¦‹ç›´ã—ãƒ»è£…å‚™éƒ¨ä½ã‚’ä¿®æ­£
+ä¿®æ­£ãŒåºƒç¯„å›²ã«åŠã‚“ã ã®ã§å…¨ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆè§£é™¤
 
-32000”Ô‘ä ƒf[ƒ^ˆÚsŽž‚É’Ç‰Á•ª‚ÌŠî‘bƒf[ƒ^‚ªÁ‚¦‚½‚Ì‚ÅC³
+32000ç•ªå° ãƒ‡ãƒ¼ã‚¿ç§»è¡Œæ™‚ã«è¿½åŠ åˆ†ã®åŸºç¤Žãƒ‡ãƒ¼ã‚¿ãŒæ¶ˆãˆãŸã®ã§ä¿®æ­£
 
 20240127	patch0100
-28009 28012 28013 28014 28045 28046 28048 28049 ƒJƒ^[ƒ‹‘•”õŽÀ‘•
-Œø‰Ê‚ÌŽÀ‘•‚ª‚Å‚«‚È‚¢‚à‚Ì‚ÍƒRƒƒ“ƒg’Ç‰Á
+28009 28012 28013 28014 28045 28046 28048 28049 ã‚«ã‚¿ãƒ¼ãƒ«è£…å‚™å®Ÿè£…
+åŠ¹æžœã®å®Ÿè£…ãŒã§ããªã„ã‚‚ã®ã¯ã‚³ãƒ¡ãƒ³ãƒˆè¿½åŠ 
 
-28022 28023 28038 28047 ”„’lEUŒ‚—Í‚È‚Ç‚ÌŠî‘bƒf[ƒ^‚ð’Ç‹L‚µ‚ÄŽg‚¦‚é‚æ‚¤‚ÉŽÀ‘•
+28022 28023 28038 28047 å£²å€¤ãƒ»æ”»æ’ƒåŠ›ãªã©ã®åŸºç¤Žãƒ‡ãƒ¼ã‚¿ã‚’è¿½è¨˜ã—ã¦ä½¿ãˆã‚‹ã‚ˆã†ã«å®Ÿè£…
 
-item_db2.txt ‚ÍŒã“ú®—‚µ‚ÄŽÀ‘•—\’è
+item_db2.txt ã¯å¾Œæ—¥æ•´ç†ã—ã¦å®Ÿè£…äºˆå®š
 
 20240127	patch0099
-32222 32262 32265 ŽÀ‘•
-15093 15095 ƒZƒbƒgŒø‰Ê‚Ì’Ç‰ÁŽÀ‘•
+32222 32262 32265 å®Ÿè£…
+15093 15095 ã‚»ãƒƒãƒˆåŠ¹æžœã®è¿½åŠ å®Ÿè£…
 
 20240126	patch0098
-6905 ‹Lqƒ~ƒXC³
-100000”Ô‘äˆÈ~ ƒAƒCƒeƒ€‚Ì®—
+6905 è¨˜è¿°ãƒŸã‚¹ä¿®æ­£
+100000ç•ªå°ä»¥é™ ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
-ƒ[ƒJƒ‹ƒAƒCƒeƒ€‚Ì®—Š®—¹
-ƒRƒƒ“ƒgƒAƒEƒg‚µ‚Ä‚¢‚é‚Ì‚Íitem_db.txt‚ÅŽÀ‘•Ï‚Ý
-ˆê•”ƒZƒbƒgŒø‰Ê‚Ì‹Lq‚ª”ñí‚É“ï‚µ‚¢‚à‚Ì‚ª‚ ‚è–¢ŽÀ‘•(‘Â‚¿‚½‘å_Š¯ƒqƒoƒ€ƒJ[ƒh ƒ”ƒFƒ‹ƒ[ƒuƒuƒJ[ƒh ••ˆó‚³‚ê‚½‘Â‚¿‚½‘å_Š¯ƒqƒoƒ€ƒJ[ƒh ••ˆó‚³‚ê‚½ƒ”ƒFƒ‹ƒ[ƒuƒuƒJ[ƒh ƒZƒbƒgŒø‰Ê)
+ãƒ­ãƒ¼ã‚«ãƒ«ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†å®Œäº†
+ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã—ã¦ã„ã‚‹ã®ã¯item_db.txtã§å®Ÿè£…æ¸ˆã¿
+ä¸€éƒ¨ã‚»ãƒƒãƒˆåŠ¹æžœã®è¨˜è¿°ãŒéžå¸¸ã«é›£ã—ã„ã‚‚ã®ãŒã‚ã‚Šæœªå®Ÿè£…(å •ã¡ãŸå¤§ç¥žå®˜ãƒ’ãƒãƒ ã‚«ãƒ¼ãƒ‰ ãƒ´ã‚§ãƒ«ã‚¼ãƒ–ãƒ–ã‚«ãƒ¼ãƒ‰ å°å°ã•ã‚ŒãŸå •ã¡ãŸå¤§ç¥žå®˜ãƒ’ãƒãƒ ã‚«ãƒ¼ãƒ‰ å°å°ã•ã‚ŒãŸãƒ´ã‚§ãƒ«ã‚¼ãƒ–ãƒ–ã‚«ãƒ¼ãƒ‰ ã‚»ãƒƒãƒˆåŠ¹æžœ)
 
 20240125	patch0097
-1127 ‚ÌƒGƒ‰[•\Ž¦C³
+1127 ã®ã‚¨ãƒ©ãƒ¼è¡¨ç¤ºä¿®æ­£
 
 20240124	patch0096
-501-2999 ƒAƒCƒeƒ€‚Ì®—
+501-2999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
-ƒOƒ[ƒoƒ‹ƒAƒCƒeƒ€‚ÌˆÚ“®Š®—¹
-ƒOƒ[ƒoƒ‹ƒAƒCƒeƒ€‚ð•Êƒtƒ@ƒCƒ‹‚É®—(db to global.txt)
-addon‚Ì global_db_add.txt ‚ðmisc ‚ÉˆÚ“®
+ã‚°ãƒ­ãƒ¼ãƒãƒ«ã‚¢ã‚¤ãƒ†ãƒ ã®ç§»å‹•å®Œäº†
+ã‚°ãƒ­ãƒ¼ãƒãƒ«ã‚¢ã‚¤ãƒ†ãƒ ã‚’åˆ¥ãƒ•ã‚¡ã‚¤ãƒ«ã«æ•´ç†(db to global.txt)
+addonã® global_db_add.txt ã‚’misc ã«ç§»å‹•
 
-15000-31999 Œ©’¼‚µ
-2024ˆÈ~‚Ì5Œ…”Ô†‚ÌƒAƒCƒeƒ€‚ð”½‰f
+15000-31999 è¦‹ç›´ã—
+2024ä»¥é™ã®5æ¡ç•ªå·ã®ã‚¢ã‚¤ãƒ†ãƒ ã‚’åæ˜ 
 
-20240123ƒAƒCƒeƒ€‚ÉŒø‰Ê‚ª”½‰f‚³‚ê‚Ä‚¢‚È‚©‚Á‚½‚Ì‚ÅC³
+20240123ã‚¢ã‚¤ãƒ†ãƒ ã«åŠ¹æžœãŒåæ˜ ã•ã‚Œã¦ã„ãªã‹ã£ãŸã®ã§ä¿®æ­£
 
 20240123	patch0095
-20240123 ƒ[ƒJƒ‹ƒAƒCƒeƒ€’Ç‰Á•ªŽÀ‘•
-item_db2_add.txt ‚Ì240109 240116 •ª‚Ì‹Lqƒ~ƒX‚ðC³
+20240123 ãƒ­ãƒ¼ã‚«ãƒ«ã‚¢ã‚¤ãƒ†ãƒ è¿½åŠ åˆ†å®Ÿè£…
+item_db2_add.txt ã®240109 240116 åˆ†ã®è¨˜è¿°ãƒŸã‚¹ã‚’ä¿®æ­£
 
 20240122	patch0094
-4000-4999 ƒAƒCƒeƒ€‚Ì®—
+4000-4999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
 20240121	patch0093
-5000-5999 ƒAƒCƒeƒ€‚Ì®—
+5000-5999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
 20240120	patch0092
-6000-7999 ƒAƒCƒeƒ€‚Ì®—
+6000-7999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
 20240119	patch0091
-9000-13999 ƒAƒCƒeƒ€‚Ì®—
+9000-13999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
-13300-13346 •—–‚Žè— Œ•‚Ìname‚ðC³
+13300-13346 é¢¨é­”æ‰‹è£å‰£ã®nameã‚’ä¿®æ­£
 
 20240118	patch0090
-12000-13999 ƒAƒCƒeƒ€‚Ì®—
+12000-13999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
 20240117	patch0089
-20240116ƒpƒbƒ`•ªƒAƒCƒeƒ€ŽÀ‘•
+20240116ãƒ‘ãƒƒãƒåˆ†ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
 
 2024-01-15	patch0088
-14000-15999 ƒAƒCƒeƒ€‚Ì®—
+14000-15999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
 2024-01-14	patch0087
-16000-17999 ƒAƒCƒeƒ€‚Ì®—
+16000-17999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
-” ƒAƒCƒeƒ€‚ÉŽÀ‘•‚³‚ê‚È‚©‚Á‚½ƒOƒ[ƒoƒ‹ƒAƒCƒeƒ€‘½‚ß‚Å‚·
+ç®±ã‚¢ã‚¤ãƒ†ãƒ ã«å®Ÿè£…ã•ã‚Œãªã‹ã£ãŸã‚°ãƒ­ãƒ¼ãƒãƒ«ã‚¢ã‚¤ãƒ†ãƒ å¤šã‚ã§ã™
 
 
 2024-01-13	patch0086
-18000-21999 ƒAƒCƒeƒ€‚Ì®—
+18000-21999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
-ƒ[ƒJƒ‹‚É’è‹`‚Ì‚È‚¢ƒOƒ[ƒoƒ‹ƒAƒCƒeƒ€‚ðitem_db.txt‚©‚çˆÚ“®‚·‚é€”õ‚Åíœ‚³‚ê‚Ä‚¢‚éƒAƒCƒeƒ€‚ª‚ ‚è‚Ü‚·
-“§–¾‚É‚È‚Á‚½‚è‰pŒê•\‹L‚¾‚Á‚½‚èƒƒOƒCƒ“‚Å‚«‚È‚­‚È‚éƒGƒ‰[‚ªo‚éŒ´ˆö‚Æ‚È‚Á‚Ä‚¢‚é‚½‚ß‚Å‚·
-Œã“ú•Êƒtƒ@ƒCƒ‹‚É‚Ü‚Æ‚ß‚é—\’è‚Å‚·
+ãƒ­ãƒ¼ã‚«ãƒ«ã«å®šç¾©ã®ãªã„ã‚°ãƒ­ãƒ¼ãƒãƒ«ã‚¢ã‚¤ãƒ†ãƒ ã‚’item_db.txtã‹ã‚‰ç§»å‹•ã™ã‚‹æº–å‚™ã§å‰Šé™¤ã•ã‚Œã¦ã„ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ãŒã‚ã‚Šã¾ã™
+é€æ˜Žã«ãªã£ãŸã‚Šè‹±èªžè¡¨è¨˜ã ã£ãŸã‚Šãƒ­ã‚°ã‚¤ãƒ³ã§ããªããªã‚‹ã‚¨ãƒ©ãƒ¼ãŒå‡ºã‚‹åŽŸå› ã¨ãªã£ã¦ã„ã‚‹ãŸã‚ã§ã™
+å¾Œæ—¥åˆ¥ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¾ã¨ã‚ã‚‹äºˆå®šã§ã™
 
 2024-01-12	patch0085
-22000-23999 ƒAƒCƒeƒ€‚Ì®—
-‘SƒAƒCƒeƒ€ƒŠƒXƒg‚ðsorce.txt‚É”½‰f
+22000-23999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
+å…¨ã‚¢ã‚¤ãƒ†ãƒ ãƒªã‚¹ãƒˆã‚’sorce.txtã«åæ˜ 
 
 2024-01-11	patch0084
-24000-25999 ƒAƒCƒeƒ€‚Ì®—
+24000-25999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
 2024-01-10	patch0083
-26000-27999 ƒAƒCƒeƒ€‚Ì®—
+26000-27999 ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
 2024-01-09	patch0082
-32222 32262 32265 Šî‘b’è‹`’Ç‰Á
-2024-01-09 ƒ[ƒJƒ‹ƒpƒbƒ` ŽÀ‘•
+32222 32262 32265 åŸºç¤Žå®šç¾©è¿½åŠ 
+2024-01-09 ãƒ­ãƒ¼ã‚«ãƒ«ãƒ‘ãƒƒãƒ å®Ÿè£…
 
-28000-32408 •ª‚ÌŽÀ‘•ƒAƒCƒeƒ€‚ðitem_db.txt‚Ìƒf[ƒ^‚Æ‹¤‚É®—‚µA‘SƒAƒCƒeƒ€‚ð‹Lq
-¦ˆß‘•‘•”õ‚Íd•¡•ª‚à‘S•”ÄŒf‚µ‚Ä‚¢‚Ü‚·
-¦ƒRƒƒ“ƒgƒAƒEƒg•ª‚Íitem_db.txt‚É‚ ‚é‚à‚Ì‚Å‚·
-¦item_db.txt ‚Æitem_db_add.txt‚Ìƒf[ƒ^‚ð“‡‚µitem_db_txt‚Æ‚µ‚ÄŽÀ‘•‚Å‚«‚é‚æ‚¤‚Éì‹Æ’†
-¦ƒ[ƒJƒ‹ƒAƒCƒeƒ€‚ÆƒOƒ[ƒoƒ‹ƒAƒCƒeƒ€‚ð•ª—£‚·‚é‚½‚ßì‹Æ’†
-¦“‡Š®—¹Œã‚ÉŒø‰ÊŽÀ‘•‚ðÄŠJ—\’è
+28000-32408 åˆ†ã®å®Ÿè£…ã‚¢ã‚¤ãƒ†ãƒ ã‚’item_db.txtã®ãƒ‡ãƒ¼ã‚¿ã¨å…±ã«æ•´ç†ã—ã€å…¨ã‚¢ã‚¤ãƒ†ãƒ ã‚’è¨˜è¿°
+â€»è¡£è£…è£…å‚™ã¯é‡è¤‡åˆ†ã‚‚å…¨éƒ¨å†æŽ²ã—ã¦ã„ã¾ã™
+â€»ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆåˆ†ã¯item_db.txtã«ã‚ã‚‹ã‚‚ã®ã§ã™
+â€»item_db.txt ã¨item_db_add.txtã®ãƒ‡ãƒ¼ã‚¿ã‚’çµ±åˆã—item_db_txtã¨ã—ã¦å®Ÿè£…ã§ãã‚‹ã‚ˆã†ã«ä½œæ¥­ä¸­
+â€»ãƒ­ãƒ¼ã‚«ãƒ«ã‚¢ã‚¤ãƒ†ãƒ ã¨ã‚°ãƒ­ãƒ¼ãƒãƒ«ã‚¢ã‚¤ãƒ†ãƒ ã‚’åˆ†é›¢ã™ã‚‹ãŸã‚ä½œæ¥­ä¸­
+â€»çµ±åˆå®Œäº†å¾Œã«åŠ¹æžœå®Ÿè£…ã‚’å†é–‹äºˆå®š
 
-ƒeƒXƒgŠÂ‹«‚ðPatch1538‚ÉXV
-ƒeƒXƒgŠÂ‹«‚Ì·•ª‚ðXV‚µ‚Ä‚¢‚Ü‚·
+ãƒ†ã‚¹ãƒˆç’°å¢ƒã‚’Patch1538ã«æ›´æ–°
+ãƒ†ã‚¹ãƒˆç’°å¢ƒã®å·®åˆ†ã‚’æ›´æ–°ã—ã¦ã„ã¾ã™
 
 2023-12-26	patch0081
-2023-12-26 ƒ[ƒJƒ‹ƒpƒbƒ` ŽÀ‘•
+2023-12-26 ãƒ­ãƒ¼ã‚«ãƒ«ãƒ‘ãƒƒãƒ å®Ÿè£…
 
-ŽÀ‘•ƒAƒCƒeƒ€‚Ì®—
+å®Ÿè£…ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
 
-20086#[ˆß‘•] ”ò—´æ‰_–X#
-1001585#”N‰êó2024”N#
+20086#[è¡£è£…] é£›é¾ä¹—é›²å¸½#
+1001585#å¹´è³€çŠ¶2024å¹´#
 
 2023-12-25	patch0080
-32028 32029 32030 32112 32113 32242 32246 32354 32355 32404 32405 32406 32407 32408 ŽÀ‘•
+32028 32029 32030 32112 32113 32242 32246 32354 32355 32404 32405 32406 32407 32408 å®Ÿè£…
 
-32242 ƒZƒbƒgŒø‰Ê‚Æ‚µ‚Ä
-5987 5988 5989 5990 5991 5992 5993 5994 5995 5996 5997 5998 5999 ƒZƒbƒgŒø‰Ê’Ç‰Á‚ÆÅ“K‰»
+32242 ã‚»ãƒƒãƒˆåŠ¹æžœã¨ã—ã¦
+5987 5988 5989 5990 5991 5992 5993 5994 5995 5996 5997 5998 5999 ã‚»ãƒƒãƒˆåŠ¹æžœè¿½åŠ ã¨æœ€é©åŒ–
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
-item_cartype.txt XV
+item_cartype.txt æ›´æ–°
 
 2023-12-24	patch0079
-ƒuƒ‹[ƒgŒn‘•”õ‚Ì®—
+ãƒ–ãƒ«ãƒ¼ãƒˆç³»è£…å‚™ã®æ•´ç†
 
-32000”Ô‘ä‚ÅŽÀ‘•‚³‚ê‚Ä‚¢‚È‚¢ƒAƒCƒeƒ€‚ÌŽÀ‘•€”õ
+32000ç•ªå°ã§å®Ÿè£…ã•ã‚Œã¦ã„ãªã„ã‚¢ã‚¤ãƒ†ãƒ ã®å®Ÿè£…æº–å‚™
 32028 32029 32030 32112 32113 32242 32246 32354 32355 32404 32405 32406 32407 32408
 
 2023-12-23	patch0078
-25058 25177 28178 25224 312646 C³
+25058 25177 28178 25224 312646 ä¿®æ­£
 
-ƒuƒ‹[ƒgŒn‘•”õŽÀ‘•
+ãƒ–ãƒ«ãƒ¼ãƒˆç³»è£…å‚™å®Ÿè£…
 
-item_cardtype.txt XV
+item_cardtype.txt æ›´æ–°
 
 2023-12-22	patch0077
-420302 ƒTƒ‚ƒi[‚ª‘•”õ‚Å‚«‚È‚¢‚Ì‚ðC³
+420302 ã‚µãƒ¢ãƒŠãƒ¼ãŒè£…å‚™ã§ããªã„ã®ã‚’ä¿®æ­£
 
-ƒKƒ“ƒXƒŠƒ“ƒK[ê—p‘•”õ‚ÌeŒn‚ÌŽË’ö‚ð‘S•”5‚É•ÏX(2023-11-28 ƒpƒbƒ`‚ÅŽd—l•ÏX)
+ã‚¬ãƒ³ã‚¹ãƒªãƒ³ã‚¬ãƒ¼å°‚ç”¨è£…å‚™ã®éŠƒç³»ã®å°„ç¨‹ã‚’å…¨éƒ¨5ã«å¤‰æ›´(2023-11-28 ãƒ‘ãƒƒãƒã§ä»•æ§˜å¤‰æ›´)
 
 2023-12-21	patch0076
-2023-12-19ƒpƒbƒ`•ªŽÀ‘•
+2023-12-19ãƒ‘ãƒƒãƒåˆ†å®Ÿè£…
 
-claasnum_db.txt XV
+claasnum_db.txt æ›´æ–°
 
 2023-12-19	patch0075
-classnum_db.txt XV
+classnum_db.txt æ›´æ–°
 
 2023-12-18	patch0074
-2023-12-05ƒpƒbƒ`•ªŽÀ‘•
+2023-12-05ãƒ‘ãƒƒãƒåˆ†å®Ÿè£…
 
 2023-12-18	patch0073
-2023-11-28ƒpƒbƒ`•ªŽÀ‘•
+2023-11-28ãƒ‘ãƒƒãƒåˆ†å®Ÿè£…
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-12-12	jpatch1205
-23-11-28 23-12-05 •ª‚ÌŠî‘bî•ñŽÀ‘•
-1000563#Œì•„#
-1000564#ŽèžÖ’e#
-1000565#Ž½•‚Ì—z‰Š#
-1000566#g‰Š‚Ì—z‰Š#
-1000567#•Xá‚Ì—z‰Š#
-1000568#‘å’n‚Ì—z‰Š#
-1000569#ñ•—‚Ì—z‰Š#
+23-11-28 23-12-05 åˆ†ã®åŸºç¤Žæƒ…å ±å®Ÿè£…
+1000563#è­·ç¬¦#
+1000564#æ‰‹æ¦´å¼¾#
+1000565#æ¼†é»’ã®é™½ç‚Ž#
+1000566#ç´…ç‚Žã®é™½ç‚Ž#
+1000567#æ°·é›ªã®é™½ç‚Ž#
+1000568#å¤§åœ°ã®é™½ç‚Ž#
+1000569#æœ”é¢¨ã®é™½ç‚Ž#
 //--------------------------------------------
-19521#[ˆß‘•] ƒfƒUƒCƒi[‚ÌŠÛ–XŽq#
+19521#[è¡£è£…] ãƒ‡ã‚¶ã‚¤ãƒŠãƒ¼ã®ä¸¸å¸½å­#
 //--------------------------------------------
-9956#ƒ|ƒŠƒ“ƒP[ƒL#
-9957#ƒ|ƒŠƒ“ƒP[ƒLBOX(50‘ä)#
-9958#ƒ|ƒŠƒ“ƒP[ƒLBOX(150‘ä)#
+9956#ãƒãƒªãƒ³ã‚±ãƒ¼ã‚­#
+9957#ãƒãƒªãƒ³ã‚±ãƒ¼ã‚­BOX(50å°)#
+9958#ãƒãƒªãƒ³ã‚±ãƒ¼ã‚­BOX(150å°)#
 //--------------------------------------------
-102678#‹³c‚Ìƒƒ‚’ #
-1001569#“ñl‚Ì•¨Œê‚ÌŽw—Ö#
-450333#ƒOƒŒƒCƒEƒ‹ƒtƒX[ƒc(Žæˆø•s‰Â)#
-450335#ƒOƒŒƒCƒEƒ‹ƒtƒ[ƒu(Žæˆø•s‰Â)#
-450336#á‰Ô‚ÌƒƒCƒ‹(Žæˆø•s‰Â)#
-450337#á‰Ô‚Ìƒ[ƒu(Žæˆø•s‰Â)#
-470239#ƒOƒŒƒCƒEƒ‹ƒtƒu[ƒc(Žæˆø•s‰Â)#
-470240#ƒOƒŒƒCƒEƒ‹ƒtƒVƒ…[ƒY(Žæˆø•s‰Â)#
-470241#á‰Ô‚Ìƒu[ƒc(Žæˆø•s‰Â)#
-470242#á‰Ô‚ÌƒVƒ…[ƒY(Žæˆø•s‰Â)#
-480388#ƒOƒŒƒCƒEƒ‹ƒtƒ}ƒtƒ‰[(Žæˆø•s‰Â)#
-480389#ƒOƒŒƒCƒEƒ‹ƒtƒ}ƒ“ƒg(Žæˆø•s‰Â)#
-480390#á‰Ô‚Ìƒ}ƒ“ƒg(Žæˆø•s‰Â)#
-480391#á‰Ô‚Ìƒ}ƒtƒ‰[(Žæˆø•s‰Â)#
-490454#ƒOƒŒƒCƒEƒ‹ƒtƒŠƒ“ƒO(Žæˆø•s‰Â)#
-490455#ƒOƒŒƒCƒEƒ‹ƒtƒCƒ„ƒŠƒ“ƒO(Žæˆø•s‰Â)#
-490456#ƒOƒŒƒCƒEƒ‹ƒtƒyƒ“ƒ_ƒ“ƒg(Žæˆø•s‰Â)#
-490457#ƒOƒŒƒCƒEƒ‹ƒtƒlƒbƒNƒŒƒX(Žæˆø•s‰Â)#
-490458#á‰Ô‚ÌƒŠƒ“ƒO(Žæˆø•s‰Â)#
-490459#á‰Ô‚ÌƒCƒ„ƒŠƒ“ƒO(Žæˆø•s‰Â)#
-490460#á‰Ô‚Ìƒyƒ“ƒ_ƒ“ƒg(Žæˆø•s‰Â)#
-490461#á‰Ô‚ÌƒlƒbƒNƒŒƒX(Žæˆø•s‰Â)#
+102678#æ•™çš‡ã®ãƒ¡ãƒ¢å¸³#
+1001569#äºŒäººã®ç‰©èªžã®æŒ‡è¼ª#
+450333#ã‚°ãƒ¬ã‚¤ã‚¦ãƒ«ãƒ•ã‚¹ãƒ¼ãƒ„(å–å¼•ä¸å¯)#
+450335#ã‚°ãƒ¬ã‚¤ã‚¦ãƒ«ãƒ•ãƒ­ãƒ¼ãƒ–(å–å¼•ä¸å¯)#
+450336#é›ªèŠ±ã®ãƒ¡ã‚¤ãƒ«(å–å¼•ä¸å¯)#
+450337#é›ªèŠ±ã®ãƒ­ãƒ¼ãƒ–(å–å¼•ä¸å¯)#
+470239#ã‚°ãƒ¬ã‚¤ã‚¦ãƒ«ãƒ•ãƒ–ãƒ¼ãƒ„(å–å¼•ä¸å¯)#
+470240#ã‚°ãƒ¬ã‚¤ã‚¦ãƒ«ãƒ•ã‚·ãƒ¥ãƒ¼ã‚º(å–å¼•ä¸å¯)#
+470241#é›ªèŠ±ã®ãƒ–ãƒ¼ãƒ„(å–å¼•ä¸å¯)#
+470242#é›ªèŠ±ã®ã‚·ãƒ¥ãƒ¼ã‚º(å–å¼•ä¸å¯)#
+480388#ã‚°ãƒ¬ã‚¤ã‚¦ãƒ«ãƒ•ãƒžãƒ•ãƒ©ãƒ¼(å–å¼•ä¸å¯)#
+480389#ã‚°ãƒ¬ã‚¤ã‚¦ãƒ«ãƒ•ãƒžãƒ³ãƒˆ(å–å¼•ä¸å¯)#
+480390#é›ªèŠ±ã®ãƒžãƒ³ãƒˆ(å–å¼•ä¸å¯)#
+480391#é›ªèŠ±ã®ãƒžãƒ•ãƒ©ãƒ¼(å–å¼•ä¸å¯)#
+490454#ã‚°ãƒ¬ã‚¤ã‚¦ãƒ«ãƒ•ãƒªãƒ³ã‚°(å–å¼•ä¸å¯)#
+490455#ã‚°ãƒ¬ã‚¤ã‚¦ãƒ«ãƒ•ã‚¤ãƒ¤ãƒªãƒ³ã‚°(å–å¼•ä¸å¯)#
+490456#ã‚°ãƒ¬ã‚¤ã‚¦ãƒ«ãƒ•ãƒšãƒ³ãƒ€ãƒ³ãƒˆ(å–å¼•ä¸å¯)#
+490457#ã‚°ãƒ¬ã‚¤ã‚¦ãƒ«ãƒ•ãƒãƒƒã‚¯ãƒ¬ã‚¹(å–å¼•ä¸å¯)#
+490458#é›ªèŠ±ã®ãƒªãƒ³ã‚°(å–å¼•ä¸å¯)#
+490459#é›ªèŠ±ã®ã‚¤ãƒ¤ãƒªãƒ³ã‚°(å–å¼•ä¸å¯)#
+490460#é›ªèŠ±ã®ãƒšãƒ³ãƒ€ãƒ³ãƒˆ(å–å¼•ä¸å¯)#
+490461#é›ªèŠ±ã®ãƒãƒƒã‚¯ãƒ¬ã‚¹(å–å¼•ä¸å¯)#
 //--------------------------------------------
-480287#[ˆß‘•] ƒXƒLƒA‚Ì‚Ê‚¢‚®‚é‚Ý#
-480305#[ˆß‘•] ‹³c‚Ì‚Ê‚¢‚®‚é‚Ý#
+480287#[è¡£è£…] ã‚¹ã‚­ã‚¢ã®ã¬ã„ãã‚‹ã¿#
+480305#[è¡£è£…] æ•™çš‡ã®ã¬ã„ãã‚‹ã¿#
 //--------------------------------------------
-400475#[ˆß‘•] ƒlƒIƒ“ƒ|ƒŠƒ“ƒT[ƒNƒŒƒbƒg#
-410252#[ˆß‘•] ƒGƒCƒŠƒAƒ“ƒTƒ“ƒOƒ‰ƒX(Ô)#
-400402#[ˆß‘•] ƒGƒ“ƒWƒFƒŠƒ“ƒOƒP[ƒL–X#
-410282#[ˆß‘•] ƒoƒ‹[ƒ“ƒŠƒŠ[ƒX#
-1001376#ƒoƒ‹ƒ€ƒ“ƒglŒ`#
-1100009#ƒgƒƒsƒJƒ‹“Ø˜¥#
-1100010#ƒ|ƒŠƒ“ƒRƒ“ƒuƒ`ƒƒ#
-1100011#ƒ‚ƒ“ƒXƒ^[ƒpƒ“#
-1100012#‹Ö’f‚Ìƒ‚ƒ“ƒXƒ^[ƒpƒ“#
-1100013#ä¥‚Å“Ø‚Ì“ª“÷#
-1100014#’¼‰ÎÄ‚«‹›#
-1100015#‚â‚Ý‚Â‚«’¿–¡‹ø#
-1100016#–éŽs‚Ì‚©‚«•X#
-1100017#–éŽs‚ÌƒAƒCƒXƒNƒŠ[ƒ€#
-1100018#–éŽs‚Ì–È‰ÙŽq#
-1100019#‚Æ‚ê‚½‚Ä–ìØ‹ø#
-1100020#’¼‰ÎÄƒ\[ƒZ[ƒW#
-102639#•ŸˆøBOX(1K)#
-102671#•ŸˆøBOX(1M)#
-102672#•ŸˆøBOX(1G)#
+400475#[è¡£è£…] ãƒã‚ªãƒ³ãƒãƒªãƒ³ã‚µãƒ¼ã‚¯ãƒ¬ãƒƒãƒˆ#
+410252#[è¡£è£…] ã‚¨ã‚¤ãƒªã‚¢ãƒ³ã‚µãƒ³ã‚°ãƒ©ã‚¹(èµ¤)#
+400402#[è¡£è£…] ã‚¨ãƒ³ã‚¸ã‚§ãƒªãƒ³ã‚°ã‚±ãƒ¼ã‚­å¸½#
+410282#[è¡£è£…] ãƒãƒ«ãƒ¼ãƒ³ãƒªãƒªãƒ¼ã‚¹#
+1001376#ãƒãƒ«ãƒ ãƒ³ãƒˆäººå½¢#
+1100009#ãƒˆãƒ­ãƒ”ã‚«ãƒ«è±šä¸¼#
+1100010#ãƒãƒªãƒ³ã‚³ãƒ³ãƒ–ãƒãƒ£#
+1100011#ãƒ¢ãƒ³ã‚¹ã‚¿ãƒ¼ãƒ‘ãƒ³#
+1100012#ç¦æ–­ã®ãƒ¢ãƒ³ã‚¹ã‚¿ãƒ¼ãƒ‘ãƒ³#
+1100013#èŒ¹ã§è±šã®é ­è‚‰#
+1100014#ç›´ç«ç„¼ãé­š#
+1100015#ã‚„ã¿ã¤ãçå‘³ä¸²#
+1100016#å¤œå¸‚ã®ã‹ãæ°·#
+1100017#å¤œå¸‚ã®ã‚¢ã‚¤ã‚¹ã‚¯ãƒªãƒ¼ãƒ #
+1100018#å¤œå¸‚ã®ç¶¿è“å­#
+1100019#ã¨ã‚ŒãŸã¦é‡Žèœä¸²#
+1100020#ç›´ç«ç„¼ã‚½ãƒ¼ã‚»ãƒ¼ã‚¸#
+102639#ç¦å¼•BOX(1K)#
+102671#ç¦å¼•BOX(1M)#
+102672#ç¦å¼•BOX(1G)#
 //--------------------------------------------
-490131#¯À‚ÌˆóÍ#
-490132#¯À‚ÌˆóÍ(—Í)#
-490133#¯À‚ÌˆóÍ(‘Ì—Í)#
-490134#¯À‚ÌˆóÍ(W’†)#
-490135#¯À‚ÌˆóÍ(‘n‘¢)#
-490136#¯À‚ÌˆóÍ(–‚—Í)#
-490137#¯À‚ÌˆóÍ(‘–¾)#
-312022#“V—^‚ÌË#
-312045#–‚b‚Ì’Ü‰å#
-312046#ªŒ¹‚Ö‚Ì“ž’B#
-312047#•s–Å‚Ì“÷‘Ì#
-312048#‰b’m‚Ì‰¤Š¥#
-312049#‘“âu‚Ì”eŽÒ#
-1000372#ƒƒeƒIƒ‰ƒCƒg‚Ì•²#
-1000373#ƒƒeƒIƒ‰ƒCƒg‚ÌŒ‡•Ð#
-1000396#ƒiƒnƒgƒYƒB[ƒK[‚Ì°#
-1000397#ƒxƒeƒ‹ƒMƒEƒX‚Ì°#
+490131#æ˜Ÿåº§ã®å°ç« #
+490132#æ˜Ÿåº§ã®å°ç« (åŠ›)#
+490133#æ˜Ÿåº§ã®å°ç« (ä½“åŠ›)#
+490134#æ˜Ÿåº§ã®å°ç« (é›†ä¸­)#
+490135#æ˜Ÿåº§ã®å°ç« (å‰µé€ )#
+490136#æ˜Ÿåº§ã®å°ç« (é­”åŠ›)#
+490137#æ˜Ÿåº§ã®å°ç« (è¡æ˜Ž)#
+312022#å¤©ä¸Žã®æ‰#
+312045#é­”ç£ã®çˆªç‰™#
+312046#æ ¹æºã¸ã®åˆ°é”#
+312047#ä¸æ»…ã®è‚‰ä½“#
+312048#å¡çŸ¥ã®çŽ‹å† #
+312049#è’¼ç©¹ã®è¦‡è€…#
+1000372#ãƒ¡ãƒ†ã‚ªãƒ©ã‚¤ãƒˆã®ç²‰#
+1000373#ãƒ¡ãƒ†ã‚ªãƒ©ã‚¤ãƒˆã®æ¬ ç‰‡#
+1000396#ãƒŠãƒãƒˆã‚ºã‚£ãƒ¼ã‚¬ãƒ¼ã®é­‚#
+1000397#ãƒ™ãƒ†ãƒ«ã‚®ã‚¦ã‚¹ã®é­‚#
 //--------------------------------------------
-400566#ƒAƒEƒFƒCƒLƒ“ƒOƒuƒ‹[ƒ€#
-410284#‹U_‚ÌƒCƒrƒ‹ƒAƒC#
-410285#‹U_‚ÌƒCƒrƒ‹ƒAƒC#
-420270#ƒRƒYƒ~ƒbƒNƒRƒlƒNƒVƒ‡ƒ“#
-450338#ƒXƒNƒŠ[ƒ~ƒ“ƒOƒS[ƒXƒgƒp[ƒeƒB#
-470243#ƒgƒD[ƒTƒCƒhƒ_ƒCƒ„ƒ‚ƒ“ƒhƒu[ƒc#
-400567#[ˆß‘•] ƒAƒEƒFƒCƒLƒ“ƒOƒuƒ‹[ƒ€#
-410286#[ˆß‘•] ‹U_‚ÌƒCƒrƒ‹ƒAƒC#
-420271#[ˆß‘•] ƒRƒYƒ~ƒbƒNƒRƒlƒNƒVƒ‡ƒ“#
-420272#[ˆß‘•] ‹U_‚ÌƒCƒrƒ‹ƒAƒC(Œ¨‚É‚©‚¯‚é•¨)#
-410287#[ˆß‘•] ƒRƒYƒ~ƒbƒNƒRƒlƒNƒVƒ‡ƒ“(Œ¨‚É‚©‚¯‚é•¨)#
-310955#öÝŠoÁ(ƒCƒOƒjƒbƒVƒ‡ƒ“ƒuƒŒƒCƒNII)#
-310956#öÝŠoÁ(ƒ\ƒjƒbƒNƒEƒF[ƒuI)#
-310943#öÝŠoÁ(ƒNƒŠƒ€ƒ]ƒ“ƒƒbƒNI)#
-312807#öÝŠoÁ(ƒ\ƒEƒ‹ƒGƒNƒXƒpƒ“ƒVƒ‡ƒ“I)#
-312808#öÝŠoÁ(ƒA[ƒXƒXƒgƒŒƒCƒ“I)#
-312809#öÝŠoÁ(ƒWƒƒƒbƒNƒtƒƒXƒgII)#
-312810#öÝŠoÁ(ƒwƒ‹ƒCƒ“ƒtƒFƒ‹ƒmI)#
-310949#öÝŠoÁ(ƒAƒ[ƒXƒg[ƒ€II)#
-312811#öÝŠoÁ(ƒGƒCƒ€ƒhƒ{ƒ‹ƒgI)#
-310960#öÝŠoÁ(ƒAƒbƒNƒXƒgƒ‹ƒl[ƒhI)#
-312812#öÝŠoÁ(ƒAƒbƒNƒXƒu[ƒƒ‰ƒ“I)#
-312813#öÝŠoÁ(ƒpƒ[ƒXƒCƒ“ƒOI)#
-310963#öÝŠoÁ(ƒ[ƒŠƒ“ƒOƒJƒbƒ^[I)#
-310964#öÝŠoÁ(ƒNƒƒXƒŠƒbƒp[ƒXƒ‰ƒbƒVƒƒ[I)#
-310953#öÝŠoÁ(ƒWƒ…ƒfƒbƒNƒXII)#
-312814#öÝŠoÁ(ƒAƒhƒ‰ƒ€ƒXI)#
-310940#öÝŠoÁ(ƒCƒ“ƒXƒsƒŒ[ƒVƒ‡ƒ“I)#
-310941#öÝŠoÁ(ƒA[ƒXƒhƒ‰ƒCƒuI)#
-312815#öÝŠoÁ(ƒLƒƒƒmƒ“ƒXƒsƒAI)#
-312816#öÝŠoÁ(ƒŒƒCƒIƒuƒWƒFƒlƒVƒXI)#
-312817#öÝŠoÁ(ƒV[ƒ‹ƒhƒvƒŒƒXI)#
-312818#öÝŠoÁ(ƒoƒjƒVƒ“ƒOƒ|ƒCƒ“ƒgI)#
-310945#öÝŠoÁ(ƒTƒCƒLƒbƒNƒEƒF[ƒuI)#
-310946#öÝŠoÁ(ƒTƒCƒLƒbƒNƒEƒF[ƒuII)#
-310947#öÝŠoÁ(ƒ”ƒFƒ‰ƒ`ƒ…[ƒ‹ƒXƒsƒA[I)#
-312819#öÝŠoÁ(ƒXƒyƒ‹ƒtƒBƒXƒgI)#
-310951#öÝŠoÁ(ƒVƒrƒAƒŒƒCƒ“ƒXƒg[ƒ€II)#
-312820#öÝŠoÁ(ƒƒ^ƒŠƒbƒNƒTƒEƒ“ƒhI)#
-310962#öÝŠoÁ(ƒJ[ƒgƒLƒƒƒmƒ“I)#
-312821#öÝŠoÁ(ƒJ[ƒgƒgƒ‹ƒl[ƒhI)#
-312822#öÝŠoÁ(ƒXƒ|ƒAƒGƒNƒXƒvƒ[ƒWƒ‡ƒ“I)#
-310965#öÝŠoÁ(ƒgƒ‰ƒCƒAƒ“ƒOƒ‹ƒVƒ‡ƒbƒgI)#
-310966#öÝŠoÁ(ƒtƒFƒCƒ^ƒ‹ƒƒiƒXI)#
-310958#öÝŠoÁ(Ž‚Žq™áII)#
-312823#öÝŠoÁ(”š‹CŽU’eI)#
-312824#öÝŠoÁ(—‹Œõ’eI)#
-312825#öÝŠoÁ(“V—…’n–ÔI)#
-310974#öÝŠoÁ(‘¾—z”š”­I)#
-310975#öÝŠoÁ(–žŒŽ‹rII)#
-312826#öÝŠoÁ(—¬¯—Ž‰ºI)#
-310977#öÝŠoÁ(Ž€—ì”š”­I)#
-312827#öÝŠoÁ(ƒGƒXƒpI)#
-310967#öÝŠoÁ(•—–‚Žè— Œ• -—‰Ø-I)#
-310968#öÝŠoÁ(\•¶ŽšŽa‚èI)#
-310972#öÝŠoÁ(ƒ‰ƒEƒ“ƒhƒgƒŠƒbƒvI)#
-312828#öÝŠoÁ(ƒtƒ@ƒCƒA[ƒŒƒCƒ“I)#
-310980#öÝŠoÁ(ƒ}ƒ^ƒ^ƒrƒ‰ƒ“ƒXI)#
-310981#öÝŠoÁ(ƒCƒkƒnƒbƒJƒƒeƒII)#
-312829#öÝŠoÁ(ƒLƒƒƒƒbƒgƒr[ƒgI)#
-312830#öÝŠoÁ(ƒTƒx[ƒW‚Ì°II)#
-312831#öÝ‰ð•ú(ƒ‹[ƒ“ƒiƒCƒgII)#
-312832#öÝ‰ð•ú(ƒEƒH[ƒƒbƒNII)#
-312833#öÝ‰ð•ú(ƒŒƒ“ƒWƒƒ[II)#
-312834#öÝ‰ð•ú(ƒƒJƒjƒbƒNII)#
-312835#öÝ‰ð•ú(ƒMƒƒ`ƒ“ƒNƒƒXII)#
-312836#öÝ‰ð•ú(ƒA[ƒNƒrƒVƒ‡ƒbƒvII)#
-312837#öÝ‰ð•ú(ƒƒCƒ„ƒ‹ƒK[ƒhII)#
-312838#öÝ‰ð•ú(ƒ\[ƒTƒ‰[II)#
-312839#öÝ‰ð•ú(ƒ~ƒ“ƒXƒgƒŒƒ‹&ƒƒ“ƒ_ƒ‰[I)#
-312840#öÝ‰ð•ú(ƒWƒFƒlƒeƒBƒbƒNII)#
-312841#öÝ‰ð•ú(ƒVƒƒƒhƒEƒ`ƒFƒCƒT[II)#
-312842#öÝ‰ð•ú(C—…II)#
-312843#öÝ‰ð•ú(¯’éII)#
-312844#öÝ‰ð•ú(ƒ\ƒEƒ‹ƒŠ[ƒp[II)#
-312845#öÝ‰ð•ú(‰e˜T&žOI)#
-312846#öÝ‰ð•ú(ƒŠƒxƒŠƒIƒ“II)#
-312847#öÝ‰ð•ú(ƒTƒ‚ƒi[II)#
-300498#ƒRƒXƒ‚#
-200345#[21stAnniversary]•à—…Žµ¸˜BƒtƒH[ƒX‚Ì” #
-200346#[21stAnniversary]ƒhƒŒƒbƒV[ƒN[ƒ|ƒ“‚Ì” #
+400566#ã‚¢ã‚¦ã‚§ã‚¤ã‚­ãƒ³ã‚°ãƒ–ãƒ«ãƒ¼ãƒ #
+410284#å½ç¥žã®ã‚¤ãƒ“ãƒ«ã‚¢ã‚¤#
+410285#å½ç¥žã®ã‚¤ãƒ“ãƒ«ã‚¢ã‚¤#
+420270#ã‚³ã‚ºãƒŸãƒƒã‚¯ã‚³ãƒã‚¯ã‚·ãƒ§ãƒ³#
+450338#ã‚¹ã‚¯ãƒªãƒ¼ãƒŸãƒ³ã‚°ã‚´ãƒ¼ã‚¹ãƒˆãƒ‘ãƒ¼ãƒ†ã‚£#
+470243#ãƒˆã‚¥ãƒ¼ã‚µã‚¤ãƒ‰ãƒ€ã‚¤ãƒ¤ãƒ¢ãƒ³ãƒ‰ãƒ–ãƒ¼ãƒ„#
+400567#[è¡£è£…] ã‚¢ã‚¦ã‚§ã‚¤ã‚­ãƒ³ã‚°ãƒ–ãƒ«ãƒ¼ãƒ #
+410286#[è¡£è£…] å½ç¥žã®ã‚¤ãƒ“ãƒ«ã‚¢ã‚¤#
+420271#[è¡£è£…] ã‚³ã‚ºãƒŸãƒƒã‚¯ã‚³ãƒã‚¯ã‚·ãƒ§ãƒ³#
+420272#[è¡£è£…] å½ç¥žã®ã‚¤ãƒ“ãƒ«ã‚¢ã‚¤(è‚©ã«ã‹ã‘ã‚‹ç‰©)#
+410287#[è¡£è£…] ã‚³ã‚ºãƒŸãƒƒã‚¯ã‚³ãƒã‚¯ã‚·ãƒ§ãƒ³(è‚©ã«ã‹ã‘ã‚‹ç‰©)#
+310955#æ½œåœ¨è¦šé†’(ã‚¤ã‚°ãƒ‹ãƒƒã‚·ãƒ§ãƒ³ãƒ–ãƒ¬ã‚¤ã‚¯II)#
+310956#æ½œåœ¨è¦šé†’(ã‚½ãƒ‹ãƒƒã‚¯ã‚¦ã‚§ãƒ¼ãƒ–I)#
+310943#æ½œåœ¨è¦šé†’(ã‚¯ãƒªãƒ ã‚¾ãƒ³ãƒ­ãƒƒã‚¯I)#
+312807#æ½œåœ¨è¦šé†’(ã‚½ã‚¦ãƒ«ã‚¨ã‚¯ã‚¹ãƒ‘ãƒ³ã‚·ãƒ§ãƒ³I)#
+312808#æ½œåœ¨è¦šé†’(ã‚¢ãƒ¼ã‚¹ã‚¹ãƒˆãƒ¬ã‚¤ãƒ³I)#
+312809#æ½œåœ¨è¦šé†’(ã‚¸ãƒ£ãƒƒã‚¯ãƒ•ãƒ­ã‚¹ãƒˆII)#
+312810#æ½œåœ¨è¦šé†’(ãƒ˜ãƒ«ã‚¤ãƒ³ãƒ•ã‚§ãƒ«ãƒŽI)#
+310949#æ½œåœ¨è¦šé†’(ã‚¢ãƒ­ãƒ¼ã‚¹ãƒˆãƒ¼ãƒ II)#
+312811#æ½œåœ¨è¦šé†’(ã‚¨ã‚¤ãƒ ãƒ‰ãƒœãƒ«ãƒˆI)#
+310960#æ½œåœ¨è¦šé†’(ã‚¢ãƒƒã‚¯ã‚¹ãƒˆãƒ«ãƒãƒ¼ãƒ‰I)#
+312812#æ½œåœ¨è¦šé†’(ã‚¢ãƒƒã‚¯ã‚¹ãƒ–ãƒ¼ãƒ¡ãƒ©ãƒ³I)#
+312813#æ½œåœ¨è¦šé†’(ãƒ‘ãƒ¯ãƒ¼ã‚¹ã‚¤ãƒ³ã‚°I)#
+310963#æ½œåœ¨è¦šé†’(ãƒ­ãƒ¼ãƒªãƒ³ã‚°ã‚«ãƒƒã‚¿ãƒ¼I)#
+310964#æ½œåœ¨è¦šé†’(ã‚¯ãƒ­ã‚¹ãƒªãƒƒãƒ‘ãƒ¼ã‚¹ãƒ©ãƒƒã‚·ãƒ£ãƒ¼I)#
+310953#æ½œåœ¨è¦šé†’(ã‚¸ãƒ¥ãƒ‡ãƒƒã‚¯ã‚¹II)#
+312814#æ½œåœ¨è¦šé†’(ã‚¢ãƒ‰ãƒ©ãƒ ã‚¹I)#
+310940#æ½œåœ¨è¦šé†’(ã‚¤ãƒ³ã‚¹ãƒ”ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³I)#
+310941#æ½œåœ¨è¦šé†’(ã‚¢ãƒ¼ã‚¹ãƒ‰ãƒ©ã‚¤ãƒ–I)#
+312815#æ½œåœ¨è¦šé†’(ã‚­ãƒ£ãƒŽãƒ³ã‚¹ãƒ”ã‚¢I)#
+312816#æ½œåœ¨è¦šé†’(ãƒ¬ã‚¤ã‚ªãƒ–ã‚¸ã‚§ãƒã‚·ã‚¹I)#
+312817#æ½œåœ¨è¦šé†’(ã‚·ãƒ¼ãƒ«ãƒ‰ãƒ—ãƒ¬ã‚¹I)#
+312818#æ½œåœ¨è¦šé†’(ãƒãƒ‹ã‚·ãƒ³ã‚°ãƒã‚¤ãƒ³ãƒˆI)#
+310945#æ½œåœ¨è¦šé†’(ã‚µã‚¤ã‚­ãƒƒã‚¯ã‚¦ã‚§ãƒ¼ãƒ–I)#
+310946#æ½œåœ¨è¦šé†’(ã‚µã‚¤ã‚­ãƒƒã‚¯ã‚¦ã‚§ãƒ¼ãƒ–II)#
+310947#æ½œåœ¨è¦šé†’(ãƒ´ã‚§ãƒ©ãƒãƒ¥ãƒ¼ãƒ«ã‚¹ãƒ”ã‚¢ãƒ¼I)#
+312819#æ½œåœ¨è¦šé†’(ã‚¹ãƒšãƒ«ãƒ•ã‚£ã‚¹ãƒˆI)#
+310951#æ½œåœ¨è¦šé†’(ã‚·ãƒ“ã‚¢ãƒ¬ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ II)#
+312820#æ½œåœ¨è¦šé†’(ãƒ¡ã‚¿ãƒªãƒƒã‚¯ã‚µã‚¦ãƒ³ãƒ‰I)#
+310962#æ½œåœ¨è¦šé†’(ã‚«ãƒ¼ãƒˆã‚­ãƒ£ãƒŽãƒ³I)#
+312821#æ½œåœ¨è¦šé†’(ã‚«ãƒ¼ãƒˆãƒˆãƒ«ãƒãƒ¼ãƒ‰I)#
+312822#æ½œåœ¨è¦šé†’(ã‚¹ãƒã‚¢ã‚¨ã‚¯ã‚¹ãƒ—ãƒ­ãƒ¼ã‚¸ãƒ§ãƒ³I)#
+310965#æ½œåœ¨è¦šé†’(ãƒˆãƒ©ã‚¤ã‚¢ãƒ³ã‚°ãƒ«ã‚·ãƒ§ãƒƒãƒˆI)#
+310966#æ½œåœ¨è¦šé†’(ãƒ•ã‚§ã‚¤ã‚¿ãƒ«ãƒ¡ãƒŠã‚¹I)#
+310958#æ½œåœ¨è¦šé†’(ç…å­å¼II)#
+312823#æ½œåœ¨è¦šé†’(çˆ†æ°—æ•£å¼¾I)#
+312824#æ½œåœ¨è¦šé†’(é›·å…‰å¼¾I)#
+312825#æ½œåœ¨è¦šé†’(å¤©ç¾…åœ°ç¶²I)#
+310974#æ½œåœ¨è¦šé†’(å¤ªé™½çˆ†ç™ºI)#
+310975#æ½œåœ¨è¦šé†’(æº€æœˆè„šII)#
+312826#æ½œåœ¨è¦šé†’(æµæ˜Ÿè½ä¸‹I)#
+310977#æ½œåœ¨è¦šé†’(æ­»éœŠçˆ†ç™ºI)#
+312827#æ½œåœ¨è¦šé†’(ã‚¨ã‚¹ãƒ‘I)#
+310967#æ½œåœ¨è¦šé†’(é¢¨é­”æ‰‹è£å‰£ -ä¹±è¯-I)#
+310968#æ½œåœ¨è¦šé†’(åæ–‡å­—æ–¬ã‚ŠI)#
+310972#æ½œåœ¨è¦šé†’(ãƒ©ã‚¦ãƒ³ãƒ‰ãƒˆãƒªãƒƒãƒ—I)#
+312828#æ½œåœ¨è¦šé†’(ãƒ•ã‚¡ã‚¤ã‚¢ãƒ¼ãƒ¬ã‚¤ãƒ³I)#
+310980#æ½œåœ¨è¦šé†’(ãƒžã‚¿ã‚¿ãƒ“ãƒ©ãƒ³ã‚¹I)#
+310981#æ½œåœ¨è¦šé†’(ã‚¤ãƒŒãƒãƒƒã‚«ãƒ¡ãƒ†ã‚ªI)#
+312829#æ½œåœ¨è¦šé†’(ã‚­ãƒ£ãƒ­ãƒƒãƒˆãƒ“ãƒ¼ãƒˆI)#
+312830#æ½œåœ¨è¦šé†’(ã‚µãƒ™ãƒ¼ã‚¸ã®é­‚II)#
+312831#æ½œåœ¨è§£æ”¾(ãƒ«ãƒ¼ãƒ³ãƒŠã‚¤ãƒˆII)#
+312832#æ½œåœ¨è§£æ”¾(ã‚¦ã‚©ãƒ¼ãƒ­ãƒƒã‚¯II)#
+312833#æ½œåœ¨è§£æ”¾(ãƒ¬ãƒ³ã‚¸ãƒ£ãƒ¼II)#
+312834#æ½œåœ¨è§£æ”¾(ãƒ¡ã‚«ãƒ‹ãƒƒã‚¯II)#
+312835#æ½œåœ¨è§£æ”¾(ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹II)#
+312836#æ½œåœ¨è§£æ”¾(ã‚¢ãƒ¼ã‚¯ãƒ“ã‚·ãƒ§ãƒƒãƒ—II)#
+312837#æ½œåœ¨è§£æ”¾(ãƒ­ã‚¤ãƒ¤ãƒ«ã‚¬ãƒ¼ãƒ‰II)#
+312838#æ½œåœ¨è§£æ”¾(ã‚½ãƒ¼ã‚µãƒ©ãƒ¼II)#
+312839#æ½œåœ¨è§£æ”¾(ãƒŸãƒ³ã‚¹ãƒˆãƒ¬ãƒ«&ãƒ¯ãƒ³ãƒ€ãƒ©ãƒ¼I)#
+312840#æ½œåœ¨è§£æ”¾(ã‚¸ã‚§ãƒãƒ†ã‚£ãƒƒã‚¯II)#
+312841#æ½œåœ¨è§£æ”¾(ã‚·ãƒ£ãƒ‰ã‚¦ãƒã‚§ã‚¤ã‚µãƒ¼II)#
+312842#æ½œåœ¨è§£æ”¾(ä¿®ç¾…II)#
+312843#æ½œåœ¨è§£æ”¾(æ˜Ÿå¸II)#
+312844#æ½œåœ¨è§£æ”¾(ã‚½ã‚¦ãƒ«ãƒªãƒ¼ãƒ‘ãƒ¼II)#
+312845#æ½œåœ¨è§£æ”¾(å½±ç‹¼&æœ§I)#
+312846#æ½œåœ¨è§£æ”¾(ãƒªãƒ™ãƒªã‚ªãƒ³II)#
+312847#æ½œåœ¨è§£æ”¾(ã‚µãƒ¢ãƒŠãƒ¼II)#
+300498#ã‚³ã‚¹ãƒ¢#
+200345#[21stAnniversary]æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+200346#[21stAnniversary]ãƒ‰ãƒ¬ãƒƒã‚·ãƒ¼ã‚¯ãƒ¼ãƒãƒ³ã®ç®±#
 //--------------------------------------------
-200343#ƒRƒX‚½‚ÜHairCollectionIX(–¾F)#
-200344#ƒRƒX‚½‚ÜHairCollectionIX(ˆÃF)#
-420273#[ˆß‘•] ƒ[ƒYƒEƒF[ƒu(ƒuƒƒ“ƒh)#
-420274#[ˆß‘•] ƒ[ƒYƒEƒF[ƒu(ƒuƒƒ“ƒhƒsƒ“ƒN)#
-420275#[ˆß‘•] ƒ[ƒYƒEƒF[ƒu(ƒVƒ‹ƒo[)#
-420276#[ˆß‘•] ƒ[ƒYƒEƒF[ƒu(ƒVƒ‹ƒo[ƒuƒ‹[)#
-420277#[ˆß‘•] ƒMƒƒ`ƒ“ƒNƒƒXƒVƒ‡[ƒg(Â—Î)#
-420278#[ˆß‘•] ƒMƒƒ`ƒ“ƒNƒƒXƒVƒ‡[ƒg(‰©)#
-420279#[ˆß‘•] ƒMƒƒ`ƒ“ƒNƒƒXƒVƒ‡[ƒg(÷)#
-420280#[ˆß‘•] ƒMƒƒ`ƒ“ƒNƒƒXƒVƒ‡[ƒg(…F)#
-420281#[ˆß‘•] ƒMƒƒ`ƒ“ƒNƒƒXƒVƒ‡[ƒg(”–Ž‡)#
-420282#[ˆß‘•] ƒMƒƒ`ƒ“ƒNƒƒXƒVƒ‡[ƒg(Ž½•)#
-420283#[ˆß‘•] ƒMƒƒ`ƒ“ƒNƒƒXƒVƒ‡[ƒg(”’)#
-420284#[ˆß‘•] ƒMƒƒ`ƒ“ƒNƒƒXƒVƒ‡[ƒg(g)#
-420285#[ˆß‘•] ƒƒJƒjƒbƒNŠOƒnƒlƒ{ƒu(Â—Î)#
-420286#[ˆß‘•] ƒƒJƒjƒbƒNŠOƒnƒlƒ{ƒu(‰©)#
-420287#[ˆß‘•] ƒƒJƒjƒbƒNŠOƒnƒlƒ{ƒu(÷)#
-420288#[ˆß‘•] ƒƒJƒjƒbƒNŠOƒnƒlƒ{ƒu(…F)#
-420289#[ˆß‘•] ƒƒJƒjƒbƒNŠOƒnƒlƒ{ƒu(”–Ž‡)#
-420290#[ˆß‘•] ƒƒJƒjƒbƒNŠOƒnƒlƒ{ƒu(Ž½•)#
-420291#[ˆß‘•] ƒƒJƒjƒbƒNŠOƒnƒlƒ{ƒu(”’)#
-420292#[ˆß‘•] ƒƒJƒjƒbƒNŠOƒnƒlƒ{ƒu(g)#
-420293#[ˆß‘•] ƒŒƒ“ƒWƒƒ[ƒn[ƒtƒAƒbƒv(Â—Î)#
-420294#[ˆß‘•] ƒŒƒ“ƒWƒƒ[ƒn[ƒtƒAƒbƒv(‰©)#
-420295#[ˆß‘•] ƒŒƒ“ƒWƒƒ[ƒn[ƒtƒAƒbƒv(÷)#
-420296#[ˆß‘•] ƒŒƒ“ƒWƒƒ[ƒn[ƒtƒAƒbƒv(…F)#
-420297#[ˆß‘•] ƒŒƒ“ƒWƒƒ[ƒn[ƒtƒAƒbƒv(”–Ž‡)#
-420298#[ˆß‘•] ƒŒƒ“ƒWƒƒ[ƒn[ƒtƒAƒbƒv(Ž½•)#
-420299#[ˆß‘•] ƒŒƒ“ƒWƒƒ[ƒn[ƒtƒAƒbƒv(”’)#
-420300#[ˆß‘•] ƒŒƒ“ƒWƒƒ[ƒn[ƒtƒAƒbƒv(g)#
-650025#ƒOƒŒƒCƒVƒA•—–‚Žè— Œ•#
-300499#öÝ‰ð•ú(“V’éI)#
-312922#öÝ‰ð•ú(ƒnƒCƒp[ƒm[ƒrƒXI)#
-312923#öÝ‰ð•ú(ƒ\ƒEƒ‹ƒAƒZƒeƒBƒbƒNI)#
-312924#öÝ‰ð•ú(ƒiƒCƒgƒEƒHƒbƒ`I)#
-312925#öÝ‰ð•ú(å‡‹C˜O&•s’m‰ÎI)#
-312926#öÝ‰ð•ú(ƒXƒsƒŠƒbƒgƒnƒ“ƒhƒ‰[I)#
-311209#•X‰Ø‚Ì–‚—Í(¯’éI)#
-311210#•X‰Ø‚Ì–‚—Í(ƒ\ƒEƒ‹ƒŠ[ƒp[I)#
-311211#•X‰Ø‚Ì–‚—Í(ƒŠƒxƒŠƒIƒ“I)#
-311212#•X‰Ø‚Ì–‚—Í(‰e˜T&žOI)#
-311213#•X‰Ø‚Ì–‚—Í(ƒTƒ‚ƒi[I)#
-311214#•X‰Ø‚Ì–‚—Í(ƒTƒ‚ƒi[II)#
-1000480#ƒtƒBƒfƒXEƒƒCƒX‚Ì}–Ê#
-1000485#ƒtƒBƒfƒXEƒ_ƒK[‚Ì}–Ê#
-1000689#ƒtƒBƒfƒXEƒ‰ƒCƒtƒ‹‚Ì}–Ê#
-1000693#ƒtƒBƒfƒXEƒXƒ^[ƒ_ƒXƒgƒuƒbƒN‚Ì}–Ê#
-1000694#ƒtƒBƒfƒXEƒ\ƒEƒ‹ƒXƒeƒBƒbƒN‚Ì}–Ê#
-1000697#ƒtƒBƒfƒXEƒtƒHƒbƒNƒXƒeƒCƒ‹‚Ì}–Ê#
-810002#ƒAƒhƒDƒ‹ƒeƒ‹EƒtƒBƒfƒXEƒ‰ƒCƒtƒ‹#
-810008#ƒEƒBƒ[ƒgƒDƒXEƒtƒBƒfƒXEƒ‰ƒCƒtƒ‹#
-800014#ƒOƒŒƒCƒVƒAƒnƒ“ƒhƒKƒ“#
-590021#ƒAƒhƒDƒ‹ƒeƒ‹EƒtƒBƒfƒXEƒƒCƒX#
-590023#ƒEƒBƒ[ƒgƒDƒXEƒtƒBƒfƒXEƒƒCƒX#
-540023#ƒAƒhƒDƒ‹ƒeƒ‹EƒtƒBƒfƒXEƒXƒ^[ƒ_ƒXƒgƒuƒbƒN#
-540045#ƒEƒBƒ[ƒgƒDƒXEƒtƒBƒfƒXEƒXƒ^[ƒ_ƒXƒgƒuƒbƒN#
-550025#ƒAƒhƒDƒ‹ƒeƒ‹EƒtƒBƒfƒXEƒ\ƒEƒ‹ƒXƒeƒBƒbƒN#
-550064#ƒEƒBƒ[ƒgƒDƒXEƒtƒBƒfƒXEƒ\ƒEƒ‹ƒXƒeƒBƒbƒN#
-510032#ƒAƒhƒDƒ‹ƒeƒ‹EƒtƒBƒfƒXEƒ_ƒK[#
-510033#ƒEƒBƒ[ƒgƒDƒXEƒtƒBƒfƒXEƒ_ƒK[#
-550028#ƒAƒhƒDƒ‹ƒeƒ‹EƒtƒBƒfƒXEƒtƒHƒbƒNƒXƒeƒCƒ‹#
-550066#ƒEƒBƒ[ƒgƒDƒXEƒtƒBƒfƒXEƒtƒHƒbƒNƒXƒeƒCƒ‹#
-500050#ƒOƒŒƒCƒVƒAƒx[ƒVƒbƒNƒ\[ƒh#
-550070#ƒOƒŒƒCƒVƒAƒtƒHƒbƒNƒXƒeƒCƒ‹#
+200343#ã‚³ã‚¹ãŸã¾HairCollectionIX(æ˜Žè‰²)#
+200344#ã‚³ã‚¹ãŸã¾HairCollectionIX(æš—è‰²)#
+420273#[è¡£è£…] ãƒ­ãƒ¼ã‚ºã‚¦ã‚§ãƒ¼ãƒ–(ãƒ–ãƒ­ãƒ³ãƒ‰)#
+420274#[è¡£è£…] ãƒ­ãƒ¼ã‚ºã‚¦ã‚§ãƒ¼ãƒ–(ãƒ–ãƒ­ãƒ³ãƒ‰ãƒ”ãƒ³ã‚¯)#
+420275#[è¡£è£…] ãƒ­ãƒ¼ã‚ºã‚¦ã‚§ãƒ¼ãƒ–(ã‚·ãƒ«ãƒãƒ¼)#
+420276#[è¡£è£…] ãƒ­ãƒ¼ã‚ºã‚¦ã‚§ãƒ¼ãƒ–(ã‚·ãƒ«ãƒãƒ¼ãƒ–ãƒ«ãƒ¼)#
+420277#[è¡£è£…] ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹ã‚·ãƒ§ãƒ¼ãƒˆ(é’ç·‘)#
+420278#[è¡£è£…] ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹ã‚·ãƒ§ãƒ¼ãƒˆ(é»„)#
+420279#[è¡£è£…] ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹ã‚·ãƒ§ãƒ¼ãƒˆ(æ¡œ)#
+420280#[è¡£è£…] ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹ã‚·ãƒ§ãƒ¼ãƒˆ(æ°´è‰²)#
+420281#[è¡£è£…] ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹ã‚·ãƒ§ãƒ¼ãƒˆ(è–„ç´«)#
+420282#[è¡£è£…] ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹ã‚·ãƒ§ãƒ¼ãƒˆ(æ¼†é»’)#
+420283#[è¡£è£…] ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹ã‚·ãƒ§ãƒ¼ãƒˆ(ç™½)#
+420284#[è¡£è£…] ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹ã‚·ãƒ§ãƒ¼ãƒˆ(ç´…)#
+420285#[è¡£è£…] ãƒ¡ã‚«ãƒ‹ãƒƒã‚¯å¤–ãƒãƒãƒœãƒ–(é’ç·‘)#
+420286#[è¡£è£…] ãƒ¡ã‚«ãƒ‹ãƒƒã‚¯å¤–ãƒãƒãƒœãƒ–(é»„)#
+420287#[è¡£è£…] ãƒ¡ã‚«ãƒ‹ãƒƒã‚¯å¤–ãƒãƒãƒœãƒ–(æ¡œ)#
+420288#[è¡£è£…] ãƒ¡ã‚«ãƒ‹ãƒƒã‚¯å¤–ãƒãƒãƒœãƒ–(æ°´è‰²)#
+420289#[è¡£è£…] ãƒ¡ã‚«ãƒ‹ãƒƒã‚¯å¤–ãƒãƒãƒœãƒ–(è–„ç´«)#
+420290#[è¡£è£…] ãƒ¡ã‚«ãƒ‹ãƒƒã‚¯å¤–ãƒãƒãƒœãƒ–(æ¼†é»’)#
+420291#[è¡£è£…] ãƒ¡ã‚«ãƒ‹ãƒƒã‚¯å¤–ãƒãƒãƒœãƒ–(ç™½)#
+420292#[è¡£è£…] ãƒ¡ã‚«ãƒ‹ãƒƒã‚¯å¤–ãƒãƒãƒœãƒ–(ç´…)#
+420293#[è¡£è£…] ãƒ¬ãƒ³ã‚¸ãƒ£ãƒ¼ãƒãƒ¼ãƒ•ã‚¢ãƒƒãƒ—(é’ç·‘)#
+420294#[è¡£è£…] ãƒ¬ãƒ³ã‚¸ãƒ£ãƒ¼ãƒãƒ¼ãƒ•ã‚¢ãƒƒãƒ—(é»„)#
+420295#[è¡£è£…] ãƒ¬ãƒ³ã‚¸ãƒ£ãƒ¼ãƒãƒ¼ãƒ•ã‚¢ãƒƒãƒ—(æ¡œ)#
+420296#[è¡£è£…] ãƒ¬ãƒ³ã‚¸ãƒ£ãƒ¼ãƒãƒ¼ãƒ•ã‚¢ãƒƒãƒ—(æ°´è‰²)#
+420297#[è¡£è£…] ãƒ¬ãƒ³ã‚¸ãƒ£ãƒ¼ãƒãƒ¼ãƒ•ã‚¢ãƒƒãƒ—(è–„ç´«)#
+420298#[è¡£è£…] ãƒ¬ãƒ³ã‚¸ãƒ£ãƒ¼ãƒãƒ¼ãƒ•ã‚¢ãƒƒãƒ—(æ¼†é»’)#
+420299#[è¡£è£…] ãƒ¬ãƒ³ã‚¸ãƒ£ãƒ¼ãƒãƒ¼ãƒ•ã‚¢ãƒƒãƒ—(ç™½)#
+420300#[è¡£è£…] ãƒ¬ãƒ³ã‚¸ãƒ£ãƒ¼ãƒãƒ¼ãƒ•ã‚¢ãƒƒãƒ—(ç´…)#
+650025#ã‚°ãƒ¬ã‚¤ã‚·ã‚¢é¢¨é­”æ‰‹è£å‰£#
+300499#æ½œåœ¨è§£æ”¾(å¤©å¸I)#
+312922#æ½œåœ¨è§£æ”¾(ãƒã‚¤ãƒ‘ãƒ¼ãƒŽãƒ¼ãƒ“ã‚¹I)#
+312923#æ½œåœ¨è§£æ”¾(ã‚½ã‚¦ãƒ«ã‚¢ã‚»ãƒ†ã‚£ãƒƒã‚¯I)#
+312924#æ½œåœ¨è§£æ”¾(ãƒŠã‚¤ãƒˆã‚¦ã‚©ãƒƒãƒI)#
+312925#æ½œåœ¨è§£æ”¾(èœƒæ°—æ¥¼&ä¸çŸ¥ç«I)#
+312926#æ½œåœ¨è§£æ”¾(ã‚¹ãƒ”ãƒªãƒƒãƒˆãƒãƒ³ãƒ‰ãƒ©ãƒ¼I)#
+311209#æ°·è¯ã®é­”åŠ›(æ˜Ÿå¸I)#
+311210#æ°·è¯ã®é­”åŠ›(ã‚½ã‚¦ãƒ«ãƒªãƒ¼ãƒ‘ãƒ¼I)#
+311211#æ°·è¯ã®é­”åŠ›(ãƒªãƒ™ãƒªã‚ªãƒ³I)#
+311212#æ°·è¯ã®é­”åŠ›(å½±ç‹¼&æœ§I)#
+311213#æ°·è¯ã®é­”åŠ›(ã‚µãƒ¢ãƒŠãƒ¼I)#
+311214#æ°·è¯ã®é­”åŠ›(ã‚µãƒ¢ãƒŠãƒ¼II)#
+1000480#ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ¡ã‚¤ã‚¹ã®å›³é¢#
+1000485#ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ€ã‚¬ãƒ¼ã®å›³é¢#
+1000689#ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ©ã‚¤ãƒ•ãƒ«ã®å›³é¢#
+1000693#ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ã‚¹ã‚¿ãƒ¼ãƒ€ã‚¹ãƒˆãƒ–ãƒƒã‚¯ã®å›³é¢#
+1000694#ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ã‚½ã‚¦ãƒ«ã‚¹ãƒ†ã‚£ãƒƒã‚¯ã®å›³é¢#
+1000697#ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ•ã‚©ãƒƒã‚¯ã‚¹ãƒ†ã‚¤ãƒ«ã®å›³é¢#
+810002#ã‚¢ãƒ‰ã‚¥ãƒ«ãƒ†ãƒ«ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ©ã‚¤ãƒ•ãƒ«#
+810008#ã‚¦ã‚£ãƒ¯ãƒ¼ãƒˆã‚¥ã‚¹ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ©ã‚¤ãƒ•ãƒ«#
+800014#ã‚°ãƒ¬ã‚¤ã‚·ã‚¢ãƒãƒ³ãƒ‰ã‚¬ãƒ³#
+590021#ã‚¢ãƒ‰ã‚¥ãƒ«ãƒ†ãƒ«ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ¡ã‚¤ã‚¹#
+590023#ã‚¦ã‚£ãƒ¯ãƒ¼ãƒˆã‚¥ã‚¹ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ¡ã‚¤ã‚¹#
+540023#ã‚¢ãƒ‰ã‚¥ãƒ«ãƒ†ãƒ«ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ã‚¹ã‚¿ãƒ¼ãƒ€ã‚¹ãƒˆãƒ–ãƒƒã‚¯#
+540045#ã‚¦ã‚£ãƒ¯ãƒ¼ãƒˆã‚¥ã‚¹ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ã‚¹ã‚¿ãƒ¼ãƒ€ã‚¹ãƒˆãƒ–ãƒƒã‚¯#
+550025#ã‚¢ãƒ‰ã‚¥ãƒ«ãƒ†ãƒ«ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ã‚½ã‚¦ãƒ«ã‚¹ãƒ†ã‚£ãƒƒã‚¯#
+550064#ã‚¦ã‚£ãƒ¯ãƒ¼ãƒˆã‚¥ã‚¹ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ã‚½ã‚¦ãƒ«ã‚¹ãƒ†ã‚£ãƒƒã‚¯#
+510032#ã‚¢ãƒ‰ã‚¥ãƒ«ãƒ†ãƒ«ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ€ã‚¬ãƒ¼#
+510033#ã‚¦ã‚£ãƒ¯ãƒ¼ãƒˆã‚¥ã‚¹ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ€ã‚¬ãƒ¼#
+550028#ã‚¢ãƒ‰ã‚¥ãƒ«ãƒ†ãƒ«ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ•ã‚©ãƒƒã‚¯ã‚¹ãƒ†ã‚¤ãƒ«#
+550066#ã‚¦ã‚£ãƒ¯ãƒ¼ãƒˆã‚¥ã‚¹ãƒ»ãƒ•ã‚£ãƒ‡ã‚¹ãƒ»ãƒ•ã‚©ãƒƒã‚¯ã‚¹ãƒ†ã‚¤ãƒ«#
+500050#ã‚°ãƒ¬ã‚¤ã‚·ã‚¢ãƒ™ãƒ¼ã‚·ãƒƒã‚¯ã‚½ãƒ¼ãƒ‰#
+550070#ã‚°ãƒ¬ã‚¤ã‚·ã‚¢ãƒ•ã‚©ãƒƒã‚¯ã‚¹ãƒ†ã‚¤ãƒ«#
 
 2023-11-27	patch0072
-ƒAƒrƒX‘•”õ‚Ì®—
+ã‚¢ãƒ“ã‚¹è£…å‚™ã®æ•´ç†
 
-26138 26139 C³
+26138 26139 ä¿®æ­£
 
-ƒuƒ‹[ƒg‘•”õŽÀ‘•€”õ
-1328#ƒuƒ‹[ƒgƒNƒŠ[ƒ”ƒ@[#
-13147#ƒuƒ‹[ƒgƒnƒ“ƒhƒKƒ“#
-13342#ƒuƒ‹[ƒg•—–‚Žè— Œ•#
-16082#ƒuƒ‹[ƒgƒ‚[ƒjƒ“ƒOƒXƒ^[#
-18171#ƒuƒ‹[ƒgƒnƒ“ƒ^[ƒ{ƒE#
-26141#ƒuƒ‹[ƒgƒA[ƒNƒƒ“ƒh#
-26206#ƒuƒ‹[ƒgƒ‰ƒŠƒGƒbƒg#
-27256#ƒuƒ‹[ƒgEƒnƒ[ƒJ[ƒh#
-28033#ƒuƒ‹[ƒgƒJƒ^[ƒ‹#
-28245#ƒuƒ‹[ƒgƒ‰ƒCƒtƒ‹#
-28246#ƒuƒ‹[ƒgƒKƒgƒŠƒ“ƒOƒKƒ“#
-28247#ƒuƒ‹[ƒgƒVƒ‡ƒbƒgƒKƒ“#
-28248#ƒuƒ‹[ƒgƒOƒŒƒl[ƒhƒKƒ“#
-28746#ƒuƒ‹[ƒgƒ_ƒ}ƒXƒJƒX#
-32014#ƒuƒ‹[ƒgƒXƒsƒA#
-32100#ƒuƒ‹[ƒgƒMƒ^[#
+ãƒ–ãƒ«ãƒ¼ãƒˆè£…å‚™å®Ÿè£…æº–å‚™
+1328#ãƒ–ãƒ«ãƒ¼ãƒˆã‚¯ãƒªãƒ¼ãƒ´ã‚¡ãƒ¼#
+13147#ãƒ–ãƒ«ãƒ¼ãƒˆãƒãƒ³ãƒ‰ã‚¬ãƒ³#
+13342#ãƒ–ãƒ«ãƒ¼ãƒˆé¢¨é­”æ‰‹è£å‰£#
+16082#ãƒ–ãƒ«ãƒ¼ãƒˆãƒ¢ãƒ¼ãƒ‹ãƒ³ã‚°ã‚¹ã‚¿ãƒ¼#
+18171#ãƒ–ãƒ«ãƒ¼ãƒˆãƒãƒ³ã‚¿ãƒ¼ãƒœã‚¦#
+26141#ãƒ–ãƒ«ãƒ¼ãƒˆã‚¢ãƒ¼ã‚¯ãƒ¯ãƒ³ãƒ‰#
+26206#ãƒ–ãƒ«ãƒ¼ãƒˆãƒ©ãƒªã‚¨ãƒƒãƒˆ#
+27256#ãƒ–ãƒ«ãƒ¼ãƒˆãƒ»ãƒã‚¼ã‚«ãƒ¼ãƒ‰#
+28033#ãƒ–ãƒ«ãƒ¼ãƒˆã‚«ã‚¿ãƒ¼ãƒ«#
+28245#ãƒ–ãƒ«ãƒ¼ãƒˆãƒ©ã‚¤ãƒ•ãƒ«#
+28246#ãƒ–ãƒ«ãƒ¼ãƒˆã‚¬ãƒˆãƒªãƒ³ã‚°ã‚¬ãƒ³#
+28247#ãƒ–ãƒ«ãƒ¼ãƒˆã‚·ãƒ§ãƒƒãƒˆã‚¬ãƒ³#
+28248#ãƒ–ãƒ«ãƒ¼ãƒˆã‚°ãƒ¬ãƒãƒ¼ãƒ‰ã‚¬ãƒ³#
+28746#ãƒ–ãƒ«ãƒ¼ãƒˆãƒ€ãƒžã‚¹ã‚«ã‚¹#
+32014#ãƒ–ãƒ«ãƒ¼ãƒˆã‚¹ãƒ”ã‚¢#
+32100#ãƒ–ãƒ«ãƒ¼ãƒˆã‚®ã‚¿ãƒ¼#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-11-20	patch0071
-2353 ƒZƒbƒgŒø‰Ê’Ç‰Á
+2353 ã‚»ãƒƒãƒˆåŠ¹æžœè¿½åŠ 
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-1331#ƒAƒrƒXƒAƒbƒNƒX#
-1861#ƒAƒrƒXƒNƒ[#
-2053#ƒAƒrƒXƒXƒ^ƒbƒt#
-13343#ƒAƒrƒX•—–‚Žè— Œ•#
-13492#ƒAƒrƒXƒuƒŒƒCƒh#
-16087#ƒAƒrƒXƒƒCƒX#
-18177#ƒAƒrƒXƒEƒBƒ“ƒO#
-21046#ƒAƒrƒXƒNƒŒƒCƒ‚ƒA#
-26021#ƒAƒrƒXƒ‰ƒ“ƒX#
-26149#ƒAƒrƒXƒƒ“ƒh#
-26150#ƒAƒrƒXƒtƒHƒbƒNƒXƒeƒCƒ‹#
-28037#ƒAƒrƒXƒJƒ^[ƒ‹#
-28135#ƒAƒrƒXƒc[ƒnƒ“ƒhƒAƒbƒNƒX#
-28249#ƒAƒrƒXƒ‰ƒCƒtƒ‹#
-28250#ƒAƒrƒXƒKƒgƒŠƒ“ƒOƒKƒ“#
-28251#ƒAƒrƒXƒVƒ‡ƒbƒgƒKƒ“#
-28252#ƒAƒrƒXƒOƒŒƒl[ƒhƒKƒ“#
-28627#ƒAƒrƒXƒuƒbƒN#
-28753#ƒAƒrƒXƒ_ƒK[#
-32017#ƒAƒrƒXƒXƒsƒA#
-32105#ƒAƒrƒXƒoƒCƒIƒŠƒ“#
-32106#ƒAƒrƒXƒuƒŒƒCƒhƒEƒBƒbƒv#
-32300#ƒAƒrƒXƒnƒ“ƒhƒKƒ“#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+1331#ã‚¢ãƒ“ã‚¹ã‚¢ãƒƒã‚¯ã‚¹#
+1861#ã‚¢ãƒ“ã‚¹ã‚¯ãƒ­ãƒ¼#
+2053#ã‚¢ãƒ“ã‚¹ã‚¹ã‚¿ãƒƒãƒ•#
+13343#ã‚¢ãƒ“ã‚¹é¢¨é­”æ‰‹è£å‰£#
+13492#ã‚¢ãƒ“ã‚¹ãƒ–ãƒ¬ã‚¤ãƒ‰#
+16087#ã‚¢ãƒ“ã‚¹ãƒ¡ã‚¤ã‚¹#
+18177#ã‚¢ãƒ“ã‚¹ã‚¦ã‚£ãƒ³ã‚°#
+21046#ã‚¢ãƒ“ã‚¹ã‚¯ãƒ¬ã‚¤ãƒ¢ã‚¢#
+26021#ã‚¢ãƒ“ã‚¹ãƒ©ãƒ³ã‚¹#
+26149#ã‚¢ãƒ“ã‚¹ãƒ¯ãƒ³ãƒ‰#
+26150#ã‚¢ãƒ“ã‚¹ãƒ•ã‚©ãƒƒã‚¯ã‚¹ãƒ†ã‚¤ãƒ«#
+28037#ã‚¢ãƒ“ã‚¹ã‚«ã‚¿ãƒ¼ãƒ«#
+28135#ã‚¢ãƒ“ã‚¹ãƒ„ãƒ¼ãƒãƒ³ãƒ‰ã‚¢ãƒƒã‚¯ã‚¹#
+28249#ã‚¢ãƒ“ã‚¹ãƒ©ã‚¤ãƒ•ãƒ«#
+28250#ã‚¢ãƒ“ã‚¹ã‚¬ãƒˆãƒªãƒ³ã‚°ã‚¬ãƒ³#
+28251#ã‚¢ãƒ“ã‚¹ã‚·ãƒ§ãƒƒãƒˆã‚¬ãƒ³#
+28252#ã‚¢ãƒ“ã‚¹ã‚°ãƒ¬ãƒãƒ¼ãƒ‰ã‚¬ãƒ³#
+28627#ã‚¢ãƒ“ã‚¹ãƒ–ãƒƒã‚¯#
+28753#ã‚¢ãƒ“ã‚¹ãƒ€ã‚¬ãƒ¼#
+32017#ã‚¢ãƒ“ã‚¹ã‚¹ãƒ”ã‚¢#
+32105#ã‚¢ãƒ“ã‚¹ãƒã‚¤ã‚ªãƒªãƒ³#
+32106#ã‚¢ãƒ“ã‚¹ãƒ–ãƒ¬ã‚¤ãƒ‰ã‚¦ã‚£ãƒƒãƒ—#
+32300#ã‚¢ãƒ“ã‚¹ãƒãƒ³ãƒ‰ã‚¬ãƒ³#
 
 2023-11-19	patch0070
-600#ƒ^ƒƒbƒgƒfƒbƒL#
-647#ƒyƒRƒyƒR‚ÌŽèj#
-10506#EDDA¶‘ÌHŠwŒ¤‹†Šƒ`ƒPƒbƒg‚Ì” #
-10507#[2019summer] •à—…Žµ¸˜BƒtƒH[ƒX‚Ì” #
-10508#[2019summer] ƒhƒŒƒbƒV[ƒN[ƒ|ƒ“‚Ì” #
-10527#ƒEƒH[ƒƒbƒNVIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒ}ƒWƒVƒƒƒ“(ƒEƒBƒU[ƒh)Œnê—p]#
-10528#ƒEƒH[ƒƒbƒNƒ\ƒEƒ‹‚Ì”  [“]¶ƒ}ƒWƒVƒƒƒ“(ƒEƒBƒU[ƒh)Œnê—p]#
-14901#ƒ‰ƒNƒ_‚ÌŒÄ‚Ñ“J#
-20974#ƒsƒIƒj[ƒ}ƒ~[‚Ìƒt[ƒh#
-20977#ƒXƒm[ƒtƒŠƒbƒv‚Ìƒt[ƒh#
-20978#¢ŠEŽ÷‚Ì‚Ù‚±‚è‚Ìƒt[ƒh#
-20979#‚Ò‚µ‚á‚èƒn[ƒu‚Ìƒt[ƒh#
-22235#‹â‚Ì–Ñ”ç‚ÌƒVƒ…[ƒY#
-25581#[ƒCƒxƒ“ƒg] ƒEƒVƒpƒ[ƒ`ƒPƒbƒg#
-26167#•ó•r‹{‚ÌƒXƒ^ƒbƒt#
-32268#ƒJƒ‹ƒjƒEƒ€ƒŠƒ“ƒO#
-32269#ƒJƒ‹ƒjƒEƒ€ƒCƒ„ƒŠƒ“ƒO#
+600#ã‚¿ãƒ­ãƒƒãƒˆãƒ‡ãƒƒã‚­#
+647#ãƒšã‚³ãƒšã‚³ã®æ‰‹ç¶±#
+10506#EDDAç”Ÿä½“å·¥å­¦ç ”ç©¶æ‰€ãƒã‚±ãƒƒãƒˆã®ç®±#
+10507#[2019summer] æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+10508#[2019summer] ãƒ‰ãƒ¬ãƒƒã‚·ãƒ¼ã‚¯ãƒ¼ãƒãƒ³ã®ç®±#
+10527#ã‚¦ã‚©ãƒ¼ãƒ­ãƒƒã‚¯VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿãƒžã‚¸ã‚·ãƒ£ãƒ³(ã‚¦ã‚£ã‚¶ãƒ¼ãƒ‰)ç³»å°‚ç”¨]#
+10528#ã‚¦ã‚©ãƒ¼ãƒ­ãƒƒã‚¯ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿãƒžã‚¸ã‚·ãƒ£ãƒ³(ã‚¦ã‚£ã‚¶ãƒ¼ãƒ‰)ç³»å°‚ç”¨]#
+14901#ãƒ©ã‚¯ãƒ€ã®å‘¼ã³ç¬›#
+20974#ãƒ”ã‚ªãƒ‹ãƒ¼ãƒžãƒŸãƒ¼ã®ãƒ•ãƒ¼ãƒ‰#
+20977#ã‚¹ãƒŽãƒ¼ãƒ•ãƒªãƒƒãƒ—ã®ãƒ•ãƒ¼ãƒ‰#
+20978#ä¸–ç•Œæ¨¹ã®ã»ã“ã‚Šã®ãƒ•ãƒ¼ãƒ‰#
+20979#ã´ã—ã‚ƒã‚Šãƒãƒ¼ãƒ–ã®ãƒ•ãƒ¼ãƒ‰#
+22235#éŠ€ã®æ¯›çš®ã®ã‚·ãƒ¥ãƒ¼ã‚º#
+25581#[ã‚¤ãƒ™ãƒ³ãƒˆ] ã‚¦ã‚·ãƒ‘ãƒ¯ãƒ¼ãƒã‚±ãƒƒãƒˆ#
+26167#å®ç“¶å®®ã®ã‚¹ã‚¿ãƒƒãƒ•#
+32268#ã‚«ãƒ«ãƒ‹ã‚¦ãƒ ãƒªãƒ³ã‚°#
+32269#ã‚«ãƒ«ãƒ‹ã‚¦ãƒ ã‚¤ãƒ¤ãƒªãƒ³ã‚°#
 
-100000”Ô‘ä 200000”Ô‘ä
-–¢ŽÀ‘•‚Ì‚à‚Ì‚ðŽÀ‘•
-‰ñ•œƒAƒCƒeƒ€‚ÌƒAƒCƒeƒ€Ží‚ð‰ñ•œ 0 ‚ÉC³
-100112#ƒXƒLƒA‚ÌŽèŽ†#
-100113#ƒTƒ‰‚ÌŽèŽ†#
-100142#j•Ÿ‚ÌƒGƒbƒZƒ“ƒX#
-100158#‰ü—ÇŒ^ƒMƒA—U“±ƒr[ƒRƒ“#
-100164#‘åß•Ší‰ü‘¢‘•’u(Type1)#
-100165#‘åß•Ší‰ü‘¢‘•’u(Type2)#
-100166#‘åß•Ší‰ü‘¢‘•’u(Type3)#
-100167#‘åß•Ší‰ü‘¢‘•’u(Type4)#
-100168#‘åß•Ší‰ü‘¢‘•’u(Type5)#
-100169#‘åß•Ší‰ü‘¢‘•’u(Type6)#
-100281#ƒwƒ‹ƒ€ƒXƒNƒ[ƒ‹I#
-100282#ƒEƒFƒ|ƒ“ƒXƒNƒ[ƒ‹I#
-100283#ƒƒCƒ‹ƒXƒNƒ[ƒ‹I#
-100284#ƒVƒ…[ƒYƒXƒNƒ[ƒ‹I#
-100285#ƒAƒNƒZƒTƒŠ[ƒXƒNƒ[ƒ‹I#
-100532#Š•‰ü‘¢‘•’u(Type1)#
-100533#Š•‰ü‘¢‘•’u(Type2)#
-100525#ƒRƒ“ƒuƒ`ƒƒ#
-100558#ƒnƒƒEƒBƒ“ƒLƒƒƒ“ƒfƒB#
-100587#ƒpƒ[EƒQƒCƒ“#
-100642#ƒ`ƒ‡ƒRƒJƒbƒvƒP[ƒL#
-100685#”’Žð#
-100731#ƒLƒ“ƒ_[ƒvƒ“ƒVƒ…#
-100734#÷‚à‚¿#
-100754#ƒ|[”é‘ ‚Ì‚â‚Ý‚Â‚«â•iˆêŒûƒP[ƒL#
-100811#g”’é\“ª(ƒ|ƒŠƒ“‚Ì•‘)#
-100848#ƒEƒH[ƒ^[ƒƒƒ“ƒvƒŠƒ“#
-101169#20Žü”N‹L”O‰Ô‰Î#
-101426#‹³c‚ÌŽèŽ†#
-101427#ŒÃ‰¤ƒOƒ[ƒU‚ÌŽèŽ†#
-101428#ƒnƒ“ƒjƒƒ‚ÌŽèŽ†#
-101430#ƒ|ƒŠƒ“ƒO‚Ì–¼Žh#
-101522#Œ¶‘z‘p‘ƒJ[ƒh(ƒAƒOƒlƒX)#
-101523#Œ¶‘z‘p‘ƒJ[ƒh(ƒ”ƒFƒ‹ƒi[)#
-101524#Œ¶‘z‘p‘ƒJ[ƒh(ƒGƒŒƒi)#
-101525#Œ¶‘z‘p‘ƒJ[ƒh(ƒhƒuƒŠƒX)#
-101705#Œ¶‘z‘p‘ƒJ[ƒh(ƒZƒCƒŒƒ“)#
-101706#Œ¶‘z‘p‘ƒJ[ƒh(ƒOƒ‰ƒŠƒ“)#
-102274#‚æ‚à‚¬–Ý‚Ì–¼Žh#
-102276#’K‚Ì–¼Žh#
-102291#ƒhƒbƒtƒ‹ƒMƒƒƒ“ƒKÌÌÌÌÌÌÌÌ‚Ì–¼Žh#
+100000ç•ªå° 200000ç•ªå°
+æœªå®Ÿè£…ã®ã‚‚ã®ã‚’å®Ÿè£…
+å›žå¾©ã‚¢ã‚¤ãƒ†ãƒ ã®ã‚¢ã‚¤ãƒ†ãƒ ç¨®ã‚’å›žå¾© 0 ã«ä¿®æ­£
+100112#ã‚¹ã‚­ã‚¢ã®æ‰‹ç´™#
+100113#ã‚µãƒ©ã®æ‰‹ç´™#
+100142#ç¥ç¦ã®ã‚¨ãƒƒã‚»ãƒ³ã‚¹#
+100158#æ”¹è‰¯åž‹ã‚®ã‚¢èª˜å°Žãƒ“ãƒ¼ã‚³ãƒ³#
+100164#å¤§ç½ªæ­¦å™¨æ”¹é€ è£…ç½®(Type1)#
+100165#å¤§ç½ªæ­¦å™¨æ”¹é€ è£…ç½®(Type2)#
+100166#å¤§ç½ªæ­¦å™¨æ”¹é€ è£…ç½®(Type3)#
+100167#å¤§ç½ªæ­¦å™¨æ”¹é€ è£…ç½®(Type4)#
+100168#å¤§ç½ªæ­¦å™¨æ”¹é€ è£…ç½®(Type5)#
+100169#å¤§ç½ªæ­¦å™¨æ”¹é€ è£…ç½®(Type6)#
+100281#ãƒ˜ãƒ«ãƒ ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«I#
+100282#ã‚¦ã‚§ãƒãƒ³ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«I#
+100283#ãƒ¡ã‚¤ãƒ«ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«I#
+100284#ã‚·ãƒ¥ãƒ¼ã‚ºã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«I#
+100285#ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«I#
+100532#å…œæ”¹é€ è£…ç½®(Type1)#
+100533#å…œæ”¹é€ è£…ç½®(Type2)#
+100525#ã‚³ãƒ³ãƒ–ãƒãƒ£#
+100558#ãƒãƒ­ã‚¦ã‚£ãƒ³ã‚­ãƒ£ãƒ³ãƒ‡ã‚£#
+100587#ãƒ‘ãƒ¯ãƒ¼ãƒ»ã‚²ã‚¤ãƒ³#
+100642#ãƒãƒ§ã‚³ã‚«ãƒƒãƒ—ã‚±ãƒ¼ã‚­#
+100685#ç™½é…’#
+100731#ã‚­ãƒ³ãƒ€ãƒ¼ãƒ—ãƒ³ã‚·ãƒ¥#
+100734#æ¡œã‚‚ã¡#
+100754#ãƒãƒ¼ç§˜è”µã®ã‚„ã¿ã¤ãçµ¶å“ä¸€å£ã‚±ãƒ¼ã‚­#
+100811#ç´…ç™½é¥…é ­(ãƒãƒªãƒ³ã®èˆž)#
+100848#ã‚¦ã‚©ãƒ¼ã‚¿ãƒ¼ãƒ¡ãƒ­ãƒ³ãƒ—ãƒªãƒ³#
+101169#20å‘¨å¹´è¨˜å¿µèŠ±ç«#
+101426#æ•™çš‡ã®æ‰‹ç´™#
+101427#å¤çŽ‹ã‚°ãƒ­ãƒ¼ã‚¶ã®æ‰‹ç´™#
+101428#ãƒãƒ³ãƒ‹ãƒ£ã®æ‰‹ç´™#
+101430#ãƒãƒªãƒ³ã‚°ã®ååˆº#
+101522#å¹»æƒ³å¢æ›¸ã‚«ãƒ¼ãƒ‰(ã‚¢ã‚°ãƒã‚¹)#
+101523#å¹»æƒ³å¢æ›¸ã‚«ãƒ¼ãƒ‰(ãƒ´ã‚§ãƒ«ãƒŠãƒ¼)#
+101524#å¹»æƒ³å¢æ›¸ã‚«ãƒ¼ãƒ‰(ã‚¨ãƒ¬ãƒŠ)#
+101525#å¹»æƒ³å¢æ›¸ã‚«ãƒ¼ãƒ‰(ãƒ‰ãƒ–ãƒªã‚¹)#
+101705#å¹»æƒ³å¢æ›¸ã‚«ãƒ¼ãƒ‰(ã‚»ã‚¤ãƒ¬ãƒ³)#
+101706#å¹»æƒ³å¢æ›¸ã‚«ãƒ¼ãƒ‰(ã‚°ãƒ©ãƒªãƒ³)#
+102274#ã‚ˆã‚‚ãŽé¤…ã®ååˆº#
+102276#ç‹¸ã®ååˆº#
+102291#ãƒ‰ãƒƒãƒ•ãƒ«ã‚®ãƒ£ãƒ³ã‚¬ï¾Œï¾Œï¾Œï¾Œï¾Œï¾Œï¾Œï¾Œã®ååˆº#
 
-200007#ƒVƒƒƒhƒEƒ`ƒFƒCƒT[VIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒV[ƒt(ƒ[ƒO)Œnê—p]#
-200008#ƒVƒƒƒhƒEƒ`ƒFƒCƒT[ƒ\ƒEƒ‹‚Ì”  [“]¶ƒV[ƒt(ƒ[ƒO)Œnê—p]#
-200010#ƒA[ƒNƒrƒVƒ‡ƒbƒvVIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒAƒRƒ‰ƒCƒg(ƒvƒŠ[ƒXƒg)Œnê—p]#
-200011#ƒA[ƒNƒrƒVƒ‡ƒbƒvƒ\ƒEƒ‹‚Ì”  [“]¶ƒAƒRƒ‰ƒCƒg(ƒvƒŠ[ƒXƒg)Œnê—p]#
-200013#ƒCƒ‹ƒVƒIƒ“ƒVƒŠ[ƒY‘I‘ðŒðŠ·ƒ`ƒPƒbƒg‚Ì” #
-200014#ƒCƒ‹ƒVƒIƒ“ƒ`ƒPƒbƒg‚Ì” #
-200034#[2020”N]‚‹‰ƒIƒCƒ‹‚Ì” #
-200035#[2020summer] •à—…Žµ¸˜BƒtƒH[ƒX‚Ì” #
-200036#[2020summer] ƒhƒŒƒbƒV[ƒN[ƒ|ƒ“‚Ì” #
-200038#[2021”N]ƒnƒƒEƒBƒ“ƒ`ƒPƒbƒg‚Ì” #
-200039#[2020”N] ƒnƒƒEƒBƒ“ƒ`ƒPƒbƒg‚Ì” #
-200065#[2020] “Á•Êƒ`ƒPƒbƒg‚Ì” #
-200067#Žv”O‘Ì•ŠíƒAƒbƒvƒOƒŒ[ƒhƒ`ƒPƒbƒg‚Ì” #
-200295#‹F‚è‚Ì•ûŒüƒ`ƒPƒbƒg‚Ì” #
+200007#ã‚·ãƒ£ãƒ‰ã‚¦ãƒã‚§ã‚¤ã‚µãƒ¼VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿã‚·ãƒ¼ãƒ•(ãƒ­ãƒ¼ã‚°)ç³»å°‚ç”¨]#
+200008#ã‚·ãƒ£ãƒ‰ã‚¦ãƒã‚§ã‚¤ã‚µãƒ¼ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿã‚·ãƒ¼ãƒ•(ãƒ­ãƒ¼ã‚°)ç³»å°‚ç”¨]#
+200010#ã‚¢ãƒ¼ã‚¯ãƒ“ã‚·ãƒ§ãƒƒãƒ—VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿã‚¢ã‚³ãƒ©ã‚¤ãƒˆ(ãƒ—ãƒªãƒ¼ã‚¹ãƒˆ)ç³»å°‚ç”¨]#
+200011#ã‚¢ãƒ¼ã‚¯ãƒ“ã‚·ãƒ§ãƒƒãƒ—ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿã‚¢ã‚³ãƒ©ã‚¤ãƒˆ(ãƒ—ãƒªãƒ¼ã‚¹ãƒˆ)ç³»å°‚ç”¨]#
+200013#ã‚¤ãƒ«ã‚·ã‚ªãƒ³ã‚·ãƒªãƒ¼ã‚ºé¸æŠžäº¤æ›ãƒã‚±ãƒƒãƒˆã®ç®±#
+200014#ã‚¤ãƒ«ã‚·ã‚ªãƒ³ãƒã‚±ãƒƒãƒˆã®ç®±#
+200034#[2020å¹´]é«˜ç´šã‚ªã‚¤ãƒ«ã®ç®±#
+200035#[2020summer] æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+200036#[2020summer] ãƒ‰ãƒ¬ãƒƒã‚·ãƒ¼ã‚¯ãƒ¼ãƒãƒ³ã®ç®±#
+200038#[2021å¹´]ãƒãƒ­ã‚¦ã‚£ãƒ³ãƒã‚±ãƒƒãƒˆã®ç®±#
+200039#[2020å¹´] ãƒãƒ­ã‚¦ã‚£ãƒ³ãƒã‚±ãƒƒãƒˆã®ç®±#
+200065#[2020] ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆã®ç®±#
+200067#æ€å¿µä½“æ­¦å™¨ã‚¢ãƒƒãƒ—ã‚°ãƒ¬ãƒ¼ãƒ‰ãƒã‚±ãƒƒãƒˆã®ç®±#
+200295#ç¥ˆã‚Šã®æ–¹å‘ãƒã‚±ãƒƒãƒˆã®ç®±#
 
-¦100000”Ô‘ä 200000”Ô‘ä ‚Í‚±‚ê‚ÅŽÀ‘•Š®—¹
-¦ƒXƒNƒŠƒvƒg’Ç‰Á‚ª•K—v‚È‚à‚Ì‚Í–¢ŽÀ‘•
-¦openupgrade ŠÖ”‚Ì‘ÎÛ‘•”õ‚Ædb’Ç‹L‚ÍŒã“úŽÀ‘•
+â€»100000ç•ªå° 200000ç•ªå° ã¯ã“ã‚Œã§å®Ÿè£…å®Œäº†
+â€»ã‚¹ã‚¯ãƒªãƒ—ãƒˆè¿½åŠ ãŒå¿…è¦ãªã‚‚ã®ã¯æœªå®Ÿè£…
+â€»openupgrade é–¢æ•°ã®å¯¾è±¡è£…å‚™ã¨dbè¿½è¨˜ã¯å¾Œæ—¥å®Ÿè£…
 
-1000”Ô‘ä 2000”Ô‘ä
-–¢ŽÀ‘•ƒAƒCƒeƒ€‚Ì’è‹`‹Lq
-1328#ƒuƒ‹[ƒgƒNƒŠ[ƒ”ƒ@[#
-1331#ƒAƒrƒXƒAƒbƒNƒX#
+1000ç•ªå° 2000ç•ªå°
+æœªå®Ÿè£…ã‚¢ã‚¤ãƒ†ãƒ ã®å®šç¾©è¨˜è¿°
+1328#ãƒ–ãƒ«ãƒ¼ãƒˆã‚¯ãƒªãƒ¼ãƒ´ã‚¡ãƒ¼#
+1331#ã‚¢ãƒ“ã‚¹ã‚¢ãƒƒã‚¯ã‚¹#
 
-1399#UéíTEƒc[ƒnƒ“ƒhƒAƒbƒNƒX#
-1437#UéíTEƒpƒCƒN#
-1495#UéíTEƒ‰ƒ“ƒX#
-1499#ƒŒƒNƒCƒGƒ€ƒ‰ƒ“ƒX#
-1591#UéíTE–{#
-1667#UéíTEƒXƒ^ƒbƒt#
-1698#ƒŒƒNƒCƒGƒ€ƒA[ƒNƒƒ“ƒh#
+1399#æ”»åŸŽæˆ¦TEãƒ„ãƒ¼ãƒãƒ³ãƒ‰ã‚¢ãƒƒã‚¯ã‚¹#
+1437#æ”»åŸŽæˆ¦TEãƒ‘ã‚¤ã‚¯#
+1495#æ”»åŸŽæˆ¦TEãƒ©ãƒ³ã‚¹#
+1499#ãƒ¬ã‚¯ã‚¤ã‚¨ãƒ ãƒ©ãƒ³ã‚¹#
+1591#æ”»åŸŽæˆ¦TEæœ¬#
+1667#æ”»åŸŽæˆ¦TEã‚¹ã‚¿ãƒƒãƒ•#
+1698#ãƒ¬ã‚¯ã‚¤ã‚¨ãƒ ã‚¢ãƒ¼ã‚¯ãƒ¯ãƒ³ãƒ‰#
 
-1834#UéíTEƒtƒBƒXƒg#
-1861#ƒAƒrƒXƒNƒ[#
-1868#–Ò—´“¬b#
-1869#“¬_‚Ìƒoƒ“ƒe[ƒW#
+1834#æ”»åŸŽæˆ¦TEãƒ•ã‚£ã‚¹ãƒˆ#
+1861#ã‚¢ãƒ“ã‚¹ã‚¯ãƒ­ãƒ¼#
+1868#çŒ›é¾é—˜ç”²#
+1869#é—˜ç¥žã®ãƒãƒ³ãƒ†ãƒ¼ã‚¸#
 
-1932#UéíTEƒMƒ^[#
-1942#ƒŒƒNƒCƒGƒ€ƒoƒCƒIƒŠƒ“#
-1948#‘åŽ©‘R‚ÌƒMƒ^[#
-1987#UéíTEƒ[ƒv#
-1998#ƒŒƒNƒCƒGƒ€ƒuƒŒƒCƒhƒEƒBƒbƒv#
+1932#æ”»åŸŽæˆ¦TEã‚®ã‚¿ãƒ¼#
+1942#ãƒ¬ã‚¯ã‚¤ã‚¨ãƒ ãƒã‚¤ã‚ªãƒªãƒ³#
+1948#å¤§è‡ªç„¶ã®ã‚®ã‚¿ãƒ¼#
+1987#æ”»åŸŽæˆ¦TEãƒ­ãƒ¼ãƒ—#
+1998#ãƒ¬ã‚¯ã‚¤ã‚¨ãƒ ãƒ–ãƒ¬ã‚¤ãƒ‰ã‚¦ã‚£ãƒƒãƒ—#
 
-2019#UéíTEƒc[ƒnƒ“ƒhƒXƒ^ƒbƒt#
-2029#‘Þ–‚_‚Ìñ#
-2031#”L—¼ŽèñEŠø‹›#
-2032#ƒŒƒNƒCƒGƒ€ƒEƒBƒU[ƒhƒXƒ^ƒbƒt#
-2049#Â‚¢‰Š‚Ìñ#
-2053#ƒAƒrƒXƒXƒ^ƒbƒt#
+2019#æ”»åŸŽæˆ¦TEãƒ„ãƒ¼ãƒãƒ³ãƒ‰ã‚¹ã‚¿ãƒƒãƒ•#
+2029#é€€é­”ç¥žã®æ–#
+2031#çŒ«ä¸¡æ‰‹æ–ãƒ»æ——é­š#
+2032#ãƒ¬ã‚¯ã‚¤ã‚¨ãƒ ã‚¦ã‚£ã‚¶ãƒ¼ãƒ‰ã‚¹ã‚¿ãƒƒãƒ•#
+2049#é’ã„ç‚Žã®æ–#
+2053#ã‚¢ãƒ“ã‚¹ã‚¹ã‚¿ãƒƒãƒ•#
 
-2061#ƒXƒ^ƒbƒtƒIƒuƒ~ƒ‰ƒNƒ‹#
-2062#ƒOƒ‰ƒrƒe[ƒVƒ‡ƒ“ƒXƒ^ƒbƒt#
-2063#’”q‚Ìñ#
+2061#ã‚¹ã‚¿ãƒƒãƒ•ã‚ªãƒ–ãƒŸãƒ©ã‚¯ãƒ«#
+2062#ã‚°ãƒ©ãƒ“ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã‚¹ã‚¿ãƒƒãƒ•#
+2063#å´‡æ‹ã®æ–#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-11-19	patch0069
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-23776#•Ší‰ü‘¢‘•’u(Type1)#
-23777#•Ší‰ü‘¢‘•’u(Type2)#
-23778#•Ší‰ü‘¢‘•’u(Type3)#
-23779#•Ší‰ü‘¢‘•’u(Type4)#
-23780#•Ší‰ü‘¢‘•’u(Type5)#
-23781#•Ší‰ü‘¢‘•’u(Type6)#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+23776#æ­¦å™¨æ”¹é€ è£…ç½®(Type1)#
+23777#æ­¦å™¨æ”¹é€ è£…ç½®(Type2)#
+23778#æ­¦å™¨æ”¹é€ è£…ç½®(Type3)#
+23779#æ­¦å™¨æ”¹é€ è£…ç½®(Type4)#
+23780#æ­¦å™¨æ”¹é€ è£…ç½®(Type5)#
+23781#æ­¦å™¨æ”¹é€ è£…ç½®(Type6)#
 
-200013#ƒCƒ‹ƒVƒIƒ“ƒVƒŠ[ƒY‘I‘ðŒðŠ·ƒ`ƒPƒbƒg‚Ì” #
-200014#ƒCƒ‹ƒVƒIƒ“ƒ`ƒPƒbƒg‚Ì” #
+200013#ã‚¤ãƒ«ã‚·ã‚ªãƒ³ã‚·ãƒªãƒ¼ã‚ºé¸æŠžäº¤æ›ãƒã‚±ãƒƒãƒˆã®ç®±#
+200014#ã‚¤ãƒ«ã‚·ã‚ªãƒ³ãƒã‚±ãƒƒãƒˆã®ç®±#
 
 2023-11-18	patch0068
-ˆÈ‰º‚ÌƒAƒCƒeƒ€C³
-300320#••ˆó‚³‚ê‚½ƒIƒVƒŠƒXƒJ[ƒh#
-4263#‰…—ì•ŽmƒJ[ƒh#
-13473#ƒSƒbƒYƒ\[ƒh#
-500005#ƒfƒ‚ƒjƒbƒVƒ…ƒ\[ƒh#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ ä¿®æ­£
+300320#å°å°ã•ã‚ŒãŸã‚ªã‚·ãƒªã‚¹ã‚«ãƒ¼ãƒ‰#
+4263#æ€¨éœŠæ­¦å£«ã‚«ãƒ¼ãƒ‰#
+13473#ã‚´ãƒƒã‚ºã‚½ãƒ¼ãƒ‰#
+500005#ãƒ‡ãƒ¢ãƒ‹ãƒƒã‚·ãƒ¥ã‚½ãƒ¼ãƒ‰#
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-7362#ê—pƒ}ƒbƒvƒ`ƒPƒbƒgA‚Ì” #
-7363#ê—pƒ}ƒbƒvƒ`ƒPƒbƒgB‚Ì” #
-7364#ê—pƒ}ƒbƒvƒ`ƒPƒbƒgC‚Ì” #
-7365#ê—pƒ}ƒbƒvƒ`ƒPƒbƒgD‚Ì” #
-7366#ê—pƒ}ƒbƒvƒ`ƒPƒbƒgE‚Ì” #
-7367#ê—pƒ}ƒbƒvƒ`ƒPƒbƒgG‚Ì” #
-7398#tà£–Ÿƒ`ƒPƒbƒg‚Ì” #
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+7362#å°‚ç”¨ãƒžãƒƒãƒ—ãƒã‚±ãƒƒãƒˆAã®ç®±#
+7363#å°‚ç”¨ãƒžãƒƒãƒ—ãƒã‚±ãƒƒãƒˆBã®ç®±#
+7364#å°‚ç”¨ãƒžãƒƒãƒ—ãƒã‚±ãƒƒãƒˆCã®ç®±#
+7365#å°‚ç”¨ãƒžãƒƒãƒ—ãƒã‚±ãƒƒãƒˆDã®ç®±#
+7366#å°‚ç”¨ãƒžãƒƒãƒ—ãƒã‚±ãƒƒãƒˆEã®ç®±#
+7367#å°‚ç”¨ãƒžãƒƒãƒ—ãƒã‚±ãƒƒãƒˆGã®ç®±#
+7398#æ˜¥çˆ›æ¼«ãƒã‚±ãƒƒãƒˆã®ç®±#
 
-17104#‰ü—ÇŒ^”ZkƒIƒŠƒfƒIƒRƒ“‚Ì” #
-17105#‰ü—ÇŒ^”ZkƒGƒ‹ƒjƒEƒ€‚Ì” #
-17161#ƒhƒ‚ƒ”ƒHƒCƒuƒŠ[ƒ_[‚ÌØ‚Ì” #
-17165#‚©‚«•XBOX(50”t)#
-17183#ƒ}ƒWƒJƒ‹ƒEƒHƒbƒ`‚Ì” #
-17213#ŒÃ‚Ì‰©F‚¢” #
-17214#ƒ}ƒWƒJƒ‹ƒuƒbƒN‚Ì” #
-17215#ƒ}ƒWƒJƒ‹ƒuƒbƒN‚Ì” #
-17216#‚©‚«•XBOX(150”t)#
-17217#ƒh[ƒiƒcBOX(50ŒÂ)#
-17218#ƒh[ƒiƒcBOX(150ŒÂ)#
-17219#ƒ}ƒWƒJƒ‹ƒAƒbƒvƒ‹‚Ì” #
-17220#ƒXƒyƒVƒƒƒ‹ƒNƒGƒXƒgƒ`ƒPƒbƒg‚Ì” #
-17243#ƒRƒX‚½‚ÜClassic#
-17249#ƒRƒX‚½‚ÜClassicII#
-17250#ƒRƒX‚½‚ÜClassicIII#
-17252#RWC2012‹L”Oƒ`ƒPƒbƒg#
-17267#ƒRƒX‚½‚ÜCollection#
-17268#ƒRƒX‚½‚ÜAnniversary#
-17269#ƒRƒX‚½‚ÜXmasParty#
-17276#ƒ}ƒWƒJƒ‹ƒtƒ‰ƒ[‚Ì” #
-17280#ƒRƒX‚½‚ÜNewYear#
-17289#ƒ”ƒFƒ‹ƒ[ƒuƒu‚Ì‰H‚Ì” #
-17290#ƒIƒ‹ƒŒƒAƒ“‚Ìƒtƒ‹ƒR[ƒX‚Ì” #
-17291#ƒRƒX‚½‚ÜGirlsSelection#
-17295#ƒRƒX‚½‚ÜBoysSelection#
-17300#ƒRƒX‚½‚ÜHolyDarkness#
-17301#ƒRƒX‚½‚ÜJuneBride#
-17305#ƒRƒX‚½‚ÜSpringParty#
-17323#ƒRƒX‚½‚ÜShinobi#
-17324#ƒRƒX‚½‚ÜBurning#
-17325#ƒRƒX‚½‚ÜHorror#
-17336#ƒWƒFƒŒƒ~[‚Ì”ü—eƒN[ƒ|ƒ“‚Ì” #
-17428#ƒRƒX‚½‚ÜMoonRabbit#
-17434#ƒRƒX‚½‚ÜHalloween#
-17436#ƒRƒX‚½‚ÜGothic#
-17444#ƒRƒX‚½‚ÜRWC2013#
-17448#ƒRƒX‚½‚ÜToyBox#
-17461#ƒRƒX‚½‚ÜFrozen#
-17462#ƒRƒX‚½‚ÜWingII#
-17463#ƒXƒyƒVƒƒƒ‹ƒNƒGƒXƒg‚µ‚¢‚½‚¯‚Ì” #
-17470#ƒRƒX‚½‚ÜHelmCollection#
-17476#ƒRƒX‚½‚ÜGirlsSelection‡U#
-17481#ƒRƒX‚½‚ÜFlowerGarden#
-17493#ƒRƒX‚½‚ÜWing#
-17497#ƒRƒX‚½‚ÜSeaside#
-17500#ƒRƒX‚½‚ÜMonsters#
-17506#ƒRƒX‚½‚ÜAutumnParty#
-17514#ƒRƒX‚½‚ÜHalloweenII#
-17517#ƒRƒX‚½‚ÜAnimals#
-17518#ƒtƒ@ƒ~’ÊƒNƒGƒXƒgƒ`ƒPƒbƒg‚Ì” #
-17523#ƒRƒX‚½‚ÜMystic#
-17528#ƒRƒX‚½‚ÜFrozenII#
-17546#ƒRƒX‚½‚ÜGirlsSelectionIII#
-17551#ƒRƒX‚½‚ÜAnimalsII#
-17571#ƒRƒX‚½‚ÜSchool#
-17581#ƒRƒX‚½‚ÜMonstersII#
-17585#ƒRƒX‚½‚ÜCyber#
-17589#ƒRƒX‚½‚ÜSeasideII#
-17596#ƒRƒX‚½‚ÜHairCollection(ÂÔ‰©—Î)#
-17597#ƒRƒX‚½‚ÜHairCollection(•”’gŽ‡)#
-17611#ƒRƒX‚½‚ÜSteampunk#
-17619#‹†‹É¸˜Bƒ`ƒPƒbƒg‚Ì” #
-17620#ƒCƒxƒ“ƒgƒ`ƒPƒbƒg‚Ì” #
-17621#ƒLƒƒƒ“ƒy[ƒ“ƒNƒGƒXƒgƒ`ƒPƒbƒg‚Ì” #
-17622#ƒvƒ‰ƒƒbƒN¸˜BƒtƒH[ƒX‚Ì” #
-17623#[2017”N]‹†‹É¸˜Bƒ`ƒPƒbƒg‚Ì” #
-17624#‚‹‰ƒIƒCƒ‹‚Ì” #
-17625#ƒ^ƒCƒj[ƒ`ƒPƒbƒg‚Ì” #
-17626#[2017”N]ƒvƒ‰ƒƒbƒN¸˜BƒtƒH[ƒX‚Ì” #
-17627#[15th]•œƒRƒX‚½‚ÜƒV[ƒ‹‚Ì” #
-17634#ƒRƒXƒ`ƒ…[ƒ€ƒ`ƒFƒ“ƒWƒ`ƒPƒbƒg‚Ì” #
-17635#ƒRƒX‚½‚ÜHolyDarknessII#
-17638#ƒRƒX‚½‚ÜCharacters#
-17641#ƒRƒX‚½‚ÜNewYearII#
-17661#ƒRƒX‚½‚ÜGothicII#
-17664#ƒRƒX‚½‚Ü2012Selection#
-17670#ƒRƒX‚½‚ÜFlowerGardenII#
-17678#ƒRƒX‚½‚ÜAnimalsIII#
-17679#[ƒKƒ“ƒXƒŠƒ“ƒK[Œnê—p] ƒ}ƒWƒJƒ‹ƒ\ƒEƒ‹‚Ì” #
-17680#[ƒKƒ“ƒXƒŠƒ“ƒK[Œnê—p] ”½‹t‚ÌØ‚Ì” #
-17687#ƒRƒX‚½‚ÜGirlsSelectionIV#
-17693#ƒRƒX‚½‚ÜMonstersIII#
-17696#ƒRƒX‚½‚ÜGirlsSelection#
-17697#ƒRƒX‚½‚ÜHolyDarkness#
-17698#ƒRƒX‚½‚ÜJuneBride#
-17699#ƒRƒX‚½‚ÜHorror#
-17700#ƒRƒX‚½‚ÜMoonRabbit#
-17701#ƒRƒX‚½‚ÜGothic#
-17702#ƒRƒX‚½‚ÜSeaside#
-17703#ƒRƒX‚½‚ÜMonsters#
-17704#ƒRƒX‚½‚ÜAutumnParty#
-17705#ƒRƒX‚½‚ÜFrozenII#
-17706#ƒRƒX‚½‚ÜAnimalsII#
-17707#ƒRƒX‚½‚ÜCyber#
-17710#ƒRƒX‚½‚ÜHairCollectionII(ÂÔ‰©—Î)#
-17711#ƒRƒX‚½‚ÜHairCollectionII(•”’gŽ‡)#
-17715#ƒRƒX‚½‚ÜEmil Chronicle Online#
-17735#ƒRƒX‚½‚ÜHorrorII#
-17741#ƒRƒX‚½‚ÜMaerchen#
-17750#ƒRƒX‚½‚ÜCharactersII#
-17762#ƒRƒX‚½‚ÜMofuMofu#
-17767#ƒRƒX‚½‚ÜGothicIII#
-17780#“Á‘IƒlƒRŠÊ(ƒ}ƒOƒ)‚Ì” #
-17781#ƒRƒX‚½‚ÜHairCollectionIII(ÂÔ‰©—Î)#
-17782#ƒRƒX‚½‚ÜHairCollectionIII(•”’gŽ‡)#
-17785#ƒRƒX‚½‚ÜVariations#
-17789#ƒRƒX‚½‚ÜAnimalsIV#
-17796#ƒRƒX‚½‚ÜVariationsII(ÂÔ‰©—Î)#
-17797#ƒRƒX‚½‚ÜVariationsII(•”’gŽ‡)#
-17803#ƒRƒX‚½‚ÜGirlsSelectionV#
-17808#ƒRƒX‚½‚ÜHolyDarknessIII#
-17809#ƒRƒX‚½‚ÜClassic#
-17810#ƒRƒX‚½‚ÜClassicII#
-17811#ƒRƒX‚½‚ÜClassicIII#
-17812#ƒRƒX‚½‚ÜCollection#
-17813#ƒRƒX‚½‚ÜAnniversary#
-17814#ƒRƒX‚½‚ÜXmasParty#
-17815#ƒRƒX‚½‚ÜNewYear#
-17816#ƒRƒX‚½‚ÜBoysSelection#
-17817#ƒRƒX‚½‚ÜSpringParty#
-17818#ƒRƒX‚½‚ÜShinobi#
-17819#ƒRƒX‚½‚ÜBurning#
-17820#ƒRƒX‚½‚ÜHalloween#
-17821#ƒRƒX‚½‚ÜRWC2013#
-17822#ƒRƒX‚½‚ÜToyBox#
-17823#ƒRƒX‚½‚ÜFrozen#
-17824#ƒRƒX‚½‚ÜHelmCollection#
-17825#ƒRƒX‚½‚ÜGirlsSelectionII#
-17826#ƒRƒX‚½‚ÜFlowerGarden#
-17827#ƒRƒX‚½‚ÜPartners#
-17828#ƒRƒX‚½‚ÜWing#
-17829#ƒRƒX‚½‚ÜHalloweenII#
-17830#ƒRƒX‚½‚ÜAnimals#
-17831#ƒRƒX‚½‚ÜMystic#
-17835#ƒRƒX‚½‚ÜMonstersIV#
-17836#ƒRƒX‚½‚ÜBoysSelectionII#
-17889#ƒRƒX‚½‚ÜHalloweenIII#
-17899#ƒRƒX‚½‚ÜMysticII#
-17904#[2018]•œƒRƒX‚½‚ÜƒV[ƒ‹‚Ì” #
-17905#[2018”N]‹†‹É¸˜Bƒ`ƒPƒbƒg‚Ì” #
-17906#[2018”N]‚‹‰ƒIƒCƒ‹‚Ì” #
-17907#[2018summer]ƒvƒ‰ƒƒbƒN¸˜BƒtƒH[ƒX‚Ì” #
-17908#M—Š‚ÌØ‚Ì” #
-17909#[16thPKG]ƒvƒ‰ƒƒbƒN¸˜BƒtƒH[ƒX‚Ì” #
-17910#[2019”N]‹†‹É¸˜Bƒ`ƒPƒbƒg‚Ì” #
-17911#[2019”N]‚‹‰ƒIƒCƒ‹‚Ì” #
-17912#ƒnƒbƒs[ƒNƒŠƒXƒ}ƒXƒoƒbƒO#
-17913#[2019]•œƒRƒX‚½‚ÜƒV[ƒ‹‚Ì” #
-17922#ƒRƒX‚½‚ÜFrozenIII#
-17934#ƒRƒX‚½‚ÜGothic&Lolita#
-17942#ƒRƒX‚½‚ÜSpringPartyII#
-17952#ƒRƒX‚½‚ÜAnimalsV#
-17958#ƒRƒX‚½‚ÜGirlsSelectionVI#
-17963#ƒRƒX‚½‚ÜMonstersV#
-17964#ƒRƒX‚½‚ÜVariationsIII#
-17965#ƒRƒX‚½‚ÜHolyDarknessIV#
-17966#ƒRƒX‚½‚ÜCyberII#
-17991#ƒRƒX‚½‚ÜAutumnPartyII#
-17992#ƒRƒX‚½‚ÜMysticIII#
-17993#ƒRƒX‚½‚ÜHairCollectionIV(–¾F)#
-17994#ƒRƒX‚½‚ÜHairCollectionIV(ˆÃF)#
-17995#C—…VIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒAƒRƒ‰ƒCƒg(ƒ‚ƒ“ƒN)Œnê—p]#
-17996#C—…ƒ\ƒEƒ‹‚Ì”  [“]¶ƒAƒRƒ‰ƒCƒg(ƒ‚ƒ“ƒN)Œnê—p]#
-17997#“]¶ƒ`ƒPƒbƒg‚Ì” #
-17998#ƒRƒX‚½‚ÜMonstersVI#
+17104#æ”¹è‰¯åž‹æ¿ƒç¸®ã‚ªãƒªãƒ‡ã‚ªã‚³ãƒ³ã®ç®±#
+17105#æ”¹è‰¯åž‹æ¿ƒç¸®ã‚¨ãƒ«ãƒ‹ã‚¦ãƒ ã®ç®±#
+17161#ãƒ‰ãƒ¢ãƒ´ã‚©ã‚¤ãƒ–ãƒªãƒ¼ãƒ€ãƒ¼ã®è¨¼ã®ç®±#
+17165#ã‹ãæ°·BOX(50æ¯)#
+17183#ãƒžã‚¸ã‚«ãƒ«ã‚¦ã‚©ãƒƒãƒã®ç®±#
+17213#å¤ã®é»„è‰²ã„ç®±#
+17214#ãƒžã‚¸ã‚«ãƒ«ãƒ–ãƒƒã‚¯ã®ç®±#
+17215#ãƒžã‚¸ã‚«ãƒ«ãƒ–ãƒƒã‚¯ã®ç®±#
+17216#ã‹ãæ°·BOX(150æ¯)#
+17217#ãƒ‰ãƒ¼ãƒŠãƒ„BOX(50å€‹)#
+17218#ãƒ‰ãƒ¼ãƒŠãƒ„BOX(150å€‹)#
+17219#ãƒžã‚¸ã‚«ãƒ«ã‚¢ãƒƒãƒ—ãƒ«ã®ç®±#
+17220#ã‚¹ãƒšã‚·ãƒ£ãƒ«ã‚¯ã‚¨ã‚¹ãƒˆãƒã‚±ãƒƒãƒˆã®ç®±#
+17243#ã‚³ã‚¹ãŸã¾Classic#
+17249#ã‚³ã‚¹ãŸã¾ClassicII#
+17250#ã‚³ã‚¹ãŸã¾ClassicIII#
+17252#RWC2012è¨˜å¿µãƒã‚±ãƒƒãƒˆ#
+17267#ã‚³ã‚¹ãŸã¾Collection#
+17268#ã‚³ã‚¹ãŸã¾Anniversary#
+17269#ã‚³ã‚¹ãŸã¾XmasParty#
+17276#ãƒžã‚¸ã‚«ãƒ«ãƒ•ãƒ©ãƒ¯ãƒ¼ã®ç®±#
+17280#ã‚³ã‚¹ãŸã¾NewYear#
+17289#ãƒ´ã‚§ãƒ«ã‚¼ãƒ–ãƒ–ã®ç¾½ã®ç®±#
+17290#ã‚ªãƒ«ãƒ¬ã‚¢ãƒ³ã®ãƒ•ãƒ«ã‚³ãƒ¼ã‚¹ã®ç®±#
+17291#ã‚³ã‚¹ãŸã¾GirlsSelection#
+17295#ã‚³ã‚¹ãŸã¾BoysSelection#
+17300#ã‚³ã‚¹ãŸã¾HolyDarkness#
+17301#ã‚³ã‚¹ãŸã¾JuneBride#
+17305#ã‚³ã‚¹ãŸã¾SpringParty#
+17323#ã‚³ã‚¹ãŸã¾Shinobi#
+17324#ã‚³ã‚¹ãŸã¾Burning#
+17325#ã‚³ã‚¹ãŸã¾Horror#
+17336#ã‚¸ã‚§ãƒ¬ãƒŸãƒ¼ã®ç¾Žå®¹ã‚¯ãƒ¼ãƒãƒ³ã®ç®±#
+17428#ã‚³ã‚¹ãŸã¾MoonRabbit#
+17434#ã‚³ã‚¹ãŸã¾Halloween#
+17436#ã‚³ã‚¹ãŸã¾Gothic#
+17444#ã‚³ã‚¹ãŸã¾RWC2013#
+17448#ã‚³ã‚¹ãŸã¾ToyBox#
+17461#ã‚³ã‚¹ãŸã¾Frozen#
+17462#ã‚³ã‚¹ãŸã¾WingII#
+17463#ã‚¹ãƒšã‚·ãƒ£ãƒ«ã‚¯ã‚¨ã‚¹ãƒˆã—ã„ãŸã‘ã®ç®±#
+17470#ã‚³ã‚¹ãŸã¾HelmCollection#
+17476#ã‚³ã‚¹ãŸã¾GirlsSelectionâ…¡#
+17481#ã‚³ã‚¹ãŸã¾FlowerGarden#
+17493#ã‚³ã‚¹ãŸã¾Wing#
+17497#ã‚³ã‚¹ãŸã¾Seaside#
+17500#ã‚³ã‚¹ãŸã¾Monsters#
+17506#ã‚³ã‚¹ãŸã¾AutumnParty#
+17514#ã‚³ã‚¹ãŸã¾HalloweenII#
+17517#ã‚³ã‚¹ãŸã¾Animals#
+17518#ãƒ•ã‚¡ãƒŸé€šã‚¯ã‚¨ã‚¹ãƒˆãƒã‚±ãƒƒãƒˆã®ç®±#
+17523#ã‚³ã‚¹ãŸã¾Mystic#
+17528#ã‚³ã‚¹ãŸã¾FrozenII#
+17546#ã‚³ã‚¹ãŸã¾GirlsSelectionIII#
+17551#ã‚³ã‚¹ãŸã¾AnimalsII#
+17571#ã‚³ã‚¹ãŸã¾School#
+17581#ã‚³ã‚¹ãŸã¾MonstersII#
+17585#ã‚³ã‚¹ãŸã¾Cyber#
+17589#ã‚³ã‚¹ãŸã¾SeasideII#
+17596#ã‚³ã‚¹ãŸã¾HairCollection(é’èµ¤é»„ç·‘)#
+17597#ã‚³ã‚¹ãŸã¾HairCollection(é»’ç™½ç´…ç´«)#
+17611#ã‚³ã‚¹ãŸã¾Steampunk#
+17619#ç©¶æ¥µç²¾éŒ¬ãƒã‚±ãƒƒãƒˆã®ç®±#
+17620#ã‚¤ãƒ™ãƒ³ãƒˆãƒã‚±ãƒƒãƒˆã®ç®±#
+17621#ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³ã‚¯ã‚¨ã‚¹ãƒˆãƒã‚±ãƒƒãƒˆã®ç®±#
+17622#ãƒ—ãƒ©ãƒ­ãƒƒã‚¯ç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+17623#[2017å¹´]ç©¶æ¥µç²¾éŒ¬ãƒã‚±ãƒƒãƒˆã®ç®±#
+17624#é«˜ç´šã‚ªã‚¤ãƒ«ã®ç®±#
+17625#ã‚¿ã‚¤ãƒ‹ãƒ¼ãƒã‚±ãƒƒãƒˆã®ç®±#
+17626#[2017å¹´]ãƒ—ãƒ©ãƒ­ãƒƒã‚¯ç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+17627#[15th]å¾©åˆ»ã‚³ã‚¹ãŸã¾ã‚·ãƒ¼ãƒ«ã®ç®±#
+17634#ã‚³ã‚¹ãƒãƒ¥ãƒ¼ãƒ ãƒã‚§ãƒ³ã‚¸ãƒã‚±ãƒƒãƒˆã®ç®±#
+17635#ã‚³ã‚¹ãŸã¾HolyDarknessII#
+17638#ã‚³ã‚¹ãŸã¾Characters#
+17641#ã‚³ã‚¹ãŸã¾NewYearII#
+17661#ã‚³ã‚¹ãŸã¾GothicII#
+17664#ã‚³ã‚¹ãŸã¾2012Selection#
+17670#ã‚³ã‚¹ãŸã¾FlowerGardenII#
+17678#ã‚³ã‚¹ãŸã¾AnimalsIII#
+17679#[ã‚¬ãƒ³ã‚¹ãƒªãƒ³ã‚¬ãƒ¼ç³»å°‚ç”¨] ãƒžã‚¸ã‚«ãƒ«ã‚½ã‚¦ãƒ«ã®ç®±#
+17680#[ã‚¬ãƒ³ã‚¹ãƒªãƒ³ã‚¬ãƒ¼ç³»å°‚ç”¨] åé€†ã®è¨¼ã®ç®±#
+17687#ã‚³ã‚¹ãŸã¾GirlsSelectionIV#
+17693#ã‚³ã‚¹ãŸã¾MonstersIII#
+17696#ã‚³ã‚¹ãŸã¾GirlsSelection#
+17697#ã‚³ã‚¹ãŸã¾HolyDarkness#
+17698#ã‚³ã‚¹ãŸã¾JuneBride#
+17699#ã‚³ã‚¹ãŸã¾Horror#
+17700#ã‚³ã‚¹ãŸã¾MoonRabbit#
+17701#ã‚³ã‚¹ãŸã¾Gothic#
+17702#ã‚³ã‚¹ãŸã¾Seaside#
+17703#ã‚³ã‚¹ãŸã¾Monsters#
+17704#ã‚³ã‚¹ãŸã¾AutumnParty#
+17705#ã‚³ã‚¹ãŸã¾FrozenII#
+17706#ã‚³ã‚¹ãŸã¾AnimalsII#
+17707#ã‚³ã‚¹ãŸã¾Cyber#
+17710#ã‚³ã‚¹ãŸã¾HairCollectionII(é’èµ¤é»„ç·‘)#
+17711#ã‚³ã‚¹ãŸã¾HairCollectionII(é»’ç™½ç´…ç´«)#
+17715#ã‚³ã‚¹ãŸã¾Emil Chronicle Online#
+17735#ã‚³ã‚¹ãŸã¾HorrorII#
+17741#ã‚³ã‚¹ãŸã¾Maerchen#
+17750#ã‚³ã‚¹ãŸã¾CharactersII#
+17762#ã‚³ã‚¹ãŸã¾MofuMofu#
+17767#ã‚³ã‚¹ãŸã¾GothicIII#
+17780#ç‰¹é¸ãƒã‚³ç¼¶(ãƒžã‚°ãƒ­)ã®ç®±#
+17781#ã‚³ã‚¹ãŸã¾HairCollectionIII(é’èµ¤é»„ç·‘)#
+17782#ã‚³ã‚¹ãŸã¾HairCollectionIII(é»’ç™½ç´…ç´«)#
+17785#ã‚³ã‚¹ãŸã¾Variations#
+17789#ã‚³ã‚¹ãŸã¾AnimalsIV#
+17796#ã‚³ã‚¹ãŸã¾VariationsII(é’èµ¤é»„ç·‘)#
+17797#ã‚³ã‚¹ãŸã¾VariationsII(é»’ç™½ç´…ç´«)#
+17803#ã‚³ã‚¹ãŸã¾GirlsSelectionV#
+17808#ã‚³ã‚¹ãŸã¾HolyDarknessIII#
+17809#ã‚³ã‚¹ãŸã¾Classic#
+17810#ã‚³ã‚¹ãŸã¾ClassicII#
+17811#ã‚³ã‚¹ãŸã¾ClassicIII#
+17812#ã‚³ã‚¹ãŸã¾Collection#
+17813#ã‚³ã‚¹ãŸã¾Anniversary#
+17814#ã‚³ã‚¹ãŸã¾XmasParty#
+17815#ã‚³ã‚¹ãŸã¾NewYear#
+17816#ã‚³ã‚¹ãŸã¾BoysSelection#
+17817#ã‚³ã‚¹ãŸã¾SpringParty#
+17818#ã‚³ã‚¹ãŸã¾Shinobi#
+17819#ã‚³ã‚¹ãŸã¾Burning#
+17820#ã‚³ã‚¹ãŸã¾Halloween#
+17821#ã‚³ã‚¹ãŸã¾RWC2013#
+17822#ã‚³ã‚¹ãŸã¾ToyBox#
+17823#ã‚³ã‚¹ãŸã¾Frozen#
+17824#ã‚³ã‚¹ãŸã¾HelmCollection#
+17825#ã‚³ã‚¹ãŸã¾GirlsSelectionII#
+17826#ã‚³ã‚¹ãŸã¾FlowerGarden#
+17827#ã‚³ã‚¹ãŸã¾Partners#
+17828#ã‚³ã‚¹ãŸã¾Wing#
+17829#ã‚³ã‚¹ãŸã¾HalloweenII#
+17830#ã‚³ã‚¹ãŸã¾Animals#
+17831#ã‚³ã‚¹ãŸã¾Mystic#
+17835#ã‚³ã‚¹ãŸã¾MonstersIV#
+17836#ã‚³ã‚¹ãŸã¾BoysSelectionII#
+17889#ã‚³ã‚¹ãŸã¾HalloweenIII#
+17899#ã‚³ã‚¹ãŸã¾MysticII#
+17904#[2018]å¾©åˆ»ã‚³ã‚¹ãŸã¾ã‚·ãƒ¼ãƒ«ã®ç®±#
+17905#[2018å¹´]ç©¶æ¥µç²¾éŒ¬ãƒã‚±ãƒƒãƒˆã®ç®±#
+17906#[2018å¹´]é«˜ç´šã‚ªã‚¤ãƒ«ã®ç®±#
+17907#[2018summer]ãƒ—ãƒ©ãƒ­ãƒƒã‚¯ç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+17908#ä¿¡é ¼ã®è¨¼ã®ç®±#
+17909#[16thPKG]ãƒ—ãƒ©ãƒ­ãƒƒã‚¯ç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+17910#[2019å¹´]ç©¶æ¥µç²¾éŒ¬ãƒã‚±ãƒƒãƒˆã®ç®±#
+17911#[2019å¹´]é«˜ç´šã‚ªã‚¤ãƒ«ã®ç®±#
+17912#ãƒãƒƒãƒ”ãƒ¼ã‚¯ãƒªã‚¹ãƒžã‚¹ãƒãƒƒã‚°#
+17913#[2019]å¾©åˆ»ã‚³ã‚¹ãŸã¾ã‚·ãƒ¼ãƒ«ã®ç®±#
+17922#ã‚³ã‚¹ãŸã¾FrozenIII#
+17934#ã‚³ã‚¹ãŸã¾Gothic&Lolita#
+17942#ã‚³ã‚¹ãŸã¾SpringPartyII#
+17952#ã‚³ã‚¹ãŸã¾AnimalsV#
+17958#ã‚³ã‚¹ãŸã¾GirlsSelectionVI#
+17963#ã‚³ã‚¹ãŸã¾MonstersV#
+17964#ã‚³ã‚¹ãŸã¾VariationsIII#
+17965#ã‚³ã‚¹ãŸã¾HolyDarknessIV#
+17966#ã‚³ã‚¹ãŸã¾CyberII#
+17991#ã‚³ã‚¹ãŸã¾AutumnPartyII#
+17992#ã‚³ã‚¹ãŸã¾MysticIII#
+17993#ã‚³ã‚¹ãŸã¾HairCollectionIV(æ˜Žè‰²)#
+17994#ã‚³ã‚¹ãŸã¾HairCollectionIV(æš—è‰²)#
+17995#ä¿®ç¾…VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿã‚¢ã‚³ãƒ©ã‚¤ãƒˆ(ãƒ¢ãƒ³ã‚¯)ç³»å°‚ç”¨]#
+17996#ä¿®ç¾…ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿã‚¢ã‚³ãƒ©ã‚¤ãƒˆ(ãƒ¢ãƒ³ã‚¯)ç³»å°‚ç”¨]#
+17997#è»¢ç”Ÿãƒã‚±ãƒƒãƒˆã®ç®±#
+17998#ã‚³ã‚¹ãŸã¾MonstersVI#
 
-¦item_db.txt‚Æd•¡‚µ‚Ä‚¢‚éƒAƒCƒeƒ€‚à‚ ‚è‚Ü‚·‚ªA17000”Ô‘ä‚Í2023/11/14•t‚Ì‘S•”‚ð–Ô—…‚µ‚Ä‚¨‚èA‘S•”‚Ü‚Æ‚ß‚ÄˆÚs‰Â”\‚Å‚«‚Ü‚·
-¦ƒRƒXƒ^ƒ}Œn‚Í’è‹`‚Ì‚Ý‚Å‚·
-¦17183#ƒ}ƒWƒJƒ‹ƒEƒHƒbƒ`‚Ì” #‚È‚Ç‚ÌŒø‰Ê‚Ì‚È‚¢ƒAƒCƒeƒ€‚Í‹LqƒAƒCƒeƒ€‚ª“¯‚¶ID‚Ì‚Ü‚Ü•Ê–¼‚É•Ï‚í‚Á‚½‚ÆŽv‚í‚ê‚é‚½‚ß–¢ŽÀ‘•‚Å‚·
+â€»item_db.txtã¨é‡è¤‡ã—ã¦ã„ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã‚‚ã‚ã‚Šã¾ã™ãŒã€17000ç•ªå°ã¯2023/11/14ä»˜ã®å…¨éƒ¨ã‚’ç¶²ç¾…ã—ã¦ãŠã‚Šã€å…¨éƒ¨ã¾ã¨ã‚ã¦ç§»è¡Œå¯èƒ½ã§ãã¾ã™
+â€»ã‚³ã‚¹ã‚¿ãƒžç³»ã¯å®šç¾©ã®ã¿ã§ã™
+â€»17183#ãƒžã‚¸ã‚«ãƒ«ã‚¦ã‚©ãƒƒãƒã®ç®±#ãªã©ã®åŠ¹æžœã®ãªã„ã‚¢ã‚¤ãƒ†ãƒ ã¯è¨˜è¿°ã‚¢ã‚¤ãƒ†ãƒ ãŒåŒã˜IDã®ã¾ã¾åˆ¥åã«å¤‰ã‚ã£ãŸã¨æ€ã‚ã‚Œã‚‹ãŸã‚æœªå®Ÿè£…ã§ã™
 
-item_db2_add.txt XV
-¦item_db_add.txt‚Æd•¡‚µ‚Ä‚¢‚éƒAƒCƒeƒ€‚à‚ ‚è‚Ü‚·‚ªA17000”Ô‘ä‚Í2023/11/14•t‚Ì‘S•”‚ð–Ô—…‚µ‚Ä‚¨‚èA‘S•”‚Ü‚Æ‚ß‚ÄˆÚs‰Â”\‚Å‚«‚Ü‚·
+item_db2_add.txt æ›´æ–°
+â€»item_db_add.txtã¨é‡è¤‡ã—ã¦ã„ã‚‹ã‚¢ã‚¤ãƒ†ãƒ ã‚‚ã‚ã‚Šã¾ã™ãŒã€17000ç•ªå°ã¯2023/11/14ä»˜ã®å…¨éƒ¨ã‚’ç¶²ç¾…ã—ã¦ãŠã‚Šã€å…¨éƒ¨ã¾ã¨ã‚ã¦ç§»è¡Œå¯èƒ½ã§ãã¾ã™
 
-9000”Ô‘äƒyƒbƒg‚Ì—‘‚ð‘S•”®—‚µ‹Lq
-¦2023/11/14•t‚Ì‘S•”‚ð–Ô—…‚µ‚Ä‚¨‚èA‘S•”‚Ü‚Æ‚ß‚ÄˆÚs‰Â”\‚Å‚«‚Ü‚·
+9000ç•ªå°ãƒšãƒƒãƒˆã®åµã‚’å…¨éƒ¨æ•´ç†ã—è¨˜è¿°
+â€»2023/11/14ä»˜ã®å…¨éƒ¨ã‚’ç¶²ç¾…ã—ã¦ãŠã‚Šã€å…¨éƒ¨ã¾ã¨ã‚ã¦ç§»è¡Œå¯èƒ½ã§ãã¾ã™
 
 2023-11-16	patch0067
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-10530#ƒƒCƒ„ƒ‹ƒK[ƒhVIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒ\[ƒhƒ}ƒ“(ƒNƒ‹ƒZƒCƒ_[)Œnê—p]#
-10531#ƒƒCƒ„ƒ‹ƒK[ƒhƒ\ƒEƒ‹‚Ì”  [“]¶ƒ\[ƒhƒ}ƒ“(ƒNƒ‹ƒZƒCƒ_[)Œnê—p]#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+10530#ãƒ­ã‚¤ãƒ¤ãƒ«ã‚¬ãƒ¼ãƒ‰VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿã‚½ãƒ¼ãƒ‰ãƒžãƒ³(ã‚¯ãƒ«ã‚»ã‚¤ãƒ€ãƒ¼)ç³»å°‚ç”¨]#
+10531#ãƒ­ã‚¤ãƒ¤ãƒ«ã‚¬ãƒ¼ãƒ‰ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿã‚½ãƒ¼ãƒ‰ãƒžãƒ³(ã‚¯ãƒ«ã‚»ã‚¤ãƒ€ãƒ¼)ç³»å°‚ç”¨]#
 
-400012#êt–¾‚Ìƒ}ƒWƒFƒXƒeƒBƒbƒNƒS[ƒg#
-400013#‚­‚í‚¦‚½ƒ`ƒ‡ƒRƒXƒeƒBƒbƒN#
-400019#ƒfƒ‚ƒjƒbƒVƒ…ƒwƒ‹ƒ€#
-400127#‚½‚êƒXƒ}[ƒgƒGƒŠ[#
-410057#‘¾‹É‚ÌŽ¨ü‚è(‰©)#
-410058#‘¾‹É‚ÌŽ¨ü‚è(‰©)#
-450005#…—´_‚Ì—Ø#
-450120#ƒfƒ‚ƒjƒbƒVƒ…ƒA[ƒ}[#
-450162#ŒÃ‚Ñ‚½ƒzƒƒCƒgƒŠƒŠ[ƒ[ƒu#
-450163#ƒzƒƒCƒgƒŠƒŠ[ƒ[ƒu#
-450180#‚ ‚´‚Æ‚¢ƒPƒƒPƒƒJƒbƒp#
-450181#ŠoÁƒzƒƒCƒgƒŠƒŠ[ƒ[ƒu#
-460000#ƒfƒ‚ƒjƒbƒVƒ…ƒV[ƒ‹ƒh#
-460009#¹ŽÒ‚Ì–ÙŽ¦˜^#
-460014#ƒCƒ‹ƒVƒIƒ“ƒV[ƒ‹ƒhII#
-460015#ƒI[ƒgƒ}ƒeƒBƒbƒNƒV[ƒ‹ƒhI#
-460016#ƒI[ƒgƒ}ƒeƒBƒbƒNƒV[ƒ‹ƒhII#
-460045#ƒQƒtƒBƒIƒ“ƒV[ƒ‹ƒh#
-470004#ƒCƒ“ƒyƒŠƒAƒ‹ƒu[ƒc#
-470005#ƒTƒoƒCƒoƒ‹ƒVƒ…[ƒY#
-480004#ƒAƒNƒZƒ‹ƒEƒBƒ“ƒO#
-480011#ƒAƒWƒ_ƒn[ƒJ‚Ì”ç#
-480023#ƒAƒ‰ƒrƒAƒ“ƒ}ƒ“ƒg#
-480081#ƒOƒƒgƒlƒŠ[ƒA#
-480170#[ŠC¶•¨‚Ìƒ}ƒ“ƒg#
-490021#ƒfƒ‚ƒjƒbƒVƒ…ƒKƒ“ƒgƒŒƒbƒg#
-490022#v—‹‚ÌŽw—Ö#
-490114#ƒpƒ‰ƒ_ƒCƒXƒƒXƒg#
-550021#ƒfƒEƒXEƒGƒNƒXEƒ}ƒLƒi#
-590014#–S‘‚Ì‰¤â”#
+400012#é»Žæ˜Žã®ãƒžã‚¸ã‚§ã‚¹ãƒ†ã‚£ãƒƒã‚¯ã‚´ãƒ¼ãƒˆ#
+400013#ãã‚ãˆãŸãƒãƒ§ã‚³ã‚¹ãƒ†ã‚£ãƒƒã‚¯#
+400019#ãƒ‡ãƒ¢ãƒ‹ãƒƒã‚·ãƒ¥ãƒ˜ãƒ«ãƒ #
+400127#ãŸã‚Œã‚¹ãƒžãƒ¼ãƒˆã‚¨ãƒªãƒ¼#
+410057#å¤ªæ¥µã®è€³é£¾ã‚Š(é»„)#
+410058#å¤ªæ¥µã®è€³é£¾ã‚Š(é»„)#
+450005#æ°´é¾ç¥žã®é±—#
+450120#ãƒ‡ãƒ¢ãƒ‹ãƒƒã‚·ãƒ¥ã‚¢ãƒ¼ãƒžãƒ¼#
+450162#å¤ã³ãŸãƒ›ãƒ¯ã‚¤ãƒˆãƒªãƒªãƒ¼ãƒ­ãƒ¼ãƒ–#
+450163#ãƒ›ãƒ¯ã‚¤ãƒˆãƒªãƒªãƒ¼ãƒ­ãƒ¼ãƒ–#
+450180#ã‚ã–ã¨ã„ã‚±ãƒ­ã‚±ãƒ­ã‚«ãƒƒãƒ‘#
+450181#è¦šé†’ãƒ›ãƒ¯ã‚¤ãƒˆãƒªãƒªãƒ¼ãƒ­ãƒ¼ãƒ–#
+460000#ãƒ‡ãƒ¢ãƒ‹ãƒƒã‚·ãƒ¥ã‚·ãƒ¼ãƒ«ãƒ‰#
+460009#è–è€…ã®é»™ç¤ºéŒ²#
+460014#ã‚¤ãƒ«ã‚·ã‚ªãƒ³ã‚·ãƒ¼ãƒ«ãƒ‰II#
+460015#ã‚ªãƒ¼ãƒˆãƒžãƒ†ã‚£ãƒƒã‚¯ã‚·ãƒ¼ãƒ«ãƒ‰I#
+460016#ã‚ªãƒ¼ãƒˆãƒžãƒ†ã‚£ãƒƒã‚¯ã‚·ãƒ¼ãƒ«ãƒ‰II#
+460045#ã‚²ãƒ•ã‚£ã‚ªãƒ³ã‚·ãƒ¼ãƒ«ãƒ‰#
+470004#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ãƒ–ãƒ¼ãƒ„#
+470005#ã‚µãƒã‚¤ãƒãƒ«ã‚·ãƒ¥ãƒ¼ã‚º#
+480004#ã‚¢ã‚¯ã‚»ãƒ«ã‚¦ã‚£ãƒ³ã‚°#
+480011#ã‚¢ã‚¸ãƒ€ãƒãƒ¼ã‚«ã®çš®#
+480023#ã‚¢ãƒ©ãƒ“ã‚¢ãƒ³ãƒžãƒ³ãƒˆ#
+480081#ã‚°ãƒ­ãƒˆãƒãƒªãƒ¼ã‚¢#
+480170#æ·±æµ·ç”Ÿç‰©ã®ãƒžãƒ³ãƒˆ#
+490021#ãƒ‡ãƒ¢ãƒ‹ãƒƒã‚·ãƒ¥ã‚¬ãƒ³ãƒˆãƒ¬ãƒƒãƒˆ#
+490022#è¿…é›·ã®æŒ‡è¼ª#
+490114#ãƒ‘ãƒ©ãƒ€ã‚¤ã‚¹ãƒ­ã‚¹ãƒˆ#
+550021#ãƒ‡ã‚¦ã‚¹ãƒ»ã‚¨ã‚¯ã‚¹ãƒ»ãƒžã‚­ãƒŠ#
+590014#äº¡å›½ã®çŽ‹ç¬#
 
-ƒZƒbƒgŒø‰Ê’Ç‹L
-ƒTƒoƒCƒoƒ‹ƒ}ƒ“ƒg‚ÌƒZƒbƒg
-1618#ƒTƒoƒCƒoƒ‹ƒƒbƒh#
-1620#ƒTƒoƒCƒoƒ‹ƒƒbƒh#
-2509#ƒTƒoƒCƒoƒ‹ƒ}ƒ“ƒg#
-20813#ƒTƒoƒCƒoƒ‹ƒ}ƒ“ƒg#
-19020#ƒTƒoƒCƒoƒ‹ƒT[ƒNƒŒƒbƒg#
-19139#ƒTƒoƒCƒoƒ‹ƒI[ƒu#
+ã‚»ãƒƒãƒˆåŠ¹æžœè¿½è¨˜
+ã‚µãƒã‚¤ãƒãƒ«ãƒžãƒ³ãƒˆã®ã‚»ãƒƒãƒˆ
+1618#ã‚µãƒã‚¤ãƒãƒ«ãƒ­ãƒƒãƒ‰#
+1620#ã‚µãƒã‚¤ãƒãƒ«ãƒ­ãƒƒãƒ‰#
+2509#ã‚µãƒã‚¤ãƒãƒ«ãƒžãƒ³ãƒˆ#
+20813#ã‚µãƒã‚¤ãƒãƒ«ãƒžãƒ³ãƒˆ#
+19020#ã‚µãƒã‚¤ãƒãƒ«ã‚µãƒ¼ã‚¯ãƒ¬ãƒƒãƒˆ#
+19139#ã‚µãƒã‚¤ãƒãƒ«ã‚ªãƒ¼ãƒ–#
 
-v—‹‚ÌŽw—ÖƒZƒbƒg
-1444#v—‹‘„#
-1688#v—‹ñ#
-13130#v—‹e#
-16049#v—‹’È#
-18133#v—‹‹|#
-28708#v—‹Œ•#
+è¿…é›·ã®æŒ‡è¼ªã‚»ãƒƒãƒˆ
+1444#è¿…é›·æ§#
+1688#è¿…é›·æ–#
+13130#è¿…é›·éŠƒ#
+16049#è¿…é›·éŽš#
+18133#è¿…é›·å¼“#
+28708#è¿…é›·å‰£#
 
-ƒZƒbƒgŽÀ‘•‚É‚Â‚«C³
-300331#••ˆó‚³‚ê‚½ƒCƒtƒŠ[ƒgƒJ[ƒh#
+ã‚»ãƒƒãƒˆå®Ÿè£…ã«ã¤ãä¿®æ­£
+300331#å°å°ã•ã‚ŒãŸã‚¤ãƒ•ãƒªãƒ¼ãƒˆã‚«ãƒ¼ãƒ‰#
 
-‘•”õ‰ðœŽž‚Ì‹LqC³
-490367#ƒEƒ‹‚Ì˜r—Ö#
+è£…å‚™è§£é™¤æ™‚ã®è¨˜è¿°ä¿®æ­£
+490367#ã‚¦ãƒ«ã®è…•è¼ª#
 
-100000”Ô‘äE200000”Ô‘äE300000”Ô‘äE400000”Ô‘äE500000”Ô‘äE600000”Ô‘äE700000”Ô‘äE800000”Ô‘äE1000000”Ô‘äˆÈ~
-2023/11/14 Œ»Ý‚Ì6Œ…”Ô‘ä‚Ì2367ƒAƒCƒeƒ€ ŽÀ‘•Š®—¹
-¦ƒJ[ƒh‚Å”–‡”ÏŽG‚ÈŒø‰Ê‚Ì‚à‚Ì‚Í–¢ŽÀ‘•
-¦ƒVƒXƒeƒ€Aƒ{[ƒiƒXAƒWƒ‡ƒu‚Ì’Ç‰Á‚ª•K—v‚È‚à‚Ì‚Í–¢ŽÀ‘•
+100000ç•ªå°ãƒ»200000ç•ªå°ãƒ»300000ç•ªå°ãƒ»400000ç•ªå°ãƒ»500000ç•ªå°ãƒ»600000ç•ªå°ãƒ»700000ç•ªå°ãƒ»800000ç•ªå°ãƒ»1000000ç•ªå°ä»¥é™
+2023/11/14 ç¾åœ¨ã®6æ¡ç•ªå°ã®2367ã‚¢ã‚¤ãƒ†ãƒ  å®Ÿè£…å®Œäº†
+â€»ã‚«ãƒ¼ãƒ‰ã§æ•°æžšç…©é›‘ãªåŠ¹æžœã®ã‚‚ã®ã¯æœªå®Ÿè£…
+â€»ã‚·ã‚¹ãƒ†ãƒ ã€ãƒœãƒ¼ãƒŠã‚¹ã€ã‚¸ãƒ§ãƒ–ã®è¿½åŠ ãŒå¿…è¦ãªã‚‚ã®ã¯æœªå®Ÿè£…
 
-¡Œã‚Í5Œ…”Ô‘ä‚ÌC³‚Æ•âŠ®‚É’…Žè—\’è
+ä»Šå¾Œã¯5æ¡ç•ªå°ã®ä¿®æ­£ã¨è£œå®Œã«ç€æ‰‹äºˆå®š
 
 2023-11-15	patch0066
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-10509#[2019] “Á•Êƒ`ƒPƒbƒg‚Ì” #
-100221#”òs‘Dæ‚è‚ÌƒpƒCƒv#
-100222#‹‰e‚ÌŽcŸæ#
-480025#ƒIƒEƒ‹ƒoƒƒ“‚Ìƒ}ƒ“ƒg#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+10509#[2019] ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆã®ç®±#
+100221#é£›è¡Œèˆ¹ä¹—ã‚Šã®ãƒ‘ã‚¤ãƒ—#
+100222#å·¨å½±ã®æ®‹æ»“#
+480025#ã‚ªã‚¦ãƒ«ãƒãƒ­ãƒ³ã®ãƒžãƒ³ãƒˆ#
 
-5Œ…‘äƒAƒCƒeƒ€‚Ì®—‚Ì‚½‚ßA’ŽH‚¢ó‘Ô‚Ì‰ðÁ‚ð–ÚŽw‚µ‚Ü‚·
-ˆß‘•‘•”õ 20508 20510 20515 20596 ŽÀ‘• 20500-25999 ˆß‘•‘•”õ‘SŽÀ‘•
-15500-15999 ‘SŽÀ‘•ƒAƒCƒeƒ€‚ðÌ”Ô 15500-15999 ˆß‘•‘•”õ‘S•”ŽÀ‘•
-Œø‰Ê‚ÍŒã‚ÉˆÚA‚µAŠCŠOŽÀ‘•ƒAƒCƒeƒ€‚ð®—‚µƒ[ƒJƒ‹ƒAƒCƒeƒ€‚Ì‚Ý‚É‚·‚é
+5æ¡å°ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†ã®ãŸã‚ã€è™«é£Ÿã„çŠ¶æ…‹ã®è§£æ¶ˆã‚’ç›®æŒ‡ã—ã¾ã™
+è¡£è£…è£…å‚™ 20508 20510 20515 20596 å®Ÿè£… 20500-25999 è¡£è£…è£…å‚™å…¨å®Ÿè£…
+15500-15999 å…¨å®Ÿè£…ã‚¢ã‚¤ãƒ†ãƒ ã‚’æŽ¡ç•ª 15500-15999 è¡£è£…è£…å‚™å…¨éƒ¨å®Ÿè£…
+åŠ¹æžœã¯å¾Œã«ç§»æ¤ã—ã€æµ·å¤–å®Ÿè£…ã‚¢ã‚¤ãƒ†ãƒ ã‚’æ•´ç†ã—ãƒ­ãƒ¼ã‚«ãƒ«ã‚¢ã‚¤ãƒ†ãƒ ã®ã¿ã«ã™ã‚‹
 
 
 2023-11-14	jpatch231114
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-1001559#–éŽsŒ”(1K)#
-1001560#–éŽsŒ”(1M)#
-1001561#–éŽsŒ”(1G)#
-400556#ˆÙ’[R–âŠ¯‚Ìƒ”ƒF[ƒ‹#
-450309#ƒZƒg‚Ì‰¶’ž#
-460057#ƒXƒvƒ“ƒ^ƒA[ƒ‹ƒ}ƒeƒB#
-490453#ƒGƒŒƒƒ“ƒ^ƒ‹ƒWƒ…ƒGƒ‹#
-312799#¹‚È‚é–hŒì#
-312303#öÝ‰ð•ú(ƒGƒŒƒƒ“ƒ^ƒ‹ƒ}ƒXƒ^[III)#
-312034#öÝ‰ð•ú(ƒCƒ“ƒNƒCƒWƒ^[II)#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+1001559#å¤œå¸‚åˆ¸(1K)#
+1001560#å¤œå¸‚åˆ¸(1M)#
+1001561#å¤œå¸‚åˆ¸(1G)#
+400556#ç•°ç«¯å¯©å•å®˜ã®ãƒ´ã‚§ãƒ¼ãƒ«#
+450309#ã‚»ãƒˆã®æ©å¯µ#
+460057#ã‚¹ãƒ—ãƒ³ã‚¿ã‚¢ãƒ¼ãƒ«ãƒžãƒ†ã‚£#
+490453#ã‚¨ãƒ¬ãƒ¡ãƒ³ã‚¿ãƒ«ã‚¸ãƒ¥ã‚¨ãƒ«#
+312799#è–ãªã‚‹é˜²è­·#
+312303#æ½œåœ¨è§£æ”¾(ã‚¨ãƒ¬ãƒ¡ãƒ³ã‚¿ãƒ«ãƒžã‚¹ã‚¿ãƒ¼III)#
+312034#æ½œåœ¨è§£æ”¾(ã‚¤ãƒ³ã‚¯ã‚¤ã‚¸ã‚¿ãƒ¼II)#
 
-item_cardtype.txt item_db2_add.txt classnum_db.txt XV
+item_cardtype.txt item_db2_add.txt classnum_db.txt æ›´æ–°
 
 2023-11-11	patch0065
-5Œ…”Ô‘ä‚Ì®—€”õ
-21000”Ô‘ä‚Ì—¼ŽèŒ•‚Ì’è‹`’Ç‰Á
+5æ¡ç•ªå°ã®æ•´ç†æº–å‚™
+21000ç•ªå°ã®ä¸¡æ‰‹å‰£ã®å®šç¾©è¿½åŠ 
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-19428#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒ‚ƒ‹ƒtƒFƒEƒX‚Ì“ª‹Ð#
-21050#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒeƒOƒŠƒ‡ƒ“#
-28254#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒuƒbƒ`ƒƒ[#
-32238#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒ‚ƒ‹ƒtƒFƒEƒX‚ÌŽw—Ö#
-32239#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒ‚ƒ‹ƒtƒFƒEƒX‚Ì˜r—Ö#
-32301#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒS[ƒ‹ƒhƒ‹ƒNƒX#
-450132#ƒ}ƒWƒJƒ‹ƒNƒ[ƒX#
-470036#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒ~ƒŠƒ^ƒŠ[ƒu[ƒc#
-470037#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒ~ƒŠƒ^ƒŠ[ƒu[ƒc#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+19428#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ¢ãƒ«ãƒ•ã‚§ã‚¦ã‚¹ã®é ­å·¾#
+21050#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ†ã‚°ãƒªãƒ§ãƒ³#
+28254#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ–ãƒƒãƒãƒ£ãƒ¼#
+32238#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ¢ãƒ«ãƒ•ã‚§ã‚¦ã‚¹ã®æŒ‡è¼ª#
+32239#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ¢ãƒ«ãƒ•ã‚§ã‚¦ã‚¹ã®è…•è¼ª#
+32301#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚´ãƒ¼ãƒ«ãƒ‰ãƒ«ã‚¯ã‚¹#
+450132#ãƒžã‚¸ã‚«ãƒ«ã‚¯ãƒ­ãƒ¼ã‚¹#
+470036#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒŸãƒªã‚¿ãƒªãƒ¼ãƒ–ãƒ¼ãƒ„#
+470037#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒŸãƒªã‚¿ãƒªãƒ¼ãƒ–ãƒ¼ãƒ„#
 
-200016#ƒ~ƒ“ƒXƒgƒŒƒ‹VIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒA[ƒ`ƒƒ[(ƒo[ƒh)Œnê—p]#
-200017#ƒ~ƒ“ƒXƒgƒŒƒ‹ƒ\ƒEƒ‹‚Ì”  [“]¶ƒA[ƒ`ƒƒ[(ƒo[ƒh)Œnê—p]#
-200018#ƒƒ“ƒ_ƒ‰[VIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒA[ƒ`ƒƒ[(ƒ_ƒ“ƒT[)Œnê—p]#
-200019#ƒƒ“ƒ_ƒ‰[ƒ\ƒEƒ‹‚Ì”  [“]¶ƒA[ƒ`ƒƒ[(ƒ_ƒ“ƒT[)Œnê—p]#
+200016#ãƒŸãƒ³ã‚¹ãƒˆãƒ¬ãƒ«VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿã‚¢ãƒ¼ãƒãƒ£ãƒ¼(ãƒãƒ¼ãƒ‰)ç³»å°‚ç”¨]#
+200017#ãƒŸãƒ³ã‚¹ãƒˆãƒ¬ãƒ«ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿã‚¢ãƒ¼ãƒãƒ£ãƒ¼(ãƒãƒ¼ãƒ‰)ç³»å°‚ç”¨]#
+200018#ãƒ¯ãƒ³ãƒ€ãƒ©ãƒ¼VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿã‚¢ãƒ¼ãƒãƒ£ãƒ¼(ãƒ€ãƒ³ã‚µãƒ¼)ç³»å°‚ç”¨]#
+200019#ãƒ¯ãƒ³ãƒ€ãƒ©ãƒ¼ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿã‚¢ãƒ¼ãƒãƒ£ãƒ¼(ãƒ€ãƒ³ã‚µãƒ¼)ç³»å°‚ç”¨]#
 
-27120#ƒCƒAƒ‰ƒJ[ƒh#
-27122#ƒNƒ‹ƒsƒ‰ƒJ[ƒh#
-27124#ƒWƒƒƒK[ƒJ[ƒh#
-27125#Žñ‚È‚µƒ‰ƒoƒJ[ƒh#
+27120#ã‚¤ã‚¢ãƒ©ã‚«ãƒ¼ãƒ‰#
+27122#ã‚¯ãƒ«ãƒ”ãƒ©ã‚«ãƒ¼ãƒ‰#
+27124#ã‚¸ãƒ£ã‚¬ãƒ¼ã‚«ãƒ¼ãƒ‰#
+27125#é¦–ãªã—ãƒ©ãƒã‚«ãƒ¼ãƒ‰#
 
-item_cardtype.txt XV
+item_cardtype.txt æ›´æ–°
 
 2023-11-11	patch0064
-„—E–³‘oƒAƒCƒeƒ€‚ÌƒZƒbƒgŒø‰Ê®—
-19379#„—E–³‘o‚Ì–ä–XŽq#
-450165#„—E–³‘o‚Ìbãò#
-460052#„—E–³‘o‚ÌâÄŽè#
-470048#„—E–³‘o‚ÌŠÑ#
-480114#„—E–³‘o‚Ì_—`#
+å‰›å‹‡ç„¡åŒã‚¢ã‚¤ãƒ†ãƒ ã®ã‚»ãƒƒãƒˆåŠ¹æžœæ•´ç†
+19379#å‰›å‹‡ç„¡åŒã®ç´‹å¸½å­#
+450165#å‰›å‹‡ç„¡åŒã®ç”²èƒ„#
+460052#å‰›å‹‡ç„¡åŒã®ç± æ‰‹#
+470048#å‰›å‹‡ç„¡åŒã®è²«#
+480114#å‰›å‹‡ç„¡åŒã®ç¥žè¼¿#
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-200021#ƒ\[ƒTƒ‰[VIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒ}ƒWƒVƒƒƒ“(ƒZ[ƒW)Œnê—p]#
-200022#ƒ\[ƒTƒ‰[ƒ\ƒEƒ‹‚Ì”  [“]¶ƒ}ƒWƒVƒƒƒ“(ƒZ[ƒW)Œnê—p]#
-10510#ƒnƒƒEƒBƒ“ƒ`ƒPƒbƒg‚Ì” #
-100114#ƒC[ƒuƒ‹‚ÌŽèŽ†#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+200021#ã‚½ãƒ¼ã‚µãƒ©ãƒ¼VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿãƒžã‚¸ã‚·ãƒ£ãƒ³(ã‚»ãƒ¼ã‚¸)ç³»å°‚ç”¨]#
+200022#ã‚½ãƒ¼ã‚µãƒ©ãƒ¼ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿãƒžã‚¸ã‚·ãƒ£ãƒ³(ã‚»ãƒ¼ã‚¸)ç³»å°‚ç”¨]#
+10510#ãƒãƒ­ã‚¦ã‚£ãƒ³ãƒã‚±ãƒƒãƒˆã®ç®±#
+100114#ã‚¤ãƒ¼ãƒ–ãƒ«ã®æ‰‹ç´™#
 
-V‹K’è‹`’Ç‰Á‚Æ®—
-10500,consum,ƒRƒX‚½‚ÜŠ£—jŽq&‚¦‚È‚±Selection,2,,,10,,,,,2074075135,2,,,1,,,{},{}
-10501,consum,ƒƒJƒjƒbƒNVIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒ}[ƒ`ƒƒƒ“ƒg(ƒuƒ‰ƒbƒNƒXƒ~ƒX)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10502,consum,ƒƒJƒjƒbƒNƒ\ƒEƒ‹‚Ì”  [“]¶ƒ}[ƒ`ƒƒƒ“ƒg(ƒuƒ‰ƒbƒNƒXƒ~ƒX)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10503,consum,ƒRƒX‚½‚ÜCoordinateII,2,,,10,,,,,2074075135,2,,,1,,,{},{}
-10504,consum,ƒ‹[ƒ“ƒiƒCƒgVIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒ\[ƒhƒ}ƒ“(ƒiƒCƒg)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10505,consum,ƒ‹[ƒ“ƒiƒCƒgƒ\ƒEƒ‹‚Ì”  [“]¶ƒ\[ƒhƒ}ƒ“(ƒiƒCƒg)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10506,consum,EDDA¶‘ÌHŠwŒ¤‹†Šƒ`ƒPƒbƒg‚Ì” ,2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10507,consum,[2019summer] •à—…Žµ¸˜BƒtƒH[ƒX‚Ì” ,2,,10,0,,,,,2074075135,2,,,1,,,{},{}
-10508,consum,[2019summer] ƒhƒŒƒbƒV[ƒN[ƒ|ƒ“‚Ì” ,2,,10,0,,,,,2074075135,2,,,1,,,{},{}
-10509,consum,[2019] “Á•Êƒ`ƒPƒbƒg‚Ì” ,2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10511,consum,[17thAnniversary] •à—…Žµ¸˜BƒtƒH[ƒX‚Ì” ,2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10512,consum,[17thAnniversary] ƒhƒŒƒbƒV[ƒN[ƒ|ƒ“‚Ì” ,2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10518,consum,ƒMƒƒ`ƒ“ƒNƒƒXVIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒV[ƒt(ƒAƒTƒVƒ“)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10519,consum,ƒMƒƒ`ƒ“ƒNƒƒXƒ\ƒEƒ‹‚Ì”  [“]¶ƒV[ƒt(ƒAƒTƒVƒ“)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10521,consum,ƒWƒFƒlƒeƒBƒbƒNVIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒ}[ƒ`ƒƒƒ“ƒg(ƒAƒ‹ƒPƒ~ƒXƒg)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10522,consum,ƒWƒFƒlƒeƒBƒbƒNƒ\ƒEƒ‹‚Ì”  [“]¶ƒ}[ƒ`ƒƒƒ“ƒg(ƒAƒ‹ƒPƒ~ƒXƒg)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10526,consum,ƒRƒX‚½‚ÜSpringPartyIII,2,,,10,,,,,2074075135,2,,,1,,,{},{}
-10527,consum,ƒEƒH[ƒƒbƒNVIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒ}ƒWƒVƒƒƒ“(ƒEƒBƒU[ƒh)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10528,consum,ƒEƒH[ƒƒbƒNƒ\ƒEƒ‹‚Ì”  [“]¶ƒ}ƒWƒVƒƒƒ“(ƒEƒBƒU[ƒh)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10529,consum,ƒRƒX‚½‚ÜJuneBrideII,2,,,10,,,,,2074075135,2,,,1,,,{},{}
-10530,consum,ƒƒCƒ„ƒ‹ƒK[ƒhVIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒ\[ƒhƒ}ƒ“(ƒNƒ‹ƒZƒCƒ_[)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10531,consum,ƒƒCƒ„ƒ‹ƒK[ƒhƒ\ƒEƒ‹‚Ì”  [“]¶ƒ\[ƒhƒ}ƒ“(ƒNƒ‹ƒZƒCƒ_[)Œnê—p],2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10571,consum,ƒRƒX‚½‚ÜHairCollectionVI(–¾F),2,,,10,,,,,2074075135,2,,,1,,,{},{}
-10572,consum,•œƒRƒX‚½‚ÜˆøŠ·Œ”10ŒÂ‚Ì” ,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 1000318,10; },{}
-10598,consum,[2020]BitCashƒ`ƒPƒbƒg‚Ì” ,2,,,0,,,,,2074075135,2,,,1,,,{},{}
-10600,consum,ƒRƒX‚½‚ÜRoyal,2,,,10,,,,,2074075135,2,,,1,,,{},{}
-10626,consum,ƒRƒX‚½‚ÜHairCollectionVII(ˆÃF),2,,,10,,,,,2074075135,2,,,1,,,{},{}
+æ–°è¦å®šç¾©è¿½åŠ ã¨æ•´ç†
+10500,consum,ã‚³ã‚¹ãŸã¾ä¹¾æ›œå­&ãˆãªã“Selection,2,,,10,,,,,2074075135,2,,,1,,,{},{}
+10501,consum,ãƒ¡ã‚«ãƒ‹ãƒƒã‚¯VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿãƒžãƒ¼ãƒãƒ£ãƒ³ãƒˆ(ãƒ–ãƒ©ãƒƒã‚¯ã‚¹ãƒŸã‚¹)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10502,consum,ãƒ¡ã‚«ãƒ‹ãƒƒã‚¯ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿãƒžãƒ¼ãƒãƒ£ãƒ³ãƒˆ(ãƒ–ãƒ©ãƒƒã‚¯ã‚¹ãƒŸã‚¹)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10503,consum,ã‚³ã‚¹ãŸã¾CoordinateII,2,,,10,,,,,2074075135,2,,,1,,,{},{}
+10504,consum,ãƒ«ãƒ¼ãƒ³ãƒŠã‚¤ãƒˆVIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿã‚½ãƒ¼ãƒ‰ãƒžãƒ³(ãƒŠã‚¤ãƒˆ)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10505,consum,ãƒ«ãƒ¼ãƒ³ãƒŠã‚¤ãƒˆã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿã‚½ãƒ¼ãƒ‰ãƒžãƒ³(ãƒŠã‚¤ãƒˆ)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10506,consum,EDDAç”Ÿä½“å·¥å­¦ç ”ç©¶æ‰€ãƒã‚±ãƒƒãƒˆã®ç®±,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10507,consum,[2019summer] æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±,2,,10,0,,,,,2074075135,2,,,1,,,{},{}
+10508,consum,[2019summer] ãƒ‰ãƒ¬ãƒƒã‚·ãƒ¼ã‚¯ãƒ¼ãƒãƒ³ã®ç®±,2,,10,0,,,,,2074075135,2,,,1,,,{},{}
+10509,consum,[2019] ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆã®ç®±,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10511,consum,[17thAnniversary] æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10512,consum,[17thAnniversary] ãƒ‰ãƒ¬ãƒƒã‚·ãƒ¼ã‚¯ãƒ¼ãƒãƒ³ã®ç®±,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10518,consum,ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿã‚·ãƒ¼ãƒ•(ã‚¢ã‚µã‚·ãƒ³)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10519,consum,ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿã‚·ãƒ¼ãƒ•(ã‚¢ã‚µã‚·ãƒ³)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10521,consum,ã‚¸ã‚§ãƒãƒ†ã‚£ãƒƒã‚¯VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿãƒžãƒ¼ãƒãƒ£ãƒ³ãƒˆ(ã‚¢ãƒ«ã‚±ãƒŸã‚¹ãƒˆ)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10522,consum,ã‚¸ã‚§ãƒãƒ†ã‚£ãƒƒã‚¯ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿãƒžãƒ¼ãƒãƒ£ãƒ³ãƒˆ(ã‚¢ãƒ«ã‚±ãƒŸã‚¹ãƒˆ)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10526,consum,ã‚³ã‚¹ãŸã¾SpringPartyIII,2,,,10,,,,,2074075135,2,,,1,,,{},{}
+10527,consum,ã‚¦ã‚©ãƒ¼ãƒ­ãƒƒã‚¯VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿãƒžã‚¸ã‚·ãƒ£ãƒ³(ã‚¦ã‚£ã‚¶ãƒ¼ãƒ‰)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10528,consum,ã‚¦ã‚©ãƒ¼ãƒ­ãƒƒã‚¯ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿãƒžã‚¸ã‚·ãƒ£ãƒ³(ã‚¦ã‚£ã‚¶ãƒ¼ãƒ‰)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10529,consum,ã‚³ã‚¹ãŸã¾JuneBrideII,2,,,10,,,,,2074075135,2,,,1,,,{},{}
+10530,consum,ãƒ­ã‚¤ãƒ¤ãƒ«ã‚¬ãƒ¼ãƒ‰VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿã‚½ãƒ¼ãƒ‰ãƒžãƒ³(ã‚¯ãƒ«ã‚»ã‚¤ãƒ€ãƒ¼)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10531,consum,ãƒ­ã‚¤ãƒ¤ãƒ«ã‚¬ãƒ¼ãƒ‰ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿã‚½ãƒ¼ãƒ‰ãƒžãƒ³(ã‚¯ãƒ«ã‚»ã‚¤ãƒ€ãƒ¼)ç³»å°‚ç”¨],2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10571,consum,ã‚³ã‚¹ãŸã¾HairCollectionVI(æ˜Žè‰²),2,,,10,,,,,2074075135,2,,,1,,,{},{}
+10572,consum,å¾©åˆ»ã‚³ã‚¹ãŸã¾å¼•æ›åˆ¸10å€‹ã®ç®±,2,,,0,,,,,2074075135,2,,,1,,,{ getitem 1000318,10; },{}
+10598,consum,[2020]BitCashãƒã‚±ãƒƒãƒˆã®ç®±,2,,,0,,,,,2074075135,2,,,1,,,{},{}
+10600,consum,ã‚³ã‚¹ãŸã¾Royal,2,,,10,,,,,2074075135,2,,,1,,,{},{}
+10626,consum,ã‚³ã‚¹ãŸã¾HairCollectionVII(æš—è‰²),2,,,10,,,,,2074075135,2,,,1,,,{},{}
 
-19407,head,ƒ[ƒNƒLƒƒƒbƒv,4,,10,100,,18:15,,0,2074075135,2,256,,100,1793,1,{},{}
-19410,head,‰¤‹‰ƒ~ƒjƒƒƒ“,4,,10,500,,10:0,,1,2074075135,2,256,,10,1758,1,{},{}
-19411,head,•‚—V‚·‚éƒWƒIƒCƒA,4,,10,300,,,,0,2074075135,2,1,,130,1730,0,{},{}
-19412,head,ƒtƒŒƒCƒ€ƒo[ƒh,4,,10,300,,6:0,,0,2074075135,2,256,,130,832,1,{},{}
-19428,head,ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒ‚ƒ‹ƒtƒFƒEƒX‚Ì“ª‹Ð,4,,10,200,,15:0,,1,2074075135,2,256,,150,256,1,{},{}
-19436,head,ƒ”ƒFƒXƒp[ƒwƒbƒhƒMƒA,4,,10,400,,8:0,,1,2074075135,2,256,,100,1827,1,{},{}
-19437,head,ƒŠƒgƒ‹ƒK[ƒfƒ“,4,,10,100,,,,0,2074075135,2,512,,100,1830,0,{},{}
-19438,head,‰Š—‹–‚—‚ÌŽñü‚è,4,,10,100,,,,0,2074075135,2,1,,70,1831,0,{},{}
-19440,head,ƒAƒŠƒGƒXƒ_ƒCƒAƒfƒ€,4,,10,400,,200:0,,1,2074075135,2,256,,80,531,1,{},{}
-19441,head,ƒJƒvƒŠƒR[ƒ“ƒNƒ‰ƒEƒ“,4,,10,400,,7:0,,1,2074075135,2,256,,80,621,1,{},{}
-19442,head,ƒpƒCƒV[ƒYƒNƒ‰ƒEƒ“,4,,10,400,,7:0,,1,2074075135,2,256,,80,512,1,{},{}
+19407,head,ãƒ¯ãƒ¼ã‚¯ã‚­ãƒ£ãƒƒãƒ—,4,,10,100,,18:15,,0,2074075135,2,256,,100,1793,1,{},{}
+19410,head,çŽ‹ç´šãƒŸãƒ‹ãƒ¡ãƒ­ãƒ³,4,,10,500,,10:0,,1,2074075135,2,256,,10,1758,1,{},{}
+19411,head,æµ®éŠã™ã‚‹ã‚¸ã‚ªã‚¤ã‚¢,4,,10,300,,,,0,2074075135,2,1,,130,1730,0,{},{}
+19412,head,ãƒ•ãƒ¬ã‚¤ãƒ ãƒãƒ¼ãƒ‰,4,,10,300,,6:0,,0,2074075135,2,256,,130,832,1,{},{}
+19428,head,ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ¢ãƒ«ãƒ•ã‚§ã‚¦ã‚¹ã®é ­å·¾,4,,10,200,,15:0,,1,2074075135,2,256,,150,256,1,{},{}
+19436,head,ãƒ´ã‚§ã‚¹ãƒ‘ãƒ¼ãƒ˜ãƒƒãƒ‰ã‚®ã‚¢,4,,10,400,,8:0,,1,2074075135,2,256,,100,1827,1,{},{}
+19437,head,ãƒªãƒˆãƒ«ã‚¬ãƒ¼ãƒ‡ãƒ³,4,,10,100,,,,0,2074075135,2,512,,100,1830,0,{},{}
+19438,head,ç‚Žé›·é­”å¥³ã®é¦–é£¾ã‚Š,4,,10,100,,,,0,2074075135,2,1,,70,1831,0,{},{}
+19440,head,ã‚¢ãƒªã‚¨ã‚¹ãƒ€ã‚¤ã‚¢ãƒ‡ãƒ ,4,,10,400,,200:0,,1,2074075135,2,256,,80,531,1,{},{}
+19441,head,ã‚«ãƒ—ãƒªã‚³ãƒ¼ãƒ³ã‚¯ãƒ©ã‚¦ãƒ³,4,,10,400,,7:0,,1,2074075135,2,256,,80,621,1,{},{}
+19442,head,ãƒ‘ã‚¤ã‚·ãƒ¼ã‚ºã‚¯ãƒ©ã‚¦ãƒ³,4,,10,400,,7:0,,1,2074075135,2,256,,80,512,1,{},{}
 
-20717,robe,‹_ŽÖ‚Ì”ç,4,,10,400,,38:0,,0,2074075135,2,4,,1,,1,{},{}
-20718,robe,‹_ŽÖ‚Ì”ç,4,,10,400,,38:0,,1,2074075135,2,4,,1,,1,{},{}
-20754,robe,ƒvƒƒ“ƒeƒ‰ŒR‚Ìƒ^ƒXƒL,4,,10,1000,,13:0,,1,2074075135,2,4,,100,,1,{},{}
-20755,robe,ƒvƒƒ“ƒeƒ‰ŒR’c’·‚Ìƒ^ƒXƒL,4,,10,1000,,13:0,,1,2074075135,2,4,,100,,1,{},{}
-20762,cos,[ˆß‘•] ‘åˆ«–‚‚Ì—ƒ,4,,10,,,,,0,2074075135,2,8192,,1,10,0,{},{}
-20784,robe,ƒAƒ~ƒXƒgƒ‹ƒŠƒ…ƒbƒN,4,,10,200,,18:0,,1,2074075135,2,4,,1,4,1,{},{}
-20785,robe,‘å“VŽg‚Ì—ƒ,4,,10,200,,18:0,,1,2074075135,2,4,,1,1,1,{},{}
-20786,robe,‘Â“VŽg‚Ì—ƒ,4,,10,200,,18:0,,1,2074075135,2,4,,1,3,1,{},{}
-20791,robe,ƒyƒ‹ƒƒbƒN‚Ìƒ}ƒ“ƒg,4,,10,1000,,100:0,,1,2074075135,2,4,,50,,1,{},{}
-20792,robe,”òs‘Dƒ}ƒ“ƒg,4,,10,1000,,100:0,,0,2074075135,2,4,,50,,1,{},{}
-20793,robe,ƒŒƒNƒCƒGƒ€ƒ}ƒ“ƒg,4,,10,400,,25:0,,0,2074075135,2,4,,100,,1,{},{}
-20829,robe,[ƒŒƒ“ƒ^ƒ‹] ƒŠƒ“ƒhƒuƒ‹ƒ€‚Ì”ç,4,,10,600,,15:0,,0,2074075135,2,4,,100,,0,{},{}
-20832,robe,[ƒŒƒ“ƒ^ƒ‹] ‘‰¤ƒVƒ…ƒ~ƒbƒc‚Ìƒ}ƒ“ƒg,4,,10,600,,,,0,2074075135,2,4,,130,,0,{},{}
-20857,robe,ƒXƒiƒCƒsƒ“ƒOƒx[ƒ‹,4,,10,300,,18:10,,1,268435456,2,4,,130,,1,{},{}
-20861,robe,ƒ\[ƒhƒEƒBƒ“ƒO,4,,10,200,,18:0,,1,2074075135,2,4,,1,,1,{},{}
-20899,robe,zˆõ‚ÌƒŠƒ…ƒbƒN,4,,10,600,,16:0,,1,2074075135,2,4,,130,,1,{},{}
-20900,robe,—pS–_‚ÌƒXƒJ[ƒt,4,,10,300,,18:10,,1,2074075135,2,4,,130,,1,{},{}
-20901,robe,¸—ì‚Ìƒ}ƒ“ƒg,4,,10,500,,12:0,,1,2074075135,2,4,,130,,1,{},{}
-20907,robe,ƒtƒFƒAƒŠ[ƒNƒ[ƒX,4,,10,900,,12:0,,1,2074075135,2,4,,100,,1,{},{}
-20925,robe,˜A‡ŒRŽi—ßŠ¯‚Ìƒ}ƒ“ƒg,4,,10,300,,20:10,,1,2074075135,2,4,,100,,1,{},{}
-20952,robe,–¼‚à–³‚«ˆÃŽEŽÒ‚Ìƒ}ƒtƒ‰[,4,,10,100,,10:5,,1,2074075135,2,4,,100,,1,{},{}
-20962,robe,ƒeƒ…ƒ|[ƒ“‚Ì”ç,4,,10,600,,15:10,,1,2074075135,2,4,,100,,1,{},{}
-20969,robe,“øF‚Ìƒ}ƒtƒ‰[,4,,10,300,,12:0,,0,2074075135,2,4,,100,,1,{},{}
-20974,robe,ƒsƒIƒj[ƒ}ƒ~[‚Ìƒt[ƒh,4,,10,900,,25:0,,0,2074075135,2,4,,100,,0,{},{}
-20977,robe,ƒXƒm[ƒtƒŠƒbƒv‚Ìƒt[ƒh,4,,10,900,,25:0,,0,2074075135,2,4,,100,,0,{},{}
-20978,robe,¢ŠEŽ÷‚Ì‚Ù‚±‚è‚Ìƒt[ƒh,4,,10,900,,25:0,,0,2074075135,2,4,,100,,0,{},{}
-20979,robe,‚Ò‚µ‚á‚èƒn[ƒu‚Ìƒt[ƒh,4,,10,900,,25:0,,0,2074075135,2,4,,100,,0,{},{}
+20717,robe,å·¨ç¥žè›‡ã®çš®,4,,10,400,,38:0,,0,2074075135,2,4,,1,,1,{},{}
+20718,robe,å·¨ç¥žè›‡ã®çš®,4,,10,400,,38:0,,1,2074075135,2,4,,1,,1,{},{}
+20754,robe,ãƒ—ãƒ­ãƒ³ãƒ†ãƒ©è»ã®ã‚¿ã‚¹ã‚­,4,,10,1000,,13:0,,1,2074075135,2,4,,100,,1,{},{}
+20755,robe,ãƒ—ãƒ­ãƒ³ãƒ†ãƒ©è»å›£é•·ã®ã‚¿ã‚¹ã‚­,4,,10,1000,,13:0,,1,2074075135,2,4,,100,,1,{},{}
+20762,cos,[è¡£è£…] å¤§æ‚ªé­”ã®ç¿¼,4,,10,,,,,0,2074075135,2,8192,,1,10,0,{},{}
+20784,robe,ã‚¢ãƒŸã‚¹ãƒˆãƒ«ãƒªãƒ¥ãƒƒã‚¯,4,,10,200,,18:0,,1,2074075135,2,4,,1,4,1,{},{}
+20785,robe,å¤§å¤©ä½¿ã®ç¿¼,4,,10,200,,18:0,,1,2074075135,2,4,,1,1,1,{},{}
+20786,robe,å •å¤©ä½¿ã®ç¿¼,4,,10,200,,18:0,,1,2074075135,2,4,,1,3,1,{},{}
+20791,robe,ãƒšãƒ«ãƒ­ãƒƒã‚¯ã®ãƒžãƒ³ãƒˆ,4,,10,1000,,100:0,,1,2074075135,2,4,,50,,1,{},{}
+20792,robe,é£›è¡Œèˆ¹ãƒžãƒ³ãƒˆ,4,,10,1000,,100:0,,0,2074075135,2,4,,50,,1,{},{}
+20793,robe,ãƒ¬ã‚¯ã‚¤ã‚¨ãƒ ãƒžãƒ³ãƒˆ,4,,10,400,,25:0,,0,2074075135,2,4,,100,,1,{},{}
+20829,robe,[ãƒ¬ãƒ³ã‚¿ãƒ«] ãƒªãƒ³ãƒ‰ãƒ–ãƒ«ãƒ ã®çš®,4,,10,600,,15:0,,0,2074075135,2,4,,100,,0,{},{}
+20832,robe,[ãƒ¬ãƒ³ã‚¿ãƒ«] å›½çŽ‹ã‚·ãƒ¥ãƒŸãƒƒãƒ„ã®ãƒžãƒ³ãƒˆ,4,,10,600,,,,0,2074075135,2,4,,130,,0,{},{}
+20857,robe,ã‚¹ãƒŠã‚¤ãƒ”ãƒ³ã‚°ãƒ™ãƒ¼ãƒ«,4,,10,300,,18:10,,1,268435456,2,4,,130,,1,{},{}
+20861,robe,ã‚½ãƒ¼ãƒ‰ã‚¦ã‚£ãƒ³ã‚°,4,,10,200,,18:0,,1,2074075135,2,4,,1,,1,{},{}
+20899,robe,é‰±å“¡ã®ãƒªãƒ¥ãƒƒã‚¯,4,,10,600,,16:0,,1,2074075135,2,4,,130,,1,{},{}
+20900,robe,ç”¨å¿ƒæ£’ã®ã‚¹ã‚«ãƒ¼ãƒ•,4,,10,300,,18:10,,1,2074075135,2,4,,130,,1,{},{}
+20901,robe,ç²¾éœŠã®ãƒžãƒ³ãƒˆ,4,,10,500,,12:0,,1,2074075135,2,4,,130,,1,{},{}
+20907,robe,ãƒ•ã‚§ã‚¢ãƒªãƒ¼ã‚¯ãƒ­ãƒ¼ã‚¹,4,,10,900,,12:0,,1,2074075135,2,4,,100,,1,{},{}
+20925,robe,é€£åˆè»å¸ä»¤å®˜ã®ãƒžãƒ³ãƒˆ,4,,10,300,,20:10,,1,2074075135,2,4,,100,,1,{},{}
+20952,robe,åã‚‚ç„¡ãæš—æ®ºè€…ã®ãƒžãƒ•ãƒ©ãƒ¼,4,,10,100,,10:5,,1,2074075135,2,4,,100,,1,{},{}
+20962,robe,ãƒ†ãƒ¥ãƒãƒ¼ãƒ³ã®çš®,4,,10,600,,15:10,,1,2074075135,2,4,,100,,1,{},{}
+20969,robe,è™¹è‰²ã®ãƒžãƒ•ãƒ©ãƒ¼,4,,10,300,,12:0,,0,2074075135,2,4,,100,,1,{},{}
+20974,robe,ãƒ”ã‚ªãƒ‹ãƒ¼ãƒžãƒŸãƒ¼ã®ãƒ•ãƒ¼ãƒ‰,4,,10,900,,25:0,,0,2074075135,2,4,,100,,0,{},{}
+20977,robe,ã‚¹ãƒŽãƒ¼ãƒ•ãƒªãƒƒãƒ—ã®ãƒ•ãƒ¼ãƒ‰,4,,10,900,,25:0,,0,2074075135,2,4,,100,,0,{},{}
+20978,robe,ä¸–ç•Œæ¨¹ã®ã»ã“ã‚Šã®ãƒ•ãƒ¼ãƒ‰,4,,10,900,,25:0,,0,2074075135,2,4,,100,,0,{},{}
+20979,robe,ã´ã—ã‚ƒã‚Šãƒãƒ¼ãƒ–ã®ãƒ•ãƒ¼ãƒ‰,4,,10,900,,25:0,,0,2074075135,2,4,,100,,0,{},{}
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-11-11	patch0063
-400000”Ô‘äˆÈ~‚ÅŒø‰ÊŽÀ‘•Ï‚Ý‚ÌƒAƒCƒeƒ€‚ðƒRƒƒ“ƒgƒAƒEƒg
+400000ç•ªå°ä»¥é™ã§åŠ¹æžœå®Ÿè£…æ¸ˆã¿ã®ã‚¢ã‚¤ãƒ†ãƒ ã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆ
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€C³
-300139#••ˆó‚³‚ê‚½ŒŽ–é‰ÔƒJ[ƒh#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ ä¿®æ­£
+300139#å°å°ã•ã‚ŒãŸæœˆå¤œèŠ±ã‚«ãƒ¼ãƒ‰#
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-200024#ƒŒƒ“ƒWƒƒ[VIPƒ`ƒPƒbƒg‚Ì”  [“]¶ƒA[ƒ`ƒƒ[(ƒnƒ“ƒ^[)Œnê—p]#
-200025#ƒŒƒ“ƒWƒƒ[ƒ\ƒEƒ‹‚Ì”  [“]¶ƒA[ƒ`ƒƒ[(ƒnƒ“ƒ^[)Œnê—p]#
-400047#ƒ‰ƒ“ƒiƒEƒF[EƒAƒNƒZƒ‰ƒŒ[ƒ^#
-400048#ƒpƒiƒMƒA‚Ì‘¡‚è•¨#
-410001#ƒtƒ@ƒ‰ƒ“ƒNƒX#
-450142#ƒI[ƒNƒ[ƒh‚ÌŠZ#
-460003#ƒtƒFƒU[ƒV[ƒ‹ƒh#
-470047#ŠoÁ‰Î—‹‘å_ŒC#
-480044#ƒXƒNƒ[ƒ‹ƒXƒg[ƒ‹#
-480045#ƒK[ƒfƒBƒAƒ“ƒIƒuƒ\ƒEƒ‹#
-490035#ƒ\ƒƒ‚ƒ“‚Ìƒyƒ“ƒ_ƒ“ƒg#
-490036#ƒ\ƒƒ‚ƒ“‚Ìƒyƒ“ƒ_ƒ“ƒg#
-500009#—³ŽE‚µ‚Ì’·Œ•#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+200024#ãƒ¬ãƒ³ã‚¸ãƒ£ãƒ¼VIPãƒã‚±ãƒƒãƒˆã®ç®± [è»¢ç”Ÿã‚¢ãƒ¼ãƒãƒ£ãƒ¼(ãƒãƒ³ã‚¿ãƒ¼)ç³»å°‚ç”¨]#
+200025#ãƒ¬ãƒ³ã‚¸ãƒ£ãƒ¼ã‚½ã‚¦ãƒ«ã®ç®± [è»¢ç”Ÿã‚¢ãƒ¼ãƒãƒ£ãƒ¼(ãƒãƒ³ã‚¿ãƒ¼)ç³»å°‚ç”¨]#
+400047#ãƒ©ãƒ³ãƒŠã‚¦ã‚§ãƒ¼ãƒ»ã‚¢ã‚¯ã‚»ãƒ©ãƒ¬ãƒ¼ã‚¿#
+400048#ãƒ‘ãƒŠã‚®ã‚¢ã®è´ˆã‚Šç‰©#
+410001#ãƒ•ã‚¡ãƒ©ãƒ³ã‚¯ã‚¹#
+450142#ã‚ªãƒ¼ã‚¯ãƒ­ãƒ¼ãƒ‰ã®éŽ§#
+460003#ãƒ•ã‚§ã‚¶ãƒ¼ã‚·ãƒ¼ãƒ«ãƒ‰#
+470047#è¦šé†’ç«é›·å¤§ç¥žé´#
+480044#ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚¹ãƒˆãƒ¼ãƒ«#
+480045#ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³ã‚ªãƒ–ã‚½ã‚¦ãƒ«#
+490035#ã‚½ãƒ­ãƒ¢ãƒ³ã®ãƒšãƒ³ãƒ€ãƒ³ãƒˆ#
+490036#ã‚½ãƒ­ãƒ¢ãƒ³ã®ãƒšãƒ³ãƒ€ãƒ³ãƒˆ#
+500009#ç«œæ®ºã—ã®é•·å‰£#
 
-ƒ‰ƒ“ƒ_ƒ€ƒIƒvƒVƒ‡ƒ“ƒAƒCƒeƒ€‚Í lapineupgrade_db.txt ‚É’Ç‹L•K—v‚È‚Ì‚ÅŒã“úŽÀ‘•—\’è
-100281#ƒwƒ‹ƒ€ƒXƒNƒ[ƒ‹I#
-100282#ƒEƒFƒ|ƒ“ƒXƒNƒ[ƒ‹I#
-100283#ƒƒCƒ‹ƒXƒNƒ[ƒ‹I#
-100284#ƒVƒ…[ƒYƒXƒNƒ[ƒ‹I#
-100285#ƒAƒNƒZƒTƒŠ[ƒXƒNƒ[ƒ‹I#
+ãƒ©ãƒ³ãƒ€ãƒ ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚¢ã‚¤ãƒ†ãƒ ã¯ lapineupgrade_db.txt ã«è¿½è¨˜å¿…è¦ãªã®ã§å¾Œæ—¥å®Ÿè£…äºˆå®š
+100281#ãƒ˜ãƒ«ãƒ ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«I#
+100282#ã‚¦ã‚§ãƒãƒ³ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«I#
+100283#ãƒ¡ã‚¤ãƒ«ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«I#
+100284#ã‚·ãƒ¥ãƒ¼ã‚ºã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«I#
+100285#ã‚¢ã‚¯ã‚»ã‚µãƒªãƒ¼ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«I#
 
-u„—E–³‘o‚Ì`vƒZƒbƒgŒø‰Ê®—€”õ
-(5 * 4) / 2 = 10’Ê‚è
-19379#„—E–³‘o‚Ì–ä–XŽq#
-450165#„—E–³‘o‚Ìbãò#
-460052#„—E–³‘o‚ÌâÄŽè#
-470048#„—E–³‘o‚ÌŠÑ#
-480114#„—E–³‘o‚Ì_—`#
+ã€Œå‰›å‹‡ç„¡åŒã®ï½žã€ã‚»ãƒƒãƒˆåŠ¹æžœæ•´ç†æº–å‚™
+(5 * 4) / 2 = 10é€šã‚Š
+19379#å‰›å‹‡ç„¡åŒã®ç´‹å¸½å­#
+450165#å‰›å‹‡ç„¡åŒã®ç”²èƒ„#
+460052#å‰›å‹‡ç„¡åŒã®ç± æ‰‹#
+470048#å‰›å‹‡ç„¡åŒã®è²«#
+480114#å‰›å‹‡ç„¡åŒã®ç¥žè¼¿#
 
-19379,Unknown_Item,„—E–³‘o‚Ì–ä–XŽq,4,,,400,,,,1,2074075135,2,256,,100,1759,1,{},{ bonus bAgi,5; bonus bDex,5; bonus bAddLongWeaponDamage,5; bonus bPerfectHitAddRate,10; bonus bHit,getequiprefinerycnt(1)*2; bonus bSkillDelayRate,-1*getequiprefinerycnt(1)*2; if(getequiprefinerycnt(1) >= 7){ bonus bAddLongWeaponDamage,10; bonus bPerfectHitAddRate,20; } if(getequiprefinerycnt(1) >= 7){ bonus bAddLongWeaponDamage,10; bonus bPerfectHitAddRate,20; } }
+19379,Unknown_Item,å‰›å‹‡ç„¡åŒã®ç´‹å¸½å­,4,,,400,,,,1,2074075135,2,256,,100,1759,1,{},{ bonus bAgi,5; bonus bDex,5; bonus bAddLongWeaponDamage,5; bonus bPerfectHitAddRate,10; bonus bHit,getequiprefinerycnt(1)*2; bonus bSkillDelayRate,-1*getequiprefinerycnt(1)*2; if(getequiprefinerycnt(1) >= 7){ bonus bAddLongWeaponDamage,10; bonus bPerfectHitAddRate,20; } if(getequiprefinerycnt(1) >= 7){ bonus bAddLongWeaponDamage,10; bonus bPerfectHitAddRate,20; } }
 
-450165,armor,„—E–³‘o‚Ìbãò,4,,10,1000,,120:10,,1,2074075135,2,16,,100,,1,{},{ bonus2 bAddRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus bPerfectHitAddRate,5*getequiprefinerycnt(); if(equippeditem(470048)){ bonus bNoSizeFix,0; } if(equippeditem(19379)){ bonus bAllStatus,15; } if(equippeditem(480114)){ bonus bMaxHPrate,20*getequiprefinerycnt(2)/3; bonus bLongAtkDef,5; } }
+450165,armor,å‰›å‹‡ç„¡åŒã®ç”²èƒ„,4,,10,1000,,120:10,,1,2074075135,2,16,,100,,1,{},{ bonus2 bAddRace,Rct_Player,7; bonus2 bMagicSubRace,Rct_Player,7; bonus bPerfectHitAddRate,5*getequiprefinerycnt(); if(equippeditem(470048)){ bonus bNoSizeFix,0; } if(equippeditem(19379)){ bonus bAllStatus,15; } if(equippeditem(480114)){ bonus bMaxHPrate,20*getequiprefinerycnt(2)/3; bonus bLongAtkDef,5; } }
 
-460052,shield,„—E–³‘o‚ÌâÄŽè,4,,10,400,,60:15,,1,2074075135,2,32,,100,2,1,{},{ bonus bMaxHPRate,3*getequiprefinerycnt(); bonus bMaxSPRate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 6){ bonus bAgi,5; bonus bDex,5; } if(getequiprefinerycnt() >= 8){ bonus bAgi,10; bonus bDex,10; } if(equippeditem(19379)){ bonus2 bSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Boss,20; } if(equippeditem(450165)){ bonus bAddLongWeaponDamage,2*getequiprefinerycnt(2); } if(equippeditem(480114)){ bonus2 bSubEle,Ele_Neutral,10; } if(equippeditem(470048)){ bonus2 bAddRace,Rct_All,4*getequiprefinerycnt(6); } if(equippeditem(29509)){ bonus bAddLongWeaponDamage,15; } }
+460052,shield,å‰›å‹‡ç„¡åŒã®ç± æ‰‹,4,,10,400,,60:15,,1,2074075135,2,32,,100,2,1,{},{ bonus bMaxHPRate,3*getequiprefinerycnt(); bonus bMaxSPRate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 6){ bonus bAgi,5; bonus bDex,5; } if(getequiprefinerycnt() >= 8){ bonus bAgi,10; bonus bDex,10; } if(equippeditem(19379)){ bonus2 bSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Boss,20; } if(equippeditem(450165)){ bonus bAddLongWeaponDamage,2*getequiprefinerycnt(2); } if(equippeditem(480114)){ bonus2 bSubEle,Ele_Neutral,10; } if(equippeditem(470048)){ bonus2 bAddRace,Rct_All,4*getequiprefinerycnt(6); } if(equippeditem(29509)){ bonus bAddLongWeaponDamage,15; } }
 
-470048,shoes,„—E–³‘o‚ÌŠÑ,4,,10,400,,18:0,,0,2074075135,2,64,,100,,1,{},{ bonus bSkillDelayRate,-30; bonus bPerfectHitAddRate,20; if(getequiprefinerycnt() >= 7){ bonus bPerfectHitAddRate,20; } if(getequiprefinerycnt() >= 9){ bonus bPerfectHitAddRate,20; } if(equippeditem(19379)){ bonus bAddLongWeaponDamage,25; } }
+470048,shoes,å‰›å‹‡ç„¡åŒã®è²«,4,,10,400,,18:0,,0,2074075135,2,64,,100,,1,{},{ bonus bSkillDelayRate,-30; bonus bPerfectHitAddRate,20; if(getequiprefinerycnt() >= 7){ bonus bPerfectHitAddRate,20; } if(getequiprefinerycnt() >= 9){ bonus bPerfectHitAddRate,20; } if(equippeditem(19379)){ bonus bAddLongWeaponDamage,25; } }
 
-480114,robe,„—E–³‘o‚Ì_—`,4,,10,600,,60:0,,1,2074075135,2,4,,100,111,1,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddRace,Rct_Player,5; bonus2 bMagicAddRace,Rct_Player,5; bonus bSkillDelayRate,-1*getequiprefinerycnt(); if(getequiprefinerycnt() >= 6){ bonus bAspdAddRate,10; } if(getequiprefinerycnt() >= 8){ skill "AC_CONCENTRATION",10; if(getskilllv("AC_CONCENTRATION")>=10){ bonus bBaseAtk,50; bonus bFlee,50; } } if(equippeditem(19379)){ bonus bAddLongWeaponDamage,25; bonus2 bSPDrainValue,100,2; } if(equippeditem(470048)){ bonus bAllStatus,10*getequiprefinerycnt(6)/3; } if(equippeditem(29509)){ bonus bAtkRate,30; bonus bPerfectHitAddRate,25; } },{ sc_end 3; }
+480114,robe,å‰›å‹‡ç„¡åŒã®ç¥žè¼¿,4,,10,600,,60:0,,1,2074075135,2,4,,100,111,1,{},{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; bonus2 bAddRace,Rct_Player,5; bonus2 bMagicAddRace,Rct_Player,5; bonus bSkillDelayRate,-1*getequiprefinerycnt(); if(getequiprefinerycnt() >= 6){ bonus bAspdAddRate,10; } if(getequiprefinerycnt() >= 8){ skill "AC_CONCENTRATION",10; if(getskilllv("AC_CONCENTRATION")>=10){ bonus bBaseAtk,50; bonus bFlee,50; } } if(equippeditem(19379)){ bonus bAddLongWeaponDamage,25; bonus2 bSPDrainValue,100,2; } if(equippeditem(470048)){ bonus bAllStatus,10*getequiprefinerycnt(6)/3; } if(equippeditem(29509)){ bonus bAtkRate,30; bonus bPerfectHitAddRate,25; } },{ sc_end 3; }
 
-”Žš‚Ì¬‚³‚¢‡‚É‘g‚Ý‡‚í‚¹ƒpƒ^[ƒ“—…—ñ
-19379#„—E–³‘o‚Ì–ä–XŽq#	450165#„—E–³‘o‚Ìbãò#
-19379#„—E–³‘o‚Ì–ä–XŽq#	460052#„—E–³‘o‚ÌâÄŽè#
-19379#„—E–³‘o‚Ì–ä–XŽq#	470048#„—E–³‘o‚ÌŠÑ#
-19379#„—E–³‘o‚Ì–ä–XŽq#	480114#„—E–³‘o‚Ì_—`#
+æ•°å­—ã®å°ã•ã„é †ã«çµ„ã¿åˆã‚ã›ãƒ‘ã‚¿ãƒ¼ãƒ³ç¾…åˆ—
+19379#å‰›å‹‡ç„¡åŒã®ç´‹å¸½å­#	450165#å‰›å‹‡ç„¡åŒã®ç”²èƒ„#
+19379#å‰›å‹‡ç„¡åŒã®ç´‹å¸½å­#	460052#å‰›å‹‡ç„¡åŒã®ç± æ‰‹#
+19379#å‰›å‹‡ç„¡åŒã®ç´‹å¸½å­#	470048#å‰›å‹‡ç„¡åŒã®è²«#
+19379#å‰›å‹‡ç„¡åŒã®ç´‹å¸½å­#	480114#å‰›å‹‡ç„¡åŒã®ç¥žè¼¿#
 
-450165#„—E–³‘o‚Ìbãò#	470048#„—E–³‘o‚ÌŠÑ#
-450165#„—E–³‘o‚Ìbãò#	460052#„—E–³‘o‚ÌâÄŽè#
-450165#„—E–³‘o‚Ìbãò#	480114#„—E–³‘o‚Ì_—`#
+450165#å‰›å‹‡ç„¡åŒã®ç”²èƒ„#	470048#å‰›å‹‡ç„¡åŒã®è²«#
+450165#å‰›å‹‡ç„¡åŒã®ç”²èƒ„#	460052#å‰›å‹‡ç„¡åŒã®ç± æ‰‹#
+450165#å‰›å‹‡ç„¡åŒã®ç”²èƒ„#	480114#å‰›å‹‡ç„¡åŒã®ç¥žè¼¿#
 
-460052#„—E–³‘o‚ÌâÄŽè#	480114#„—E–³‘o‚Ì_—`#
-460052#„—E–³‘o‚ÌâÄŽè#	470048#„—E–³‘o‚ÌŠÑ#
+460052#å‰›å‹‡ç„¡åŒã®ç± æ‰‹#	480114#å‰›å‹‡ç„¡åŒã®ç¥žè¼¿#
+460052#å‰›å‹‡ç„¡åŒã®ç± æ‰‹#	470048#å‰›å‹‡ç„¡åŒã®è²«#
 
-470048#„—E–³‘o‚ÌŠÑ#	480114#„—E–³‘o‚Ì_—`#
+470048#å‰›å‹‡ç„¡åŒã®è²«#	480114#å‰›å‹‡ç„¡åŒã®ç¥žè¼¿#
 
 2023-11-11	patch0062
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-5396#ƒWƒƒƒXƒp[ƒT[ƒNƒŒƒbƒg#
-10513#3ŽŸEƒXƒyƒVƒƒƒ‹ƒ`ƒPƒbƒg‚Ì” #
-12019#ŠJ‰^µ•Ÿ‚Ì—é#
-17912#ƒnƒbƒs[ƒNƒŠƒXƒ}ƒXƒoƒbƒO#
-18613#•–³í–X#
-20593#[ˆß‘•] •X‚Ì—ƒ#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+5396#ã‚¸ãƒ£ã‚¹ãƒ‘ãƒ¼ã‚µãƒ¼ã‚¯ãƒ¬ãƒƒãƒˆ#
+10513#3æ¬¡è·ã‚¹ãƒšã‚·ãƒ£ãƒ«ãƒã‚±ãƒƒãƒˆã®ç®±#
+12019#é–‹é‹æ‹›ç¦ã®éˆ´#
+17912#ãƒãƒƒãƒ”ãƒ¼ã‚¯ãƒªã‚¹ãƒžã‚¹ãƒãƒƒã‚°#
+18613#é»’ç„¡å¸¸å¸½#
+20593#[è¡£è£…] æ°·ã®ç¿¼#
 
-100315#¢Š«‚Ì–‚–@‘#
+100315#å¬å–šã®é­”æ³•æ›¸#
 
-400052#Œˆ“¬‚Ì—´–XŽq#
-410002#ƒZƒuƒ“-ƒCƒŒƒuƒ“ƒwƒbƒhƒzƒ“#
-410003#ƒZƒuƒ“-ƒCƒŒƒuƒ“ƒwƒbƒhƒzƒ“#
-450143#ÔŽÖ‚ÌƒhƒŒƒX#
-470048#„—E–³‘o‚ÌŠÑ#
-480053#’n–‚b‚Ì”ç•†#
-490068#ƒŠƒ“ƒOƒIƒuƒ”ƒB[ƒiƒX#
+400052#æ±ºé—˜ã®é¾å¸½å­#
+410002#ã‚»ãƒ–ãƒ³-ã‚¤ãƒ¬ãƒ–ãƒ³ãƒ˜ãƒƒãƒ‰ãƒ›ãƒ³#
+410003#ã‚»ãƒ–ãƒ³-ã‚¤ãƒ¬ãƒ–ãƒ³ãƒ˜ãƒƒãƒ‰ãƒ›ãƒ³#
+450143#èµ¤è›‡ã®ãƒ‰ãƒ¬ã‚¹#
+470048#å‰›å‹‡ç„¡åŒã®è²«#
+480053#åœ°é­”ç£ã®çš®è†š#
+490068#ãƒªãƒ³ã‚°ã‚ªãƒ–ãƒ´ã‚£ãƒ¼ãƒŠã‚¹#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
-¦490068 ƒAƒNƒZƒTƒŠ¶‰E‚ÅŒø‰Ê‚ªˆá‚¤‘•”õ‚Ågetequipid(7) getequipid(8) ‚Å‚­‚­‚Á‚ÄŽÀ‘•‚µ‚½‚ªƒAƒNƒZƒTƒŠ‚È‚Ì‚Å—¼•û‘•”õ‚·‚é‚ÆID‚ª“¯‚¶‚È‚Ì‚Å‰E‚ÌƒAƒNƒZ‚à¶‚ÌƒAƒNƒZ‚Ì‘•”õƒ{[ƒiƒX‚ð“Ç‚Ý¶‚à‰E‚ð“Ç‚Þ‚½‚ßŒ‹‰Ê2”{‚ÌŒø‰Ê‚É‚È‚èA‘•”õŒÂ”‚ÌðŒ‚ð‚Â‚¯‚ÄŒø‰Ê‚ð”¼•ª‚É‚µ‚½ê‡A2‚ÅŠ„‚èØ‚ê‚È‚¢Šï”‚Å¬”“_‚ðØ‚èŽÌ‚Ä‚é‚½‚ßŒø‰Ê‚ª1Œ¸‚é(—á bonus bDef,5/2; bonus bDef,5/2; = Def + 4)‚Æ‚¢‚¤Œ»Û‚ª”­¶‚µ‚Ü‚·
+â€»490068 ã‚¢ã‚¯ã‚»ã‚µãƒªå·¦å³ã§åŠ¹æžœãŒé•ã†è£…å‚™ã§getequipid(7) getequipid(8) ã§ããã£ã¦å®Ÿè£…ã—ãŸãŒã‚¢ã‚¯ã‚»ã‚µãƒªãªã®ã§ä¸¡æ–¹è£…å‚™ã™ã‚‹ã¨IDãŒåŒã˜ãªã®ã§å³ã®ã‚¢ã‚¯ã‚»ã‚‚å·¦ã®ã‚¢ã‚¯ã‚»ã®è£…å‚™ãƒœãƒ¼ãƒŠã‚¹ã‚’èª­ã¿å·¦ã‚‚å³ã‚’èª­ã‚€ãŸã‚çµæžœ2å€ã®åŠ¹æžœã«ãªã‚Šã€è£…å‚™å€‹æ•°ã®æ¡ä»¶ã‚’ã¤ã‘ã¦åŠ¹æžœã‚’åŠåˆ†ã«ã—ãŸå ´åˆã€2ã§å‰²ã‚Šåˆ‡ã‚Œãªã„å¥‡æ•°ã§å°æ•°ç‚¹ã‚’åˆ‡ã‚Šæ¨ã¦ã‚‹ãŸã‚åŠ¹æžœãŒ1æ¸›ã‚‹(ä¾‹ bonus bDef,5/2; bonus bDef,5/2; = Def + 4)ã¨ã„ã†ç¾è±¡ãŒç™ºç”Ÿã—ã¾ã™
 
 2023-11-10	patch0061
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-5366#ƒ‰ƒuƒ_ƒbƒhƒoƒ“ƒ_ƒi#
-15299#Ž®’b˜B•„(—Ç)#
-15378#ƒ‰[ƒ”ƒ@ƒŒƒU[ƒA[ƒ}[#
-15379#ƒ‰[ƒ”ƒ@ƒŒƒU[ƒX[ƒc#
-15380#ƒ‰[ƒ”ƒ@ƒŒƒU[ƒ[ƒu#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+5366#ãƒ©ãƒ–ãƒ€ãƒƒãƒ‰ãƒãƒ³ãƒ€ãƒŠ#
+15299#å¼é›éŒ¬ç¬¦(è‰¯)#
+15378#ãƒ©ãƒ¼ãƒ´ã‚¡ãƒ¬ã‚¶ãƒ¼ã‚¢ãƒ¼ãƒžãƒ¼#
+15379#ãƒ©ãƒ¼ãƒ´ã‚¡ãƒ¬ã‚¶ãƒ¼ã‚¹ãƒ¼ãƒ„#
+15380#ãƒ©ãƒ¼ãƒ´ã‚¡ãƒ¬ã‚¶ãƒ¼ãƒ­ãƒ¼ãƒ–#
 
-20935#ƒ‰[ƒ”ƒ@ƒŒƒU[ƒ}ƒ“ƒg#
-20936#ƒ‰[ƒ”ƒ@ƒŒƒU[ƒ}ƒtƒ‰[#
-20937#ƒ‰[ƒ”ƒ@ƒŒƒU[ƒt[ƒh#
-22172#ŠD‰H‚Ìƒu[ƒc#
-22189#„—çŽÒ‚ÌŒC#
-22198#ƒgƒ‰ƒxƒ‰[ƒVƒ…[ƒY#
-22199#ƒ‰[ƒ”ƒ@ƒŒƒU[ƒu[ƒc#
-22200#ƒ‰[ƒ”ƒ@ƒŒƒU[ƒVƒ…[ƒY#
-22201#ƒ‰[ƒ”ƒ@ƒŒƒU[ƒTƒ“ƒ_ƒ‹#
+20935#ãƒ©ãƒ¼ãƒ´ã‚¡ãƒ¬ã‚¶ãƒ¼ãƒžãƒ³ãƒˆ#
+20936#ãƒ©ãƒ¼ãƒ´ã‚¡ãƒ¬ã‚¶ãƒ¼ãƒžãƒ•ãƒ©ãƒ¼#
+20937#ãƒ©ãƒ¼ãƒ´ã‚¡ãƒ¬ã‚¶ãƒ¼ãƒ•ãƒ¼ãƒ‰#
+22172#ç°ç¾½ã®ãƒ–ãƒ¼ãƒ„#
+22189#å·¡ç¤¼è€…ã®é´#
+22198#ãƒˆãƒ©ãƒ™ãƒ©ãƒ¼ã‚·ãƒ¥ãƒ¼ã‚º#
+22199#ãƒ©ãƒ¼ãƒ´ã‚¡ãƒ¬ã‚¶ãƒ¼ãƒ–ãƒ¼ãƒ„#
+22200#ãƒ©ãƒ¼ãƒ´ã‚¡ãƒ¬ã‚¶ãƒ¼ã‚·ãƒ¥ãƒ¼ã‚º#
+22201#ãƒ©ãƒ¼ãƒ´ã‚¡ãƒ¬ã‚¶ãƒ¼ã‚µãƒ³ãƒ€ãƒ«#
 
-26138#‹Æ‰Î‚Ìñ#
-26139#•XŠp‚Ìñ#
-28619#Žúl‚Ì“ú‹L’ #
+26138#æ¥­ç«ã®æ–#
+26139#æ°·è§’ã®æ–#
+28619#å›šäººã®æ—¥è¨˜å¸³#
 
-410004#ƒMƒƒƒ“ƒuƒ‰[ƒV[ƒ‹#
-460004#ƒCƒ‹ƒVƒIƒ“ƒV[ƒ‹ƒhI#
-470049#ƒ|ƒƒƒbƒJƒVƒ…[ƒY#
-470050#“V‹ç‚Ì‰º‘Ê#
-470051#ŠD‰H‚Ìƒu[ƒc#
-470052#„—çŽÒ‚ÌŒC#
-470053#ƒgƒ‰ƒxƒ‰[ƒVƒ…[ƒY#
-480061#‰hŒõ‚ÌŒäŠø(Ô)#
-480064#–\ˆÐ‚Ìƒ}ƒtƒ‰[#
-490071#‘é‚ÌŠá‚ÌŽñü‚è#
-490076#X—…–œÛ‚ÌŽw—Ö#
+410004#ã‚®ãƒ£ãƒ³ãƒ–ãƒ©ãƒ¼ã‚·ãƒ¼ãƒ«#
+460004#ã‚¤ãƒ«ã‚·ã‚ªãƒ³ã‚·ãƒ¼ãƒ«ãƒ‰I#
+470049#ãƒãƒ­ãƒ­ãƒƒã‚«ã‚·ãƒ¥ãƒ¼ã‚º#
+470050#å¤©ç‹—ã®ä¸‹é§„#
+470051#ç°ç¾½ã®ãƒ–ãƒ¼ãƒ„#
+470052#å·¡ç¤¼è€…ã®é´#
+470053#ãƒˆãƒ©ãƒ™ãƒ©ãƒ¼ã‚·ãƒ¥ãƒ¼ã‚º#
+480061#æ „å…‰ã®å¾¡æ——(èµ¤)#
+480064#æš´å¨ã®ãƒžãƒ•ãƒ©ãƒ¼#
+490071#é·¹ã®çœ¼ã®é¦–é£¾ã‚Š#
+490076#æ£®ç¾…ä¸‡è±¡ã®æŒ‡è¼ª#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-11-08	patch0060
-32012 32026 32027 32028 32029 32030 32031 •ÐŽè‘„‚ÌUŒ‚ŽË’ö‚ð3‚ÉC³
+32012 32026 32027 32028 32029 32030 32031 ç‰‡æ‰‹æ§ã®æ”»æ’ƒå°„ç¨‹ã‚’3ã«ä¿®æ­£
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-10514#[2020”N]‹†‹É¸˜Bƒ`ƒPƒbƒg‚Ì” #
-10515#[2020t]•œƒRƒX‚½‚ÜƒJ[ƒjƒoƒ‹‚Ì” #
-11626#•œƒƒƒ“ƒpƒ“#
-19463#ƒƒƒ“ƒpƒ“ƒnƒbƒg#
-19464#[ˆß‘•] ƒƒƒ“ƒpƒ“ƒnƒbƒg#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+10514#[2020å¹´]ç©¶æ¥µç²¾éŒ¬ãƒã‚±ãƒƒãƒˆã®ç®±#
+10515#[2020æ˜¥]å¾©åˆ»ã‚³ã‚¹ãŸã¾ã‚«ãƒ¼ãƒ‹ãƒãƒ«ã®ç®±#
+11626#å¾©åˆ»ãƒ¡ãƒ­ãƒ³ãƒ‘ãƒ³#
+19463#ãƒ¡ãƒ­ãƒ³ãƒ‘ãƒ³ãƒãƒƒãƒˆ#
+19464#[è¡£è£…] ãƒ¡ãƒ­ãƒ³ãƒ‘ãƒ³ãƒãƒƒãƒˆ#
 
-100278#‰©‹à‚ÌƒJ[ƒh’Ÿ#
-100279#‰^–½‚ÌƒJ[ƒh’Ÿ#
-100280#‰©‹à‚Ì“VŽg‘œ#
+100278#é»„é‡‘ã®ã‚«ãƒ¼ãƒ‰å¸–#
+100279#é‹å‘½ã®ã‚«ãƒ¼ãƒ‰å¸–#
+100280#é»„é‡‘ã®å¤©ä½¿åƒ#
 
-300138#”¼—´‰¤—ƒƒAƒJ[ƒh#
+300138#åŠé¾çŽ‹å¥³ãƒ¡ã‚¢ã‚«ãƒ¼ãƒ‰#
 
-400050#ƒSƒVƒbƒNƒXƒJƒ‹ƒŠƒ{ƒ“#
-400051#ƒS[ƒ‹ƒfƒ“ƒoƒCƒIƒŒƒbƒg#
-400060#‚Ò‚©‚Ò‚©ƒjƒƒƒ“ƒjƒƒƒ“ƒNƒ‰ƒEƒ“#
-420004#ƒtƒHƒbƒNƒXƒwƒA#
-470056#’ÇŒ‚ŽÒ‚ÌƒVƒ…[ƒY#
-470057#’ÇŒ‚ŽÒ‚ÌƒVƒ…[ƒY#
-490043#”¼—´‰¤—‚ÌŽw—Ö#
-490079#¸_Šg’£ƒŠƒ“ƒO#
-520003#•X‰Šˆ«_‚ÌnŠ™#
+400050#ã‚´ã‚·ãƒƒã‚¯ã‚¹ã‚«ãƒ«ãƒªãƒœãƒ³#
+400051#ã‚´ãƒ¼ãƒ«ãƒ‡ãƒ³ãƒã‚¤ã‚ªãƒ¬ãƒƒãƒˆ#
+400060#ã´ã‹ã´ã‹ãƒ‹ãƒ£ãƒ³ãƒ‹ãƒ£ãƒ³ã‚¯ãƒ©ã‚¦ãƒ³#
+420004#ãƒ•ã‚©ãƒƒã‚¯ã‚¹ãƒ˜ã‚¢#
+470056#è¿½æ’ƒè€…ã®ã‚·ãƒ¥ãƒ¼ã‚º#
+470057#è¿½æ’ƒè€…ã®ã‚·ãƒ¥ãƒ¼ã‚º#
+490043#åŠé¾çŽ‹å¥³ã®æŒ‡è¼ª#
+490079#ç²¾ç¥žæ‹¡å¼µãƒªãƒ³ã‚°#
+520003#æ°·ç‚Žæ‚ªç¥žã®åˆƒéŽŒ#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
-32012#ƒƒ^ƒ‹ƒXƒeƒBƒbƒN#
+32012#ãƒ¡ã‚¿ãƒ«ã‚¹ãƒ†ã‚£ãƒƒã‚¯#
 2023-11-07	jpatch231107
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-200339#ƒRƒX‚½‚ÜAnimalsIX#
-20596#[ˆß‘•] ƒeƒfƒBƒxƒAƒŠƒ…ƒbƒN#
-400525#[ˆß‘•] ƒ„ƒ}ƒlƒRƒjƒbƒg–X(”’)#
-400526#[ˆß‘•] Ž‚Žq‰¤‚ÌŠ•(ã’i)#
-400527#[ˆß‘•] ‚½‚ê”Li’ƒj#
-410281#[ˆß‘•] ƒ^ƒCƒK[ƒtƒFƒCƒX(’†’i)#
-420237#[ˆß‘•] ‚ ‚Á‚½‚©ŒÕ”Lƒ}ƒtƒ‰[#
-420263#[ˆß‘•] ‚Ð‚Á‚©‚«”L(‰º’i)#
-420264#[ˆß‘•] ”’”LƒXƒgƒŒ[ƒgƒƒ“ƒO#
-480376#[ˆß‘•] ƒ‰ƒ^ƒgƒXƒN‚ÌK”ö#
-480377#[ˆß‘•] L‚Ñ‚½”’”L#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+200339#ã‚³ã‚¹ãŸã¾AnimalsIX#
+20596#[è¡£è£…] ãƒ†ãƒ‡ã‚£ãƒ™ã‚¢ãƒªãƒ¥ãƒƒã‚¯#
+400525#[è¡£è£…] ãƒ¤ãƒžãƒã‚³ãƒ‹ãƒƒãƒˆå¸½(ç™½)#
+400526#[è¡£è£…] ç…å­çŽ‹ã®å…œ(ä¸Šæ®µ)#
+400527#[è¡£è£…] ãŸã‚ŒçŒ«ï¼ˆèŒ¶ï¼‰#
+410281#[è¡£è£…] ã‚¿ã‚¤ã‚¬ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹(ä¸­æ®µ)#
+420237#[è¡£è£…] ã‚ã£ãŸã‹è™ŽçŒ«ãƒžãƒ•ãƒ©ãƒ¼#
+420263#[è¡£è£…] ã²ã£ã‹ãçŒ«(ä¸‹æ®µ)#
+420264#[è¡£è£…] ç™½çŒ«ã‚¹ãƒˆãƒ¬ãƒ¼ãƒˆãƒ­ãƒ³ã‚°#
+480376#[è¡£è£…] ãƒ©ã‚¿ãƒˆã‚¹ã‚¯ã®å°»å°¾#
+480377#[è¡£è£…] ä¼¸ã³ãŸç™½çŒ«#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
-2023-10-03ƒpƒbƒ`•ª
-15952 hateffect‚¾‚Á‚½‚Ì‚ÅC³(ŽÀ‘•‚É‚ÍluaXVEstatus.h const.txt ’Ç‹L‚ÆƒRƒ“ƒpƒCƒ‹•K—v)
+2023-10-03ãƒ‘ãƒƒãƒåˆ†
+15952 hateffectã ã£ãŸã®ã§ä¿®æ­£(å®Ÿè£…ã«ã¯luaæ›´æ–°ãƒ»status.h const.txt è¿½è¨˜ã¨ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«å¿…è¦)
 
 2023-11-05	patch0059
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-400077#‚¿‚á‚Õ‚¿‚á‚Õƒjƒƒƒ“ƒv[ƒnƒbƒg#
-480075#‚æ‚¿‚æ‚¿ƒEƒŠƒ{ƒEƒXƒ^ƒC#
-480077#—nŠâ‚Ìƒ}ƒ“ƒg#
-550017#”’‚Ì‹RŽm’c‚Ì”L‚¶‚á‚ç‚µ#
-18894#ƒŒƒCƒ“ƒ{[ƒXƒ^[#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+400077#ã¡ã‚ƒã·ã¡ã‚ƒã·ãƒ‹ãƒ£ãƒ³ãƒ—ãƒ¼ãƒãƒƒãƒˆ#
+480075#ã‚ˆã¡ã‚ˆã¡ã‚¦ãƒªãƒœã‚¦ã‚¹ã‚¿ã‚¤#
+480077#æº¶å²©ã®ãƒžãƒ³ãƒˆ#
+550017#ç™½ã®é¨Žå£«å›£ã®çŒ«ã˜ã‚ƒã‚‰ã—#
+18894#ãƒ¬ã‚¤ãƒ³ãƒœãƒ¼ã‚¹ã‚¿ãƒ¼#
 
 2023-11-04	patch0058
-11548 12784 17217 17218 17165 17216 410119 410120 450158 C³
+11548 12784 17217 17218 17165 17216 410119 410120 450158 ä¿®æ­£
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-22723#ŒŒF‚Ì‚©‚«•X#
-100440#‰i‰“‚È‚é’‰½#
-100448#ƒZƒCƒŒƒ“‚ÌŽèŽ†#
-100449#Ž®‚ÌŽèŽ†#
-480084#ƒtƒ@ƒtƒj[ƒ‹ƒuƒŒƒX#
-490096#’ÇŒ‚ŽÒ‚ÌƒŠƒ“ƒO#
-19532#[ˆß‘•] ƒoƒj[ƒwƒAƒoƒ“ƒh(Ô)#
-19535#[ˆß‘•] _å’O‚ÌŽÀ#
-32228#‘‰¤ƒVƒ…ƒ~ƒbƒc‚Ì‹­„‹LÍ#
-32229#‘‰¤ƒVƒ…ƒ~ƒbƒc‚ÌV—ï‹LÍ#
-32230#‘‰¤ƒVƒ…ƒ~ƒbƒc‚Ì”’‰_‹LÍ#
-32231#‘‰¤ƒVƒ…ƒ~ƒbƒc‚Ì„‘Ì‹LÍ#
-32232#‘‰¤ƒVƒ…ƒ~ƒbƒc‚Ì‘MŒõ‹LÍ#
-32233#‘‰¤ƒVƒ…ƒ~ƒbƒc‚Ì“V‹|‹LÍ#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+22723#è¡€è‰²ã®ã‹ãæ°·#
+100440#æ°¸é ãªã‚‹å¿ èª #
+100448#ã‚»ã‚¤ãƒ¬ãƒ³ã®æ‰‹ç´™#
+100449#å¼ã®æ‰‹ç´™#
+480084#ãƒ•ã‚¡ãƒ•ãƒ‹ãƒ¼ãƒ«ãƒ–ãƒ¬ã‚¹#
+490096#è¿½æ’ƒè€…ã®ãƒªãƒ³ã‚°#
+19532#[è¡£è£…] ãƒãƒ‹ãƒ¼ãƒ˜ã‚¢ãƒãƒ³ãƒ‰(èµ¤)#
+19535#[è¡£è£…] ç¥žä»™ä¸¹ã®å®Ÿ#
+32228#å›½çŽ‹ã‚·ãƒ¥ãƒŸãƒƒãƒ„ã®å¼·å‰›è¨˜ç« #
+32229#å›½çŽ‹ã‚·ãƒ¥ãƒŸãƒƒãƒ„ã®æ–°æš¦è¨˜ç« #
+32230#å›½çŽ‹ã‚·ãƒ¥ãƒŸãƒƒãƒ„ã®ç™½é›²è¨˜ç« #
+32231#å›½çŽ‹ã‚·ãƒ¥ãƒŸãƒƒãƒ„ã®å‰›ä½“è¨˜ç« #
+32232#å›½çŽ‹ã‚·ãƒ¥ãƒŸãƒƒãƒ„ã®é–ƒå…‰è¨˜ç« #
+32233#å›½çŽ‹ã‚·ãƒ¥ãƒŸãƒƒãƒ„ã®å¤©å¼“è¨˜ç« #
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-11-03	patch0057
-460010 ƒGƒ‰[C³
+460010 ã‚¨ãƒ©ãƒ¼ä¿®æ­£
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-400113#í‰³—‚Ì‰HŽ¨#
-400114#í‰³—‚Ì‰HŽ¨#
-410009#ƒŒƒCƒ“ƒ{[ƒXƒ^[#
-410010#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒAƒCƒY#
-480072#ƒtƒ[ƒYƒ“ƒXƒPƒCƒ‹ƒVƒ‡[ƒ‹#
-490098#ƒŠƒ“ƒOƒIƒuƒpƒYƒY#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+400113#æˆ¦ä¹™å¥³ã®ç¾½è€³#
+400114#æˆ¦ä¹™å¥³ã®ç¾½è€³#
+410009#ãƒ¬ã‚¤ãƒ³ãƒœãƒ¼ã‚¹ã‚¿ãƒ¼#
+410010#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¢ã‚¤ã‚º#
+480072#ãƒ•ãƒ­ãƒ¼ã‚ºãƒ³ã‚¹ã‚±ã‚¤ãƒ«ã‚·ãƒ§ãƒ¼ãƒ«#
+490098#ãƒªãƒ³ã‚°ã‚ªãƒ–ãƒ‘ã‚ºã‚º#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-11-02	jpatch231031
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-1001562#d‰»ƒiƒCƒgƒƒAƒeƒ‰[ŒðŠ·ƒ`ƒPƒbƒg#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+1001562#ç¡¬åŒ–ãƒŠã‚¤ãƒˆãƒ¡ã‚¢ãƒ†ãƒ©ãƒ¼äº¤æ›ãƒã‚±ãƒƒãƒˆ#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-25	patch0056
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-400101#ƒQ[ƒgƒIƒuƒlƒU[ƒ[ƒ‹ƒh#
-410014#ƒRƒ‹EƒRƒAƒwƒbƒhƒtƒHƒ“#
-410015#ƒRƒ‹EƒRƒAƒwƒbƒhƒtƒHƒ“#
-420006#—ê‘®‚ÌŽñ—Ö#
-450165#„—E–³‘o‚Ìbãò#
-480085#“V–‚ŠO“¹‚ÌŠO“…#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+400101#ã‚²ãƒ¼ãƒˆã‚ªãƒ–ãƒã‚¶ãƒ¼ãƒ¯ãƒ¼ãƒ«ãƒ‰#
+410014#ã‚³ãƒ«ãƒ»ã‚³ã‚¢ãƒ˜ãƒƒãƒ‰ãƒ•ã‚©ãƒ³#
+410015#ã‚³ãƒ«ãƒ»ã‚³ã‚¢ãƒ˜ãƒƒãƒ‰ãƒ•ã‚©ãƒ³#
+420006#éš·å±žã®é¦–è¼ª#
+450165#å‰›å‹‡ç„¡åŒã®ç”²èƒ„#
+480085#å¤©é­”å¤–é“ã®å¤–å¥—#
 
-19000”Ô‘ä 20000”Ô‘ä 31000”Ô‘ä “ª‘•”õ‚Æˆß‘•‘•”õ‚Ì®—
+19000ç•ªå° 20000ç•ªå° 31000ç•ªå° é ­è£…å‚™ã¨è¡£è£…è£…å‚™ã®æ•´ç†
 
-hateffect  ‹LqC³
+hateffect  è¨˜è¿°ä¿®æ­£
 
-470000”Ô‘ä‚ÅŽÀ‘•Ï‚Ý‚ÌŒC‘•”õ‚ðƒRƒƒ“ƒgƒAƒEƒg(íœ—\’è)
+470000ç•ªå°ã§å®Ÿè£…æ¸ˆã¿ã®é´è£…å‚™ã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆ(å‰Šé™¤äºˆå®š)
 
 2023-10-25	patch0055
-hateffect  ‹LqC³
-20601#[ˆß‘•] ƒŒƒbƒhƒGƒiƒW[#
-20608#[ˆß‘•] ƒ~ƒbƒhƒiƒCƒgƒuƒ‹[ƒGƒiƒW[#
-20609#[ˆß‘•] ƒ~ƒbƒhƒiƒCƒgƒuƒ‹[ƒI[ƒ‰#
-20610#[ˆß‘•] ƒOƒŒ[ƒGƒiƒW[#
-20611#[ˆß‘•] ƒOƒŒ[ƒI[ƒ‰#
-20614#[ˆß‘•] ƒLƒGƒ‹EƒnƒCƒ‹‚ÌˆÃ•#
+hateffect  è¨˜è¿°ä¿®æ­£
+20601#[è¡£è£…] ãƒ¬ãƒƒãƒ‰ã‚¨ãƒŠã‚¸ãƒ¼#
+20608#[è¡£è£…] ãƒŸãƒƒãƒ‰ãƒŠã‚¤ãƒˆãƒ–ãƒ«ãƒ¼ã‚¨ãƒŠã‚¸ãƒ¼#
+20609#[è¡£è£…] ãƒŸãƒƒãƒ‰ãƒŠã‚¤ãƒˆãƒ–ãƒ«ãƒ¼ã‚ªãƒ¼ãƒ©#
+20610#[è¡£è£…] ã‚°ãƒ¬ãƒ¼ã‚¨ãƒŠã‚¸ãƒ¼#
+20611#[è¡£è£…] ã‚°ãƒ¬ãƒ¼ã‚ªãƒ¼ãƒ©#
+20614#[è¡£è£…] ã‚­ã‚¨ãƒ«ãƒ»ãƒã‚¤ãƒ«ã®æš—é»’#
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-15448#ƒvƒƒLƒIƒ“ƒ[ƒu#
-15824#ƒvƒƒLƒIƒ“ƒNƒ‰ƒEƒ“#
-20984#ƒvƒƒLƒIƒ“ƒ}ƒ“ƒg#
-20985#[ˆß‘•] ‚Ð‚å‚¤‚½‚ñ“¿—˜#
-22242#ƒvƒƒLƒIƒ“ƒVƒ…[ƒY#
-25526#ƒ}ƒbƒ`ƒ“ƒOí–JÜ(GR1)ƒ`ƒPƒbƒg#
-25527#ƒ}ƒbƒ`ƒ“ƒOí–JÜ(GR2)ƒ`ƒPƒbƒg#
-25528#ƒ}ƒbƒ`ƒ“ƒOí–JÜ(GR3)ƒ`ƒPƒbƒg#
-25529#ƒ}ƒbƒ`ƒ“ƒOí–JÜ(GR4)ƒ`ƒPƒbƒg#
-25530#Uéí–JÜƒ`ƒPƒbƒg#
-22538#[•ž‘•] ƒtƒFƒCƒˆƒ“—ç•ž#
-28784#ƒvƒƒLƒIƒ“ƒ_ƒK[#
-32294#ƒvƒƒLƒIƒ“ƒŠƒ“ƒO#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+15448#ãƒ—ãƒ­ã‚­ã‚ªãƒ³ãƒ­ãƒ¼ãƒ–#
+15824#ãƒ—ãƒ­ã‚­ã‚ªãƒ³ã‚¯ãƒ©ã‚¦ãƒ³#
+20984#ãƒ—ãƒ­ã‚­ã‚ªãƒ³ãƒžãƒ³ãƒˆ#
+20985#[è¡£è£…] ã²ã‚‡ã†ãŸã‚“å¾³åˆ©#
+22242#ãƒ—ãƒ­ã‚­ã‚ªãƒ³ã‚·ãƒ¥ãƒ¼ã‚º#
+25526#ãƒžãƒƒãƒãƒ³ã‚°æˆ¦è¤’è³ž(GR1)ãƒã‚±ãƒƒãƒˆ#
+25527#ãƒžãƒƒãƒãƒ³ã‚°æˆ¦è¤’è³ž(GR2)ãƒã‚±ãƒƒãƒˆ#
+25528#ãƒžãƒƒãƒãƒ³ã‚°æˆ¦è¤’è³ž(GR3)ãƒã‚±ãƒƒãƒˆ#
+25529#ãƒžãƒƒãƒãƒ³ã‚°æˆ¦è¤’è³ž(GR4)ãƒã‚±ãƒƒãƒˆ#
+25530#æ”»åŸŽæˆ¦è¤’è³žãƒã‚±ãƒƒãƒˆ#
+22538#[æœè£…] ãƒ•ã‚§ã‚¤ãƒ¨ãƒ³ç¤¼æœ#
+28784#ãƒ—ãƒ­ã‚­ã‚ªãƒ³ãƒ€ã‚¬ãƒ¼#
+32294#ãƒ—ãƒ­ã‚­ã‚ªãƒ³ãƒªãƒ³ã‚°#
 
-200057#¯’éVIPƒ`ƒPƒbƒg‚Ì” #
-200058#¯’éƒ\ƒEƒ‹‚Ì” #
-200059#¯’é“]Eƒ`ƒPƒbƒg‚Ì” #
-200060#ƒ\ƒEƒ‹ƒŠ[ƒp[VIPƒ`ƒPƒbƒg‚Ì” #
-200061#ƒ\ƒEƒ‹ƒŠ[ƒp[ƒ\ƒEƒ‹‚Ì” #
-200062#ƒ\ƒEƒ‹ƒŠ[ƒp[“]Eƒ`ƒPƒbƒg‚Ì” #
-420013#ƒ`ƒ…ƒ“ƒC[‚Ì—ì#
+200057#æ˜Ÿå¸VIPãƒã‚±ãƒƒãƒˆã®ç®±#
+200058#æ˜Ÿå¸ã‚½ã‚¦ãƒ«ã®ç®±#
+200059#æ˜Ÿå¸è»¢è·ãƒã‚±ãƒƒãƒˆã®ç®±#
+200060#ã‚½ã‚¦ãƒ«ãƒªãƒ¼ãƒ‘ãƒ¼VIPãƒã‚±ãƒƒãƒˆã®ç®±#
+200061#ã‚½ã‚¦ãƒ«ãƒªãƒ¼ãƒ‘ãƒ¼ã‚½ã‚¦ãƒ«ã®ç®±#
+200062#ã‚½ã‚¦ãƒ«ãƒªãƒ¼ãƒ‘ãƒ¼è»¢è·ãƒã‚±ãƒƒãƒˆã®ç®±#
+420013#ãƒãƒ¥ãƒ³ã‚¤ãƒ¼ã®éœŠ#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-25	jpatch231024
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-420025#[ˆß‘•] ˆê‚Â–ÚƒWƒƒƒbƒN#
-436010#[ˆß‘•] ƒXƒpƒCƒ_ƒŠƒ“#
-200254#[2023]•œƒRƒX‚½‚Ü‚Ì” (Season4)#
-200255#[2023]•œƒRƒX‚½‚ÜˆøŠ·Œ”(Season4)11ŒÂ‚Ì” #
-1001195#•œƒRƒX‚½‚ÜˆøŠ·Œ”(Season4)#
-480056#[ˆß‘•] ‰H‚Î‚½‚­‘Â“VŽg‚Ì—ƒ#
-480344#[ˆß‘•] ”¼—´‰¤—‚ÌnŠ™#
-9116#d‰»ƒiƒCƒgƒƒAƒeƒ‰[‚Ì—‘#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+420025#[è¡£è£…] ä¸€ã¤ç›®ã‚¸ãƒ£ãƒƒã‚¯#
+436010#[è¡£è£…] ã‚¹ãƒ‘ã‚¤ãƒ€ãƒªãƒ³#
+200254#[2023]å¾©åˆ»ã‚³ã‚¹ãŸã¾ã®ç®±(Season4)#
+200255#[2023]å¾©åˆ»ã‚³ã‚¹ãŸã¾å¼•æ›åˆ¸(Season4)11å€‹ã®ç®±#
+1001195#å¾©åˆ»ã‚³ã‚¹ãŸã¾å¼•æ›åˆ¸(Season4)#
+480056#[è¡£è£…] ç¾½ã°ãŸãå •å¤©ä½¿ã®ç¿¼#
+480344#[è¡£è£…] åŠé¾çŽ‹å¥³ã®åˆƒéŽŒ#
+9116#ç¡¬åŒ–ãƒŠã‚¤ãƒˆãƒ¡ã‚¢ãƒ†ãƒ©ãƒ¼ã®åµ#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-23	patch0054
-ƒJ[ƒhC³
-300078#ƒXƒEƒB[ƒeƒBƒJ[ƒh#
-300079#ƒŒƒbƒhƒyƒbƒp[ƒJƒbƒpƒJ[ƒh#
-300097#ƒuƒ‹[ƒAƒŠƒGƒXƒJ[ƒh#
-300107#ƒ{ƒXƒsƒ^ƒ„ƒJ[ƒh#
-300114#–‚—Í’†“Åƒvƒ‰ƒKƒJ[ƒh#
-300123#ƒp[ƒvƒ‹ƒsƒ^ƒ„ƒJ[ƒh#
-310337#“§Ž‹#
+ã‚«ãƒ¼ãƒ‰ä¿®æ­£
+300078#ã‚¹ã‚¦ã‚£ãƒ¼ãƒ†ã‚£ã‚«ãƒ¼ãƒ‰#
+300079#ãƒ¬ãƒƒãƒ‰ãƒšãƒƒãƒ‘ãƒ¼ã‚«ãƒƒãƒ‘ã‚«ãƒ¼ãƒ‰#
+300097#ãƒ–ãƒ«ãƒ¼ã‚¢ãƒªã‚¨ã‚¹ã‚«ãƒ¼ãƒ‰#
+300107#ãƒœã‚¹ãƒ”ã‚¿ãƒ¤ã‚«ãƒ¼ãƒ‰#
+300114#é­”åŠ›ä¸­æ¯’ãƒ—ãƒ©ã‚¬ã‚«ãƒ¼ãƒ‰#
+300123#ãƒ‘ãƒ¼ãƒ—ãƒ«ãƒ”ã‚¿ãƒ¤ã‚«ãƒ¼ãƒ‰#
+310337#é€è¦–#
 
-hateffect ‹LqC³
+hateffect è¨˜è¿°ä¿®æ­£
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-15844#[ˆß‘•] ƒ}ƒbƒXƒ‹–X#
-20986#‰ÈŠwŽÒ‚Ìƒ}ƒ“ƒg#
-20987#[ˆß‘•] ƒGƒ“ƒWƒFƒŠƒ“ƒOƒŠƒ…ƒbƒN#
-20993#g‚©‚í‚µ‚ÌƒP[ƒv#
-20994#ƒGƒ“ƒVƒFƒ“ƒgƒƒKƒŠƒXƒ}ƒ“ƒg#
-22243#ƒ}ƒ}ƒ‰ƒKƒ“#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+15844#[è¡£è£…] ãƒžãƒƒã‚¹ãƒ«å¸½#
+20986#ç§‘å­¦è€…ã®ãƒžãƒ³ãƒˆ#
+20987#[è¡£è£…] ã‚¨ãƒ³ã‚¸ã‚§ãƒªãƒ³ã‚°ãƒªãƒ¥ãƒƒã‚¯#
+20993#èº«ã‹ã‚ã—ã®ã‚±ãƒ¼ãƒ—#
+20994#ã‚¨ãƒ³ã‚·ã‚§ãƒ³ãƒˆãƒ¡ã‚¬ãƒªã‚¹ãƒžãƒ³ãƒˆ#
+22243#ãƒžãƒžãƒ©ã‚¬ãƒ³#
 
-100451#SEJEƒA[ƒlƒXƒgƒEƒ‹ƒt‚ÌŽèŽ†#
-200039#[2020”N] ƒnƒƒEƒBƒ“ƒ`ƒPƒbƒg‚Ì” #
-200065#[2020] “Á•Êƒ`ƒPƒbƒg‚Ì” #
-200067#Žv”O‘Ì•ŠíƒAƒbƒvƒOƒŒ[ƒhƒ`ƒPƒbƒg‚Ì” #
+100451#Sãƒ»Jãƒ»ã‚¢ãƒ¼ãƒã‚¹ãƒˆã‚¦ãƒ«ãƒ•ã®æ‰‹ç´™#
+200039#[2020å¹´] ãƒãƒ­ã‚¦ã‚£ãƒ³ãƒã‚±ãƒƒãƒˆã®ç®±#
+200065#[2020] ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆã®ç®±#
+200067#æ€å¿µä½“æ­¦å™¨ã‚¢ãƒƒãƒ—ã‚°ãƒ¬ãƒ¼ãƒ‰ãƒã‚±ãƒƒãƒˆã®ç®±#
 
-410023#‘oŽq‚ÌƒcƒCƒ“ƒŠƒ{ƒ“#
-410024#‘oŽq‚ÌƒcƒCƒ“ƒŠƒ{ƒ“#
-410025#•‚—V‚·‚éƒA[ƒeƒBƒtƒ@ƒNƒg#
-410026#•‚—V‚·‚éƒA[ƒeƒBƒtƒ@ƒNƒg#
-420045#ƒcƒCƒ“ƒuƒŒƒCƒY#
-490102#ƒXƒJƒ‹ƒŠƒ“ƒO#
+410023#åŒå­ã®ãƒ„ã‚¤ãƒ³ãƒªãƒœãƒ³#
+410024#åŒå­ã®ãƒ„ã‚¤ãƒ³ãƒªãƒœãƒ³#
+410025#æµ®éŠã™ã‚‹ã‚¢ãƒ¼ãƒ†ã‚£ãƒ•ã‚¡ã‚¯ãƒˆ#
+410026#æµ®éŠã™ã‚‹ã‚¢ãƒ¼ãƒ†ã‚£ãƒ•ã‚¡ã‚¯ãƒˆ#
+420045#ãƒ„ã‚¤ãƒ³ãƒ–ãƒ¬ã‚¤ã‚º#
+490102#ã‚¹ã‚«ãƒ«ãƒªãƒ³ã‚°#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-22	patch0053
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-11547#ƒCƒOƒhƒ‰ƒVƒ‹‚ÌŽ´#
-20929#‰hŒõ‚ÌŒäŠø(Â)#
-20991#ƒtƒFƒAƒŠ[ƒIƒuƒGƒfƒ“#
-20992#[ˆß‘•] ƒtƒFƒAƒŠ[ƒIƒuƒGƒfƒ“#
-22244#‚¨Ÿ­—Ž‚ÈƒTƒCƒŒƒ“ƒgƒVƒ…[ƒY#
-25532#å‡‹C˜O‚Ì“ƒYEƒKƒ`ƒƒƒ`ƒPƒbƒg#
-32295#ƒNƒŠƒXƒ^ƒ‹ƒuƒŒƒCƒhƒlƒbƒNƒŒƒX#
-32296#ƒNƒŠƒXƒ^ƒ‹ƒuƒŒƒCƒhƒlƒbƒNƒŒƒX#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+11547#ã‚¤ã‚°ãƒ‰ãƒ©ã‚·ãƒ«ã®é›«#
+20929#æ „å…‰ã®å¾¡æ——(é’)#
+20991#ãƒ•ã‚§ã‚¢ãƒªãƒ¼ã‚ªãƒ–ã‚¨ãƒ‡ãƒ³#
+20992#[è¡£è£…] ãƒ•ã‚§ã‚¢ãƒªãƒ¼ã‚ªãƒ–ã‚¨ãƒ‡ãƒ³#
+22244#ãŠæ´’è½ãªã‚µã‚¤ãƒ¬ãƒ³ãƒˆã‚·ãƒ¥ãƒ¼ã‚º#
+25532#èœƒæ°—æ¥¼ã®å¡”YEã‚¬ãƒãƒ£ãƒã‚±ãƒƒãƒˆ#
+32295#ã‚¯ãƒªã‚¹ã‚¿ãƒ«ãƒ–ãƒ¬ã‚¤ãƒ‰ãƒãƒƒã‚¯ãƒ¬ã‚¹#
+32296#ã‚¯ãƒªã‚¹ã‚¿ãƒ«ãƒ–ãƒ¬ã‚¤ãƒ‰ãƒãƒƒã‚¯ãƒ¬ã‚¹#
 
-200041#[18thAnniversary]•à—…Žµ¸˜BƒtƒH[ƒX‚Ì” #
-200045#[18thAnniversary]ƒhƒŒƒbƒV[ƒN[ƒ|ƒ“‚Ì” #
+200041#[18thAnniversary]æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+200045#[18thAnniversary]ãƒ‰ãƒ¬ãƒƒã‚·ãƒ¼ã‚¯ãƒ¼ãƒãƒ³ã®ç®±#
 
-410027#ƒƒ“ƒ_[ƒGƒbƒOƒoƒXƒPƒbƒg#
-410028#ƒƒ“ƒ_[ƒGƒbƒOƒoƒXƒPƒbƒg#
-420028#ƒCƒ“ƒyƒŠƒAƒ‹ƒOƒ[ƒŠ[#
-450176#ƒpƒ[ƒhƒEƒBƒ“ƒO#
-490104#•sŽ€’¹‚ÌƒŠƒ“ƒO#
-490105#ŠC’ê_“a‚Ìà•ó#
-510031#‹€‚¿‚½ƒK[ƒfƒ“ƒiƒCƒt#
+410027#ãƒ¯ãƒ³ãƒ€ãƒ¼ã‚¨ãƒƒã‚°ãƒã‚¹ã‚±ãƒƒãƒˆ#
+410028#ãƒ¯ãƒ³ãƒ€ãƒ¼ã‚¨ãƒƒã‚°ãƒã‚¹ã‚±ãƒƒãƒˆ#
+420028#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ã‚°ãƒ­ãƒ¼ãƒªãƒ¼#
+450176#ãƒ‘ãƒ¯ãƒ¼ãƒ‰ã‚¦ã‚£ãƒ³ã‚°#
+490104#ä¸æ­»é³¥ã®ãƒªãƒ³ã‚°#
+490105#æµ·åº•ç¥žæ®¿ã®è²¡å®#
+510031#æœ½ã¡ãŸã‚¬ãƒ¼ãƒ‡ãƒ³ãƒŠã‚¤ãƒ•#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-20	patch0052
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-450036#ƒmƒuƒŒƒXƒAƒjƒ}ƒ‹ƒ[ƒu#
-450039#ƒmƒuƒŒƒXƒKƒgƒŠƒ“ƒOƒX[ƒc#
-450047#ƒmƒuƒŒƒXƒNƒ‹ƒVƒtƒH[ƒ€ƒX[ƒc#
-450072#ƒCƒ“ƒyƒŠƒAƒ‹ƒAƒjƒ}ƒ‹ƒ[ƒu#
-450075#ƒCƒ“ƒyƒŠƒAƒ‹ƒKƒgƒŠƒ“ƒOƒX[ƒc#
-450083#ƒCƒ“ƒyƒŠƒAƒ‹ƒNƒ‹ƒVƒtƒH[ƒ€ƒX[ƒc#
-450106#ƒOƒŒ[ƒXƒAƒjƒ}ƒ‹ƒ[ƒu#
-450109#ƒOƒŒ[ƒXƒKƒgƒŠƒ“ƒOƒX[ƒc#
-450117#ƒOƒŒ[ƒXƒNƒ‹ƒVƒtƒH[ƒ€ƒX[ƒc#
-470089#–\‘–‚ÌŽv”O‘ÌƒVƒ…[ƒY#
-470090#–\‘–‚ÌŽv”O‘ÌƒVƒ…[ƒY#
-470091#Ž¸–]‚ÌŽv”O‘ÌƒVƒ…[ƒY#
-470092#Ž¸–]‚ÌŽv”O‘ÌƒVƒ…[ƒY#
-480094#ƒGƒŠƒ…ƒ}ƒ“ƒgƒX‚Ì”ç#
-490110#ƒA[ƒkƒ‹ƒX ƒCƒ‰#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+450036#ãƒŽãƒ–ãƒ¬ã‚¹ã‚¢ãƒ‹ãƒžãƒ«ãƒ­ãƒ¼ãƒ–#
+450039#ãƒŽãƒ–ãƒ¬ã‚¹ã‚¬ãƒˆãƒªãƒ³ã‚°ã‚¹ãƒ¼ãƒ„#
+450047#ãƒŽãƒ–ãƒ¬ã‚¹ã‚¯ãƒ«ã‚·ãƒ•ã‚©ãƒ¼ãƒ ã‚¹ãƒ¼ãƒ„#
+450072#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ã‚¢ãƒ‹ãƒžãƒ«ãƒ­ãƒ¼ãƒ–#
+450075#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ã‚¬ãƒˆãƒªãƒ³ã‚°ã‚¹ãƒ¼ãƒ„#
+450083#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ã‚¯ãƒ«ã‚·ãƒ•ã‚©ãƒ¼ãƒ ã‚¹ãƒ¼ãƒ„#
+450106#ã‚°ãƒ¬ãƒ¼ã‚¹ã‚¢ãƒ‹ãƒžãƒ«ãƒ­ãƒ¼ãƒ–#
+450109#ã‚°ãƒ¬ãƒ¼ã‚¹ã‚¬ãƒˆãƒªãƒ³ã‚°ã‚¹ãƒ¼ãƒ„#
+450117#ã‚°ãƒ¬ãƒ¼ã‚¹ã‚¯ãƒ«ã‚·ãƒ•ã‚©ãƒ¼ãƒ ã‚¹ãƒ¼ãƒ„#
+470089#æš´èµ°ã®æ€å¿µä½“ã‚·ãƒ¥ãƒ¼ã‚º#
+470090#æš´èµ°ã®æ€å¿µä½“ã‚·ãƒ¥ãƒ¼ã‚º#
+470091#å¤±æœ›ã®æ€å¿µä½“ã‚·ãƒ¥ãƒ¼ã‚º#
+470092#å¤±æœ›ã®æ€å¿µä½“ã‚·ãƒ¥ãƒ¼ã‚º#
+480094#ã‚¨ãƒªãƒ¥ãƒžãƒ³ãƒˆã‚¹ã®çš®#
+490110#ã‚¢ãƒ¼ãƒŒãƒ«ã‚¹ ã‚¤ãƒ©#
 
-1337 2063 26168 26169 26170 26171 28142 32404 ’è‹`’Ç‰Á
+1337 2063 26168 26169 26170 26171 28142 32404 å®šç¾©è¿½åŠ 
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-19	patch0051
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-1336#ƒK[ƒfƒBƒAƒ“ƒiƒCƒcƒAƒbƒNƒX#
-18198#ƒK[ƒfƒBƒAƒ“ƒiƒCƒcƒA[ƒ`ƒƒ[ƒ{ƒE#
-21055#ƒK[ƒfƒBƒAƒ“ƒiƒCƒcƒNƒŒƒCƒ‚ƒA#
-25866#ŽžŠÔ‚Ì–‚—Í#
-25867#ŽžŠÔ‚Ì”j•Ð#
-32403#ƒK[ƒfƒBƒAƒ“ƒAƒ‹ƒPƒ~ƒbƒNƒXƒ^ƒbƒt#
-200105#ƒCƒ‹ƒVƒIƒ“ƒ`ƒPƒbƒgII‚Ì” #
-200106#ƒGƒ“ƒnƒ“ƒXƒLƒ…[ƒuII(ƒCƒ‹ƒVƒIƒ“)‚Ì” #
-490130#’Cœú‚Ì˜r—Ö#
-783#–À‹{’²¸vŒ£‚ÌØ#
-25290#ƒXƒEƒB[ƒgƒ`ƒ‡ƒRƒRƒCƒ“#
-25584#E‹ÆƒXƒyƒVƒƒƒ‹ƒ`ƒPƒbƒg#
-27330#ƒNƒƒlƒJ[ƒJ[ƒh#
-200037#Žv”O‘Ì•ŠíƒAƒbƒvƒOƒŒ[ƒhƒ`ƒPƒbƒg‚Ì” #
-200042#[2021”N]‹†‹É¸˜Bƒ`ƒPƒbƒg‚Ì” #
-200066#E‹ÆƒXƒyƒVƒƒƒ‹ƒ`ƒPƒbƒg‚Ì” #
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+1336#ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³ãƒŠã‚¤ãƒ„ã‚¢ãƒƒã‚¯ã‚¹#
+18198#ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³ãƒŠã‚¤ãƒ„ã‚¢ãƒ¼ãƒãƒ£ãƒ¼ãƒœã‚¦#
+21055#ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³ãƒŠã‚¤ãƒ„ã‚¯ãƒ¬ã‚¤ãƒ¢ã‚¢#
+25866#æ™‚é–“ã®é­”åŠ›#
+25867#æ™‚é–“ã®ç ´ç‰‡#
+32403#ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³ã‚¢ãƒ«ã‚±ãƒŸãƒƒã‚¯ã‚¹ã‚¿ãƒƒãƒ•#
+200105#ã‚¤ãƒ«ã‚·ã‚ªãƒ³ãƒã‚±ãƒƒãƒˆIIã®ç®±#
+200106#ã‚¨ãƒ³ãƒãƒ³ã‚¹ã‚­ãƒ¥ãƒ¼ãƒ–II(ã‚¤ãƒ«ã‚·ã‚ªãƒ³)ã®ç®±#
+490130#è¾°æˆŒã®è…•è¼ª#
+783#è¿·å®®èª¿æŸ»è²¢çŒ®ã®è¨¼#
+25290#ã‚¹ã‚¦ã‚£ãƒ¼ãƒˆãƒãƒ§ã‚³ã‚³ã‚¤ãƒ³#
+25584#è·æ¥­ã‚¹ãƒšã‚·ãƒ£ãƒ«ãƒã‚±ãƒƒãƒˆ#
+27330#ã‚¯ãƒ­ãƒã‚«ãƒ¼ã‚«ãƒ¼ãƒ‰#
+200037#æ€å¿µä½“æ­¦å™¨ã‚¢ãƒƒãƒ—ã‚°ãƒ¬ãƒ¼ãƒ‰ãƒã‚±ãƒƒãƒˆã®ç®±#
+200042#[2021å¹´]ç©¶æ¥µç²¾éŒ¬ãƒã‚±ãƒƒãƒˆã®ç®±#
+200066#è·æ¥­ã‚¹ãƒšã‚·ãƒ£ãƒ«ãƒã‚±ãƒƒãƒˆã®ç®±#
 
-item_db2_add.txt item_cardtype.txt XV
+item_db2_add.txt item_cardtype.txt æ›´æ–°
 
-hateffect ‹Lq‚ð­‚µC³
+hateffect è¨˜è¿°ã‚’å°‘ã—ä¿®æ­£
 
-[ˆê•”‚Ìƒ_ƒ[ƒW‚ð”½ŽË‚·‚éŒø‰Ê‚ÅŽó‚¯‚éƒ_ƒ[ƒW] ‹Lq‚ÌŒø‰Ê‚ðCR_REFLECTSHIELD LG_REFLECTDAMAGE NPC_MAGICMIRROR ‚ÅÝ’è‚µ‚Ä‘ÎÛƒAƒCƒeƒ€‚ðC³
-–{Œø‰Ê‚ÍÚ×‚ª•s–¾‚È‚½‚ßŽv‚¢‚Â‚­ƒXƒLƒ‹‚ÅŽb’èŽÀ‘•
+[ä¸€éƒ¨ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’åå°„ã™ã‚‹åŠ¹æžœã§å—ã‘ã‚‹ãƒ€ãƒ¡ãƒ¼ã‚¸] è¨˜è¿°ã®åŠ¹æžœã‚’CR_REFLECTSHIELD LG_REFLECTDAMAGE NPC_MAGICMIRROR ã§è¨­å®šã—ã¦å¯¾è±¡ã‚¢ã‚¤ãƒ†ãƒ ã‚’ä¿®æ­£
+æœ¬åŠ¹æžœã¯è©³ç´°ãŒä¸æ˜ŽãªãŸã‚æ€ã„ã¤ãã‚¹ã‚­ãƒ«ã§æš«å®šå®Ÿè£…
 
 2023-10-18	patch0050
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-200248#[2023]•œƒRƒX‚½‚Ü‚Ì” (Season1)#
-200249#[2023]•œƒRƒX‚½‚ÜˆøŠ·Œ”(Season1)11ŒÂ‚Ì” #
-200250#[2023]•œƒRƒX‚½‚Ü‚Ì” (Season2)#
-200251#[2023]•œƒRƒX‚½‚ÜˆøŠ·Œ”(Season2)11ŒÂ‚Ì” #
-200252#[2023]•œƒRƒX‚½‚Ü‚Ì” (Season3)#
-200253#[2023]•œƒRƒX‚½‚ÜˆøŠ·Œ”(Season3)11ŒÂ‚Ì” #
-200302#ƒLƒ…[ƒyƒbƒgƒ{ƒbƒNƒX’Š‘IŒ”ŒðŠ·ƒ`ƒPƒbƒg‚Ì” #
-200315#[2023summer]•à—…Žµ¸˜BƒtƒH[ƒX‚Ì” #
-200316#[2023summer]ƒhƒŒƒbƒV[ƒN[ƒ|ƒ“‚Ì” #
-200318#[2023]“Á•Êƒ`ƒPƒbƒg‚Ì” #
-200319#[2023”N]ƒWƒ…[ƒ“ƒuƒ‰ƒCƒhƒ`ƒPƒbƒg‚Ì” #
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+200248#[2023]å¾©åˆ»ã‚³ã‚¹ãŸã¾ã®ç®±(Season1)#
+200249#[2023]å¾©åˆ»ã‚³ã‚¹ãŸã¾å¼•æ›åˆ¸(Season1)11å€‹ã®ç®±#
+200250#[2023]å¾©åˆ»ã‚³ã‚¹ãŸã¾ã®ç®±(Season2)#
+200251#[2023]å¾©åˆ»ã‚³ã‚¹ãŸã¾å¼•æ›åˆ¸(Season2)11å€‹ã®ç®±#
+200252#[2023]å¾©åˆ»ã‚³ã‚¹ãŸã¾ã®ç®±(Season3)#
+200253#[2023]å¾©åˆ»ã‚³ã‚¹ãŸã¾å¼•æ›åˆ¸(Season3)11å€‹ã®ç®±#
+200302#ã‚­ãƒ¥ãƒ¼ãƒšãƒƒãƒˆãƒœãƒƒã‚¯ã‚¹æŠ½é¸åˆ¸äº¤æ›ãƒã‚±ãƒƒãƒˆã®ç®±#
+200315#[2023summer]æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+200316#[2023summer]ãƒ‰ãƒ¬ãƒƒã‚·ãƒ¼ã‚¯ãƒ¼ãƒãƒ³ã®ç®±#
+200318#[2023]ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆã®ç®±#
+200319#[2023å¹´]ã‚¸ãƒ¥ãƒ¼ãƒ³ãƒ–ãƒ©ã‚¤ãƒ‰ãƒã‚±ãƒƒãƒˆã®ç®±#
 
-100731#ƒLƒ“ƒ_[ƒvƒ“ƒVƒ…#
-100732#ƒLƒ“ƒ_[ƒvƒ“ƒVƒ…‚Ì’M(50”t)#
-100733#ƒLƒ“ƒ_[ƒvƒ“ƒVƒ…‚Ì’M(150”t)#
-100734#÷‚à‚¿#
-100735#÷‚à‚¿‚ÌÜ” (50ŒÂ)#
-100736#÷‚à‚¿‚ÌÜ” (150ŒÂ)#
-100737#ƒIƒXƒJ[‚ÌŽèŽ†#
+100731#ã‚­ãƒ³ãƒ€ãƒ¼ãƒ—ãƒ³ã‚·ãƒ¥#
+100732#ã‚­ãƒ³ãƒ€ãƒ¼ãƒ—ãƒ³ã‚·ãƒ¥ã®æ¨½(50æ¯)#
+100733#ã‚­ãƒ³ãƒ€ãƒ¼ãƒ—ãƒ³ã‚·ãƒ¥ã®æ¨½(150æ¯)#
+100734#æ¡œã‚‚ã¡#
+100735#æ¡œã‚‚ã¡ã®æŠ˜ç®±(50å€‹)#
+100736#æ¡œã‚‚ã¡ã®æŠ˜ç®±(150å€‹)#
+100737#ã‚ªã‚¹ã‚«ãƒ¼ã®æ‰‹ç´™#
 
-410064#‚Ô‚­‚Ô‚­ƒnƒ“ƒeƒBƒ“ƒOƒS[ƒOƒ‹#
-410065#‚Ô‚­‚Ô‚­ƒnƒ“ƒeƒBƒ“ƒOƒS[ƒOƒ‹#
-410066#‹³Žö‚Ìƒ~ƒjƒOƒ‰ƒX#
-410067#‹³Žö‚Ìƒ~ƒjƒOƒ‰ƒX#
+410064#ã¶ãã¶ããƒãƒ³ãƒ†ã‚£ãƒ³ã‚°ã‚´ãƒ¼ã‚°ãƒ«#
+410065#ã¶ãã¶ããƒãƒ³ãƒ†ã‚£ãƒ³ã‚°ã‚´ãƒ¼ã‚°ãƒ«#
+410066#æ•™æŽˆã®ãƒŸãƒ‹ã‚°ãƒ©ã‚¹#
+410067#æ•™æŽˆã®ãƒŸãƒ‹ã‚°ãƒ©ã‚¹#
 
-450028#ƒmƒuƒŒƒXƒ}ƒOƒ}ƒX[ƒc#
-450064#ƒCƒ“ƒyƒŠƒAƒ‹ƒ}ƒOƒ}ƒX[ƒc#
-450098#ƒOƒŒ[ƒXƒ}ƒOƒ}ƒX[ƒc#
+450028#ãƒŽãƒ–ãƒ¬ã‚¹ãƒžã‚°ãƒžã‚¹ãƒ¼ãƒ„#
+450064#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ãƒžã‚°ãƒžã‚¹ãƒ¼ãƒ„#
+450098#ã‚°ãƒ¬ãƒ¼ã‚¹ãƒžã‚°ãƒžã‚¹ãƒ¼ãƒ„#
 
-450051#ƒmƒuƒŒƒX“V’nƒX[ƒc#
-450063#ƒCƒ“ƒyƒŠƒAƒ‹“V’nƒX[ƒc#
-450097#ƒOƒŒ[ƒX“V’nƒX[ƒc#
+450051#ãƒŽãƒ–ãƒ¬ã‚¹å¤©åœ°ã‚¹ãƒ¼ãƒ„#
+450063#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«å¤©åœ°ã‚¹ãƒ¼ãƒ„#
+450097#ã‚°ãƒ¬ãƒ¼ã‚¹å¤©åœ°ã‚¹ãƒ¼ãƒ„#
 
-450121#ƒmƒuƒŒƒXƒA[ƒeƒBƒXƒX[ƒc#
-450123#ƒCƒ“ƒyƒŠƒAƒ‹ƒA[ƒeƒBƒXƒX[ƒc#
-450125#ƒOƒŒ[ƒXƒA[ƒeƒBƒXƒX[ƒc#
+450121#ãƒŽãƒ–ãƒ¬ã‚¹ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ã‚¹ãƒ¼ãƒ„#
+450123#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ã‚¹ãƒ¼ãƒ„#
+450125#ã‚°ãƒ¬ãƒ¼ã‚¹ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ã‚¹ãƒ¼ãƒ„#
 
-450035#ƒmƒuƒŒƒXƒƒiƒXƒX[ƒc#
-450071#ƒCƒ“ƒyƒŠƒAƒ‹ƒƒiƒXƒX[ƒc#
-450105#ƒOƒŒ[ƒXƒƒiƒXƒX[ƒc#
+450035#ãƒŽãƒ–ãƒ¬ã‚¹ãƒ¡ãƒŠã‚¹ã‚¹ãƒ¼ãƒ„#
+450071#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ãƒ¡ãƒŠã‚¹ã‚¹ãƒ¼ãƒ„#
+450105#ã‚°ãƒ¬ãƒ¼ã‚¹ãƒ¡ãƒŠã‚¹ã‚¹ãƒ¼ãƒ„#
 
-450027#ƒmƒuƒŒƒXƒz[ƒŠ[ƒ[ƒu#
-450061#ƒCƒ“ƒyƒŠƒAƒ‹ƒz[ƒŠ[ƒ[ƒu#
-450095#ƒOƒŒ[ƒXƒz[ƒŠ[ƒ[ƒu#
+450027#ãƒŽãƒ–ãƒ¬ã‚¹ãƒ›ãƒ¼ãƒªãƒ¼ãƒ­ãƒ¼ãƒ–#
+450061#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ãƒ›ãƒ¼ãƒªãƒ¼ãƒ­ãƒ¼ãƒ–#
+450095#ã‚°ãƒ¬ãƒ¼ã‚¹ãƒ›ãƒ¼ãƒªãƒ¼ãƒ­ãƒ¼ãƒ–#
 
-480109#”’‹RŽm‚Ìƒ}ƒ“ƒg#
-490141#ƒƒ^ƒ‹ƒsƒbƒN#
+480109#ç™½é¨Žå£«ã®ãƒžãƒ³ãƒˆ#
+490141#ãƒ¡ã‚¿ãƒ«ãƒ”ãƒƒã‚¯#
 
-440008 hateffect‚Ì‹LqC³
+440008 hateffectã®è¨˜è¿°ä¿®æ­£
 
-item_db2_add.txt C³
+item_db2_add.txt ä¿®æ­£
 
 2023-10-17	patch0049
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-15898#ŠoÁŒÃ‰¤‚Ì‰¤Š¥#
-450188#ŠoÁ–‚Žô‚ÌƒƒCƒ‹#
-470096#ŠoÁ–‚Žô‚Ìƒu[ƒc#
-480116#ŠoÁ–‚Žô‚Ìƒ}ƒ“ƒg#
-490139#ŠoÁ[•£‚Ì‰¤‚ÌŽw—Ö#
-490140#ŠoÁ–‚Žô‚ÌŽw—Ö#
-510042#Ä’a‚ÌƒAƒZƒCƒ~[#
-510043#ŠoÁ‰hŒõ‚ðŽ]‚¦‚µ‰¤Œ•#
-510044#ŠoÁ”j–Å‚ð“Z‚¢‚µ‹ÆŒ•#
-610029#ŠoÁŒÃ‰¤‚Ì‘on#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+15898#è¦šé†’å¤çŽ‹ã®çŽ‹å† #
+450188#è¦šé†’é­”å‘ªã®ãƒ¡ã‚¤ãƒ«#
+470096#è¦šé†’é­”å‘ªã®ãƒ–ãƒ¼ãƒ„#
+480116#è¦šé†’é­”å‘ªã®ãƒžãƒ³ãƒˆ#
+490139#è¦šé†’æ·±æ·µã®çŽ‹ã®æŒ‡è¼ª#
+490140#è¦šé†’é­”å‘ªã®æŒ‡è¼ª#
+510042#å†èª•ã®ã‚¢ã‚»ã‚¤ãƒŸãƒ¼#
+510043#è¦šé†’æ „å…‰ã‚’è®ƒãˆã—çŽ‹å‰£#
+510044#è¦šé†’ç ´æ»…ã‚’çºã„ã—æ¥­å‰£#
+610029#è¦šé†’å¤çŽ‹ã®åŒåˆƒ#
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€C³
-311284#‹ÉŒÀ‚Ì–‚—Í#
-300283#‹ðŽÒ‚ÌƒJ[ƒh(‹tˆÊ’u)#
-300285#’Ý‚é‚³‚ê‚½’j‚ÌƒJ[ƒh(‹tˆÊ’u)#
-300286#—‹³c‚ÌƒJ[ƒh#
-300287#—‹³c‚ÌƒJ[ƒh(‹tˆÊ’u)#
-300288#“ƒ‚ÌƒJ[ƒh#
-300289#“ƒ‚ÌƒJ[ƒh(‹tˆÊ’u)#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ ä¿®æ­£
+311284#æ¥µé™ã®é­”åŠ›#
+300283#æ„šè€…ã®ã‚«ãƒ¼ãƒ‰(é€†ä½ç½®)#
+300285#åŠã‚‹ã•ã‚ŒãŸç”·ã®ã‚«ãƒ¼ãƒ‰(é€†ä½ç½®)#
+300286#å¥³æ•™çš‡ã®ã‚«ãƒ¼ãƒ‰#
+300287#å¥³æ•™çš‡ã®ã‚«ãƒ¼ãƒ‰(é€†ä½ç½®)#
+300288#å¡”ã®ã‚«ãƒ¼ãƒ‰#
+300289#å¡”ã®ã‚«ãƒ¼ãƒ‰(é€†ä½ç½®)#
 
 2023-10-17	jpatch231017
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-9128#ƒ_[ƒNƒvƒŠ[ƒXƒg‚Ì—‘#
-9148#ƒ_[ƒNƒ[ƒh‚Ì—‘#
-9139#ƒ_[ƒNƒCƒŠƒ…[ƒWƒ‡ƒ“‚Ì—‘#
-100796#ˆÅ‚Ì¹‘#
-//200337#[2023]“Á•Êƒ`ƒPƒbƒg‚Ì” (Autumn)#
-312301#öÝ‰ð•ú(ƒoƒCƒIƒIII)#
-312691#öÝ‰ð•ú(ƒJ[ƒfƒBƒiƒ‹V)#
-420258#ƒq[ƒ[ƒNƒ[ƒX#
-490427#—’‚ÌŽw—Ö#
-490428#ƒPƒ~ƒJƒ‹ƒŒƒWƒXƒ^ƒ“ƒgƒOƒ[ƒu#
-490429#ƒyƒ^ƒ‹‚ÌK”ö(ƒAƒ‹ƒrƒm)#
-1001494#ƒLƒ…[ƒyƒbƒgƒ{ƒbƒNƒX’Š‘IŒ”VII#
-1001495#ƒyƒbƒg—pƒNƒƒmƒX#
-1001496#ƒyƒbƒg—pŠ[œ‚Ìñ#
-1001497#ƒ_[ƒNƒ[ƒhŒðŠ·ƒ`ƒPƒbƒg#
-1001498#ƒ_[ƒNƒCƒŠƒ…[ƒWƒ‡ƒ“ŒðŠ·ƒ`ƒPƒbƒg#
-1001499#ƒ_[ƒNƒvƒŠ[ƒXƒgŒðŠ·ƒ`ƒPƒbƒg#
-1000552#Ž×ˆ«‚È…#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+9128#ãƒ€ãƒ¼ã‚¯ãƒ—ãƒªãƒ¼ã‚¹ãƒˆã®åµ#
+9148#ãƒ€ãƒ¼ã‚¯ãƒ­ãƒ¼ãƒ‰ã®åµ#
+9139#ãƒ€ãƒ¼ã‚¯ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã®åµ#
+100796#é—‡ã®è–æ›¸#
+//200337#[2023]ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆã®ç®±(Autumn)#
+312301#æ½œåœ¨è§£æ”¾(ãƒã‚¤ã‚ªãƒ­III)#
+312691#æ½œåœ¨è§£æ”¾(ã‚«ãƒ¼ãƒ‡ã‚£ãƒŠãƒ«V)#
+420258#ãƒ’ãƒ¼ãƒ­ãƒ¼ã‚¯ãƒ­ãƒ¼ã‚¹#
+490427#åµã®æŒ‡è¼ª#
+490428#ã‚±ãƒŸã‚«ãƒ«ãƒ¬ã‚¸ã‚¹ã‚¿ãƒ³ãƒˆã‚°ãƒ­ãƒ¼ãƒ–#
+490429#ãƒšã‚¿ãƒ«ã®å°»å°¾(ã‚¢ãƒ«ãƒ“ãƒŽ)#
+1001494#ã‚­ãƒ¥ãƒ¼ãƒšãƒƒãƒˆãƒœãƒƒã‚¯ã‚¹æŠ½é¸åˆ¸VII#
+1001495#ãƒšãƒƒãƒˆç”¨ã‚¯ãƒ­ãƒŽã‚¹#
+1001496#ãƒšãƒƒãƒˆç”¨éª¸éª¨ã®æ–#
+1001497#ãƒ€ãƒ¼ã‚¯ãƒ­ãƒ¼ãƒ‰äº¤æ›ãƒã‚±ãƒƒãƒˆ#
+1001498#ãƒ€ãƒ¼ã‚¯ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³äº¤æ›ãƒã‚±ãƒƒãƒˆ#
+1001499#ãƒ€ãƒ¼ã‚¯ãƒ—ãƒªãƒ¼ã‚¹ãƒˆäº¤æ›ãƒã‚±ãƒƒãƒˆ#
+1000552#é‚ªæ‚ªãªæ°´#
 
-item_db2_add.txt item_cardtype.txt XV
+item_db2_add.txt item_cardtype.txt æ›´æ–°
 
-¦200337‚ÍŽÀ‘•Ï‚Ý
-¦ƒyƒbƒg‚Ìƒ_[ƒNƒ[ƒhEƒ_[ƒNƒCƒŠƒ…[ƒWƒ‡ƒ“‚ÍNPCŒðŠ·‚È‚Ì‚ÅƒeƒCƒ~ƒ“ƒOƒAƒCƒeƒ€‚Í‚ ‚è‚Ü‚¹‚ñ
-¦ƒyƒbƒg‚Ì‘•”õŒø‰Ê‚Í–¢ŽÀ‘•
+â€»200337ã¯å®Ÿè£…æ¸ˆã¿
+â€»ãƒšãƒƒãƒˆã®ãƒ€ãƒ¼ã‚¯ãƒ­ãƒ¼ãƒ‰ãƒ»ãƒ€ãƒ¼ã‚¯ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã¯NPCäº¤æ›ãªã®ã§ãƒ†ã‚¤ãƒŸãƒ³ã‚°ã‚¢ã‚¤ãƒ†ãƒ ã¯ã‚ã‚Šã¾ã›ã‚“
+â€»ãƒšãƒƒãƒˆã®è£…å‚™åŠ¹æžœã¯æœªå®Ÿè£…
 
 2023-10-16	patch0048
-ˆÈ‰º‚ÌƒAƒCƒeƒ€C³
-101286#ƒ[ƒ„ƒ‹ƒ[ƒŠ[ƒpƒbƒN#
-101287#ƒCƒOƒhƒ‰ƒVƒ‹‚ÌŽÀƒpƒbƒN#
-101288#ƒCƒOƒhƒ‰ƒVƒ‹‚ÌŽíƒpƒbƒN#
-101289#ƒJƒ{ƒ`ƒƒƒpƒCƒpƒbƒN#
-101290#ƒAƒCƒeƒ€ŠÓ’èLv1‚Ì” (30“ú)#
-101291#ƒOƒŠ[ƒhLv1‚Ì” (30“ú)#
-101292#ƒŠƒUƒŒƒNƒVƒ‡ƒ“Lv4‚Ì” (30“ú)#
-101293#ƒAƒCƒeƒ€ŠÓ’èLv1(30“ú)#
-101294#ƒOƒŠ[ƒhLv1(30“ú)#
-101295#ƒŠƒUƒŒƒNƒVƒ‡ƒ“Lv4(30“ú)#
-310759#ƒAƒŒƒX#
-480114#„—E–³‘o‚Ì_—`#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ ä¿®æ­£
+101286#ãƒ­ãƒ¼ãƒ¤ãƒ«ã‚¼ãƒªãƒ¼ãƒ‘ãƒƒã‚¯#
+101287#ã‚¤ã‚°ãƒ‰ãƒ©ã‚·ãƒ«ã®å®Ÿãƒ‘ãƒƒã‚¯#
+101288#ã‚¤ã‚°ãƒ‰ãƒ©ã‚·ãƒ«ã®ç¨®ãƒ‘ãƒƒã‚¯#
+101289#ã‚«ãƒœãƒãƒ£ãƒ‘ã‚¤ãƒ‘ãƒƒã‚¯#
+101290#ã‚¢ã‚¤ãƒ†ãƒ é‘‘å®šLv1ã®ç®±(30æ—¥)#
+101291#ã‚°ãƒªãƒ¼ãƒ‰Lv1ã®ç®±(30æ—¥)#
+101292#ãƒªã‚¶ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³Lv4ã®ç®±(30æ—¥)#
+101293#ã‚¢ã‚¤ãƒ†ãƒ é‘‘å®šLv1(30æ—¥)#
+101294#ã‚°ãƒªãƒ¼ãƒ‰Lv1(30æ—¥)#
+101295#ãƒªã‚¶ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³Lv4(30æ—¥)#
+310759#ã‚¢ãƒ¬ã‚¹#
+480114#å‰›å‹‡ç„¡åŒã®ç¥žè¼¿#
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-450024#ƒmƒuƒŒƒXƒŒƒCƒ“ƒXƒg[ƒ€ƒX[ƒc#
-450042#ƒmƒuƒŒƒXƒTƒCƒLƒbƒNƒ[ƒu#
-450049#ƒmƒuƒŒƒXƒXƒJƒ‹ƒ[ƒu#
-450058#ƒCƒ“ƒyƒŠƒAƒ‹ƒŒƒCƒ“ƒXƒg[ƒ€ƒX[ƒc#
-450078#ƒCƒ“ƒyƒŠƒAƒ‹ƒTƒCƒLƒbƒNƒ[ƒu#
-450085#ƒCƒ“ƒyƒŠƒAƒ‹ƒXƒJƒ‹ƒ[ƒu#
-450092#ƒOƒŒ[ƒXƒŒƒCƒ“ƒXƒg[ƒ€ƒX[ƒc#
-450112#ƒOƒŒ[ƒXƒTƒCƒLƒbƒNƒ[ƒu#
-450119#ƒOƒŒ[ƒXƒXƒJƒ‹ƒ[ƒu#
-490145#ƒŠƒ“ƒOƒIƒuƒPƒŠƒ…ƒlƒCƒA#
-490146#ƒpƒ‰ƒPƒ‹ƒXƒXƒOƒ[ƒu#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+450024#ãƒŽãƒ–ãƒ¬ã‚¹ãƒ¬ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ ã‚¹ãƒ¼ãƒ„#
+450042#ãƒŽãƒ–ãƒ¬ã‚¹ã‚µã‚¤ã‚­ãƒƒã‚¯ãƒ­ãƒ¼ãƒ–#
+450049#ãƒŽãƒ–ãƒ¬ã‚¹ã‚¹ã‚«ãƒ«ãƒ­ãƒ¼ãƒ–#
+450058#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ãƒ¬ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ ã‚¹ãƒ¼ãƒ„#
+450078#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ã‚µã‚¤ã‚­ãƒƒã‚¯ãƒ­ãƒ¼ãƒ–#
+450085#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ã‚¹ã‚«ãƒ«ãƒ­ãƒ¼ãƒ–#
+450092#ã‚°ãƒ¬ãƒ¼ã‚¹ãƒ¬ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ ã‚¹ãƒ¼ãƒ„#
+450112#ã‚°ãƒ¬ãƒ¼ã‚¹ã‚µã‚¤ã‚­ãƒƒã‚¯ãƒ­ãƒ¼ãƒ–#
+450119#ã‚°ãƒ¬ãƒ¼ã‚¹ã‚¹ã‚«ãƒ«ãƒ­ãƒ¼ãƒ–#
+490145#ãƒªãƒ³ã‚°ã‚ªãƒ–ã‚±ãƒªãƒ¥ãƒã‚¤ã‚¢#
+490146#ãƒ‘ãƒ©ã‚±ãƒ«ã‚¹ã‚¹ã‚°ãƒ­ãƒ¼ãƒ–#
 
-200043#[2021”N]‚‹‰ƒIƒCƒ‹‚Ì” #
-200114#[2021summer]•à—…Žµ¸˜BƒtƒH[ƒX‚Ì” #
-200115#[2021summer]ƒhƒŒƒbƒV[ƒN[ƒ|ƒ“‚Ì” #
+200043#[2021å¹´]é«˜ç´šã‚ªã‚¤ãƒ«ã®ç®±#
+200114#[2021summer]æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+200115#[2021summer]ãƒ‰ãƒ¬ãƒƒã‚·ãƒ¼ã‚¯ãƒ¼ãƒãƒ³ã®ç®±#
 
-420068#ƒ[ƒhƒIƒuƒƒCƒ„ƒ‹ƒY#
-470097#–‚Žë‚è‚ÌŒC#
+420068#ãƒ­ãƒ¼ãƒ‰ã‚ªãƒ–ãƒ­ã‚¤ãƒ¤ãƒ«ã‚º#
+470097#é­”ç‹©ã‚Šã®é´#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-14	patch0046 patch0047
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
 
 patch0046
-12678#R“ÅŒŒ´(YE)#
-19778#[ˆß‘•] ƒXƒgƒƒxƒŠ[ƒnƒbƒg#
-25655#ƒƒƒŠƒ“ƒRƒCƒ“#
-100738#‰¤—ƒƒA‚ÌŽèŽ†#
-410084#ƒvƒŒƒ~ƒAƒƒƒ“ƒwƒbƒhƒtƒHƒ“#
-410085#ƒvƒŒƒ~ƒAƒƒƒ“ƒwƒbƒhƒtƒHƒ“#
-450189#ƒIƒPƒAƒmƒX‚Ì‰ÁŒì#
-480128#’…‚®‚é‚ÝƒxƒAƒh[ƒ‹#
-490149#‚«‚ç‚«‚çƒjƒƒƒ“ƒjƒƒƒ“ƒ`ƒ‡[ƒJ[#
-500041#ƒƒƒ“ƒuƒŒƒCƒh#
-510048#ƒƒƒ“ƒ_ƒK[#
-520015#ƒƒƒ“ƒAƒbƒNƒX#
-530022#ƒƒƒ“ƒXƒsƒA#
-540038#ƒƒƒ“ƒuƒbƒN#
-550048#ƒƒƒ“ƒƒ“ƒh#
-550049#ƒƒƒ“ƒtƒHƒbƒNƒXƒeƒCƒ‹#
-560029#ƒƒƒ“ƒNƒ[#
-570026#ƒƒƒ“ƒoƒCƒIƒŠƒ“#
-580026#ƒƒƒ“ƒEƒBƒbƒv#
-590033#ƒƒƒ“ƒƒCƒX#
-600022#ƒƒƒ“ƒNƒŒƒCƒ‚ƒA#
-610032#ƒƒƒ“ƒJƒ^[ƒ‹#
-620014#ƒƒƒ“ƒc[ƒnƒ“ƒhƒAƒbƒNƒX#
-630017#ƒƒƒ“ƒ‰ƒ“ƒX#
-640030#ƒƒƒ“ƒXƒ^ƒbƒt#
-650016#ƒƒƒ“•—–‚Žè— Œ•#
-700048#ƒƒƒ“ƒEƒBƒ“ƒO#
-800007#ƒƒƒ“ƒnƒ“ƒhƒKƒ“#
-810004#ƒƒƒ“ƒ‰ƒCƒtƒ‹#
-820003#ƒƒƒ“ƒVƒ‡ƒbƒgƒKƒ“#
-830005#ƒAƒ“ƒeƒB[ƒNƒKƒgƒŠƒ“ƒOƒKƒ“#
-830006#ƒƒƒ“ƒKƒgƒŠƒ“ƒOƒKƒ“#
-840003#ƒƒƒ“ƒOƒŒƒl[ƒhƒKƒ“#
-1000573#ƒ`ƒƒ[ƒ€ƒ—g‰Ô‰Î„#
-1000574#ƒXƒEƒB[ƒgƒƒƒ“#
-1000575#ƒ}ƒ“ƒ_ƒŠƒ“ƒtƒ‹[ƒc#
-1000576#‚Õ‚é‚Õ‚éƒxƒŠ[#
-1000577#ƒWƒFƒ€ƒWƒFƒ€ƒXƒg[ƒ“#
-1000578#ƒŒƒbƒhƒj[ƒhƒ‹ƒV[ƒh#
-1000579#ƒQ[ƒ~ƒ“ƒOƒLƒƒƒƒbƒg#
-1000580#ƒEƒBƒA[ƒhƒXƒ^[ƒoƒbƒW#
-1000581#ƒ_[ƒNƒƒƒ“#
-1000582#ƒEƒH[ƒ^[ƒƒƒ“ƒn[ƒg#
-1000583#ƒƒƒ“—p‰»Ï” (¿‹‘•t)#
-1000584#ƒ\ƒŠƒbƒhƒs[ƒ`#
-1000585#ƒ‰ƒCƒgƒuƒ‹[ƒMƒ‹#
-1000586#ƒCƒŠƒ…[ƒWƒ‡ƒiƒ‹ƒtƒ‰ƒ[#
-1000587#ƒ”ƒ@ƒ‹ƒLƒŠ[ƒtƒ‰ƒ[#
-1000588#ƒuƒ‰ƒbƒfƒB[ƒV[ƒh#
-1000589#ƒtƒFƒAƒŠ[ƒŠ[ƒt#
-1000590#ƒTƒ}[ƒiƒCƒgƒs[ƒX#
-1000591#ƒƒƒƒƒs[#
-1000592#ƒ_ƒƒƒƒs[#
-1000593#ƒL[ƒIƒuƒwƒuƒ“#
-1000594#ƒŒƒAƒXƒ‚[ƒ‹ƒWƒFƒ€#
-1000595#ƒvƒŒƒVƒƒƒXƒ{ƒ^ƒ“#
-1000596#ƒXƒ^[ƒ}ƒbƒVƒ…ƒ‹[ƒ€#
-1000597#”Zkƒƒƒ“ƒWƒƒƒ€#
-1000598#ƒlƒIƒ“ƒEƒH[ƒ^[#
-1000599#ƒfƒB[ƒvƒV[ƒEƒH[ƒ^[#
+12678#æŠ—æ¯’è¡€æ¸…(YE)#
+19778#[è¡£è£…] ã‚¹ãƒˆãƒ­ãƒ™ãƒªãƒ¼ãƒãƒƒãƒˆ#
+25655#ãƒ¡ãƒ­ãƒªãƒ³ã‚³ã‚¤ãƒ³#
+100738#çŽ‹å¥³ãƒ¡ã‚¢ã®æ‰‹ç´™#
+410084#ãƒ—ãƒ¬ãƒŸã‚¢ãƒ¡ãƒ­ãƒ³ãƒ˜ãƒƒãƒ‰ãƒ•ã‚©ãƒ³#
+410085#ãƒ—ãƒ¬ãƒŸã‚¢ãƒ¡ãƒ­ãƒ³ãƒ˜ãƒƒãƒ‰ãƒ•ã‚©ãƒ³#
+450189#ã‚ªã‚±ã‚¢ãƒŽã‚¹ã®åŠ è­·#
+480128#ç€ãã‚‹ã¿ãƒ™ã‚¢ãƒ‰ãƒ¼ãƒ«#
+490149#ãã‚‰ãã‚‰ãƒ‹ãƒ£ãƒ³ãƒ‹ãƒ£ãƒ³ãƒãƒ§ãƒ¼ã‚«ãƒ¼#
+500041#ãƒ¡ãƒ­ãƒ³ãƒ–ãƒ¬ã‚¤ãƒ‰#
+510048#ãƒ¡ãƒ­ãƒ³ãƒ€ã‚¬ãƒ¼#
+520015#ãƒ¡ãƒ­ãƒ³ã‚¢ãƒƒã‚¯ã‚¹#
+530022#ãƒ¡ãƒ­ãƒ³ã‚¹ãƒ”ã‚¢#
+540038#ãƒ¡ãƒ­ãƒ³ãƒ–ãƒƒã‚¯#
+550048#ãƒ¡ãƒ­ãƒ³ãƒ¯ãƒ³ãƒ‰#
+550049#ãƒ¡ãƒ­ãƒ³ãƒ•ã‚©ãƒƒã‚¯ã‚¹ãƒ†ã‚¤ãƒ«#
+560029#ãƒ¡ãƒ­ãƒ³ã‚¯ãƒ­ãƒ¼#
+570026#ãƒ¡ãƒ­ãƒ³ãƒã‚¤ã‚ªãƒªãƒ³#
+580026#ãƒ¡ãƒ­ãƒ³ã‚¦ã‚£ãƒƒãƒ—#
+590033#ãƒ¡ãƒ­ãƒ³ãƒ¡ã‚¤ã‚¹#
+600022#ãƒ¡ãƒ­ãƒ³ã‚¯ãƒ¬ã‚¤ãƒ¢ã‚¢#
+610032#ãƒ¡ãƒ­ãƒ³ã‚«ã‚¿ãƒ¼ãƒ«#
+620014#ãƒ¡ãƒ­ãƒ³ãƒ„ãƒ¼ãƒãƒ³ãƒ‰ã‚¢ãƒƒã‚¯ã‚¹#
+630017#ãƒ¡ãƒ­ãƒ³ãƒ©ãƒ³ã‚¹#
+640030#ãƒ¡ãƒ­ãƒ³ã‚¹ã‚¿ãƒƒãƒ•#
+650016#ãƒ¡ãƒ­ãƒ³é¢¨é­”æ‰‹è£å‰£#
+700048#ãƒ¡ãƒ­ãƒ³ã‚¦ã‚£ãƒ³ã‚°#
+800007#ãƒ¡ãƒ­ãƒ³ãƒãƒ³ãƒ‰ã‚¬ãƒ³#
+810004#ãƒ¡ãƒ­ãƒ³ãƒ©ã‚¤ãƒ•ãƒ«#
+820003#ãƒ¡ãƒ­ãƒ³ã‚·ãƒ§ãƒƒãƒˆã‚¬ãƒ³#
+830005#ã‚¢ãƒ³ãƒ†ã‚£ãƒ¼ã‚¯ã‚¬ãƒˆãƒªãƒ³ã‚°ã‚¬ãƒ³#
+830006#ãƒ¡ãƒ­ãƒ³ã‚¬ãƒˆãƒªãƒ³ã‚°ã‚¬ãƒ³#
+840003#ãƒ¡ãƒ­ãƒ³ã‚°ãƒ¬ãƒãƒ¼ãƒ‰ã‚¬ãƒ³#
+1000573#ãƒãƒ£ãƒ¼ãƒ ï¼œæšèŠ±ç«ï¼ž#
+1000574#ã‚¹ã‚¦ã‚£ãƒ¼ãƒˆãƒ¡ãƒ­ãƒ³#
+1000575#ãƒžãƒ³ãƒ€ãƒªãƒ³ãƒ•ãƒ«ãƒ¼ãƒ„#
+1000576#ã·ã‚‹ã·ã‚‹ãƒ™ãƒªãƒ¼#
+1000577#ã‚¸ã‚§ãƒ ã‚¸ã‚§ãƒ ã‚¹ãƒˆãƒ¼ãƒ³#
+1000578#ãƒ¬ãƒƒãƒ‰ãƒ‹ãƒ¼ãƒ‰ãƒ«ã‚·ãƒ¼ãƒ‰#
+1000579#ã‚²ãƒ¼ãƒŸãƒ³ã‚°ã‚­ãƒ£ãƒ­ãƒƒãƒˆ#
+1000580#ã‚¦ã‚£ã‚¢ãƒ¼ãƒ‰ã‚¹ã‚¿ãƒ¼ãƒãƒƒã‚¸#
+1000581#ãƒ€ãƒ¼ã‚¯ãƒ¡ãƒ­ãƒ³#
+1000582#ã‚¦ã‚©ãƒ¼ã‚¿ãƒ¼ãƒ¡ãƒ­ãƒ³ãƒãƒ¼ãƒˆ#
+1000583#ãƒ¡ãƒ­ãƒ³ç”¨åŒ–ç²§ç®±(è«‹æ±‚æ›¸ä»˜)#
+1000584#ã‚½ãƒªãƒƒãƒ‰ãƒ”ãƒ¼ãƒ#
+1000585#ãƒ©ã‚¤ãƒˆãƒ–ãƒ«ãƒ¼ã‚®ãƒ«#
+1000586#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒŠãƒ«ãƒ•ãƒ©ãƒ¯ãƒ¼#
+1000587#ãƒ´ã‚¡ãƒ«ã‚­ãƒªãƒ¼ãƒ•ãƒ©ãƒ¯ãƒ¼#
+1000588#ãƒ–ãƒ©ãƒƒãƒ‡ã‚£ãƒ¼ã‚·ãƒ¼ãƒ‰#
+1000589#ãƒ•ã‚§ã‚¢ãƒªãƒ¼ãƒªãƒ¼ãƒ•#
+1000590#ã‚µãƒžãƒ¼ãƒŠã‚¤ãƒˆãƒ”ãƒ¼ã‚¹#
+1000591#ãƒ¡ãƒ¡ãƒ¡ãƒ­ãƒ”ãƒ¼#
+1000592#ãƒ€ãƒ¡ãƒ¡ãƒ­ãƒ”ãƒ¼#
+1000593#ã‚­ãƒ¼ã‚ªãƒ–ãƒ˜ãƒ–ãƒ³#
+1000594#ãƒ¬ã‚¢ã‚¹ãƒ¢ãƒ¼ãƒ«ã‚¸ã‚§ãƒ #
+1000595#ãƒ—ãƒ¬ã‚·ãƒ£ã‚¹ãƒœã‚¿ãƒ³#
+1000596#ã‚¹ã‚¿ãƒ¼ãƒžãƒƒã‚·ãƒ¥ãƒ«ãƒ¼ãƒ #
+1000597#æ¿ƒç¸®ãƒ¡ãƒ­ãƒ³ã‚¸ãƒ£ãƒ #
+1000598#ãƒã‚ªãƒ³ã‚¦ã‚©ãƒ¼ã‚¿ãƒ¼#
+1000599#ãƒ‡ã‚£ãƒ¼ãƒ—ã‚·ãƒ¼ã‚¦ã‚©ãƒ¼ã‚¿ãƒ¼#
 
 patch0047
-7062#[ŠC‚ÌƒLƒ“ƒOƒhƒ‰ƒ‚ƒjƒbƒp#
-7324#[ŠC‚ÌƒNƒ‰[ƒPƒ“‚Ì‘«#
-¦item_db.txt‹Lq‚ªŒÃ‚¢‚Ì‚Å‘‚«Š·‚¦
+7062#æ·±æµ·ã®ã‚­ãƒ³ã‚°ãƒ‰ãƒ©ãƒ¢ãƒ‹ãƒƒãƒ‘#
+7324#æ·±æµ·ã®ã‚¯ãƒ©ãƒ¼ã‚±ãƒ³ã®è¶³#
+â€»item_db.txtè¨˜è¿°ãŒå¤ã„ã®ã§æ›¸ãæ›ãˆ
 
-25892#[ŠC‚ÌŠLŠk#
-25893#[ŠC‹›‚ÌK”ö#
-25894#•…”s‚µ‚½[ŠC‹›#
-25895#[ŠC‚Ìƒqƒgƒf#
-25896#[ŠC‚ÌƒYƒƒCƒKƒj#
-25898#ƒVƒ‹ƒh‚Ì’Þ‚èŠÆ#
-25899#[ŠC‚ÌƒGƒbƒZƒ“ƒX#
+25892#æ·±æµ·ã®è²æ®»#
+25893#æ·±æµ·é­šã®å°»å°¾#
+25894#è…æ•—ã—ãŸæ·±æµ·é­š#
+25895#æ·±æµ·ã®ãƒ’ãƒˆãƒ‡#
+25896#æ·±æµ·ã®ã‚ºãƒ¯ã‚¤ã‚¬ãƒ‹#
+25898#ã‚·ãƒ«ãƒ‰ã®é‡£ã‚Šç«¿#
+25899#æ·±æµ·ã®ã‚¨ãƒƒã‚»ãƒ³ã‚¹#
 
-300143#[ŠC‚Ìƒ}ƒ‹ƒXƒJ[ƒh#
-300144#[ŠC‚Ì”¼‹™lƒJ[ƒh#
-300146#[ŠC‚ÌƒZƒhƒ‰ƒJ[ƒh#
-300148#[ŠC‚ÌƒXƒgƒ‰ƒEƒtƒJ[ƒh#
-300149#[ŠC‚ÌƒtƒFƒ“ƒJ[ƒh#
-300150#[ŠC‚ÌƒLƒ“ƒOƒhƒ‰ƒ‚ƒJ[ƒh#
-¦ƒJ[ƒh‚ÍC³
+300143#æ·±æµ·ã®ãƒžãƒ«ã‚¹ã‚«ãƒ¼ãƒ‰#
+300144#æ·±æµ·ã®åŠæ¼äººã‚«ãƒ¼ãƒ‰#
+300146#æ·±æµ·ã®ã‚»ãƒ‰ãƒ©ã‚«ãƒ¼ãƒ‰#
+300148#æ·±æµ·ã®ã‚¹ãƒˆãƒ©ã‚¦ãƒ•ã‚«ãƒ¼ãƒ‰#
+300149#æ·±æµ·ã®ãƒ•ã‚§ãƒ³ã‚«ãƒ¼ãƒ‰#
+300150#æ·±æµ·ã®ã‚­ãƒ³ã‚°ãƒ‰ãƒ©ãƒ¢ã‚«ãƒ¼ãƒ‰#
+â€»ã‚«ãƒ¼ãƒ‰ã¯ä¿®æ­£
 
-400053#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒ‚ƒŠƒKƒ“‚Ìƒwƒ‹ƒ€#
-450144#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒZƒCƒ“ƒgƒ[ƒu#
-450145#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒVƒƒƒsƒjƒnŠC‚Ì‹©‚Ñ#
-450146#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒƒCƒ‹#
-480054#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒ‚ƒŠƒKƒ“‚Ìƒ}ƒ“ƒg#
-490069#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒ‚ƒŠƒKƒ“‚Ìƒxƒ‹ƒg#
-490070#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒ‚ƒŠƒKƒ“‚Ìƒyƒ“ƒ_ƒ“ƒg#
-570008#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒGƒŒƒLƒMƒ^[#
-580008#ƒCƒŠƒ…[ƒWƒ‡ƒ““d‹CƒEƒiƒM#
-600011#ƒCƒŠƒ…[ƒWƒ‡ƒ“Ž€‚Ìˆø“±ŽÒ#
-610012#ƒCƒŠƒ…[ƒWƒ‡ƒ“—â‚½‚¢•X’Œ‚ÌƒJƒ^[ƒ‹#
-630006#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒuƒŠƒ…[ƒiƒN#
-630007#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒ[ƒsƒ…ƒƒX#
-¦400053 ƒZƒbƒgŒø‰Ê’Ç‰Á
+400053#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ¢ãƒªã‚¬ãƒ³ã®ãƒ˜ãƒ«ãƒ #
+450144#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚»ã‚¤ãƒ³ãƒˆãƒ­ãƒ¼ãƒ–#
+450145#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚·ãƒ£ãƒ”ãƒ‹ãƒæµ·ã®å«ã³#
+450146#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ¡ã‚¤ãƒ«#
+480054#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ¢ãƒªã‚¬ãƒ³ã®ãƒžãƒ³ãƒˆ#
+490069#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ¢ãƒªã‚¬ãƒ³ã®ãƒ™ãƒ«ãƒˆ#
+490070#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ¢ãƒªã‚¬ãƒ³ã®ãƒšãƒ³ãƒ€ãƒ³ãƒˆ#
+570008#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¨ãƒ¬ã‚­ã‚®ã‚¿ãƒ¼#
+580008#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³é›»æ°—ã‚¦ãƒŠã‚®#
+600011#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³æ­»ã®å¼•å°Žè€…#
+610012#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³å†·ãŸã„æ°·æŸ±ã®ã‚«ã‚¿ãƒ¼ãƒ«#
+630006#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ–ãƒªãƒ¥ãƒ¼ãƒŠã‚¯#
+630007#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¼ãƒ”ãƒ¥ãƒ­ã‚¹#
+â€»400053 ã‚»ãƒƒãƒˆåŠ¹æžœè¿½åŠ 
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-12	patch0045
-5289 420235 C³
+5289 420235 ä¿®æ­£
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-450018#ƒmƒuƒŒƒXƒRƒ“ƒtƒBƒfƒ“ƒVƒƒƒ‹ƒƒCƒ‹#
-450030#ƒmƒuƒŒƒXƒJƒ‹ƒeƒBƒxƒCƒVƒ‡ƒ“ƒR[ƒg#
-450041#ƒmƒuƒŒƒXƒpƒjƒbƒVƒ…ƒƒ“ƒgƒ[ƒu#
-450052#ƒCƒ“ƒyƒŠƒAƒ‹ƒRƒ“ƒtƒBƒfƒ“ƒVƒƒƒ‹ƒƒCƒ‹#
-450066#ƒCƒ“ƒyƒŠƒAƒ‹ƒJƒ‹ƒeƒBƒxƒCƒVƒ‡ƒ“ƒR[ƒg#
-450077#ƒCƒ“ƒyƒŠƒAƒ‹ƒpƒjƒbƒVƒ…ƒƒ“ƒgƒ[ƒu#
-450086#ƒOƒŒ[ƒXƒRƒ“ƒtƒBƒfƒ“ƒVƒƒƒ‹ƒƒCƒ‹#
-450100#ƒOƒŒ[ƒXƒJƒ‹ƒeƒBƒxƒCƒVƒ‡ƒ“ƒR[ƒg#
-450111#ƒOƒŒ[ƒXƒpƒjƒbƒVƒ…ƒƒ“ƒgƒ[ƒu#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+450018#ãƒŽãƒ–ãƒ¬ã‚¹ã‚³ãƒ³ãƒ•ã‚£ãƒ‡ãƒ³ã‚·ãƒ£ãƒ«ãƒ¡ã‚¤ãƒ«#
+450030#ãƒŽãƒ–ãƒ¬ã‚¹ã‚«ãƒ«ãƒ†ã‚£ãƒ™ã‚¤ã‚·ãƒ§ãƒ³ã‚³ãƒ¼ãƒˆ#
+450041#ãƒŽãƒ–ãƒ¬ã‚¹ãƒ‘ãƒ‹ãƒƒã‚·ãƒ¥ãƒ¡ãƒ³ãƒˆãƒ­ãƒ¼ãƒ–#
+450052#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ã‚³ãƒ³ãƒ•ã‚£ãƒ‡ãƒ³ã‚·ãƒ£ãƒ«ãƒ¡ã‚¤ãƒ«#
+450066#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ã‚«ãƒ«ãƒ†ã‚£ãƒ™ã‚¤ã‚·ãƒ§ãƒ³ã‚³ãƒ¼ãƒˆ#
+450077#ã‚¤ãƒ³ãƒšãƒªã‚¢ãƒ«ãƒ‘ãƒ‹ãƒƒã‚·ãƒ¥ãƒ¡ãƒ³ãƒˆãƒ­ãƒ¼ãƒ–#
+450086#ã‚°ãƒ¬ãƒ¼ã‚¹ã‚³ãƒ³ãƒ•ã‚£ãƒ‡ãƒ³ã‚·ãƒ£ãƒ«ãƒ¡ã‚¤ãƒ«#
+450100#ã‚°ãƒ¬ãƒ¼ã‚¹ã‚«ãƒ«ãƒ†ã‚£ãƒ™ã‚¤ã‚·ãƒ§ãƒ³ã‚³ãƒ¼ãƒˆ#
+450111#ã‚°ãƒ¬ãƒ¼ã‚¹ãƒ‘ãƒ‹ãƒƒã‚·ãƒ¥ãƒ¡ãƒ³ãƒˆãƒ­ãƒ¼ãƒ–#
 
-450100 ƒZƒbƒg•ª
-5992#ŒÃ‚Ñ‚½ƒ~ƒ_ƒX‚Ì‚³‚³‚â‚«#
-19453#ƒWƒFƒWƒFƒLƒƒƒbƒv#
+450100 ã‚»ãƒƒãƒˆåˆ†
+5992#å¤ã³ãŸãƒŸãƒ€ã‚¹ã®ã•ã•ã‚„ã#
+19453#ã‚¸ã‚§ã‚¸ã‚§ã‚­ãƒ£ãƒƒãƒ—#
 
 2023-10-11	patch0044
-200188 200189 200234 200235 C³
+200188 200189 200234 200235 ä¿®æ­£
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-10046#”L‰¤Š¥#
-10047#’±ƒlƒNƒ^ƒC#
-14574#ƒoƒKƒ{ƒ“ƒh‚Ì“ªŠWœ#
-26177#–‚“±Žt‚Ì‹L‰¯#
-100797#ƒ}ƒ^ƒ^ƒr‚ÌŒ´–Ø#
-200139#[2021]“Á•Êƒ`ƒPƒbƒg‚Ì” #
-1000553#ƒyƒbƒg—pƒpƒCƒvƒ^ƒoƒR#
-1000622#ƒLƒ…[ƒyƒbƒgƒ{ƒbƒNƒX’Š‘IŒ”II#
-1000623#ƒyƒbƒg—pƒVƒ“ƒuƒŒƒCƒh#
-1000624#ƒyƒbƒg—pƒOƒŠƒbƒ^ƒŠƒ“ƒOƒNƒ[ƒX#
-1000625#ƒyƒbƒg—pƒ”ƒ@[ƒŠ‚Ìƒ}ƒ“ƒg#
-1000626#ƒyƒbƒg—pƒAƒŠƒX‚ÌƒGƒvƒƒ“#
-1000627#ƒyƒbƒg—p‘º³#
-¦ƒyƒbƒgŒn‚Ímobid‚ª’è‚Ü‚Á‚Ä‚È‚¢‚½‚ßÌ”Ô‚Ì‚Ý‚Å–¢ŽÀ‘•
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+10046#çŒ«çŽ‹å† #
+10047#è¶ãƒã‚¯ã‚¿ã‚¤#
+14574#ãƒã‚¬ãƒœãƒ³ãƒ‰ã®é ­è“‹éª¨#
+26177#é­”å°Žå¸«ã®è¨˜æ†¶#
+100797#ãƒžã‚¿ã‚¿ãƒ“ã®åŽŸæœ¨#
+200139#[2021]ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆã®ç®±#
+1000553#ãƒšãƒƒãƒˆç”¨ãƒ‘ã‚¤ãƒ—ã‚¿ãƒã‚³#
+1000622#ã‚­ãƒ¥ãƒ¼ãƒšãƒƒãƒˆãƒœãƒƒã‚¯ã‚¹æŠ½é¸åˆ¸II#
+1000623#ãƒšãƒƒãƒˆç”¨ã‚·ãƒ³ãƒ–ãƒ¬ã‚¤ãƒ‰#
+1000624#ãƒšãƒƒãƒˆç”¨ã‚°ãƒªãƒƒã‚¿ãƒªãƒ³ã‚°ã‚¯ãƒ­ãƒ¼ã‚¹#
+1000625#ãƒšãƒƒãƒˆç”¨ãƒ´ã‚¡ãƒ¼ãƒªã®ãƒžãƒ³ãƒˆ#
+1000626#ãƒšãƒƒãƒˆç”¨ã‚¢ãƒªã‚¹ã®ã‚¨ãƒ—ãƒ­ãƒ³#
+1000627#ãƒšãƒƒãƒˆç”¨æ‘æ­£#
+â€»ãƒšãƒƒãƒˆç³»ã¯mobidãŒå®šã¾ã£ã¦ãªã„ãŸã‚æŽ¡ç•ªã®ã¿ã§æœªå®Ÿè£…
 
-400177#ƒtƒ@ƒtƒj[ƒ‹ƒwƒ‹ƒ€#
-400187#Ô‚¢”LŽ¨–‚—–XŽq#
-400194#‰ù‹½‚ÌƒTƒNƒ‰#
-410088#ƒpƒ[ƒhƒCƒ“ƒJƒ€#
-410089#ƒpƒ[ƒhƒCƒ“ƒJƒ€#
-410096#’OF‚ÌƒŠƒ{ƒ“#
-410097#’OF‚ÌƒŠƒ{ƒ“#
-460023#ƒV[ƒ‹ƒhƒIƒuƒtƒFƒjƒbƒNƒX#
-470105#l´‚ÌŒC#
-470106#l´‚ÌŒC#
-480134#ƒAƒ”ƒ@ƒŒ[ƒcƒH#
+400177#ãƒ•ã‚¡ãƒ•ãƒ‹ãƒ¼ãƒ«ãƒ˜ãƒ«ãƒ #
+400187#èµ¤ã„çŒ«è€³é­”å¥³å¸½å­#
+400194#æ‡éƒ·ã®ã‚µã‚¯ãƒ©#
+410088#ãƒ‘ãƒ¯ãƒ¼ãƒ‰ã‚¤ãƒ³ã‚«ãƒ #
+410089#ãƒ‘ãƒ¯ãƒ¼ãƒ‰ã‚¤ãƒ³ã‚«ãƒ #
+410096#ä¸¹è‰²ã®ãƒªãƒœãƒ³#
+410097#ä¸¹è‰²ã®ãƒªãƒœãƒ³#
+460023#ã‚·ãƒ¼ãƒ«ãƒ‰ã‚ªãƒ–ãƒ•ã‚§ãƒ‹ãƒƒã‚¯ã‚¹#
+470105#ç²›æ¸…ã®é´#
+470106#ç²›æ¸…ã®é´#
+480134#ã‚¢ãƒ´ã‚¡ãƒ¬ãƒ¼ãƒ„ã‚©#
 
-¦ƒyƒbƒg‚É•t‘Ñ‚·‚é‘•”õŒø‰Ê‚Ípet_db‚É‹Lq‚·‚é‚½‚ß–¢ŽÀ‘•
+â€»ãƒšãƒƒãƒˆã«ä»˜å¸¯ã™ã‚‹è£…å‚™åŠ¹æžœã¯pet_dbã«è¨˜è¿°ã™ã‚‹ãŸã‚æœªå®Ÿè£…
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-10	patch0043
-ˆÈ‰º‚ÌƒAƒCƒeƒ€C³
-12677#ƒGƒ‹ƒ”ƒBƒ‰ƒLƒƒƒ“ƒfƒB(YE)#
-23044#ƒGƒ‹ƒ”ƒBƒ‰ƒLƒƒƒ“ƒfƒB#
-300305#‹ß•¨”½ŽË5%#
-300314#—«‚Æ‹L‰¯‚ÌŽcŸæ#
-¦ƒGƒ‹ƒ”ƒBƒ‰ƒLƒƒƒ“ƒfƒB‚ÍUéíYE‚ÆƒZƒbƒg‚ÅŽÀ‘•‚³‚ê‚½ƒVƒXƒeƒ€ê—pƒAƒCƒeƒ€‚È‚Ì‚ÅŽb’è
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ ä¿®æ­£
+12677#ã‚¨ãƒ«ãƒ´ã‚£ãƒ©ã‚­ãƒ£ãƒ³ãƒ‡ã‚£(YE)#
+23044#ã‚¨ãƒ«ãƒ´ã‚£ãƒ©ã‚­ãƒ£ãƒ³ãƒ‡ã‚£#
+300305#è¿‘ç‰©åå°„5%#
+300314#ç†æ€§ã¨è¨˜æ†¶ã®æ®‹æ»“#
+â€»ã‚¨ãƒ«ãƒ´ã‚£ãƒ©ã‚­ãƒ£ãƒ³ãƒ‡ã‚£ã¯æ”»åŸŽæˆ¦YEã¨ã‚»ãƒƒãƒˆã§å®Ÿè£…ã•ã‚ŒãŸã‚·ã‚¹ãƒ†ãƒ å°‚ç”¨ã‚¢ã‚¤ãƒ†ãƒ ãªã®ã§æš«å®š
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-200040#[2021]BitCashƒ`ƒPƒbƒg‚Ì” #
-200166#[19thAnniversary]•à—…Žµ¸˜BƒtƒH[ƒX‚Ì” #
-200167#[19thAnniversary]ƒhƒŒƒbƒV[ƒN[ƒ|ƒ“‚Ì” #
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+200040#[2021]BitCashãƒã‚±ãƒƒãƒˆã®ç®±#
+200166#[19thAnniversary]æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+200167#[19thAnniversary]ãƒ‰ãƒ¬ãƒƒã‚·ãƒ¼ã‚¯ãƒ¼ãƒãƒ³ã®ç®±#
 
-400203#ƒEƒ‹ƒtƒIƒtƒBƒT[ƒnƒbƒg#
-400213#ƒtƒFƒCƒXƒIƒuƒCƒOƒhƒ‰ƒVƒ‹#
-410109#‚à‚Ó‚à‚Óƒ‰ƒuƒŠ[ƒtƒHƒbƒNƒX#
-410110#‚à‚Ó‚à‚Óƒ‰ƒuƒŠ[ƒtƒHƒbƒNƒX#
-410119#ƒK[ƒfƒBƒAƒ“ƒwƒ‹ƒ€#
-410120#ƒK[ƒfƒBƒAƒ“ƒwƒ‹ƒ€#
-420093#ƒAƒCƒ“ƒwƒŠƒ„ƒ‹‚ÌŠO“…#
-460025#ƒXƒvƒ“ƒ^ƒ}ƒ“ƒ†#
-470112#ˆ«—ì‚Ì‚¤‚ß‚«º#
-480156#ƒC[ƒWƒXƒVƒXƒeƒ€#
-540018#˜ZèéŽO—ª#
+400203#ã‚¦ãƒ«ãƒ•ã‚ªãƒ•ã‚£ã‚µãƒ¼ãƒãƒƒãƒˆ#
+400213#ãƒ•ã‚§ã‚¤ã‚¹ã‚ªãƒ–ã‚¤ã‚°ãƒ‰ãƒ©ã‚·ãƒ«#
+410109#ã‚‚ãµã‚‚ãµãƒ©ãƒ–ãƒªãƒ¼ãƒ•ã‚©ãƒƒã‚¯ã‚¹#
+410110#ã‚‚ãµã‚‚ãµãƒ©ãƒ–ãƒªãƒ¼ãƒ•ã‚©ãƒƒã‚¯ã‚¹#
+410119#ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³ãƒ˜ãƒ«ãƒ #
+410120#ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³ãƒ˜ãƒ«ãƒ #
+420093#ã‚¢ã‚¤ãƒ³ãƒ˜ãƒªãƒ¤ãƒ«ã®å¤–å¥—#
+460025#ã‚¹ãƒ—ãƒ³ã‚¿ãƒžãƒ³ãƒ¦#
+470112#æ‚ªéœŠã®ã†ã‚ãå£°#
+480156#ã‚¤ãƒ¼ã‚¸ã‚¹ã‚·ã‚¹ãƒ†ãƒ #
+540018#å…­éŸœä¸‰ç•¥#
 
 2023-10-10	jpatch231010
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-200337#[2023]“Á•Êƒ`ƒPƒbƒg(Autumn)‚Ì” #
-200338#[2023”N]ƒnƒƒEƒBƒ“ƒ`ƒPƒbƒg‚Ì” #
-1000090#[2023]“Á•Êƒ`ƒPƒbƒg(Autumn)#
-400518#[ˆß‘•] ƒWƒ…ƒm[‚ÌŠá#
-¦ 1000090 Žg‚¢‚Ü‚í‚µ‚È‚Ì‚Åã‘‚«
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+200337#[2023]ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆ(Autumn)ã®ç®±#
+200338#[2023å¹´]ãƒãƒ­ã‚¦ã‚£ãƒ³ãƒã‚±ãƒƒãƒˆã®ç®±#
+1000090#[2023]ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆ(Autumn)#
+400518#[è¡£è£…] ã‚¸ãƒ¥ãƒŽãƒ¼ã®çœ¼#
+â€» 1000090 ä½¿ã„ã¾ã‚ã—ãªã®ã§ä¸Šæ›¸ã
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-09	patch0042
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-420105#¢ŠE‚ðI‚ÞŽôæf#
-450205#ŠoÁƒI[ƒNƒ[ƒh‚ÌŠZ#
-470113#ŠoÁƒzƒƒEƒVƒ…[ƒY#
-480157#ŽR—r–Ñ‚Ìƒ}ƒtƒ‰[#
-490183#ƒ~ƒŠƒ^ƒŠ[ƒOƒ[ƒu#
-600025#ŠoÁƒtƒ‹ƒtƒH[ƒX#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+420105#ä¸–ç•Œã‚’è•ã‚€å‘ªè©›#
+450205#è¦šé†’ã‚ªãƒ¼ã‚¯ãƒ­ãƒ¼ãƒ‰ã®éŽ§#
+470113#è¦šé†’ãƒ›ãƒ­ã‚¦ã‚·ãƒ¥ãƒ¼ã‚º#
+480157#å±±ç¾Šæ¯›ã®ãƒžãƒ•ãƒ©ãƒ¼#
+490183#ãƒŸãƒªã‚¿ãƒªãƒ¼ã‚°ãƒ­ãƒ¼ãƒ–#
+600025#è¦šé†’ãƒ•ãƒ«ãƒ•ã‚©ãƒ¼ã‚¹#
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€‚ÌC³‚ÆÅ“K‰»
-12674#ƒRƒƒbƒZƒIƒAƒCƒX‚Ì” (50ŒÂ)#
-12675#ƒRƒƒbƒZƒIƒAƒCƒX‚Ì” (150ŒÂ)#
-300318#••ˆó‚³‚ê‚½ƒCƒOƒjƒ[ƒ€=ƒZƒjƒAiMVPjƒJ[ƒh#
-300319#••ˆó‚³‚ê‚½ƒGƒhƒKƒJ[ƒh#
-300320#••ˆó‚³‚ê‚½ƒIƒVƒŠƒXƒJ[ƒh#
-300321#••ˆó‚³‚ê‚½ƒI[ƒNƒq[ƒ[ƒJ[ƒh#
-300322#••ˆó‚³‚ê‚½ƒI[ƒNƒ[ƒhƒJ[ƒh#
-300323#••ˆó‚³‚ê‚½ƒhƒbƒyƒ‹ƒQƒ“ƒK[ƒJ[ƒh#
-300324#••ˆó‚³‚ê‚½ƒhƒŒƒCƒNƒJ[ƒh#
-300325#••ˆó‚³‚ê‚½ƒoƒtƒHƒƒbƒgƒJ[ƒh#
-300326#••ˆó‚³‚ê‚½ƒtƒŠƒIƒjƒJ[ƒh#
-300327#••ˆó‚³‚ê‚½ƒ}ƒ„[ƒJ[ƒh#
-300328#••ˆó‚³‚ê‚½ƒ~ƒXƒgƒŒƒXƒJ[ƒh#
-300330#••ˆó‚³‚ê‚½ƒAƒgƒƒXƒJ[ƒh#
-300331#••ˆó‚³‚ê‚½ƒCƒtƒŠ[ƒgƒJ[ƒh#
-300332#••ˆó‚³‚ê‚½ƒOƒ‹[ƒ€ƒAƒ“ƒ_[ƒiƒCƒgƒJ[ƒh#
-300334#••ˆó‚³‚ê‚½‘Â‚¿‚½‘å_Š¯ƒqƒoƒ€ƒJ[ƒh#
-300335#••ˆó‚³‚ê‚½—‰¤ƒXƒJƒ‰ƒoƒJ[ƒh#
-300337#••ˆó‚³‚ê‚½—’éƒXƒJƒ‰ƒoƒJ[ƒh#
-300338#••ˆó‚³‚ê‚½–‚Œ•Žmƒ^ƒiƒgƒX‚ÌŽv”O‘ÌƒJ[ƒh#
-300339#••ˆó‚³‚ê‚½‰˜õ‚³‚ê‚½ƒ_[ƒNƒ[ƒhƒJ[ƒh#
-300340#••ˆó‚³‚ê‚½‰˜õ‚³‚ê‚½ƒuƒŠƒiƒ‰ƒlƒAƒJ[ƒh#
-300341#••ˆó‚³‚ê‚½d‰»ƒ€ƒXƒyƒ‹ƒXƒR[ƒ‹ƒJ[ƒh#
-300343#••ˆó‚³‚ê‚½ƒ^ƒCƒ€ƒzƒ‹ƒ_[ƒJ[ƒh#
-300344#••ˆó‚³‚ê‚½ƒ{ƒ~ƒJ[ƒh#
-300345#••ˆó‚³‚ê‚½“{‚è‚ÌŒŽ–é‰ÔƒJ[ƒh#
-300346#••ˆó‚³‚ê‚½“{‚è‚Ìƒhƒ‰ƒLƒ…ƒ‰ƒJ[ƒh#
-300348#••ˆó‚³‚ê‚½ƒAƒƒ“ƒzƒeƒvƒJ[ƒh#
-300349#••ˆó‚³‚ê‚½ŒÃ‚Ìƒ^ƒIƒOƒ“ƒJƒJ[ƒh#
-300350#••ˆó‚³‚ê‚½‹P‚­ƒxƒAƒh[ƒ‹ƒJ[ƒh#
-300351#••ˆó‚³‚ê‚½ŒÃ‚ÌƒE[ƒ^ƒ“ƒK[ƒhƒJ[ƒh#
-300352#••ˆó‚³‚ê‚½ŠoÁƒNƒgƒ‹ƒ‰ƒiƒbƒNƒXƒJ[ƒh#
-300353#••ˆó‚³‚ê‚½¬“×‚ÌƒoƒtƒHƒƒbƒgƒJ[ƒh#
-300354#••ˆó‚³‚ê‚½[ŠC‚ÌƒNƒ‰[ƒPƒ“ƒJ[ƒh#
-300355#••ˆó‚³‚ê‚½•s‹g‚Èƒ^[ƒgƒ‹GƒJ[ƒh#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ ã®ä¿®æ­£ã¨æœ€é©åŒ–
+12674#ã‚³ãƒ­ãƒƒã‚»ã‚ªã‚¢ã‚¤ã‚¹ã®ç®±(50å€‹)#
+12675#ã‚³ãƒ­ãƒƒã‚»ã‚ªã‚¢ã‚¤ã‚¹ã®ç®±(150å€‹)#
+300318#å°å°ã•ã‚ŒãŸã‚¤ã‚°ãƒ‹ã‚¼ãƒ =ã‚»ãƒ‹ã‚¢ï¼ˆMVPï¼‰ã‚«ãƒ¼ãƒ‰#
+300319#å°å°ã•ã‚ŒãŸã‚¨ãƒ‰ã‚¬ã‚«ãƒ¼ãƒ‰#
+300320#å°å°ã•ã‚ŒãŸã‚ªã‚·ãƒªã‚¹ã‚«ãƒ¼ãƒ‰#
+300321#å°å°ã•ã‚ŒãŸã‚ªãƒ¼ã‚¯ãƒ’ãƒ¼ãƒ­ãƒ¼ã‚«ãƒ¼ãƒ‰#
+300322#å°å°ã•ã‚ŒãŸã‚ªãƒ¼ã‚¯ãƒ­ãƒ¼ãƒ‰ã‚«ãƒ¼ãƒ‰#
+300323#å°å°ã•ã‚ŒãŸãƒ‰ãƒƒãƒšãƒ«ã‚²ãƒ³ã‚¬ãƒ¼ã‚«ãƒ¼ãƒ‰#
+300324#å°å°ã•ã‚ŒãŸãƒ‰ãƒ¬ã‚¤ã‚¯ã‚«ãƒ¼ãƒ‰#
+300325#å°å°ã•ã‚ŒãŸãƒãƒ•ã‚©ãƒ¡ãƒƒãƒˆã‚«ãƒ¼ãƒ‰#
+300326#å°å°ã•ã‚ŒãŸãƒ•ãƒªã‚ªãƒ‹ã‚«ãƒ¼ãƒ‰#
+300327#å°å°ã•ã‚ŒãŸãƒžãƒ¤ãƒ¼ã‚«ãƒ¼ãƒ‰#
+300328#å°å°ã•ã‚ŒãŸãƒŸã‚¹ãƒˆãƒ¬ã‚¹ã‚«ãƒ¼ãƒ‰#
+300330#å°å°ã•ã‚ŒãŸã‚¢ãƒˆãƒ­ã‚¹ã‚«ãƒ¼ãƒ‰#
+300331#å°å°ã•ã‚ŒãŸã‚¤ãƒ•ãƒªãƒ¼ãƒˆã‚«ãƒ¼ãƒ‰#
+300332#å°å°ã•ã‚ŒãŸã‚°ãƒ«ãƒ¼ãƒ ã‚¢ãƒ³ãƒ€ãƒ¼ãƒŠã‚¤ãƒˆã‚«ãƒ¼ãƒ‰#
+300334#å°å°ã•ã‚ŒãŸå •ã¡ãŸå¤§ç¥žå®˜ãƒ’ãƒãƒ ã‚«ãƒ¼ãƒ‰#
+300335#å°å°ã•ã‚ŒãŸå¥³çŽ‹ã‚¹ã‚«ãƒ©ãƒã‚«ãƒ¼ãƒ‰#
+300337#å°å°ã•ã‚ŒãŸå¥³å¸ã‚¹ã‚«ãƒ©ãƒã‚«ãƒ¼ãƒ‰#
+300338#å°å°ã•ã‚ŒãŸé­”å‰£å£«ã‚¿ãƒŠãƒˆã‚¹ã®æ€å¿µä½“ã‚«ãƒ¼ãƒ‰#
+300339#å°å°ã•ã‚ŒãŸæ±šæŸ“ã•ã‚ŒãŸãƒ€ãƒ¼ã‚¯ãƒ­ãƒ¼ãƒ‰ã‚«ãƒ¼ãƒ‰#
+300340#å°å°ã•ã‚ŒãŸæ±šæŸ“ã•ã‚ŒãŸãƒ–ãƒªãƒŠãƒ©ãƒã‚¢ã‚«ãƒ¼ãƒ‰#
+300341#å°å°ã•ã‚ŒãŸç¡¬åŒ–ãƒ ã‚¹ãƒšãƒ«ã‚¹ã‚³ãƒ¼ãƒ«ã‚«ãƒ¼ãƒ‰#
+300343#å°å°ã•ã‚ŒãŸã‚¿ã‚¤ãƒ ãƒ›ãƒ«ãƒ€ãƒ¼ã‚«ãƒ¼ãƒ‰#
+300344#å°å°ã•ã‚ŒãŸãƒœãƒŸã‚«ãƒ¼ãƒ‰#
+300345#å°å°ã•ã‚ŒãŸæ€’ã‚Šã®æœˆå¤œèŠ±ã‚«ãƒ¼ãƒ‰#
+300346#å°å°ã•ã‚ŒãŸæ€’ã‚Šã®ãƒ‰ãƒ©ã‚­ãƒ¥ãƒ©ã‚«ãƒ¼ãƒ‰#
+300348#å°å°ã•ã‚ŒãŸã‚¢ãƒ¡ãƒ³ãƒ›ãƒ†ãƒ—ã‚«ãƒ¼ãƒ‰#
+300349#å°å°ã•ã‚ŒãŸå¤ã®ã‚¿ã‚ªã‚°ãƒ³ã‚«ã‚«ãƒ¼ãƒ‰#
+300350#å°å°ã•ã‚ŒãŸè¼ããƒ™ã‚¢ãƒ‰ãƒ¼ãƒ«ã‚«ãƒ¼ãƒ‰#
+300351#å°å°ã•ã‚ŒãŸå¤ã®ã‚¦ãƒ¼ã‚¿ãƒ³ã‚¬ãƒ¼ãƒ‰ã‚«ãƒ¼ãƒ‰#
+300352#å°å°ã•ã‚ŒãŸè¦šé†’ã‚¯ãƒˆãƒ«ãƒ©ãƒŠãƒƒã‚¯ã‚¹ã‚«ãƒ¼ãƒ‰#
+300353#å°å°ã•ã‚ŒãŸæ··æ²Œã®ãƒãƒ•ã‚©ãƒ¡ãƒƒãƒˆã‚«ãƒ¼ãƒ‰#
+300354#å°å°ã•ã‚ŒãŸæ·±æµ·ã®ã‚¯ãƒ©ãƒ¼ã‚±ãƒ³ã‚«ãƒ¼ãƒ‰#
+300355#å°å°ã•ã‚ŒãŸä¸å‰ãªã‚¿ãƒ¼ãƒˆãƒ«Gã‚«ãƒ¼ãƒ‰#
 
-¦300334 –¢ŽÀ‘•‚Å‚·
+â€»300334 æœªå®Ÿè£…ã§ã™
 
 2023-10-08	patch0041
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-101286#ƒ[ƒ„ƒ‹ƒ[ƒŠ[ƒpƒbƒN#
-101287#ƒCƒOƒhƒ‰ƒVƒ‹‚ÌŽÀƒpƒbƒN#
-101288#ƒCƒOƒhƒ‰ƒVƒ‹‚ÌŽíƒpƒbƒN#
-101289#ƒJƒ{ƒ`ƒƒƒpƒCƒpƒbƒN#
-101290#ƒAƒCƒeƒ€ŠÓ’èLv1‚Ì” (30“ú)#
-101291#ƒOƒŠ[ƒhLv1‚Ì” (30“ú)#
-101292#ƒŠƒUƒŒƒNƒVƒ‡ƒ“Lv4‚Ì” (30“ú)#
-101293#ƒAƒCƒeƒ€ŠÓ’èLv1(30“ú)#
-101294#ƒOƒŠ[ƒhLv1(30“ú)#
-101295#ƒŠƒUƒŒƒNƒVƒ‡ƒ“Lv4(30“ú)#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+101286#ãƒ­ãƒ¼ãƒ¤ãƒ«ã‚¼ãƒªãƒ¼ãƒ‘ãƒƒã‚¯#
+101287#ã‚¤ã‚°ãƒ‰ãƒ©ã‚·ãƒ«ã®å®Ÿãƒ‘ãƒƒã‚¯#
+101288#ã‚¤ã‚°ãƒ‰ãƒ©ã‚·ãƒ«ã®ç¨®ãƒ‘ãƒƒã‚¯#
+101289#ã‚«ãƒœãƒãƒ£ãƒ‘ã‚¤ãƒ‘ãƒƒã‚¯#
+101290#ã‚¢ã‚¤ãƒ†ãƒ é‘‘å®šLv1ã®ç®±(30æ—¥)#
+101291#ã‚°ãƒªãƒ¼ãƒ‰Lv1ã®ç®±(30æ—¥)#
+101292#ãƒªã‚¶ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³Lv4ã®ç®±(30æ—¥)#
+101293#ã‚¢ã‚¤ãƒ†ãƒ é‘‘å®šLv1(30æ—¥)#
+101294#ã‚°ãƒªãƒ¼ãƒ‰Lv1(30æ—¥)#
+101295#ãƒªã‚¶ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³Lv4(30æ—¥)#
 
-200188#[2022”N]‹†‹É¸˜Bƒ`ƒPƒbƒg‚Ì” #
-200189#[2022]“Á•Êƒ`ƒPƒbƒg‚Ì” #
+200188#[2022å¹´]ç©¶æ¥µç²¾éŒ¬ãƒã‚±ãƒƒãƒˆã®ç®±#
+200189#[2022]ç‰¹åˆ¥ãƒã‚±ãƒƒãƒˆã®ç®±#
 
-410124#‰…—ì‰öˆÙ‚ÌŽ¨#
-410125#‰…—ì‰öˆÙ‚ÌŽ¨#
-450209#‰ü—ÇŒ^ƒpƒ[ƒhƒX[ƒc#
-450210#‚à‚±‚Ó‚íƒVƒƒ[ƒNƒpƒWƒƒƒ}#
-490193#ƒgƒ‰ƒxƒ‰[ƒŠƒ“ƒO#
+410124#æ€¨éœŠæ€ªç•°ã®è€³#
+410125#æ€¨éœŠæ€ªç•°ã®è€³#
+450209#æ”¹è‰¯åž‹ãƒ‘ãƒ¯ãƒ¼ãƒ‰ã‚¹ãƒ¼ãƒ„#
+450210#ã‚‚ã“ãµã‚ã‚·ãƒ£ãƒ¼ã‚¯ãƒ‘ã‚¸ãƒ£ãƒž#
+490193#ãƒˆãƒ©ãƒ™ãƒ©ãƒ¼ãƒªãƒ³ã‚°#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-06	patch0040
-ˆÈ‰º‚ÌƒJ[ƒhC³
-300308#ƒ}ƒCƒA[EƒŒƒxƒ“ƒuƒ‹ƒOƒJ[ƒh#
-311365#‰¤‰Æ‚Ì‰hŒõ#
+ä»¥ä¸‹ã®ã‚«ãƒ¼ãƒ‰ä¿®æ­£
+300308#ãƒžã‚¤ã‚¢ãƒ¼ãƒ»ãƒ¬ãƒ™ãƒ³ãƒ–ãƒ«ã‚°ã‚«ãƒ¼ãƒ‰#
+311365#çŽ‹å®¶ã®æ „å…‰#
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-27331#ƒNƒƒlƒJ[EƒnƒCƒlƒ“ƒJ[ƒh#
-27332#ƒXƒLƒAƒJ[ƒh#
-27333#ƒXƒLƒAEƒlƒŠƒEƒXƒJ[ƒh#
-27396#ƒAƒCƒUƒbƒNEƒEƒBƒOƒi[ƒJ[ƒh#
-420110#ŒÃ‚Ñ‚½–ÀÊƒXƒJ[ƒt#
-450214#ƒ_[ƒNƒgƒ‰ƒCƒAƒh#
-490206#ƒmƒuƒŒƒXƒIƒuƒŠ[ƒWƒ…#
-530028#‹P‚­”’‹â‚Ì‘„#
-¦450214 ƒZƒbƒgŒø‰Ê‚ÍƒZƒbƒgæƒAƒCƒeƒ€‚ÅŒã“úŽÀ‘•—\’è
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+27331#ã‚¯ãƒ­ãƒã‚«ãƒ¼ãƒ»ãƒã‚¤ãƒãƒ³ã‚«ãƒ¼ãƒ‰#
+27332#ã‚¹ã‚­ã‚¢ã‚«ãƒ¼ãƒ‰#
+27333#ã‚¹ã‚­ã‚¢ãƒ»ãƒãƒªã‚¦ã‚¹ã‚«ãƒ¼ãƒ‰#
+27396#ã‚¢ã‚¤ã‚¶ãƒƒã‚¯ãƒ»ã‚¦ã‚£ã‚°ãƒŠãƒ¼ã‚«ãƒ¼ãƒ‰#
+420110#å¤ã³ãŸè¿·å½©ã‚¹ã‚«ãƒ¼ãƒ•#
+450214#ãƒ€ãƒ¼ã‚¯ãƒˆãƒ©ã‚¤ã‚¢ãƒ‰#
+490206#ãƒŽãƒ–ãƒ¬ã‚¹ã‚ªãƒ–ãƒªãƒ¼ã‚¸ãƒ¥#
+530028#è¼ãç™½éŠ€ã®æ§#
+â€»450214 ã‚»ãƒƒãƒˆåŠ¹æžœã¯ã‚»ãƒƒãƒˆå…ˆã‚¢ã‚¤ãƒ†ãƒ ã§å¾Œæ—¥å®Ÿè£…äºˆå®š
 
-item_cardtype.txt XV
+item_cardtype.txt æ›´æ–°
 
 2023-10-05	patch0039
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-101425#Ž©“®‚¨‘|œ‹@ƒIƒƒK‚ÌŽèŽ†#
-101430#ƒ|ƒŠƒ“ƒO‚Ì–¼Žh#
-101431#BAP‚Ì–¼Žh#
-200096#Î•ÐŽûW‰Æƒ`ƒPƒbƒg‚Ì” #
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+101425#è‡ªå‹•ãŠæŽƒé™¤æ©Ÿã‚ªãƒ¡ã‚¬ã®æ‰‹ç´™#
+101430#ãƒãƒªãƒ³ã‚°ã®ååˆº#
+101431#BAPã®ååˆº#
+200096#çŸ³ç‰‡åŽé›†å®¶ãƒã‚±ãƒƒãƒˆã®ç®±#
 
-400287#ƒŒƒKƒV[ƒIƒuƒƒCƒYƒƒ“#
-410129#Œ¶b‚ÌŽ¨#
-410130#Œ¶b‚ÌŽ¨#
-410139#ƒAƒXƒ‚ƒfƒEƒX‚Ì—ƒ#
-410140#ƒAƒXƒ‚ƒfƒEƒX‚Ì—ƒ#
-410141#ƒSƒ‹ƒS[ƒ“‚Ì‰ÔŠ¥#
-410142#ƒSƒ‹ƒS[ƒ“‚Ì‰ÔŠ¥#
-420112#ƒK[ƒfƒBƒAƒ“ƒNƒ[ƒX#
-450182#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒXƒvƒŠƒ“ƒgƒƒCƒ‹#
-450216#ƒcƒCƒ“ƒwƒbƒhEƒhƒ‰ƒSƒ“ƒƒCƒ‹#
-460017#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒK[ƒh#
-460018#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒVƒ‹ƒo[ƒK[ƒh#
-470066#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒXƒvƒŠƒ“ƒgƒVƒ…[ƒY#
-480184#‚Û‚©‚Û‚©ƒ^ƒ“ƒ|ƒ|ƒP[ƒv#
-490120#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒXƒvƒŠƒ“ƒgƒŠƒ“ƒO#
-490121#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒXƒvƒŠƒ“ƒgƒOƒ[ƒu#
-490207#ƒƒƒ“ƒgƒ‚ƒŠ#
+400287#ãƒ¬ã‚¬ã‚·ãƒ¼ã‚ªãƒ–ãƒ¯ã‚¤ã‚ºãƒ¯ãƒ³#
+410129#å¹»ç£ã®è€³#
+410130#å¹»ç£ã®è€³#
+410139#ã‚¢ã‚¹ãƒ¢ãƒ‡ã‚¦ã‚¹ã®ç¿¼#
+410140#ã‚¢ã‚¹ãƒ¢ãƒ‡ã‚¦ã‚¹ã®ç¿¼#
+410141#ã‚´ãƒ«ã‚´ãƒ¼ãƒ³ã®èŠ±å† #
+410142#ã‚´ãƒ«ã‚´ãƒ¼ãƒ³ã®èŠ±å† #
+420112#ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³ã‚¯ãƒ­ãƒ¼ã‚¹#
+450182#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¹ãƒ—ãƒªãƒ³ãƒˆãƒ¡ã‚¤ãƒ«#
+450216#ãƒ„ã‚¤ãƒ³ãƒ˜ãƒƒãƒ‰ãƒ»ãƒ‰ãƒ©ã‚´ãƒ³ãƒ¡ã‚¤ãƒ«#
+460017#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¬ãƒ¼ãƒ‰#
+460018#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚·ãƒ«ãƒãƒ¼ã‚¬ãƒ¼ãƒ‰#
+470066#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¹ãƒ—ãƒªãƒ³ãƒˆã‚·ãƒ¥ãƒ¼ã‚º#
+480184#ã½ã‹ã½ã‹ã‚¿ãƒ³ãƒãƒã‚±ãƒ¼ãƒ—#
+490120#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¹ãƒ—ãƒªãƒ³ãƒˆãƒªãƒ³ã‚°#
+490121#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¹ãƒ—ãƒªãƒ³ãƒˆã‚°ãƒ­ãƒ¼ãƒ–#
+490207#ãƒ¡ãƒ¡ãƒ³ãƒˆãƒ¢ãƒª#
 
-500030#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒGƒNƒXƒLƒƒƒŠƒo[#
-510034#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒGƒ“ƒVƒFƒ“ƒgƒ_ƒK[#
-510064#n‚±‚Ú‚ê‚µ‚½¬‘¾“#
-510065#S—ì‚Ì¬‘¾“#
-530015#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒQƒ‰ƒhƒŠƒA#
-530029#ŒÃ‚¢ŽO³‘„#
-530030#Ô‚«–Ò«‚Ì‘„#
-550030#ƒCƒŠƒ…[ƒWƒ‡ƒ“ˆï‚Ìñ#
-550031#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒXƒ^ƒbƒtƒIƒuƒeƒBƒA[#
-550073#ŒÍ‚ê–Ø‚Ìñ#
-550074#Œä_–Ø‚Ìñ#
-590041#‘å‚«‚È“S‹…#
-590042#‹S_‚Ì“S‹…#
-620010#ƒCƒŠƒ…[ƒWƒ‡ƒ“ƒhƒD[ƒ€ƒXƒŒƒCƒ„[#
-810011#ŽK‚Ñ‚½¬e#
+500030#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¨ã‚¯ã‚¹ã‚­ãƒ£ãƒªãƒãƒ¼#
+510034#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¨ãƒ³ã‚·ã‚§ãƒ³ãƒˆãƒ€ã‚¬ãƒ¼#
+510064#åˆƒã“ã¼ã‚Œã—ãŸå°å¤ªåˆ€#
+510065#å¿ƒéœŠã®å°å¤ªåˆ€#
+530015#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚²ãƒ©ãƒ‰ãƒªã‚¢#
+530029#å¤ã„ä¸‰å‰æ§#
+530030#èµ¤ãçŒ›å°†ã®æ§#
+550030#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³èŒ¨ã®æ–#
+550031#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ã‚¹ã‚¿ãƒƒãƒ•ã‚ªãƒ–ãƒ†ã‚£ã‚¢ãƒ¼#
+550073#æž¯ã‚Œæœ¨ã®æ–#
+550074#å¾¡ç¥žæœ¨ã®æ–#
+590041#å¤§ããªé‰„çƒ#
+590042#é¬¼ç¥žã®é‰„çƒ#
+620010#ã‚¤ãƒªãƒ¥ãƒ¼ã‚¸ãƒ§ãƒ³ãƒ‰ã‚¥ãƒ¼ãƒ ã‚¹ãƒ¬ã‚¤ãƒ¤ãƒ¼#
+810011#éŒ†ã³ãŸå°éŠƒ#
 810012#AR-89#
-820009#ŽK‚Ñ‚½ƒVƒ‡ƒbƒgƒKƒ“#
+820009#éŒ†ã³ãŸã‚·ãƒ§ãƒƒãƒˆã‚¬ãƒ³#
 820010#M-3700#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-10-03	jpatch231003
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-200329#ƒRƒX‚½‚ÜHalloweenVII#
-20114#[ˆß‘•] ‘’Ž®—p‚Ì–XŽq#
-400370#[ˆß‘•] Ž‡‚Ì”LŽ¨–‚—–XŽq#
-400516#[ˆß‘•] ƒXƒJƒ‹ƒt[ƒh(ã’i)#
-400517#[ˆß‘•] Œä‰¾‚Ì“Å—ÑŒç#
-410276#[ˆß‘•] ‰…—ì‰öˆÙ‚ÌŽ¨#
-410277#[ˆß‘•] ƒ‰ƒOƒh[ƒ‹#
-410278#[ˆß‘•] u‚­ƒuƒ‰ƒbƒfƒBƒAƒC#
-420254#[ˆß‘•] –‚–@Žg‚¢‚Ì‚Ð‚°#
-420255#[ˆß‘•] ƒMƒƒ`ƒ“ƒNƒƒXƒ[ƒ|ƒj[#
-480368#[ˆß‘•] ‘å‚«‚ÈƒƒŠƒ|ƒbƒv#
-15952#[ˆß‘•] ƒi[ƒK‚Ì‹àŠ¥#
-20249#[ˆß‘•] ŠqX‚Æ”R‚ä‚é‹t–Ñ#
-400497#[ˆß‘•] ƒAƒJƒfƒ~[‘æˆêC—¹–XŽq#
-410259#ƒLƒ“ƒOƒƒƒ“ƒwƒbƒhƒtƒHƒ“#
-410261#[ˆß‘•] ƒLƒ“ƒOƒƒƒ“ƒwƒbƒhƒtƒHƒ“#
-420244#[ˆß‘•] –ÒŒÕ‚Ì”í‚è•¨#
-1001467#Šq‚­”š‚º‚éÎ#
-1001468#–n‹q‚Ì•M#
-1001470#—´_‚Ì‹àŽ…#
-1001471#ƒRƒ“ƒvƒŠƒGƒbƒO#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+200329#ã‚³ã‚¹ãŸã¾HalloweenVII#
+20114#[è¡£è£…] è‘¬å¼ç”¨ã®å¸½å­#
+400370#[è¡£è£…] ç´«ã®çŒ«è€³é­”å¥³å¸½å­#
+400516#[è¡£è£…] ã‚¹ã‚«ãƒ«ãƒ•ãƒ¼ãƒ‰(ä¸Šæ®µ)#
+400517#[è¡£è£…] å¾¡ä¼½ã®æ¯’æž—æªŽ#
+410276#[è¡£è£…] æ€¨éœŠæ€ªç•°ã®è€³#
+410277#[è¡£è£…] ãƒ©ã‚°ãƒ‰ãƒ¼ãƒ«#
+410278#[è¡£è£…] çž¬ããƒ–ãƒ©ãƒƒãƒ‡ã‚£ã‚¢ã‚¤#
+420254#[è¡£è£…] é­”æ³•ä½¿ã„ã®ã²ã’#
+420255#[è¡£è£…] ã‚®ãƒ­ãƒãƒ³ã‚¯ãƒ­ã‚¹ãƒ­ãƒ¼ãƒãƒ‹ãƒ¼#
+480368#[è¡£è£…] å¤§ããªãƒ­ãƒªãƒãƒƒãƒ—#
+15952#[è¡£è£…] ãƒŠãƒ¼ã‚¬ã®é‡‘å† #
+20249#[è¡£è£…] èµ«ã€…ã¨ç‡ƒã‚†ã‚‹é€†æ¯›#
+400497#[è¡£è£…] ã‚¢ã‚«ãƒ‡ãƒŸãƒ¼ç¬¬ä¸€ä¿®äº†å¸½å­#
+410259#ã‚­ãƒ³ã‚°ãƒ¡ãƒ­ãƒ³ãƒ˜ãƒƒãƒ‰ãƒ•ã‚©ãƒ³#
+410261#[è¡£è£…] ã‚­ãƒ³ã‚°ãƒ¡ãƒ­ãƒ³ãƒ˜ãƒƒãƒ‰ãƒ•ã‚©ãƒ³#
+420244#[è¡£è£…] çŒ›è™Žã®è¢«ã‚Šç‰©#
+1001467#èµ«ãçˆ†ãœã‚‹çŸ³#
+1001468#å¢¨å®¢ã®ç­†#
+1001470#é¾ç¥žã®é‡‘ç³¸#
+1001471#ã‚³ãƒ³ãƒ—ãƒªã‚¨ãƒƒã‚°#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
-mobID 21191 22185 23000 ’Ç‰Á‚É”º‚¢ mob_db_add.txt XV
+mobID 21191 22185 23000 è¿½åŠ ã«ä¼´ã„ mob_db_add.txt æ›´æ–°
 
 2023-10-02	patch0038
-450215 C³
+450215 ä¿®æ­£
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-6829#•à—…Žµ¸˜BƒtƒH[ƒX#
-200044#å‡‹C˜OƒXƒyƒVƒƒƒ‹ƒhƒŠƒ“ƒN#
-200208#[2022summer]•à—…Žµ¸˜BƒtƒH[ƒX‚Ì” #
-200209#[2022summer]ƒhƒŒƒbƒV[ƒN[ƒ|ƒ“‚Ì” #
-300389#•—ƒ‚ÌŽg“k#
-400307#‹S_‚Ì–¿—F#
-400308#ˆÙ‘‚Ì“`“–XŽq#
-410158#ƒ}ƒWƒbƒNƒZƒŒƒXƒeƒBƒAƒ‹ƒOƒ[ƒu#
-410159#ƒ}ƒWƒbƒNƒZƒŒƒXƒeƒBƒAƒ‹ƒOƒ[ƒu#
-420158#ƒCƒGƒXƒ^ƒfƒCEƒƒ“ƒXEƒ‚ƒA#
-420160#ƒ^ƒCƒ‰ƒ“ƒgƒIƒuƒA[ƒX#
-450220#ƒNƒƒ€ƒƒ^ƒ‹ƒvƒŒ[ƒg#
-450222#ƒŒƒNƒCƒGƒXƒJƒgƒCƒ“ƒp[ƒP#
-450223#ŒÃ‚Ñ‚½Žx”zŽÒ‚Ìƒ[ƒu#
-450224#Žx”zŽÒ‚Ìƒ[ƒu#
-450225#ŠoÁŽx”zŽÒ‚Ìƒ[ƒu#
-470128#“V”n‚ÌŒC#
-480188#ƒ”ƒ@ƒ‹ƒLƒŠ[ƒJ[ƒXƒuƒ‰ƒCƒg#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+6829#æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹#
+200044#èœƒæ°—æ¥¼ã‚¹ãƒšã‚·ãƒ£ãƒ«ãƒ‰ãƒªãƒ³ã‚¯#
+200208#[2022summer]æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+200209#[2022summer]ãƒ‰ãƒ¬ãƒƒã‚·ãƒ¼ã‚¯ãƒ¼ãƒãƒ³ã®ç®±#
+300389#é»’ç¿¼ã®ä½¿å¾’#
+400307#é¬¼ç¥žã®ç›Ÿå‹#
+400308#ç•°å›½ã®ä¼çµ±å¸½å­#
+410158#ãƒžã‚¸ãƒƒã‚¯ã‚»ãƒ¬ã‚¹ãƒ†ã‚£ã‚¢ãƒ«ã‚°ãƒ­ãƒ¼ãƒ–#
+410159#ãƒžã‚¸ãƒƒã‚¯ã‚»ãƒ¬ã‚¹ãƒ†ã‚£ã‚¢ãƒ«ã‚°ãƒ­ãƒ¼ãƒ–#
+420158#ã‚¤ã‚¨ã‚¹ã‚¿ãƒ‡ã‚¤ãƒ»ãƒ¯ãƒ³ã‚¹ãƒ»ãƒ¢ã‚¢#
+420160#ã‚¿ã‚¤ãƒ©ãƒ³ãƒˆã‚ªãƒ–ã‚¢ãƒ¼ã‚¹#
+450220#ã‚¯ãƒ­ãƒ ãƒ¡ã‚¿ãƒ«ãƒ—ãƒ¬ãƒ¼ãƒˆ#
+450222#ãƒ¬ã‚¯ã‚¤ã‚¨ã‚¹ã‚«ãƒˆã‚¤ãƒ³ãƒ‘ãƒ¼ã‚±#
+450223#å¤ã³ãŸæ”¯é…è€…ã®ãƒ­ãƒ¼ãƒ–#
+450224#æ”¯é…è€…ã®ãƒ­ãƒ¼ãƒ–#
+450225#è¦šé†’æ”¯é…è€…ã®ãƒ­ãƒ¼ãƒ–#
+470128#å¤©é¦¬ã®é´#
+480188#ãƒ´ã‚¡ãƒ«ã‚­ãƒªãƒ¼ã‚«ãƒ¼ã‚¹ãƒ–ãƒ©ã‚¤ãƒˆ#
 
-¦200044‚ÍŽw’èƒ}ƒbƒvŒÀ’èŒø‰Ê –¢ŽÀ‘•
+â€»200044ã¯æŒ‡å®šãƒžãƒƒãƒ—é™å®šåŠ¹æžœ æœªå®Ÿè£…
 
 *************/
 2023-10-01	patch0037
-25000”Ô‘ä hateffect‚Ì‹Lq‚ðC³
-470047 ŽÀ‘•
+25000ç•ªå° hateffectã®è¨˜è¿°ã‚’ä¿®æ­£
+470047 å®Ÿè£…
 
-29371 29436 29509 29585 ŽÀ‘•Ï‚Ý‚Ì‚½‚ßíœ
+29371 29436 29509 29585 å®Ÿè£…æ¸ˆã¿ã®ãŸã‚å‰Šé™¤
 
-27000 28000 29000”Ô‘ä ƒGƒ“ƒ`ƒƒƒ“ƒgŒnƒAƒCƒeƒ€ŽÀ‘•
+27000 28000 29000ç•ªå° ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆç³»ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
 
-item_cardtype.txt ’Ç‹L
+item_cardtype.txt è¿½è¨˜
 
-¤lŒnƒAƒCƒeƒ€‚ÌƒLƒƒƒmƒ“ƒ{[ƒ‹ 4ŽíŽÀ‘•
+å•†äººç³»ã‚¢ã‚¤ãƒ†ãƒ ã®ã‚­ãƒ£ãƒŽãƒ³ãƒœãƒ¼ãƒ« 4ç¨®å®Ÿè£…
 
-item_arrowtype.txt ’Ç‹L
+item_arrowtype.txt è¿½è¨˜
 
 2023-09-30	patch0036
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-ƒJ[ƒhC³
-300410#ƒƒƒŠƒ“ƒJ[ƒh#
-300411#‘ÂƒƒƒŠƒ“ƒJ[ƒh#
-410174#ƒvƒŠƒ“ƒZƒXƒƒƒ“ƒwƒbƒhƒtƒHƒ“#
-410176#ƒNƒC[ƒ“ƒƒƒ“ƒwƒbƒhƒtƒHƒ“#
-410185#”½‹t‚Ì‰ù’†ŽžŒv#
-410186#”½‹t‚Ì‰ù’†ŽžŒv#
-420164#–²Œ©‚éÔ—r#
-450226#ƒtƒH[EƒIƒuEƒAEƒJƒCƒ“ƒh#
-470130#ƒGƒ“ƒhƒIƒuƒUƒ[ƒ‹ƒh#
-540057#ƒg[ƒg‚Ì‘#
-550095#ŒÃ‘ã‚Ì‰¤â”#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+ã‚«ãƒ¼ãƒ‰ä¿®æ­£
+300410#ãƒ¡ãƒ­ãƒªãƒ³ã‚«ãƒ¼ãƒ‰#
+300411#å •ãƒ¡ãƒ­ãƒªãƒ³ã‚«ãƒ¼ãƒ‰#
+410174#ãƒ—ãƒªãƒ³ã‚»ã‚¹ãƒ¡ãƒ­ãƒ³ãƒ˜ãƒƒãƒ‰ãƒ•ã‚©ãƒ³#
+410176#ã‚¯ã‚¤ãƒ¼ãƒ³ãƒ¡ãƒ­ãƒ³ãƒ˜ãƒƒãƒ‰ãƒ•ã‚©ãƒ³#
+410185#åé€†ã®æ‡ä¸­æ™‚è¨ˆ#
+410186#åé€†ã®æ‡ä¸­æ™‚è¨ˆ#
+420164#å¤¢è¦‹ã‚‹èµ¤ç¾Š#
+450226#ãƒ•ã‚©ãƒ¼ãƒ»ã‚ªãƒ–ãƒ»ã‚¢ãƒ»ã‚«ã‚¤ãƒ³ãƒ‰#
+470130#ã‚¨ãƒ³ãƒ‰ã‚ªãƒ–ã‚¶ãƒ¯ãƒ¼ãƒ«ãƒ‰#
+540057#ãƒˆãƒ¼ãƒˆã®æ›¸#
+550095#å¤ä»£ã®çŽ‹ç¬#
 
-4000”Ô‘ä‚ÌƒJ[ƒh‚ÆƒZƒbƒg‚Ì18802 ŽÀ‘•iƒtƒ@ƒƒX“”‘ä’n‰º–À‹{‚Æ11thƒJ[ƒhEƒGƒ“ƒ`ƒƒj
+4000ç•ªå°ã®ã‚«ãƒ¼ãƒ‰ã¨ã‚»ãƒƒãƒˆã®18802 å®Ÿè£…ï¼ˆãƒ•ã‚¡ãƒ­ã‚¹ç¯å°åœ°ä¸‹è¿·å®®ã¨11thã‚«ãƒ¼ãƒ‰ãƒ»ã‚¨ãƒ³ãƒãƒ£ï¼‰
 
 2023-09-29	patch0035
-ˆÈ‰º‚ÌƒAƒCƒeƒ€‚ÌƒI[ƒgƒXƒyƒ‹‚ª”­“®‚µ‚È‚¢•”•ªC³
-1867#ƒZƒCƒtƒeƒBƒiƒbƒNƒ‹#
-26215#ƒZƒCƒtƒeƒBƒEƒBƒbƒv#
-28635#ƒZƒCƒtƒeƒBƒ}ƒjƒ…ƒAƒ‹#
-32110#ƒZƒCƒtƒeƒBƒŠƒ…[ƒg#
-32352#ƒZƒCƒtƒeƒBƒZƒCƒo[#
-550006#ƒZƒCƒtƒeƒBƒtƒHƒbƒNƒXƒeƒCƒ‹#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ ã®ã‚ªãƒ¼ãƒˆã‚¹ãƒšãƒ«ãŒç™ºå‹•ã—ãªã„éƒ¨åˆ†ä¿®æ­£
+1867#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ãƒŠãƒƒã‚¯ãƒ«#
+26215#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ã‚¦ã‚£ãƒƒãƒ—#
+28635#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«#
+32110#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ãƒªãƒ¥ãƒ¼ãƒˆ#
+32352#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ã‚»ã‚¤ãƒãƒ¼#
+550006#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ãƒ•ã‚©ãƒƒã‚¯ã‚¹ãƒ†ã‚¤ãƒ«#
 
 2023-09-29	patch0034
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-1867#ƒZƒCƒtƒeƒBƒiƒbƒNƒ‹#
-2058#ƒfƒBƒeƒNƒgƒXƒ^ƒbƒt#
-2796#–‚—Í‚ð”é‚ß‚½Î(ƒXƒvƒŒƒ“ƒfƒBƒbƒh)#
-2797#–‚—Í‚ð”é‚ß‚½Î(ƒ}ƒkƒN)#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+1867#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ãƒŠãƒƒã‚¯ãƒ«#
+2058#ãƒ‡ã‚£ãƒ†ã‚¯ãƒˆã‚¹ã‚¿ãƒƒãƒ•#
+2796#é­”åŠ›ã‚’ç§˜ã‚ãŸçŸ³(ã‚¹ãƒ—ãƒ¬ãƒ³ãƒ‡ã‚£ãƒƒãƒ‰)#
+2797#é­”åŠ›ã‚’ç§˜ã‚ãŸçŸ³(ãƒžãƒŒã‚¯)#
 
-12258#ƒ{ƒ€ƒŠƒ“ƒJƒvƒZƒ‹#
-12384#“øF‚Ìƒ‹ƒr[(…)#
-12385#“øF‚Ìƒ‹ƒr[(’n)#
-12386#“øF‚Ìƒ‹ƒr[(‰Î)#
-12387#“øF‚Ìƒ‹ƒr[(•—)#
+12258#ãƒœãƒ ãƒªãƒ³ã‚«ãƒ—ã‚»ãƒ«#
+12384#è™¹è‰²ã®ãƒ«ãƒ“ãƒ¼(æ°´)#
+12385#è™¹è‰²ã®ãƒ«ãƒ“ãƒ¼(åœ°)#
+12386#è™¹è‰²ã®ãƒ«ãƒ“ãƒ¼(ç«)#
+12387#è™¹è‰²ã®ãƒ«ãƒ“ãƒ¼(é¢¨)#
 
-13346#ƒOƒ‰ƒCƒ“ƒ_[•—–‚Žè— Œ•#
-15391#ƒhƒ‰ƒSƒ“ƒXƒPƒCƒ‹ƒvƒŒ[ƒg#
-15400#ŽiÕ‚Ìƒ[ƒu#
-16099#ƒ‰ƒ”ƒ@[ƒnƒ“ƒ}[#
-18190#ƒ{ƒ‹ƒgƒVƒ…[ƒ^[#
+13346#ã‚°ãƒ©ã‚¤ãƒ³ãƒ€ãƒ¼é¢¨é­”æ‰‹è£å‰£#
+15391#ãƒ‰ãƒ©ã‚´ãƒ³ã‚¹ã‚±ã‚¤ãƒ«ãƒ—ãƒ¬ãƒ¼ãƒˆ#
+15400#å¸ç¥­ã®ãƒ­ãƒ¼ãƒ–#
+16099#ãƒ©ãƒ´ã‚¡ãƒ¼ãƒãƒ³ãƒžãƒ¼#
+18190#ãƒœãƒ«ãƒˆã‚·ãƒ¥ãƒ¼ã‚¿ãƒ¼#
 
-20946#ƒhƒ‰ƒSƒ“ƒXƒPƒCƒ‹ƒt[ƒh#
-20947#ŽiÕ‚Ìƒ}ƒ“ƒg#
-21054#ƒNƒƒEƒ\[ƒh#
-22208#ƒhƒ‰ƒSƒ“ƒXƒPƒCƒ‹ƒu[ƒc#
-22209#ŽiÕ‚Ìƒu[ƒc#
-26162#ƒEƒFƒ‹ƒfƒBƒ“ƒOƒƒ“ƒh#
-26215#ƒZƒCƒtƒeƒBƒEƒBƒbƒv#
+20946#ãƒ‰ãƒ©ã‚´ãƒ³ã‚¹ã‚±ã‚¤ãƒ«ãƒ•ãƒ¼ãƒ‰#
+20947#å¸ç¥­ã®ãƒžãƒ³ãƒˆ#
+21054#ã‚¯ãƒ­ã‚¦ã‚½ãƒ¼ãƒ‰#
+22208#ãƒ‰ãƒ©ã‚´ãƒ³ã‚¹ã‚±ã‚¤ãƒ«ãƒ–ãƒ¼ãƒ„#
+22209#å¸ç¥­ã®ãƒ–ãƒ¼ãƒ„#
+26162#ã‚¦ã‚§ãƒ«ãƒ‡ã‚£ãƒ³ã‚°ãƒ¯ãƒ³ãƒ‰#
+26215#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ã‚¦ã‚£ãƒƒãƒ—#
 
-28635#ƒZƒCƒtƒeƒBƒ}ƒjƒ…ƒAƒ‹#
-28045#ƒiƒbƒgƒuƒŒƒCƒJ[#
-28140#ƒ\[ƒAƒbƒNƒX#
-28771#‹à‘®’T’m‹@Mk47#
-28772#•óÎ’T’m‹@Mk47#
-32303#ƒ{ƒ‹ƒgƒŠƒ{ƒ‹ƒo[#
-32026#ƒuƒƒbƒLƒ“ƒOƒXƒsƒA#
-32110#ƒZƒCƒtƒeƒBƒŠƒ…[ƒg#
-32352#ƒZƒCƒtƒeƒBƒZƒCƒo[#
-490250#ƒgƒ‰ƒ“ƒZƒ“ƒfƒ“ƒXƒŠƒ“ƒO#
-550006#ƒZƒCƒtƒeƒBƒtƒHƒbƒNƒXƒeƒCƒ‹#
+28635#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«#
+28045#ãƒŠãƒƒãƒˆãƒ–ãƒ¬ã‚¤ã‚«ãƒ¼#
+28140#ã‚½ãƒ¼ã‚¢ãƒƒã‚¯ã‚¹#
+28771#é‡‘å±žæŽ¢çŸ¥æ©ŸMk47#
+28772#å®çŸ³æŽ¢çŸ¥æ©ŸMk47#
+32303#ãƒœãƒ«ãƒˆãƒªãƒœãƒ«ãƒãƒ¼#
+32026#ãƒ–ãƒ­ãƒƒã‚­ãƒ³ã‚°ã‚¹ãƒ”ã‚¢#
+32110#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ãƒªãƒ¥ãƒ¼ãƒˆ#
+32352#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ã‚»ã‚¤ãƒãƒ¼#
+490250#ãƒˆãƒ©ãƒ³ã‚»ãƒ³ãƒ‡ãƒ³ã‚¹ãƒªãƒ³ã‚°#
+550006#ã‚»ã‚¤ãƒ•ãƒ†ã‚£ãƒ•ã‚©ãƒƒã‚¯ã‚¹ãƒ†ã‚¤ãƒ«#
 
-1870#ƒƒCƒ„ƒ‹ƒiƒbƒNƒ‹#
-26165#ƒƒCƒ„ƒ‹ƒNƒŒƒŠƒbƒNƒXƒ^ƒbƒt#
-26166#ƒƒCƒ„ƒ‹ƒ}ƒWƒVƒƒƒ“ƒƒ“ƒh#
-26172#ƒƒCƒ„ƒ‹ƒtƒHƒbƒNƒXƒeƒCƒ‹#
-26216#ƒƒCƒ„ƒ‹ƒEƒBƒbƒv#
-28046#ƒƒCƒ„ƒ‹ƒJƒ^[ƒ‹#
-28636#ƒƒCƒ„ƒ‹ƒZ[ƒWƒuƒbƒN#
-28776#ƒƒCƒ„ƒ‹ƒ}ƒWƒVƒƒƒ“ƒ_ƒK[#
-32027#ƒK[ƒfƒBƒAƒ“ƒiƒCƒcƒXƒsƒA#
-32111#ƒƒCƒ„ƒ‹ƒ`ƒFƒ#
+1870#ãƒ­ã‚¤ãƒ¤ãƒ«ãƒŠãƒƒã‚¯ãƒ«#
+26165#ãƒ­ã‚¤ãƒ¤ãƒ«ã‚¯ãƒ¬ãƒªãƒƒã‚¯ã‚¹ã‚¿ãƒƒãƒ•#
+26166#ãƒ­ã‚¤ãƒ¤ãƒ«ãƒžã‚¸ã‚·ãƒ£ãƒ³ãƒ¯ãƒ³ãƒ‰#
+26172#ãƒ­ã‚¤ãƒ¤ãƒ«ãƒ•ã‚©ãƒƒã‚¯ã‚¹ãƒ†ã‚¤ãƒ«#
+26216#ãƒ­ã‚¤ãƒ¤ãƒ«ã‚¦ã‚£ãƒƒãƒ—#
+28046#ãƒ­ã‚¤ãƒ¤ãƒ«ã‚«ã‚¿ãƒ¼ãƒ«#
+28636#ãƒ­ã‚¤ãƒ¤ãƒ«ã‚»ãƒ¼ã‚¸ãƒ–ãƒƒã‚¯#
+28776#ãƒ­ã‚¤ãƒ¤ãƒ«ãƒžã‚¸ã‚·ãƒ£ãƒ³ãƒ€ã‚¬ãƒ¼#
+32027#ã‚¬ãƒ¼ãƒ‡ã‚£ã‚¢ãƒ³ãƒŠã‚¤ãƒ„ã‚¹ãƒ”ã‚¢#
+32111#ãƒ­ã‚¤ãƒ¤ãƒ«ãƒã‚§ãƒ­#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-09-28	patch0033
-33000”Ô‘äˆÈ‰º‚ÌƒAƒCƒeƒ€‚Ì®—
-450000”Ô‘äˆÈ~‚ð­‚µŽÀ‘•
+33000ç•ªå°ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ ã®æ•´ç†
+450000ç•ªå°ä»¥é™ã‚’å°‘ã—å®Ÿè£…
 
-33000”Ô‘äˆÈ‰º‚Í®—‚³‚ê‚Ä‚¢‚È‚¢‚½‚ßd•¡‚â”²‚¯‚ª‚ ‚é‚Ì‚Å¡Œã­‚µ‚¸‚ÂŽÀ‘•‚µ‚Â‚Â–„‚ß‚Ä‚¢‚«‚Ü‚·
+33000ç•ªå°ä»¥ä¸‹ã¯æ•´ç†ã•ã‚Œã¦ã„ãªã„ãŸã‚é‡è¤‡ã‚„æŠœã‘ãŒã‚ã‚‹ã®ã§ä»Šå¾Œå°‘ã—ãšã¤å®Ÿè£…ã—ã¤ã¤åŸ‹ã‚ã¦ã„ãã¾ã™
 
 2023-09-27	patch0032
-31000”Ô‘ä‚Ì”²‚¯‚Ä‚¢‚½ˆß‘•‘•”õŽÀ‘•
+31000ç•ªå°ã®æŠœã‘ã¦ã„ãŸè¡£è£…è£…å‚™å®Ÿè£…
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-ƒGƒ“ƒ`ƒƒƒ“ƒgEƒJ[ƒhC³
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆãƒ»ã‚«ãƒ¼ãƒ‰ä¿®æ­£
 
-25585#‘å‚«‚ÈŒ•#
-25586#Ô‚Ì–‚—ÍÎ#
-25587#‰©‚Ì–‚—ÍÎ#
-25588#Â‚Ì–‚—ÍÎ#
-25589#—Î‚Ì–‚—ÍÎ#
-25590#•‚Ì–‚—ÍÎ#
+25585#å¤§ããªå‰£#
+25586#èµ¤ã®é­”åŠ›çŸ³#
+25587#é»„ã®é­”åŠ›çŸ³#
+25588#é’ã®é­”åŠ›çŸ³#
+25589#ç·‘ã®é­”åŠ›çŸ³#
+25590#é»’ã®é­”åŠ›çŸ³#
 
-300280#”j‘¹‚µ‚½ƒ^ƒiƒgƒX‚Ì‹L‰¯ƒJ[ƒh#
-310197#“V’n•ö‰ó#
+300280#ç ´æã—ãŸã‚¿ãƒŠãƒˆã‚¹ã®è¨˜æ†¶ã‚«ãƒ¼ãƒ‰#
+310197#å¤©åœ°å´©å£Š#
 
-420174#ƒŒƒCƒWƒ“ƒOƒeƒ“ƒyƒXƒg#
-450247#Œõ‹P#
-460046#ƒuƒ‰ƒbƒNƒ~ƒXƒŠƒ‹ƒK[ƒh#
-490044#ƒVƒ“ƒtƒ‹ƒ‹ƒr[ƒŠƒ“ƒO#
-490045#ƒVƒ“ƒtƒ‹ƒ‹ƒr[ƒlƒbƒNƒŒƒX#
-490046#ƒVƒ“ƒtƒ‹ƒGƒƒ‰ƒ‹ƒhƒŠƒ“ƒO#
-490047#ƒVƒ“ƒtƒ‹ƒGƒƒ‰ƒ‹ƒhƒlƒbƒNƒŒƒX#
-490048#ƒVƒ“ƒtƒ‹ƒgƒp[ƒYƒŠƒ“ƒO#
-490049#ƒVƒ“ƒtƒ‹ƒgƒp[ƒYƒlƒbƒNƒŒƒX#
-490050#ƒVƒ“ƒtƒ‹ƒAƒƒWƒXƒgƒŠƒ“ƒO#
-490051#ƒVƒ“ƒtƒ‹ƒAƒƒWƒXƒgƒlƒbƒNƒŒƒX#
-490052#ƒVƒ“ƒtƒ‹ƒTƒtƒ@ƒCƒAƒŠƒ“ƒO#
-490054#ƒVƒ“ƒtƒ‹ƒIƒp[ƒ‹ƒŠƒ“ƒO#
-490055#ƒVƒ“ƒtƒ‹ƒIƒp[ƒ‹ƒlƒbƒNƒŒƒX#
-490056#ƒuƒŠƒŠƒAƒ“ƒgƒ‹ƒr[ƒŠƒ“ƒO#
-490058#ƒuƒŠƒŠƒAƒ“ƒgƒAƒƒWƒXƒgƒŠƒ“ƒO#
-490059#ƒuƒŠƒŠƒAƒ“ƒgƒAƒƒWƒXƒgƒlƒbƒNƒŒƒX#
-490060#ƒuƒŠƒŠƒAƒ“ƒgƒGƒƒ‰ƒ‹ƒhƒŠƒ“ƒO#
-490062#ƒuƒŠƒŠƒAƒ“ƒgƒWƒ‹ƒRƒ“ƒŠƒ“ƒO#
-490063#ƒuƒŠƒŠƒAƒ“ƒgƒWƒ‹ƒRƒ“ƒlƒbƒNƒŒƒX#
-490064#ƒuƒŠƒŠƒAƒ“ƒgƒTƒtƒ@ƒCƒAƒŠƒ“ƒO#
-490066#ƒuƒŠƒŠƒAƒ“ƒgƒAƒNƒAƒ}ƒŠƒ“ƒŠƒ“ƒO#
-490067#ƒuƒŠƒŠƒAƒ“ƒgƒAƒNƒAƒ}ƒŠƒ“ƒlƒbƒNƒŒƒX#
+420174#ãƒ¬ã‚¤ã‚¸ãƒ³ã‚°ãƒ†ãƒ³ãƒšã‚¹ãƒˆ#
+450247#å…‰è¼#
+460046#ãƒ–ãƒ©ãƒƒã‚¯ãƒŸã‚¹ãƒªãƒ«ã‚¬ãƒ¼ãƒ‰#
+490044#ã‚·ãƒ³ãƒ•ãƒ«ãƒ«ãƒ“ãƒ¼ãƒªãƒ³ã‚°#
+490045#ã‚·ãƒ³ãƒ•ãƒ«ãƒ«ãƒ“ãƒ¼ãƒãƒƒã‚¯ãƒ¬ã‚¹#
+490046#ã‚·ãƒ³ãƒ•ãƒ«ã‚¨ãƒ¡ãƒ©ãƒ«ãƒ‰ãƒªãƒ³ã‚°#
+490047#ã‚·ãƒ³ãƒ•ãƒ«ã‚¨ãƒ¡ãƒ©ãƒ«ãƒ‰ãƒãƒƒã‚¯ãƒ¬ã‚¹#
+490048#ã‚·ãƒ³ãƒ•ãƒ«ãƒˆãƒ‘ãƒ¼ã‚ºãƒªãƒ³ã‚°#
+490049#ã‚·ãƒ³ãƒ•ãƒ«ãƒˆãƒ‘ãƒ¼ã‚ºãƒãƒƒã‚¯ãƒ¬ã‚¹#
+490050#ã‚·ãƒ³ãƒ•ãƒ«ã‚¢ãƒ¡ã‚¸ã‚¹ãƒˆãƒªãƒ³ã‚°#
+490051#ã‚·ãƒ³ãƒ•ãƒ«ã‚¢ãƒ¡ã‚¸ã‚¹ãƒˆãƒãƒƒã‚¯ãƒ¬ã‚¹#
+490052#ã‚·ãƒ³ãƒ•ãƒ«ã‚µãƒ•ã‚¡ã‚¤ã‚¢ãƒªãƒ³ã‚°#
+490054#ã‚·ãƒ³ãƒ•ãƒ«ã‚ªãƒ‘ãƒ¼ãƒ«ãƒªãƒ³ã‚°#
+490055#ã‚·ãƒ³ãƒ•ãƒ«ã‚ªãƒ‘ãƒ¼ãƒ«ãƒãƒƒã‚¯ãƒ¬ã‚¹#
+490056#ãƒ–ãƒªãƒªã‚¢ãƒ³ãƒˆãƒ«ãƒ“ãƒ¼ãƒªãƒ³ã‚°#
+490058#ãƒ–ãƒªãƒªã‚¢ãƒ³ãƒˆã‚¢ãƒ¡ã‚¸ã‚¹ãƒˆãƒªãƒ³ã‚°#
+490059#ãƒ–ãƒªãƒªã‚¢ãƒ³ãƒˆã‚¢ãƒ¡ã‚¸ã‚¹ãƒˆãƒãƒƒã‚¯ãƒ¬ã‚¹#
+490060#ãƒ–ãƒªãƒªã‚¢ãƒ³ãƒˆã‚¨ãƒ¡ãƒ©ãƒ«ãƒ‰ãƒªãƒ³ã‚°#
+490062#ãƒ–ãƒªãƒªã‚¢ãƒ³ãƒˆã‚¸ãƒ«ã‚³ãƒ³ãƒªãƒ³ã‚°#
+490063#ãƒ–ãƒªãƒªã‚¢ãƒ³ãƒˆã‚¸ãƒ«ã‚³ãƒ³ãƒãƒƒã‚¯ãƒ¬ã‚¹#
+490064#ãƒ–ãƒªãƒªã‚¢ãƒ³ãƒˆã‚µãƒ•ã‚¡ã‚¤ã‚¢ãƒªãƒ³ã‚°#
+490066#ãƒ–ãƒªãƒªã‚¢ãƒ³ãƒˆã‚¢ã‚¯ã‚¢ãƒžãƒªãƒ³ãƒªãƒ³ã‚°#
+490067#ãƒ–ãƒªãƒªã‚¢ãƒ³ãƒˆã‚¢ã‚¯ã‚¢ãƒžãƒªãƒ³ãƒãƒƒã‚¯ãƒ¬ã‚¹#
 
 2023-09-26	patch0031
-9/26 ƒpƒbƒ`‚ÌƒAƒCƒeƒ€ŽÀ‘•
-410193#[ˆß‘•] ƒOƒ‰ƒŠƒ“Eƒ~ƒjƒ~[#
-410189#[ˆß‘•] ƒGƒ“ƒWƒFƒŠƒ“ƒOEƒ~ƒjƒ~[#
-101706#Œ¶‘z‘p‘ƒJ[ƒh(ƒOƒ‰ƒŠƒ“)#
-1000950#¬‚³‚Èƒ[ƒƒs[#
-1000951#ˆêŒûH‚×‚½ƒŠƒ“ƒS#
+9/26 ãƒ‘ãƒƒãƒã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+410193#[è¡£è£…] ã‚°ãƒ©ãƒªãƒ³ãƒ»ãƒŸãƒ‹ãƒŸãƒ¼#
+410189#[è¡£è£…] ã‚¨ãƒ³ã‚¸ã‚§ãƒªãƒ³ã‚°ãƒ»ãƒŸãƒ‹ãƒŸãƒ¼#
+101706#å¹»æƒ³å¢æ›¸ã‚«ãƒ¼ãƒ‰(ã‚°ãƒ©ãƒªãƒ³)#
+1000950#å°ã•ãªã‚¼ãƒ­ãƒ”ãƒ¼#
+1000951#ä¸€å£é£Ÿã¹ãŸãƒªãƒ³ã‚´#
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
-27000”Ô‘ä‚ÌƒJ[ƒh‚ÅŽÀ‘•‚Ì‚È‚¢•ª‚ðŽÀ‘•
-28000”Ô‘ä 29000”Ô‘ä‚ÌƒAƒCƒeƒ€‚ð‹LqC³
-311883 ’mŽ¯‚Ì’T‹ŽÒ ŠÖ˜A‚ÌƒAƒCƒeƒ€‚Ì‹LqC³
+27000ç•ªå°ã®ã‚«ãƒ¼ãƒ‰ã§å®Ÿè£…ã®ãªã„åˆ†ã‚’å®Ÿè£…
+28000ç•ªå° 29000ç•ªå°ã®ã‚¢ã‚¤ãƒ†ãƒ ã‚’è¨˜è¿°ä¿®æ­£
+311883 çŸ¥è­˜ã®æŽ¢æ±‚è€… é–¢é€£ã®ã‚¢ã‚¤ãƒ†ãƒ ã®è¨˜è¿°ä¿®æ­£
 
 2023-09-25	patch0030
-5289 19022 ƒZƒbƒgŒø‰Ê‚ð’Ç‰ÁŽÀ‘•
-19022 19106 19184 19223 19307 19312 19313 19320 19402 19443 19444 19446 19495 “ª‘•”õ‚ÌŒ©’¼‚µ
-22193 22203 22245 ŒCŒ©’¼‚µ
-4488 ƒZƒbƒgŒø‰ÊŒ©’¼‚µ
+5289 19022 ã‚»ãƒƒãƒˆåŠ¹æžœã‚’è¿½åŠ å®Ÿè£…
+19022 19106 19184 19223 19307 19312 19313 19320 19402 19443 19444 19446 19495 é ­è£…å‚™ã®è¦‹ç›´ã—
+22193 22203 22245 é´è¦‹ç›´ã—
+4488 ã‚»ãƒƒãƒˆåŠ¹æžœè¦‹ç›´ã—
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-9956#20Žü”Nƒ|ƒŠƒ“ƒP[ƒL#
-9957#20Žü”NƒP[ƒLBOX(50‘ä)#
-9958#20Žü”NƒP[ƒLBOX(150‘ä)#
-24772#[ƒVƒƒƒhƒE] ƒIƒ‹ƒ^ƒlƒCƒgƒEƒFƒ|ƒ“#
-24773#[ƒVƒƒƒhƒE] ƒIƒ‹ƒ^ƒlƒCƒgƒA[ƒ}[#
-24774#[ƒVƒƒƒhƒE] ƒIƒ‹ƒ^ƒlƒCƒgƒVƒ…[ƒY#
-24775#[ƒVƒƒƒhƒE] ƒIƒ‹ƒ^ƒlƒCƒgƒV[ƒ‹ƒh#
-24776#[ƒVƒƒƒhƒE] ƒIƒ‹ƒ^ƒlƒCƒgƒCƒ„ƒŠƒ“ƒO#
-24777#[ƒVƒƒƒhƒE] ƒIƒ‹ƒ^ƒlƒCƒgƒyƒ“ƒ_ƒ“ƒg#
-200234#[20thAnniversary]•à—…Žµ¸˜BƒtƒH[ƒX‚Ì” #
-200235#[20thAnniversary]ƒhƒŒƒbƒV[ƒN[ƒ|ƒ“‚Ì” #
-410210#ƒŠƒgƒ‹ƒAƒrƒXƒhƒ‰ƒSƒ“#
-410211#ƒŠƒgƒ‹ƒAƒrƒXƒhƒ‰ƒSƒ“#
-420180#ƒGƒCƒXƒVƒ…ƒsƒ“ƒl#
-450198#20Žü”N‹L”OƒRƒbƒgƒ“ƒVƒƒƒc#
-460050#ƒVƒ“ƒ{ƒ‹ƒIƒuƒGƒfƒ“#
-470180#ƒXƒ^[ƒŠ[ƒXƒJƒCEƒcƒCƒ“ƒvƒ‰ƒCƒ€#
-480251#ƒ~ƒXƒeƒŠ[ƒEƒBƒ“ƒO#
-490087#»ŽžŒv‚ÌƒlƒbƒNƒŒƒX#
-500018#ƒŠƒ‰ƒvƒXƒuƒŒ[ƒh#
-510026#ƒŠƒ‰ƒvƒXƒ_ƒK[#
-560011#ƒXƒNƒ‰ƒbƒvƒtƒBƒXƒg#
-570012#ƒXƒNƒ‰ƒbƒvƒŠƒ…[ƒg#
-580012#ƒXƒNƒ‰ƒbƒvƒzƒCƒbƒv#
-590015#ƒŠƒ‰ƒvƒXƒNƒƒX#
-610015#ƒŠƒ‰ƒvƒXƒJƒ^[ƒ‹#
-620005#ƒŠƒ‰ƒvƒXƒAƒbƒNƒX#
-700021#ƒXƒNƒ‰ƒbƒvƒ{ƒE#
-¦“¯“ú‚Ìˆß‘•‘•”õ‚ÍŽÀ‘•Ï‚Ý
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+9956#20å‘¨å¹´ãƒãƒªãƒ³ã‚±ãƒ¼ã‚­#
+9957#20å‘¨å¹´ã‚±ãƒ¼ã‚­BOX(50å°)#
+9958#20å‘¨å¹´ã‚±ãƒ¼ã‚­BOX(150å°)#
+24772#[ã‚·ãƒ£ãƒ‰ã‚¦] ã‚ªãƒ«ã‚¿ãƒã‚¤ãƒˆã‚¦ã‚§ãƒãƒ³#
+24773#[ã‚·ãƒ£ãƒ‰ã‚¦] ã‚ªãƒ«ã‚¿ãƒã‚¤ãƒˆã‚¢ãƒ¼ãƒžãƒ¼#
+24774#[ã‚·ãƒ£ãƒ‰ã‚¦] ã‚ªãƒ«ã‚¿ãƒã‚¤ãƒˆã‚·ãƒ¥ãƒ¼ã‚º#
+24775#[ã‚·ãƒ£ãƒ‰ã‚¦] ã‚ªãƒ«ã‚¿ãƒã‚¤ãƒˆã‚·ãƒ¼ãƒ«ãƒ‰#
+24776#[ã‚·ãƒ£ãƒ‰ã‚¦] ã‚ªãƒ«ã‚¿ãƒã‚¤ãƒˆã‚¤ãƒ¤ãƒªãƒ³ã‚°#
+24777#[ã‚·ãƒ£ãƒ‰ã‚¦] ã‚ªãƒ«ã‚¿ãƒã‚¤ãƒˆãƒšãƒ³ãƒ€ãƒ³ãƒˆ#
+200234#[20thAnniversary]æ­©ç¾…ä¸ƒç²¾éŒ¬ãƒ•ã‚©ãƒ¼ã‚¹ã®ç®±#
+200235#[20thAnniversary]ãƒ‰ãƒ¬ãƒƒã‚·ãƒ¼ã‚¯ãƒ¼ãƒãƒ³ã®ç®±#
+410210#ãƒªãƒˆãƒ«ã‚¢ãƒ“ã‚¹ãƒ‰ãƒ©ã‚´ãƒ³#
+410211#ãƒªãƒˆãƒ«ã‚¢ãƒ“ã‚¹ãƒ‰ãƒ©ã‚´ãƒ³#
+420180#ã‚¨ã‚¤ã‚¹ã‚·ãƒ¥ãƒ”ãƒ³ãƒ#
+450198#20å‘¨å¹´è¨˜å¿µã‚³ãƒƒãƒˆãƒ³ã‚·ãƒ£ãƒ„#
+460050#ã‚·ãƒ³ãƒœãƒ«ã‚ªãƒ–ã‚¨ãƒ‡ãƒ³#
+470180#ã‚¹ã‚¿ãƒ¼ãƒªãƒ¼ã‚¹ã‚«ã‚¤ãƒ»ãƒ„ã‚¤ãƒ³ãƒ—ãƒ©ã‚¤ãƒ #
+480251#ãƒŸã‚¹ãƒ†ãƒªãƒ¼ã‚¦ã‚£ãƒ³ã‚°#
+490087#ç ‚æ™‚è¨ˆã®ãƒãƒƒã‚¯ãƒ¬ã‚¹#
+500018#ãƒªãƒ©ãƒ—ã‚¹ãƒ–ãƒ¬ãƒ¼ãƒ‰#
+510026#ãƒªãƒ©ãƒ—ã‚¹ãƒ€ã‚¬ãƒ¼#
+560011#ã‚¹ã‚¯ãƒ©ãƒƒãƒ—ãƒ•ã‚£ã‚¹ãƒˆ#
+570012#ã‚¹ã‚¯ãƒ©ãƒƒãƒ—ãƒªãƒ¥ãƒ¼ãƒˆ#
+580012#ã‚¹ã‚¯ãƒ©ãƒƒãƒ—ãƒ›ã‚¤ãƒƒãƒ—#
+590015#ãƒªãƒ©ãƒ—ã‚¹ã‚¯ãƒ­ã‚¹#
+610015#ãƒªãƒ©ãƒ—ã‚¹ã‚«ã‚¿ãƒ¼ãƒ«#
+620005#ãƒªãƒ©ãƒ—ã‚¹ã‚¢ãƒƒã‚¯ã‚¹#
+700021#ã‚¹ã‚¯ãƒ©ãƒƒãƒ—ãƒœã‚¦#
+â€»åŒæ—¥ã®è¡£è£…è£…å‚™ã¯å®Ÿè£…æ¸ˆã¿
 
-ƒJ[ƒh‚ÌC³
-300241#ƒuƒ‹[ƒ^ƒ‹ƒ}[ƒ_[ƒJ[ƒh#
-300242#ƒS[ƒXƒgƒLƒ…[ƒuƒJ[ƒh#
-300243#ƒ‹[ƒhƒKƒ‹ƒJ[ƒh#
-300244#ƒfƒBƒXƒKƒCƒU[ƒJ[ƒh#
-300248#Ž€‚Ì‘å–‚—ƒJ[ƒh#
-300251#ƒvƒ‰ƒKƒŠƒIƒ“ƒJ[ƒh#
+ã‚«ãƒ¼ãƒ‰ã®ä¿®æ­£
+300241#ãƒ–ãƒ«ãƒ¼ã‚¿ãƒ«ãƒžãƒ¼ãƒ€ãƒ¼ã‚«ãƒ¼ãƒ‰#
+300242#ã‚´ãƒ¼ã‚¹ãƒˆã‚­ãƒ¥ãƒ¼ãƒ–ã‚«ãƒ¼ãƒ‰#
+300243#ãƒ«ãƒ¼ãƒ‰ã‚¬ãƒ«ã‚«ãƒ¼ãƒ‰#
+300244#ãƒ‡ã‚£ã‚¹ã‚¬ã‚¤ã‚¶ãƒ¼ã‚«ãƒ¼ãƒ‰#
+300248#æ­»ã®å¤§é­”å¥³ã‚«ãƒ¼ãƒ‰#
+300251#ãƒ—ãƒ©ã‚¬ãƒªã‚ªãƒ³ã‚«ãƒ¼ãƒ‰#
 
-item_db2_add.txt ’Ç‰Á
+item_db2_add.txt è¿½åŠ 
 
 2023-09-24	patch0029
-ŽûW•iE‘•”õ•i‚ðŽÀ‘•
-ƒGƒ“ƒ`ƒƒƒ“ƒg‚ð­‚µC³
-¦311459 [‰Ô‰Î‹Ê] 310850 [—g‰Ô‰Î]‚ÍŽ—‚Ä‚¢‚Ü‚·‚ª•Ê‚Ìhateffect‚É‚È‚è‚Ü‚·
+åŽé›†å“ãƒ»è£…å‚™å“ã‚’å®Ÿè£…
+ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆã‚’å°‘ã—ä¿®æ­£
+â€»311459 [èŠ±ç«çŽ‰] 310850 [æšèŠ±ç«]ã¯ä¼¼ã¦ã„ã¾ã™ãŒåˆ¥ã®hateffectã«ãªã‚Šã¾ã™
 
 2023-09-23	patch0028
-4ŽŸEŽÀ‘•Žž‚Ì‰Šú‘•”õ•iŽÀ‘•
-4ŽŸEŽÀ‘•Žž‚ÌƒGƒ“ƒ`ƒƒƒ“ƒgEƒJ[ƒh‚ðC³
-300000”Ô‘ä‚ÌƒJ[ƒh‚ð­‚µC³
-¦4ŽŸEŒÅ—L‚ÌƒXƒLƒ‹EƒXƒe[ƒ^ƒX‚ÉŠÖ‚·‚éŒø‰Ê‚Í–¢ŽÀ‘•‚Å‚·
+4æ¬¡è·å®Ÿè£…æ™‚ã®åˆæœŸè£…å‚™å“å®Ÿè£…
+4æ¬¡è·å®Ÿè£…æ™‚ã®ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆãƒ»ã‚«ãƒ¼ãƒ‰ã‚’ä¿®æ­£
+300000ç•ªå°ã®ã‚«ãƒ¼ãƒ‰ã‚’å°‘ã—ä¿®æ­£
+â€»4æ¬¡è·å›ºæœ‰ã®ã‚¹ã‚­ãƒ«ãƒ»ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã«é–¢ã™ã‚‹åŠ¹æžœã¯æœªå®Ÿè£…ã§ã™
 
 2023-09-22	patch0027
-27000”Ô‘ä‚ÌƒJ[ƒh‚ð15–‡ŽÀ‘•
+27000ç•ªå°ã®ã‚«ãƒ¼ãƒ‰ã‚’15æžšå®Ÿè£…
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-200279#[2023”N]‹†‹É¸˜B‚¨Šy‚µ‚Ýƒ`ƒPƒbƒg‚Ì” #
-9132#[•£‚Ì‹RŽm‚Ì—‘#
-400396#—d–‚‚Ì‚³‚³‚â‚«#
-470192#ƒtƒBƒtƒXƒGƒŒƒƒ“ƒg#
-490243#ƒŠƒ“ƒOƒIƒuƒVƒ‹ƒo[ƒNƒƒE#
-490244#•‹@‹¨‚ÌŽw—Ö#
-312038#öÝ‰ð•ú(ƒJ[ƒfƒBƒiƒ‹II)#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+200279#[2023å¹´]ç©¶æ¥µç²¾éŒ¬ãŠæ¥½ã—ã¿ãƒã‚±ãƒƒãƒˆã®ç®±#
+9132#æ·±æ·µã®é¨Žå£«ã®åµ#
+400396#å¦–é­”ã®ã•ã•ã‚„ã#
+470192#ãƒ•ã‚£ãƒ•ã‚¹ã‚¨ãƒ¬ãƒ¡ãƒ³ãƒˆ#
+490243#ãƒªãƒ³ã‚°ã‚ªãƒ–ã‚·ãƒ«ãƒãƒ¼ã‚¯ãƒ­ã‚¦#
+490244#æž¢æ©Ÿå¿ã®æŒ‡è¼ª#
+312038#æ½œåœ¨è§£æ”¾(ã‚«ãƒ¼ãƒ‡ã‚£ãƒŠãƒ«II)#
 
-23045#ƒtƒŠ[ƒhƒŠƒqŠÄCE‚µ‚Ú‚è‚½‚Äƒ‚ƒ“ƒuƒ‰ƒ“#
-23079#‘oŽqŽo–…‚Ì‚í‚ª‚Ü‚ÜƒCƒ`ƒSƒP[ƒL#
-23259#‰¤”Ü‚ªˆ¤‚µ‚½–£˜f‚Ì‹ÉãƒJƒbƒvƒP[ƒL#
-23260#ƒj[ƒqƒ‹Œä—p’Bƒtƒ‹[ƒcƒpƒtƒFE‹É#
-100754#ƒ|[”é‘ ‚Ì‚â‚Ý‚Â‚«â•iˆêŒûƒP[ƒL#
-25291#Å‚‹‰ƒ}ƒƒ“‚Ì–¨’Ð‚¯#
-420176#ƒƒ‚ƒŠƒAƒ‹ƒNƒ[ƒX#
+23045#ãƒ•ãƒªãƒ¼ãƒ‰ãƒªãƒ’ç›£ä¿®ãƒ»ã—ã¼ã‚ŠãŸã¦ãƒ¢ãƒ³ãƒ–ãƒ©ãƒ³#
+23079#åŒå­å§‰å¦¹ã®ã‚ãŒã¾ã¾ã‚¤ãƒã‚´ã‚±ãƒ¼ã‚­#
+23259#çŽ‹å¦ƒãŒæ„›ã—ãŸé­…æƒ‘ã®æ¥µä¸Šã‚«ãƒƒãƒ—ã‚±ãƒ¼ã‚­#
+23260#ãƒ‹ãƒ¼ãƒ’ãƒ«å¾¡ç”¨é”ãƒ•ãƒ«ãƒ¼ãƒ„ãƒ‘ãƒ•ã‚§ãƒ»æ¥µ#
+100754#ãƒãƒ¼ç§˜è”µã®ã‚„ã¿ã¤ãçµ¶å“ä¸€å£ã‚±ãƒ¼ã‚­#
+25291#æœ€é«˜ç´šãƒžãƒ­ãƒ³ã®èœœæ¼¬ã‘#
+420176#ãƒ¡ãƒ¢ãƒªã‚¢ãƒ«ã‚¯ãƒ­ãƒ¼ã‚¹#
 
-¦ˆß‘•‘•”õ‚ÍŽÀ‘•Ï‚Ý‚Å‚·
+â€»è¡£è£…è£…å‚™ã¯å®Ÿè£…æ¸ˆã¿ã§ã™
 
-item_db2_add.txt XV
+item_db2_add.txt æ›´æ–°
 
 2023-09-21	patch0026
-27000”Ô‘ä‚ÌƒJ[ƒh‚ð­‚µŽÀ‘•
+27000ç•ªå°ã®ã‚«ãƒ¼ãƒ‰ã‚’å°‘ã—å®Ÿè£…
 
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-400408#ƒNƒƒbƒNƒƒCƒY#
-400409#ƒƒCƒ‹ƒhƒr[ƒXƒg#
-420198#ƒTƒ“ƒNƒgƒDƒX#
-490319#Y.S.F.ƒŠƒ“ƒO#
-312031#öÝ‰ð•ú(ƒA[ƒNƒƒCƒWII)#
-310597#ƒEƒ‹ƒtƒI[ƒu(•¨—Fƒ_ƒ[ƒW + 20%)#
-310598#ƒEƒ‹ƒtƒI[ƒu(–‚–@Fƒ_ƒ[ƒW + 20%)#
-200290#ƒRƒX‚½‚ÜMonstersIX#
-400422#[ˆß‘•] ƒ_[ƒNƒoƒVƒŠƒEƒ€(ã’i)#
-400423#[ˆß‘•] ¢ŠE‚ðI‚ÞŽôæf#
-400424#[ˆß‘•] ƒIƒEƒ‹ƒ”ƒ@ƒCƒJƒEƒ“ƒg‚ÌƒVƒ‹ƒNƒnƒbƒg#
-400425#[ˆß‘•] ’¹Žë‚ÌŒÄŽq#
-400426#[ˆß‘•] –Ø‚Ì—t‚½‚Ê‚«–X#
-400427#[ˆß‘•] ƒfƒ~ƒtƒŒƒCƒ„ƒwƒA#
-480288#[ˆß‘•] ƒ_[ƒNƒ[ƒh‚Ìƒ}ƒ“ƒg#
-480289#[ˆß‘•] ŒŽ–é‰Ô‚Ìà#
-480290#[ˆß‘•] ƒ[ƒhƒIƒuƒfƒX‚Ì‚#
-20139#[ˆß‘•] ƒ~ƒjj‚¢‹î(Â)#
-20140#[ˆß‘•] ƒ~ƒjj‚¢‹î(Ž‡)#
-480293#ƒhƒ‰ƒSƒ“ƒXƒPƒCƒ‹ƒVƒ‡[ƒ‹#
-700077#žO‚°‚ÈŒŽ‰Ø‚Ì‹|#
-700078#ŒŽ‰Ø‚Ì‹|#
-510117#“D‰˜‚ê‚½•sŽ¡‚Ì–‚Œ•#
-510118#•sŽ¡‚Ì–‚Œ•#
-530046#‹¶‚Á‚½‰^–½‚Ì‘„#
-530047#‰^–½‚Ì‘„#
-570048#…’ê‚É’¾‚ñ‚¾¸—ì‚ÌƒoƒCƒIƒŠƒ“#
-570049#¸—ì‚ÌƒoƒCƒIƒŠƒ“#
-580049#n‚±‚Ú‚ê‚µ‚½ŽÖ• Œ•#
-580050#ŽÖ• Œ•#
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+400408#ã‚¯ãƒ­ãƒƒã‚¯ãƒ¯ã‚¤ã‚º#
+400409#ãƒ¯ã‚¤ãƒ«ãƒ‰ãƒ“ãƒ¼ã‚¹ãƒˆ#
+420198#ã‚µãƒ³ã‚¯ãƒˆã‚¥ã‚¹#
+490319#Y.S.F.ãƒªãƒ³ã‚°#
+312031#æ½œåœ¨è§£æ”¾(ã‚¢ãƒ¼ã‚¯ãƒ¡ã‚¤ã‚¸II)#
+310597#ã‚¦ãƒ«ãƒ•ã‚ªãƒ¼ãƒ–(ç‰©ç†ï¼šãƒ€ãƒ¡ãƒ¼ã‚¸ + 20%)#
+310598#ã‚¦ãƒ«ãƒ•ã‚ªãƒ¼ãƒ–(é­”æ³•ï¼šãƒ€ãƒ¡ãƒ¼ã‚¸ + 20%)#
+200290#ã‚³ã‚¹ãŸã¾MonstersIX#
+400422#[è¡£è£…] ãƒ€ãƒ¼ã‚¯ãƒã‚·ãƒªã‚¦ãƒ (ä¸Šæ®µ)#
+400423#[è¡£è£…] ä¸–ç•Œã‚’è•ã‚€å‘ªè©›#
+400424#[è¡£è£…] ã‚ªã‚¦ãƒ«ãƒ´ã‚¡ã‚¤ã‚«ã‚¦ãƒ³ãƒˆã®ã‚·ãƒ«ã‚¯ãƒãƒƒãƒˆ#
+400425#[è¡£è£…] é³¥ç‹©ã®å‘¼å­#
+400426#[è¡£è£…] æœ¨ã®è‘‰ãŸã¬ãå¸½#
+400427#[è¡£è£…] ãƒ‡ãƒŸãƒ•ãƒ¬ã‚¤ãƒ¤ãƒ˜ã‚¢#
+480288#[è¡£è£…] ãƒ€ãƒ¼ã‚¯ãƒ­ãƒ¼ãƒ‰ã®ãƒžãƒ³ãƒˆ#
+480289#[è¡£è£…] æœˆå¤œèŠ±ã®é˜#
+480290#[è¡£è£…] ãƒ­ãƒ¼ãƒ‰ã‚ªãƒ–ãƒ‡ã‚¹ã®ç›¾#
+20139#[è¡£è£…] ãƒŸãƒ‹ç¥ã„é§’(é’)#
+20140#[è¡£è£…] ãƒŸãƒ‹ç¥ã„é§’(ç´«)#
+480293#ãƒ‰ãƒ©ã‚´ãƒ³ã‚¹ã‚±ã‚¤ãƒ«ã‚·ãƒ§ãƒ¼ãƒ«#
+700077#æœ§ã’ãªæœˆè¯ã®å¼“#
+700078#æœˆè¯ã®å¼“#
+510117#æ³¥æ±šã‚ŒãŸä¸æ²»ã®é­”å‰£#
+510118#ä¸æ²»ã®é­”å‰£#
+530046#ç‹‚ã£ãŸé‹å‘½ã®æ§#
+530047#é‹å‘½ã®æ§#
+570048#æ°´åº•ã«æ²ˆã‚“ã ç²¾éœŠã®ãƒã‚¤ã‚ªãƒªãƒ³#
+570049#ç²¾éœŠã®ãƒã‚¤ã‚ªãƒªãƒ³#
+580049#åˆƒã“ã¼ã‚Œã—ãŸè›‡è…¹å‰£#
+580050#è›‡è…¹å‰£#
 312032#Cri + 25#
-400420#ƒhƒ‰ƒSƒ“ƒT[ƒNƒŒƒbƒg#
-400421#ƒc[ƒgƒ“ƒLƒƒƒbƒv#
-490340#ƒCƒŠ[ƒKƒ‹ƒ`ƒbƒv#
-312040#öÝ‰ð•ú(ƒhƒ‰ƒSƒ“ƒiƒCƒgII)#
-312043#öÝ‰ð•ú(ƒoƒCƒIƒII)#
-15301#Ž®’b˜B•„(—D)#
-¦ˆß‘•‘•”õAƒGƒ“ƒ`ƒƒŒn‚ÍŽÀ‘•Ï‚Ý‚Å‚·
+400420#ãƒ‰ãƒ©ã‚´ãƒ³ã‚µãƒ¼ã‚¯ãƒ¬ãƒƒãƒˆ#
+400421#ãƒ„ãƒ¼ãƒˆãƒ³ã‚­ãƒ£ãƒƒãƒ—#
+490340#ã‚¤ãƒªãƒ¼ã‚¬ãƒ«ãƒãƒƒãƒ—#
+312040#æ½œåœ¨è§£æ”¾(ãƒ‰ãƒ©ã‚´ãƒ³ãƒŠã‚¤ãƒˆII)#
+312043#æ½œåœ¨è§£æ”¾(ãƒã‚¤ã‚ªãƒ­II)#
+15301#å¼é›éŒ¬ç¬¦(å„ª)#
+â€»è¡£è£…è£…å‚™ã€ã‚¨ãƒ³ãƒãƒ£ç³»ã¯å®Ÿè£…æ¸ˆã¿ã§ã™
 
-ˆÙ‹«‚Ì“ŠŽÒ ŠÖ˜A‚Ì®—‚Æ‹Lq‚ÌC³Š®—¹
+ç•°å¢ƒã®çµ±è½„è€… é–¢é€£ã®æ•´ç†ã¨è¨˜è¿°ã®ä¿®æ­£å®Œäº†
 
-item_db2_add.txt item_cardtype.txt XV
+item_db2_add.txt item_cardtype.txt æ›´æ–°
 
 2023-09-20	patch0025
-ˆÈ‰º‚ÌƒAƒCƒeƒ€ŽÀ‘•
-450150#ƒ}ƒWƒbƒNƒvƒƒeƒNƒ^[ƒ[ƒu#
-460005#ƒ}ƒWƒbƒNƒAƒuƒ\[ƒo[#
-480331#ƒ}ƒWƒbƒNƒoƒŠƒA[ƒNƒ[ƒX#
-460006#‘å•S‰ÈŽ–“TŠ®‘S”Å#
-490077#ƒtƒH[ƒXƒRƒ“ƒfƒ“ƒT[#
-490078#ƒƒ“ƒ^ƒ‹ƒRƒ“ƒfƒ“ƒT[#
-470071#–¢’m‚È‚é—Í‚Ìƒu[ƒc#
-470072#–¢’m‚È‚éW’†‚Ìƒu[ƒc#
-470073#–¢’m‚È‚é‘Ì—Í‚Ìƒu[ƒc#
-470074#–¢’m‚È‚é–‚—Í‚Ìƒu[ƒc#
-470076#–¢’m‚È‚é‘–¾‚Ìƒu[ƒc#
-470077#–¢’m‚È‚é‘n‘¢‚Ìƒu[ƒc#
-300170#•…‚Á‚½–ØƒJ[ƒh#
-300171#ƒOƒŒƒCƒ”ƒ[ƒ€ƒJ[ƒh#
-300172#ƒuƒŒƒCƒ“ƒTƒbƒJ[ƒJ[ƒh#
-300173#ƒ‚ƒXƒLƒƒJ[ƒh#
-300174#—n‰ð‚µ‚½ƒ|ƒŠƒ“ƒJ[ƒh#
-300175#“¾‘Ì‚Ì’m‚ê‚È‚¢¶–½‘ÌƒJ[ƒh#
-1000363#–‚—Í‚Ì—­‚Ü‚Á‚½Î#
-10575#[2023”N]“Á‘IƒlƒRŠÊ(ƒJƒj)‚Ì” #
-600013#ƒtƒH[ƒeƒBƒtƒ@ƒCƒhƒNƒŒƒCƒ‚ƒA#
-640013#ƒtƒH[ƒeƒBƒtƒ@ƒCƒhƒXƒ^ƒbƒt#
-530009#ƒtƒH[ƒeƒBƒtƒ@ƒCƒhƒXƒsƒA[#
-540013#ƒtƒH[ƒeƒBƒtƒ@ƒCƒhƒ}ƒjƒ…ƒAƒ‹#
-¦300000”Ô‘ä‚ÆŽûW•i‚Í­‚µC³‚µ‚½‚Ì‚ÅÄŒf
+ä»¥ä¸‹ã®ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+450150#ãƒžã‚¸ãƒƒã‚¯ãƒ—ãƒ­ãƒ†ã‚¯ã‚¿ãƒ¼ãƒ­ãƒ¼ãƒ–#
+460005#ãƒžã‚¸ãƒƒã‚¯ã‚¢ãƒ–ã‚½ãƒ¼ãƒãƒ¼#
+480331#ãƒžã‚¸ãƒƒã‚¯ãƒãƒªã‚¢ãƒ¼ã‚¯ãƒ­ãƒ¼ã‚¹#
+460006#å¤§ç™¾ç§‘äº‹å…¸å®Œå…¨ç‰ˆ#
+490077#ãƒ•ã‚©ãƒ¼ã‚¹ã‚³ãƒ³ãƒ‡ãƒ³ã‚µãƒ¼#
+490078#ãƒ¡ãƒ³ã‚¿ãƒ«ã‚³ãƒ³ãƒ‡ãƒ³ã‚µãƒ¼#
+470071#æœªçŸ¥ãªã‚‹åŠ›ã®ãƒ–ãƒ¼ãƒ„#
+470072#æœªçŸ¥ãªã‚‹é›†ä¸­ã®ãƒ–ãƒ¼ãƒ„#
+470073#æœªçŸ¥ãªã‚‹ä½“åŠ›ã®ãƒ–ãƒ¼ãƒ„#
+470074#æœªçŸ¥ãªã‚‹é­”åŠ›ã®ãƒ–ãƒ¼ãƒ„#
+470076#æœªçŸ¥ãªã‚‹è¡æ˜Žã®ãƒ–ãƒ¼ãƒ„#
+470077#æœªçŸ¥ãªã‚‹å‰µé€ ã®ãƒ–ãƒ¼ãƒ„#
+300170#è…ã£ãŸæœ¨ã‚«ãƒ¼ãƒ‰#
+300171#ã‚°ãƒ¬ã‚¤ãƒ´ãƒ¯ãƒ¼ãƒ ã‚«ãƒ¼ãƒ‰#
+300172#ãƒ–ãƒ¬ã‚¤ãƒ³ã‚µãƒƒã‚«ãƒ¼ã‚«ãƒ¼ãƒ‰#
+300173#ãƒ¢ã‚¹ã‚­ãƒ­ã‚«ãƒ¼ãƒ‰#
+300174#æº¶è§£ã—ãŸãƒãƒªãƒ³ã‚«ãƒ¼ãƒ‰#
+300175#å¾—ä½“ã®çŸ¥ã‚Œãªã„ç”Ÿå‘½ä½“ã‚«ãƒ¼ãƒ‰#
+1000363#é­”åŠ›ã®æºœã¾ã£ãŸçŸ³#
+10575#[2023å¹´]ç‰¹é¸ãƒã‚³ç¼¶(ã‚«ãƒ‹)ã®ç®±#
+600013#ãƒ•ã‚©ãƒ¼ãƒ†ã‚£ãƒ•ã‚¡ã‚¤ãƒ‰ã‚¯ãƒ¬ã‚¤ãƒ¢ã‚¢#
+640013#ãƒ•ã‚©ãƒ¼ãƒ†ã‚£ãƒ•ã‚¡ã‚¤ãƒ‰ã‚¹ã‚¿ãƒƒãƒ•#
+530009#ãƒ•ã‚©ãƒ¼ãƒ†ã‚£ãƒ•ã‚¡ã‚¤ãƒ‰ã‚¹ãƒ”ã‚¢ãƒ¼#
+540013#ãƒ•ã‚©ãƒ¼ãƒ†ã‚£ãƒ•ã‚¡ã‚¤ãƒ‰ãƒžãƒ‹ãƒ¥ã‚¢ãƒ«#
+â€»300000ç•ªå°ã¨åŽé›†å“ã¯å°‘ã—ä¿®æ­£ã—ãŸã®ã§å†æŽ²
 
-ˆÙ‹«‚Ì“ŠŽÒ ®—‚É”º‚¢ 4263 4302 4330 4342 4376 4386 4407 4520 4590 4591 4592 27126 27162 ’Ç‹LC³
-classnum_db.txt‚É400000”Ô‘ä‚Ì‚‚Ì’Ç‰Á
+ç•°å¢ƒã®çµ±è½„è€… æ•´ç†ã«ä¼´ã„ 4263 4302 4330 4342 4376 4386 4407 4520 4590 4591 4592 27126 27162 è¿½è¨˜ä¿®æ­£
+classnum_db.txtã«400000ç•ªå°ã®ç›¾ã®è¿½åŠ 
 
 2023-09-19	patch0024
-2023-09-19 V‹KŽÀ‘••ªƒAƒCƒeƒ€‚ð•”•ªŽÀ‘•
-¦4ŽŸE‚ÌŒø‰ÊEŽÀ‘•‚³‚ê‚Ä‚¢‚È‚¢—v‘f‚Í•Û—¯‚µ‚Ä‚¢‚Ü‚·
+2023-09-19 æ–°è¦å®Ÿè£…åˆ†ã‚¢ã‚¤ãƒ†ãƒ ã‚’éƒ¨åˆ†å®Ÿè£…
+â€»4æ¬¡è·ã®åŠ¹æžœãƒ»å®Ÿè£…ã•ã‚Œã¦ã„ãªã„è¦ç´ ã¯ä¿ç•™ã—ã¦ã„ã¾ã™
 
-item_db2_add.txt item_cartype.txtXV
+item_db2_add.txt item_cartype.txtæ›´æ–°
 
-400416 490336 490337 490359 312037 312304 312305 450149 ŽÀ‘•
+400416 490336 490337 490359 312037 312304 312305 450149 å®Ÿè£…
 
-classnum_db.txt V‹KŒöŠJ
-•Ší‚ÌŒÅ—LUŒ‚ƒOƒ‰ƒtƒBƒbƒN‚ðiteminfo‚É”½‰f‚³‚¹‚é‚½‚ß‚ÌŠî–{î•ñ‚Å‚·
-global‚Ìƒf[ƒ^‚à“ü‚Á‚Ä‚¢‚Ü‚·
-iteminfo‚ðì‚é‚Æ‚«‚ÉŽw’è‚µ‚Ä‚­‚¾‚³‚¢
+classnum_db.txt æ–°è¦å…¬é–‹
+æ­¦å™¨ã®å›ºæœ‰æ”»æ’ƒã‚°ãƒ©ãƒ•ã‚£ãƒƒã‚¯ã‚’iteminfoã«åæ˜ ã•ã›ã‚‹ãŸã‚ã®åŸºæœ¬æƒ…å ±ã§ã™
+globalã®ãƒ‡ãƒ¼ã‚¿ã‚‚å…¥ã£ã¦ã„ã¾ã™
+iteminfoã‚’ä½œã‚‹ã¨ãã«æŒ‡å®šã—ã¦ãã ã•ã„
 
 2023-09-18	patch0023
-400453 400454 470206 480317 400437 400438 490367 ŽÀ‘•
-4134 4148 4168 4236 4305 4324 4372 4374 4376 ˆÙ‹«‚Ì“ŠŽÒ‚ÌƒZƒbƒgŒø‰Ê”½‰f
-300405 311439 400481 C³
-¦ƒAƒ‚ƒ“ƒ‰[ƒJ[ƒh ƒAƒvƒ[ƒYƒTƒ“ƒ_ƒ‹‚ÌƒZƒbƒgŒø‰Ê‚ÉˆÙ‹«‚Ì“ŠŽÒ‚ÌŒø‰Ê‚ð’Ç‰Á‚µ‚½ê‡‚ÍƒLƒŠƒGƒGƒŒƒCƒ\ƒ“‚ª”­“®‚µ‚È‚¢‚É‹Lqã‚ÌÝ’è‚µ‚Ä‚¨‚«‚Ü‚µ‚½
-¦ƒAƒvƒ[ƒYƒTƒ“ƒ_ƒ‹‚ÉˆÙ‹«‚Ì“ŠŽÒƒGƒ“ƒ`ƒƒƒ“ƒg‚Ì‘ÎÛ‚Å‚Í‚È‚¢‚½‚ßAŽÀÛ‚ÌÄŒ»«‚Í‚ ‚è‚Ü‚¹‚ñ
+400453 400454 470206 480317 400437 400438 490367 å®Ÿè£…
+4134 4148 4168 4236 4305 4324 4372 4374 4376 ç•°å¢ƒã®çµ±è½„è€…ã®ã‚»ãƒƒãƒˆåŠ¹æžœåæ˜ 
+300405 311439 400481 ä¿®æ­£
+â€»ã‚¢ãƒ¢ãƒ³ãƒ©ãƒ¼ã‚«ãƒ¼ãƒ‰ ã‚¢ãƒ—ãƒ­ãƒ¼ã‚ºã‚µãƒ³ãƒ€ãƒ«ã®ã‚»ãƒƒãƒˆåŠ¹æžœã«ç•°å¢ƒã®çµ±è½„è€…ã®åŠ¹æžœã‚’è¿½åŠ ã—ãŸå ´åˆã¯ã‚­ãƒªã‚¨ã‚¨ãƒ¬ã‚¤ã‚½ãƒ³ãŒç™ºå‹•ã—ãªã„ã«è¨˜è¿°ä¸Šã®è¨­å®šã—ã¦ãŠãã¾ã—ãŸ
+â€»ã‚¢ãƒ—ãƒ­ãƒ¼ã‚ºã‚µãƒ³ãƒ€ãƒ«ã«ç•°å¢ƒã®çµ±è½„è€…ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆã®å¯¾è±¡ã§ã¯ãªã„ãŸã‚ã€å®Ÿéš›ã®å†ç¾æ€§ã¯ã‚ã‚Šã¾ã›ã‚“
 
 2023-09-17	patch0022
-410247 450286 450287 480331 450291 ­‚µC³‚µÅ“K‰»
-4318 300392 311439 Œø‰Ê‚Ì’Ç‰Á‚É”º‚¢ˆÙ‹«‚Ì“ŠŽÒ‚Ì‹Lq’Zk
-4318 300392 ƒZƒbƒgŒø‰Ê‚É[“øF‚Ì”L‚¶‚á‚ç‚µ]‚Ì•ª‚ð’Ç‹L
-450288 480245 ŽÀ‘•
-480243 480244 ŠÖ˜Aˆß‘•‘•”õ‚ÍƒeƒXƒg‰Â”\‚Å‚·(ÄŒf)
+410247 450286 450287 480331 450291 å°‘ã—ä¿®æ­£ã—æœ€é©åŒ–
+4318 300392 311439 åŠ¹æžœã®è¿½åŠ ã«ä¼´ã„ç•°å¢ƒã®çµ±è½„è€…ã®è¨˜è¿°çŸ­ç¸®
+4318 300392 ã‚»ãƒƒãƒˆåŠ¹æžœã«[è™¹è‰²ã®çŒ«ã˜ã‚ƒã‚‰ã—]ã®åˆ†ã‚’è¿½è¨˜
+450288 480245 å®Ÿè£…
+480243 480244 é–¢é€£è¡£è£…è£…å‚™ã¯ãƒ†ã‚¹ãƒˆå¯èƒ½ã§ã™(å†æŽ²)
 
 2023-09-16	patch0021
-31465 C³
-„—E–³‘o‚ÆŠÖ˜A‘•”õ(23‰Ä‚Ì‹ß•Ó)ŽÀ‘•
+31465 ä¿®æ­£
+å‰›å‹‡ç„¡åŒã¨é–¢é€£è£…å‚™(23å¤ã®è¿‘è¾º)å®Ÿè£…
 
 2023-09-15	patch0020
-ƒI[ƒgƒ}ƒeƒBƒbƒNƒGƒ“ƒ`ƒƒƒ“ƒg(2021”N )ŠÖ˜A‚Ì‘•”õ•iEƒAƒCƒeƒ€ŽÀ‘•
-item_db2_add.txt XV
-db‚Ì®— ‹Lq‚ÌÅ“K‰»
+ã‚ªãƒ¼ãƒˆãƒžãƒ†ã‚£ãƒƒã‚¯ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆ(2021å¹´é ƒ)é–¢é€£ã®è£…å‚™å“ãƒ»ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+item_db2_add.txt æ›´æ–°
+dbã®æ•´ç† è¨˜è¿°ã®æœ€é©åŒ–
 
 2023-09-13	patch0019
-300318 ŽÀ‘•
-ƒGƒ“ƒ`ƒƒƒ“ƒgŒn ŽÀ‘•
-‹LqŒ`Ž®‚ð­‚µÅ“K‰»
-¦300000”Ô‘ä‚ÌƒGƒ“ƒ`ƒƒƒ“ƒgŒn‚Í‘S•”ŽÀ‘•‚µ‚Ü‚µ‚½
-¦ŽÀ‘•‚Å‚«‚È‚¢‚à‚Ì‚à‚ ‚è‚Ü‚·
-¦300334 311071 ‚Í•Û—¯
+300318 å®Ÿè£…
+ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆç³» å®Ÿè£…
+è¨˜è¿°å½¢å¼ã‚’å°‘ã—æœ€é©åŒ–
+â€»300000ç•ªå°ã®ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆç³»ã¯å…¨éƒ¨å®Ÿè£…ã—ã¾ã—ãŸ
+â€»å®Ÿè£…ã§ããªã„ã‚‚ã®ã‚‚ã‚ã‚Šã¾ã™
+â€»300334 311071 ã¯ä¿ç•™
 
 2023-09-12	patch0018
-ƒGƒ“ƒ`ƒƒƒ“ƒgŒn ŽÀ‘•
-”ò‚ñ‚Å‚¢‚é”Ô†‚ÍŒã“úŽÀ‘•—\’è
+ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆç³» å®Ÿè£…
+é£›ã‚“ã§ã„ã‚‹ç•ªå·ã¯å¾Œæ—¥å®Ÿè£…äºˆå®š
 
 2023-09-10	patch0017
-300114	300123 •ŠíŽíðŒ‚Ì‹Lq‚ðC³
-öÝŠoÁƒGƒ“ƒ`ƒƒƒ“ƒg ŽÀ‘•
+300114	300123 æ­¦å™¨ç¨®æ¡ä»¶ã®è¨˜è¿°ã‚’ä¿®æ­£
+æ½œåœ¨è¦šé†’ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆ å®Ÿè£…
 
-¦4ŽŸE—v‘f‚Í–¢ŽÀ‘•
-¦Šm—¦‚Í‚‚ß‚Æ‚¢‚¤î•ñ‚ðŒ©‚½‚Ì‚Å10%‚ÅÝ’è
-¦EFST_EP16_DEF _—Íó‘Ô@–¢ŽÀ‘•
-¦EFST_ULTIMATE_S ƒAƒ‹ƒeƒBƒƒbƒgƒTƒNƒŠƒtƒ@ƒCƒXó‘Ô@–¢ŽÀ‘•
-¦312417 ‘•‚³‚ê‚½‰…–] 312421 Å‰Ê‚Ä‚ÌŽx”zŽÒ ‚ÍƒZƒbƒgŒø‰Ê‚ÍŠY“–ƒAƒCƒeƒ€‚É‹Lq‚·‚é‚½‚ßŠî‘bŒø‰Ê‚Ì‚Ý
+â€»4æ¬¡è·è¦ç´ ã¯æœªå®Ÿè£…
+â€»ç¢ºçŽ‡ã¯é«˜ã‚ã¨ã„ã†æƒ…å ±ã‚’è¦‹ãŸã®ã§10%ã§è¨­å®š
+â€»EFST_EP16_DEF ç¥žåŠ›çŠ¶æ…‹ã€€æœªå®Ÿè£…
+â€»EFST_ULTIMATE_S ã‚¢ãƒ«ãƒ†ã‚£ãƒ¡ãƒƒãƒˆã‚µã‚¯ãƒªãƒ•ã‚¡ã‚¤ã‚¹çŠ¶æ…‹ã€€æœªå®Ÿè£…
+â€»312417 å¢—å¹…ã•ã‚ŒãŸæ€¨æœ› 312421 æœ€æžœã¦ã®æ”¯é…è€… ã¯ã‚»ãƒƒãƒˆåŠ¹æžœã¯è©²å½“ã‚¢ã‚¤ãƒ†ãƒ ã«è¨˜è¿°ã™ã‚‹ãŸã‚åŸºç¤ŽåŠ¹æžœã®ã¿
 
 2023-09-09	patch0016
-ƒGƒ“ƒ`ƒƒƒ“ƒg ŽÀ‘•
-310850 item_db2_add.txt XV
+ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆ å®Ÿè£…
+310850 item_db2_add.txt æ›´æ–°
 
 2023-09-08	patch0015
-21851 21852 mob’Ç‰Á(V‹K’è‹`‚Ì‚Ý)
+21851 21852 mobè¿½åŠ (æ–°è¦å®šç¾©ã®ã¿)
 
 2023-09-08	patch0014
-300245 C³
-‹Lq‚ÌŒ`Ž®‚ð­‚µ®Œ`({UnEquipScript})
-ƒJ[ƒhEƒGƒ“ƒ`ƒƒƒ“ƒgŒnƒAƒCƒeƒ€ŽÀ‘•
-ƒJ[ƒh‚Í300318 ••ˆó‚³‚ê‚½ƒCƒOƒjƒ[ƒ€=ƒZƒjƒAiMVPjƒJ[ƒh 300334 ••ˆó‚³‚ê‚½‘Â‚¿‚½‘å_Š¯ƒqƒoƒ€ƒJ[ƒh 311071 ••ˆó‚³‚ê‚½ƒ”ƒFƒ‹ƒ[ƒuƒuƒJ[ƒh ‚ðŽc‚µ‚Ä300000”Ô‘ä‚Ì‘SŽÀ‘•Š®—¹
-Žc‚è3–‡‚ÍƒZƒbƒgŒø‰Ê‚ª”ñí‚É”ÏŽG‚È‚½‚ßŒã“úŽÀ‘•—\’è
+300245 ä¿®æ­£
+è¨˜è¿°ã®å½¢å¼ã‚’å°‘ã—æ•´å½¢({UnEquipScript})
+ã‚«ãƒ¼ãƒ‰ãƒ»ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆç³»ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+ã‚«ãƒ¼ãƒ‰ã¯300318 å°å°ã•ã‚ŒãŸã‚¤ã‚°ãƒ‹ã‚¼ãƒ =ã‚»ãƒ‹ã‚¢ï¼ˆMVPï¼‰ã‚«ãƒ¼ãƒ‰ 300334 å°å°ã•ã‚ŒãŸå •ã¡ãŸå¤§ç¥žå®˜ãƒ’ãƒãƒ ã‚«ãƒ¼ãƒ‰ 311071 å°å°ã•ã‚ŒãŸãƒ´ã‚§ãƒ«ã‚¼ãƒ–ãƒ–ã‚«ãƒ¼ãƒ‰ ã‚’æ®‹ã—ã¦300000ç•ªå°ã®å…¨å®Ÿè£…å®Œäº†
+æ®‹ã‚Š3æžšã¯ã‚»ãƒƒãƒˆåŠ¹æžœãŒéžå¸¸ã«ç…©é›‘ãªãŸã‚å¾Œæ—¥å®Ÿè£…äºˆå®š
 
 2023-09-07	patch0013
-ƒJ[ƒhEƒGƒ“ƒ`ƒƒƒ“ƒgŒnƒAƒCƒeƒ€ŽÀ‘•ipatch0012‚É¬‚¶‚Á‚Ä‚¢‚é‚à‚Ì‚ª‚ ‚è‚Ü‚µ‚½j
-11548 12674 12675 ŽÀ‘•
-15843 “ª‘•”õ ŽÀ‘•
-410210 410211 450208 470180 510043 510044 610029 ƒGƒ“ƒ`ƒƒƒ“ƒg‚ÌƒZƒbƒg‘•”õŽÀ‘•
+ã‚«ãƒ¼ãƒ‰ãƒ»ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆç³»ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…ï¼ˆpatch0012ã«æ··ã˜ã£ã¦ã„ã‚‹ã‚‚ã®ãŒã‚ã‚Šã¾ã—ãŸï¼‰
+11548 12674 12675 å®Ÿè£…
+15843 é ­è£…å‚™ å®Ÿè£…
+410210 410211 450208 470180 510043 510044 610029 ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆã®ã‚»ãƒƒãƒˆè£…å‚™å®Ÿè£…
 
 2023-09-06	patch0012
-0905ŽÀ‘•ƒAƒCƒeƒ€‚Å•ŠíE–h‹ïEƒJ[ƒhŒn‚ÌŒø‰ÊŽÀ‘•
-420242 ƒGƒ‰[‚ªo‚éŒ´ˆö‚Ìview’l‚ðíœ(hateffect‚ÉŒ´‘¥view’l‚Í•s—v)
-•Ší‚ÌV‚µ‚¢—v‘f•”•ª‚Í–¢ŽÀ‘•
-500000”Ô‘äˆÈ~‚Ì•Ší–h‹ïdbC³
-¦ŽûW•iEÁ–Õ•i‚Í–¢ŽÀ‘•
+0905å®Ÿè£…ã‚¢ã‚¤ãƒ†ãƒ ã§æ­¦å™¨ãƒ»é˜²å…·ãƒ»ã‚«ãƒ¼ãƒ‰ç³»ã®åŠ¹æžœå®Ÿè£…
+420242 ã‚¨ãƒ©ãƒ¼ãŒå‡ºã‚‹åŽŸå› ã®viewå€¤ã‚’å‰Šé™¤(hateffectã«åŽŸå‰‡viewå€¤ã¯ä¸è¦)
+æ­¦å™¨ã®æ–°ã—ã„è¦ç´ éƒ¨åˆ†ã¯æœªå®Ÿè£…
+500000ç•ªå°ä»¥é™ã®æ­¦å™¨é˜²å…·dbä¿®æ­£
+â€»åŽé›†å“ãƒ»æ¶ˆè€—å“ã¯æœªå®Ÿè£…
 
 2023-09-05	patch0011
-0905ŽÀ‘•ƒAƒCƒeƒ€‚ÌŠî–{dbŽÀ‘•
+0905å®Ÿè£…ã‚¢ã‚¤ãƒ†ãƒ ã®åŸºæœ¬dbå®Ÿè£…
 item_db_add.txt item_db2_add.txt item_cardtype.txt
-ˆß‘•‘•”õ ŽÀ‘•Ï‚Ý ƒGƒ‰[‚È‚­—˜—p‰Â”\
-ˆß‘•‘•”õ‚ÍƒeƒXƒgŠÂ‹«‚ÌƒAƒbƒvƒf[ƒgAhateffect‚Ístatus.h const.txt XV•K—v‚Å‚·
+è¡£è£…è£…å‚™ å®Ÿè£…æ¸ˆã¿ ã‚¨ãƒ©ãƒ¼ãªãåˆ©ç”¨å¯èƒ½
+è¡£è£…è£…å‚™ã¯ãƒ†ã‚¹ãƒˆç’°å¢ƒã®ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã€hateffectã¯status.h const.txt æ›´æ–°å¿…è¦ã§ã™
 
 2023-09-04	patch0010
-–Lõ‚Ì—_ ƒZƒbƒgŽc‚èŽÀ‘•
-4441 311071 300334 ƒZƒbƒgŒø‰Ê‚ÌðŒ‘½‚­”ÏŽG‚Å³Šm‚ÈŽÀ‘•‚ª“ï‚µ‚¢‚½‚ß•Û—¯
-4ŽŸE‘•”õ‚ÌƒtƒBƒfƒX`‚Í•Û—¯
+è±Šç©£ã®å¥³ç¥ž ã‚»ãƒƒãƒˆæ®‹ã‚Šå®Ÿè£…
+4441 311071 300334 ã‚»ãƒƒãƒˆåŠ¹æžœã®æ¡ä»¶å¤šãç…©é›‘ã§æ­£ç¢ºãªå®Ÿè£…ãŒé›£ã—ã„ãŸã‚ä¿ç•™
+4æ¬¡è·è£…å‚™ã®ãƒ•ã‚£ãƒ‡ã‚¹ï½žã¯ä¿ç•™
 
 2023-09-02	patch0009
-300121 300005 ­‚µC³
-–Lõ‚Ì—_ ƒZƒbƒg 4145 4425 4430 ŽÀ‘•
+300121 300005 å°‘ã—ä¿®æ­£
+è±Šç©£ã®å¥³ç¥ž ã‚»ãƒƒãƒˆ 4145 4425 4430 å®Ÿè£…
 
 2023-09-02	patch0008
-patch“à—e‚ðV‚µ‚¢‚à‚Ì‚ªã‚É‚È‚é‚æ‚¤‚ÉC³
-19497 ƒZƒbƒgŽÀ‘•ƒŠƒ[ƒN
-27383 ŽôŽE‚ÌƒAƒ€ƒ_ƒ‰ƒCƒXƒJ[ƒh ”Ô†ˆá‚¢C³
-311074 ‰p—Y‚ÌŠM‰Ì ŠÖ˜AƒAƒCƒeƒ€ŽÀ‘•
-’P‘ÌŒø‰Ê‚ÌƒJ[ƒh‚ð‚¢‚­‚Â‚©ŽÀ‘•
-311073 –Lõ‚Ì—_ ŠÖ˜AƒAƒCƒeƒ€‚ð”ŒÂŽÀ‘•
-470071-470077 –¢’m‚È‚é Œn‚ÌŒCŽÀ‘•
-480331 490207 ŽÀ‘•
+patchå†…å®¹ã‚’æ–°ã—ã„ã‚‚ã®ãŒä¸Šã«ãªã‚‹ã‚ˆã†ã«ä¿®æ­£
+19497 ã‚»ãƒƒãƒˆå®Ÿè£…ãƒªãƒ¯ãƒ¼ã‚¯
+27383 å‘ªæ®ºã®ã‚¢ãƒ ãƒ€ãƒ©ã‚¤ã‚¹ã‚«ãƒ¼ãƒ‰ ç•ªå·é•ã„ä¿®æ­£
+311074 è‹±é›„ã®å‡±æ­Œ é–¢é€£ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+å˜ä½“åŠ¹æžœã®ã‚«ãƒ¼ãƒ‰ã‚’ã„ãã¤ã‹å®Ÿè£…
+311073 è±Šç©£ã®å¥³ç¥ž é–¢é€£ã‚¢ã‚¤ãƒ†ãƒ ã‚’æ•°å€‹å®Ÿè£…
+470071-470077 æœªçŸ¥ãªã‚‹ ç³»ã®é´å®Ÿè£…
+480331 490207 å®Ÿè£…
 
-¦ƒ}ƒbƒvŽw’è‚Ì‘•”õƒ{[ƒiƒX‚Í–¢ŽÀ‘•‚Å‚·‚ªAmobgroup’Ç‰Á‚ÅŽÀ‘•‰Â”\‚Å‚·
-300213,card,ƒ”ƒ@ƒ‹ƒeƒBƒJ[ƒh,6,,10,10,,,,,,,2,,,,,{},{/*ƒIƒY‚Ì–À˜H 01 ƒIƒY‚Ì–À˜H 02 +30% */},{}
-300220,card,ƒOƒŒƒCƒEƒ‹ƒtƒJ[ƒh,6,,10,10,,,,,,,2,,,,,{},{/*ŠDF˜T‚ÌX@01 ŠDF˜T‚ÌX@02 +30%*/},{}
+â€»ãƒžãƒƒãƒ—æŒ‡å®šã®è£…å‚™ãƒœãƒ¼ãƒŠã‚¹ã¯æœªå®Ÿè£…ã§ã™ãŒã€mobgroupè¿½åŠ ã§å®Ÿè£…å¯èƒ½ã§ã™
+300213,card,ãƒ´ã‚¡ãƒ«ãƒ†ã‚£ã‚«ãƒ¼ãƒ‰,6,,10,10,,,,,,,2,,,,,{},{/*ã‚ªã‚ºã®è¿·è·¯ 01 ã‚ªã‚ºã®è¿·è·¯ 02 +30% */},{}
+300220,card,ã‚°ãƒ¬ã‚¤ã‚¦ãƒ«ãƒ•ã‚«ãƒ¼ãƒ‰,6,,10,10,,,,,,,2,,,,,{},{/*ç°è‰²ç‹¼ã®æ£®ã€€01 ç°è‰²ç‹¼ã®æ£®ã€€02 +30%*/},{}
 
-¦4ŽŸEƒXƒe[ƒ^ƒX‚Ì Mres(Magic resist) ‘•”õ‚ÍŠY“–•”•ª‚¾‚¯–¢ŽÀ‘•
-300228,card,ƒfƒ~ƒtƒŒƒCƒ„ƒJ[ƒh,6,,10,10,,,,,,,136,,,,,{/*4ŽŸEƒXƒe[ƒ^ƒX–¢ŽÀ‘•*/},{ bonus bAllStatus,3; bonus bAspd,1; if(equippeditem(312418)){ bonus2 bIgnoreMDefRace,Rct_Boss,50; bonus2 bIgnoreMDefRace,Rct_NonBoss,50; bonus2 bHPRatePenaltyTime,1000,-3; } if(equippeditem(311073) == 0){{ bonus3 bAutoActiveMagic,300228,100,10000; if(checkactiveitem()){ sc_start SC_INSPIRATION,10000,1; } end; } bonus3 bAutoActiveMagic,300228,300,10000; if(checkactiveitem()){ sc_start SC_INSPIRATION,10000,1; }}},{}
+â€»4æ¬¡è·ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã® Mres(Magic resist) è£…å‚™ã¯è©²å½“éƒ¨åˆ†ã ã‘æœªå®Ÿè£…
+300228,card,ãƒ‡ãƒŸãƒ•ãƒ¬ã‚¤ãƒ¤ã‚«ãƒ¼ãƒ‰,6,,10,10,,,,,,,136,,,,,{/*4æ¬¡è·ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹æœªå®Ÿè£…*/},{ bonus bAllStatus,3; bonus bAspd,1; if(equippeditem(312418)){ bonus2 bIgnoreMDefRace,Rct_Boss,50; bonus2 bIgnoreMDefRace,Rct_NonBoss,50; bonus2 bHPRatePenaltyTime,1000,-3; } if(equippeditem(311073) == 0){{ bonus3 bAutoActiveMagic,300228,100,10000; if(checkactiveitem()){ sc_start SC_INSPIRATION,10000,1; } end; } bonus3 bAutoActiveMagic,300228,300,10000; if(checkactiveitem()){ sc_start SC_INSPIRATION,10000,1; }}},{}
 
-¦•ŠíUŒ‚—Í+% ‚Íitembonus‚È‚¢‚½‚ß–¢ŽÀ‘•(“¯Œø‰ÊƒAƒCƒeƒ€‚Í4650 18879 20946 20983 29509 29716 29725 300280 400396 450252 480114)
-¦_—Íó‘Ô –¢ŽÀ‘•
-300280,card,”j‘¹‚µ‚½ƒ^ƒiƒgƒX‚Ì‹L‰¯ƒJ[ƒh,6,,10,10,,,,,,,769,,,,,{},{ /* •ŠíUŒ‚—Í+%–¢ŽÀ‘• */ bonus bNoSizeFix,0; if(equippeditem(311074)){ bonus3 bAutoActiveWeapon,300280,100,5000; if(checkactiveitem(490130)){ misceffect 220,""; /*sc_start SC_OBLIVIONCURSE,5000,1;*/ }}if(equippeditem(310197)){ /* _—Íó‘Ô bonus bAllStatus,readparam(11)/10; bonus bMaxHPRate,readparam(11)/10; bonus bFlee,readparam(11)/10; bonus bBaseAtk,readparam(11)/10; bonus bMatk,readparam(11)/10; */ }},{}
+â€»æ­¦å™¨æ”»æ’ƒåŠ›+% ã¯itembonusãªã„ãŸã‚æœªå®Ÿè£…(åŒåŠ¹æžœã‚¢ã‚¤ãƒ†ãƒ ã¯4650 18879 20946 20983 29509 29716 29725 300280 400396 450252 480114)
+â€»ç¥žåŠ›çŠ¶æ…‹ æœªå®Ÿè£…
+300280,card,ç ´æã—ãŸã‚¿ãƒŠãƒˆã‚¹ã®è¨˜æ†¶ã‚«ãƒ¼ãƒ‰,6,,10,10,,,,,,,769,,,,,{},{ /* æ­¦å™¨æ”»æ’ƒåŠ›+%æœªå®Ÿè£… */ bonus bNoSizeFix,0; if(equippeditem(311074)){ bonus3 bAutoActiveWeapon,300280,100,5000; if(checkactiveitem(490130)){ misceffect 220,""; /*sc_start SC_OBLIVIONCURSE,5000,1;*/ }}if(equippeditem(310197)){ /* ç¥žåŠ›çŠ¶æ…‹ bonus bAllStatus,readparam(11)/10; bonus bMaxHPRate,readparam(11)/10; bonus bFlee,readparam(11)/10; bonus bBaseAtk,readparam(11)/10; bonus bMatk,readparam(11)/10; */ }},{}
 
 2023-09-01	patch0007
-‹NŒ¹‚Ì‰¤ ƒJ[ƒhEŠÖ˜AƒAƒCƒeƒ€ŽÀ‘•
-ƒGƒ“ƒ`ƒƒƒ“ƒgƒAƒCƒeƒ€‚¢‚­‚Â‚©ŽÀ‘•
-^–é’†ŒnmobƒVƒŠ[ƒYƒJ[ƒhŽÀ‘•(ƒQƒtƒFƒ“–éŠÔ“¬‹Zê‚Ìƒhƒƒbƒv)
-S1’†’i‘•”õ‚ÆƒZƒbƒg‚ÅŽÀ‘•‚Å‚«‚»‚¤‚È‚à‚Ì‚ðŽÀ‘•
+èµ·æºã®çŽ‹ ã‚«ãƒ¼ãƒ‰ãƒ»é–¢é€£ã‚¢ã‚¤ãƒ†ãƒ å®Ÿè£…
+ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆã‚¢ã‚¤ãƒ†ãƒ ã„ãã¤ã‹å®Ÿè£…
+çœŸå¤œä¸­ç³»mobã‚·ãƒªãƒ¼ã‚ºã‚«ãƒ¼ãƒ‰å®Ÿè£…(ã‚²ãƒ•ã‚§ãƒ³å¤œé–“é—˜æŠ€å ´ã®ãƒ‰ãƒ­ãƒƒãƒ—)
+S1ä¸­æ®µè£…å‚™ã¨ã‚»ãƒƒãƒˆã§å®Ÿè£…ã§ããã†ãªã‚‚ã®ã‚’å®Ÿè£…
 
-¦4000”Ô‘ä‚Ìƒ{ƒXƒJ[ƒhE526ƒ[ƒ„ƒ‹ƒ[ƒŠ[‚É’Ç‹L‚µ‚Ä‚¢‚Ü‚·
-¦410027 410028 ‚ÍŽÀ‘•Ï‚Ýƒyƒbƒg‚ÌŒø‰Ê‚ðŽÀ‘•
-¦19106 ‚Í"callfunc" ‚ÅƒŠƒ[ƒN
+â€»4000ç•ªå°ã®ãƒœã‚¹ã‚«ãƒ¼ãƒ‰ãƒ»526ãƒ­ãƒ¼ãƒ¤ãƒ«ã‚¼ãƒªãƒ¼ã«è¿½è¨˜ã—ã¦ã„ã¾ã™
+â€»410027 410028 ã¯å®Ÿè£…æ¸ˆã¿ãƒšãƒƒãƒˆã®åŠ¹æžœã‚’å®Ÿè£…
+â€»19106 ã¯"callfunc" ã§ãƒªãƒ¯ãƒ¼ã‚¯
 
 2023-08-30	patch0006
-–{ŽÀ‘•Ï‚Ý‚ÌƒAƒCƒeƒ€‚ðíœ
-311075 –ïÐ‚Ì–‚«‚ÌƒZƒbƒgƒAƒCƒeƒ€‚Å300000”Ô‘ä‚Æ400000”Ô‘ä‚Ì‚à‚Ì‚ðŽÀ‘•
+æœ¬å®Ÿè£…æ¸ˆã¿ã®ã‚¢ã‚¤ãƒ†ãƒ ã‚’å‰Šé™¤
+311075 åŽ„ç½ã®é­”å°†ã®ã‚»ãƒƒãƒˆã‚¢ã‚¤ãƒ†ãƒ ã§300000ç•ªå°ã¨400000ç•ªå°ã®ã‚‚ã®ã‚’å®Ÿè£…
 
 2023-08-29	patch0005
-300111 C³
-300112-300151 ŽÀ‘•
-300131-300136 300163-300168 –{ŽÀ‘•Ï‚Ý•ª‚ðƒRƒƒ“ƒgƒAƒEƒg
+300111 ä¿®æ­£
+300112-300151 å®Ÿè£…
+300131-300136 300163-300168 æœ¬å®Ÿè£…æ¸ˆã¿åˆ†ã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆ
 
 2023-08-28 patch0004
-’mŽ¯‚Ì’T‹ŽÒŠÖŒWƒJ[ƒhE‘•”õ•iŽÀ‘•
-300081-300111ƒJ[ƒhŽÀ‘•
+çŸ¥è­˜ã®æŽ¢æ±‚è€…é–¢ä¿‚ã‚«ãƒ¼ãƒ‰ãƒ»è£…å‚™å“å®Ÿè£…
+300081-300111ã‚«ãƒ¼ãƒ‰å®Ÿè£…
 
 2023-08-27	patch0003
-’mŽ¯‚Ì’T‹ŽÒƒZƒbƒgŒø‰ÊŽÀ‘•
+çŸ¥è­˜ã®æŽ¢æ±‚è€…ã‚»ãƒƒãƒˆåŠ¹æžœå®Ÿè£…
 
 2023-08-26	patch0002
-1681 –{ŽÀ‘•‚Ì‚Ü‚Ü‚Å‚¢‚¢‚Ì‚Åíœ
+1681 æœ¬å®Ÿè£…ã®ã¾ã¾ã§ã„ã„ã®ã§å‰Šé™¤
 
 2023-08-26	patch0001
-ƒGƒ“ƒ`ƒƒƒ“ƒg ˆÙ‹«‚Ì“ŠŽÒ ŠÖ˜AŽÀ‘•
-ƒJ[ƒh‚ÌNPC”Ì”„’l‚ðNPC”„‹p’l‚É•ÏX
-ƒJ[ƒhŽÀ‘•
-‘•”õ•iŽÀ‘•
+ã‚¨ãƒ³ãƒãƒ£ãƒ³ãƒˆ ç•°å¢ƒã®çµ±è½„è€… é–¢é€£å®Ÿè£…
+ã‚«ãƒ¼ãƒ‰ã®NPCè²©å£²å€¤ã‚’NPCå£²å´å€¤ã«å¤‰æ›´
+ã‚«ãƒ¼ãƒ‰å®Ÿè£…
+è£…å‚™å“å®Ÿè£…
 
-2023-08-20 V‹K
+2023-08-20 æ–°è¦
