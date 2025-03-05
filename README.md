@@ -5,4 +5,5 @@
 * ちょっとした説明をwikiに書いています<br>
 →　https://github.com/Elkershausen/auriga-db/wiki<br>
 * テスト環境(新規用)をアップデート(2025/03/03)<br>
+* テスト環境エラー修正(2025/03/05)<br>
 * iteminfoにドロップエフェクト/URLクラッシュエラー回避を追加するコードをwikiに公開(2025/02/19)<br>
