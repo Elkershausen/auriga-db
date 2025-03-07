@@ -1,3 +1,8 @@
+2025/03/08	patch0260
+* 9001 - 11743 アイテムの不具合修正(item_db.txt)
+
+* ペットの効果は pet_db.txt に後日実装
+
 2025/03/06	patch0259
 * cashemotion のエラーとsetup.exeの文字化け修正(百尺竿頭 auriga 0002 更新)
 
