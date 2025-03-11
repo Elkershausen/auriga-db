@@ -1,5 +1,5 @@
 2025/03/11	patch0262
-* 2025/03/04 新規アイテム実装(item_db.txt item_db2.txt classnum_db.txt item_cardtype.txt itemInfo_EN.lua)
+* 2025/03/11 新規アイテム実装(item_db.txt item_db2.txt classnum_db.txt item_cardtype.txt itemInfo_EN.lua)
 * アイテム移動制限の大規模アップデート実装(item_db2.txt)
 * バイロ用の製造スキルで作れるアイテムを追加し、実装されなかった古い定義を整理(produce_db.txt)
 
