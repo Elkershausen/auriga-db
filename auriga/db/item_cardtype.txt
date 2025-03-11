@@ -1,4 +1,4 @@
-//ID,Name,Jname,Composition_Type Auriga db_override patch1576 + add 20250218 アップデート
+//ID,Name,Jname,Composition_Type Auriga db_override patch1576 + add 20250311 アップデート
 4001,card,ポリンカード,0
 4002,card,ファブルカード,1
 4003,card,プパカード,0
@@ -2450,3 +2450,5 @@
 313447,ench,潜在解放(ドラゴンナイトXI),2
 313448,ench,潜在解放(アークメイジX),2
 313454,ench,潜在解放(マイスターXII),2
+313449,ench,潜在解放(アークメイジXI),2
+313480,ench,潜在解放(蜃気楼&不知火XI),2
