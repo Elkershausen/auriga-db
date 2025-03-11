@@ -8,6 +8,8 @@
 
 * テスト用に使っているNPCを整理する[backyard]フォルダ新設(script/update/backyard)
 
+* BASE64 を UTF-8 に変換するコード公開(msgstringtable)
+
 2025/03/09	patch0261
 * 22506 - 24777 アイテムの不具合修正(item_db.txt)
 
