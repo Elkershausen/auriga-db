@@ -15,6 +15,9 @@ bonus2 bAddItemSPHealRate,iid,n;		Increases SP recovered by n% for item iid
 
 * 27144#マッターキメラカード# 登録されている売値が不明なため修正しコメントつけています
 
+* rathenaの簡単なビルド方法をwikiに追加
+* mysqlの設定も記事にします
+
 2025/03/11	patch0262
 * 2025/03/11 新規アイテム実装(item_db.txt item_db2.txt classnum_db.txt item_cardtype.txt itemInfo_EN.lua)
 * アイテム移動制限の大規模アップデート実装(item_db2.txt)
