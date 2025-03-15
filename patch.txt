@@ -1,3 +1,18 @@
+2025/03/15	patch0263
+・501 - 1099 / 6000 - 7999 アイテムの不具合修正(item_db.txt)
+* 収集品は重量を修正しました
+* 判断ができないものはコメントつけています
+
+* 消耗品は効果を見直し、特に回復系効果で[一部の回復アイテム]ボーナス実装が必要と判断しリセットしました
+* [一部の回復アイテム]は[itemheal HP,SP;] 固定値の回復が設定されているものが対象です
+* rathena
+bonus bAddItemHealRate,n;				Increases HP recovered by n% for healing items
+bonus bAddItemSPHealRate,n;				Increases SP recovered by n% for healing items
+bonus2 bAddItemHealRate,iid,n;			Increases HP recovered by n% for item iid
+bonus2 bAddItemSPHealRate,iid,n;		Increases SP recovered by n% for item iid
+
+* 箱系は古い状態のままなので保留しました(後日調査します)
+
 2025/03/11	patch0262
 * 2025/03/11 新規アイテム実装(item_db.txt item_db2.txt classnum_db.txt item_cardtype.txt itemInfo_EN.lua)
 * アイテム移動制限の大規模アップデート実装(item_db2.txt)
