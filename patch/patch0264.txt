@@ -1,0 +1,5 @@
+2025/03/21
+* 装備能力値表示システム エラーを修正しテスト実装(EquipmentPropertiesOrder.lub)
+* lua実装のためにフォルダ階層を整理
+* 簡単な説明はluaファイルに記述しています
+* [EquipmentProperties.lub] はご自身で更新して下さい
