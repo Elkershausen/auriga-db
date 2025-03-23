@@ -1,0 +1,317 @@
+item_db.txt
+1100,weapon,金牛宮のソード,5,20,,1000,10:0,,1,1,8803555,2,2,4,1,2,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus bBaseAtk,50; bonus2 bItemHealRate,1,100; bonus bBaseAtk,BaseLevel; if(getbaseclass(Class,3) == CLASS_GN) { bonus bHit,20; bonus bAspdAddRate,10; bonus2 bAddRace,Rct_Boss,50; bonus2 bAddRace,Rct_NonBoss,50; if(getequiprefinerycnt() >= 7) { callfunc "bonus2bIgnoreDefRace",50; } if(getequiprefinerycnt() >= 9) { callfunc "bonus2bIgnoreDefRace",50; } if(equippeditem(29725)) { bonus2 bAddSkillCoolDown,"GN_CART_TORNADO",-200; } } }
+1101,weapon,ソード,5,100,,500,25:0,,1,3,8803555,2,2,1,2,2,1,{ /* 効果実装済み */ },{}
+1102,weapon,ソード,5,100,,500,25:0,,1,4,8803555,2,2,1,2,2,1,{ /* 効果実装済み */ },{}
+1103,weapon,ソード,5,100,,500,25:0,,1,0,8803555,2,2,1,2,2,1,{ /* 効果実装済み */ },{}
+1104,weapon,ファルシオン,5,1500,,600,39:0,,1,3,8803555,2,2,1,2,2,1,{ /* 効果実装済み */ },{}
+1105,weapon,ファルシオン,5,1500,,600,39:0,,1,4,8803555,2,2,1,2,2,1,{ /* 効果実装済み */ },{}
+1106,weapon,ファルシオン,5,1500,,600,39:0,,1,0,8803555,2,2,1,2,2,1,{ /* 効果実装済み */ },{}
+1107,weapon,ブレイド,5,2900,,700,53:0,,1,3,8803555,2,2,1,2,2,1,{ /* 効果実装済み */ },{}
+1108,weapon,ブレイド,5,2900,,700,53:0,,1,4,8803555,2,2,1,2,2,1,{ /* 効果実装済み */ },{}
+1109,weapon,ブレイド,5,2900,,700,53:0,,1,0,8803555,2,2,1,2,2,1,{ /* 効果実装済み */ },{}
+1110,weapon,レイピア,5,10000,,500,70:0,,1,2,8803555,2,2,2,14,2,1,{ /* 効果実装済み */ },{}
+1111,weapon,レイピア,5,10000,,500,70:0,,1,3,8803555,2,2,2,14,2,1,{ /* 効果実装済み */ },{}
+1112,weapon,レイピア,5,10000,,500,70:0,,1,0,8803555,2,2,2,14,2,1,{ /* 効果実装済み */ },{}
+1113,weapon,シミター,5,17000,,700,85:0,,1,2,8803555,2,2,2,14,2,1,{ /* 効果実装済み */ },{}
+1114,weapon,シミター,5,17000,,700,85:0,,1,3,8803555,2,2,2,14,2,1,{ /* 効果実装済み */ },{}
+1115,weapon,シミター,5,17000,,700,85:0,,1,3,8803555,2,2,2,14,2,1,{ /* 効果実装済み */ },{}
+1116,weapon,カタナ,9,2000,,1000,60:0,,1,3,16514,2,34,1,4,3,1,{ /* 効果実装済み */ },{}
+1117,weapon,カタナ,9,2000,,1000,60:0,,1,4,16514,2,34,1,4,3,1,{ /* 効果実装済み */ },{}
+1118,weapon,カタナ,9,2000,,1000,60:0,,1,0,16514,2,34,1,4,3,1,{ /* 効果実装済み */ },{}
+1119,weapon,ツルギ,5,51000,,1200,130:0,,1,1,414946,2,2,3,27,2,1,{ /* 効果実装済み */ },{}
+1120,weapon,ツルギ,5,51000,,1200,130:0,,1,2,414946,2,2,3,27,2,1,{ /* 効果実装済み */ },{}
+1121,weapon,ツルギ,5,51000,,1200,130:0,,1,0,414946,2,2,3,27,2,1,{ /* 効果実装済み */ },{}
+1122,weapon,環頭太刀,5,24000,,900,100:0,,1,2,414946,2,2,2,14,2,1,{ /* 効果実装済み */ },{}
+1123,weapon,海東剣,5,50000,,900,120:95,,1,1,414946,2,2,3,27,2,1,{ /* 効果実装済み */ },{ bonus bInt,3; }
+1124,weapon,オーキッシュソード,5,20,,800,90:0,,1,0,8803555,2,2,3,5,2,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; }
+1125,weapon,環頭太刀,5,24000,,900,100:0,,1,3,414946,2,2,2,14,2,1,{ /* 効果実装済み */ },{}
+1126,weapon,サーベル,5,49000,,1000,115:0,,1,2,414946,2,2,3,27,2,1,{ /* 効果実装済み */ },{}
+1127,weapon,サーベル,5,49000,,1000,115:0,,1,3,414946,2,2,3,27,2,1,{ /* 効果実装済み */ },{}
+1128,weapon,海東剣,5,50000,,900,120:95,,1,2,414946,2,2,3,27,2,1,{ /* 効果実装済み */ },{ bonus bInt,3; }
+1129,weapon,フランベルジェ,5,60000,,1500,150:0,,1,0,16512,2,2,3,27,2,1,{ /* 効果実装済み */ },{}
+1130,weapon,ネイガン,5,20,,500,120:0,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Human,5; if(getskilllv("TF_DOUBLE") <= 5) { bonus bDoubleRate,25; } if(getskilllv("TF_DOUBLE") >= 6) { bonus bDoubleRate,5*getskilllv("TF_DOUBLE"); } }
+1131,weapon,アイスファルシオン,5,20,,600,100:108,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Water; bonus3 bAutoSpell,"MG_COLDBOLT",3,1000; skill "MG_COLDBOLT",3; bonus2 bAddEff,Eff_Freeze,500; }
+1132,weapon,エッジ,5,20,,700,115:0,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Curse,300; bonus2 bWeaponComaRace2,Rct_NonBoss,10; }
+1133,weapon,ファイアーブランド,5,20,,500,100:108,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Fire; bonus3 bAutoSpell,"MG_FIREBOLT",3,1000; skill "MG_FIREBOLT",3; }
+1134,weapon,シザーズソード,5,20,,700,140:0,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_Plant,100; bonus2 bAddRace,Rct_Plant,25; }
+1135,weapon,カトラス,5,20,,900,150:0,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ skill "SM_BASH",5; bonus bStr,2; bonus bDef,1; }
+1136,weapon,太陽剣,5,20,,1200,85:0,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Fire; bonus2 bHPDrainRate,100,2; bonus2 bSPPenaltyTime,10000,15; }
+1137,weapon,エクスキャリバー,5,20,,1200,150:126,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Holy; bonus bInt,5; bonus bLuk,10; bonus bDex,-1; }
+1138,weapon,ミステルテイン,5,20,,1000,170:0,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Dark; bonus bDex,3; bonus2 bAddEle,Ele_Ghost,15; bonus2 bAddEff,Eff_Stone,100; bonus3 bAutoSpell,"MG_STONECURSE",3,100; }
+1139,weapon,テイルフィング,5,20,,1000,200:0,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Dark; bonus2 bHPPenaltyTime,10000,35; }
+1140,weapon,別雲剣,5,20,,900,150:0,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ bonus bAllStatus,2; bonus2 bAddRace,Rct_Boss,50; bonus2 bSubRace,Rct_NonBoss,-10; bonus2 bMagicSubRace,Rct_NonBoss,-10; }
+1141,weapon,無形剣,5,20,,900,140:0,,1,0,414946,2,2,4,40,2,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus bAtkEle,Ele_Ghost; bonus2 bSPDrainValue,100,-1; bonus2 bSPVanish,3,30; }
+1142,weapon,ジュエルソード,5,20,,2200,104:0,,1,0,414946,2,2,3,68,2,1,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,RAND_JEWEL,Rct_Boss,100; bonus3 bAddMonsterDropItem,RAND_JEWEL,Rct_NonBoss,100; }
+1143,weapon,ガイアソード,5,20,,2500,140:0,,1,0,414946,2,2,3,74,2,1,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,RAND_ORE,Rct_Boss,100; bonus3 bAddMonsterDropItem,RAND_ORE,Rct_NonBoss,100; }
+1144,weapon,刺身包丁,5,20,,1400,75:0,,1,0,414946,2,2,3,48,2,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; bonus3 bAddMonsterDropItem,544,Rct_Fish,4000; }
+1145,weapon,ホーリーアヴェンジャー,5,450000,,1350,125:160,,1,0,16384,2,2,3,75,2,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Holy; bonus bVit,2; }
+1146,weapon,タウンソード,5,42000,,800,100:0,,1,1,8388609,2,2,3,30,2,1,{ /* 効果実装済み */ },{}
+1147,weapon,タウンソード,5,42000,,800,100:0,,1,2,8388609,2,2,3,30,2,1,{ /* 効果実装済み */ },{}
+1148,weapon,スターダストブレイド,5,20,,1000,140:0,,1,1,8388609,2,2,4,45,2,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddEffShort,Eff_Stun,500; }
+1149,weapon,フランベルジェ,5,60000,,1500,150:0,,1,2,16512,2,2,3,27,2,1,{ /* 効果実装済み */ },{}
+1150,weapon,天秤宮のクラスナヤ,9,20,,3500,10:0,,1,1,16514,2,34,4,1,3,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus bBaseAtk,70; bonus bAspdAddRate,10; bonus bBaseAtk,BaseLevel; if(getbaseclass(Class,3) == CLASS_RK) { bonus bSkillDelayRate,-10; bonus2 bAddRace,Rct_Boss,50; bonus2 bAddRace,Rct_NonBoss,50; bonus bAddLongWeaponDamage,25; bonus2 bAddSpCost,"LK_SPIRALPIERCE",-15; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; if(getequiprefinerycnt() >= 7) { callfunc "bonus2bIgnoreDefRace",50; } if(getequiprefinerycnt() >= 9) { callfunc "bonus2bIgnoreDefRace",50; } if(equippeditem(29725)) { bonus bPerfectHitAddRate,25; } } }
+1151,weapon,スレイヤー,9,15000,,1300,90:0,,1,2,16514,2,34,2,18,3,1,{ /* 効果実装済み */ },{}
+1152,weapon,スレイヤー,9,15000,,1300,90:0,,1,3,16514,2,34,2,18,3,1,{ /* 効果実装済み */ },{}
+1153,weapon,スレイヤー,9,15000,,1300,90:0,,1,0,16514,2,34,2,18,3,1,{ /* 効果実装済み */ },{}
+1154,weapon,バスタードソード,9,22500,,1600,115:0,,1,2,16514,2,34,2,18,3,1,{ /* 効果実装済み */ },{}
+1155,weapon,バスタードソード,9,22500,,1600,115:0,,1,3,16514,2,34,2,18,3,1,{ /* 効果実装済み */ },{}
+1156,weapon,バスタードソード,9,22500,,1600,115:0,,1,0,16514,2,34,2,18,3,1,{ /* 効果実装済み */ },{}
+1157,weapon,ツーハンドソード,9,60000,,2200,160:0,,1,1,16514,2,34,3,33,3,1,{ /* 効果実装済み */ },{}
+1158,weapon,ツーハンドソード,9,60000,,2200,160:0,,1,2,16514,2,34,3,33,3,1,{ /* 効果実装済み */ },{}
+1159,weapon,ツーハンドソード,9,60000,,2200,160:0,,1,0,16514,2,34,3,33,3,1,{ /* 効果実装済み */ },{}
+1160,weapon,ブロードソード,9,65000,,2000,140:0,,1,1,16514,2,34,3,33,3,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus bDef,5; }
+1161,weapon,バルムン,9,20,,1000,250:0,,1,0,2074075135,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus bInt,20; bonus bLuk,20; }
+1162,weapon,ブロードソード,9,65000,,2000,140:0,,1,2,16514,2,34,3,33,3,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus bDef,5; }
+1163,weapon,クレイモア,9,74000,,2500,180:0,,1,0,16512,2,34,3,33,3,1,{ /* 効果実装済み */ },{}
+1164,weapon,村正,9,20,,1000,155:0,,1,0,16514,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus bCritical,30; bonus bAspdAddRate,8; bonus bCurseByMuramasa,500; }
+1165,weapon,正宗,9,20,,1000,200:0,,1,0,16514,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus bStr,-5; bonus bFlee,30; bonus bAspd,2; bonus bDefRate,-66; bonus bDef2Rate,-66; }
+1166,weapon,ドラゴンスレイヤー,9,20,,1300,150:0,,1,0,16514,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_Dragon,100; bonus2 bAddRace,Rct_Dragon,15; }
+1167,weapon,シュバイチェルサーベル,9,20,,1600,160:0,,1,0,16514,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; bonus3 bAutoSpell,"MG_LIGHTNINGBOLT",3,1000; }
+1168,weapon,ツヴァイハンダー,9,20,,2200,200:0,,1,0,16514,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; }
+1169,weapon,エクスキューショナー,9,20,,2200,155:0,,1,0,16514,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Dark; bonus2 bAddRace,Rct_Human,20; bonus2 bIgnoreDefRace,Rct_Human,100; bonus2 bSubRace,Rct_Human,10; }
+1170,weapon,カッツバルゲル,9,20,,2000,175:0,,1,0,16514,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus bVit,10; bonus bDef,10; }
+1171,weapon,ツヴァイハンダー,9,20,,2200,200:0,,1,2,16514,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; }
+1172,weapon,クレイモア,9,74000,,2500,180:0,,1,2,16512,2,34,3,33,3,1,{ /* 効果実装済み */ },{}
+1174,weapon,エクスキューショナーR,9,0,,2200,190:0,,1,0,16514,2,34,4,1,3,0,{},{ bonus bAtkEle,Ele_Dark; bonus2 bAddRace,Rct_Human,20; bonus2 bIgnoreDefRace,Rct_Human,100; bonus2 bSubRace,Rct_Human,10; }
+1175,weapon,アトロスの凶器,9,20,,3500,200:0,,1,1,16514,2,34,4,55,3,1,{ /* 効果実装済み */ },{ bonus bCritical,10; if(readparam(bStr) >= 80) { bonus bBreakArmorRate,100; } }
+1176,weapon,クルーエルソード,9,20,,2200,160:0,,1,2,16514,2,34,4,55,3,1,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Bleed,800; bonus3 bAutoSpell,"AL_DECAGI",3,300; }
+1178,weapon,シュバイチェルサーベル,9,20,,1600,160:0,,1,2,16514,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; bonus3 bAutoSpell,"MG_LIGHTNINGBOLT",3,1000; }
+1179,weapon,エクスキューショナー,9,20,,2200,155:0,,1,1,16514,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Dark; bonus2 bAddRace,Rct_Human,20; bonus2 bIgnoreDefRace,Rct_Human,100; bonus2 bSubRace,Rct_Human,10; }
+1180,weapon,ドラゴンスレイヤー,9,20,,1300,150:0,,1,2,16514,2,34,4,48,3,1,{ /* 効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_Dragon,100; bonus2 bAddRace,Rct_Dragon,15; }
+1181,weapon,テグリョン,9,20,,2000,250:0,,1,2,16514,2,34,4,90,3,1,{ /* セット効果実装済み */ },{ bonus bFlee2,10; if(JobLevel >= 70 || BaseLevel < 100) { bonus3 bAutoActiveWeapon,1181,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus bBaseAtk,50; } } if(JobLevel >= 50 || BaseLevel >= 100) { bonus3 bAutoActiveWeapon,1181,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus bBaseAtk,50; } } if(getequiprefinerycnt() >= 9) { bonus bSkillDelayRate,-20; bonus bUseSPrate,-20; } if(equippeditem(29141)) { bonus3 bAutoSpell,"LK_SPIRALPIERCE",getskilllv("LK_SPIRALPIERCE"),1000; bonus bBaseAtk,15*getequiprefinerycnt(); bonus bAspdAddRate,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus bSplashRange,1; } } }
+1182,weapon,ブラッディイート,9,20,,1200,200:0,,1,2,16514,2,34,4,50,3,1,{ /* 近接物理攻撃倒した時HPSP回復 */ },{ bonus bAtkEle,Ele_Ghost; bonus3 bAutoActiveWeapon,1182,10,5000; if(checkactiveitem()) { misceffect 50,""; bonus bCritical,100; bonus bBaseAtk,50; } bonus bHPGainValue,100; }
+1185,weapon,バイオレットフィアー,9,20,,2200,275:0,,1,2,16514,2,34,4,80,3,1,{ /* 効果実装済み */ },{ bonus3 bAutoActiveWeapon,1185,500,5000; if(checkactiveitem()) { misceffect 9,""; bonus2 bIgnoreDefRace,Rct_NonBoss,100; } bonus3 bAutoSpell,"WZ_METEOR",3,300; bonus3 bAutoSpell,"WZ_FROSTNOVA",5,500; }
+1186,weapon,死の引導者,9,20,,2000,200:0,,1,2,16514,2,34,4,70,3,1,{ /* 効果実装済み */ },{ bonus bStr,5; bonus bAgi,2; bonus bFlee2,20; bonus3 bAutoSpell,"NPC_HELLPOWER",1,100; bonus3 bAutoSelfSpell,"NPC_HELLPOWER",1,100; if(getequiprefinerycnt() <= 8) { bonus3 bAutoSpell,"NPC_VAMPIRE_GIFT",1,200; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoSpell,"NPC_VAMPIRE_GIFT",2,200; } }
+1187,weapon,グロリアスクレイモア,9,20,,0,220:0,,1,0,16514,2,34,4,80,3,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddRace,Rct_Human,40; if(getequiprefinerycnt() >= 5) { bonus2 bAddRace,Rct_Human,20; bonus2 bIgnoreDefRace,Rct_Human,10; } if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Human,15; bonus2 bIgnoreDefRace,Rct_Human,15; callfunc "gyakusatuLv2"; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoSelfSpell2,"LK_CONCENTRATION",1,300; bonus4 bAutoSpell,"LK_CONCENTRATION",1,300,EAS_ATTACK|EAS_SHORT|EAS_SELF|EAS_NOSP; bonus4 bAutoSpell,"LK_AURABLADE",1,300,EAS_ATTACK|EAS_SHORT|EAS_SELF|EAS_NOSP; } }
+1188,weapon,達人の剣,9,10000,,2000,180:0,,1,1,16514,2,34,4,80,3,1,{ /* セット効果実装済み */ },{ bonus bStr,1; bonus bDex,1; if(getskilllv("SM_BASH") >= 10) { bonus2 bAddSkillDamageRate,"SM_BASH",50; } if(getskilllv("KN_BOWLINGBASH") >= 10) { bonus2 bAddSkillDamageRate,"KN_BOWLINGBASH",50; } if(equippeditem(22129)) { bonus2 bAddSkillDamageRate,"SM_BASH",10*getskilllv("LK_AURABLADE"); bonus2 bAddSkillDamageRate,"SM_BASH",10*getskilllv("RK_ENCHANTBLADE"); bonus2 bAddSkillDamageRate,"KN_BOWLINGBASH",10*getskilllv("LK_AURABLADE"); bonus2 bAddSkillDamageRate,"KN_BOWLINGBASH",10*getskilllv("RK_ENCHANTBLADE"); } }
+1189,weapon,クラスナヤ,9,20,,3800,200:0,,1,3,16514,2,34,2,50,3,1,{ /* 効果実装済み */ },{ if(readparam(bStr) >= 95) { bonus bBaseAtk,20; } }
+1191,weapon,アルカブリンガー,9,20,,3400,280:0,,1,0,16512,2,34,3,100,3,1,{ /* 効果実装済み */ },{ bonus bAspd,getequiprefinerycnt()/2; }
+1196,weapon,クロムメタルツーハンドソード,9,20,,400,280:0,,1,0,16512,2,34,3,110,3,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus bMaxHPrate,-10; bonus bAgi,3; }
+1201,weapon,ナイフ,5,50,,400,17:0,,1,3,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{}
+1202,weapon,ナイフ,5,50,,400,17:0,,1,4,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{}
+1203,weapon,ナイフ,5,50,,400,17:0,,1,0,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{}
+1204,weapon,カッター,5,1250,,500,30:0,,1,3,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{}
+1205,weapon,カッター,5,1250,,500,30:0,,1,4,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{}
+1206,weapon,カッター,5,1250,,500,30:0,,1,0,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{}
+1207,weapon,マインゴーシュ,5,2400,,600,43:0,,1,3,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{}
+1208,weapon,マインゴーシュ,5,2400,,600,43:0,,1,4,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{}
+1209,weapon,マインゴーシュ,5,2400,,600,43:0,,1,0,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{}
+1210,weapon,ダーク,5,8500,,500,59:0,,1,2,681533167,2,2,2,12,1,1,{ /* 効果実装済み */ },{}
+1211,weapon,ダーク,5,8500,,500,59:0,,1,3,681533167,2,2,2,12,1,1,{ /* 効果実装済み */ },{}
+1212,weapon,ダーク,5,8500,,500,59:0,,1,0,681533167,2,2,2,12,1,1,{ /* 効果実装済み */ },{}
+1213,weapon,ダガー,5,14000,,600,73:0,,1,2,681533167,2,2,2,12,1,1,{ /* 効果実装済み */ },{}
+1214,weapon,ダガー,5,14000,,600,73:0,,1,3,681533167,2,2,2,12,1,1,{ /* 効果実装済み */ },{}
+1215,weapon,ダガー,5,14000,,600,73:0,,1,0,681533167,2,2,2,12,1,1,{ /* 効果実装済み */ },{}
+1216,weapon,スティレット,5,19500,,700,87:0,,1,2,681533167,2,2,2,12,1,1,{ /* 効果実装済み */ },{}
+1217,weapon,スティレット,5,19500,,700,87:0,,1,3,681533167,2,2,2,12,1,1,{ /* 効果実装済み */ },{}
+1218,weapon,スティレット,5,19500,,700,87:0,,1,0,681533167,2,2,2,12,1,1,{ /* 効果実装済み */ },{}
+1219,weapon,グラディウス,5,43000,,700,105:0,,1,2,673144558,2,2,3,24,1,1,{ /* 効果実装済み */ },{}
+1220,weapon,グラディウス,5,43000,,700,105:0,,1,3,673144558,2,2,3,24,1,1,{ /* 効果実装済み */ },{}
+1221,weapon,グラディウス,5,43000,,700,105:0,,1,0,673144558,2,2,3,24,1,1,{ /* 効果実装済み */ },{}
+1222,weapon,ダマスカス,5,49000,,800,118:0,,1,1,673144558,2,2,3,24,1,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; }
+1223,weapon,フォーチュンソード,5,20,,500,90:0,,1,0,673144558,2,2,4,24,1,1,{ /* 効果実装済み */ },{ bonus bFlee2,20; bonus bLuk,5; }
+1224,weapon,ソードブレイカー,5,20,,1000,70:0,,1,0,673144558,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus bBreakWeaponRate,500; }
+1225,weapon,メイルブレイカー,5,20,,1000,70:0,,1,0,673144558,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus bBreakArmorRate,500; }
+1226,weapon,ダマスカス,5,49000,,800,118:0,,1,2,673144558,2,2,3,24,1,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; }
+1227,weapon,ウィーダーナイフ,5,20,,400,80:0,,1,0,673144558,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_Plant,100; bonus2 bAddRace,Rct_Plant,15; bonus2 bSubRace,Rct_Plant,15; bonus2 bMagicSubRace,Rct_Plant,15; }
+1228,weapon,コンバットナイフ,5,20,,400,80:0,,1,0,673144558,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bIgnoreDefRace,Rct_DemiHuman,100; bonus2 bIgnoreDefRace,Rct_Player_Human,100; bonus2 bSubRace,Rct_DemiHuman,10; bonus2 bMagicSubRace,Rct_DemiHuman,10; bonus2 bSubRace,Rct_Player_Human,10; bonus2 bMagicSubRace,Rct_Player_Human,10; bonus2 bSubRace,Rct_Demon,-10; }
+1229,weapon,包丁,5,20,,500,75:0,,1,0,673144558,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus bCritical,30; bonus2 bAddRace,Rct_Human,3; bonus3 bAddMonsterDropItem,517,Rct_Brute,5000; }
+1230,weapon,錐,5,20,,600,80:0,,1,0,673144558,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus bDefRatioAtkRace,Rct_Boss; bonus bDefRatioAtkRace,Rct_NonBoss; }
+1231,weapon,バゼラルド,5,20,,500,70:115,,1,0,673144558,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Fire; bonus bInt,5; }
+1232,weapon,アサシンダガー,5,20,,600,140:0,,1,0,4096,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Dark; bonus bMaxSPrate,15; bonus bMaxHPrate,20; bonus bAspdAddRate,2; }
+1233,weapon,エキサーサイズ,5,20,,700,90:0,,1,0,673144558,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_Demon,100; bonus2 bSubRace,Rct_Demon,5; bonus2 bMagicSubRace,Rct_Demon,5; bonus2 bSubRace,Rct_DemiHuman,-10; bonus2 bSubRace,Rct_Player_Human,-10; }
+1234,weapon,月光剣,5,20,,700,50:0,,1,0,673144558,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus2 bSPDrainValue,100,3; bonus bMaxSPrate,10; }
+1235,weapon,アゾート,5,20,,700,110:0,,1,0,262144,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus bMobClassChange,100; }
+1236,weapon,スクサマッド,5,20,,800,140:0,,1,0,673144558,2,2,4,36,1,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddEle,Ele_Earth,10; bonus2 bAddEle,Ele_Wind,10; }
+1237,weapon,オーガトゥース,5,20,,800,180:0,,1,0,673144558,2,2,4,36,1,1,{ /* 2刀時のDef低下率不明 */ },{ bonus bFlee,10; bonus bFlee2,5; if(equippeditem(1237) < 2) { bonus bDefRate,-50; bonus bDef2Rate,-50; } else { bonus bDefRate,-37; bonus bDef2Rate,-37; } }
+1238,weapon,ゼニーナイフ,5,20,,1200,64:0,,1,0,673144558,2,2,3,70,1,1,{ /* 効果実装済み */ },{ bonus bGetZenyNum2,33; }
+1239,weapon,ポイズンナイフ,5,20,,800,64:0,,1,0,673144558,2,2,3,65,1,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Poison; bonus2 bAddEff,Eff_Poison,3000; }
+1240,weapon,プリンセスナイフ,5,20,,400,84:0,,1,0,673144558,2,2,4,1,1,1,{ /* 効果実装済み */ },{ bonus bAllStatus,1; }
+1241,weapon,カースダガー,5,80000,,400,55:0,,1,0,134283780,2,2,4,85,1,1,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Curse,500; }
+1242,weapon,カウンターダガー,5,120000,,550,140:0,,1,0,134283780,2,2,4,55,1,1,{ /* 効果実装済み */ },{ bonus bCritical,90; }
+1243,weapon,初心者用マインゴーシュ,5,0,,1,45:0,,1,0,8388609,2,2,1,1,1,0,{ /* 効果実装済み */ },{}
+1244,weapon,ホーリーダガー,5,20,,800,100:0,,1,0,537006144,2,2,4,55,1,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Holy; bonus bDex,1; bonus2 bAddRace,Rct_Demon,5; }
+1245,weapon,チンクエディア,5,40000,,700,110:0,,1,1,8388609,2,2,3,30,1,1,{ /* 効果実装済み */ },{}
+1246,weapon,チンクエディア,5,40000,,700,110:0,,1,2,8388609,2,2,3,30,1,1,{ /* 効果実装済み */ },{}
+1247,weapon,キンドリングダガー,5,10000,,600,39:0,,1,0,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Fire; }
+1248,weapon,黒曜石の短剣,5,10000,,600,39:0,,1,0,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Earth; }
+1249,weapon,漁師の短剣,5,10000,,600,39:0,,1,0,681533167,2,2,1,1,1,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Water; }
+1250,weapon,ジュル,9,19500,,800,125:0,,1,2,4096,2,34,2,18,16,1,{ /* 効果実装済み */ },{}
+1251,weapon,ジュル,9,19500,,800,125:0,,1,3,4096,2,34,2,18,16,1,{ /* 効果実装済み */ },{}
+1252,weapon,カタール,9,41000,,1200,148:0,,1,1,4096,2,34,3,33,16,1,{ /* 効果実装済み */ },{ bonus bDex,1; }
+1253,weapon,カタール,9,41000,,1200,148:0,,1,2,4096,2,34,3,33,16,1,{ /* 効果実装済み */ },{ bonus bDex,1; }
+1254,weapon,ジャマダハル,9,37200,,1500,165:0,,1,0,4096,2,34,3,33,16,1,{ /* 効果実装済み */ },{}
+1255,weapon,ジャマダハル,9,37200,,1500,165:0,,1,1,4096,2,34,3,33,16,1,{ /* 効果実装済み */ },{}
+1256,weapon,冷たい氷柱のカタール,9,45000,,1200,105:0,,1,0,4096,2,34,3,55,16,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Water; bonus2 bAddEff,Eff_Freeze,500; }
+1257,weapon,尖っているいばらのカタール,9,45000,,1200,105:0,,1,0,4096,2,34,3,55,16,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Earth; bonus2 bAddEff,Eff_Blind,500; }
+1258,weapon,爆炎のカタール,9,45000,,1200,105:0,,1,0,4096,2,34,3,55,16,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Fire; bonus2 bAddEff,Eff_Silence,500; }
+1259,weapon,疾風のカタール,9,45000,,1200,105:0,,1,0,4096,2,34,3,55,16,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; bonus2 bAddEff,Eff_Sleep,500; }
+1260,weapon,デスナイフ,9,52500,,1700,150:0,,1,0,4096,2,34,3,65,16,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Undead; }
+1261,weapon,裏切り者,9,57000,,1500,140:0,,1,0,4096,2,34,4,75,16,1,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_DemiHuman,50; bonus2 bAddRace,Rct_Player_Human,50; bonus bDef,3; bonus bFlee,5; bonus bFlee2,2; }
+1262,weapon,ロキの爪,9,20,,1200,115:0,,1,0,4096,2,34,3,55,16,1,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Bleed,300; }
+1263,weapon,アンホーリータッチ,9,20,,1250,151:0,,1,0,4096,2,34,4,70,16,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus bAtkEle,Ele_Dark; bonus bCritical,-1; bonus2 bAddEff,Eff_Curse,500; }
+1264,weapon,バリアスジュル,9,20,,800,90:0,,1,4,4096,2,34,1,1,16,1,{ /* 効果実装済み */ },{ bonus2 bAddEff2,Eff_Bleed,10; }
+1265,weapon,ブラッディロア,9,20,,1000,120:0,,1,0,4096,2,34,4,75,16,1,{ /* 効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_DemiHuman,100; bonus2 bIgnoreDefRace,Rct_Player_Human,100; bonus bFlee,-BaseLevel-readparam(bAgi); bonus bHPrecovRate,-100; bonus bSPrecovRate,-100; }
+1266,weapon,裏切り者,9,57000,,1500,140:0,,1,1,4096,2,34,4,75,16,1,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_DemiHuman,50; bonus2 bAddRace,Rct_Player_Human,50; bonus bDef,3; bonus bFlee,5; bonus bFlee2,2; }
+1268,weapon,野獣の爪,9,20,,1450,160:0,,1,1,4096,2,34,4,55,16,1,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() <= 8) { bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,1000; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoSpell,"NPC_CRITICALWOUND",2,1000; } }
+1269,weapon,インバーススケイル,9,20,,1500,140:0,,1,0,4096,2,34,4,55,16,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Holy; bonus3 bAutoSpell,"NPC_DRAGONFEAR",1,300; }
+1270,weapon,ドリルカタール,9,20,,1400,110:0,,1,1,4096,2,34,4,55,16,1,{ /* 効果実装済み */ },{ bonus bHit,30; bonus3 bAutoSpell,"ST_FULLSTRIP",1,500; }
+1271,weapon,ブラッディティアーズ,9,20,,1700,120:0,,1,2,4096,2,34,4,55,16,1,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() <= 8) { bonus3 bAutoSpell,"NPC_WIDEBLEEDING",1,300; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoSpell,"NPC_WIDEBLEEDING",2,300; } }
+1275,weapon,冷たい氷柱のカタール,9,45000,,1200,105:0,,1,3,4096,2,34,3,55,16,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Water; bonus2 bAddEff,Eff_Freeze,500; }
+1276,weapon,尖っているいばらのカタール,9,45000,,1200,105:0,,1,3,4096,2,34,3,55,16,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Earth; bonus2 bAddEff,Eff_Blind,500; }
+1277,weapon,爆炎のカタール,9,45000,,1200,105:0,,1,3,4096,2,34,3,55,16,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Fire; bonus2 bAddEff,Eff_Silence,500; }
+1278,weapon,疾風のカタール,9,45000,,1200,105:0,,1,3,4096,2,34,3,55,16,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; bonus2 bAddEff,Eff_Sleep,500; }
+1281,weapon,グロリアスブラッディロア,9,20,,0,140:0,,1,0,4096,2,34,4,80,16,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddRace,Rct_DemiHuman,40; bonus2 bAddRace,Rct_Player_Human,40; if(getequiprefinerycnt() >= 5) { bonus2 bAddRace,Rct_DemiHuman,20; bonus2 bAddRace,Rct_Player_Human,20; bonus2 bIgnoreDefRace,Rct_Human,10; } if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_DemiHuman,15; bonus2 bAddRace,Rct_Player_Human,15; callfunc "gyakusatuLv1"; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoActiveWeapon,1281,700,3000; if(checkactiveitem()) { misceffect 9,""; bonus bAspdAddRate,100; } } }
+1282,weapon,グロリアスジャマダハル,9,20,,0,140:0,,1,0,4096,2,34,4,80,16,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddRace,Rct_DemiHuman,40; bonus2 bAddRace,Rct_Player_Human,40; if(getequiprefinerycnt() >= 5) { bonus2 bAddRace,Rct_DemiHuman,20; bonus2 bAddRace,Rct_Player_Human,20; bonus bAddCriticalDamage,10; } if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_DemiHuman,15; bonus2 bAddRace,Rct_Player_Human,15; bonus bAddCriticalDamage,10; bonus2 bCriticalRace,Rct_Human,5; callfunc "gyakusatuLv1"; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoActiveWeapon,1282,700,3000; if(checkactiveitem()) { misceffect 9,""; bonus bAspdAddRate,100; } } }
+1284,weapon,クリシュナ,9,20,,1200,120:0,,1,2,4096,2,34,3,50,16,1,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"AS_GRIMTOOTH",10; bonus4 bAutoSpell,"AS_SONICBLOW",1,300,EAS_ATTACK|EAS_SHORT|EAS_USEBETTER|EAS_NOSP; if(equippeditem(2892)) { bonus bBaseAtk,50; bonus2 bAddSkillDamageRate,"AS_SONICBLOW",50; bonus bFlee,-30; } }
+1285,weapon,チャクラム,9,20,,1000,130:0,,1,2,4096,2,34,3,50,16,1,{ /* セット効果実装済み */ },{ if(getskilllv("AS_KATAR") >= 10) { bonus2 bAddSkillDamageRate,"ASC_METEORASSAULT",20; bonus bBaseAtk,10; } if(equippeditem(2892)) { bonus bCritical,4; bonus bAddCriticalDamage,40; bonus bMaxHPrate,-10; } }
+1287,weapon,ドゥルガー,9,20,,1200,190:0,,1,1,4096,2,34,3,100,16,1,{ /* セット効果実装済み */ },{ if(equippeditem(15123)) { if(getequiprefinerycnt() >= 7) { bonus3 bAutoActiveWeapon,1287,1000,3000; if(checkactiveitem()) { bonus2 bIgnoreDefRace,Rct_NonBoss,100; } } } if(equippeditem(22174)) { bonus2 bIgnoreDefRace,Rct_Boss,100; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,20; bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",8; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,30; bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",12; } } }
+1290,weapon,エージェントカタール,9,41000,,1200,170:0,,1,1,4096,2,34,3,100,16,1,{ /* 効果実装済み */ },{ bonus bHit,readparam(bLuk)/2; }
+1291,weapon,ギロチンカタール,9,56000,,1500,200:0,,1,1,4096,2,34,4,140,16,1,{ /* 効果実装済み */ },{ bonus bDex,2; bonus bFlee,-30; bonus2 bAddRace,Rct_DemiHuman,50; bonus2 bAddRace,Rct_Player_Human,50; bonus2 bAddSkillDamageRate,"GC_CROSSIMPACT",30; }
+1295,weapon,ブラッディティアーズ,9,20,,1700,120:0,,1,3,4096,2,34,4,55,16,1,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() <= 8) { bonus3 bAutoSpell,"NPC_WIDEBLEEDING",1,300; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoSpell,"NPC_WIDEBLEEDING",2,300; } }
+1297,weapon,インバーススケイル,9,20,,1500,140:0,,1,2,4096,2,34,4,55,16,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Holy; bonus3 bAutoSelfSpell,659,1,300; }
+1298,weapon,戦慄のカタール,9,60000,,2700,110:0,,1,2,4096,2,34,4,105,16,1,{ /* セット効果実装済み */ },{ bonus bCritical,getequiprefinerycnt(); if(equippeditem(4317)) { bonus bAddCriticalDamage,5; } if(equippeditem(4521)) { bonus bAddCriticalDamage,5; } }
+1299,weapon,攻城戦TEカタール,9,0,,0,120:0,,1,0,4096,2,34,3,40,16,0,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Player_Human,40; bonus2 bAddRace,Rct_Player_Doram,40; bonus2 bAddEffShort,Eff_Bleed,2500; }
+1300,weapon,クリーヴァー,5,20,,120,140:0,,1,3,279714,2,2,4,44,6,1,{ /* 効果実装済み */ },{ bonus2 bSubRace,Rct_DemiHuman,5; bonus2 bMagicSubRace,Rct_DemiHuman,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus3 bAddMonsterDropItem,517,Rct_Brute,1000; }
+1301,weapon,アックス,5,500,,800,38:0,,1,3,8672419,2,2,1,3,6,1,{ /* 効果実装済み */ },{}
+1302,weapon,アックス,5,500,,800,38:0,,1,4,8672419,2,2,1,3,6,1,{ /* 効果実装済み */ },{}
+1303,weapon,アックス,5,500,,800,38:0,,1,0,8672419,2,2,1,3,6,1,{ /* 効果実装済み */ },{}
+1304,weapon,オーキッシュアックス,5,20,,1500,75:0,,1,0,8672419,2,2,3,3,6,1,{ /* セット効果実装済み */ },{}
+1305,weapon,クリーヴァー,5,20,,120,140:0,,1,0,279714,2,2,4,44,6,1,{ /* 効果実装済み */ },{ bonus2 bSubRace,Rct_DemiHuman,5; bonus2 bMagicSubRace,Rct_DemiHuman,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus3 bAddMonsterDropItem,517,Rct_Brute,1000; }
+1306,weapon,ウォーアクス,5,20,,4200,140:0,,1,1,263168,2,2,3,76,6,1,{ /* 効果実装済み */ },{ bonus bDex,2; bonus bLuk,2; }
+1307,weapon,ウィンドホーク,5,18000,,1500,115:0,,1,0,414946,2,2,2,14,6,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; bonus bAspdAddRate,5; }
+1308,unknown,金斧,3,0,,0,,,,,,,,,,,,{ /* 未実装 */ },{}
+1309,weapon,オーキッシュアックス,5,20,,1500,75:0,,1,4,8672419,2,2,3,3,6,1,{ /* セット効果実装済み */ },{}
+1310,weapon,グロリアスクリーヴァー,5,20,,0,130:0,,1,0,279714,2,2,4,80,6,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddRace,Rct_DemiHuman,40; bonus2 bAddRace,Rct_Player_Human,40; if(getequiprefinerycnt() >= 5) { bonus bAspdAddRate,5; bonus2 bAddRace,Rct_DemiHuman,20; bonus2 bAddRace,Rct_Player_Human,20; bonus2 bIgnoreDefRace,Rct_DemiHuman,10; bonus2 bIgnoreDefRace,Rct_Player_Human,10; } if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_DemiHuman,20; bonus2 bAddRace,Rct_Player_Human,20; bonus2 bIgnoreDefRace,Rct_DemiHuman,15; bonus2 bIgnoreDefRace,Rct_Player_Human,15; callfunc "gyakusatuLv1"; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,5; bonus4 bAutoSpell,"NPC_CRITICALWOUND",1,1000,EAS_SHORT|EAS_TARGET|EAS_NOSP; bonus4 bSkillAutoSpell,"MC_MAMMONITE","NPC_CRITICALWOUND",2,2000; } }
+1311,weapon,ベチェルアックス,5,20,,1500,140:0,,1,2,279714,2,2,3,50,6,1,{ /* 効果実装済み */ },{ if(readparam(bLuk) >= 90) { bonus bBaseAtk,20; } if(readparam(bDex) >= 90) { bonus bCritical,5; } if((readparam(bLuk) >= 90) && (readparam(bDex) >= 90)) { bonus2 bAddSkillDamageRate,"MC_MAMMONITE",15; } }
+1318,weapon,ドフレの斧,5,50000,,1800,180:0,,1,2,8672384,2,2,4,105,6,1,{ /* 効果実装済み */ },{ skill "ITM_TOMAHAWK",1; }
+1319,weapon,攻城戦TEアックス,5,0,,0,100:0,,1,0,8803555,2,2,3,40,6,0,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Player_Human,40; bonus2 bAddRace,Rct_Player_Doram,40; bonus2 bAddEff,Eff_Freeze,2500; }
+1320,weapon,ディーヴァアックス,5,200000,,1800,180:110,,1,1,8672384,2,2,4,150,6,1,{ /* セット効果実装済み */ },{ if(getequiprefinerycnt() >= 7) { bonus bBaseAtk,30; bonus bHit,5; } if(getequiprefinerycnt() >= 9) { bonus bBaseAtk,30; bonus bHit,5; } if(equippeditem(27031)) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; bonus bSplashRange,1; } }
+1321,weapon,ドフレの斧,5,50000,,1800,180:0,,1,3,8672384,2,2,4,105,6,1,{ /* 効果実装済み */ },{ skill "ITM_TOMAHAWK",1; }
+1324,weapon,ウォーアクス,5,20,,4200,140:0,,1,3,263168,2,2,3,76,6,1,{ /* 効果実装済み */ },{ bonus bDex,2; bonus bLuk,2; }
+1325,weapon,ミラージュアックス,5,200000,,1800,180:110,,5,1,8672384,2,2,4,150,6,1,{ /* セット効果実装済み */ },{ if(getequiprefinerycnt() >= 7) { bonus bBaseAtk,30; bonus bHit,5; } if(getequiprefinerycnt() >= 9) { bonus bBaseAtk,30; bonus bHit,5; } if(equippeditem(27032)) { bonus2 bSPDrainRate,10,5; } }
+1326,weapon,イリュージョンウォーアクス,5,20,,4200,180:0,,1,1,263168,2,2,4,150,6,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus bStr,2; bonus bDex,2; bonus bLuk,2; bonus2 bSubRace,Rct_Player_Human,10; bonus2 bMagicSubRace,Rct_Player_Human,10; bonus2 bSubRace,Rct_Player_Doram,10; bonus2 bMagicSubRace,Rct_Player_Doram,10; bonus2 bAddSkillDamageRate,"NC_AXEBOOMERANG",100; if(BaseLevel >= 170) { bonus2 bAddSkillDamageRate,"NC_AXEBOOMERANG",10*getequiprefinerycnt(); } }
+1328,weapon,ブルートクリーヴァー,5,20,,0,150:0,,1,0,279680,2,2,4,100,6,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddRace,Rct_Player_Human,60; bonus2 bMagicAddRace,Rct_Player_Doram,60; callfunc "bonus2bIgnoreDefRace",5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Player_Human,35; bonus2 bMagicAddRace,Rct_Player_Doram,35; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Player_Human,20; bonus2 bMagicAddRace,Rct_Player_Doram,20; } if(getequiprefinerycnt() >= 10) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } }
+1331,weapon,アビスアックス,5,20,,180,180:110,,1,1,8672384,2,2,4,165,6,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; } if(equippeditem(27301)) { bonus bAspdAddRate,10; bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } if(equippeditem(19451) || equippeditem(19452)) { bonus2 bSubRace,Rct_Player,3; bonus2 bMagicSubRace,Rct_Player,3; bonus2 bAddEle,Ele_All,15; bonus2 bMagicAddEle,Ele_All,15; } }
+1335,weapon,巨蟹宮のアックス,5,20,,700,10:0,,1,1,8672419,2,2,4,1,6,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus bBaseAtk,80; bonus bAspdAddRate,10; bonus bBaseAtk,BaseLevel; if(getbaseclass(Class,3) ==　CLASS_NC) { bonus2 bAddRace,Rct_Boss,50; bonus2 bAddRace,Rct_NonBoss,50; bonus2 bSPDrainValue,100,2; bonus2 bAddSkillCoolDown,"NC_AXETORNADO",-1000; if(getequiprefinerycnt() >= 7) { callfunc "bonus2bIgnoreDefRace",50; } if(getequiprefinerycnt() >= 9) { callfunc "bonus2bIgnoreDefRace",50; } if(equippeditem(29725)) { bonus2 bAddSkillCoolDown,"NC_AXETORNADO",-500; } } }
+1336,weapon,ガーディアンナイツアックス,5,20,,1800,180:110,,1,1,1024,2,2,4,185,6,1,{ /* 超越装備 */ },{ bonus bUnbreakableWeapon,0; callfunc "redamage"; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"NC_POWERSWING",BaseLevel/2; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"NC_AXETORNADO",BaseLevel/2; } if(equippeditem(310760)) { callfunc "ounosini_A"; } }
+1337,weapon,ゴールデンレンチ,5,20,,1800,180:110,,1,1,1024,2,2,4,100,6,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddSkillDamageRate,"MC_MAMMONITE",30; callfunc "riseikioku_A"; callfunc "zoufuku_A"; }
+1351,weapon,バトルアックス,9,5400,,1500,80:0,,1,3,279714,2,34,1,3,7,1,{ /* 効果実装済み */ },{}
+1352,weapon,バトルアックス,9,5400,,1500,80:0,,1,4,279714,2,34,1,3,7,1,{ /* 効果実装済み */ },{}
+1353,weapon,バトルアックス,9,5400,,1500,80:0,,1,0,279714,2,34,1,3,7,1,{ /* 効果実装済み */ },{}
+1354,weapon,ハンマー,9,15500,,2000,120:0,,1,2,279714,2,34,2,16,7,1,{ /* 効果実装済み */ },{}
+1355,weapon,ハンマー,9,15500,,2000,120:0,,1,3,279714,2,34,2,16,7,1,{ /* 効果実装済み */ },{}
+1356,weapon,ハンマー,9,15500,,2000,120:0,,1,0,279714,2,34,2,16,7,1,{ /* 効果実装済み */ },{}
+1357,weapon,バスター,9,34000,,2200,155:0,,1,1,279714,2,34,3,30,7,1,{ /* 効果実装済み */ },{}
+1358,weapon,バスター,9,34000,,2200,155:0,,1,2,279714,2,34,3,30,7,1,{ /* 効果実装済み */ },{}
+1359,weapon,バスター,9,34000,,2200,155:0,,1,0,279714,2,34,3,30,7,1,{ /* 効果実装済み */ },{}
+1360,weapon,ツーハンドアックス,9,55000,,2500,185:0,,1,1,279714,2,34,3,30,7,1,{ /* 効果実装済み */ },{}
+1361,weapon,ツーハンドアックス,9,55000,,2500,185:0,,1,2,279714,2,34,3,30,7,1,{ /* 効果実装済み */ },{}
+1362,weapon,ツーハンドアックス,9,55000,,2500,185:0,,1,0,279714,2,34,3,30,7,1,{ /* 効果実装済み */ },{}
+1363,weapon,ブラッドアックス,9,20,,4000,170:0,,1,0,279714,2,34,4,44,7,1,{ /* 効果実装済み */ },{ bonus bStr,10; bonus bSpeedRate,25; }
+1364,weapon,グレイトアックス,9,20,,1800,187:0,,1,0,279714,2,34,4,44,7,1,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Stun,1500; bonus2 bAddSkillBlow,"MC_MAMMONITE",5; }
+1365,weapon,サバス,9,20,,2300,120:0,,1,0,279714,2,34,4,44,7,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Dark; bonus2 bCriticalRace,Rct_Undead,50; bonus2 bWeaponComaRace2,Rct_Demon,50; }
+1366,weapon,ライトエプシロン,9,20,,2300,180:0,,1,0,279714,2,34,4,44,7,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Holy; skill "AL_HEAL",3; bonus2 bAddRace,Rct_Demon,3; }
+1367,weapon,スローター,9,20,,2500,120:0,,1,0,279714,2,34,4,44,7,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Earth; bonus2 bIgnoreDefRace,Rct_Brute,100; bonus2 bWeaponComaRace2,Rct_Brute,40; }
+1368,weapon,トマホーク,9,20,,2500,165:0,,1,0,279714,2,34,4,44,7,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; skill "ITM_TOMAHAWK",1; }
+1369,weapon,ギロチン,9,20,,3000,215:0,,1,0,279714,2,34,4,44,7,1,{ /* 近接物理攻撃で指定種族命中時HPSP回復 */ },{ bonus2 bSPDrainValue,100,2; bonus2 bWeaponComaRace2,Rct_DemiHuman,30; bonus3 bDefeatSPDrainValue,Rct_Human,100,20; }
+1370,weapon,ドゥームスレイヤー,9,20,,6000,10:0,,1,0,279714,2,34,4,80,7,1,{ /* 効果実装済み */ },{ bonus bAspdAddRate,-40; bonus bUseSPrate,100; if(readparam(bStr) >= 95) { bonus bBaseAtk,340; bonus2 bAddEff,Eff_Stun,3000; bonus bBreakArmorRate,100; } }
+1371,weapon,ドゥームスレイヤー,9,20,,6000,10:0,,1,1,279714,2,34,4,80,7,1,{ /* 効果実装済み */ },{ bonus bAspdAddRate,-40; bonus bUseSPrate,100; if(readparam(bStr) >= 95) { bonus bBaseAtk,340; bonus2 bAddEff,Eff_Stun,3000; bonus bBreakArmorRate,100; } }
+1372,weapon,ライトエプシロンR,9,0,,2300,229:0,,1,0,279714,2,34,4,1,7,0,{},{ bonus bAtkEle,Ele_Holy; bonus bStr,10; skill "AL_HEAL",3; bonus2 bAddRace,Rct_Demon,3; bonus bSpeedRate,25; }
+1374,weapon,トマホークR,9,0,,2500,200:0,,1,0,279714,2,34,4,1,7,0,{},{ bonus bAtkEle,Ele_Wind; skill "ITM_TOMAHAWK",1; }
+1375,weapon,バルディッシュ,9,20,,2500,200:0,,1,2,279714,2,34,3,70,7,1,{ /* 効果実装済み */ },{ bonus2 bSubSize,Size_Medium,13; bonus2 bMagicSubSize,Size_Medium,13; bonus2 bSubSize,Size_Big,15; bonus2 bMagicSubSize,Size_Big,15; }
+1376,weapon,ハートブレイカー,9,20,,2000,175:0,,1,1,279714,2,34,4,70,7,1,{ /* 効果実装済み */ },{ bonus bCritical,20+getequiprefinerycnt(); bonus bAspdAddRate,5; if(getbaseclass(Class,2) == CLASS_BS || getbaseclass(Class,2) == CLASS_AM) { bonus3 bAutoSpell,"BS_HAMMERFALL",3,100; } }
+1377,weapon,ハリケーンフューリー,9,20,,3500,332:0,,1,1,279714,2,34,4,80,7,1,{ /* 効果実装済み */ },{ bonus2 bSubSize,Size_Medium,10+getequiprefinerycnt(); bonus2 bMagicSubSize,Size_Medium,10+getequiprefinerycnt(); bonus bAspdAddRate,getequiprefinerycnt(); bonus3 bAutoSpell,"NPC_PULSESTRIKE",5,200; }
+1382,weapon,グロリアスツーハンドアックス,9,20,,0,220:0,,1,0,279714,2,34,4,80,7,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddRace,Rct_DemiHuman,40; bonus2 bAddRace,Rct_Player_Human,40; if(getequiprefinerycnt() >= 5) { bonus2 bAddRace,Rct_DemiHuman,20; bonus2 bAddRace,Rct_Player_Human,20; bonus2 bIgnoreDefRace,Rct_DemiHuman,10; bonus2 bIgnoreDefRace,Rct_Player_Human,10; } if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_DemiHuman,15; bonus2 bAddRace,Rct_Player_Human,15; bonus2 bIgnoreDefRace,Rct_DemiHuman,20; bonus2 bIgnoreDefRace,Rct_Player_Human,20; callfunc "gyakusatuLv2"; } if(getequiprefinerycnt() >= 9) { bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,1000; bonus4 bSkillAutoSpell,"MC_MAMMONITE","NPC_CRITICALWOUND",2,2000; bonus4 bSkillAutoSpell,"WS_CARTTERMINATION","NPC_CRITICALWOUND",2,2000; } if(getequiprefinerycnt() <= 8) { bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,500; } }
+1384,weapon,達人の斧,9,10000,,3000,250:0,,1,2,263200,2,34,3,80,7,1,{ /* セット効果実装済み */ },{ bonus bVit,2; bonus4 bSkillAutoSpell,"BS_HAMMERFALL","SM_MAGNUM",3,500; if(getskilllv("BS_DAGGER") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_SWORD") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_TWOHANDSWORD") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_KNUCKLE") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_SPEAR") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_AXE") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_MACE") >= 3) { bonus bBaseAtk,10; } if(equippeditem(22129)) { if(getskilllv("BS_DAGGER") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_SWORD") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_TWOHANDSWORD") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_KNUCKLE") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_SPEAR") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_AXE") >= 3) { bonus bBaseAtk,10; } if(getskilllv("BS_MACE") >= 3) { bonus bBaseAtk,10; } bonus2 bAddSkillCoolDown,"NC_AXETORNADO",-200*getskilllv("NC_RESEARCHFE"); } }
+1385,weapon,ブラディウムハンマー,9,20,,2700,210:0,,1,0,1024,2,34,4,75,7,1,{ /* 効果実装済み */ },{ bonus3 bAddEffSkill,"BS_HAMMERFALL",Eff_Stun,1000; bonus3 bAddEffSkill,"BS_HAMMERFALL",Eff_Stun,100*getequiprefinerycnt(); }
+1387,weapon,ギガントアックス,9,20,,4000,330:0,,1,1,279714,2,34,3,50,7,1,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WS_CARTTERMINATION",15; if(readparam(bStr) >= 95) { bonus bHit,10; bonus bAspdAddRate,3; } if(equippeditem(22106)) { if(getequiprefinerycnt(6) >= 7) { bonus2 bSubRace,Rct_DemiHuman,30; bonus2 bMagicSubRace,Rct_DemiHuman,30; bonus2 bSubRace,Rct_Player_Human,30; bonus2 bMagicSubRace,Rct_Player_Human,30; } if(getequiprefinerycnt() && getequiprefinerycnt(6) >= 7) { bonus2 bAddSkillDamageRate,"WS_CARTTERMINATION",8; bonus2 bAddRace,Rct_Boss,20; bonus2 bMagicAddRace,Rct_Boss,20; } if(getequiprefinerycnt() >= 9 && getequiprefinerycnt(6) >= 7) { bonus2 bAddSkillDamageRate,"WS_CARTTERMINATION",12; bonus2 bAddRace,Rct_Boss,30; bonus2 bMagicAddRace,Rct_Boss,30; } } if(equippeditem(28521)) { bonus2 bSubRace,Rct_Human,3; bonus2 bMagicSubRace,Rct_Human,3; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddSkillDamageRate,"WS_CARTTERMINATION",5; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddSkillDamageRate,"WS_CARTTERMINATION",10; } } }
+1392,weapon,イグニスステイル,9,56000,,1900,250:0,,1,1,279714,2,34,4,95,7,1,{ /* 近接物理攻撃時自分に状態異常 */ },{ bonus bAtkEle,Ele_Fire; bonus2 bAddEffShort,Eff_Burning,200; bonus2 bAddEff2,Eff_Burning,100; }
+1393,weapon,エンドセクション,9,56000,,1900,250:0,,1,1,279714,2,34,4,95,7,1,{ /* 近接物理攻撃時自分に状態異常 */ },{ bonus bAtkEle,Ele_Water; bonus2 bAddEffShort,Eff_Cold,200; bonus2 bAddEff2,Eff_Cold,100; }
+1397,weapon,ブラディウムハンマー,9,20,,2700,210:0,,1,2,1024,2,34,4,75,7,1,{ /* 効果実装済み */ },{ bonus3 bAddEffSkill,"BS_HAMMERFALL",Eff_Stun,1000; bonus3 bAddEffSkill,"BS_HAMMERFALL",Eff_Stun,100*getequiprefinerycnt(); }
+1399,weapon,攻城戦TEツーハンドアックス,9,0,,0,150:0,,1,0,279680,2,34,3,40,7,0,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Player,40; bonus2 bAddRace,Rct_Player_Doram,40; bonus2 bAddEffShort,Eff_Stun,2500; }
+1401,weapon,ジャベリン,5,150,,700,28:0,,3,3,16514,2,2,1,4,4,1,{ /* 効果実装済み */ },{}
+1402,weapon,ジャベリン,5,150,,700,28:0,,3,4,16514,2,2,1,4,4,1,{ /* 効果実装済み */ },{}
+1403,weapon,ジャベリン,5,150,,700,28:0,,3,0,16514,2,2,1,4,4,1,{ /* 効果実装済み */ },{}
+1404,weapon,スピアー,5,1700,,850,44:0,,3,3,16514,2,2,1,4,4,1,{ /* 効果実装済み */ },{}
+1405,weapon,スピアー,5,1700,,850,44:0,,3,4,16514,2,2,1,4,4,1,{ /* 効果実装済み */ },{}
+1406,weapon,スピアー,5,1700,,850,44:0,,3,0,16514,2,2,1,4,4,1,{ /* 効果実装済み */ },{}
+1407,weapon,パイク,5,3450,,1000,60:0,,3,3,16514,2,2,1,4,4,1,{ /* 効果実装済み */ },{}
+1408,weapon,パイク,5,3450,,1000,60:0,,3,4,16514,2,2,1,4,4,1,{ /* 効果実装済み */ },{}
+1409,weapon,パイク,5,3450,,1000,60:0,,3,0,16514,2,2,1,4,4,1,{ /* 効果実装済み */ },{}
+1410,weapon,ランス,9,60000,,2500,185:0,,3,0,16514,2,34,3,33,5,1,{ /* 効果実装済み */ },{}
+1411,weapon,ランス,9,60000,,2500,185:0,,3,0,16514,2,34,3,33,5,1,{ /* 効果実装済み */ },{}
+1412,weapon,ランス,9,60000,,2500,185:0,,3,0,16514,2,34,3,33,5,1,{ /* 効果実装済み */ },{}
+1413,weapon,グングニール,5,20,,500,120:0,,3,0,16514,2,2,4,4,4,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; bonus bPerfectHitRate,25; bonus bHit,30; }
+1414,weapon,ゲラドリア,5,20,,700,145:0,,3,0,16514,2,2,4,48,4,1,{ /* セット効果実装済み */ },{ bonus bAtkEle,Ele_Earth; bonus bMaxHP,500; bonus bMaxSP,-50; if(equippeditem(28506)) { if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"RK_WINDCUTTER",30; bonus2 bAddRace,Rct_Fish,30; bonus2 bAddRace,Rct_Insect,30; bonus2 bAddEle,Ele_Water,30; bonus2 bAddEle,Ele_Wind,30; bonus2 bAddRace,Rct_Boss,30; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"RK_WINDCUTTER",20; bonus2 bAddRace,Rct_Fish,20; bonus2 bAddRace,Rct_Insect,20; bonus2 bAddEle,Ele_Water,20; bonus2 bAddEle,Ele_Wind,20; bonus2 bAddRace,Rct_Boss,20; } if(getequiprefinerycnt() >= 10) { bonus2 bAddCastRate,"RK_WINDCUTTER",-50; } } }
+1415,weapon,串,5,20,,850,100:0,,3,0,16514,2,2,4,48,4,1,{ /* 効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_NonBoss,100; bonus2 bAddEle,Ele_Neutral,25; }
+1416,weapon,テュングレティー,5,20,,1000,95:0,,3,0,16514,2,2,4,48,4,1,{ /* 効果実装済み */ },{ bonus2 bSPDrainValue,100,1; bonus3 bDefeatSPDrainValue,Rct_All,100,5; }
+1417,weapon,ポールアクス,5,20,,3800,160:0,,3,1,16514,2,2,3,71,4,1,{ /* 効果実装済み */ },{ bonus bStr,1; bonus bInt,2; bonus bDex,1; }
+1418,weapon,グングニール,5,20,,500,120:0,,3,2,16514,2,2,4,4,4,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; bonus bPerfectHitRate,25; bonus bHit,30; }
+1419,weapon,ポールアクスR,5,0,,4800,195:0,,3,0,16514,2,2,3,1,4,0,{},{ bonus bStr,1; bonus bInt,2; bonus bDex,1; }
+1420,weapon,ロングホーン,5,20,,1000,150:0,,3,1,16514,2,2,4,65,4,1,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus bAtkEle,Ele_Holy; bonus2 bAddEff,Eff_Bleed,500; skill "TF_DETOXIFY",1; if(equippeditem(2115)) { bonus3 bAutoSelfSpell,"HP_ASSUMPTIO",2,50; } }
+1421,weapon,バトルフック,5,20,,900,140:0,,3,1,16514,2,2,4,65,4,1,{ /* セット効果実装済み */ },{ skill "KN_PIERCE",3; bonus2 bAddRace,Rct_DemiHuman,20; bonus2 bAddRace,Rct_Player_Human,20; bonus2 bAddEffShort,Eff_Stun,500; }
+1422,weapon,ハンティングスピア,5,20,,4200,180:0,,3,1,16514,2,2,4,60,4,1,{ /* セット効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_Brute,100; bonus3 bAddMonsterDropItem,517,Rct_Brute,1000; bonus3 bAutoSpell,"LK_JOINTBEAT",3,1000; }
+1426,weapon,グロリアススピア,5,20,,0,130:0,,3,0,16514,2,2,4,80,4,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddRace,Rct_DemiHuman,40; bonus2 bAddRace,Rct_Player_Human,40; if(getequiprefinerycnt() >= 5) { bonus2 bAddRace,Rct_DemiHuman,30; bonus2 bAddRace,Rct_Player_Human,30; bonus2 bIgnoreDefRace,Rct_DemiHuman,10; bonus2 bIgnoreDefRace,Rct_Player_Human,10; bonus bAspdAddRate,5; } if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_DemiHuman,30; bonus2 bAddRace,Rct_Player_Human,30; bonus2 bIgnoreDefRace,Rct_DemiHuman,15; bonus2 bIgnoreDefRace,Rct_Player_Human,15; callfunc "gyakusatuLv1"; } if(getequiprefinerycnt() >= 9) { if(getbaseclass(Class,2) == CLASS_KN) { bonus4 bSkillAutoSpell,"KN_PIERCE","NPC_CRITICALWOUND",2,2000; } else { bonus bAspdAddRate,5; bonus3 bAutoSpell,"PA_PRESSURE",5,1000; } } }
+1433,weapon,インペリアルスピア,5,20,,1800,180:40,,3,1,16384,2,2,3,102,4,1,{ /* インペリアル*** セット効果 最深部は490104 */ },{ bonus2 bAddSkillDamageRate,"LG_CANNONSPEAR",20+3*(getequiprefinerycnt()/2); bonus2 bAddSkillDamageRate,"LG_BANISHINGPOINT",20+3*(getequiprefinerycnt()/2); if(equippeditem(28372)) { bonus2 bAddSkillDamageRate,"LG_CANNONSPEAR",7*(getequiprefinerycnt()/2); bonus2 bAddSkillDamageRate,"LG_BANISHINGPOINT",7*(getequiprefinerycnt()/2); } }
+1435,weapon,キャノンスピア,5,56000,,1600,180:0,,3,1,16384,2,2,4,100,4,1,{ /* 効果実装済み */ },{ bonus bMaxSP,-100; bonus2 bAddSkillDamageRate,"LG_CANNONSPEAR",10+3*getequiprefinerycnt(); }
+1437,weapon,攻城戦TEパイク,5,0,,0,100,,3,0,16514,2,2,3,40,4,0,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Player_Human,40; bonus2 bAddRace,Rct_Player_Doram,40; bonus2 bAddEffShort,Eff_Curse,2500; }
+1440,weapon,バトルフック,5,20,,900,140:0,,3,3,16514,2,2,4,65,4,1,{ /* セット効果実装済み */ },{ skill "KN_PIERCE",3; bonus2 bAddRace,Rct_DemiHuman,20; bonus2 bAddRace,Rct_Player_Human,20; bonus2 bAddEffShort,Eff_Stun,500; }
+1444,weapon,迅雷槍,5,20,,2000,140:0,,3,3,2,2,2,3,50,4,1,{ /* セット効果実装済み */ },{ bonus bAtkEle,Ele_Wind; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Fish,10; bonus2 bAddEle,Ele_Water,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Fish,15; bonus2 bAddEle,Ele_Water,15; } if(equippeditem(490022)) { bonus2 bAddRace,Rct_Fish,20; bonus2 bMagicAddRace,Rct_Fish,20; bonus2 bAddEle,Ele_Water,20; bonus2 bMagicAddEle,Ele_Water,20; } }
+1445,weapon,[レンタル] 猟乱槍,5,0,,0,140:0,,3,0,16514,2,2,3,50,4,1,{},{}
+1446,weapon,レクイエムスピア,5,100000,,1000,130:0,,3,0,16514,2,2,4,100,4,1,{ /* 物理・魔法攻撃[生体工学研究所][戦死者の墓]map指定効果 */ },{ bonus bUnbreakableWeapon,0; }
+1448,weapon,無双槍,5,20,,2000,140:0,,3,3,16514,2,2,3,50,4,1,{ /* セット効果実装済み */ },{ bonus bAtkEle,Ele_Earth; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Brute,10; bonus2 bAddRace,Rct_Plant,10; bonus2 bAddEle,Ele_Wind,10; bonus2 bAddEle,Ele_Earth,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Brute,15; bonus2 bAddRace,Rct_Plant,15; bonus2 bAddEle,Ele_Wind,15; bonus2 bAddEle,Ele_Earth,15; } if(equippeditem(32234)) { bonus2 bAddRace,Rct_Brute,20; bonus2 bMagicAddRace,Rct_Brute,20; bonus2 bAddRace,Rct_Plant,20; bonus2 bMagicAddRace,Rct_Plant,20; bonus2 bAddEle,Ele_Wind,20; bonus2 bMagicAddEle,Ele_Wind,20; bonus2 bAddEle,Ele_Earth,20; bonus2 bMagicAddEle,Ele_Earth,20; } }
+1449,weapon,ゲラドリア,5,20,,700,145:0,,3,3,16514,2,2,4,48,4,1,{ /* セット効果実装済み */ },{ bonus bAtkEle,Ele_Earth; bonus bMaxHP,500; bonus bMaxSP,-50; if(equippeditem(28506)) { if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"RK_WINDCUTTER",30; bonus2 bAddRace,Rct_Fish,30; bonus2 bAddRace,Rct_Insect,30; bonus2 bAddEle,Ele_Water,30; bonus2 bAddEle,Ele_Wind,30; bonus2 bAddRace,Rct_Boss,30; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"RK_WINDCUTTER",20; bonus2 bAddRace,Rct_Fish,20; bonus2 bAddRace,Rct_Insect,20; bonus2 bAddEle,Ele_Water,20; bonus2 bAddEle,Ele_Wind,20; bonus2 bAddRace,Rct_Boss,20; } if(getequiprefinerycnt() >= 10) { bonus2 bAddCastRate,"RK_WINDCUTTER",-50; } } }
+1451,weapon,ギザルム,9,13000,,1000,84:0,,3,2,16514,2,34,2,18,5,1,{ /* 効果実装済み */ },{}
+1452,weapon,ギザルム,9,13000,,1000,84:0,,3,3,16514,2,34,2,18,5,1,{ /* 効果実装済み */ },{}
+1453,weapon,ギザルム,9,13000,,1000,84:0,,3,0,16514,2,34,2,18,5,1,{ /* 効果実装済み */ },{}
+1454,weapon,グレイヴ,9,20000,,1200,104:0,,3,2,16514,2,34,2,18,5,1,{ /* 効果実装済み */ },{}
+1455,weapon,グレイヴ,9,20000,,1200,104:0,,3,3,16514,2,34,2,18,5,1,{ /* 効果実装済み */ },{}
+1456,weapon,グレイヴ,9,20000,,1200,104:0,,3,0,16514,2,34,2,18,5,1,{ /* 効果実装済み */ },{}
+1457,weapon,パルチザン,9,27000,,2000,124:0,,3,1,16514,2,34,2,18,5,1,{ /* 効果実装済み */ },{}
+1458,weapon,パルチザン,9,27000,,2000,124:0,,3,2,16514,2,34,2,18,5,1,{ /* 効果実装済み */ },{}
+1459,weapon,パルチザン,9,27000,,2000,124:0,,3,0,16514,2,34,2,18,5,1,{ /* 効果実装済み */ },{}
+1460,weapon,トライデント,9,51000,,1200,150:0,,3,2,16514,2,34,3,33,5,1,{ /* 効果実装済み */ },{}
+1461,weapon,トライデント,9,51000,,1200,150:0,,3,3,16514,2,34,3,33,5,1,{ /* 効果実装済み */ },{}
+1462,weapon,トライデント,9,51000,,1200,150:0,,3,0,16514,2,34,3,33,5,1,{ /* 効果実装済み */ },{}
+1463,weapon,ハルバード,9,54000,,2500,165:0,,3,1,16514,2,34,3,33,5,1,{ /* 効果実装済み */ },{}
+1464,weapon,ハルバード,9,54000,,2500,165:0,,3,2,16514,2,34,3,33,5,1,{ /* 効果実装済み */ },{}
+1465,weapon,ハルバード,9,54000,,2500,165:0,,3,0,16514,2,34,3,33,5,1,{ /* 効果実装済み */ },{}
+1466,weapon,クレセントサイダー,9,20,,2500,180:0,,3,0,16514,2,34,4,48,5,1,{ /* セット効果実装済み */ },{ bonus bHit,10; bonus bCritical,30; if(equippeditem(29141)) { bonus3 bAutoSpell,"CR_HOLYCROSS",getskilllv("CR_HOLYCROSS"),500; bonus bBaseAtk,15*getequiprefinerycnt(); bonus bAspdAddRate,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus bSplashRange,1; } } }
+1467,weapon,ビルギザルム,9,20,,1000,180:0,,3,0,16514,2,34,4,48,5,1,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Brute,10; bonus2 bAddRace,Rct_DemiHuman,5; bonus2 bAddRace,Rct_Player_Human,5; }
+1468,weapon,ゼピュロス,9,20,,2000,170:0,,3,0,16514,2,34,4,48,5,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; bonus3 bAutoSpell,"MG_THUNDERSTORM",3,1000; bonus2 bAddEff,Eff_Silence,200; }
+1469,weapon,ロンギヌスの槍,9,20,,2500,180:0,,3,0,16514,2,34,4,48,5,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Dark; bonus2 bAddRace,Rct_DemiHuman,10; bonus2 bAddRace,Rct_Player_Human,10; bonus2 bAddRace,Rct_Angel,10; }
+1470,weapon,ブリューナク,9,20,,3000,190:0,,3,0,16514,2,34,4,48,5,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Holy; skill "AL_HEAL",5; bonus3 bAutoSpell,"MG_SOULSTRIKE",3,1000; }
+1471,weapon,ヘルファイア,9,20,,3500,200:0,,3,0,16514,2,34,4,48,5,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Fire; bonus bStr,3; bonus3 bAutoSpell,"MG_FIREBALL",3,1000; }
+1472,weapon,スタッフオブソウル,9,20,,1400,25:200,,1,0,134283780,2,34,3,73,23,1,{ /* セット効果実装済み */ },{ bonus bInt,5; bonus bAgi,2; if(equippeditem(2677) || equippeditem(28432)) { bonus2 bMagicAddRace,Rct_Boss,6; bonus2 bMagicAddRace,Rct_NonBoss,6; bonus bDex,2; bonus bCastRate,-getequiprefinerycnt(); } }
+1473,weapon,ウィザードスタッフ,9,20,,2400,120:200,,1,0,134283780,2,34,4,90,23,1,{ /* セット効果実装済み */ },{ bonus bInt,6; bonus bDex,2; if(equippeditem(2677) || equippeditem(28432)) { bonus2 bMagicAddRace,Rct_Boss,6; bonus2 bMagicAddRace,Rct_NonBoss,6; bonus bDex,2; bonus bCastRate,-getequiprefinerycnt(); } }
+1474,weapon,ゲイボルグ,9,20,,2000,160:0,,3,0,16514,2,34,4,60,5,1,{ /* 効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_Dragon,100; bonus2 bAddRace,Rct_Boss,10; }
+1475,unknown,馬上槍,3,0,,0,,,,,,,,,,,,{ /* 未実装 */ },{}
+1476,weapon,クレセントサイダー,9,20,,2500,180:0,,3,1,16514,2,34,4,48,5,1,{ /* セット効果実装済み */ },{ bonus bHit,10; bonus bCritical,30; if(equippeditem(29141)) { bonus3 bAutoSpell,"CR_HOLYCROSS",getskilllv("CR_HOLYCROSS"),500; bonus bBaseAtk,15*getequiprefinerycnt(); bonus bAspdAddRate,5*getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus bSplashRange,1; } } }
+1477,weapon,妖怪の槍,9,20,,2000,170:0,,3,0,16514,2,34,4,75,5,1,{ /* セット効果実装済み */ },{ bonus2 bAddRace,Rct_Demon,20; bonus2 bAddRace,Rct_Undead,20; bonus2 bSubRace,Rct_Demon,10; bonus2 bMagicSubRace,Rct_Demon,10; bonus2 bSubRace,Rct_Undead,10; bonus2 bMagicSubRace,Rct_Undead,10; bonus2 bSubEle,Ele_Dark,10; bonus3 bDefeatHPDrainValue,Rct_All,100,50; if(equippeditem(2700) == 0) { bonus2 bAddEff2,Eff_Confusion,1000; } bonus2 bAddEff2,Eff_Confusion,50; }
+1478,weapon,アルシェピース,9,20,,1000,120:0,,3,0,16512,2,34,4,65,5,1,{ /* 効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_Boss,100; bonus2 bIgnoreDefRace,Rct_NonBoss,100; bonus2 bAddRace,Rct_Human,10; bonus2 bAddRace,Rct_Player_Human,10; bonus3 bAutoSpell,"KN_PIERCE",5,300; }
+1479,weapon,妖怪の槍,9,20,,2000,170:0,,3,1,16514,2,34,4,75,5,1,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Demon,20; bonus2 bAddRace,Rct_Undead,20; bonus2 bSubRace,Rct_Demon,10; bonus2 bMagicSubRace,Rct_Demon,10; bonus2 bSubRace,Rct_Undead,10; bonus2 bMagicSubRace,Rct_Undead,10; bonus2 bSubEle,Ele_Dark,10; bonus3 bDefeatHPDrainValue,Rct_All,100,50; if(equippeditem(2700) == 0) { bonus2 bAddEff2,Eff_Confusion,1000; } bonus2 bAddEff2,Eff_Confusion,50; }
+1480,weapon,ゲイボルグ,9,20,,2000,160:0,,3,2,16514,2,34,4,60,5,1,{ /* 効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_Dragon,100; bonus2 bAddRace,Rct_Boss,10; }
+1481,weapon,ゼピュロス,9,20,,2000,170:0,,3,3,16514,2,34,4,48,5,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Wind; bonus3 bAutoSpell,"MG_THUNDERSTORM",3,1000; bonus2 bAddEff,Eff_Silence,200; }
+1483,weapon,アイボリーランス,9,20,,1000,160:0,,3,1,16514,2,34,3,50,5,1,{ /* 効果実装済み */ },{ bonus bAgi,2; bonus bAspdAddRate,3; skill "KN_SPEARSTAB",5; bonus2 bAddEff,Eff_Bleed,300; bonus3 bAutoSpell,"NPC_CRITICALWOUND",1,300; }
+1484,weapon,カルド,9,20,,5600,150:0,,3,1,128,2,34,4,70,5,1,{ /* 効果実装済み */ },{ bonus bAspdAddRate,-10; bonus bDef,getequiprefinerycnt()/2; }
+1485,weapon,バトルフォーク,9,20,,700,112:0,,3,4,16514,2,34,2,50,5,1,{ /* 効果実装済み */ },{}
+1486,weapon,グロリアスランス,9,20,,0,220:0,,3,0,16514,2,34,4,80,5,1,{ /* 効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus2 bAddRace,Rct_DemiHuman,40; bonus2 bAddRace,Rct_Player_Human,40; if(getequiprefinerycnt() >= 5) { bonus2 bAddRace,Rct_DemiHuman,20; bonus2 bAddRace,Rct_Player_Human,20; bonus2 bIgnoreDefRace,Rct_DemiHuman,10; bonus2 bIgnoreDefRace,Rct_Player_Human,10; } if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_DemiHuman,15; bonus2 bAddRace,Rct_Player_Human,15; bonus2 bIgnoreDefRace,Rct_DemiHuman,20; bonus2 bIgnoreDefRace,Rct_Player_Human,20; callfunc "gyakusatuLv2"; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,5; if(getbaseclass(Class,2) == CLASS_KN) { bonus4 bSkillAutoSpell,"KN_PIERCE","NPC_CRITICALWOUND",2,2000; } else { bonus3 bAutoSpell,"PA_PRESSURE",5,2000; } } }
+1490,weapon,ギガントランス,9,20,,20000,20:0,,3,0,128,2,34,4,140,5,1,{ /* セット効果実装済み */ },{ if(readparam(bStr) >= 120) { bonus bBaseAtk,300; } bonus bAspd,-10; bonus bSPPenaltyUnrig,600; bonus2 bAddSkillCoolDown,"LK_SPIRALPIERCE",20000; if(equippeditem(22106)) { bonus2 bSubRace,Rct_DemiHuman,40; bonus2 bSubRace,Rct_Player_Human,40; bonus2 bMagicSubRace,Rct_DemiHuman,40; bonus2 bMagicSubRace,Rct_Player_Human,40; bonus4 bSkillAutoSpell,"LK_SPIRALPIERCE","RK_SONICWAVE",getskilllv("RK_SONICWAVE"),10000; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"LK_SPIRALPIERCE",20; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",20; bonus2 bSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_Boss,20; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillDamageRate,"LK_SPIRALPIERCE",30; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",30; bonus2 bSubRace,Rct_Boss,30; bonus2 bMagicSubRace,Rct_Boss,30; } } if(equippeditem(28521)) { bonus2 bSubRace,Rct_DemiHuman,3; bonus2 bSubRace,Rct_Player_Human,3; bonus2 bMagicSubRace,Rct_DemiHuman,3; bonus2 bMagicSubRace,Rct_Player_Human,3; if(getequiprefinerycnt() >= 7) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddSkillDamageRate,"LK_SPIRALPIERCE",5; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",5; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddSkillDamageRate,"LK_SPIRALPIERCE",10; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",10; } } }
+1494,weapon,オンディーヌの槍,9,50000,,3800,190:0,,3,3,16514,2,34,4,105,5,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Water; bonus bMaxHPrate,getequiprefinerycnt(); }
+1495,weapon,攻城戦TEランス,9,0,,0,150:0,,3,0,16514,2,34,3,40,5,0,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Player_Human,40; bonus2 bAddRace,Rct_Player_Doram,40; bonus2 bAddEffShort,Eff_Blind,2500; }
+1497,weapon,ヘルファイア,9,20,,3500,200:0,,3,3,16514,2,34,4,48,5,1,{ /* 効果実装済み */ },{ bonus bAtkEle,Ele_Fire; bonus bStr,3; bonus3 bAutoSpell,"MG_FIREBALL",3,1000; }
+1499,weapon,レクイエムランス,9,100000,,1500,220:0,,3,0,16514,2,34,4,100,5,1,{ /* 物理・魔法攻撃[生体工学研究所][戦死者の墓]map指定効果 */ },{ bonus bUnbreakableWeapon,0; }
+
+2115,shield,ヴァルキリーシールド,4,30000,,500,,80:5,,1,2065686526,2,32,,65,2,1,{ /* セット効果実装済み */ },{ bonus2 bSubEle,Ele_Fire,20; bonus2 bSubEle,Ele_Water,20; bonus2 bSubEle,Ele_Dark,20; bonus2 bSubEle,Ele_Undead,20; if(equippeditem(2353) && equippeditem(5124)) { bonus bDef,2; bonus bMdef,5; bonus bDef,-getequiprefinerycnt(1); bonus bMdef,getequiprefinerycnt(1); bonus bDef,-getequiprefinerycnt(); bonus bMdef,getequiprefinerycnt(); } }
+2133,shield,トーナメントシールド,4,20,,1000,,105,,1,16514,2,32,,50,4,1,{ /* セット効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,1; bonus2 bAddRace,Rct_NonBoss,1; if(equippeditem(1420) || equippeditem(1421) || equippeditem(1422) || equippeditem(1440)) { bonus bDef,2; bonus2 bAddRace,Rct_Boss,4; bonus2 bAddRace,Rct_NonBoss,4; } if(getbaseclass(Class,2) == CLASS_KN) { bonus bAspdAddRate,-5; } }
+2353,armor,オーディンの祝福,4,30000,,2500,,53:0,,1,2065686526,2,16,,65,,1,{},{}
+2418,shoes,ヴィダルのブーツ,4,30000,,650,,13:0,,0,2065686526,2,64,,65,,1,{ /* セット効果実装済み */ },{ bonus bMaxHPrate,9; bonus bMaxSPrate,9; }
+2489,shoes,ヴィダルのブーツ,4,30000,,650,,13:0,,1,2065686526,2,64,,65,,1,{ /* セット効果実装済み */ },{ bonus bMaxHPrate,9; bonus bMaxSPrate,9; }
+2517,robe,ヴァーリのマント,4,30000,,600,,13:0,,0,2065686526,2,4,,65,0,1,{ /* セット効果実装済み */ },{ bonus2 bSubEle,Ele_Neutral,15; if(equippeditem(2353) || (equippeditem(2418) && equippeditem(2489)) || equippeditem(2517)) { bonus bVit,5; bonus bHPrecovRate,10; bonus bSPrecovRate,10; } }
+5124,head,フリッグのサークレット,4,30000,,300,,6:10,,0,2065686526,2,256,,65,251,1,{ /* セット効果実装済み */ },{ bonus bInt,2; bonus bMaxSP,50; }
+//7361,item,1/1超合金ポリン人形,3,0,,0,,,,,,,,,,,,{/* イベント用 定義消滅 jROユナイトカーニバル */},{}
+32003,weapon,邪念のスピア,5,100000,,700,110:0,,3,0,16512,2,2,4,100,4,1,{ /* 効果実装済み openupgrade対象 */ },{ bonus bBaseAtk,getequiprefinerycnt()*getequiprefinerycnt(); }
+600025,weapon,覚醒フルフォース,9,20,,2200,300:0,,1,1,16514,2,34,4,99,3,1,{ /* セット効果実装済み */ },{ bonus bAtkRange,3; bonus bSpeedRate,25; bonus2 bSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus bBaseAtk,(2*getequiprefinerycnt())**2; if(equippeditem(4142)) { bonus3 bAutoSpell,"RK_IGNITIONBREAK",5,100; if(BaseLevel <= 99) { bonus bAspdAddRate,2*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,4*getequiprefinerycnt(); } if(BaseLevel >= 100) { bonus bAspdAddRate,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); } } if(equippeditem(300323)) { skill "PR_LEXAETERNA",1; if(BaseLevel <= 99) { bonus bAspdAddRate,2*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,4*getequiprefinerycnt(); } if(BaseLevel >= 100) { bonus bAspdAddRate,5*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); } } }
+erycnt(); bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); } } }
+
