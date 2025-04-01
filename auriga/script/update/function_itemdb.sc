@@ -1,4 +1,4 @@
-//20250118 更新
+//20250401 更新
 //============================================================
 // 巨大なハエの羽
 function	script	ItemdbPartyCall	{
@@ -38,10 +38,51 @@ function	script	ItemdbResetSkill	{
 }
 
 //============================================================
+//[ヒール系スキル使用時HP回復量 + n%] 全種一括指定
+//{ calllfunc "AddSkillHealRate",'@val; }
+
+function	script	AddSkillHealRate	{
+	set '@val,getarg(0);
+		bonus2 bAddSkillHealRate,"AL_HEAL",'@val;	/* ヒール */
+		bonus2 bAddSkillHealRate,"PR_SANCTUARY",'@val;	/* サンクチュアリ */
+		bonus2 bAddSkillHealRate,"AM_POTIONPITCHER",'@val;	/* ポーションピッチャー */
+		bonus2 bAddSkillHealRate,"CR_SLIMPITCHER",'@val;	/* スリムポーションピッチャー */
+		bonus2 bAddSkillHealRate,"BA_APPLEIDUN",'@val;	/* イドゥンの林檎 */
+		bonus2 bAddSkillHealRate,"AB_CHEAL",'@val;	/* コルセオヒール */
+		bonus2 bAddSkillHealRate,"AB_HIGHNESSHEAL",'@val;	/* ハイネスヒール */
+		bonus2 bAddSkillHealRate,"CD_MEDIALE_VOTUM",'@val;	/* メディアリボトゥム */
+
+		bonus2 bAddSkillDamageRate,"AL_HEAL",'@val;	/* ヒール */
+		bonus2 bAddSkillDamageRate,"PR_SANCTUARY",'@val;	/* サンクチュアリ */
+		bonus2 bAddSkillDamageRate,"AB_CHEAL",'@val;	/* コルセオヒール */
+		bonus2 bAddSkillDamageRate,"AB_HIGHNESSHEAL",'@val;	/* ハイネスヒール */
+		bonus2 bAddSkillDamageRate,"CD_MEDIALE_VOTUM",'@val;	/* メディアリボトゥム */
+	return;
+}
+
+//============================================================
+//[ヒール系スキルを受けた時のHP回復量 + n%] 全種一括指定
+//{ calllfunc "AddSkillSubHealRate",'@val; }
+
+function	script	AddSkillSubHealRate	{
+	set '@val,getarg(0);
+		bonus2 bAddSkillSubHealRate,"AL_HEAL",'@val;	/* ヒール */
+		bonus2 bAddSkillSubHealRate,"PR_SANCTUARY",'@val;	/* サンクチュアリ */
+		bonus2 bAddSkillSubHealRate,"AM_POTIONPITCHER",'@val;	/* ポーションピッチャー */
+		bonus2 bAddSkillSubHealRate,"CR_SLIMPITCHER",'@val;	/* スリムポーションピッチャー */
+		bonus2 bAddSkillSubHealRate,"BA_APPLEIDUN",'@val;	/* イドゥンの林檎 */
+		bonus2 bAddSkillSubHealRate,"AB_CHEAL",'@val;	/* コルセオヒール */
+		bonus2 bAddSkillSubHealRate,"AB_HIGHNESSHEAL",'@val;	/* ハイネスヒール */
+		bonus2 bAddSkillSubHealRate,"CD_MEDIALE_VOTUM",'@val;	/* メディアリボトゥム */
+	return;
+}
+
+//============================================================
+//個別に指定する時のみ
 //[ヒール系スキル使用時HP回復量 + n%]
 //{ callfunc "ItemdbAlmightyHeal",数字,回復%; }
 //[1ヒール][2サンクチュアリ][4ポーションピッチャー][8スリムポーションピッチャー]
-//[16イドゥンの林檎][32コルセオヒール][64ハイネスヒール]
+//[16イドゥンの林檎][32コルセオヒール][64ハイネスヒール][128メディアリボトゥム ]
 //対象にしたい数字を足す[1ヒール]と[32コルセオヒール]が5%増える { callfunc "ItemdbAlmightyHeal",33,5; }
 //[ヒール系スキル使用時HP回復量 +30%] { callfunc "ItemdbAlmightyHeal",127,5; }16進数で記述 { callfunc "ItemdbAlmightyHeal",0x7F,5; }
 
@@ -50,11 +91,11 @@ function	script	ItemdbAlmightyHeal	{
 	set '@val,getarg(1);
 	if('@flag&1) {
 		bonus2 bAddSkillHealRate,28,'@val;	/* ヒール */
-		bonus2 bAddSkillDamageRate,28,'@val;
+		bonus2 bAddSkillDamageRate,28,'@val;	/* ヒール */
 	}
 	if('@flag&2) {
 		bonus2 bAddSkillHealRate,70,'@val;	/* サンクチュアリ */
-		bonus2 bAddSkillDamageRate,70,'@val;
+		bonus2 bAddSkillDamageRate,70,'@val;	/* サンクチュアリ */
 	}
 	if('@flag&4)
 		bonus2 bAddSkillHealRate,231,'@val;	/* ポーションピッチャー */
@@ -64,19 +105,23 @@ function	script	ItemdbAlmightyHeal	{
 		bonus2 bAddSkillHealRate,322,'@val;	/* イドゥンの林檎 */
 	if('@flag&32) {
 		bonus2 bAddSkillHealRate,2043,'@val;	/* コルセオヒール */
-		bonus2 bAddSkillDamageRate,2043,'@val;
+		bonus2 bAddSkillDamageRate,2043,'@val;	/* コルセオヒール */
 	}
 	if('@flag&64) {
 		bonus2 bAddSkillHealRate,2051,'@val;	/* ハイネスヒール */
-		bonus2 bAddSkillDamageRate,2051,'@val;
+		bonus2 bAddSkillDamageRate,2051,'@val;	/* ハイネスヒール */
+	}
+	if('@flag&128) {
+		bonus2 bAddSkillHealRate,"CD_MEDIALE_VOTUM",'@val;	/* メディアリボトゥム */
+		bonus2 bAddSkillDamageRate,"CD_MEDIALE_VOTUM",'@val;	/* メディアリボトゥム */
 	}
 	return;
 }
 
 //============================================================
+//個別に指定する時のみ
 //[ヒール系スキルを受けた時のHP回復量 + n%] に使う
 //{ callfunc "ItemdbAlmightySubHeal",数字,回復%; }
-//説明は上記と同じ
 
 function	script	ItemdbAlmightySubHeal	{
 	set '@flag,getarg(0);
@@ -95,6 +140,8 @@ function	script	ItemdbAlmightySubHeal	{
 		bonus2 bAddSkillSubHealRate,2043,'@val;	/* コルセオヒール */
 	if('@flag&64)
 		bonus2 bAddSkillSubHealRate,2051,'@val;	/* ハイネスヒール */
+	if('@flag&128)
+		bonus2 bAddSkillSubHealRate,"CD_MEDIALE_VOTUM",'@val;	/* メディアリボトゥム */
 	return;
 }
 
@@ -260,7 +307,7 @@ function	script	bonus2bMagicSubRace	{
 //============================================================
 //一部のダメージを反射する効果で受けるダメージ 精錬値*-10%
 //精錬値は記述されている装備品を参照するので参照が自身のアイテム以外は記述を抜き出して装備ボーナスに書いて下さい
-//ロイヤル系武器 32028 32029
+//ロイヤル系武器
 //{ callfunc "redamage"; }
 
 function	script	redamage	{
@@ -415,7 +462,7 @@ function	script	Cor_Core_Headset	{
 
 //============================================================
 //bonus3 bAddMonsterDropItem
-////{ callfunc "drop",'@id,'@rate; }
+//{ callfunc "drop",'@id,'@rate; }
 
 function	script	drop	{
 	set '@id,getarg(0);
@@ -614,24 +661,36 @@ function	script	hametuLv1	{
 //============================================================
 //[祝福]Lv1
 //{ callfunc "shukufukuLv1"; }
-//対象スキルは仕様書の通りに設定
+//対象スキルは調査して推定
 
 function	script	shukufukuLv1	{
 	if(getequiprefinerycnt() >= 7) {
 		bonus2 bAddSkillDamageRate,"AL_HEAL",4;
 		bonus2 bAddSkillDamageRate,"PR_SANCTUARY",4;
+		bonus2 bAddSkillHealRate,"AB_CHEAL",4;
+		bonus2 bAddSkillHealRate,"AB_HIGHNESSHEAL",4;
+		bonus2 bAddSkillHealRate,"CD_MEDIALE_VOTUM",4;
 	}
 	if(getequiprefinerycnt() >= 8) {
 		bonus2 bAddSkillDamageRate,"AL_HEAL",6;
 		bonus2 bAddSkillDamageRate,"PR_SANCTUARY",6;
+		bonus2 bAddSkillHealRate,"AB_CHEAL",6;
+		bonus2 bAddSkillHealRate,"AB_HIGHNESSHEAL",6;
+		bonus2 bAddSkillHealRate,"CD_MEDIALE_VOTUM",6;
 	}
 	if(getequiprefinerycnt() >= 9) {
 		bonus2 bAddSkillDamageRate,"AL_HEAL",8;
 		bonus2 bAddSkillDamageRate,"PR_SANCTUARY",8;
+		bonus2 bAddSkillHealRate,"AB_CHEAL",8;
+		bonus2 bAddSkillHealRate,"AB_HIGHNESSHEAL",8;
+		bonus2 bAddSkillHealRate,"CD_MEDIALE_VOTUM",8;
 	}
 	if(getequiprefinerycnt() >= 10) {
 		bonus2 bAddSkillDamageRate,"AL_HEAL",10;
 		bonus2 bAddSkillDamageRate,"PR_SANCTUARY",10;
+		bonus2 bAddSkillHealRate,"AB_CHEAL",10;
+		bonus2 bAddSkillHealRate,"AB_HIGHNESSHEAL",10;
+		bonus2 bAddSkillHealRate,"CD_MEDIALE_VOTUM",10;
 	}
 	return;
 }

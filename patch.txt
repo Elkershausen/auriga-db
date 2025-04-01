@@ -1,3 +1,24 @@
+2025/04/01	patch0266
+* 2025/04/01 新規アイテム実装(item_db.txt item_db2.txt classnum_db.txt itemInfo_EN.lua)
+
+* 1501 - 2599 関与するアイテムの不具合修正(item_db.txt item_db2.txt)
+* 装備能力値表示システムを活用しています
+
+* 不明な未実装アイテムを全部消耗品に変更し負担となる対応を削減(item_db.txt)
+* 移動不可のフラグがついているものがあり、サーバー管理者の負担が重たいからです
+
+* [ヒール系スキル使用時HP回復量 + n%][ヒール系スキルを受けた時のHP回復量 + n%]で使われている呼び出し関数[ItemdbAlmightyHeal][ItemdbAlmightySubHeal]の上位互換[AddSkillHealRate][AddSkillSubHealRate] 実装(function_itemdb.sc)
+* カーディナル[CD_MEDIALE_VOTUM]を対象スキルに追加し今後のスキル追加にも対応
+* 4桁台のアイテムから対応させ、今後すべての対象アイテムを書き換えます
+* 現行関数はそのまま使えますが記述変更しなければ4次職スキルに対応できません
+
+* callfunc "shukufukuLv1";[祝福]Lv1 少し修正(function_itemdb.sc)
+
+* [mapskydata.lub] 実装(data\luafiles514\lua files\mapskydata\mapskydata.lub)
+
+* [hateffectinfo.lub] 実装(data\luafiles514\lua files\hateffectinfo\hateffectinfo.lub)
+* 2025/03/25 に足跡エフェクト表示に対応したluaに拡張されたので旧式記述が必要となりました
+
 2025/03/24
 * wiki記事[他国サーバー環境を使った動作について]情報にMYSQLの設定方法を追記
 
