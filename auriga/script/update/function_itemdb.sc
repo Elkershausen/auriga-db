@@ -1,4 +1,4 @@
-//20250401 更新
+//202504015 更新
 //============================================================
 // 巨大なハエの羽
 function	script	ItemdbPartyCall	{
@@ -307,7 +307,7 @@ function	script	bonus2bMagicSubRace	{
 //============================================================
 //一部のダメージを反射する効果で受けるダメージ 精錬値*-10%
 //精錬値は記述されている装備品を参照するので参照が自身のアイテム以外は記述を抜き出して装備ボーナスに書いて下さい
-//ロイヤル系武器
+//主にロイヤル系武器
 //{ callfunc "redamage"; }
 
 function	script	redamage	{
@@ -317,6 +317,22 @@ function	script	redamage	{
 	bonus2 bSubSkillDamageRate,"SL_KAITE",10*getequiprefinerycnt();
 	bonus2 bSubSkillDamageRate,"SR_CRESCENTELBOW",10*getequiprefinerycnt();
 	bonus2 bSubSkillDamageRate,"ST_REJECTSWORD",10*getequiprefinerycnt();
+	return;
+}
+
+//============================================================
+//一部のダメージを反射する効果で受けるダメージ
+//rate 指定する 
+//ロイヤル系武器 以外
+//{ callfunc "refskllsubdamagerate",'@rate; }
+
+function	script	refskllsubdamagerate	{
+	bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",'@rate;
+	bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",'@rate;
+	bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",'@rate;
+	bonus2 bSubSkillDamageRate,"SL_KAITE",'@rate;
+	bonus2 bSubSkillDamageRate,"SR_CRESCENTELBOW",'@rate;
+	bonus2 bSubSkillDamageRate,"ST_REJECTSWORD",'@rate;
 	return;
 }
 

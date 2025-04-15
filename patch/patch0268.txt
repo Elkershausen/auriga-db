@@ -1,0 +1,797 @@
+25/04/08 効果変更
+18198,weapon,ガーディアンナイツアーチャーボウ,8,20,,900,160:170,,5,1,2048,2,34,4,185,11,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; callfunc "redamage"; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"RA_CLUSTERBOMB",4*BaseLevel; } if(getequiprefinerycnt() >= 9) { bonus bInt,3*getskilllv("RA_RESEARCHTRAP"); bonus bDex,3*getskilllv("RA_RESEARCHTRAP"); } callfunc "ounosini_B"; }
+21055,weapon,ガーディアンナイツクレイモア,9,20,,3400,280:230,,1,1,128,2,34,4,185,3,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; callfunc "redamage"; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"RK_IGNITIONBREAK",BaseLevel; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillCoolDown,"RK_IGNITIONBREAK",-100; } if(equippeditem(310760)) { bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player,40; bonus2 bMagicSubRace,Rct_Player,40; skill "PA_GOSPEL",1; } callfunc "ounosini_B"; }
+28046,weapon,ロイヤルカタール,9,20,,2800,150:250,,1,1,4096,2,34,4,185,16,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; callfunc "redamage"; if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillDamageRate,"GC_ROLLINGCUTTER",BaseLevel; } if(getequiprefinerycnt() >= 9) { bonus2 bAddSkillCoolDown,"GC_ROLLINGCUTTER",-200; } callfunc "ounosini_B"; }
+312418,ench,祈りの晩鐘,6,,,,,,,,,,65535,,,,,{ /* 250408効果更新 セット効果実装済み */ },{ bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; }
+460074,shield,グラキエースアラネア,4,20,,300,,60:0,,0,2074075135,2,32,,100,2,1,{ /* 250408効果更新 効果実装済み */ },{ bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus2 bSubRace,Rct_Player_Human,35; bonus2 bMagicSubRace,Rct_Player_Human,35; bonus2 bSubRace,Rct_Player_Doram,35; bonus2 bMagicSubRace,Rct_Player_Doram,35; bonus bMaxHPrate,3*getequiprefinerycnt(); bonus bMaxSPrate,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 5) { bonus bSpeedRate,25; } if(getequiprefinerycnt() >= 7) { bonus2 bFixCastrate,-70,0; } }
+460075,shield,プロンテラ軍の盾,4,20,,1200,,95:0,,0,2074075135,2,32,,100,2,1,{ /* 250408効果更新 一部の回復アイテム */ },{ bonus bMaxHPrate,15; bonus bMaxSPrate,15; bonus2 bSubRace,Rct_Player_Human,35; bonus2 bMagicSubRace,Rct_Player_Human,35; bonus2 bSubRace,Rct_Player_Doram,35; bonus2 bMagicSubRace,Rct_Player_Doram,35; if(getequiprefinerycnt() >= 5) { bonus bMaxHPrate,15; bonus bMaxSPrate,15; } if(getequiprefinerycnt() >= 7) { callfunc "AddSkillSubHealRate",15; } if(getequiprefinerycnt() >= 8) { bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; } if(getequiprefinerycnt() >= 9) { bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; } }
+610023,weapon,ウィワートゥス・フィデス・カタール,9,20,,2800,150:250,,1,1,4096,2,34,4,200,16,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ callfunc "MeleeRct_All",13; if(equippeditem(311073)) { bonus2 bAddSkillDamageRate,"SHC_IMPACT_CRATER",25; bonus2 bAddSkillDamageRate,"SHC_SAVAGE_IMPACT",25; bonus2 bAddSkillDamageRate,"SHC_FATAL_SHADOW_CROW",25; bonus2 bSubRace,Rct_Player_Human,40; bonus2 bMagicSubRace,Rct_Player_Human,40; bonus2 bSubRace,Rct_Player_Doram,40; bonus2 bMagicSubRace,Rct_Player_Doram,40; } if(equippeditem(312418)) { bonus bMaxHPrate,15; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; skill "CR_PROVIDENCE",3; } }
+630013,weapon,ウィワートゥス・フィデス・ランス,9,20,,20000,200:230,,3,1,128,2,34,4,200,5,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ callfunc "MeleeRct_All",13; if(equippeditem(311073)) { bonus2 bAddSkillDamageRate,"DK_HACKANDSLASHER",25; bonus2 bAddSkillDamageRate,"DK_MADNESS_CRUSHER",25; bonus2 bAddSkillDamageRate,"DK_DRAGONIC_AURA",25; bonus2 bSubRace,Rct_Player_Human,40; bonus2 bMagicSubRace,Rct_Player_Human,40; bonus2 bSubRace,Rct_Player_Doram,40; bonus2 bMagicSubRace,Rct_Player_Doram,40; } if(equippeditem(312418)) { bonus bMaxHPrate,15; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; skill "CR_PROVIDENCE",3; } }
+640021,weapon,ウィワートゥス・フィデス・ツーハンドスタッフ,9,20,,2400,120:270,,1,1,512,2,34,4,200,23,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ callfunc "MagicRct_All",10; if(equippeditem(311073)) { bonus2 bAddSkillDamageRate, "AG_CRIMSON_ARROW",25; bonus2 bAddSkillDamageRate,"AG_FROZEN_SLASH",25; bonus2 bAddSkillDamageRate,"AG_STORM_CANNON",25; bonus2 bAddSkillDamageRate,"AG_ROCK_DOWN",25; bonus2 bSubRace,Rct_Player_Human,40; bonus2 bMagicSubRace,Rct_Player_Human,40; bonus2 bSubRace,Rct_Player_Doram,40; bonus2 bMagicSubRace,Rct_Player_Doram,40; } if(equippeditem(312418)) { bonus bMaxHPrate,15; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; skill "CR_PROVIDENCE",3; } }
+700033,weapon,ウィワートゥス・フィデス・クロスボウ,8,20,,900,160:170,,5,1,131072,2,34,4,200,11,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ callfunc "MeleeRct_All",13; if(equippeditem(311073)) { bonus2 bAddSkillDamageRate,"ABC_CHAIN_REACTION_SHOT",25; bonus2 bAddSkillDamageRate,"ABC_FRENZY_SHOT",25; bonus2 bSubRace,Rct_Player,40; bonus2 bSubRace,Rct_Player_Human,40; bonus2 bMagicSubRace,Rct_Player_Human,40; bonus2 bSubRace,Rct_Player_Doram,40; bonus2 bMagicSubRace,Rct_Player_Doram,40; } if(equippeditem(312418)) { bonus bMaxHPrate,15; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; skill "CR_PROVIDENCE",3; } }
+700034,weapon,ウィワートゥス・フィデス・バリスタ,8,20,,900,160:170,,5,1,2048,2,34,4,200,11,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ callfunc "MeleeRct_All",13; if(equippeditem(311073)) { bonus2 bAddSkillDamageRate,"WH_CRESCIVE_BOLT",25; bonus2 bAddSkillDamageRate,"WH_GALESTORM",25; bonus2 bSubRace,Rct_Player,40; bonus2 bSubRace,Rct_Player_Human,40; bonus2 bMagicSubRace,Rct_Player_Human,40; bonus2 bSubRace,Rct_Player_Doram,40; bonus2 bMagicSubRace,Rct_Player_Doram,40; } if(equippeditem(312418)) { bonus bMaxHPrate,15; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; skill "CR_PROVIDENCE",3; } }
+700069,weapon,トライアングルディザスター,8,20,,900,160:170,,5,1,131072,2,34,4,100,11,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SC_TRIANGLESHOT",BaseLevel; bonus bAgi,3*getequiprefinerycnt(); bonus bDex,3*getequiprefinerycnt(); callfunc "ounosini_B"; }
+810008,weapon,ウィワートゥス・フィデス・ライフル,15,20,,850,170:0,,5,1,268435456,2,34,4,200,18,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",7*(readparam(bInt)/10); if(readparam(bInt) >= 110) { bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",30; } callfunc "MagicRct_All",13*getequiprefinerycnt(); if(equippeditem(311074)) { bonus2 bAddSkillDamageRate,"NW_ONLY_ONE_BULLET",25; bonus2 bAddSkillDamageRate,"NW_SPIRAL_SHOOTING",25; bonus2 bSubRace,Rct_Player_Human,40; bonus2 bMagicSubRace,Rct_Player_Human,40; bonus2 bSubRace,Rct_Player_Doram,40; bonus2 bMagicSubRace,Rct_Player_Doram,40; } if(equippeditem(312418)) { bonus bMaxHPrate,15; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; skill "CR_PROVIDENCE",5; } }
+830005,weapon,アンティークガトリングガン,15,20,,3000,180:120,,5,1,268435456,2,34,4,100,19,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RL_QD_SHOT",5*BaseLevel; bonus2 bAddSkillDamageRate,"RL_R_TRIP",7*(readparam(bAgi)/10); if(readparam(bAgi) >= 110) { bonus2 bAddSkillDamageRate,"RL_R_TRIP",30; } bonus2 bAddSkillCoolDown,"RL_HEAT_BARREL",-8000*getequiprefinerycnt(); callfunc "ounosini_B"; }
+600014,weapon,ポエニテンティア・エンシス,9,20,,3400,280:230,,1,1,128,2,34,4,200,3,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ callfunc "MeleeRct_All",13*getequiprefinerycnt(); if(equippeditem(311074)) { bonus2 bAddSkillDamageRate,"DK_HACKANDSLASHER",25; bonus2 bAddSkillDamageRate,"DK_STORMSLASH",25; bonus2 bSubRace,Rct_Player_Human,40; bonus2 bMagicSubRace,Rct_Player_Human,40; bonus2 bSubRace,Rct_Player_Doram,40; bonus2 bMagicSubRace,Rct_Player_Doram,40; } if(equippeditem(313520)) { bonus bMaxHPrate,15; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; skill "MG_SAFETYWALL",5; } }
+640014,weapon,ポエニテンティア・テルメス,9,20,,2400,120:270,,1,1,512,2,34,4,200,23,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ callfunc "MagicRct_All",10*getequiprefinerycnt(); if(equippeditem(311074)) { bonus2 bAddSkillDamageRate,"AG_SOUL_VC_STRIKE",25; bonus2 bAddSkillDamageRate,"AG_MYSTERY_ILLUSION",25; bonus2 bAddSkillDamageRate,"AG_DEADLY_PROJECTION",25; bonus2 bAddSkillDamageRate,"AG_ASTRAL_STRIKE",25; bonus2 bSubRace,Rct_Player_Human,40; bonus2 bMagicSubRace,Rct_Player_Human,40; bonus2 bSubRace,Rct_Player_Doram,40; bonus2 bMagicSubRace,Rct_Player_Doram,40; } if(equippeditem(313520)) { bonus bMaxHPrate,15; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; skill "MG_SAFETYWALL",5; } }
+830010,weapon,ポエニテンティア・ベロチ,15,20,,2500,120:0,,5,1,268435456,2,34,4,200,19,1,{ /* 250408効果更新 超越装備 セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RL_R_TRIP",7*readparam(bAgi); if(readparam(bAgi) >= 110) { bonus2 bAddSkillDamageRate,"RL_R_TRIP",30; } callfunc "MeleeRct_All",13*getequiprefinerycnt(); if(equippeditem(311074)) { bonus2 bAddSkillDamageRate,"NW_THE_VIGILANTE_AT_NIGHT",25; bonus2 bAddSkillDamageRate,"NW_MAGAZINE_FOR_ONE",25; bonus2 bSubRace,Rct_Player_Human,40; bonus2 bMagicSubRace,Rct_Player_Human,40; bonus2 bSubRace,Rct_Player_Doram,40; bonus2 bMagicSubRace,Rct_Player_Doram,40; } if(equippeditem(313520)) { bonus bMaxHPrate,15; bonus2 bSubRace,Rct_NonBoss,40; bonus2 bMagicSubRace,Rct_NonBoss,40; bonus2 bSubRace,Rct_Boss,50; bonus2 bMagicSubRace,Rct_Boss,50; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; skill "MG_SAFETYWALL",5; } }
+313520,ench,悲哀の王宮,6,,,,,,,,,,65535,,,,,{ /* 250408効果更新 セット効果実装済み */ },{ bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; if(equippeditem(300192)) { bonus bAddShortWeaponDamage,10; bonus bAddLongWeaponDamage,10; bonus2 bSPDrainRate,1,3; } }
+
+
+item_db.txt 修正
+4001,card,ポリンカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bLuk,2; bonus bFlee2,1; }
+4002,card,ファブルカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bVit,1; bonus bMaxHP,100; }
+4003,card,プパカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bMaxHP,700; }
+4004,card,ドロップスカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bDex,1; bonus bHit,3; }
+4005,card,サンタポリンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEle,Ele_Dark,20; }
+4006,card,ルナティックカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bLuk,1; bonus bCritical,1; bonus bFlee2,1; }
+4007,card,ペコペコの卵カード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Formless,20; }
+4008,card,ピッキカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bStr,1; bonus bBaseAtk,10; }
+4009,card,チョンチョンカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus bAgi,1; bonus bFlee,2; }
+4010,card,ウィローカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bMaxSP,80; }
+4011,card,すごいピッキカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bVit,1; bonus bMaxHP,100; }
+4012,card,盗蟲の卵カード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ bonus bMaxHP,400; }
+4013,card,アンドレの卵カード,6,20,,10,,,,,,,32,,,,,{ /* 未実装 */ },{ bonus bMaxHPrate,5; }
+4014,card,ロッダフロッグカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bMaxHP,400; bonus bMaxSP,50; }
+4015,card,コンドルカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bFlee,10; }
+4016,card,盗蟲カード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bAgi,1; }
+4017,card,サベージベベカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Stun,500; }
+4018,card,アンドレの幼虫カード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bInt,1; }
+4019,card,ホーネットカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bStr,1; bonus bBaseAtk,3; }
+4020,card,ファミリアーカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Blind,500; bonus bBaseAtk,5; }
+4021,card,ロッカーカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bDex,1; bonus bBaseAtk,5; }
+4022,card,スポアカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus bVit,2; }
+4023,card,子デザートウルフカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bInt,1; }
+4024,card,プランクトンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Sleep,500; bonus bBaseAtk,5; }
+4025,card,スケルトンカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bBaseAtk,10; bonus2 bAddEff,Eff_Stun,200; }
+4026,card,雌盗蟲カード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bAgi,1; bonus bFlee,1; }
+4027,card,ククレカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus bAgi,2; }
+4028,card,タロウカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bStr,2; }
+4029,card,ウルフカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bBaseAtk,15; bonus bCritical,1; }
+4030,card,マンドラゴラカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEle,Ele_Wind,20; }
+4031,card,ペコペコカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bMaxHPrate,10; if(equippeditem(4161)) { bonus bDef,3; bonus bVit,3; } }
+4032,card,アンバーナイトカード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ bonus bDef,2; }
+4033,card,ポポリンカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "TF_DETOXIFY",1; }
+4034,card,ワームテールカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus bDex,2; }
+4035,card,ヒドラカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Human,20; }
+4036,card,ムカーカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bHPrecovRate,10; if(equippeditem(4036) && equippeditem(4186) && equippeditem(4233) && equippeditem(4281) && equippeditem(4343)) { bonus bStr,4; bonus bMaxHPrate,7; bonus bMaxSPrate,7; bonus2 bAddSkillDamageRate,"MC_MAMMONITE",20; bonus2 bSPDrainValue,100,2; if(getbaseclass(Class,2) == CLASS_AM) { bonus3 bAutoSelfSpell,"BS_ADRENALINE",1,100; bonus3 bAddMonsterDropItem,905,Rct_Boss,100; bonus3 bAddMonsterDropItem,905,Rct_NonBoss,100; bonus3 bAddMonsterDropItem,7139,Rct_Boss,30; bonus3 bAddMonsterDropItem,7139,Rct_NonBoss,30; } } }
+4037,card,スネイクカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddEff,Eff_Poison,500; bonus bBaseAtk,5; }
+4038,card,ゾンビカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus bHPrecovRate,20; }
+4039,card,スタイナーカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus2 bResEff,Eff_Silence,2000; bonus bDef,1; }
+4040,card,クリーミーカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ skill "AL_TELEPORT",1; }
+4041,card,コーコーカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Sleep,2000; bonus bDef,1; }
+4042,card,スチールチョンチョンカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubEle,Ele_Wind,10; bonus bDef,2; }
+4043,card,アンドレカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bBaseAtk,20; }
+4044,card,スモーキーカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "TF_HIDING",1; }
+4045,card,ホルンカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus bLongAtkDef,35; if(equippeditem(28910)) { bonus bLongAtkDef,-35; } if(getbaseclass(Class,3) == CLASS_GC) { if(equippeditem(20800)) { bonus bLongAtkDef,-35; } } if(getbaseclass(Class,3) == CLASS_RA) { if(equippeditem(20816)) { bonus bLongAtkDef,-35; } } if(equippeditem(20857)) { bonus bLongAtkDef,-35; } if(equippeditem(20838)) { bonus bLongAtkDef,-35; } if(equippeditem(310653)) { bonus bLongAtkDef,-35; } }
+4046,card,マーティンカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Blind,2000; bonus bDef,1; }
+4047,card,ゴーストリングカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bDefEle,Ele_Ghost; bonus bHPrecovRate,-25; }
+4048,card,ポイズンスポアカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "TF_POISON",3; }
+4049,card,バドンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEle,Ele_Fire,20; }
+4050,card,雄盗蟲カード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus bAgi,2; }
+4051,card,ヨーヨーカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus bFlee2,5; bonus bAgi,1; }
+4052,card,エルダーウィローカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bInt,2; }
+4053,card,ビタタカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "AL_HEAL",1; bonus bUseSPrate,25; }
+4054,card,エンジェリングカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bDefEle,Ele_Holy; }
+4055,card,マリナカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Freeze,500; bonus bBaseAtk,5; }
+4056,card,ダスティネスカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bFlee,5; bonus2 bSubEle,Ele_Wind,30; }
+4057,card,メタルラカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Silence,500; bonus bBaseAtk,5; }
+4058,card,タラフロッグカード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ bonus2 bSubRace,Rct_Human,30; bonus2 bMagicSubRace,Rct_Human,30; if(equippeditem(28929)) { bonus2 bExpRate,Rct_Human,5; bonus2 bJobRate,Rct_Human,5; if(getequiprefinerycnt() >= 6) { bonus2 bExpRate,Rct_Human,5; bonus2 bJobRate,Rct_Human,5; } if(getequiprefinerycnt() >= 8) { bonus2 bExpRate,Rct_Human,5; bonus2 bJobRate,Rct_Human,5; } } }
+4059,card,兵隊アンドレカード,6,20,,10,,,,,,,32,,,,,{ /* 未実装 */ },{ bonus2 bSubRace,Rct_Plant,50; bonus2 bMagicSubRace,Rct_Plant,50; }
+4060,card,ゴブリンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Brute,20; }
+4061,card,カナトウスカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bUnbreakableArmor,0; bonus bDef,1; }
+4062,card,アナコンダクカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEle,Ele_Poison,20; }
+4063,card,キャラメルカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Insect,20; }
+4064,card,ゼロムカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus bDex,3; }
+4065,card,カホカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEle,Ele_Earth,20; }
+4066,card,オークウォリアーカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Brute,30; bonus2 bMagicSubRace,Rct_Brute,30; if(equippeditem(28929)) { bonus2 bExpRate,Rct_Brute,5; bonus2 bJobRate,Rct_Brute,5; if(getequiprefinerycnt() >= 6) { bonus2 bExpRate,Rct_Brute,5; bonus2 bJobRate,Rct_Brute,5; } if(getequiprefinerycnt() >= 8) { bonus2 bExpRate,Rct_Brute,5; bonus2 bJobRate,Rct_Brute,5; } } }
+4067,card,メガロドンカード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Freeze,2000; bonus bDef,1; }
+4068,card,スコーピオンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Plant,20; }
+4069,card,ドレインリアーカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEle,Ele_Water,20; }
+4070,card,エギラカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus bSPrecovRate,15; }
+4071,card,オークゾンビカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bFlee,5; bonus2 bSubEle,Ele_Undead,30; }
+4072,card,ゴーレムカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bUnbreakableWeapon,0; bonus bBaseAtk,5; }
+4073,card,パイレーツスケルカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "MC_DISCOUNT",5; }
+4074,card,ビッグフットカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Insect,30; bonus2 bMagicSubRace,Rct_Insect,30; if(equippeditem(28929)) { bonus2 bExpRate,Rct_Insect,5; bonus2 bJobRate,Rct_Insect,5; if(getequiprefinerycnt() >= 6) { bonus2 bExpRate,Rct_Insect,5; bonus2 bJobRate,Rct_Insect,5; } if(getequiprefinerycnt() >= 8) { bonus2 bExpRate,Rct_Insect,5; bonus2 bJobRate,Rct_Insect,5; } } }
+4075,card,アルゴスカード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Stone,2000; bonus bDef,1; }
+4076,card,白蓮玉カード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Curse,500; bonus bBaseAtk,5; }
+4077,card,フェンカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bNoCastCancel,0; bonus bCastRate,25; }
+4078,card,サベージカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bVit,3; }
+4079,card,マンティスカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus bStr,3; }
+4080,card,フローラカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Fish,20; }
+4081,card,ホードカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bFlee,5; bonus2 bSubEle,Ele_Earth,30; }
+4082,card,デザートウルフカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddSize,Size_Small,15; bonus bBaseAtk,5; }
+4083,card,ラフレシアカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Fish,30; bonus2 bMagicSubRace,Rct_Fish,30; if(equippeditem(28929)) { bonus2 bExpRate,Rct_Fish,5; bonus2 bJobRate,Rct_Fish,5; if(getequiprefinerycnt() >= 6) { bonus2 bExpRate,Rct_Fish,5; bonus2 bJobRate,Rct_Fish,5; } if(getequiprefinerycnt() >= 8) { bonus2 bExpRate,Rct_Fish,5; bonus2 bJobRate,Rct_Fish,5; } } }
+4084,card,マリンスフィアーカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "SM_MAGNUM",3; }
+4085,card,オークスケルトンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEle,Ele_Holy,20; }
+4086,card,ソルジャースケルトンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bCritical,9; }
+4087,card,ガイアスカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Confusion,10000; bonus2 bSubEle,Ele_Earth,15; }
+4088,card,フリルドラカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ skill "AS_CLOAKING",1; }
+4089,card,ソードフィッシュカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bDefEle,Ele_Water; bonus bDef,1; if(equippeditem(15132) || equippeditem(15133)) { bonus2 bResEff,Eff_Freeze,10000; } }
+4090,card,ムナックカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus2 bResEff,Eff_Stone,1500; bonus2 bSubEle,Ele_Earth,5; bonus bDef,1; if(equippeditem(4212) && equippeditem(4328)) { bonus bAllStatus,1; } }
+4091,card,コボルドカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus bStr,1; bonus bCritical,4; }
+4092,card,スケルワーカーカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddSize,Size_Medium,15; bonus bBaseAtk,5; }
+4093,card,オボンヌカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "AL_CURE",1; }
+4094,card,アーチャースケルトンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ if(getlook(2) == 11) { bonus bDef,150; bonus bAddLongWeaponDamage,10; } }
+4095,card,マルスカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bFlee,5; bonus2 bSubEle,Ele_Water,30; }
+4096,card,ゼノークカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Poison,400; bonus bBaseAtk,10; }
+4097,card,マーターカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus bMaxHPrate,10; bonus bAgi,1; }
+4098,card,ドケビカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bDefEle,Ele_Wind; bonus bDef,1; if(equippeditem(15132) || equippeditem(15133)) { bonus2 bResEff,Eff_Freeze,10000; } }
+4099,card,パサナカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bDefEle,Ele_Fire; bonus bDef,1; if(equippeditem(15132) || equippeditem(15133)) { bonus2 bResEff,Eff_Freeze,10000; } }
+4100,card,ソヒーカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus bMaxSPrate,15; bonus bSPrecovRate,3; }
+4101,card,サンドマンカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bDefEle,Ele_Earth; bonus bDef,1; if(equippeditem(15132) || equippeditem(15133)) { bonus2 bResEff,Eff_Freeze,10000; } }
+4102,card,ウィスパーカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus bFlee,20; bonus2 bSubEle,Ele_Ghost,-50; }
+4103,card,ホロンカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "MG_SIGHT",1; }
+4104,card,レクイエムカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEff,Eff_Confusion,500; }
+4105,card,マルクカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Freeze,10000; bonus2 bSubEle,Ele_Water,5; }
+4106,card,マミーカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bHit,20; }
+4107,card,ベリットカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus bMaxHPrate,8; bonus bMaxSPrate,8; }
+4108,card,ミストカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bFlee,5; bonus2 bSubEle,Ele_Poison,30; }
+4109,card,ジャックカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bFlee,5; bonus2 bSubEle,Ele_Fire,30; }
+4110,card,グールカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Poison,2000; bonus bDef,1; }
+4111,card,ストラウフカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Demon,20; }
+4112,card,マルドゥークカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Silence,10000; }
+4113,card,マリオネットカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bFlee,5; bonus2 bSubEle,Ele_Ghost,30; }
+4114,card,アルギオペカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bDefEle,Ele_Poison; bonus bDef,1; }
+4115,card,ハンターフライカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus2 bHPDrainRate,3,15; }
+4116,card,イシスカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus2 bSubEle,Ele_Dark,30; bonus bFlee,5; }
+4117,card,サイドワインダーカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ if(getskilllv("TF_DOUBLE") <= 1) { bonus bDoubleRate,5; } if(getskilllv("TF_DOUBLE") >= 2) { bonus bDoubleRate,5*getskilllv("TF_DOUBLE"); } }
+4118,card,グラウンドプティットカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_Dragon,20; }
+4119,card,バースリーカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bDefEle,Ele_Dark; }
+4120,card,スカイプティットカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Dragon,30; bonus2 bMagicSubRace,Rct_Dragon,30; if(equippeditem(28929)) { bonus2 bExpRate,Rct_Dragon,5; bonus2 bJobRate,Rct_Dragon,5; if(getequiprefinerycnt() >= 6) { bonus2 bExpRate,Rct_Dragon,5; bonus2 bJobRate,Rct_Dragon,5; } if(getequiprefinerycnt() >= 8) { bonus2 bExpRate,Rct_Dragon,5; bonus2 bJobRate,Rct_Dragon,5; } } }
+4121,card,フリオニカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bHit,100; if(equippeditem(311072)) { bonus bPerfectHitAddRate,50; bonus2 bSPDrainValue,100,5; } }
+4122,card,デビルチカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Blind,10000; bonus bStr,1; }
+4123,card,エドガカード,6,20,,10,,,,,,,64,,,,,{ /* 一部の回復アイテム */ },{ bonus bInfiniteEndure,0; bonus bMaxHPrate,-25; if(equippeditem(311072)) { bonus bDef,20*(readparam(bVit)/10); bonus bMdef,2*(readparam(bVit)/10); if(readparam(bVit) >= 130) { bonus bMaxHPRate,50; callfunc "AddSkillHealRate",20; } } }
+4124,card,メデューサカード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Stone,10000; bonus2 bSubRace,Rct_Demon,15; bonus2 bMagicSubRace,Rct_Demon,15; }
+4125,card,デビアスカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRace,Rct_DemiHuman,7; bonus2 bAddRace,Rct_Brute,7; bonus2 bAddRace,Rct_Plant,7; bonus2 bAddRace,Rct_Insect,7; }
+4126,card,ミノタウロスカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddSize,Size_Big,15; bonus bBaseAtk,5; }
+4127,card,ナイトメアカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bAgi,1; bonus2 bResEff,Eff_Sleep,10000; }
+4128,card,黄金蟲カード,6,20,,10,,,,,,,32,,,,,{ /* [光の盾]状態 EFST_ALL_LIGHTGUARD */ },{ bonus bNoMagicDamage,0; bonus bUseSPrate,100; if(equippeditem(311072)) { bonus4 bAutoActiveSkill,"EVT_FULL_THROTTLE",4128,10000,10000; if(checkactiveitem()) { misceffect 220,""; } } }
+4129,card,バフォメットジュニアカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus bAgi,3; bonus bCritical,1; }
+4130,card,スコーピオンキングカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEle,Ele_Undead,20; }
+4131,card,月夜花カード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus bSpeedRate,25; if(equippeditem(311072)) { bonus2 bResEff,Eff_Curse,10000; skill "AL_INCAGI",10; } }
+4132,card,ミストレスカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bNoGemStone,0; bonus bUseSPrate,25; if(equippeditem(311072)) { bonus2 bSubEle,Ele_Wind,15; skill "MG_SAFETYWALL",10; } }
+4133,card,レイドリックカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus2 bSubEle,Ele_Neutral,20; }
+4134,card,ドラキュラカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus2 bSPDrainRate,10,5; if(equippeditem(311439)) { bonus bAddShortWeaponDamage,15; bonus bAddLongWeaponDamage,15; bonus bHPGainValue,200; bonus bSPGainValue,20; } }
+4135,card,オークロードカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bShortWeaponDamageReturn,30; if(equippeditem(311072)) { bonus bMaxHPRate,50; skill "CR_REFLECTSHIELD",10; } }
+4136,card,カーリッツバーグカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Demon,30; bonus2 bMagicSubRace,Rct_Demon,30; if(equippeditem(28929)) { bonus2 bJobRate,Rct_Demon,5; bonus2 bExpRate,Rct_Demon,5; if(getequiprefinerycnt() >= 6) { bonus2 bJobRate,Rct_Demon,5; bonus2 bExpRate,Rct_Demon,5; } if(getequiprefinerycnt() >= 8) { bonus2 bJobRate,Rct_Demon,5; bonus2 bExpRate,Rct_Demon,5; } } }
+4137,card,ドレイクカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bNoSizeFix,0; if(equippeditem(311072)) { bonus2 bAddSize,Size_Small,20; bonus2 bAddSize,Size_Medium,20; bonus2 bAddSize,Size_Big,20; } }
+4138,card,アヌビスカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Angel,30; bonus2 bMagicSubRace,Rct_Angel,30; if(equippeditem(28929)) { bonus2 bExpRate,Rct_Angel,5; bonus2 bJobRate,Rct_Angel,5; if(getequiprefinerycnt() >= 6) { bonus2 bExpRate,Rct_Angel,5; bonus2 bJobRate,Rct_Angel,5; } if(getequiprefinerycnt() >= 8) { bonus2 bExpRate,Rct_Angel,5; bonus2 bJobRate,Rct_Angel,5; } } }
+4139,card,ジョーカーカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "TF_STEAL",1; }
+4140,card,深淵の騎士カード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,25; }
+4141,card,イビルドルイドカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bDefEle,Ele_Undead; bonus bDef,1; bonus bInt,1; }
+4142,card,ドッペルゲンガーカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bAspdAddRate,10; if(equippeditem(311072)) { bonus bAddShortWeaponDamage,20; } }
+4143,card,オークヒーローカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bVit,3; bonus2 bResEff,Eff_Stun,10000; if(equippeditem(311072)) { bonus bFlee2,5; bonus2 bSubSkillDamageRate,"NPC_CRITICALSLASH",100; } }
+4144,card,オシリスカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bRestartFullRecover,0; if(equippeditem(311072)) { skill "WZ_QUAGMIRE",5; } }
+4145,card,ヴェルゼブブカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bCastRate,-30; if(equippeditem(311073)) { bonus2 bMagicAddRace,Rct_Boss,readparam(bLuk)/10; bonus2 bMagicAddRace,Rct_NonBoss,readparam(bLuk)/10; if(readparam(bLuk) >= 130) { bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; skill "PF_HPCONVERSION",3; } } }
+4146,card,マヤーカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus bMagicDamageReturn,50; if(equippeditem(311072)) { bonus2 bSubRace,Rct_Player_Human,30; bonus2 bMagicSubRace,Rct_Player_Human,30; bonus2 bSubRace,Rct_Player_Doram,30; bonus2 bMagicSubRace,Rct_Player_Human,30; bonus3 bRevAutoActiveMagic,4146,500,2000; if(checkactiveitem()) { misceffect 220,""; bonus2 bHPRatePenaltyTime,1000,-25; } } }
+4147,card,バフォメットカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bSplashRange,1; bonus bHit,-10; if(equippeditem(311072)) { bonus3 bAutoActiveWeapon,4147,500,5000; if(checkactiveitem()) { misceffect 220,""; bonus2 bHPDrainRate,100,1; } } }
+4148,card,ファラオカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bUseSPrate,-30; if(equippeditem(311439)) { bonus2 bSubEle,Ele_Dark,15; skill "PA_PRESSURE",5; } }
+4149,card,ガーゴイルカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12028,Rct_Insect,100; if(equippeditem(27002)) { bonus3 bAddMonsterDropItem,12028,Rct_Insect,200; } }
+4150,card,ゴートカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() <= 5) { bonus bDef,2; bonus bMdef,5; } }
+4151,card,ガジョマートカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Plant,-20; bonus2 bMagicSubRace,Rct_Plant,-20; bonus2 bExpRate,Rct_Plant,10; bonus2 bJobRate,Rct_Plant,10; if(equippeditem(2984)) { bonus2 bSubRace,Rct_Plant,-10; bonus2 bMagicSubRace,Rct_Plant,-10; bonus2 bExpRate,Rct_Plant,5; bonus2 bJobRate,Rct_Plant,5; } }
+4152,card,ガラパゴカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,531,Rct_Insect,300; bonus3 bAddMonsterDropItem,532,Rct_Insect,300; bonus3 bAddMonsterDropItem,534,Rct_Insect,300; bonus2 bItemHealRate,4,50; }
+4153,card,カニカード,6,20,,10,,,,,,,2,,,,,{ /* mob_group 再編対象 */ },{ bonus2 bAddGroup,8,30; bonus bBaseAtk,5; if(equippeditem(4153) && equippeditem(4247) && equippeditem(4273)) { bonus3 bAddMonsterDropItem,544,Rct_Fish,30; bonus2 bAddEle,Ele_Water,30; } }
+4154,card,団子童子カード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,529,Rct_Human,300; bonus3 bAddMonsterDropItem,530,Rct_Human,100; bonus2 bItemHealRate,3,50; }
+4155,card,ゴブリンリーダーカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddGroup,1,30; }
+4156,card,ゴブリンライダーカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bAddCriticalDamage,10; bonus2 bCriticalRace,Rct_Formless,7; }
+4157,card,ゴブリンアーチャーカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bAddCriticalDamage,10; bonus2 bCriticalRace,Rct_Undead,7; }
+4158,card,スカイデリーターカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus3 bDefeatHPDrainValue,Rct_All,100,100; bonus bHPrecovRate,-100; }
+4159,card,九尾狐カード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bAgi,2; if(getequiprefinerycnt() >= 9) { bonus bFlee,20; } if(equippeditem(4159)) { if(getequiprefinerycnt() >= 9) { bonus bAgi,8; bonus2 bSubEle,Ele_Neutral,20; } } }
+4160,card,銃奇兵カード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus bStr,2; if(getequiprefinerycnt() >= 9) { bonus bMaxHPrate,10; bonus bMaxSPrate,10; } if(equippeditem(4160)) { if(getequiprefinerycnt() >= 9) { bonus bStr,8; bonus bMaxHPrate,5; bonus bMaxSPrate,5; } } }
+4161,card,グランペコカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus3 bRevAutoSelfSpell,"PR_GLORIA",1,500; }
+4162,card,グリズリーカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み 発動率修正 */ },{ bonus2 bAddRevEff,Eff_Blind,300; if(equippeditem(4074)) { bonus2 bAddRevEff,Eff_Blind,600; } }
+4163,card,グリフォンカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bCritical,7; bonus bFlee,2; if(getbaseclass(Class) == CLASS_SM) { bonus3 bAutoSpell,"KN_BOWLINGBASH",5,100; } }
+4164,card,グリンブルスティカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Fish,-20; bonus2 bMagicSubRace,Rct_Fish,-20; bonus2 bExpRate,Rct_Fish,10; bonus2 bJobRate,Rct_Fish,10; if(equippeditem(2984)) { bonus2 bSubRace,Rct_Fish,-10; bonus2 bMagicSubRace,Rct_Fish,-10; bonus2 bExpRate,Rct_Fish,5; bonus2 bJobRate,Rct_Fish,5; } }
+4165,card,ギグカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4166,card,ナイトメアテラーカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み 発動率修正 */ },{ bonus2 bAddRevEff,Eff_Curse,300; if(equippeditem(4127)) { bonus2 bAddRevEff,Eff_Curse,600; } }
+4167,card,ネレイドカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4168,card,ダークロードカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ if(equippeditem(22245) == 0) { bonus3 bRevAutoSpell,"WZ_METEOR",5,1000; } if(equippeditem(4169)) { bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus bCastRate,-10; } if(equippeditem(311439)) { bonus2 bAddSkillDamageRate,"WZ_METEOR",70; } }
+4169,card,ダークイリュージョンカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bMaxHPrate,-10; bonus bMaxSPrate,-10; bonus bCastRate,-10; }
+4170,card,ダークフレームカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Stone,2000; }
+4171,card,ダークプリーストカード,6,20,,10,,,,,,,2,,,,,{ /* 魔法攻撃命中時HPSP回復 */ },{ bonus2 bSPVanish,5,3; if(getbaseclass(Class,2) == CLASS_SA) { bonus2 bSPDrainValue,100,1; } }
+4172,card,一反木綿カード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bAddCriticalDamage,20; bonus2 bSPDrainValue,100,-1; }
+4173,card,デーモンパンクカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Sleep,600; }
+4174,card,デビルリングカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubEle,Ele_Neutral,50; bonus2 bSubEle,Ele_Fire,-50; bonus2 bSubEle,Ele_Water,-50; bonus2 bSubEle,Ele_Wind,-50; bonus2 bSubEle,Ele_Earth,-50; bonus2 bSubEle,Ele_Poison,-50; bonus2 bSubEle,Ele_Holy,-50; bonus2 bSubEle,Ele_Dark,-50; bonus2 bSubEle,Ele_Ghost,-50; bonus2 bSubEle,Ele_Undead,-50; if(equippeditem(2509) || equippeditem(20813)) { bonus2 bSubEle,Ele_Neutral,-30; } }
+4175,card,大口蛙カード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAutoSpell,"TF_POISON",1,200; bonus2 bAddSkillBlow,"TF_POISON",5; }
+4176,card,デュラハンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bAddCriticalDamage,10; bonus2 bCriticalRace,Rct_Dragon,7; }
+4177,card,ドリアードカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,993,Rct_Plant,100; bonus2 bSubEle,Ele_Earth,10; }
+4178,card,ドラゴンテイルカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bAgi,1; bonus bFlee,10; bonus2 bAddSkillDamageRate,"AC_DOUBLE",5; bonus2 bAddSkillDamageRate,"AC_SHOWER",5; }
+4179,card,ドラゴンフライカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bAgi,1; if(equippeditem(4009)) { bonus bFlee,18; } }
+4180,card,ドリラーカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4181,card,ディスガイズカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み 発動率修正 */ },{ bonus2 bAddRevEff,Eff_Silence,300; if(readparam(bVit) >= 77) { bonus2 bAddRevEff,Eff_Silence,600; } }
+4182,card,ディアボリックカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4183,card,さすらい狼カード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bStr,1; if(equippeditem(4029)) { bonus bFlee,18; } }
+4184,card,ラーヴァゴーレムカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddGroup,4,30; }
+4185,card,ライドワードカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bInt,1; if(getbaseclass(Class) == CLASS_AC) { bonus bMdef,1; bonus bInt,1; } }
+4186,card,レグルロカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus bStr,1; bonus bVit,1; if(equippeditem(4186) && equippeditem(4206) && equippeditem(4233) && equippeditem(4281) && equippeditem(4321)) { bonus2 bSPDrainValue,100,2; bonus2 bAddSkillDamageRate,"MC_MAMMONITE",20; bonus bLuk,10; if(getbaseclass(Class) == CLASS_MC) { bonus bMagicDamageReturn,20; bonus3 bAddMonsterDropItem,617,Rct_Boss,5; bonus3 bAddMonsterDropItem,617,Rct_NonBoss,5; } } }
+4187,card,レイドリックアーチャーカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12030,Rct_Demon,100; if(equippeditem(27002)) { bonus3 bAddMonsterDropItem,12030,Rct_Demon,200; } }
+4188,card,レイブオルマイカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,990,Rct_Brute,100; bonus2 bSubEle,Ele_Fire,10; }
+4189,card,デッドリーレイスカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Curse,2000; }
+4190,card,レイスカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12027,Rct_Undead,100; if(equippeditem(27002)) { bonus3 bAddMonsterDropItem,12027,Rct_Undead,200; } }
+4191,card,ロリルリカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus3 bRevAutoSelfSpell,"AL_HEAL",3,500; if(equippeditem(4191) && equippeditem(4208) && equippeditem(4258) && equippeditem(4309) && equippeditem(4325) && equippeditem(4327)) { bonus bMaxHP,500; bonus bDef,5; bonus bMdef,5; bonus2 bAddSkillDamageRate,"MG_FIREBOLT",10; bonus2 bAddSkillDamageRate,"MG_COLDBOLT",10; bonus2 bAddSkillDamageRate,"MG_LIGHTNINGBOLT",10; if(getbaseclass(Class) == CLASS_MG) { bonus bMatkRate,3; bonus bCastRate,-15; } } }
+4192,card,ロータージャイロカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bAddCriticalDamage,10; bonus2 bCriticalRace,Rct_Fish,7; }
+4193,card,ルードカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ if(getbaseclass(Class) == CLASS_NV || getbaseclass(Class) == CLASS_SNV) { bonus3 bRevAutoSpell,"SM_ENDURE",1,2000; } if(equippeditem(4294)) { bonus bMaxHP,300; bonus bMaxSP,60; } }
+4194,card,リビオカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み 発動率修正 */ },{ bonus2 bAddRevEff,Eff_Stun,300; if(readparam(bDex) >= 77) { bonus2 bAddRevEff,Eff_Stun,600; } }
+4195,card,リーフキャットカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,991,Rct_Fish,100; bonus2 bSubEle,Ele_Water,10; }
+4196,card,マーリンカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,909,Rct_Boss,2000; bonus3 bAddMonsterDropItem,909,Rct_NonBoss,2000; bonus3 bAddMonsterDropItem,7126,Rct_Boss,10; bonus3 bAddMonsterDropItem,7126,Rct_NonBoss,10; }
+4197,card,マスターリングカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bLuk,1; if(equippeditem(4001)) { bonus bFlee,18; } }
+4198,card,マヤパープルカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bTigereye,0; }
+4199,card,半漁人カード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus bHPrecovRate,10; bonus bSPrecovRate,10; if(equippeditem(4178) && equippeditem(4199) && equippeditem(4234) && equippeditem(4252) && equippeditem(4297)) { bonus bAddLongWeaponDamage,20; bonus bAgi,5; bonus bDex,3; bonus bPerfectHitAddRate,20; if(getbaseclass(Class) == CLASS_AC) { bonus2 bExpRate,Rct_Brute,5; bonus2 bJobRate,Rct_Brute,5; bonus2 bWeaponComaRace2,Rct_Brute,100; } } }
+4200,card,メガリスカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() <= 5) { bonus bMdef,7; } }
+4201,card,ごっついミノタウロスカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Stun,600; }
+4202,card,ミョグェカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddEle,Ele_Ghost,20; }
+4203,card,ミュータントドラゴンカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bBaseAtk,15; if(getskilllv("MG_FIREBALL") <= 9) { bonus3 bAutoSpell,"MG_FIREBALL",3,500; } if(getskilllv("MG_FIREBALL") >= 10) { bonus3 bAutoSpell,"MG_FIREBALL",10,500; } }
+4204,card,ミニデモカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Brute,-20; bonus2 bMagicSubRace,Rct_Brute,-20; bonus2 bExpRate,Rct_Brute,10; bonus2 bJobRate,Rct_Brute,10; if(equippeditem(2984)) { bonus2 bSubRace,Rct_Brute,-10; bonus2 bMagicSubRace,Rct_Brute,-10; bonus2 bExpRate,Rct_Brute,5; bonus2 bJobRate,Rct_Brute,5; } }
+4205,card,ミミックカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,603,Rct_Boss,100; bonus3 bAddMonsterDropItem,603,Rct_NonBoss,100; if(equippeditem(27002)) { bonus3 bAddMonsterDropItem,603,Rct_Boss,200; bonus3 bAddMonsterDropItem,603,Rct_NonBoss,200; } }
+4206,card,ミストケースカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,644,Rct_Boss,30; bonus3 bAddMonsterDropItem,644,Rct_NonBoss,30; }
+4207,card,ミステルテインカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus bDef,1; bonus2 bSubSize,Size_Small,25; bonus2 bMagicSubSize,Size_Small,25; if(equippeditem(18865)) { bonus2 bAddSize,Size_Small,5; } }
+4208,card,雅人形カード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus bMaxSPrate,10; bonus2 bAddSkillDamageRate,"MG_FROSTDIVER",5; }
+4209,card,ヴァイオリーカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ if(getskilllv("BA_FROSTJOKE") <= 4) { bonus3 bAutoSpell,"BA_FROSTJOKE",1,200; } if(getskilllv("BA_FROSTJOKE") >= 5) { bonus3 bAutoSpell,"BA_FROSTJOKE",5,200; } }
+4210,card,彷徨う者カード,6,20,,10,,,,,,,4,,,,,{ /* [2組のセット効果が[ASインティミデイト]発動をそれぞれ否定する記述] */ /* [2組のステータス増セット効果は別カードに記述] */ },{ if(getbaseclass(Class) == CLASS_TF) { bonus bFlee,20; } if(equippeditem(4039) == 0 || equippeditem(4210) == 0 || equippeditem(4257) == 0 || equippeditem(4230) == 0 || equippeditem(4348) == 0) { bonus3 bAutoSpell,"RG_INTIMIDATE",1,200; } if(equippeditem(4172) == 0 || equippeditem(4210) == 0 || equippeditem(4230) == 0 || equippeditem(4272) == 0 || equippeditem(4257) == 0) { bonus3 bAutoSpell,"RG_INTIMIDATE",1,200; } }
+4211,card,ボーカルカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bMdef,3; if(equippeditem(4021)) { bonus bFlee,18; } }
+4212,card,ボンゴンカード,6,20,,10,,,,,,,136,,,,,{ /* mob_group 再編対象 */ },{ bonus3 bAutoSpell,"SM_BASH",1,200; bonus2 bAddSkillBlow,"SM_BASH",5; bonus2 bSubGroup,9,-100; }
+4213,card,ブリライトカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Silence,600; }
+4214,card,ブラッディマーダーカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bAddCriticalDamage,10; bonus2 bCriticalRace,Rct_Insect,7; }
+4215,card,ブレイザーカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,512,Rct_Boss,20; bonus3 bAddMonsterDropItem,513,Rct_Boss,80; bonus3 bAddMonsterDropItem,516,Rct_Boss,20; bonus3 bAddMonsterDropItem,531,Rct_Boss,20; bonus3 bAddMonsterDropItem,532,Rct_Boss,20; bonus3 bAddMonsterDropItem,533,Rct_Boss,20; bonus3 bAddMonsterDropItem,534,Rct_Boss,20; bonus3 bAddMonsterDropItem,536,Rct_Boss,20; bonus3 bAddMonsterDropItem,551,Rct_Boss,20; bonus3 bAddMonsterDropItem,512,Rct_NonBoss,20; bonus3 bAddMonsterDropItem,513,Rct_NonBoss,80; bonus3 bAddMonsterDropItem,516,Rct_NonBoss,20; bonus3 bAddMonsterDropItem,531,Rct_NonBoss,20; bonus3 bAddMonsterDropItem,532,Rct_NonBoss,20; bonus3 bAddMonsterDropItem,533,Rct_NonBoss,20; bonus3 bAddMonsterDropItem,534,Rct_NonBoss,20; bonus3 bAddMonsterDropItem,536,Rct_NonBoss,20; bonus3 bAddMonsterDropItem,551,Rct_NonBoss,20; }
+4216,card,サスカッチカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Freeze,600; }
+4217,card,人面桃樹カード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ if(getskilllv("AL_HEAL") >= 9) { bonus3 bAutoSelfSpell,"AL_HEAL",1,200; } if(getskilllv("AL_HEAL") >= 10) { bonus3 bAutoSelfSpell,"AL_HEAL",10,200; } if(equippeditem(4185) && equippeditem(4217) && equippeditem(4280) && equippeditem(4293) && equippeditem(4312)) { bonus bCastRate,-10; bonus bUseSPrate,-10; bonus bVit,10; if(getbaseclass(Class) == CLASS_AL) { bonus2 bSubRace,Rct_Undead,30; bonus2 bMagicSubRace,Rct_Undead,30; bonus2 bSubRace,Rct_Demon,30; bonus2 bMagicSubRace,Rct_Demon,30; bonus2 bExpRate,Rct_Undead,5; bonus2 bExpRate,Rct_Demon,5; bonus2 bJobRate,Rct_Undead,5; bonus2 bJobRate,Rct_Demon,5; } } }
+4218,card,サキュバスカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bVit,-3; bonus bMaxHP,1000; bonus bHPrecovRate,-20; if(equippeditem(4269)) { bonus bVit,4; bonus bInt,4; bonus bHPrecovRate,30; bonus bSPrecovRate,30; } }
+4219,card,セージワームカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,715,Rct_Boss,30; bonus3 bAddMonsterDropItem,716,Rct_Boss,30; bonus3 bAddMonsterDropItem,717,Rct_Boss,30; bonus3 bAddMonsterDropItem,715,Rct_NonBoss,30; bonus3 bAddMonsterDropItem,716,Rct_NonBoss,30; bonus3 bAddMonsterDropItem,717,Rct_NonBoss,30; }
+4220,card,ソリッドタートルカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bDef,2; bonus bMdef,2; if(equippeditem(4220) && equippeditem(4246) && equippeditem(4311) && equippeditem(4319) && equippeditem(4331)) { bonus bStr,10; bonus bMaxHPrate,20; bonus bHPrecovRate,50; bonus3 bAutoSelfSpell,"BS_WEAPONPERFECT",1,30; bonus3 bAddMonsterDropItem,501,Rct_Boss,500; bonus3 bAddMonsterDropItem,501,Rct_NonBoss,500; if(getbaseclass(Class) == CLASS_SM) { bonus2 bItemHealRate,1,50; } } }
+4221,card,ジェネラルスケルトンカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Insect,-20; bonus2 bMagicSubRace,Rct_Insect,-20; bonus2 bExpRate,Rct_Insect,10; bonus2 bJobRate,Rct_Insect,10; if(equippeditem(2984)) { bonus2 bSubRace,Rct_Insect,-10; bonus2 bMagicSubRace,Rct_Insect,-10; bonus2 bExpRate,Rct_Insect,5; bonus2 bJobRate,Rct_Insect,5; } }
+4222,card,スケルプリズナーカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Sleep,300; if(equippeditem(4025)) { bonus2 bAddRevEff,Eff_Sleep,600; } }
+4223,card,スタラクタイトゴーレムカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bDef,1; bonus2 bResEff,Eff_Stun,2000; }
+4224,card,ステムワームカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12032,Rct_Brute,100; if(equippeditem(27002)) { bonus3 bAddMonsterDropItem,12032,Rct_Brute,200; } }
+4225,card,フレイムシューターカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bHit,10; bonus bBaseAtk,10; }
+4226,card,スティングカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus bDef,2; if(getequiprefinerycnt() >= 9) { bonus bMdef,5; } if(equippeditem(29012)) { if(getequiprefinerycnt() >= 9) { bonus bLuk,10; bonus2 bSubSize,Size_Small,20; bonus2 bSubSize,Size_Medium,20; bonus2 bSubSize,Size_Big,20; bonus2 bMagicSubSize,Size_Small,20; bonus2 bMagicSubSize,Size_Medium,20; bonus2 bMagicSubSize,Size_Big,20; } } }
+4227,card,スプリングラビットカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,517,Rct_Brute,200; bonus3 bAddMonsterDropItem,528,Rct_Brute,200; bonus2 bItemHealRate,5,50; bonus2 bItemHealRate,11,50; }
+4228,card,スリーパーカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12031,Rct_Fish,100; if(equippeditem(27002)) { bonus3 bAddMonsterDropItem,12031,Rct_Fish,200; } }
+4229,card,時計塔管理者カード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bInt,1; bonus bCastRate,-5; }
+4230,card,カブキ忍者カード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bAgi,1; bonus3 bRevAutoSelfSpell2,"AS_CLOAKING",1,1000; }
+4231,card,土精カード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ bonus2 bSubGroup,5,50; }
+4232,card,老人参カード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,507,Rct_Plant,300; bonus3 bAddMonsterDropItem,508,Rct_Plant,200; bonus3 bAddMonsterDropItem,509,Rct_Plant,100; bonus2 bItemHealRate,2,50; }
+4233,card,コウカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bLuk,3; if(getbaseclass(Class) == CLASS_MC) { bonus bUnbreakableArmor,0; } }
+4234,card,アノリアンカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ if(getskilllv("AC_CONCENTRATION") <= 9) { bonus3 bRevAutoSpell,"AC_CONCENTRATION",1,300; } if(getskilllv("AC_CONCENTRATION") >= 10) { bonus3 bRevAutoSpell,"AC_CONCENTRATION",getskilllv("AC_CONCENTRATION"),300; } }
+4235,card,クリスマスクッキーカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Angel,-20; bonus2 bMagicSubRace,Rct_Angel,-20; bonus2 bExpRate,Rct_Angel,10; bonus2 bJobRate,Rct_Angel,10; if(equippeditem(2984)) { bonus2 bSubRace,Rct_Angel,-10; bonus2 bMagicSubRace,Rct_Angel,-10; bonus2 bExpRate,Rct_Angel,5; bonus2 bJobRate,Rct_Angel,5; } }
+4236,card,アモンラーカード,6,20,,10,,,,,,,64,,,,,{ /* 優先順位[アプローズサンダル]>[異境の統轄者] */ },{ bonus bAllStatus,1; if(equippeditem(22071) == 0) { if(equippeditem(311439) == 0) { if(readparam(bInt) <= 98) { bonus3 bRevAutoSelfSpell,"PR_KYRIE",10,300; bonus bStr,100; } if(readparam(bInt) >= 99) { bonus3 bRevAutoSelfSpell,"PR_KYRIE",10,1000; } } if(equippeditem(311439)) { if(readparam(bInt) <= 98) { bonus3 bRevAutoSelfSpell,"PR_KYRIE",10,1000; bonus bAgi,100; } if(readparam(bInt) >= 99) { bonus3 bRevAutoSelfSpell,"PR_KYRIE",10,2000; } } } if(equippeditem(22071)) { bonus bCastrate,-10; bonus bAllStatus,3*getequiprefinerycnt(); } if(equippeditem(311439)) { bonus bMaxHPrate,25; } }
+4237,card,オウルデュークカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAutoSelfSpell,"PR_IMPOSITIO",3,300; if(equippeditem(4238)) { bonus3 bAutoSpell,"MG_LIGHTNINGBOLT",5,200; } }
+4238,card,オウルバロンカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAutoSpell,"PR_LEXAETERNA",1,300; }
+4239,card,アイアンフィストカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Formless,-20; bonus2 bMagicSubRace,Rct_Formless,-20; bonus2 bExpRate,Rct_Formless,10; bonus2 bJobRate,Rct_Formless,10; if(equippeditem(2984)) { bonus2 bSubRace,Rct_Formless,-10; bonus2 bMagicSubRace,Rct_Formless,-10; bonus2 bExpRate,Rct_Formless,5; bonus2 bJobRate,Rct_Formless,5; } }
+4240,card,アクラウスカード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() <= 5) { bonus bDef,2; bonus bMdef,3; } }
+4241,card,アークエンジェリングカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bMaxHP,300; if(readparam(bLuk) >= 77) { bonus bHPrecovRate,100; bonus bSPrecovRate,100; } }
+4242,card,アポカリプスカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bVit,2; if(getequiprefinerycnt() >= 9) { bonus bMaxHP,800; } if(equippeditem(29012)) { if(getequiprefinerycnt() >= 9) { bonus bVit,8; bonus2 bResEff,Eff_Freeze,10000; } } }
+4243,card,アンソニカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ if(equippeditem(15249) == 0) { bonus3 bRevAutoSelfSpell,"AL_TELEPORT",1,5000; } }
+4244,card,アラームカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus3 bRevAutoSelfSpell,"MG_SIGHT",1,2000; bonus bMaxHP,300; bonus bVit,1; if(equippeditem(4229) && equippeditem(4244) && equippeditem(4299) && equippeditem(4313)) { bonus bMdef,3; bonus bDef,3; } }
+4245,card,アムムトカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Human,-20; bonus2 bMagicSubRace,Rct_Human,-20; bonus2 bExpRate,Rct_Human,10; bonus2 bJobRate,Rct_Human,10; if(equippeditem(2984)) { bonus2 bSubRace,Rct_Human,-10; bonus2 bMagicSubRace,Rct_Human,-10; bonus2 bExpRate,Rct_Human,5; bonus2 bJobRate,Rct_Human,5; } }
+4246,card,アサルトタートルカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bAddCriticalDamage,10; bonus2 bCriticalRace,Rct_Human,7; }
+4247,card,ヒトデカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddGroup,7,30; bonus bBaseAtk,5; }
+4248,card,エンシェントマミーカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus3 bRevAutoSpell,"AL_CRUCIS",5,300; if(equippeditem(4106)) { bonus bPerfectHitAddRate,20; } }
+4249,card,エンシェントワームカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Demon,-20; bonus2 bMagicSubRace,Rct_Demon,-20; bonus2 bExpRate,Rct_Demon,10; bonus2 bJobRate,Rct_Demon,10; if(equippeditem(2984)) { bonus2 bSubRace,Rct_Demon,-10; bonus2 bMagicSubRace,Rct_Demon,-10; bonus2 bExpRate,Rct_Demon,5; bonus2 bJobRate,Rct_Demon,5; } }
+4250,card,エクスキューショナーカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus bDef,1; bonus2 bSubSize,Size_Big,25; bonus2 bMagicSubSize,Size_Big,25; if(equippeditem(18865)) { bonus2 bAddSize,Size_Big,5; } }
+4251,card,エルダーカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddGroup,5,40; }
+4252,card,アリゲーターカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bLongAtkDef,5; }
+4253,card,アリスカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Boss,40; bonus2 bMagicSubRace,Rct_Boss,40; bonus2 bSubRace,Rct_NonBoss,-40; bonus2 bMagicSubRace,Rct_NonBoss,-40; }
+4254,card,オーガトゥースカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus bDef,1; bonus2 bSubSize,Size_Medium,25; bonus2 bMagicSubSize,Size_Medium,25; if(equippeditem(18865)) { bonus2 bAddSize,Size_Medium,5; } }
+4255,card,オークレディカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bAddGroup,2,30; }
+4256,card,オークアーチャーカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12034,Rct_Human,100; if(equippeditem(27002)) { bonus3 bAddMonsterDropItem,12034,Rct_Human,200; } }
+4257,card,ワイルドローズカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus bAgi,1; if(getbaseclass(Class) == CLASS_TF) { bonus bFlee2,5; } if(equippeditem(4172) || equippeditem(4210) || equippeditem(4230) || equippeditem(4272) || equippeditem(4257) ) { bonus bStr,5; bonus bAgi,5; bonus bAspdAddRate,5; bonus bSpeedRate,25; bonus2 bSPDrainRate,100,1; if(getbaseclass(Class) == CLASS_TF) { bonus bNoGemStone,0; } } }
+4258,card,天仙娘々カード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bInt,1; bonus bMaxSP,50; }
+4259,card,ウドゥンゴーレムカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bHPrecovRate,30; bonus bDef,1; }
+4260,card,ウータンシューターカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Confusion,2000; bonus bDef,1; }
+4261,card,ウータンファイターカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus2 bResEff,Eff_Bleed,2000; bonus bDef,1; }
+4262,card,天邪仙人カード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12029,Rct_Plant,100; if(equippeditem(27002)) { bonus3 bAddMonsterDropItem,12029,Rct_Plant,200; } }
+4263,card,怨霊武士カード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus2 bIgnoreDefRace,Rct_NonBoss,100; bonus bHPrecovRate,-100; bonus2 bHPPenaltyTime,10000,666; bonus bHPPenaltyUnrig,999; if(equippeditem(311439)) { bonus2 bAddRace,Rct_Human,35; bonus2 bAddRace,Rct_Player_Doram,35; } }
+4264,card,ウィンドゴーストカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ if(getskilllv("WZ_JUPITEL") <= 9) { bonus3 bAutoSpell,"WZ_JUPITEL",3,200; } if(getskilllv("WZ_JUPITEL") >= 10) { bonus3 bAutoSpell,"WZ_JUPITEL",10,200; } }
+4265,card,虎人カード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12033,Rct_Angel,100; if(equippeditem(27002)) { bonus3 bAddMonsterDropItem,12033,Rct_Angel,200; } }
+4266,card,エクリプスカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bVit,1; if(equippeditem(4006)) { bonus bFlee,18; } }
+4267,card,エクスプロージョンカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Dragon,-20; bonus2 bMagicSubRace,Rct_Dragon,-20; bonus2 bExpRate,Rct_Dragon,10; bonus2 bJobRate,Rct_Dragon,10; if(equippeditem(2984)) { bonus2 bSubRace,Rct_Dragon,-10; bonus2 bMagicSubRace,Rct_Dragon,-10; bonus2 bExpRate,Rct_Dragon,5; bonus2 bJobRate,Rct_Dragon,5; } }
+4268,card,インジャスティスカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus3 bAutoSpell,"AS_SONICBLOW",1,500; }
+4269,card,インキュバスカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bInt,-3; bonus bMaxSP,150; bonus bSPrecovRate,-20; }
+4270,card,ジャイアントスパイダーカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Poison,600; }
+4271,card,ジャイアントホーネットカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,992,Rct_Insect,100; bonus2 bSubEle,Ele_Wind,10; }
+4272,card,小龍舞カード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bAgi,1; bonus bCritical,3; }
+4273,card,お化け貝カード,6,20,,10,,,,,,,2,,,,,{ /* mob_group 再編対象 */ },{ bonus2 bAddGroup,6,30; bonus bBaseAtk,5; }
+4274,card,ゾンビマスターカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4275,card,ゾンビプリズナーカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus2 bSubRace,Rct_Undead,-20; bonus2 bMagicSubRace,Rct_Undead,-20; bonus2 bExpRate,Rct_Undead,10; bonus2 bJobRate,Rct_Undead,10; if(equippeditem(2984)) { bonus2 bSubRace,Rct_Undead,-10; bonus2 bMagicSubRace,Rct_Undead,-10; bonus2 bExpRate,Rct_Undead,5; bonus2 bJobRate,Rct_Undead,5; } }
+4276,card,ロードオブデスカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ if(equippeditem(311439) == 0) { bonus2 bWeaponComaRace2,Rct_NonBoss,1; bonus2 bAddEff,Eff_Stun,1000; bonus2 bAddEff,Eff_Curse,1000; bonus2 bAddEff,Eff_Silence,1000; bonus2 bAddEff,Eff_Poison,1000; bonus2 bAddEff,Eff_Bleed,1000; } if(equippeditem(311439)) { bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; bonus2 bWeaponComaRace2,Rct_NonBoss,1; bonus2 bAddEff,Eff_Stun,10000; bonus2 bAddEff,Eff_Curse,10000; bonus2 bAddEff,Eff_Silence,10000; bonus2 bAddEff,Eff_Poison,10000; bonus2 bAddEff,Eff_Bleed,10000; } }
+4277,card,ジルタスカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus bLuk,2; bonus2 bAddSkillDamageRate,"DC_THROWARROW",10; bonus2 bAddSkillDamageRate,"BA_MUSICALSTRIKE",10; if(equippeditem(4268)) { bonus bBaseAtk,20; bonus bLuk,3; } }
+4278,card,ジビットカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() <= 5) { bonus bMdef,5; } }
+4279,card,グラウンドデリーターカード,6,20,,10,,,,,,,16,,,,,{ /* 近接物理攻撃で倒した時HPSP回復 */ },{ bonus bSPrecovRate,-100; bonus3 bDefeatSPDrainValue,Rct_All,100,10; bonus bSPPenaltyUnrig,100; }
+4280,card,ジオグラファーカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ if(getskilllv("AL_BLESSING") <= 9) { bonus3 bRevAutoSelfSpell,"AL_BLESSING",2,300; } if(getskilllv("AL_BLESSING") >= 10) { bonus3 bRevAutoSelfSpell,"AL_BLESSING",10,300; } }
+4281,card,チャッキーカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ if(getbaseclass(Class) == CLASS_MC) { bonus bUnbreakableWeapon,0; } bonus bBaseAtk,30; bonus2 bSPDrainValue,100,-1; }
+4282,card,酒天狗カード,6,20,,10,,,,,,,136,,,,,{ /* rathena[bonus2 bAddMonsterDropItemGroup,IG_Recovery] ドロップ対象を[回復]分類で2005年当時の回復アイテム実装状況を勘案し入れ替え */ },{ bonus3 bAddMonsterDropItem,501,Rct_Boss,50; bonus3 bAddMonsterDropItem,501,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,502,Rct_Boss,50; bonus3 bAddMonsterDropItem,502,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,503,Rct_Boss,50; bonus3 bAddMonsterDropItem,503,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,507,Rct_Boss,50; bonus3 bAddMonsterDropItem,507,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,508,Rct_Boss,50; bonus3 bAddMonsterDropItem,508,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,509,Rct_Boss,50; bonus3 bAddMonsterDropItem,509,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,520,Rct_Boss,50; bonus3 bAddMonsterDropItem,520,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,521,Rct_Boss,50; bonus3 bAddMonsterDropItem,521,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,522,Rct_Boss,50; bonus3 bAddMonsterDropItem,522,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,544,Rct_Boss,50; bonus3 bAddMonsterDropItem,544,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,545,Rct_Boss,50; bonus3 bAddMonsterDropItem,545,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,546,Rct_Boss,50; bonus3 bAddMonsterDropItem,546,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,547,Rct_Boss,50; bonus3 bAddMonsterDropItem,547,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,548,Rct_Boss,50; bonus3 bAddMonsterDropItem,548,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,549,Rct_Boss,50; bonus3 bAddMonsterDropItem,549,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,550,Rct_Boss,600; bonus3 bAddMonsterDropItem,550,Rct_NonBoss,600; bonus3 bAddMonsterDropItem,569,Rct_Boss,50; bonus3 bAddMonsterDropItem,569,Rct_NonBoss,50; }
+4283,card,天下大将軍カード,6,20,,10,,,,,,,136,,,,,{ /* GS系の場合[ASフリップザコイン]不具合修正依頼となり20160517告知で修正[フリップザコイン]記述ないまま仕様確定 開発国のiteminfo_true.lubは[AL系あるいはGS系の場合、気孔またはフリップザコインの発動率増加]と明記されている */ },{ /*bonus3 bAutoSelfSpell,"GS_GLITTERING",5,200*(getbaseclass(Class) == CLASS_GS); */ bonus3 bAutoSelfSpell,"MO_CALLSPIRITS",5,20+180*(getbaseclass(Class) == CLASS_AL); }
+4284,card,チェペットカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus3 bAutoSpell,"AL_HEAL",5,500; }
+4285,card,チョコカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bFlee,10; bonus bFlee2,5; }
+4286,card,カラ傘カード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_ConFusion,300; if(readparam(bStr) >= 77) { bonus2 bAddRevEff,Eff_ConFusion,600; } }
+4287,card,河童カード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ if(getequiprefinerycnt() <= 5) { bonus bMdef,8; } }
+4288,card,ジェスターカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bInt,2; if(getequiprefinerycnt() >= 9) { bonus bMaxSP,150; } }
+4289,card,キャタピラーカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4290,card,キャットナインテイルカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus bMagicDamageReturn,5; bonus bMdef,3; }
+4291,card,コボルドリーダーカード,6,20,,10,,,,,,,2,,,,,{ /* mob_group 再編対象 */ },{ bonus2 bAddGroup,3,40; }
+4292,card,コボルドアーチャーカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bAddCriticalDamage,10; bonus2 bCriticalRace,Rct_Plant,7; }
+4293,card,クッキーカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bLuk,2; bonus2 bAddSkillDamageRate,"AL_HOLYLIGHT",10; }
+4294,card,キューブカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ if(getbaseclass(Class) == CLASS_NV || getbaseclass(Class) == CLASS_SNV) { bonus3 bRevAutoSelfSpell,"AL_INCAGI",1,1000; } }
+4295,card,クラベンカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Blind,600; }
+4296,card,クランプカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bGetZenyNum2,5; if(equippeditem(4028)) { bonus bStr,3; } }
+4297,card,クルーザーカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bAddCriticalDamage,10; bonus2 bCriticalRace,Rct_Brute,7; }
+4298,card,クリーミーフィアーカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Confusion,600; }
+4299,card,クロックカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ if(getskilllv("CR_AUTOGUARD") <= 9) { bonus3 bRevAutoSpell,"CR_AUTOGUARD",3,300; } if(getskilllv("CR_AUTOGUARD") >= 10) { bonus3 bRevAutoSpell,"CR_AUTOGUARD",10,300; } }
+4300,card,キメラカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Poison,300; if(getbaseclass(Class,2) == CLASS_AS) { bonus2 bAddRevEff,Eff_Poison,600; } }
+4301,card,キラーマンティスカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Bleed,600; }
+4302,card,タオグンカカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bMaxHPrate,100; bonus bDef,-50; bonus bMdef,-50; if(equippeditem(311439)) { bonus2 bAddRace,Rct_Boss,15; bonus2 bAddRace,Rct_NonBoss,15; bonus2 bMagicAddRace,Rct_Boss,15; bonus2 bMagicAddRace,Rct_NonBoss,15; skill "NPC_STONESKIN",2; } }
+4303,card,巨大ウィスパーカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus bFlee,10; if(readparam(bStr) >= 80) { bonus bBaseAtk,20; } if(readparam(bVit) >= 80) { bonus bMaxHPrate,3; } if(readparam(bLuk) >= 80) { bonus bCritical,3; } }
+4304,card,タムランカード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"CR_SHIELDCHARGE",10; bonus2 bAddSkillDamageRate,"CR_SHIELDBOOMERANG",10; bonus bDef,2; }
+4305,card,タートルジェネラルカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,20; bonus2 bAddRace,Rct_NonBoss,20; bonus3 bAutoSpell,"SM_MAGNUM",10,300; if(equippeditem(311439)) { bonus3 bAutoActiveWeapon,311439,200,10000; if(checkactiveitem()) { bonus2 bAddEleWeaponDamageRate,Ele_Fire,20; } } }
+4306,card,トードカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bFlee2,1; if(equippeditem(4014)) { bonus bFlee,18; } }
+4307,card,ビートルカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4308,card,三葉蟲カード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4309,card,フェアリーフカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus bDef,1; bonus2 bSubEle,Ele_Neutral,5; }
+4310,card,パンツァーゴブリンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bAddCriticalDamage,10; bonus2 bCriticalRace,Rct_Demon,7; }
+4311,card,パーメットタートルカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubEle,Ele_Dark,15; bonus2 bSubEle,Ele_Undead,15; }
+4312,card,オットーカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bHit,10; bonus bFlee,3; if(getbaseclass(Class) == CLASS_AL) { bonus2 bCriticalRace,Rct_Undead,9; bonus2 bCriticalRace,Rct_Demon,9; } }
+4313,card,パンクカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ if(getskilllv("WZ_QUAGMIRE") <= 4) { bonus3 bRevAutoSpell,"WZ_QUAGMIRE",1,500; } if(getskilllv("WZ_QUAGMIRE") >= 5) { bonus3 bRevAutoSpell,"WZ_QUAGMIRE",5,500; } }
+4314,card,ペノメナカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Formless,30; bonus2 bMagicSubRace,Rct_Formless,30; if(equippeditem(28929)) { bonus2 bExpRate,Rct_Formless,5; bonus2 bJobRate,Rct_Formless,5; if(getequiprefinerycnt() >= 6) { bonus2 bExpRate,Rct_Formless,5; bonus2 bJobRate,Rct_Formless,5; } if(getequiprefinerycnt() >= 8) { bonus2 bExpRate,Rct_Formless,5; bonus2 bJobRate,Rct_Formless,5; } } }
+4315,card,ペストカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Stone,300; if(readparam(bInt) >= 77) { bonus2 bAddRevEff,Eff_Stone,600; } }
+4316,card,フェイクエンジェルカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4317,card,チンピラカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bAddCriticalDamage,15; if(getbaseclass(Class) == CLASS_TF) { bonus bCritical,4; } }
+4318,card,ストームナイトカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus3 bAutoSpell,"WZ_STORMGUST",1,200; if(equippeditem(311439) == 0) { bonus2 bAddEff,Eff_Freeze,2000; } if(equippeditem(26163)) { if(getskilllv("SU_SPRITEMABLE") >=1) { bonus3 bAutoSpell,"SO_DIAMONDDUST",5,100; } bonus2 bAddSkillDamageRate,"SO_DIAMONDDUST",10*getequiprefinerycnt(); bonus2 bAddEleWeaponDamageRate,Ele_Water,5*getequiprefinerycnt(); } if(equippeditem(311439)) { bonus2 bAddEff,Eff_Freeze,3000; bonus2 bAddRace,Rct_Boss,25; bonus2 bAddRace,Rct_NonBoss,25; } }
+4319,card,フリーズタートルカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus bMaxHP,300; if(getequiprefinerycnt() < 9) { bonus2 bAddSkillDamageRate,"SM_BASH",10; } }
+4320,card,ブラッディナイトカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus3 bAutoSpell,"WZ_METEOR",1,200; }
+4321,card,ハイローゾイストカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bMobClassChange,100; }
+4322,card,ハイオークカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus bShortWeaponDamageReturn,5; bonus bDef,1; }
+4323,card,ハティーベベカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus3 bAutoSpell,"MG_FROSTDIVER",3,500+2500*equippeditem(4324)+1500*equippeditem(300400); }
+4324,card,ハティーカード,6,20,,10,,,,,,,64,,,,,{ /* [魔法攻撃を受けた時、一定確率で敵を状態異常にする] */ },{ bonus2 bAddRevEff,Eff_Freeze,5000; if(equippeditem(311439)) { bonus bMaxHPRate,50; bonus2 bAddRevEff,10000,Eff_Freeze; } }
+4325,card,ハーピーカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubEle,Ele_Neutral,15; bonus2 bAddSkillDamageRate,"MG_NAPALMBEAT",5; }
+4326,card,シーオッターカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,551,Rct_Fish,300; bonus3 bAddMonsterDropItem,544,Rct_Fish,300; bonus2 bItemHealRate,6,50; }
+4327,card,パピヨンカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bNoCastCancel,0; bonus bCastRate,30; bonus2 bAddSkillDamageRate,"MG_FIREWALL",5; }
+4328,card,ヒェグンカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus bFlee,15; bonus bCritical,1; }
+4329,card,フェンダークカード,6,20,,10,,,,,,,2,,,,,{ /* 近接物理攻撃で指定種族倒した時HPSP回復 */ },{ bonus bSPPenaltyUnrig,5; }
+4330,card,黒蛇王カード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bInt,3; bonus2 bResEff,Eff_Blind,10000; bonus2 bResEff,Eff_Curse,10000; if(equippeditem(311439)) { bonus bInt,Joblevel/3; bonus bMdef,Joblevel/3; } }
+4331,card,ヒートタートルカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus bCritical,3; if(getbaseclass(Class) == CLASS_SM) { bonus bFlee2,3; } }
+4332,card,ジャンクポットカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bInt,1; bonus bBaseAtk,5; if(equippeditem(4185) && equippeditem(4293) && equippeditem(4312) && equippeditem(4332)) { bonus bStr,3; bonus bBaseAtk,25; bonus bMaxSP,80; bonus3 bAutoSpell,"AL_CRUCIS",5,100; bonus2 bAddSkillDamageRate,"MO_EXTREMITYFIST",10; if(getbaseclass(Class,2) == CLASS_MO) { bonus bUseSPrate,-10; bonus bNoCastCancel,0; } } }
+4333,card,ベノマスカード,6,20,,10,,,,,,,16,,,,,{ /* 物理攻撃を受けた時自分に状態異常 */ },{ bonus2 bAddRevEff,Eff_Poison,3000; }
+4334,card,ノクシャスカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus2 bSubEle,Ele_Neutral,10; bonus bLongAtkDef,10; }
+4335,card,ピットマンカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bSPPenaltyUnrig,50; bonus2 bAddSkillDamageRate,"WZ_EARTHSPIKE",5; bonus2 bAddSkillDamageRate,"WZ_HEAVENDRIVE",5; }
+4336,card,ウンゴリアントカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bHPrecovRate,10; bonus2 bResEff,Eff_Bleed,10000; }
+4337,card,ポルセリオカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bBaseAtk,25; bonus bDef,-5; }
+4338,card,オブシディアンカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bVit,readparam(bDex)/18; }
+4339,card,ミネラルカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bBaseAtk,-25; bonus bDef,3; }
+4340,card,ベアドールカード,6,20,,10,,,,,,,32,,,,,{ /* セット効果実装済み */ },{ bonus2 bSubRace,Rct_Undead,30; bonus2 bMagicSubRace,Rct_Undead,30; if(equippeditem(28929)) { bonus2 bExpRate,Rct_Undead,5; bonus2 bJobRate,Rct_Undead,5; if(getequiprefinerycnt() >= 6) { bonus2 bExpRate,Rct_Undead,5; bonus2 bJobRate,Rct_Undead,5; } if(getequiprefinerycnt() >= 8) { bonus2 bExpRate,Rct_Undead,5; bonus2 bJobRate,Rct_Undead,5; } } }
+4341,card,メタリンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus3 bAutoSpell,"RG_STRIPWEAPON",1,500; }
+4342,card,RSX-0806カード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bUnbreakableArmor,0; bonus bNoKnockback,0; bonus bVit,3; if(equippeditem(311439)) { bonus bDef,500; bonus2 bResEff,Eff_Freeze,10000; } }
+4343,card,モルデンカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bLuk,2; }
+4344,card,ウィレスカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12058,Rct_Insect,50; }
+4345,card,ヒルウィンドカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bSPPenaltyUnrig,50; bonus2 bAddSkillDamageRate,"MG_THUNDERSTORM",5; bonus2 bAddSkillDamageRate,"WZ_JUPITEL",5; bonus2 bAddSkillDamageRate,"WZ_VERMILION",5; }
+4346,card,イグニゼム=セニアカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bStr,readparam(bInt)/18; }
+4347,card,アルマイア=デュンゼカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12053,Rct_Fish,50; }
+4348,card,ヒュッケバイン=トリスカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ if(equippeditem(4039) == 0 || equippeditem(4210) == 0 || equippeditem(4257) == 0 || equippeditem(4230) == 0 || equippeditem(4348) == 0) { bonus3 bAutoSpell,"RG_STRIPARMOR",1,500; } if(equippeditem(4039) && equippeditem(4210) && equippeditem(4257) && equippeditem(4230) && equippeditem(4348)) { bonus bStr,6; bonus bAgi,4; bonus2 bAddSkillDamageRate,"RG_BACKSTAP",10; if(getskilllv("RG_STRIPARMOR") <= 4) { bonus3 bAutoSpell,"RG_STRIPARMOR",1,500; } if(getskilllv("RG_STRIPARMOR") >= 5) { bonus3 bAutoSpell,"RG_STRIPARMOR",5,500; } if(getbaseclass(Class,2) == CLASS_RG) { bonus bUseSPrate,-20; } } }
+4349,card,イレンド=エベシカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bRevAutoSelfSpell,"AL_PNEUMA",1,500; }
+4350,card,ラウレル=ヴィンダーカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bSPPenaltyUnrig,50; bonus2 bAddSkillDamageRate,"WZ_FROSTNOVA",3; bonus2 bAddSkillDamageRate,"WZ_STORMGUST",3; }
+4351,card,カヴァク=イカルスカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus bFlee,10; if(getequiprefinerycnt() <= 4) { bonus bFlee,10; bonus bFlee2,1; } }
+4352,card,イグニゼム=セニア（MVP）カード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus bMaxHPrate,10; bonus bMaxSPrate,10; bonus2 bHPPenaltyTime,10000,-50; bonus2 bSPPenaltyTime,10000,-10; if(equippeditem(22178)) { skill "SM_MAGNUM",10; bonus2 bHPPenaltyTime,10000,-5000; bonus2 bSPPenaltyTime,10000,-100; if(BaseLevel <= 99) { bonus bStr,3*getequiprefinerycnt(); bonus bFlee,5*getequiprefinerycnt(); } if(BaseLevel >= 100) { bonus bStr,10*getequiprefinerycnt(); bonus bFlee,15*getequiprefinerycnt(); } } if(equippeditem(29724)) { bonus bMaxHPrate,20; bonus bMaxSPrate,20; bonus2 bHPPenaltyTime,10000,-5000; bonus2 bSPPenaltyTime,10000,-100; } }
+4353,card,リムーバカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bMaxHP,800-40*getequiprefinerycnt(); bonus bHPrecovRate,10; }
+4354,card,ジェミニ-S58カード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ if(readparam(bAgi) >= 90) { bonus2 bResEff,Eff_Stun,3000; bonus2 bResEff,Eff_Silence,3000; } if(readparam(bVit) >= 80) { bonus2 bResEff,Eff_Stone,5000; bonus2 bResEff,Eff_Sleep,5000; } }
+4355,card,グレムリンカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,12043,Rct_Brute,50; }
+4356,card,ビホルダーカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ skill "SA_CASTCANCEL",1; }
+4357,card,セイレン=ウィンザー（MVP）カード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bMaxHPrate,-50; skill "LK_BERSERK",1; if(equippeditem(29724)) { bonus bBaseAtk,100; skill "LK_CONCENTRATION",5; } }
+4358,card,セイレン=ウィンザーカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bStr,-6+getequiprefinerycnt(); }
+4359,card,エレメス=ガイル（MVP）カード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ skill "AS_CLOAKING",3; if(equippeditem(29724)) { bonus2 bSubEle,Ele_Water,50; bonus2 bSubEle,Ele_Earth,50; skill "AS_ENCHANTPOISON",10; } }
+4360,card,エレメス=ガイルカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bCriticalRace,Rct_Human,10; }
+4361,card,ハワード=アルトアイゼン（MVP）カード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bBreakWeaponRate,1000; bonus bBreakArmorRate,700; if(equippeditem(29724)) { bonus2 bAddRace,Rct_NonBoss,25; skill "WS_MELTDOWN",10; } }
+4362,card,ハワード=アルトアイゼンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bHit,30; bonus bAspdAddRate,-5; }
+4363,card,マーガレッタ=ソリン（MVP）カード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus4 bAutoSpell,"HP_ASSUMPTIO",5,500,EAS_REVENGE|EAS_WEAPON|EAS_MAGIC|EAS_SELF|EAS_NOSP; if(equippeditem(29724)) { bonus bMaxHPrate,50; bonus2 bResEff,Eff_Freeze,10000; skill "HP_ASSUMPTIO",5; } }
+4364,card,マーガレッタ=ソリンカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bInt,1; bonus4 bAutoSpell,"PR_LEXDIVINA",5,1500,EAS_REVENGE|EAS_MAGIC|EAS_NOSP; }
+4365,card,カトリーヌ=ケイロン（MVP）カード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus2 bIgnoreMDefRace,Rct_NonBoss,100; bonus bCastRate,100; bonus bSPrecovRate,-100; bonus bSPPenaltyUnrig,2000; if(equippeditem(29724)) { bonus bMatk,100; skill "HW_GANBANTEIN",1; } }
+4366,card,カトリーヌ=ケイロンカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bCastRate,-1*getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus bMatkRate,2; } }
+4367,card,セシル=ディモン（MVP）カード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus2 bHPDrainRate,5,20; bonus bHPrecovRate,-100; if(equippeditem(29724)) { bonus2 bAddRace,Rct_Boss,25; skill "SN_SIGHT",10; } }
+4368,card,セシル=ディモンカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bHit,-30; bonus bAspdAddRate,5; }
+4369,card,ヴェナートカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bLuk,readparam(bAgi)/18; }
+4370,card,ディミックカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bVit,-5+getequiprefinerycnt(); }
+4371,card,アークダムカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bBaseAtk,10; bonus bCastRate,20; if(equippeditem(4311) && equippeditem(4319) && equippeditem(4331) && equippeditem(4371)) { bonus bStr,1; bonus bInt,1; bonus bDef,2; bonus bSPrecovRate,10; bonus bCastRate,-10; bonus2 bAddSkillDamageRate,"PA_SHIELDCHAIN",10; bonus2 bAddSkillDamageRate,"PA_SACRIFICE",10; if(getbaseclass(Class,2) == CLASS_CR) { bonus bDefEle,Ele_Holy; } } }
+4372,card,ペクソジンカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ callfunc "AddSkillHealRate",30; bonus bUseSPrate,15; if(equippeditem(311439)) { bonus2 bAddSpCost,"AB_CHEAL",-50; } }
+4373,card,チュンイーカード,6,20,,10,,,,,,,4,,,,,{ /* 効果実装済み */ },{ bonus bLuk,-5+getequiprefinerycnt(); bonus bCritical,getequiprefinerycnt(); }
+4374,card,ヴェスパーカード,6,20,,10,,,,,,,769,,,,,{ /* セット効果実装済み */ },{ bonus bDex,2; bonus2 bIgnoreMDefRace,Rct_Boss,30; if(equippeditem(311439)) { bonus2 bMagicAddRace,Rct_Boss,15; } }
+4375,card,オークベイビーカード,6,20,,10,,,,,,,4,,,,,{ /* セット効果実装済み */ },{ bonus bFlee,10; bonus2 bSubEle,Ele_Neutral,10; if(getequiprefinerycnt() >= 9) { bonus bFlee,5; bonus2 bSubEle,Ele_Neutral,5; } if(equippeditem(29012)) { if(getequiprefinerycnt() >= 9) { bonus bDex,10; bonus bFlee,5; bonus2 bSubEle,Ele_Neutral,5; } } }
+4376,card,レディータニーカード,6,20,,10,,,,,,,64,,,,,{ /* セット効果実装済み */ },{ bonus bMaxSPrate,50; bonus3 bAddMonsterDropItem,513,Rct_NonBoss,200; bonus bMaxHPrate,-40; bonus2 bItemHealRate,9,100; if(equippeditem(311439)) { callfunc "MeleeRct_All",30; bonus2 bItemHealRate,9,30*BaseLevel; } }
+4377,card,グリーンイグアナカード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12063,Rct_Formless,50; }
+4378,card,ゴールドオシドスカード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus bMaxHPrate,4; bonus bMaxSPrate,4; if(getequiprefinerycnt() <= 4) { bonus bMaxHPrate,4; bonus bMaxSPrate,4; bonus bHPrecovRate,5; bonus bSPrecovRate,5; } }
+4379,card,ブルーオシドスカード,6,20,,10,,,,,,,769,,,,,{ /* 効果実装済み */ },{ bonus bMaxSP,40; if(getequiprefinerycnt() <= 4) { bonus bMaxSP,40; bonus bSPrecovRate,5; } }
+4380,card,レッドペロスカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bSPPenaltyUnrig,50; bonus2 bAddSkillDamageRate,"WZ_FIREPILLAR",5; bonus2 bAddSkillDamageRate,"WZ_METEOR",5; }
+4381,card,グリーンペロスカード,6,20,,10,,,,,,,64,,,,,{},{ bonus bMaxHPrate,10; bonus bVit,1; if(equippeditem(4178) && equippeditem(4297) && equippeditem(4234) && equippeditem(4252) && equippeditem(4381)) { bonus bDex,5; bonus2 bAddSkillDamageRate,"CG_ARROWVULCAN",5; bonus2 bAddSkillDamageRate,"DC_THROWARROW",10; bonus2 bAddSkillDamageRate,"BA_MUSICALSTRIKE",10; if(getbaseclass(Class,2) == CLASS_BA || getbaseclass(Class,2) == CLASS_DC) { bonus3 bRevAutoSelfSpell,"CG_TAROTCARD",2,500; } } }
+4382,card,イエローノーバスカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus bMaxHP,500; bonus bHPrecovRate,10; if(equippeditem(4208) && equippeditem(4258) && equippeditem(4325) && equippeditem(4327) && equippeditem(4382)) { bonus bInt,3; bonus2 bAddSkillDamageRate,"WZ_HEAVENDRIVE",10; bonus2 bAddSkillDamageRate,"MG_THUNDERSTORM",10; if(getbaseclass(Class,2) == CLASS_SA) { bonus bCastRate,-20; bonus bMagicDamageReturn,20; bonus3 bAddMonsterDropItem,715,Rct_NonBoss,100; bonus3 bAddMonsterDropItem,716,Rct_NonBoss,100; } } }
+4383,card,レッドノーバスカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus2 bAddRevEff,Eff_Confusion,3000; bonus2 bAddEff2,Eff_Confusion,3000; }
+4384,card,ハイドラランサーカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAutoSpell,"SA_SPELLBREAKER",1,1000; }
+4385,card,ドラゴンの卵カード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,12048,Rct_Dragon,50; }
+4386,card,データルザウルスカード,6,20,,10,,,,,,,16,,,,,{ /* セット効果実装済み */ },{ bonus2 bResEff,Eff_Freeze,10000; if(equippeditem(311439) == 0) { bonus4 bAutoSpell,"SA_LANDPROTECTOR",1,500,EAS_REVENGE|EAS_MAGIC|EAS_SELF|EAS_NOSP; } bonus bMdef,-20; if(equippeditem(311439)) { bonus bMaxHPrate,50; bonus4 bAutoSpell,"SA_LANDPROTECTOR",1,1000,EAS_REVENGE|EAS_MAGIC|EAS_SELF|EAS_NOSP; } }
+4387,card,エンシェントミミックカード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bAgi,readparam(bLuk)/18; }
+4388,card,デスワードカード,6,20,,10,,,,,,,2,,,,,{ /* セット効果実装済み */ },{ bonus bSPPenaltyUnrig,50; bonus2 bAddSkillDamageRate,"MG_NAPALMBEAT",5; bonus2 bAddSkillDamageRate,"MG_SOULSTRIKE",5; bonus2 bAddSkillDamageRate,"HW_NAPALMVULCAN",5; }
+4389,card,プラズマカード,6,20,,10,,,,,,,136,,,,,{ /* 効果実装済み */ },{ bonus3 bAddMonsterDropItem,12118,Rct_Boss,50; bonus3 bAddMonsterDropItem,12119,Rct_Boss,50; bonus3 bAddMonsterDropItem,12120,Rct_Boss,50; bonus3 bAddMonsterDropItem,12121,Rct_Boss,50; bonus3 bAddMonsterDropItem,12118,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,12119,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,12120,Rct_NonBoss,50; bonus3 bAddMonsterDropItem,12121,Rct_NonBoss,50; }
+4390,card,ブリーズカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bBaseAtk,5; bonus2 bAddEff,Eff_Bleed,500; }
+4391,card,執行する者カード,6,20,,10,,,,,,,136,,,,,{ /* セット効果実装済み */ },{ bonus3 bAddMonsterDropItem,12068,Rct_Angel,50; }
+4392,card,監視する者カード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bDex,readparam(bVit)/18; }
+4393,card,保護する者カード,6,20,,10,,,,,,,16,,,,,{ /* 効果実装済み */ },{ bonus bInt,readparam(bStr)/18; }
+4394,card,慰める者カード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ if(getbaseclass(Class,2) == CLASS_PR) { bonus3 bAutoSpell,"CR_GRANDCROSS",5,100; } }
+4395,card,タナトスの悲しみカード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus bBaseAtk,5; bonus3 bAutoSpell,"AL_DECAGI",3,500; }
+4396,card,タナトスの憎悪カード,6,20,,10,,,,,,,64,,,,,{ /* 効果実装済み */ },{ bonus bAgi,-5+getequiprefinerycnt(); }
+4397,card,タナトスの絶望カード,6,20,,10,,,,,,,32,,,,,{ /* 効果実装済み */ },{ bonus bInt,-6+getequiprefinerycnt(); }
+4398,card,タナトスの苦悩カード,6,20,,10,,,,,,,2,,,,,{ /* 効果実装済み */ },{ bonus2 bMagicAddRace,Rct_Angel,10; }
+4399,card,魔剣士タナトスの思念体カード,6,20,,10,,,,,,,2,,,,,{ /* [bonus bNoReflect]存在しない[神力状態EFST_EP16_DEF] */ },{ bonus bDefRatioAtkRace,Rct_Boss; bonus bDefRatioAtkRace,Rct_NonBoss; bonus bDef,-30; bonus bFlee,-30; bonus2 bSPDrainValue,100,-1; if(equippeditem(311074)) { bonus bBaseAtk,BaseLevel; callfunc "refskllsubdamagerate",10; } if(equippeditem(310197)) { bonus4 bAutoActiveItem,4399,200,10000,EAS_WEAPON|EAS_MAGIC|EAS_NORMAL|EAS_SKILL; if(checkactiveitem()) { misceffect 220,""; } } }
+
+修正
+1629,weapon,ジェントルマンの杖,5,20,,500,40:125,,1,1,134316820,2,2,4,50,10,1,{ /* セット効果実装済み */ },{ bonus bDex,1; if(equippeditem(5045)) { bonus bDex,2; bonus bInt,2; bonus bSPrecovRate,5; bonus bMatkRate,getequiprefinerycnt(); } if(equippeditem(1629) && equippeditem(18866)) { if(getequiprefinerycnt() >= 10) { bonus bCastrate,-20; } } }
+1675,weapon,ジェントルマンの杖,5,20,,500,40:125,,1,3,134316820,2,2,4,50,10,1,{ /* セット効果実装済み */ },{ bonus bDex,1; if(equippeditem(5045)) { bonus bDex,2; bonus bInt,2; bonus bSPrecovRate,5; bonus bMatkRate,getequiprefinerycnt(); } if(equippeditem(1675) && equippeditem(18866)) { if(getequiprefinerycnt() >= 10) { bonus bCastrate,-20; } } }
+18866,head,オウルデュークのシルクハット,4,20,,500,,15:0,,1,2074075135,2,256,,70,982,1,{ /* [ジェントルマンの杖]は全体に影響 [片目眼鏡]は効果自体変更 [オウルバロンカード][オウルデュークカード]は追加 */ },{ bonus bAgi,1; bonus bInt,1; if(equippeditem(1629) == 0 || equippeditem(1675) == 0) { bonus bStr,100; if(equippeditem(2239) == 0) { bonus bStr,100; if(getequiprefinerycnt() <= 5) { bonus4 bAutoSpell,"HW_MAGICPOWER",2,100,EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } if(getequiprefinerycnt() >= 6) { bonus4 bAutoSpell,"HW_MAGICPOWER",2,100+100*getequiprefinerycnt(),EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } if(equippeditem(4238)) { bonus4 bAutoSpell,"HW_MAGICPOWER",4,100,EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } if(equippeditem(4237) && equippeditem(4238)) { bonus4 bAutoSpell,"HW_MAGICPOWER",6,100,EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } } if(equippeditem(2239)) { bonus bAgi,100; if(getequiprefinerycnt() <= 5) { bonus4 bAutoSpell,"HW_MAGICPOWER",2,200,EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } if(getequiprefinerycnt() >= 6) { bonus4 bAutoSpell,"HW_MAGICPOWER",2,200+100*getequiprefinerycnt(),EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } } if(equippeditem(4238)) { bonus4 bAutoSpell,"HW_MAGICPOWER",4,100,EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } if(equippeditem(4237) && equippeditem(4238)) { bonus4 bAutoSpell,"HW_MAGICPOWER",6,100,EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } } if(equippeditem(1629) || equippeditem(1675)) { if(equippeditem(2239) == 0) { if(getequiprefinerycnt() <= 5) { bonus4 bAutoSpell,"HW_MAGICPOWER",2,100+100*getequiprefinerycnt(4),EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } if(getequiprefinerycnt() >= 6) { bonus4 bAutoSpell,"HW_MAGICPOWER",2,100+100*getequiprefinerycnt()+100*getequiprefinerycnt(4),EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } if(equippeditem(4238)) { bonus4 bAutoSpell,"HW_MAGICPOWER",4,100+100*getequiprefinerycnt(4),EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } if(equippeditem(4237) && equippeditem(4238)) { bonus4 bAutoSpell,"HW_MAGICPOWER",6,100+100*getequiprefinerycnt(4),EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } } if(equippeditem(2239)) { if(getequiprefinerycnt() <= 5) { bonus4 bAutoSpell,"HW_MAGICPOWER",2,200+100*getequiprefinerycnt(4),EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } if(getequiprefinerycnt() >= 6) { bonus4 bAutoSpell,"HW_MAGICPOWER",2,200+100*getequiprefinerycnt()+100*getequiprefinerycnt(4),EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } } if(equippeditem(4238)) { bonus4 bAutoSpell,"HW_MAGICPOWER",4,100+100*getequiprefinerycnt(4),EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } if(equippeditem(4237) && equippeditem(4238)) { bonus4 bAutoSpell,"HW_MAGICPOWER",6,100+100*getequiprefinerycnt(4),EAS_ATTACK|EAS_MAGIC|EAS_SELF|EAS_NOSP; } } }
+19272,head,ガーデンオブエデン,4,20,,400,,5:0,,1,2074075135,2,256,,100,1653,1,{ /* 超越装備 */ },{ bonus bInt,5; bonus bDex,5; bonus2 bAddEleMagicDamageRate,Ele_All,10; callfunc "bonus2bIgnoreMdefRace",20; if(getequiprefinerycnt() >= 7) { bonus2 bAddEleMagicDamageRate,Ele_All,15; callfunc "bonus2bIgnoreMdefRace",30; } if(getequiprefinerycnt() >= 9) { bonus bCastRate,-15; callfunc "bonus2bIgnoreMdefRace",50; } if(equippeditem(4365)) { bonus bCastRate,-100; bonus2 bAddSkillCoolDown,"WL_TELEKINESIS_INTENSE",-120000; } },{ if(equippeditem(4365)) { sc_end 635; } }
+20797,robe,エスランのシャツ,4,400000,,150,,0:10,,1,2074075135,2,4,,1,0,1,{ /* セット効果実装済み */ },{ bonus bMaxHPrate,2; if(getequiprefinerycnt() >= 7) { bonus bMaxHPrate,4; } if(getequiprefinerycnt() >= 8) { bonus bMaxHPrate,6; } if(getequiprefinerycnt() >= 9) { bonus bMaxHPrate,8; } if(getequiprefinerycnt() >= 10) { bonus bNoKnockback,0; } if(equippeditem(4174)) { bonus2 bSubEle,Ele_Fire,50; bonus2 bSubEle,Ele_Water,50; bonus2 bSubEle,Ele_Wind,50; bonus2 bSubEle,Ele_Earth,50; bonus2 bSubEle,Ele_Poison,50; bonus2 bSubEle,Ele_Holy,50; bonus2 bSubEle,Ele_Dark,50; bonus2 bSubEle,Ele_Ghost,50; bonus2 bSubEle,Ele_Undead,50; } }
+28929,shield,幸福の盾,4,20,,3500,,150:10,,1,2074075135,2,32,,90,1,1,{ /* セット効果実装済み */ },{}
+29012,ench,ハイレベル,6,,,,,,,,,,65535,,,,,{ /* セット効果実装済み */ },{}
+300280,card,破損したタナトスの記憶カード,6,20,,10,,,,,,,769,,,,,{ /* [武器攻撃力][オブリビオンカース][神力状態EFST_EP16_DEF] */ },{ bonus bAtkRate,10; bonus bNoSizeFix,0; if(equippeditem(311074)) { bonus3 bAutoActiveWeapon,300280,100,5000; if(checkactiveitem()) { } } if(equippeditem(310197)) { } }
+300401,card,封印されたアモンラーカード,6,20,,10,,,,,,,64,,,,,{ /* 優先順位[アプローズサンダル]>[異境の統轄者] */ },{ bonus bAllStatus,1; if(equippeditem(22071) == 0) { if(equippeditem(311439) == 0) { if(readparam(bInt) <= 98) { bonus3 bRevAutoSelfSpell,"PR_KYRIE",10,300; bonus bStr,100; } if(readparam(bInt) >= 99) { bonus3 bRevAutoSelfSpell,"PR_KYRIE",10,1000; } } if(equippeditem(311439)) { if(readparam(bInt) <= 98) { bonus3 bRevAutoSelfSpell,"PR_KYRIE",10,1000; bonus bAgi,100; } if(readparam(bInt) >= 99) { bonus3 bRevAutoSelfSpell,"PR_KYRIE",10,2000; } } } if(equippeditem(22071)) { bonus bCastrate,-10; bonus bAllStatus,getequiprefinerycnt(); } if(equippeditem(311439)) { bonus bMaxHPrate,25; } }
+312305,ench,悠遠なる天上の都,6,,,,,,,,,,65535,,,,,{ /* [神力状態EFST_EP16_DEF] */ },{ bonus2 bAddSize,Size_Small,15; bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Big,15; bonus2 bMagicAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Medium,15; bonus2 bMagicAddSize,Size_Big,15; if(equippeditem(27127) == 0) { bonus4 bAutoActiveItem,312305,100,10000,EAS_ATTACK|EAS_REVENGE|EAS_WEAPON|EAS_MAGIC|EAS_NORMAL|EAS_SKILL; if(checkactiveitem()) { misceffect 220,""; } } if(equippeditem(27127)) { bonus4 bAutoActiveItem,312305,100+100,10000,EAS_ATTACK|EAS_REVENGE|EAS_WEAPON|EAS_MAGIC|EAS_NORMAL|EAS_SKILL; if(checkactiveitem()) { misceffect 220,""; } } }
+313328,ench,星界の暴君,6,,,,,,,,,,65535,,,,,{ /* 240604 [神力状態EFST_EP16_DEF] セット効果発動率上昇は+150*ench数で調整 [暴走した魔力]などのステ+200系と同じ扱いと判断し重複分発動率が上がる仮定 misceffectオレンジ色十字エフェクト */ },{ bonus2 bAddEle,Ele_All,15; bonus2 bMagicAddEle,Ele_All,15; bonus4 bAutoActiveItem,313328,150+150*(equippeditem(312045) + equippeditem(312046) + equippeditem(312047) + equippeditem(312048) + equippeditem(312049)),10000,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC|EAS_NORMAL|EAS_SKILL; if(checkactiveitem()) { misceffect 245,""; bonus bAllStatus,BaseLevel/10; bonus bMaxHPrate,BaseLevel/10; bonus bFlee,10*(BaseLevel/10); bonus bBaseAtk,10*(BaseLevel/10); bonus bMatk,10*(BaseLevel/10); } }
+640030,weapon,メロンスタッフ,9,20,,2400,120:270,,1,1,142705408,2,34,4,100,23,1,{ /* 効果実装済み */ },{ bonus4 bAutoActiveItem,640030,500,5000,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC|EAS_NORMAL|EAS_SKILL; if(checkactiveitem()) { misceffect 209,""; showmessage "豊作☆メロ～～～ン!!"; bonus bUseSPrate,-100; bonus2 bSPPenaltyTime,1000,-100; } bonus2 bAddRace,Rct_Boss,10*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,10*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,5*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,5*getequiprefinerycnt(); callfunc "AddSkillHealRate",6*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { callfunc "bonus2bIgnoreDefRace",50; callfunc "bonus2bIgnoreMdefRace",50; } if(getequiprefinerycnt() >= 9) { callfunc "bonus2bIgnoreDefRace",50; callfunc "bonus2bIgnoreMdefRace",50; } }
+470312,shoes,フシャスラワルヤ,4,20,,700,,25:15,,1,2074075135,2,64,,100,,1,{ /* 241112 [神力状態EFST_EP16_DEF] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player,10; bonus2 bMagicSubRace,Rct_Player,10; bonus2 bAddRace,Rct_Boss,40; bonus2 bAddRace,Rct_NonBoss,40; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; bonus bAllStatus,3*getequiprefinerycnt(); if(getequiprefinerycnt() >= 5) { bonus bMaxHPrate,15; bonus bSkillDelayRate,-15; } if(getequiprefinerycnt() >= 7) { bonus bMaxHPrate,25; bonus bSkillDelayRate,-25; } if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Boss,30; bonus2 bAddRace,Rct_NonBoss,30; bonus2 bMagicAddRace,Rct_Boss,30; bonus2 bMagicAddRace,Rct_NonBoss,30; } if(getequiprefinerycnt() >= 10) { bonus2 bAddSize,Size_Small,15; bonus2 bAddSize,Size_Medium,15; bonus2 bAddSize,Size_Big,15; bonus2 bMagicAddSize,Size_Small,15; bonus2 bMagicAddSize,Size_Medium,15; bonus2 bMagicAddSize,Size_Big,15; } bonus3 bAutoActiveWeapon,470312,100,10000; bonus3 bAutoActiveMagic,470312,100,10000; if(checkactiveitem()) { misceffect 220,""; } }
+480345,robe,神獣のマント：春,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力状態EFST_EP16_DEF] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; if(readparam(bPow) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bPow,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480345,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480346,robe,神獣のマント：夏,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力状態EFST_EP16_DEF] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; if(readparam(bCon) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bCon,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480346,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480347,robe,神獣のマント：秋,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力状態EFST_EP16_DEF] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; if(readparam(bSpl) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bSpl,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480347,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480348,robe,神獣のマント：冬,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力状態EFST_EP16_DEF] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; if(readparam(bCrt) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bCrt,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480348,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480349,robe,生命の循環：春,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力状態EFST_EP16_DEF] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; if(readparam(bPow) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bPow,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480349,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480350,robe,生命の循環：夏,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力状態EFST_EP16_DEF] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; if(readparam(bCon) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bCon,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480350,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480351,robe,生命の循環：秋,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力状態EFST_EP16_DEF] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; if(readparam(bSpl) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bSpl,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480351,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+480352,robe,生命の循環：冬,4,20,,400,,38:0,,1,2074075008,2,4,,200,,1,{ /* 250128 [神力状態EFST_EP16_DEF] */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; if(readparam(bCrt) >= 100) { bonus bAspdAddRate,20; bonus bSkillDelayRate,-25; } bonus bMaxHPrate,2*getequiprefinerycnt(); bonus bMaxSPrate,2*getequiprefinerycnt(); bonus bCrt,2*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAllStatus,10; bonus2 bAddEleWeaponDamageRate,Ele_All,10; bonus2 bAddEleMagicDamageRate,Ele_All,10; } if(getequiprefinerycnt() >= 9) { bonus2 bAddEleWeaponDamageRate,Ele_All,15; bonus2 bAddEleMagicDamageRate,Ele_All,15; } if(getequiprefinerycnt() >= 10) { } if(equippeditem(490132) || equippeditem(490133) || equippeditem(490137) || equippeditem(490136) || equippeditem(490134) || equippeditem(490131)) { bonus4 bAutoActiveItem,480352,100,1,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC; if(checkactiveitem()) { misceffect 220,""; sc_start 390,20000,1; } } }
+
+実装
+490244,acc,枢機卿の指輪,4,20,,100,,0:0,,1,2074075008,2,136,,100,,0,{ /* 効果実装済み */ },{ bonus bSpl,3; callfunc "AddSkillHealRate",15; bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bSubRace,Rct_Player_Human,3; bonus2 bMagicSubRace,Rct_Player_Human,3; bonus2 bSubRace,Rct_Player_Doram,3; bonus2 bMagicSubRace,Rct_Player_Doram,3; bonus2 bAddFixCastRate,"AB_ORATIO",-100; bonus2 bAddSkillDamageRate,"CD_ARBITRIUM",BaseLevel/10; bonus2 bAddSkillDamageRate,"CD_PNEUMATICUS_PROCELLA",BaseLevel/10; bonus2 bAddSkillDamageRate,"CD_FRAMEN",1; }
+
+mob_group_db.txt
+//2025/04/15 アップデート
+//1ゴブリン	2オーク(ボス以外)	3コボルド	4ゴーレム	5ガーディアン
+//6カニ		7お化け貝		8ヒトデ		9ムナック	10タートル
+//11スカラバ
+//[bonus2 bAddDamageClass][bonus2 bAddMagicDamageClass][bonus2 bAddDefClass][bonus2 bAddMdefClass]同じ効果になる
+//============================================================
+//ID,JName,GROUP_ID
+// ID = 1		//4155#ゴブリンリーダーカード#
+1122,ゴブリン長男,1
+1123,ゴブリン次男,1
+1124,ゴブリン三男,1
+1125,ゴブリン四男,1
+1126,ゴブリン五男,1
+1245,クリスマスゴブリン,1
+1258,ゴブリンアーチャー,1
+1280,ゴブリンライダー,1
+1299,ゴブリンリーダー,1
+1308,パンツァーゴブリン,1
+1534,ゴブリン長男,1
+1535,ゴブリン次男,1
+1536,ゴブリン三男,1
+1537,ゴブリン四男,1
+1538,ゴブリン五男,1
+1539,ゴブリンリーダー,1
+1557,ロータージャイロ,1
+1577,ゴブリンアーチャー,1
+1607,クリスマスゴブリン,1
+
+//============================================================
+// ID = 2		//4255#オークレディカード#
+1023,オークウォリアー,2
+1152,オークスケルトン,2
+1153,オークゾンビ,2
+1189,オークアーチャー,2
+1213,ハイオーク,2
+1273,オークレディ,2
+1588,クリスマスオーク,2
+1686,オークベイビー,2
+
+//============================================================
+//ID = 3 		//4291#コボルドリーダーカード#
+1133,アックスコボルド,3
+1134,ハンマーコボルド,3
+1135,メイスコボルド,3
+1282,コボルドアーチャー,3
+1296,コボルドリーダー,3
+1545,アックスコボルド,3
+1546,ハンマーコボルド,3
+1547,メイスコボルド,3
+1548,コボルドリーダー,3
+//調査必要
+//2284,JT_GLD_KOBOLD_1,3
+//2285,JT_GLD_KOBOLD_2,3
+//2286,JT_GLD_KOBOLD_3,3
+//2287,JT_GLD_KOBOLD_ARCHER,3
+
+//============================================================
+//ID = 4		//4184#ラーヴァゴーレムカード#
+1040,ゴーレム,4
+1278,スタラクタイトゴーレム,4
+1366,ラーヴァゴーレム,4
+1497,ウドゥンゴーレム,4
+1540,ゴーレム,4
+1549,ラーヴァゴーレム,4
+2024,ブラディウムゴーレム,4
+
+//============================================================
+//ID = 5		//4231#土精カード#
+1285,アーチャーガーディアン,5
+1286,ナイトガーディアン,5
+1287,ソルジャーガーディアン,5
+1899,ガーディアン,5
+
+//============================================================
+//ID = 6		//4153#カニカード#
+1073,カニ,6
+
+//============================================================
+//ID = 7		//4273#お化け貝カード#
+1074,お化け貝,7
+
+//============================================================
+//ID = 8		//4247#ヒトデカード#
+1266,ヒトデ,8
+
+//============================================================
+//ID = 9		//4212#ボンゴンカード#
+1026,ムナック,9
+1610,ムナック,9
+
+//============================================================
+//ID = 10		//18531#たれパーメットタートル#
+1312,タートルジェネラル,10
+1314,パーメットタートル,10
+1315,アサルトタートル,10
+1316,ソリッドタートル,10
+1318,ヒートタートル,10
+1319,フリーズタートル,10
+
+//============================================================
+//ID = 11		//4507#女王スカラバカード# 19023#女王スカラバの兜# 300335#封印された女王スカラバカード#
+2083,一角スカラバ,11
+2084,双角スカラバ,11
+2085,鹿角スカラバ,11
+2086,剛角スカラバ,11
+2087,女王スカラバ,11
+2144,鹿角スカラバ,11
+2145,剛角スカラバ,11
+2161,ヘラクレススカラバ,11
+2162,コーカサススカラバ,11
+2163,アトラススカラバ,11
+2164,レギウススカラバ,11
+2165,女帝スカラバ,11
+2170,アトラススカラバ,11
+2171,レギウススカラバ,11
+2172,ヘラクレススカラバ,11
+2173,コーカサススカラバ,11
+
+2025/04/15 新規アイテム(定義のみ)
+200608,item,装備精錬値継承チケットの箱,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+1002063,item,装備精錬値継承チケット,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104240,item,ウィワートゥス・フィデス・カタールへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104241,item,ウィワートゥス・フィデス・カタールへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104242,item,ウィワートゥス・フィデス・ランスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104243,item,ウィワートゥス・フィデス・ランスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104244,item,ウィワートゥス・フィデス・ツーハンドスタッフへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104245,item,ウィワートゥス・フィデス・ツーハンドスタッフへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104246,item,ウィワートゥス・フィデス・クロスボウへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104247,item,ウィワートゥス・フィデス・クロスボウへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104248,item,ウィワートゥス・フィデス・バリスタへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104249,item,ウィワートゥス・フィデス・バリスタへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104250,item,ウィワートゥス・フィデス・レイピアへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104251,item,ウィワートゥス・フィデス・レイピアへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104252,item,ウィワートゥス・フィデス・アックスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104253,item,ウィワートゥス・フィデス・アックスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104254,item,ウィワートゥス・フィデス・ガーディアンスピアへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104255,item,ウィワートゥス・フィデス・ガーディアンスピアへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104256,item,ウィワートゥス・フィデス・マジックブックへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104257,item,ウィワートゥス・フィデス・マジックブックへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104258,item,ウィワートゥス・フィデス・ワンドへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104259,item,ウィワートゥス・フィデス・ワンドへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104260,item,ウィワートゥス・フィデス・ナックルへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104261,item,ウィワートゥス・フィデス・ナックルへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104262,item,ウィワートゥス・フィデス・バイオリンへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104263,item,ウィワートゥス・フィデス・バイオリンへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104264,item,ウィワートゥス・フィデス・チェインロープへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104265,item,ウィワートゥス・フィデス・チェインロープへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104266,item,ウィワートゥス・フィデス・スターダストブックへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104267,item,ウィワートゥス・フィデス・スターダストブックへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104268,item,ウィワートゥス・フィデス・ソウルスティックへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104269,item,ウィワートゥス・フィデス・ソウルスティックへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104270,item,ウィワートゥス・フィデス・ダガーへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104271,item,ウィワートゥス・フィデス・ダガーへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104272,item,ウィワートゥス・フィデス・フォックステイルへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104273,item,ウィワートゥス・フィデス・フォックステイルへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104274,item,ウィワートゥス・フィデス・メイスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104275,item,ウィワートゥス・フィデス・メイスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104276,item,ウィワートゥス・フィデス・ライフルへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104277,item,ウィワートゥス・フィデス・ライフルへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104278,item,ガーディアンナイツクレイモアへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104279,item,ガーディアンナイツクレイモアへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104280,item,ガーディアンナイツスピアへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104281,item,ガーディアンナイツスピアへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104282,item,ガーディアンナイツアックスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104283,item,ガーディアンナイツアックスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104284,item,ロイヤルクレリックスタッフへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104285,item,ロイヤルクレリックスタッフへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104286,item,ロイヤルマジシャンワンドへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104287,item,ロイヤルマジシャンワンドへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104288,item,ロイヤルフォックステイルへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104289,item,ロイヤルフォックステイルへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104290,item,ロイヤルカタールへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104291,item,ロイヤルカタールへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104292,item,ロイヤルマジシャンダガーへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104293,item,ロイヤルマジシャンダガーへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104294,item,ロイヤルナックルへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104295,item,ロイヤルナックルへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104296,item,ガーディアンアルケミックスタッフへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104297,item,ガーディアンアルケミックスタッフへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104298,item,ガーディアンナイツアーチャーボウへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104299,item,ガーディアンナイツアーチャーボウへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104300,item,ロイヤルウィップへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104301,item,ロイヤルウィップへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104302,item,ロイヤルチェロへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104303,item,ロイヤルチェロへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104304,item,時間のサークレット(ドラゴンナイト)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104305,item,時間のサークレット(ドラゴンナイト)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104306,item,時間のサークレット(インペリアルガード)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104307,item,時間のサークレット(インペリアルガード)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104308,item,時間のサークレット(マイスター)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104309,item,時間のサークレット(マイスター)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104310,item,時間のサークレット(バイオロ)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104311,item,時間のサークレット(バイオロ)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104312,item,時間のサークレット(シャドウクロス)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104313,item,時間のサークレット(シャドウクロス)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104314,item,時間のサークレット(アビスチェイサー)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104315,item,時間のサークレット(アビスチェイサー)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104316,item,時間のサークレット(カーディナル)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104317,item,時間のサークレット(カーディナル)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104318,item,時間のサークレット(インクイジター)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104319,item,時間のサークレット(インクイジター)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104320,item,時間のサークレット(アークメイジ)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104321,item,時間のサークレット(アークメイジ)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104322,item,時間のサークレット(エレメンタルマスター)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104323,item,時間のサークレット(エレメンタルマスター)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104324,item,時間のサークレット(ウィンドホーク)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104325,item,時間のサークレット(ウィンドホーク)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104326,item,時間のサークレット(トルバドゥール&トルヴェール)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104327,item,時間のサークレット(トルバドゥール&トルヴェール)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104328,item,時間のサークレット(天帝)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104329,item,時間のサークレット(天帝)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104330,item,時間のサークレット(ソウルアセティック)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104331,item,時間のサークレット(ソウルアセティック)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104332,item,時間のサークレット(ナイトウォッチ)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104333,item,時間のサークレット(ナイトウォッチ)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104334,item,時間のサークレット(蜃気楼&不知火)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104335,item,時間のサークレット(蜃気楼&不知火)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104336,item,時間のサークレット(ハイパーノービス)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104337,item,時間のサークレット(ハイパーノービス)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104338,item,時間のサークレット(スピリットハンドラー)への継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104339,item,時間のサークレット(スピリットハンドラー)への継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104340,item,ポエニテンティア・エンシスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104341,item,ポエニテンティア・エンシスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104342,item,ポエニテンティア・テルメスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104343,item,ポエニテンティア・テルメスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104344,item,ポエニテンティア・ベロチへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104345,item,ポエニテンティア・ベロチへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104346,item,ポエニテンティア・グラディウスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104347,item,ポエニテンティア・グラディウスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104348,item,ポエニテンティア・リグラへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104349,item,ポエニテンティア・リグラへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104350,item,ポエニテンティア・ミュークロウへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104351,item,ポエニテンティア・ミュークロウへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104352,item,ポエニテンティア・ディラセロへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104353,item,ポエニテンティア・ディラセロへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104354,item,ポエニテンティア・コーデックスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104355,item,ポエニテンティア・コーデックスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104356,item,ポエニテンティア・リベルへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104357,item,ポエニテンティア・リベルへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104358,item,ポエニテンティア・カエストスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104359,item,ポエニテンティア・カエストスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104360,item,ポエニテンティア・コーダへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104361,item,ポエニテンティア・コーダへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104362,item,ポエニテンティア・フラジャラムへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104363,item,ポエニテンティア・フラジャラムへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104364,item,ポエニテンティア・クラーヴァへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104365,item,ポエニテンティア・クラーヴァへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104366,item,ポエニテンティア・ペンドゥルスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104367,item,ポエニテンティア・ペンドゥルスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104368,item,ポエニテンティア・オービスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104369,item,ポエニテンティア・オービスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104370,item,ポエニテンティア・ヤナへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104371,item,ポエニテンティア・ヤナへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104372,item,ポエニテンティア・ラディウスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104373,item,ポエニテンティア・ラディウスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104374,item,ポエニテンティア・ラムスへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104375,item,ポエニテンティア・ラムスへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104376,item,ポエニテンティア・プランタへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104377,item,ポエニテンティア・プランタへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104425,item,ロイヤルセージブックへの継承(精錬値-1),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104426,item,ロイヤルセージブックへの継承(精錬値維持),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+420450,item,ヴァンパイアストール,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+460098,item,オートマティックシールドIII,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+460099,item,イルシオンシールドIII,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+490705,item,ぱかぱかにゃんこのぽかぽかソックス,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+490706,item,オーバードライブランページエコーズ,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+490707,item,コンセクレイト・フィデス・モニーレ,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+490708,item,コンセクレイト・フィデス・モニーレ,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313767,item,潜在覚醒(ダーククローII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+310970,item,潜在覚醒(爆裂苦無II),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+314008,item,潜在覚醒(キャロットビートII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+314009,item,潜在覚醒(ハンドレッドスピアII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+314010,item,潜在覚醒(ピンポイントアタックII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+314011,item,潜在覚醒(修羅身弾II),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+314012,item,潜在覚醒(創星の書I),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313445,item,潜在解放(ハイパーノービスXIII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313477,item,潜在解放(ナイトウォッチX),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313467,item,潜在解放(バイオロXII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313502,item,潜在解放(エレメンタルマスターX),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313472,item,潜在解放(インクイジターX),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313481,item,潜在解放(天帝IX),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313463,item,潜在解放(トルバドゥール&トルヴェールVIII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313451,item,潜在解放(ウィンドホークXII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313373,item,Def100%無視,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400768,item,暴食のクラウン(ドラゴンナイト),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400769,item,暴食のクラウン(インペリアルガード),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400770,item,暴食のクラウン(マイスター),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400771,item,暴食のクラウン(バイオロ),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400772,item,暴食のクラウン(シャドウクロス),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400773,item,暴食のクラウン(アビスチェイサー),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400774,item,暴食のクラウン(カーディナル),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400775,item,暴食のクラウン(インクイジター),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400776,item,暴食のクラウン(アークメイジ),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400777,item,暴食のクラウン(エレメンタルマスター),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400778,item,暴食のクラウン(ウィンドホーク),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400779,item,暴食のクラウン(トルバドゥール&トルヴェール),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400780,item,暴食のクラウン(天帝),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400781,item,暴食のクラウン(ソウルアセティック),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400782,item,暴食のクラウン(ナイトウォッチ),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400783,item,暴食のクラウン(蜃気楼&不知火),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400784,item,暴食のクラウン(ハイパーノービス),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400785,item,暴食のクラウン(スピリットハンドラー),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+400786,item,[衣装] 暴食のクラウン,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+450437,item,暴食のオルレアンの制服,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+470331,item,暴食のバリアントシューズ,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+470332,item,暴食のタイダルシューズ,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+480538,item,暴食のウールスカーフ,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+490687,item,暴食の野牛の角,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+490688,item,暴食のエキスパートリング,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+490689,item,暴食のスピリチュアルリング,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+640058,item,暴食のスタッフオブディストラクション,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+300623,item,暴食の魔王ヴェルゼブブカード,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+300624,item,暴食の堕ちた大神官カード,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+300625,item,暴食のヘルフライカード,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+300626,item,暴食のヘルプードルカード,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+300627,item,暴食のグールカード,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+300628,item,暴食のゾンビスローターカード,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+300629,item,暴食のラギッドゾンビカード,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+300630,item,暴食のネクロマンサーカード,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+300631,item,暴食のフレームスカルカード,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+300632,item,暴食のバンシーカード,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313567,item,潜在解放(ドラゴンナイトXII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313710,item,潜在解放(バイオロXIII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313469,item,潜在解放(アビスチェイサーXIII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313526,item,潜在解放(インクイジターXI),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313462,item,潜在解放(エレメンタルマスターXI),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313452,item,潜在解放(ウィンドホークXIII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313464,item,潜在解放(トルバドゥール&トルヴェールIX),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313482,item,潜在解放(天帝X),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313474,item,潜在解放(ソウルアセティックXI),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+1002023,item,封印された暴食のクラウン,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+1002024,item,暴食の欠片,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+1002025,item,暴食の魔石,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+1002026,item,暴食の宝玉,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+1002027,item,暴食のエナジー,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+1002028,item,暴食のエッセンス,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104041,item,暴食のクラウンの箱,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104042,item,暴食のクラウンの箱(取引不可),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104043,item,エンハンスキューブ(暴食A),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+104044,item,エンハンスキューブ(暴食B),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+530066,item,暴食のハンティングスピア,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+540097,item,暴食の死神の名簿,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313461,item,潜在解放(インペリアルガードXII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313792,item,潜在解放(エレメンタルマスターXII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+313779,item,潜在解放(アークメイジXII),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+314042,item,潜在解放(アークメイジXIV),,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+314046,item,悪霊の取引,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
+10578,item,[2025年]特選ネコ缶(カニ)の箱,,,,,,,,,,,,,,,,{ /* 250415 */ },{}
