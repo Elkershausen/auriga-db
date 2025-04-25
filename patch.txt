@@ -1,3 +1,27 @@
+2025/04/25	patch0270
+* 4875 - 4999 関与するアイテムの不具合修正(item_db.txt)
+* 501 - 32408 5桁台の調査完了
+
+* アイテムの全数調査完了(アイテム網羅率100%)
+* [装備効果がなく実装できない][解釈違い][技術力不足][思い込みによる間違い]があるため精度は70-80%程度です(100%完全実装ではありません)
+* 今後は初期に書いた6桁台アイテムの修正作業/別要素の実装に着手します
+
+* 呼び出し関数["AddSkillHealRate"]["AddSkillSubHealRate"]全置き換え完了、ヒール系効果の全数見直し実施
+* 呼び出し関数["ItemdbAlmightyHeal"]["ItemdbAlmightySubHeal"]をfunction_global.scに移動し今後はサンプル記述として活用(script\function\function_itemdb.sc function_global.sc)
+* コスたまのランダム入手要素実装準備(script\function\function_itemdb.sc)
+
+* 不明なデータをdelete_dbに移動(db\delete_db)
+* addonのskillに関するdbを削除(db\addon)
+* skill_tree.txt修正されていたので削除(db\skill_tree.txt)
+
+* itemInfo_EN.lua 更新(system\itemInfo_EN.lua)
+* classnum_db.txt 更新(misc\classnum_db.txt)
+* dropeffecttable.txt 更新(misc\dropeffecttable.txt)
+
+* 04/26-05/06 大型連休中はアップデートを休止します
+* 05/11-05/16 出張につき休止します
+* 6月頃から引っ越し予定のため休止予定です
+
 2025/04/22	patch0269
 * 2025/04/15 新規アイテム実装(item_db.txt item_db2.txt classnum_db.txt)
 
