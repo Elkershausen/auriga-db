@@ -509,7 +509,7 @@ payon.gat,184,65,3	script	ファンソプル	866,{
 
 			/* 所持重量判定 */
 			set '@weC,(getiteminfo('@itemC,6) * '@count * '@rate[1]);
-			set '@weD,((getiteminfo('@itemA[0],6) + getiteminfo('@itemA[1],6) + getiteminfo('@itemA[2],6)) * '@count);
+			set '@weD,((getiteminfo('@itemB[0],6) + getiteminfo('@itemB[1],6) + getiteminfo('@itemB[2],6)) * '@count);
 			if(('@weC - '@weD) > (MaxWeight - Weight)) { mes "["+strnpcinfo(1)+"]"; mes "所持重量超過です"; close; }
 
 			delitem '@itemB[0],'@count; delitem '@itemB[1],'@count; delitem '@itemB[2],'@count;
