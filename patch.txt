@@ -3,7 +3,7 @@
 
 * 開発者向け取引フラグを0にした item_db2.txt 作成(item_db2.txt)
 
-* item_db.txtの整理に合わせて iteminfo_EN.lua 同期実施(item_db2.txt)
+* item_db.txtの整理に合わせて iteminfo_EN.lua 同期実施(iteminfo_EN.lua)
 
 * pet_db.txt 実装準備(pet_db.txt)
 
