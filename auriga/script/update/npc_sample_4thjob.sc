@@ -1,7 +1,7 @@
 //2025/05/07 アップデート
 //簡易4次職転職スクリプト
 
--	script	4thJobChange		12000,{
+-	script	4thJobChange		10461,{
 	if(getbaseclass(Class) == CLASS_SUM) {	mes "["+strnpcinfo(1)+"]";	mes "人間形プレイヤー専用です";	close;	}
 	if(Upper == UPPER_BABY) {	mes "["+strnpcinfo(1)+"]";	mes "養子職は4次職に転職できません。";	close;	}
 	if(BaseLevel != 200) {	mes "["+strnpcinfo(1)+"]";	mes "BaseLevel 200 が必要です。";	close;	}
@@ -163,13 +163,13 @@
 	}
 }
 //任意のマップ・座標に設置
-prontera.gat,150,160,2	duplicate(4thJobChange)	4次転職NPC	12000
+prontera.gat,150,160,2	duplicate(4thJobChange)	4次転職NPC	10461
 prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	10461
 
 //ここから開発者用NPC
 //4次職スクリプト
 
--	script	4thJOBtest		12000,{
+-	script	4thJOBtest		10461,{
 	if(getbaseclass(Class) == CLASS_SUM) {mes "["+strnpcinfo(1)+"]";	mes "人間族専用です";	close;	}
 	mes "["+strnpcinfo(1)+"]";
 	mes ""+strcharinfo(0)+"さんは";
@@ -682,5 +682,5 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	close;
 }
 
-//prontera.gat,150,160,2	duplicate(4thJOBtest)	4次転職NPC	12000
+//prontera.gat,150,160,2	duplicate(4thJOBtest)	4次転職NPC	10461
 //prontera.gat,150,150,3	duplicate(doramreset4th)	サモナー戻しNPC	10461
