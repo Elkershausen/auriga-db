@@ -1,6 +1,4 @@
-//==============================================================================
-// サンプルスクリプト
-//==============================================================================
+//2025/05/07 アップデート AIを使って最適化実施
 
 //==============================================================================
 // アイテム買取・交換用ファンクション
@@ -22,22 +20,23 @@
 //------------------------------------------------------------------------------
 
 function	script	MathMax	{
-	set '@size,getarraysize(getarg(0));
-	//'@max配列に各アイテムにおける最大数を入れる
-	for(set '@i,0; '@i<'@size; set '@i,'@i+1) {
-		set '@max['@i],countitem(getelementofarray(getarg(0),'@i)) / getelementofarray(getarg(1),'@i);
-	}
-	if(getarg(2))
-		set '@max['@i],Zeny / getarg(2);	//末尾にZenyによる最大数を入れる
+set '@size, getarraysize(getarg(0));
+// '@max配列に各アイテムにおける最大数を入れる
+for (set '@i, 0; '@i < '@size; set '@i, '@i + 1) {
+	set @max['@i], countitem(getelementofarray(getarg(0), '@i)) / getelementofarray(getarg(1), '@i);
+}
+if (getarg(2))
+	set '@max['@size], Zeny / getarg(2); // Zenyを使う場合は末尾に追加
+else
+	set '@size, '@size - 1; // Zeny判定しないなら末尾分は無視
+
+for (set '@i, 0; '@i < '@size; set '@i, '@i + 1) {
+	if ('@max[0] > '@max[1])
+		deletearray '@max[0], 1;
 	else
-		set '@size,'@size-1;			//Zeny判定しないときはサイズを1つ減らす
-	for(set '@i,0; '@i<'@size; set '@i,'@i+1) {
-		if('@max[0] > '@max[1])			//要素0と1の値を比較し、大きい方をdeleteして詰める
-			deletearray '@max[0],1;
-		else
-			deletearray '@max[1],1;
-	}
-	return '@max;	//最後に残ったものが取得可能最大数
+		deletearray '@max[1], 1;
+}
+return '@max[0];
 }
 
 //============================================================

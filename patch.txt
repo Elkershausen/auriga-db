@@ -1,3 +1,55 @@
+2025/05/07	patch0271
+* item_db.txt 整理実施(item_db.txt)
+
+* 開発者向け取引フラグを0にした item_db2.txt 作成(item_db2.txt)
+
+* item_db.txtの整理に合わせて iteminfo_EN.lua 同期実施(item_db2.txt)
+
+* pet_db.txt 実装準備(pet_db.txt)
+
+* ガンスリンガー転職NPCの弾丸アイテム関連要素を現行仕様に変更(npc_job_28gunslinger_update.sc)
+
+* スフィア系弾丸は10年前に廃止されているのでNPCから削除(npc_job_28gunslinger_update.sc item_arrowtype.txt)
+
+* 2015年アップデートでワープポータル使用可能になったフィールドマップが多数あるため、マップフラグを更新(mapflag.sc)
+
+* 現行仕様に合わせた簡易4次職転職NPC実装(npc_sample_4thjob.sc)
+
+* 開発者向け簡易4次職転職NPC実装(npc_sample_4thjob.sc)
+
+* 開発者向け衣装装備のデバッグNPC実装(npc_ench_003.sc)
+
+* [enchant]フォルダ新設(script\update\enchant)
+
+* エンチャント系実装のために設定NPC実装(npc_ench_setting.sc)
+
+* エンチャントルーム移動のためのNPC[ミー]実装(npc_ench_setting.sc)
+
+* スペシャルエンチャントNPC[エンタマ]実装(npc_ench_entama.sc)
+
+* スペシャルエンチャントNPC[ジル]実装(npc_ench_jiru.sc)
+
+* コスたまのランダム入手要素の目処が立たないため一旦取りやめ(script\function\function_itemdb.sc)
+
+* [一部のアイテムの回復量]の装備ボーナスは[ヒール系スキルを受けた時のHP回復量 + n%]と一体で使われるためrathena準拠の記述で追加し、実装されるまでコメントアウト(装備能力値表示システムで一体となっているのが判明)
+
+* 生成AIを使って試験的にサンプル記述の最適化を実施(function_global.sc)
+
+* 開発者向け管理用GMコマンド実行時に表示されるメッセージが何を書いているのかわからず、ログとして機能していない部分があるので修正(msg_auriga.conf)
+* 9番はなんですか？わかりません -> [秘技！七変化！]
+
+* アイテム全実装に伴い、プレイヤーのHPとSPの最大値を999万に引き上げ(battle_auriga.conf)
+* 補正ステータスも1000超えるので増やす予定です
+
+* 開発者向け衣装装備デバッグNPC実行のため、[コマンドを実行出来る回数の上限]を一時的に200万に引き上げ(script_auriga.conf)
+* 8C16T 常用1.0 - 2.0Ghz 16GBメモリ 程度の性能を想定しています
+
+* system_updateinfo 更新(2025/04/29 ギルド攻城戦関連アップデート告知)
+
+* [NLP]フォルダ新設(生成AI学習用データを入れます)
+
+* AI学習用アイテムリスト実装(NLP\item_list.json)
+
 2025/04/25	patch0270
 * 4875 - 4991 関与するアイテムの不具合修正(item_db.txt)
 * 501 - 32408 5桁台の調査完了
