@@ -1,3 +1,14 @@
+2025/05/08	patch0272
+* 2025/05/07 新規アイテム実装(item_db.txt item_db2.txt)
+
+* アイテムの修正(item_db.txt item_db2.txt)
+
+* スペシャルエンチャントNPC[ジル]第4エンチャ最終処理の成功条件定義ミス修正(npc_ench_jiru.sc)
+
+* エンチャント系NPC テストNPC 上記と同じ部分修正(npc_ench_setting.sc)
+
+* patch**** 過去分の移動実施(\patch)
+
 2025/05/07	patch0271
 * item_db.txt 整理実施(item_db.txt)
 

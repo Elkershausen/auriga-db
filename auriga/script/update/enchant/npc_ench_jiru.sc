@@ -208,7 +208,7 @@ enchant01.gat,176,60,3	script	ジル	559,{
 	/* 第4エンチャント選択処理開始 */
 				/*	[0]	[1]	*/
 		setarray '@slotD[0],	1,	0;
-		setarray '@winD[0],	95,	0;	/* スロットエンチャント選択で失敗率95%に固定 */
+		setarray '@winD[0],	95,	0;	/* スロットエンチャント選択で失敗率95加算 */
 
 		/* メニュー処理開始 */
 		mes "[" +strnpcinfo(1)+ "]";
@@ -223,8 +223,8 @@ enchant01.gat,176,60,3	script	ジル	559,{
 			"スロットエンチャントをする",
 			"スロットエンチャントをしない")) {
 			case 1:	mes "[" +strnpcinfo(1)+ "]";	mes "ご利用お待ちしています";	close;
-			case 2:	set '@en1,'@slotD[0];		set '@winCrate,'@winD[0];	break;
-			case 3:	set '@en1,'@slotD[1];		set '@winCrate,'@winD[1];	break;	}
+			case 2:	set '@en1,'@slotD[0];		set '@winDrate,'@winD[0];	break;
+			case 3:	set '@en1,'@slotD[1];		set '@winDrate,'@winD[1];	break;	}
 		/* メニュー処理終了 */
 
 		/* エンチャント4つ選択の確認開始 */
@@ -457,8 +457,8 @@ enchant01.gat,176,60,3	script	ジル	559,{
 			"スロットエンチャントをする",
 			"スロットエンチャントをしない")) {
 			case 1:	mes "[" +strnpcinfo(1)+ "]";	mes "ご利用お待ちしています";	close;
-			case 2:	set '@en1,'@slotD[0];		set '@winCrate,'@winD[0];	break;
-			case 3:	set '@en1,'@slotD[1];		set '@winCrate,'@winD[1];	break;	}
+			case 2:	set '@en1,'@slotD[0];		set '@winDrate,'@winD[0];	break;
+			case 3:	set '@en1,'@slotD[1];		set '@winDrate,'@winD[1];	break;	}
 		/* メニュー処理終了 */
 
 		/* エンチャント4つ選択の確認開始 */

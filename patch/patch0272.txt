@@ -1,0 +1,56 @@
+﻿item_db.txt 2025/05/07 新規
+200626,use,コスたまOrientalIV,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 250507 効果実装済み */ },{ /* 420499 420500 420501 480581 480582 410430 400900 400898 400899 410429 400901 */ }
+400898,cos,[衣装] 桜の白魔女帽子,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2582,0,{ /* 250507 コスたまOrientalIV 効果実装済み */ },{}
+400899,cos,[衣装] 天下無敵の紋帽子,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2391,0,{ /* 250507 コスたまOrientalIV 効果実装済み */ },{}
+400900,cos,[衣装] 威風凛然の兜(黒),4,20,,0,,0:0,,0,2074075135,2,1024,,1,2686,0,{ /* 250507 コスたまOrientalIV 効果実装済み */ },{}
+400901,cos,[衣装] ひきがえるの帽子(茶),4,20,,0,,0:0,,0,2074075135,2,1024,,1,2687,0,{ /* 250507 コスたまOrientalIV 効果実装済み */ },{}
+410429,cos,[衣装] 鬼神の仮面(中段),4,20,,0,,0:0,,0,2074075135,2,2048,,1,689,0,{ /* 250507 コスたまOrientalIV 効果実装済み */ },{}
+410430,cos,[衣装] 瞬くフォレストアイ,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2685,0,{ /* 250507 コスたまOrientalIV 効果実装済み */ },{}
+420499,cos,[衣装] 桜花爛漫ツインテール,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2682,0,{ /* 250507 コスたまOrientalIV 効果実装済み */ },{}
+420500,cos,[衣装] 桜花爛漫ツーサイドアップ,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2683,0,{ /* 250507 コスたまOrientalIV 効果実装済み */ },{}
+420501,cos,[衣装] 温泉,4,20,,0,,0:0,,0,2074075135,2,8192,,1,2684,0,{ /* 250507 コスたまOrientalIV 効果実装済み */ },{}
+480581,cos,[衣装] 怨霊武士の双刀,4,20,,0,,0:0,,0,2074075135,2,8192,,1,265,0,{ /* 250507 コスたまOrientalIV 効果実装済み */ },{}
+480582,cos,[衣装] ポリンの三色団子,4,20,,0,,0:0,,0,2074075135,2,8192,,1,266,0,{ /* 250507 コスたまOrientalIV 効果実装済み */ },{}
+
+item_db2.txt
+200626,0,0,1,1,0,1,1,0,0,0,0,0	//コスたまOrientalIV
+400898,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] 桜の白魔女帽子
+400899,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] 天下無敵の紋帽子
+400900,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] 威風凛然の兜(黒)
+400901,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] ひきがえるの帽子(茶)
+410429,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] 鬼神の仮面(中段)
+410430,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] 瞬くフォレストアイ
+420499,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] 桜花爛漫ツインテール
+420500,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] 桜花爛漫ツーサイドアップ
+420501,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] 温泉
+480581,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] 怨霊武士の双刀
+480582,0,0,0,0,0,0,0,0,0,0,0,0	//[衣装] ポリンの三色団子
+
+item_db.txt 修正
+2417,shoes,フレイシューズ,4,30000,,500,,12:0,,0,2065686526,2,64,,65,,1,{ /* セット効果実装済み */ },{ bonus bAgi,2; bonus2 bItemHealRate,1,20; bonus2 bItemHealRate,8,20; if(equippeditem(2353) && equippeditem(2516)) { bonus bAgi,3; bonus bMaxHPrate,5; bonus bMaxSPrate,5; } }
+2488,shoes,フレイシューズ,4,30000,,500,,12:0,,1,2065686526,2,64,,65,,1,{ /* セット効果実装済み */ },{ bonus bAgi,2; bonus2 bItemHealRate,1,20; bonus2 bItemHealRate,8,20; if(equippeditem(2353) && equippeditem(2516)) { bonus bAgi,3; bonus bMaxHPrate,5; bonus bMaxSPrate,5; } }
+300131,card,正義のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RK_SONICWAVE",5; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"RK_SONICWAVE",5; } if(equippeditem(29585)) { bonus bLuk,3; callfunc "bonus2bIgnoreDefRace",25; bonus2 bAddSkillDamageRate,"RK_SONICWAVE",50; } }
+300132,card,星のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WL_HELLINFERNO",5; bonus2 bAddSkillDamageRate,"WL_HELLINFERNO",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"WL_HELLINFERNO",5; } if(equippeditem(29585)) { bonus bDex,3; bonus bHPGainValue,200; bonus2 bAddSkillDamageRate,"WL_HELLINFERNO",50; } }
+300133,card,節制のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"RA_AIMEDBOLT",5; bonus2 bAddSkillDamageRate,"RA_AIMEDBOLT",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"RA_AIMEDBOLT",5; } if(equippeditem(29585)) { bonus bInt,3; bonus bSkillDelayRate,-5; bonus2 bAddSkillDamageRate,"RA_AIMEDBOLT",50; } }
+300134,card,戦車のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"NC_POWERSWING",5; bonus2 bAddSkillDamageRate,"NC_POWERSWING",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"NC_POWERSWING",5; } if(equippeditem(29585)) { bonus bVit,3; bonus2 bAddRace,Rct_Boss,5; bonus2 bAddSkillDamageRate,"NC_POWERSWING",50; } }
+300135,card,死神のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* 敵から通常攻撃を受けた時SP回復 スキル攻撃除外 */ },{ bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",5; bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",5; } if(equippeditem(29585)) { bonus bVit,3; bonus2 bSPDrainValue,100,5; bonus2 bAddSkillDamageRate,"GC_COUNTERSLASH",50; } }
+300136,card,恋人のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"WM_GREAT_ECHO",5; bonus2 bAddSkillDamageRate,"WM_GREAT_ECHO",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"WM_GREAT_ECHO",5; } if(equippeditem(29585)) { bonus bInt,3; callfunc "bonus2bIgnoreMdefRace",25; bonus2 bAddSkillDamageRate,"WM_GREAT_ECHO",50; } }
+300163,card,皇帝のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"LG_RAYOFGENESIS",5; bonus2 bAddSkillDamageRate,"LG_RAYOFGENESIS",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"LG_RAYOFGENESIS",5; } if(equippeditem(29585)) { bonus bLuk,3; bonus bShortWeaponDamageReturn,5; bonus2 bAddSkillDamageRate,"LG_RAYOFGENESIS",50; } }
+300164,card,力のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SR_RIDEINLIGHTNING",5; bonus2 bAddSkillDamageRate,"SR_RIDEINLIGHTNING",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SR_RIDEINLIGHTNING",5; } if(equippeditem(29585)) { bonus bAgi,3; bonus bHPGainValue,200; bonus2 bAddSkillDamageRate,"SR_RIDEINLIGHTNING",50; } }
+300165,card,悪魔のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SC_FATALMENACE",5; bonus2 bAddSkillDamageRate,"SC_FATALMENACE",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SC_FATALMENACE",5; } if(equippeditem(29585)) { bonus bStr,3; bonus2 bSPDrainValue,100,2; bonus2 bAddSkillDamageRate,"SC_FATALMENACE",50; } }
+300166,card,月のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SO_VARETYR_SPEAR",5; bonus2 bAddSkillDamageRate,"SO_VARETYR_SPEAR",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SO_VARETYR_SPEAR",5; } if(equippeditem(29585)) { bonus bDex,3; bonus2 bFixCastrate,-50,0; bonus2 bAddSkillDamageRate,"SO_VARETYR_SPEAR",50; } }
+300167,card,運命の輪のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"KO_BAKURETSU",5; bonus2 bAddSkillDamageRate,"KO_BAKURETSU",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"KO_BAKURETSU",5; } if(equippeditem(29585)) { bonus bAgi,2; bonus bVit,2; bonus2 bHPPenaltyTime,5000,-1500; bonus2 bAddSkillDamageRate,"KO_BAKURETSU",50; } }
+300168,card,世界のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SU_SVG_SPIRIT",5; bonus2 bAddSkillDamageRate,"SU_SVG_SPIRIT",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SU_SVG_SPIRIT",5; } if(equippeditem(29585)) { bonus bStr,2; bonus bLuk,2; bonus bPerfectHitAddRate,10; bonus2 bAddSkillDamageRate,"SU_SVG_SPIRIT",50; } }
+300282,card,隠者のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"AB_JUDEX",5; bonus2 bAddSkillDamageRate,"AB_JUDEX",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"AB_JUDEX",5; } if(equippeditem(29585)) { callfunc "AddSkillHealRate",5; bonus2 bSPPenaltyTime,5000,-50; bonus2 bAddSkillDamageRate,"AB_JUDEX",50; } }
+300283,card,愚者のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bHPPenaltyTime,10000,-500; bonus2 bSPPenaltyTime,10000,-5; bonus2 bHPPenaltyTime,10000,-100*getequiprefinerycnt(); bonus2 bSPPenaltyTime,10000,-getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bHPPenaltyTime,10000,-500; bonus2 bSPPenaltyTime,10000,-5; } if(equippeditem(29585)) { bonus bAllStatus,1; bonus2 bHPPenaltyTime,10000,-5000; bonus2 bSPPenaltyTime,10000,-50; skill "WS_CARTBOOST",1; } }
+300284,card,法王のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"GN_SPORE_EXPLOSION",5; bonus2 bAddSkillDamageRate,"GN_SPORE_EXPLOSION",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"GN_SPORE_EXPLOSION",5; } if(equippeditem(29585)) { bonus bVit,3; bonus2 bItemHealRate,12,200; bonus2 bAddSkillDamageRate,"GN_SPORE_EXPLOSION",50; } }
+300285,card,吊るされた男のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* 物理攻撃のみで倒した時HPSP回復 */ },{ bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",5; bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",5; } if(equippeditem(29585)) { bonus bAgi,2; bonus bVit,2; bonus bSPGainValue,20; bonus2 bAddSkillDamageRate,"RL_HAMMER_OF_GOD",50; } }
+300286,card,女教皇のカード,6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SP_SPA",5; bonus2 bAddSkillDamageRate,"SP_SPA",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SP_SPA",5; } if(equippeditem(29585)) { bonus bAgi,2; bonus bInt,2; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bAddSkillDamageRate,"SP_SPA",50; } }
+300287,card,女教皇のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* 魔法攻撃倒した時HPSP回復 */ },{ bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",5; bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",5; } if(equippeditem(29585)) { bonus bVit,2; bonus bDex,2; bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",50; } }
+300288,card,塔のカード,6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SJ_BOOKOFCREATINGSTAR",5; bonus2 bAddSkillDamageRate,"SJ_BOOKOFCREATINGSTAR",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SJ_BOOKOFCREATINGSTAR",5; } if(equippeditem(29585)) { bonus bStr,2; bonus bAgi,2; bonus bCastrate,-5; bonus2 bAddSkillDamageRate,"SJ_BOOKOFCREATINGSTAR",50; } }
+300289,card,塔のカード(逆位置),6,20,,10,,,,,,,1023,,,,,{ /* セット効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SJ_STAREMPEROR",5; bonus2 bAddSkillDamageRate,"SJ_STAREMPEROR",getequiprefinerycnt(); if(getequiprefinerycnt() >= 10) { bonus2 bAddSkillDamageRate,"SJ_STAREMPEROR",5; } if(equippeditem(29585)) { bonus bDex,2; bonus bLuk,2; bonus bAddShortWeaponDamage,5; bonus2 bAddSkillDamageRate,"SJ_STAREMPEROR",50; } }
+313502,ench,潜在解放(エレメンタルマスターX),6,,,,,,,,,,65535,,,,,{ /* 250415 セット効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"EM_VENOM_SWAMP",-1000; } }
+
+npc_ench_jiru.sc npc_ench_setting.sc 定義ミス修正
+			case 2:	set '@en1,'@slotD[0];		set '@winDrate,'@winD[0];	break;
+			case 3:	set '@en1,'@slotD[1];		set '@winDrate,'@winD[1];	break;	}

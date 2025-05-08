@@ -279,8 +279,8 @@ prontera.gat,150,110,4	script	テストエンチャ	553,{
 			"スロットエンチャントをする",
 			"スロットエンチャントをしない")) {
 			case 1:	mes "[" +strnpcinfo(1)+ "]";	mes "ご利用お待ちしています";	close;
-			case 2:	set '@en1,'@slotD[0];		set '@winCrate,'@winD[0];	break;
-			case 3:	set '@en1,'@slotD[1];		set '@winCrate,'@winD[1];	break;	}
+			case 2:	set '@en1,'@slotD[0];		set '@winDrate,'@winD[0];	break;
+			case 3:	set '@en1,'@slotD[1];		set '@winDrate,'@winD[1];	break;	}
 		/* メニュー処理終了 */
 
 		/* エンチャント4つ選択の確認開始 */
@@ -513,8 +513,8 @@ prontera.gat,150,110,4	script	テストエンチャ	553,{
 			"スロットエンチャントをする",
 			"スロットエンチャントをしない")) {
 			case 1:	mes "[" +strnpcinfo(1)+ "]";	mes "ご利用お待ちしています";	close;
-			case 2:	set '@en1,'@slotD[0];		set '@winCrate,'@winD[0];	break;
-			case 3:	set '@en1,'@slotD[1];		set '@winCrate,'@winD[1];	break;	}
+			case 2:	set '@en1,'@slotD[0];		set '@winDrate,'@winD[0];	break;
+			case 3:	set '@en1,'@slotD[1];		set '@winDrate,'@winD[1];	break;	}
 		/* メニュー処理終了 */
 
 		/* エンチャント4つ選択の確認開始 */
