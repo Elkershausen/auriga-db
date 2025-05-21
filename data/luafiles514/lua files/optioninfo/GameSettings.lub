@@ -429,7 +429,7 @@ OptionTbl = {
 		Title = "/merai",
 		TipBoxID = 182,
 		Default = false,
-		Description = "精霊がカスタム設定で活動します",
+		Description = "傭兵がカスタム設定で活動します",
 		MSGs = { "MSI_MER_USERAI_ON", "MSI_MER_USERAI_OFF" }
 	},
 	[43] = {
