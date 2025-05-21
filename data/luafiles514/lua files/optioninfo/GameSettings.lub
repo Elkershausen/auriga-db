@@ -1,0 +1,604 @@
+OptionTbl = {
+	[1] = {
+		ID = TT_HIDE_AURA_ON_OFF,
+		Tab = EFFECT,
+		Type = ONOFF,
+		Title = "Aura display2",
+		Tooltip = "/aura2",
+		TipBoxID = 144,
+		Default = true,
+		Description = "最大レベルのキャラクターに表\示されるオーラエフェクトを消すことができます",
+		MSGs = { "MSI_AURA_EFFECT_ON", "MSI_AURA_EFFECT_OFF" }
+	},
+	[2] = {
+		ID = TT_FULL_AURA_ON_OFF,
+		Tab = EFFECT,
+		Type = ONOFF,
+		Title = "Aura expression",
+		Tooltip = "/aura",
+		TipBoxID = 144,
+		Default = true,
+		Description = "最大レベルのキャラクターに表\示されるオーラエフェクトを簡略化することができます",
+		MSGs = { "MSI_AURA_OFF", "MSI_AURA_ON" }
+	},
+	[3] = {
+		ID = TT_EFFECT_ON_OFF,
+		Tab = EFFECT,
+		Type = ONOFF,
+		Title = "Effect display",
+		Tooltip = "/effect",
+		TipBoxID = 145,
+		Default = true,
+		Description = "エフェクト",
+		MSGs = { "MSI_EFFECT_ON", "MSI_EFFECT_OFF" }
+	},
+	[4] = {
+		ID = TT_LIGHTMAP_ON_OFF,
+		Tab = EFFECT,
+		Type = ONOFF,
+		Title = "Turns light",
+		Tooltip = "/lightmap",
+		TipBoxID = 146,
+		Default = true,
+		Description = "建造物などの影をなくす"
+	},
+	[5] = {
+		ID = TT_EXTEND_DAMAGE_ON_OFF,
+		Tab = EFFECT,
+		Type = ONOFF,
+		Title = "Damage effect display",
+		TipBoxID = 88,
+		Default = true,
+		Description = "Show damage effect."
+	},
+	[6] = {
+		ID = TT_SHOW_MAP_NAME_ON_OFF,
+		Tab = EFFECT,
+		Type = ONOFF,
+		Title = "Show mapname",
+		TipBoxID = 69,
+		Default = true,
+		Description = "マップ情報の表\示を切り替える"
+	},
+	[7] = {
+		ID = TT_FOG_ON_OFF,
+		Tab = EFFECT,
+		Type = ONOFF,
+		Title = "Show fog",
+		Tooltip = "/fog",
+		TipBoxID = 147,
+		Default = true,
+		Description = "フォグエフェクトの表\示を切り替える",
+		MSGs = { "MSI_GAME_SETTINGS_FOG_ON", "MSI_GAME_SETTINGS_FOG_OFF" }
+	},
+	[8] = {
+		ID = TT_HIDE_FOOTPRINT_ON_OFF,
+		Tab = EFFECT,
+		Type = ONOFF,
+		Title = "Show foot effect",
+		TipBoxID = 148,
+		Default = true,
+		Description = "Show foot effect."
+	},
+	[9] = {
+		ID = TT_QUAKE_ON_OFF,
+		Tab = EFFECT,
+		Type = ONOFF,
+		Title = "Quake",
+		Tooltip = "/quake",
+		TipBoxID = 149,
+		Default = true,
+		Description = "画面が揺れるエフェクト",
+		MSGs = { "MSI_QUAKE_EFFECT_ON", "MSI_QUAKE_EFFECT_OFF" }
+	},
+	[10] = {
+		ID = TT_HIDE_SUMMON_ON_OFF,
+		Tab = EFFECT,
+		Type = ONOFF,
+		Title = "Show spirit",
+		Tooltip = "",
+		TipBoxID = 150,
+		Default = false,
+		Description = "ドラムの「にゃん魂」表\示を切り替える"
+	},
+	[11] = {
+		ID = TT_HIDE_PLAYER_ON_OFF,
+		Tab = EFFECT,
+		Type = ONOFF,
+		Title = "Show Hiding",
+		Tooltip = "Ctrl + End",
+		TipBoxID = 115,
+		Default = false,
+		Description = "他のユーザーの半透明表\示を切り替える",
+		MSGs = { "MSI_HIDE_PLAYER_ON", "MSI_HIDE_PLAYER_OFF" }
+	},
+	[12] = {
+		ID = TT_ATTACK_SNAP_ON_OFF,
+		Tab = CONTROL,
+		Type = ONOFF,
+		Title = "Snap Monster",
+		Tooltip = "/snap",
+		TipBoxID = 153,
+		Default = false,
+		Description = "攻撃スナップ",
+		MSGs = { "MSI_ATTACK_SNAP_ON", "MSI_ATTACK_SNAP_OFF" }
+	},
+	[13] = {
+		ID = TT_SKILL_SNAP_ON_OFF,
+		Tab = CONTROL,
+		Type = ONOFF,
+		Title = "Snap Skill",
+		Tooltip = "/skillsnap",
+		TipBoxID = 153,
+		Default = true,
+		Description = "スキルスナップ",
+		MSGs = { "MSI_SKILL_SNAP_ON", "MSI_SKILL_SNAP_OFF" }
+	},
+	[14] = {
+		ID = TT_ITEM_SNAP_ON_OFF,
+		Tab = CONTROL,
+		Type = ONOFF,
+		Title = "Snap Item",
+		Tooltip = "/itemsnap",
+		TipBoxID = 153,
+		Default = false,
+		Description = "アイテムスナップ",
+		MSGs = { "MSI_ITEM_SNAP_ON", "MSI_ITEM_SNAP_OFF" }
+	},
+	[15] = {
+		ID = TT_NOCTRL_ON_OFF,
+		Tab = CONTROL,
+		Type = ONOFF,
+		Title = "No Ctrl",
+		Tooltip = "/noctrl\n/nc",
+		TipBoxID = 15,
+		Default = true,
+		Description = "Ctrlキーを押さずに対象への自動攻撃が可能\になります",
+		MSGs = { "MSI_NOCTRL_ON", "MSI_NOCTRL_OFF" }
+	},
+	[16] = {
+		ID = TT_NOSHIFT_ON_OFF,
+		Tab = CONTROL,
+		Type = ONOFF,
+		Title = "No Shift",
+		Tooltip = "/noshift\n/ns",
+		TipBoxID = 154,
+		Default = false,
+		Description = "Shiftキーを押さずに対象指定スキルが使用可能\になります",
+		MSGs = { "MSI_NOSHIFT_ON", "MSI_NOSHIFT_OFF" }
+	},
+	[17] = {
+		ID = TT_EXPAND_SIGHT_ON_OFF,
+		Tab = CONTROL,
+		Type = ONOFF,
+		Title = "Zoom Out",
+		Tooltip = "/zoom",
+		TipBoxID = 85,
+		Default = true,
+		Description = "Zoom Out機能\",
+		MSGs = { "MSI_EXPAND_SIGHT_ON", "MSI_EXPAND_SIGHT_OFF" }
+	},
+	[18] = {
+		ID = TT_MOUSE_EXCLUSIVE_ON_OFF,
+		Tab = CONTROL,
+		Type = ONOFF,
+		Title = "Mouse control",
+		TipBoxID = 155,
+		Default = false,
+		Description = "ゲーム画面内固定"
+	},
+	[19] = {
+		ID = TT_QUICKSPELL_ON_OFF,
+		Tab = CONTROL,
+		Type = ONOFF,
+		Title = "Mouse shortcut1",
+		Tooltip = "/q1",
+		TipBoxID = 156,
+		Default = false,
+		Description = "マウス右クリックで、F9 に保存したスキルを使用することができます",
+		MSGs = { "MSI_QUICKSPELL_ON", "MSI_QUICKSPELL_OFF" }
+	},
+	[20] = {
+		ID = TT_QUICKSPELL2_ON_OFF,
+		Tab = CONTROL,
+		Type = ONOFF,
+		Title = "Mouse shortcut2",
+		Tooltip = "/q2",
+		TipBoxID = 156,
+		Default = false,
+		Description = "マウスホイールを操作して、F7 または F8 に保存したスキルを使用することができます",
+		MSGs = { "MSI_QUICKSPELL2_ON", "MSI_QUICKSPELL2_OFF" }
+	},
+	[21] = {
+		ID = TT_QUICK_SLOT_ON_OFF,
+		Tab = CONTROL,
+		Type = ONOFF,
+		Title = "Add 2 shortcut",
+		TipBoxID = 157,
+		Default = true,
+		Description = "Displays a 2-space mini slot."
+	},
+	[22] = {
+		ID = TT_ITEM_COMPARE_ON_OFF,
+		Tab = CONTROL,
+		Type = ONOFF,
+		Title = "Comparing item",
+		TipBoxID = 66,
+		Default = true,
+		Description = "アイテム比較"
+	},
+	[23] = {
+		ID = TT_NOTRADE_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/notrade",
+		Tooltip = "/nt",
+		TipBoxID = 167,
+		Default = false,
+		Description = "取引要請を自動的に拒否します",
+		MSGs = { "MSI_NOTRADE_ON", "MSI_NOTRADE_OFF" }
+	},
+	[24] = {
+		ID = TT_NOTALKMSG_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/notalkmsg",
+		Tooltip = "/nm",
+		TipBoxID = 26,
+		Default = false,
+		Description = "オープン発言を会話ウィンドウに表\示しません",
+		MSGs = { "MSI_NOTALKMSG_OFF", "MSI_NOTALKMSG_ON" }
+	},
+	[25] = {
+		ID = TT_NOTALKMSG2_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/notalkmsg2",
+		Tooltip = "/nm2",
+		TipBoxID = 26,
+		Default = false,
+		Description = "オープン発言とギルド発言を表\示しません",
+		MSGs = { "MSI_NOTALKMSG2_OFF", "MSI_NOTALKMSG2_ON" }
+	},
+	[26] = {
+		ID = TT_BOLD_NAME_TYPE_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/showname",
+		Tooltip = "/sn",
+		TipBoxID = 168,
+		Default = false,
+		Description = "フォントが正常に変更されました",
+		MSGs = { "MSI_SHOWNAME_ON", "MSI_SHOWNAME_OFF" }
+	},
+	[27] = {
+		ID = TT_WINDOW_SNAP_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/window",
+		Tooltip = "/wi",
+		TipBoxID = 169,
+		Default = true,
+		Description = "ウィンドウを他のウィンドウにスナップします",
+		MSGs = { "MSI_WINDOW_ON", "MSI_WINDOW_OFF" }
+	},
+	[28] = {
+		ID = TT_MISS_EFFECT_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/miss",
+		TipBoxID = 170,
+		Default = true,
+		Description = "ミス（失敗）表\示を切り替える",
+		MSGs = { "MSI_MISS_EFFECT_ON", "MSI_MISS_EFFECT_OFF" }
+	},
+	[29] = {
+		ID = TT_SHOPPING_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/shopping",
+		Tooltip = "/sh",
+		TipBoxID = 171,
+		Default = true,
+		Description = "露店の看板を左クリックすると、その露店の内容を見られるようになります。また、露店名を右クリックすると、表\示していた露店のウィンドウを閉じられるようになります",
+		MSGs = { "MSI_SHOPPING_ON", "MSI_SHOPPING_OFF" }
+	},
+	[30] = {
+		ID = TT_STATEINFO_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/stateinfo",
+		TipBoxID = 172,
+		Default = true,
+		Description = "状態アイコンについての説明が表\示されます",
+		MSGs = { "MSI_SHOW_STATEINFO_ON", "MSI_SHOW_STATEINFO_OFF" }
+	},
+	[31] = {
+		ID = TT_FIXED_CAMERA_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/camera",
+		TipBoxID = 173,
+		Default = false,
+		Description = "プレイヤーにカメラ固定",
+		MSGs = { "MSI_FIXED_CAMERA_ON", "MSI_FIXED_CAMERA_OFF" }
+	},
+	[32] = {
+		ID = TT_MONSTERHP_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/monsterhp",
+		TipBoxID = 174,
+		Default = true,
+		Description = "攻撃したモンスターのHP情報を表\示を切り替える",
+		MSGs = { "MSI_MONSTER_HP_ON", "MSI_MONSTER_HP_OFF" }
+	},
+	[33] = {
+		ID = TT_SHOW_CASHSHOP_BTN_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/cashshop",
+		TipBoxID = 175,
+		Default = true,
+		Description = "スペシャルショップのアイコン表\示を切り替える",
+	},
+	[34] = {
+		ID = TT_SHOW_GOLDPCCAFE_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/goldpc",
+		TipBoxID = 176,
+		Default = true,
+		Description = "Display Gold PC Cafe Button.",
+	},
+	[35] = {
+		ID = TT_SHOW_MINIMAP_BUTTON_ONOFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/minimap",
+		TipBoxID = 177,
+		Default = true,
+		Description = "ミニマップ操作ボタンを表\示します",
+		MSGs = { "MSI_MINIMAP_BUTTON_ON", "MSI_MINIMAP_BUTTON_OFF" }
+	},
+	[36] = {
+		ID = TT_MIN_EFFECT_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/mineffect",
+		TipBoxID = 145,
+		Default = false,
+		Description = "エフェクト簡略化",
+		MSGs = { "MSI_MINEFFECT_ON", "MSI_MINEFFECT_OFF" }
+	},
+	[37] = {
+		ID = TT_SPRITEMABLE_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/mable",
+		TipBoxID = 178,
+		Default = true,
+		Description = "にゃん魂エフェクト",
+		MSGs = { "MSI_SPRITEMABLE_ON", "MSI_SPRITEMABLE_OFF" }
+	},
+	[38] = {
+		ID = TT_SHOW_EMBLEM_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/emblem",
+		TipBoxID = 179,
+		Default = true,
+		Description = "Display the guild emblem image.",
+		MSGs = { "MSI_GAME_SETTINGS_EMBLEM_ON", "MSI_GAME_SETTINGS_EMBLEM_OFF" }
+	},
+	[39] = {
+		ID = TT_NAME_ABOVE_HEAD_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/font",
+		Tooltip = "/font",
+		TipBoxID = 180,
+		Default = false,
+		Description = "Move the character's name over his head."
+	},
+	[40] = {
+		ID = TT_BLOCK_CALL_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/call",
+		Tooltip = "/call",
+		TipBoxID = 181,
+		Default = true,
+		Description = "Allows calling function skills."
+	},
+	[41] = {
+		ID = TT_HOMUN_USERAI_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/hoai",
+		Tooltip = "/homun",
+		TipBoxID = 182,
+		Default = false,
+		Description = "ホムンクルスがカスタム設定で活動します",
+		MSGs = { "MSI_HOMUN_USERAI_ON", "MSI_HOMUN_USERAI_OFF" }
+	},
+	[42] = {
+		ID = TT_MER_USERAI_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/merai",
+		TipBoxID = 182,
+		Default = false,
+		Description = "精霊がカスタム設定で活動します",
+		MSGs = { "MSI_MER_USERAI_ON", "MSI_MER_USERAI_OFF" }
+	},
+	[43] = {
+		ID = TT_SHOW_MERCHANT_SHOP_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/showshop",
+		Tooltip = "/showshop",
+		TipBoxID = 67,
+		Default = true,
+		Description = "露店表\示機能\"
+	},
+	[44] = {
+		ID = TT_EX_NO_COS_PLAY,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/nocosplay",
+		Tooltip = "/ns\n/changedress",
+		TipBoxID = 46,
+		Description = "Take off the costume you are wearing."
+	},
+	[45] = {
+		ID = TT_EX_HI,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/hi",
+		TipBoxID = 183,
+		Description = "友達に登録されたキャラクター全員にメッセージを送ります"
+	},
+	[46] = {
+		ID = TT_EX_HELP,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/h",
+		TipBoxID = 2,
+		Description = "ヘルプコマンドリスト"
+	},
+	[47] = {
+		ID = TT_EX_SIT,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/sit",
+		Tooltip = "/sit\n/stand\n/clerk\nInsert",
+		TipBoxID = 184,
+		Description = "座る、立つ"
+	},
+	[48] = {
+		ID = TT_EX_EXIT_CHAT_ROOM,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/q",
+		TipBoxID = 20,
+		Description = "チャットルームから出る"
+	},
+	[49] = {
+		ID = TT_EX_LEAVE_GROUP,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/leave",
+		Tooltip = "/leave",
+		TipBoxID = 29,
+		Description = "パーティー脱退"
+	},
+	[50] = {
+		ID = TT_EX_MAP_POS,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/where",
+		Tooltip = "/coordinate\n/ocation",
+		TipBoxID = 185,
+		Description = "現在の位置表\示"
+	},
+	[51] = {
+		ID = TT_EX_REMEMBER_WARPPOINT,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/memo",
+		Tooltip = "/memo",
+		TipBoxID = 186,
+		Description = "ワープする場所を記憶(ワープスキルがある場合)"
+	},
+	[52] = {
+		ID = TT_EX_MAKE_CHAT_ROOM,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/chat",
+		Tooltip = "/chat",
+		TipBoxID = 20,
+		Description = "チャットルームを作るウィンドウを開く"
+	},
+	[53] = {
+		ID = TT_EX_SAVE_CHAT,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/savechat",
+		Tooltip = "/savechat",
+		TipBoxID = 24,
+		Description = "チャットのログをセーブします"
+	},
+	[54] = {
+		ID = TT_EX_DORIDORI,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/doridori",
+		TipBoxID = 187,
+		Description = "キャラクターが左右に首を振ります"
+	},
+	[55] = {
+		ID = TT_EX_BANGBANG,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/bangbang",
+		TipBoxID = 188,
+		Description = "キャラクターが時計回りに回ります"
+	},
+	[56] = {
+		ID = TT_EX_BINGBING,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/bingbing",
+		TipBoxID = 189,
+		Description = "キャラクターが反時計回りに回ります"
+	},
+	[57] = {
+		ID = TT_EX_WHISPER_BLOCK_LIST,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/ex",
+		TipBoxID = 28,
+		Description = "View a list of Characters you have Blocked."
+	},
+	[58] = {
+		ID = TT_EX_WHISPER_ALL_ACCEPT,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/inall",
+		TipBoxID = 28,
+		Description = "全キャラクターからの耳打ち許可"
+	},
+	[59] = {
+		ID = TT_EX_WHISPER_ALL_BLOCK,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/exall",
+		TipBoxID = 28,
+		Description = "全キャラクターからの耳打ち拒否"
+	},
+	[60] = {
+		ID = TT_EX_RANK_BLACKSMITH,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/blacksmith",
+		TipBoxID = 190,
+		Description = "ブラックスミスの上位10位ランキングを表\示します"
+	},
+	[61] = {
+		ID = TT_EX_RANK_ALCHEMIST,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/alchemist",
+		TipBoxID = 190,
+		Description = "アルケミストの上位10位ランキングを表\示します"
+	},
+	[62] = {
+		ID = TT_EX_RANK_TAEKWON,
+		Tab = ETC,
+		Type = EXE,
+		Title = "/taekwon",
+		TipBoxID = 193,
+		Description = "テコンミッションの上位10位ランキングを表\示します"
+	}
+}
