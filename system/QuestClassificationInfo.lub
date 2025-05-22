@@ -1,0 +1,36 @@
+QuestIconTooltipTable = {
+	["ico_ep.bmp"] = "EPISODE QUEST",
+	["ico_dq.bmp"] = "DAILY QUEST",
+	["ico_lq.bmp"] = "LOCAL QUEST",
+	["ico_jq.bmp"] = "JOB QUEST",
+	["ico_gq.bmp"] = "GUIDE QUEST",
+	["ico_ev.bmp"] = "EVENT QUEST",
+	["ico_mq.bmp"] = "MAIN QUEST",
+	["ico_vr.bmp"] = "VR_BOOKS"
+}
+IDs = { ALL = 0, ETC_QUEST = 1, NORMAL_QUEST = 2, SUB_QUEST = 3, DAILY_QUEST = 4, EVENT_QUEST = 5 }
+QuestFilterTable = {
+	[IDs.ALL] = { Tooltip = "ALL QUEST" },
+	[IDs.NORMAL_QUEST] = {
+		Tooltip = "EPISODE GUIDE LOCAL QUEST",
+		QuestIcons = { "ico_ep.bmp", "ico_gq.bmp", "ico_lq.bmp" }
+	},
+	[IDs.SUB_QUEST] = { Tooltip = "SUB QUEST", QuestIcons = { "ico_sub.bmp" } },
+	[IDs.DAILY_QUEST] = { Tooltip = "DAILY QUEST", QuestIcons = { "ico_dq.bmp" } },
+	[IDs.EVENT_QUEST] = { Tooltip = "EVENT QUEST", QuestIcons = { "ico_ev.bmp" } },
+	[IDs.ETC_QUEST] = { Tooltip = "ETC QUEST" }
+}
+
+-- Function #0
+LoadQuestIconTooltip = function()
+	for IconName, Tooltip in pairs(QuestIconTooltipTable) do
+		AddQuestIconTooltip(IconName, Tooltip)
+	end
+end
+
+-- Function #1
+LoadQuestFilterInfo = function()
+	for ID, Info in pairs(QuestFilterTable) do
+		AddQuestFilterInfo(ID, Info.Tooltip, Info.QuestIcons)
+	end
+end
