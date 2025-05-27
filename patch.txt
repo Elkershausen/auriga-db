@@ -1,6 +1,7 @@
 2025/05/27	patch0274
 * ペットdb 基礎効果実装完了(pet_db.txt mob_db_add.txt)
 * 追加したペットの餌の価格実装(item_db.txt)
+* ペットデバッグ用NPC実装(npc\update\backyard\npc_test_pet.sc)
 
 * 05/27 実装アイテムは100以上あるため来週に持ち越し
 
