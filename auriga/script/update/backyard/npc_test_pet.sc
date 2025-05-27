@@ -13,6 +13,9 @@ prontera.gat,194,162,0	script	ペット卵作成	70,{
 	if('@count > 9191) { mes "範囲外です"; close; }
 	makepet '@count;
 	getitem 643,10;
+	mes "["+strnpcinfo(1)+"]";
+	mes "餌とアクセをどうぞ";
+	next;
 if('@count == 9001) { getitem 10013,1; getitem 531,5; getitem 619,10; }
 if('@count == 9002) { getitem 10013,1; getitem 508,5; getitem 620,10; }
 if('@count == 9003) { getitem 10013,1; getitem 511,5; getitem 621,10; }
@@ -135,13 +138,6 @@ prontera.gat,196,162,0	script	餌入手	70,{
 	mes "親密度と孵化アイテム";
 	gmcommand "@petfriendly 1000";
 	getitem 643,10;
-	next;
-	if(getpetinfo(0) == 0) { 	mes "["+strnpcinfo(1)+"]";	mes "ペットがいません"; close; }
-	mes "["+strnpcinfo(1)+"]";
-	mes "餌とアクセをどうぞ";
-	next;
-	mes "["+strnpcinfo(1)+"]";
-	mes "終了";
 	close;
 }
 
