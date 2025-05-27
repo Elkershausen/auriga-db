@@ -151,5 +151,4 @@ prontera.gat,198,162,0	script	ペット削除	70,{
 	mes "孵化アイテム入手";
 	getitem 643,10;
 	close;
-close;
 }
