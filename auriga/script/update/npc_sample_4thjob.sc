@@ -205,7 +205,12 @@
 	))
 		{
 	case 1:
-	if(Job != Job_RuneKnight) {	mes "["+strnpcinfo(1)+"]";	mes "ルーンナイト専用です";	close;	}
+	if(getbaseclass(Class) == CLASS_SUM) {
+	mes "["+strnpcinfo(1)+"]";
+	mes "人間族専用です";
+	
+	close;
+	}
 		setlook 7,0;				//服色をデフォルトに戻す
 		setlook 13,0;				//セカンドコスチュームを戻す
 		set StatusPoint,100;			//追加転生ステータスポイント
