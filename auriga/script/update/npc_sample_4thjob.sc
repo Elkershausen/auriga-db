@@ -1,4 +1,4 @@
-//2025/05/07 アップデート
+//2025/06/13 アップデート
 //簡易4次職転職スクリプト
 
 -	script	4thJobChange		10461,{
@@ -163,8 +163,8 @@
 	}
 }
 //任意のマップ・座標に設置
-prontera.gat,150,160,2	duplicate(4thJobChange)	4次転職NPC	10461
-prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	10461
+//prontera.gat,150,160,2	duplicate(4thJobChange)	4次転職NPC	10461
+//prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	10461
 
 //ここから開発者用NPC
 //4次職スクリプト
@@ -176,7 +176,6 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	mes "どの職業にしますか？";
 	skill 142,1,0;				//クエストスキル
 	skill 143,1,0;				//クエストスキル
-	cutin "update_event01.bmp",3;
 	next;
 	switch(select(
 	"ドラゴンナイト",		//case 1
@@ -225,7 +224,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -244,7 +243,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -264,7 +263,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -282,7 +281,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -305,7 +304,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -328,7 +327,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -349,7 +348,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -372,7 +371,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -391,7 +390,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -411,7 +410,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -432,7 +431,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -454,7 +453,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -476,7 +475,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -492,7 +491,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -508,7 +507,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -524,7 +523,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -540,7 +539,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -556,7 +555,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -572,7 +571,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) != CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "ドラム族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -597,7 +596,7 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	if(getbaseclass(Class) == CLASS_SUM) {
 	mes "["+strnpcinfo(1)+"]";
 	mes "人間族専用です";
-	cutin "update_event01.bmp",255;
+	
 	close;
 	}
 		setlook 7,0;
@@ -621,13 +620,13 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	case 24:
 		mes "[" +strnpcinfo(1)+ "]";
 		mes "転職処理を中止します";
-		cutin "update_event01.bmp",255;
+		
 		close;
 		}
 
 	mes "[" +strnpcinfo(1)+ "]";
 	mes "転職が完了しました";
-	cutin "update_event01.bmp",255;
+	
 	close;
 }
 
@@ -682,5 +681,5 @@ prontera.gat,150,150,3	duplicate(4thJobChangeDoram)	スピリットハンドラー転職NPC	
 	close;
 }
 
-//prontera.gat,150,160,2	duplicate(4thJOBtest)	4次転職NPC	10461
-//prontera.gat,150,150,3	duplicate(doramreset4th)	サモナー戻しNPC	10461
+prontera.gat,150,160,2	duplicate(4thJOBtest)	4次転職NPC	10461
+prontera.gat,150,150,3	duplicate(doramreset4th)	サモナー戻しNPC	10461
