@@ -5,7 +5,7 @@
 
 * アイテムの効果修正(item_db.txt)
 
-* [bonus bMaxHPRate][bonus bMaxSPRate]の[Rate]が小文字[rate]だったので大文字に修正(item_db.txt)
+* [bonus bMaxHPRate][bonus bMaxSPRate][UseSPRate][CastRate][FixCastRate]の[Rate]が小文字[rate]だったので大文字に修正(item_db.txt)
 * 効果は出ていましたが修正しました
 
 * 呼び出し関数[全ての種族のモンスターに与える物理ダメージ][全ての種族のモンスターに与える魔法ダメージ]の記述を最適化(function_itemdb.sc)
