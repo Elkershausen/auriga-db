@@ -79,32 +79,10 @@ function	script	AddSkillSubHealRate	{
 }
 
 //============================================================
-//物理攻撃で与えるダメージ + '@val%
-//{ callfunc "MeleeRate",'@val; }
-
-function	script	MeleeRate	{
-	set '@val,getarg(0);
-		bonus2 bAddRace,Rct_Boss,'@val;
-		bonus2 bAddRace,Rct_NonBoss,'@val;
-	return;
-}
-
-//============================================================
-//魔法攻撃で与えるダメージ + '@val%
-//{ callfunc "MagicRate",'@val; }
-
-function	script	MagicRate	{
-	set '@val,getarg(0);
-		bonus2 bMagicAddRace,Rct_Boss,'@val;
-		bonus2 bMagicAddRace,Rct_NonBoss,'@val;
-	return;
-}
-
-//============================================================
 //物理攻撃時[全ての種族]のモンスターに与えるダメージ + '@val% プレイヤーとドラム形除く
-//{ callfunc "MeleeRct_All",'@val; }
+//{ callfunc "bAddRace_All",'@val; }
 
-function	script	MeleeRct_All	{
+function	script	bAddRace_All	{
 	set '@val,getarg(0);
 		bonus2 bAddRace,Rct_Formless,'@val;
 		bonus2 bAddRace,Rct_Undead,'@val;
@@ -121,9 +99,9 @@ function	script	MeleeRct_All	{
 
 //============================================================
 //魔法攻撃時[全ての種族]のモンスターに与えるダメージ + '@val% プレイヤーとドラム形除く
-//{ callfunc "MagicRct_All",'@val; }
+//{ callfunc "bMagicAddRace_All",'@val; }
 
-function	script	MagicRct_All	{
+function	script	bMagicAddRace_All	{
 	set '@val,getarg(0);
 		bonus2 bMagicAddRace,Rct_Formless,'@val;
 		bonus2 bMagicAddRace,Rct_Undead,'@val;

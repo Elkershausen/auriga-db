@@ -1,5 +1,5 @@
 //2025/06/03 アップデート
-//分析エンチャントチケット フラグの設定 未実装
+//分析エンチャントチケット フラグの設定 未実装 代替 7347 研究記録 100個
 //エンチャントパターン 精錬条件なし 全スロットエンチャ スロットエンチャントなし
 
 //prontera.gat,160,115,4	script	分析職人・長女	815,{
@@ -8,8 +8,6 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 	/* 共通条件設定 */
 				//[0]	[1]	[2]	[3]	[4]	[5]	[6]	[7]	[8]
 	setarray '@main[0],	400012,	22235,	20974,	20977,	20978,	20979,	32268,	32269,	400013;	//エンチャントをつけるアイテム
-	setarray '@slotnum[0],	0,	0;
-	//setarray '@changeid[0],	19444,19446;	//スロットエンチャント
 	set '@costAid,7347;								//必要なアイテム 分析エンチャントチケット -> 仮設定 7347 研究記録
 	set '@costAnum,100;								//必要なフラグの数 100
 	if(countitem('@costAid) <= ('@costAnum - 1))	{ mes ""+getitemname('@costAid)+" が "+'@costAnum+" 個必要です";	close;	}	//先頭に共通条件を挟み全体を簡素化する
@@ -50,7 +48,7 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 		set '@refC,0;					//'@slotCの精錬値条件(未使用)
 		set '@refD,0;					//'@slotDの精錬値条件(未使用)
 		set '@pos,1;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[0]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[0]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[0])+" ["+getiteminfo('@main[0],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[0]) != 1)		{ mes ""+getitemname('@main[0])+"["+getiteminfo('@main[0],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -100,8 +98,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 			case 2:
 				set '@winrate,(100 - ('@winArate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		}
 		/* エンチャント1つ選択の最終処理終了 */ /* 精錬条件終了 */
@@ -143,8 +141,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		}
 		/* エンチャント2つ選択の最終処理終了 */	/* 精錬条件終了 */
@@ -188,8 +186,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate + '@winCrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 				}
 			}
 		/* エンチャント3つ選択の最終処理終了 */	/* 精錬条件終了 */
@@ -239,8 +237,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 				mes "エンチャ失敗率 : "+('@winArate + '@winBrate + '@winCrate + '@winDrate)+" ";
 				mes "スロットエンチャント設定成功率 : "+'@winD[0]+" ";
 				next;
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1; getitem2 '@main[0],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;		close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[0],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;		close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 			}
 		/* エンチャントアイテム取得処理終了 */
 	/* 400012 黎明のマジェスティックゴート[0] 終了 */
@@ -253,7 +251,7 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 		set '@refC,0;					//'@slotCの精錬値条件(未使用)
 		set '@refD,0;					//'@slotDの精錬値条件(未使用)
 		set '@pos,6;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[1]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[1]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[1])+" ["+getiteminfo('@main[1],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[1]) != 1)		{ mes ""+getitemname('@main[1])+"["+getiteminfo('@main[1],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -387,8 +385,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 				mes "エンチャ失敗率 : "+('@winArate + '@winBrate + '@winCrate + '@winDrate)+" ";
 				mes "スロットエンチャント設定成功率 : "+'@winD[0]+" ";
 				next;
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[1],1; getitem2 '@main[1],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[1],1;								close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[1],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;								close;	}
 			}
 		/* エンチャントアイテム取得処理終了 */
 	/* 22235 銀の毛皮のシューズ[0] 終了 */
@@ -401,7 +399,7 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 		set '@refC,0;					//'@slotCの精錬値条件(未使用)
 		set '@refD,0;					//'@slotDの精錬値条件(未使用)
 		set '@pos,5;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[2]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[2]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[2])+" ["+getiteminfo('@main[2],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[2]) != 1)		{ mes ""+getitemname('@main[2])+"["+getiteminfo('@main[2],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -523,8 +521,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 				mes "エンチャ失敗率 : "+('@winArate + '@winBrate + '@winCrate + '@winDrate)+" ";
 				mes "スロットエンチャント設定成功率 : "+'@winD[0]+" ";
 				next;
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[2],1; getitem2 '@main[2],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[2],1;								close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[2],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;								close;	}
 			}
 		/* エンチャントアイテム取得処理終了 */
 	/* 20974 ピオニーマミーのフード[0] 終了 */
@@ -537,7 +535,7 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 		set '@refC,0;					//'@slotCの精錬値条件(未使用)
 		set '@refD,0;					//'@slotDの精錬値条件(未使用)
 		set '@pos,5;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[3]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[3]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[3])+" ["+getiteminfo('@main[3],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[3]) != 1)		{ mes ""+getitemname('@main[3])+"["+getiteminfo('@main[3],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -659,8 +657,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 				mes "エンチャ失敗率 : "+('@winArate + '@winBrate + '@winCrate + '@winDrate)+" ";
 				mes "スロットエンチャント設定成功率 : "+'@winD[0]+" ";
 				next;
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[3],1; getitem2 '@main[3],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[3],1;								close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[3],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;								close;	}
 			}
 		/* エンチャントアイテム取得処理終了 */
 	/* 20977 スノーフリップのフード[0] 終了 */
@@ -673,7 +671,7 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 		set '@refC,0;					//'@slotCの精錬値条件(未使用)
 		set '@refD,0;					//'@slotDの精錬値条件(未使用)
 		set '@pos,5;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[4]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[4]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[4])+" ["+getiteminfo('@main[4],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[4]) != 1)		{ mes ""+getitemname('@main[4])+"["+getiteminfo('@main[4],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -795,8 +793,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 				mes "エンチャ失敗率 : "+('@winArate + '@winBrate + '@winCrate + '@winDrate)+" ";
 				mes "スロットエンチャント設定成功率 : "+'@winD[0]+" ";
 				next;
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[4],1; getitem2 '@main[4],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[4],1;								close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[4],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;								close;	}
 			}
 		/* エンチャントアイテム取得処理終了 */
 	/* 20978 世界樹のほこりのフード[0] 終了 */
@@ -809,7 +807,7 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 		set '@refC,0;					//'@slotCの精錬値条件(未使用)
 		set '@refD,0;					//'@slotDの精錬値条件(未使用)
 		set '@pos,5;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[5]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[5]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[5])+" ["+getiteminfo('@main[5],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[5]) != 1)		{ mes ""+getitemname('@main[5])+"["+getiteminfo('@main[5],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -931,8 +929,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 				mes "エンチャ失敗率 : "+('@winArate + '@winBrate + '@winCrate + '@winDrate)+" ";
 				mes "スロットエンチャント設定成功率 : "+'@winD[0]+" ";
 				next;
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[5],1; getitem2 '@main[5],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[5],1;								close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[5],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;								close;	}
 			}
 		/* エンチャントアイテム取得処理終了 */
 	/* '@main[5] 20979 ぴしゃりハーブのフード[0] 終了 */
@@ -945,8 +943,9 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 		set '@refC,0;					//'@slotCの精錬値条件(未使用)
 		set '@refD,0;					//'@slotDの精錬値条件(未使用)
 		set '@pos,7;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[6]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[6]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "アクセサリ(1) に "+getitemname('@main[6])+" ["+getiteminfo('@main[6],10)+"] を装備して下さい";	close;	}
+		if(getequipisequiped(8) == 1) 			{ mes "アクセサリ(2)を外して下さい";	close;	}	//左右同時に装備しているとアイテムが増殖する
 		if(equippeditem('@main[6]) != 1)		{ mes ""+getitemname('@main[6])+"["+getiteminfo('@main[6],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
 		/* 初期条件設定ここまで */
@@ -1067,8 +1066,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 				mes "エンチャ失敗率 : "+('@winArate + '@winBrate + '@winCrate + '@winDrate)+" ";
 				mes "スロットエンチャント設定成功率 : "+'@winD[0]+" ";
 				next;
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[6],1; getitem2 '@main[6],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[6],1;								close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[6],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;								close;	}
 			}
 		/* エンチャントアイテム取得処理終了 */
 	/* '@main[6] 32268 カルニウムリング[0] 終了 */
@@ -1081,7 +1080,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 		set '@refC,0;					//'@slotCの精錬値条件(未使用)
 		set '@refD,0;					//'@slotDの精錬値条件(未使用)
 		set '@pos,8;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[7]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[7]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
+		if(getequipisequiped(7) == 1) 			{ mes "アクセサリ(1)を外して下さい";	close;	}	//左右同時に装備しているとアイテムが増殖する
 		if(getequipisequiped('@pos) == 0) 		{ mes "アクセサリ(2) に "+getitemname('@main[7])+" ["+getiteminfo('@main[7],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[7]) != 1)		{ mes ""+getitemname('@main[7])+"["+getiteminfo('@main[7],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -1203,8 +1203,8 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 				mes "エンチャ失敗率 : "+('@winArate + '@winBrate + '@winCrate + '@winDrate)+" ";
 				mes "スロットエンチャント設定成功率 : "+'@winD[0]+" ";
 				next;
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[7],1; getitem2 '@main[7],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[7],1;								close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[7],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;								close;	}
 			}
 		/* エンチャントアイテム取得処理終了 */
 	/* '@main[7] 32269 カルニウムイヤリング[0] 終了 */
@@ -1217,7 +1217,7 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 		set '@refC,0;					//'@slotCの精錬値条件(未使用)
 		set '@refD,0;					//'@slotDの精錬値条件(未使用)
 		set '@pos,10;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[8]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[8]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[8])+" ["+getiteminfo('@main[8],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[8]) != 1)		{ mes ""+getitemname('@main[8])+"["+getiteminfo('@main[8],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -1337,11 +1337,10 @@ yuno.gat,211,291,3	script	分析職人・長女	815,{
 				mes "エンチャ失敗率 : "+('@winArate + '@winBrate + '@winCrate + '@winDrate)+" ";
 				mes "スロットエンチャント設定成功率 : "+'@winD[0]+" ";
 				next;
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[8],1; getitem2 '@main[8],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[8],1;								close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[8],1,1,'@ref,0,'@en1,'@en2,'@en3,'@en4,0;	close;	}	//第1スロットにエンチャントする場合は ['@slotDcard] -> ['@en1] 変更
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;								close;	}
 			}
 		/* エンチャントアイテム取得処理終了 */
 	/* '@main[8] 400013 くわえたチョコスティック[0] 終了 */
-
 	}
 }

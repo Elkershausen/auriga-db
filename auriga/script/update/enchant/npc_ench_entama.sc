@@ -43,7 +43,7 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 		set '@refD,99;					//'@slotDの精錬値条件(未使用)
 		set '@pos,1;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
 		//set '@addflagAid,9999;			//エンチャ別に何か設定したい場合 追加アイテム 成功率変化 S付き入手
-		if(countitem('@main[0]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[0]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[0])+" ["+getiteminfo('@main[0],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[0]) != 1)		{ mes ""+getitemname('@main[0])+"["+getiteminfo('@main[0],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -120,8 +120,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		/* エンチャント1つ選択の最終処理終了 */
 		}
@@ -185,8 +185,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1; 									close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 									close; }
 			}
 		/* エンチャント2つ選択の最終処理終了 */
 		}
@@ -255,8 +255,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate + '@winCrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[0],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[0],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 		/* エンチャント3つ選択の最終処理終了 */
 			}
 	/* 19172 お座り教皇(私服)[1] 終了 */
@@ -270,7 +270,7 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 		set '@refD,99;					//'@slotDの精錬値条件(未使用)
 		set '@pos,6;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
 
-		if(countitem('@main[1]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[1]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[1])+" ["+getiteminfo('@main[1],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[1]) != 1)		{ mes ""+getitemname('@main[1])+"["+getiteminfo('@main[1],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -345,8 +345,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[1],1; getitem2 '@main[1],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[1],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[1],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		/* エンチャント1つ選択の最終処理終了 */
 		}
@@ -409,8 +409,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[1],1; getitem2 '@main[1],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[1],1; 									close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[1],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 									close; }
 			}
 		/* エンチャント2つ選択の最終処理終了 */
 		}
@@ -478,8 +478,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate + '@winCrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[1],1; getitem2 '@main[1],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[1],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[1],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 		/* エンチャント3つ選択の最終処理終了 */
 			}
 	/* 22129 勇者の靴[1] 終了 */
@@ -492,7 +492,7 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 		set '@refC,10;					//'@slotCの精錬値条件(10以上)
 		set '@refD,99;					//'@slotDの精錬値条件(未使用)
 		set '@pos,2;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[2]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[2]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[2])+" ["+getiteminfo('@main[2],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[2]) != 1)		{ mes ""+getitemname('@main[2])+"["+getiteminfo('@main[2],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -563,8 +563,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[2],1; getitem2 '@main[2],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[2],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[2],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		/* エンチャント1つ選択の最終処理終了 */
 		}
@@ -623,8 +623,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[2],1; getitem2 '@main[2],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[2],1; 									close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[2],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 									close; }
 			}
 		/* エンチャント2つ選択の最終処理終了 */
 		}
@@ -660,8 +660,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate + '@winCrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[2],1; getitem2 '@main[2],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[2],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[2],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 		/* エンチャント3つ選択の最終処理終了 */
 			}
 	/* 15191 カーリッツバーグ騎士団の鎧[1] 終了 */
@@ -674,7 +674,7 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 		set '@refC,0;					//'@slotCの精錬値条件(未使用)
 		set '@refD,0;					//'@slotDの精錬値条件(未使用)
 		set '@pos,9;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[3]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[3]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[3])+" ["+getiteminfo('@main[3],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[3]) != 1)		{ mes ""+getitemname('@main[3])+"["+getiteminfo('@main[3],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -742,8 +742,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[3],1; getitem2 '@main[3],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[3],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[3],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		/* エンチャント1つ選択の最終処理終了 */
 		}
@@ -799,8 +799,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[3],1; getitem2 '@main[3],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[3],1; 									close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[3],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 									close; }
 			}
 		/* エンチャント2つ選択の最終処理終了 */
 		}
@@ -859,8 +859,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate + '@winCrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[3],1; getitem2 '@main[3],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[3],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[3],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 		/* エンチャント3つ選択の最終処理終了 */
 			}
 	/* 19174 小型偵察機[0] 終了 */
@@ -873,7 +873,7 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 		set '@refC,0;					//'@slotCの精錬値条件(未使用)
 		set '@refD,0;					//'@slotDの精錬値条件(未使用)
 		set '@pos,10;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-		if(countitem('@main[4]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[4]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[4])+" ["+getiteminfo('@main[4],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[4]) != 1)		{ mes ""+getitemname('@main[4])+"["+getiteminfo('@main[4],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -935,8 +935,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[4],1; getitem2 '@main[4],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[4],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[4],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		/* エンチャント1つ選択の最終処理終了 */
 		}
@@ -982,8 +982,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[4],1; getitem2 '@main[4],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[4],1; 									close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[4],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 									close; }
 			}
 		/* エンチャント2つ選択の最終処理終了 */
 		}
@@ -1032,8 +1032,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate + '@winCrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[4],1; getitem2 '@main[4],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[4],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[4],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 		/* エンチャント3つ選択の最終処理終了 */
 			}
 	/* 19173 浮遊する氷[0] 終了 */
@@ -1045,8 +1045,7 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 		set '@refC,10;					//'@slotCの精錬値条件(10以上)
 		set '@refD,99;					//'@slotDの精錬値条件(未使用)
 		set '@pos,1;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-
-		if(countitem('@main[5]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[5]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[5])+" ["+getiteminfo('@main[5],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[5]) != 1)		{ mes ""+getitemname('@main[5])+"["+getiteminfo('@main[5],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -1108,8 +1107,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[5],1; getitem2 '@main[5],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[5],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[5],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		}
 
@@ -1163,8 +1162,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[5],1; getitem2 '@main[5],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[5],1; 									close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[5],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 									close; }
 			}
 		}
 
@@ -1196,8 +1195,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate + '@winCrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[5],1; getitem2 '@main[5],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[5],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[5],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 			}
 	/* 19272 ガーデンオブエデン[1] 終了 */
 
@@ -1208,8 +1207,7 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 		set '@refC,99;					//'@slotCの精錬値条件(未使用)
 		set '@refD,99;					//'@slotDの精錬値条件(未使用)
 		set '@pos,5;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-
-		if(countitem('@main[6]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[6]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[6])+" ["+getiteminfo('@main[6],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[6]) != 1)		{ mes ""+getitemname('@main[6])+"["+getiteminfo('@main[6],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -1271,8 +1269,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[6],1; getitem2 '@main[6],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[6],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[6],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		}
 
@@ -1326,8 +1324,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[6],1; getitem2 '@main[6],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[6],1; 									close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[6],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 									close; }
 			}
 		}
 
@@ -1359,8 +1357,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate + '@winCrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[6],1; getitem2 '@main[6],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[6],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[6],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 			}
 	/* 20854 メディックケープ[1] 終了 */
 
@@ -1371,8 +1369,7 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 		set '@refC,99;					//'@slotCの精錬値条件(未使用)
 		set '@refD,99;					//'@slotDの精錬値条件(未使用)
 		set '@pos,2;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-
-		if(countitem('@main[7]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[7]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[7])+" ["+getiteminfo('@main[7],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[7]) != 1)		{ mes ""+getitemname('@main[7])+"["+getiteminfo('@main[7],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -1434,8 +1431,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[7],1; getitem2 '@main[7],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[7],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[7],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		}
 
@@ -1489,8 +1486,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[7],1; getitem2 '@main[7],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[7],1; 									close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[7],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 									close; }
 			}
 		}
 
@@ -1522,8 +1519,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate + '@winCrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[7],1; getitem2 '@main[7],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[7],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[7],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 			}
 	/* 15209 ドレイクコート[1] 終了 */
 
@@ -1534,8 +1531,7 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 		set '@refC,0;					//'@slotCの精錬値条件(0以上)
 		set '@refD,99;					//'@slotDの精錬値条件(未使用)
 		set '@pos,9;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-
-		if(countitem('@main[8]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[8]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[8])+" ["+getiteminfo('@main[8],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[8]) != 1)		{ mes ""+getitemname('@main[8])+"["+getiteminfo('@main[8],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -1595,8 +1591,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[8],1; getitem2 '@main[8],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[8],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[8],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		}
 
@@ -1648,8 +1644,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[8],1; getitem2 '@main[8],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[8],1; 									close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[8],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 									close; }
 			}
 		}
 
@@ -1701,8 +1697,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate + '@winCrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[8],1; getitem2 '@main[8],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[8],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[8],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 			}
 	/* 19273 ジェミニ-S58の目(赤)[0] 終了 */
 
@@ -1713,8 +1709,7 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 		set '@refC,0;					//'@slotCの精錬値条件(0以上)
 		set '@refD,99;					//'@slotDの精錬値条件(未使用)
 		set '@pos,10;					//頭上1	頭中9	頭下10	鎧2	左盾3	右武4	肩5	靴6	左ア(1)7	右ア(2)8
-
-		if(countitem('@main[9]) >= 2) 			{ mes "同じアイテムを持っています";							close;	}
+		//if(countitem('@main[9]) >= 2) 		{ mes "同じアイテムを持っています";							close;	}
 		if(getequipisequiped('@pos) == 0) 		{ mes "指定部位に "+getitemname('@main[9])+" ["+getiteminfo('@main[9],10)+"] を装備して下さい";	close;	}
 		if(equippeditem('@main[9]) != 1)		{ mes ""+getitemname('@main[9])+"["+getiteminfo('@main[9],10)+"]を1つ装備して下さい";	close;	}
 		if(getequiprefinerycnt('@pos) < '@refA)		{ mes "精錬値 "+'@refA+" 以上から利用できます";						close;	}
@@ -1766,8 +1761,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[9],1; getitem2 '@main[9],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[9],1; 								close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[9],1,1,'@ref,0,'@slotDcard,0,0,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 								close; }
 			}
 		}
 
@@ -1811,8 +1806,8 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[9],1; getitem2 '@main[9],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[9],1; 									close; }
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[9],1,1,'@ref,0,'@slotDcard,0,'@en3,'@en4,0;	close; }
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos; 									close; }
 			}
 		}
 
@@ -1854,18 +1849,9 @@ enchant01.gat,176,73,3	script	エンタマ	553,{
 			case 2:
 				set '@winrate,(100 - ('@winArate + '@winBrate + '@winCrate));
 				set '@result,rand(1,100);
-				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delitem '@main[9],1; getitem2 '@main[9],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
-				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delitem '@main[9],1;									close;	}
+				if('@winrate >= '@result)	{ misceffect 154,""; mes "[" +strnpcinfo(1)+ "]"; mes "成功しました"; delitem '@costAid,'@costAnum; delequip '@pos; getitem2 '@main[9],1,1,'@ref,0,'@slotDcard,'@en2,'@en3,'@en4,0;	close;	}
+				else				{ misceffect 155,""; mes "[" +strnpcinfo(1)+ "]"; mes "失敗しました"; delitem '@costAid,'@costAnum; delequip '@pos;									close;	}
 			}
 	/* 19274 オープンエアヘッドフォン[0] 終了 */
-
-	/* 9999 なんとかヘッドギア[1] 開始 */
-	case 12: break;
-	/* 9999 なんとかヘッドギア[1] 終了 */
-
-	/* 9999 ほにゃららアーマー[0] 開始 */
-	case 13: break;
-	/* 9999 ほにゃららアーマー[0] 終了 */
-
 	}
 }
