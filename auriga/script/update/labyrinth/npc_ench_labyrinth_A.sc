@@ -33,7 +33,7 @@ lby_in.gat,60,93,4	script	–À‹{’²¸Œ¤‹†ˆõ	805,{/*0-0*/
 			mes "‚²—˜—p‚¨‘Ò‚¿‚µ‚Ä‚¢‚Ü‚·B";
 			close; }
 		set '@change,rand(0,99);
-		if('@change > 50) {
+		if('@change > 95) {
 			misceffect 622,"";
 			delitem '@costAid,'@costAnum;
 			delequip '@pos;
