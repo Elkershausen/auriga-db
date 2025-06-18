@@ -3410,7 +3410,7 @@ if packet_ver >= 20220831 then
 end
 
 if packet_ver >= 20240215 then
-	p(0x0bbe,6)
+--	p(0x0bbe,6)
 	p(0x0b39)
 	p(0x0b25)
 	p(0x0b41)
@@ -3452,6 +3452,24 @@ if packet_ver >= 20240215 then
 	p(0x0b9e)
 	p(0x0b9f)
 	p(0x0ba0)
+	p(0x0287)
+	p(0x0298)
+	p(0x0299)
+	p(0x0846)
+	p(0x0848)
+	p(0x08c0)
+	p(0x0a46)
+	p(0x0a47)
+	p(0x0afc)
+	p(0x472b)
+end
+
+if packet_ver >= 20240619 then
+--	p(0x0bbe,6)
+end
+
+if packet_ver >= 20250319 then
+	p(0x0c22, 12)
 end
 
 --dofile("./db/packet_shuffle.lua")

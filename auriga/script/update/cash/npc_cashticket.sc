@@ -1,4 +1,4 @@
-//2025/06/10 アップデート
+//2025/06/17 アップデート
 //スペシャルアイテムのチケット交換NPC
 //イベントなどの一時的な要素ではなく恒久的な要素です
 //利用回数保存フラグ必要
@@ -6,9 +6,6 @@
 //管理用NPC開始
 
 izlude.gat,143,150,3	shop	管理用チケット販売		10545,1002223,1000203,1000204,1000206,25584,25913,1000531,1000534,1000472,1001268,1001271,1001279,1001681,1001683,1002063,1002199,1002200
-
-
-//izlude.gat,142,142,3	script	管理用チケットNPC	70,{
 
 -	script	CashTicketExchange	{
 	
@@ -18,10 +15,8 @@ izlude.gat,143,150,3	shop	管理用チケット販売		10545,1002223,1000203,1000204,1000
 	gmcommand "@itemreset";
 	next;
 	mes "["+strnpcinfo(1)+"]";
-	mes ""+getitemname(1002199)+"入手";
-	getitem 1002199,1;
-	getitem 1002200,1;
-	getitem 1002223,1;
+	mes ""+getitemname(25584)+"入手";
+	getitem 25584,100;
 	close;
 }
 izlude.gat,143,150,3	duplicate(CashTicketExchange)	TicketSeller	70
@@ -31,7 +26,7 @@ izlude.gat,143,150,3	duplicate(CashTicketExchange)	TicketSeller	70
 
 izlude.gat,150,142,3	script	ミスティア	91,{
 
-	setarray '@main[0],1000203,1000204,1000206,25584,25913,1000531,1000534,1000472,1001268,1001271,1001279,1001681,1001683,1002063,1002199,1002200;
+	setarray '@main,1000203,1000204,1000206,25584,25913,1000531,1000534,1000472,1001268,1001271,1001279,1001681,1001683,1002063,1002199,1002200;
 
 	if((Weight*100/MaxWeight) > 50) { mes "["+strnpcinfo(1)+"]"; mes "所持重量を50%以上空けて下さい。"; close; }
 
@@ -45,7 +40,7 @@ izlude.gat,150,142,3	script	ミスティア	91,{
 		""+getitemname('@main[0])+"",
 		""+getitemname('@main[1])+"",
 		""+getitemname('@main[2])+"",
-		""+getitemname('@main[3])+"",
+		""+getitemname('@main[3])+" 実装",
 		""+getitemname('@main[4])+"",
 		""+getitemname('@main[5])+"",
 		""+getitemname('@main[6])+"",
@@ -61,14 +56,327 @@ izlude.gat,150,142,3	script	ミスティア	91,{
 		"クエストボーナスAチケット追加報酬")) {
 
 	case 1:	mes "["+strnpcinfo(1)+"]"; mes "ご利用お待ちしています";	close;
-	case 2:	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
-	case 3:	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
-	case 4:	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
-	case 5:	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
-	case 6:	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
-	case 7:	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
-	case 8:	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
-	case 9:	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
+	case 2:	set '@ticket,0;	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
+	case 3:	set '@ticket,1; mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
+	case 4:	set '@ticket,2; mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
+
+	case 5:	/*25584職業スペシャルチケット*/
+	/* 職業別スターターチケット[***VIPチケット]の場合は[3次職マスタープログラム]になる */
+	set '@cost,1;
+	set '@ref,7;
+	if(countitem('@main[3]) == 0) {	mes ""+getitemname('@main[3])+"が";	mes ""+'@cost+"個 必要です";	close; }
+		mes "["+strnpcinfo(1)+"]";
+		mes ""+getitemname('@main[3])+" "+'@cost+"個で";
+		mes "職業に応じた装備品のセットと";
+		mes ""+getitemname(1000310)+" 3個に交換します。";
+		mes "装備品は精錬値 + "+'@ref+" でお渡しします。";
+		mes "どのセットと交換しますか？";
+		next;
+		switch(select(
+			"やめる",
+			"ルーンナイト",
+			"ウォーロック",
+			"レンジャー",
+			"アークビショップ",
+			"メカニック",
+			"ギロチンクロス",
+			"ロイヤルガード",
+			"ソーサラー",
+			"ミンストレル(男)",
+			"ワンダラー(女)",
+			"修羅",
+			"ジェネティック",
+			"シャドウチェイサー",
+			"星帝",
+			"ソウルリーパー",
+			"影狼",
+			"朧",
+			"リベリオン",
+			"スーパーノービス(限界突破)",
+			"サモナー")) {
+		case 1: mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;
+		case 2:
+			mes "["+strnpcinfo(1)+"]";	mes "ルーンナイトでよろしいですか？";
+			next;
+			if(select("いいえ","ルーンナイトにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 1150,1,1,'@ref,0,0,0,0,0,0;	//天秤宮のクラスナヤ
+			getitem2 15418,1,1,'@ref,0,0,0,0,0,0;	//天秤宮のメイル
+			getitem2 19468,1,1,'@ref,0,0,0,0,0,0;	//天秤宮のダイアデム
+			getitem2 20970,1,1,'@ref,0,0,0,0,0,0;	//天秤宮のマント
+			getitem2 22227,1,1,'@ref,0,0,0,0,0,0;	//天秤宮のシューズ
+			getitem2 32261,1,1,0,0,0,0,0,0,0;	//天秤宮のリング
+			close;
+		case 3:
+			mes "["+strnpcinfo(1)+"]";	mes "ウォーロックでよろしいですか？";
+			next;
+			if(select("いいえ","ウォーロックにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 15426,1,1,'@ref,0,0,0,0,0,0;	//宝瓶宮のメイル
+			getitem2 19496,1,1,'@ref,0,0,0,0,0,0;	//宝瓶宮のクラウン
+			getitem2 20972,1,1,'@ref,0,0,0,0,0,0;	//宝瓶宮のマント
+			getitem2 22231,1,1,'@ref,0,0,0,0,0,0;	//宝瓶宮のシューズ
+			getitem2 26167,1,1,'@ref,0,0,0,0,0,0;	//宝瓶宮のスタッフ
+			getitem2 32266,1,1,0,0,0,0,0,0,0;	//宝瓶宮のリング
+			close;
+		case 4:
+			mes "["+strnpcinfo(1)+"]";	mes "レンジャーでよろしいですか？";
+			next;
+			if(select("いいえ","レンジャーにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 5739,1,1,'@ref,0,0,0,0,0,0;	//人馬宮のクラウン
+			getitem2 450140,1,1,'@ref,0,0,0,0,0,0;	//人馬宮のメイル
+			getitem2 470045,1,1,'@ref,0,0,0,0,0,0;	//人馬宮のシューズ
+			getitem2 480050,1,1,'@ref,0,0,0,0,0,0;	//人馬宮のマント
+			getitem2 700010,1,1,'@ref,0,0,0,0,0,0;	//人馬宮のハンターボウ
+			getitem2 490041,1,1,0,0,0,0,0,0,0;	//人馬宮のリング
+			close;
+		case 5:
+			mes "["+strnpcinfo(1)+"]";	mes "アークビショップでよろしいですか？";
+			next;
+			if(select("いいえ","アークビショップにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 5599,1,1,'@ref,0,0,0,0,0,0;	//処女宮のダイアデム
+			getitem2 450015,1,1,'@ref,0,0,0,0,0,0;	//処女宮のメイル
+			getitem2 470014,1,1,'@ref,0,0,0,0,0,0;	//処女宮のシューズ
+			getitem2 480009,1,1,'@ref,0,0,0,0,0,0;	//処女宮のマント
+			getitem2 640002,1,1,'@ref,0,0,0,0,0,0;	//処女宮のディバインクロス
+			getitem2 490010,1,1,0,0,0,0,0,0,0;	//処女宮のリング
+			close;
+		case 6:
+			mes "["+strnpcinfo(1)+"]";	mes "メカニックでよろしいですか？";
+			next;
+			if(select("いいえ","メカニックにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 1335,1,1,'@ref,0,0,0,0,0,0;	//巨蟹宮のアックス
+			getitem2 15412,1,1,'@ref,0,0,0,0,0,0;	//巨蟹宮のメイル
+			getitem2 19449,1,1,'@ref,0,0,0,0,0,0;	//巨蟹宮のクラウン
+			getitem2 20954,1,1,'@ref,0,0,0,0,0,0;	//巨蟹宮のマント
+			getitem2 22216,1,1,'@ref,0,0,0,0,0,0;	//巨蟹宮のシューズ
+			getitem2 32253,1,1,0,0,0,0,0,0,0;	//巨蟹宮のリング
+			close;
+		case 7:
+			mes "["+strnpcinfo(1)+"]";	mes "ギロチンクロスでよろしいですか？";
+			next;
+			if(select("いいえ","ギロチンクロスにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 15424,1,1,'@ref,0,0,0,0,0,0;	//天蝎宮のメイル
+			getitem2 19471,1,1,'@ref,0,0,0,0,0,0;	//天蝎宮のクラウン
+			getitem2 20976,1,1,'@ref,0,0,0,0,0,0;	//天蝎宮のマント
+			getitem2 22233,1,1,'@ref,0,0,0,0,0,0;	//天蝎宮のシューズ
+			getitem2 28047,1,1,'@ref,0,0,0,0,0,0;	//天蝎宮のカタール
+			getitem2 32267,1,1,0,0,0,0,0,0,0;	//天蝎宮のリング
+			close;
+		case 8:
+			mes "["+strnpcinfo(1)+"]";	mes "ロイヤルガードでよろしいですか？";
+			next;
+			if(select("いいえ","ロイヤルガードにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 5546,1,1,'@ref,0,0,0,0,0,0;	//白羊宮のクラウン
+			getitem2 32031,1,1,'@ref,0,0,0,0,0,0;	//白羊宮のスピアー
+			getitem2 450129,1,1,'@ref,0,0,0,0,0,0;	//白羊宮のメイル
+			getitem2 460002,1,1,'@ref,0,0,0,0,0,0;	//白羊宮のシールド
+			getitem2 470024,1,1,'@ref,0,0,0,0,0,0;	//白羊宮のシューズ
+			getitem2 480022,1,1,'@ref,0,0,0,0,0,0;	//白羊宮のマント
+			getitem2 490028,1,1,0,0,0,0,0,0,0;	//白羊宮のリング
+			close;
+		case 9:
+			mes "["+strnpcinfo(1)+"]";	mes "ソーサラーでよろしいですか？";
+			next;
+			if(select("いいえ","ソーサラーにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 5514,1,1,'@ref,0,0,0,0,0,0;	//双魚宮のダイアデム
+			getitem2 450133,1,1,'@ref,0,0,0,0,0,0;	//双魚宮のメイル
+			getitem2 470038,1,1,'@ref,0,0,0,0,0,0;	//双魚宮のシューズ
+			getitem2 480041,1,1,'@ref,0,0,0,0,0,0;	//双魚宮のマント
+			getitem2 640006,1,1,'@ref,0,0,0,0,0,0;	//双魚宮のスタッフオブソウル
+			getitem2 490034,1,1,0,0,0,0,0,0,0;	//双魚宮のリング
+			close;
+		case 10:
+			mes "["+strnpcinfo(1)+"]";	mes "ミンストレルでよろしいですか？";
+			next;
+			if(select("いいえ","ミンストレルにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 5569,1,1,'@ref,0,0,0,0,0,0;	//双児宮のダイアデム
+			getitem2 450130,1,1,'@ref,0,0,0,0,0,0;	//双児宮のメイル
+			getitem2 470032,1,1,'@ref,0,0,0,0,0,0;	//双児宮のシューズ
+			getitem2 480026,1,1,'@ref,0,0,0,0,0,0;	//双児宮のマント
+			getitem2 570004,1,1,'@ref,0,0,0,0,0,0;	//双児宮のバイオリン
+			getitem2 490032,1,1,0,0,0,0,0,0,0;	//双児宮のリング
+			close;
+		case 11:
+			mes "["+strnpcinfo(1)+"]";	mes "ワンダラーでよろしいですか？";
+			next;
+			if(select("いいえ","ワンダラーにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 5569,1,1,'@ref,0,0,0,0,0,0;	//双児宮のダイアデム
+			getitem2 450130,1,1,'@ref,0,0,0,0,0,0;	//双児宮のメイル
+			getitem2 470032,1,1,'@ref,0,0,0,0,0,0;	//双児宮のシューズ
+			getitem2 480026,1,1,'@ref,0,0,0,0,0,0;	//双児宮のマント
+			getitem2 580004,1,1,'@ref,0,0,0,0,0,0;	//双児宮のロープ
+			getitem2 490032,1,1,0,0,0,0,0,0,0;	//双児宮のリング
+			close;
+		case 12:
+			mes "["+strnpcinfo(1)+"]";	mes "修羅でよろしいですか？";
+			next;
+			if(select("いいえ","修羅にする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 15408,1,1,'@ref,0,0,0,0,0,0;	//獅子宮のメイル
+			getitem2 16098,1,1,'@ref,0,0,0,0,0,0;	//獅子宮のメイス
+			getitem2 19447,1,1,'@ref,0,0,0,0,0,0;	//獅子宮のクラウン
+			getitem2 20951,1,1,'@ref,0,0,0,0,0,0;	//獅子宮のマント
+			getitem2 22213,1,1,'@ref,0,0,0,0,0,0;	//獅子宮のシューズ
+			getitem2 32247,1,1,0,0,0,0,0,0,0;	//獅子宮のリング
+			close;
+		case 13:
+			mes "["+strnpcinfo(1)+"]";	mes "ジェネティックでよろしいですか？";
+			next;
+			if(select("いいえ","ジェネティックにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 1100,1,1,'@ref,0,0,0,0,0,0;	//金牛宮のソード
+			getitem2 15425,1,1,'@ref,0,0,0,0,0,0;	//金牛宮のメイル
+			getitem2 19473,1,1,'@ref,0,0,0,0,0,0;	//金牛宮のダイアデム
+			getitem2 20971,1,1,'@ref,0,0,0,0,0,0;	//金牛宮のマント
+			getitem2 22230,1,1,'@ref,0,0,0,0,0,0;	//金牛宮のシューズ
+			getitem2 32264,1,1,0,0,0,0,0,0,0;	//金牛宮のリング
+			close;
+		case 14:
+			mes "["+strnpcinfo(1)+"]";	mes "シャドウチェイサーでよろしいですか？";
+			next;
+			if(select("いいえ","シャドウチェイサーにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			delitem '@main[3],'@cost;
+			getitem 1000310,3;			//ジョブストーン
+			getitem2 400015,1,1,'@ref,0,0,0,0,0,0;	//磨羯宮のダイアデム
+			getitem2 450011,1,1,'@ref,0,0,0,0,0,0;	//磨羯宮のメイル
+			getitem2 470010,1,1,'@ref,0,0,0,0,0,0;	//磨羯宮のシューズ
+			getitem2 480006,1,1,'@ref,0,0,0,0,0,0;	//磨羯宮のマント
+			getitem2 700004,1,1,'@ref,0,0,0,0,0,0;	//磨羯宮のシーフボウ
+			getitem2 490009,1,1,0,0,0,0,0,0,0;	//磨羯宮のリング
+			close;
+		case 15: /*星帝*/
+			mes "["+strnpcinfo(1)+"]";	mes "星帝でよろしいですか？";
+			next;
+			if(select("いいえ","星帝にする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			setarray '@tk,	32293,	29716,	29717,	29718;
+			set '@cardA,0;
+			set '@cardB,0;
+			set '@cardC,0;
+			mes "["+strnpcinfo(1)+"]";
+			mes ""+getitemname('@tk[0])+" は";
+			mes "「"+getitemname('@tk[1])+"」「"+getitemname('@tk[2])+"」「"+getitemname('@tk[3])+"」";
+			mes "のうち1つだけエンチャントが可能です。";
+			mes "エンチャントを選んで下さい。";
+			next;
+			switch(select(
+				"やめる",
+				""+getitemname('@tk[1])+"",
+				""+getitemname('@tk[2])+"",
+				""+getitemname('@tk[3])+"")) {
+				case 1:	mes "["+strnpcinfo(1)+"]"; mes "ご利用お待ちしています";	close;
+				case 2:	set '@cardD,'@tk[1];	break;
+				case 3: set '@cardD,'@tk[2];	break;
+				case 4:	set '@cardD,'@tk[3];	break; }
+					delitem '@main[3],'@cost;
+					getitem 1000310,3;
+					getitem2 2400,1,1,'@ref,0,0,0,0,0,0;	//ポルックスシューズ
+					getitem2 15447,1,1,'@ref,0,0,0,0,0,0;	//ポルックスローブ
+					getitem2 15823,1,1,'@ref,0,0,0,0,0,0;	//ポルックスクラウン
+					getitem2 20983,1,1,'@ref,0,0,0,0,0,0;	//ポルックスマント
+					getitem2 28643,1,1,'@ref,0,0,0,0,0,0;	//ポルックスブック
+					getitem2 32293,1,1,0,0,'@cardA,'@cardB,'@cardC,'@cardD,0;	//ポルックスリング
+			close;
+		case 16: /*ソウルリーパー*/
+			mes "["+strnpcinfo(1)+"]";	mes "ソウルリーパーでよろしいですか？";
+			next;
+			if(select("いいえ","ソウルリーパーにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			setarray '@sl,	32294,	29719,	29720,	29721;
+			set '@cardA,0;
+			set '@cardB,0;
+			set '@cardC,0;
+			mes "["+strnpcinfo(1)+"]";
+			mes ""+getitemname('@sl[0])+" は";
+			mes "「"+getitemname('@sl[1])+"」「"+getitemname('@sl[2])+"」「"+getitemname('@sl[3])+"」";
+			mes "のうち1つだけエンチャントが可能です。";
+			mes "エンチャントを選んで下さい。";
+			next;
+			switch(select(
+				"やめる",
+				""+getitemname('@sl[1])+"",
+				""+getitemname('@sl[2])+"",
+				""+getitemname('@sl[3])+"")) {
+				case 1:	mes "["+strnpcinfo(1)+"]"; mes "ご利用お待ちしています";	close;
+				case 2:	set '@cardD,'@sl[1];	break;
+				case 3: set '@cardD,'@sl[2];	break;
+				case 4:	set '@cardD,'@sl[3];	break; }
+					delitem '@main[3],'@cost;
+					getitem 1000310,3;
+					getitem2 15448,1,1,'@ref,0,0,0,0,0,0;	//プロキオンローブ
+					getitem2 15824,1,1,'@ref,0,0,0,0,0,0;	//プロキオンクラウン
+					getitem2 20984,1,1,'@ref,0,0,0,0,0,0;	//プロキオンマント
+					getitem2 22242,1,1,'@ref,0,0,0,0,0,0;	//プロキオンシューズ
+					getitem2 28784,1,1,'@ref,0,0,0,0,0,0;	//プロキオンダガー
+					getitem2 32294,1,1,0,0,'@cardA,'@cardB,'@cardC,'@cardD,0;	//プロキオンリング
+			close;
+		case 17:	mes "["+strnpcinfo(1)+"]"; mes "影狼には";		mes "交換可能なアイテムがありません。";	close;
+		case 18:	mes "["+strnpcinfo(1)+"]"; mes "朧には";		mes "交換可能なアイテムがありません。";	close;
+		case 19:	mes "["+strnpcinfo(1)+"]"; mes "リベリオンには";	mes "交換可能なアイテムがありません。";	close;
+		case 20:	mes "["+strnpcinfo(1)+"]"; mes "スーパーノービス(限界突破)には";	mes "交換可能なアイテムがありません。";	close;
+		case 21: /*サモナー*/
+			mes "["+strnpcinfo(1)+"]";	mes "サモナーでよろしいですか？";
+			next;
+			if(select("いいえ","サモナーにする") == 1) {	mes "["+strnpcinfo(1)+"]";	mes "ご利用お待ちしています。";	close;	}
+			setarray '@nc,	28577,	28578,	28579;
+			setarray '@om,	28589,	28590,	28591;
+			mes "["+strnpcinfo(1)+"]";
+			mes "ネックレスを選んで下さい。";
+			next;
+			switch(select(
+				"やめる",
+				""+getitemname('@nc[0])+"",
+				""+getitemname('@nc[1])+"",
+				""+getitemname('@nc[2])+"")) {
+				case 1:	mes "["+strnpcinfo(1)+"]"; mes "ご利用お待ちしています";	close;
+				case 2:	set '@accA,'@nc[0];	break;
+				case 3: set '@accA,'@nc[1];	break;
+				case 4: set '@accA,'@nc[2];	break;	}
+			mes "["+strnpcinfo(1)+"]";
+			mes "お守りを選んで下さい。";
+			next;
+			switch(select(
+				"やめる",
+				""+getitemname('@om[0])+"",
+				""+getitemname('@om[1])+"",
+				""+getitemname('@om[2])+"")) {
+				case 1:	mes "["+strnpcinfo(1)+"]"; mes "ご利用お待ちしています";	close;
+				case 2:	set '@accB,'@om[0];	break;
+				case 3: set '@accB,'@om[1];	break;
+				case 4: set '@accB,'@om[2];	break;	}
+					delitem '@main[3],'@cost;
+					getitem 1000310,3;
+					getitem2 15277,1,1,'@ref,0,0,0,0,0,0;	//特選ドラムスーツ
+					getitem2 20917,1,1,'@ref,0,0,0,0,0,0;	//特選ドラムケープ
+					getitem2 22187,1,1,'@ref,0,0,0,0,0,0;	//特選ドラムシューズ
+					getitem2 19347,1,1,'@ref,0,0,0,0,0,0;	//抱きつきシャムネコ
+					getitem '@accA,1;			//ネックレス
+					getitem '@accB,1;			//お守り
+			close;
+		}
+	case 6: mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
+	case 7: mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
+	case 8: mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
+	case 9: mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
 	case 10:	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
 	case 11:	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
 	case 12:	mes "["+strnpcinfo(1)+"]"; mes "今後実装予定";	close;
