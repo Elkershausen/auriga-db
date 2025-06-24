@@ -15,7 +15,7 @@
 enchant01.gat,160,66,3	shop	管理用販売NPC		10545,6919,19172,22129,15191,19174,19173,19272,20854,15209,19273,19274,7510,19443,19444,19445,19446
 
 //移動NPCここから
-prontera.gat,70,68,4	script	ミー	10157,{
+prontera.gat,70,68,4	script	ミー#36397	10157,{
 
 	mes "["+strnpcinfo(1)+"]";
 	mes "リア号 船内に";
@@ -30,12 +30,6 @@ prontera.gat,70,68,4	script	ミー	10157,{
 }
 
 enchant01.gat,159,61,0		warp	enchant001	1,1,prontera.gat,70,63
-
-//倉庫サービス
-enchant01.gat,186,46,3	script	倉庫サービス	464,{
-	if(Zeny < 40) {	mes "ゼニーが足りません";	close;	}
-	set Zeny,Zeny-40;	openstorage;	end;
-}
 
 //マップフラグここから
 enchant01.gat	mapflag	nosave		SavePoint

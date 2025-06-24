@@ -3,7 +3,7 @@
 //表示ウインドウは30秒経過で[close;]してカットインフレームが残るのでリログして下さい
 //エンチャント状況で変わる文字色(緑青黄) フォント太字装飾 未実装
 
-izlude.gat,139,129,4	script	撮影監督	10494,{
+izlude.gat,139,129,4	script	撮影監督#38417	10494,{
 
 	mes "["+strnpcinfo(1)+"]";
 	mes "わいの最新カメラで";
@@ -20,7 +20,7 @@ izlude.gat,139,129,4	script	撮影監督	10494,{
 	set '@head_topB$,getitemname(getequipcardid(1,1)); if(getequipcardid(1,1) == 0) { set '@head_topB$," - "; }
 	set '@head_topC$,getitemname(getequipcardid(1,2)); if(getequipcardid(1,2) == 0) { set '@head_topC$," - "; }
 	set '@head_topD$,getitemname(getequipcardid(1,3)); if(getequipcardid(1,3) == 0) { set '@head_topD$," - "; }
-	
+
 	set '@head_midA$,getitemname(getequipcardid(9,0)); if(getequipcardid(9,0) == 0) { set '@head_midA$," - "; }
 	set '@head_midB$,getitemname(getequipcardid(9,1)); if(getequipcardid(9,1) == 0) { set '@head_midB$," - "; }
 	set '@head_midC$,getitemname(getequipcardid(9,2)); if(getequipcardid(9,2) == 0) { set '@head_midC$," - "; }

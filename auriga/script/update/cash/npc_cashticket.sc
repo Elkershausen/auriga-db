@@ -24,7 +24,7 @@ izlude.gat,143,150,3	duplicate(CashTicketExchange)	TicketSeller	70
 
 //管理用NPCここまで
 
-izlude.gat,150,142,3	script	ミスティア	91,{
+izlude.gat,150,142,3	script	ミスティア#35598	91,{
 
 	setarray '@main,1000203,1000204,1000206,25584,25913,1000531,1000534,1000472,1001268,1001271,1001279,1001681,1001683,1002063,1002199,1002200;
 

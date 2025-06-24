@@ -1,4 +1,4 @@
-//2025/06/17 アップデート
+//2025/06/24 アップデート
 //メイン倉庫1サブ倉庫3 [openstorage] 拡張が必要
 
 -	script	メイン倉庫#mainmimic50z	464,{
@@ -82,6 +82,21 @@ aldebaran.gat,169,125,5	duplicate(メイン倉庫#mainmimic50z)	メイン倉庫#27284	464
 aldebaran.gat,171,125,3	duplicate(サブ倉庫1#submimicA50z)	サブ倉庫1#27285		464
 aldebaran.gat,173,125,3	duplicate(サブ倉庫2#submimicB50z)	サブ倉庫2#27286		464
 aldebaran.gat,175,125,3	duplicate(サブ倉庫3#submimicC50z)	サブ倉庫3#27287		464
+
+brasilis.gat,174,224,5	duplicate(メイン倉庫#mainmimic50z)	メイン倉庫#27279	464
+brasilis.gat,176,224,3	duplicate(サブ倉庫1#submimicA50z)	サブ倉庫1#27280		464
+brasilis.gat,178,224,3	duplicate(サブ倉庫2#submimicB50z)	サブ倉庫2#27281		464
+brasilis.gat,180,224,3	duplicate(サブ倉庫3#submimicC50z)	サブ倉庫3#27282		464
+
+cmd_fild07.gat,40,268,5	duplicate(メイン倉庫#mainmimic50z)	メイン倉庫#36327	464
+cmd_fild07.gat,42,268,3	duplicate(サブ倉庫1#submimicA50z)	サブ倉庫1#36328		464
+cmd_fild07.gat,44,268,3	duplicate(サブ倉庫2#submimicB50z)	サブ倉庫2#36329		464
+cmd_fild07.gat,46,268,3	duplicate(サブ倉庫3#submimicC50z)	サブ倉庫3#36330		464
+
+comodo.gat,162,176,5	duplicate(メイン倉庫#mainmimic50z)	メイン倉庫#27259	464
+comodo.gat,164,176,3	duplicate(サブ倉庫1#submimicA50z)	サブ倉庫1#27260		464
+comodo.gat,166,176,3	duplicate(サブ倉庫2#submimicB50z)	サブ倉庫2#27261		464
+comodo.gat,168,176,3	duplicate(サブ倉庫3#submimicC50z)	サブ倉庫3#27262		464
 
 enchant01.gat,186,48,5	duplicate(メイン倉庫#mainmimic40z)	メイン倉庫#36422	464
 enchant01.gat,184,48,3	duplicate(サブ倉庫1#submimicA40z)	サブ倉庫1#36423		464
