@@ -1,7 +1,9 @@
 2025/12/31	patch0283
 * AI学習用データベース更新(item_ench.json item_list.json)
 
-* 自分で使っているgeminiが学習するためのもので、自然言語に最適化したものです
+* 自分で使っているGeminiが学習するためのもので、自然言語に最適化したものです
+
+* Google AI Pro(Gemini含む) を年間契約しています (https://one.google.com/intl/ja_jp/about/google-ai-plans/)
 
 2025/12/31	patch0282
 * 2025/07/15 - 2025/12/30 期間のアイテムの定義と基礎データ実装(item_db.* item_db2.* item_cartype.* pet_db.* mob_db_add.* classnum_db.* dropeffecttable.*)
