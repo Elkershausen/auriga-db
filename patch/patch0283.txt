@@ -1,0 +1,3 @@
+﻿AI学習用データベース更新(2025完全版)
+
+item_ench.json item_list.json
