@@ -1,4 +1,4 @@
-//2025/06/10 更新
+//2025/12/31 更新
 //[移動速度設定][攻撃][目標変更][アイテムルート][ランダム移動] 存在しないシステムなので全廃止
 //[パフォーマンス] 0を1にしてもエラーは出ない
 //テイミングによる捕獲成功率は実態調査が非常に困難のため、今後実装するペットは全て[500(5%)]に仕様を固定(作業を簡素化するためテイミングアイテムがない場合も500)
@@ -99,7 +99,7 @@
 1735,ALICEL,エリセル,0,9119,0,537,80,20,50,100,250,1,500,0,0,0,0,0,0,{ bonus bAddCriticalDamage,10; if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bDef,150; bonus bMdef,15; } }
 1737,ALIZA,エリザ,0,9120,0,537,80,20,50,100,250,1,500,0,0,0,0,0,0,{ if(BaseLevel >= 100) { bonus2 bAddRace,Rct_DemiHuman,5; bonus2 bAddRace,Rct_Player_Human,5; bonus2 bMagicAddRace,Rct_DemiHuman,5; bonus2 bMagicAddRace,Rct_Player_Human,5; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bDef,150; bonus bMdef,15; } }
 20571,ORK_HERO2,オークヒーロー,0,9121,0,25377,80,20,50,100,250,1,500,0,1,0,0,0,0,{ if(BaseLevel >= 100) { bonus bShortWeaponDamageReturn,10; skill "SM_MAGNUM",3; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
-20619,gloomundernight2,グルームアンダーナイト,0,9122,0,25377,80,20,50,100,250,1,500,0,1,0,0,0,0,{ if(BaseLevel >= 100) { skill "SA_VOLCANO",5; callfunc "refskllsubdamagerate",10; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
+20619,gloomundernight2,グルームアンダーナイト,0,9122,0,25377,80,20,50,100,250,1,500,0,1,0,0,0,0,{ if(BaseLevel >= 100) { skill "SA_VOLCANO",5; bonus bSubReturnDamage,10; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
 20696,child_admin1,ちび管理者ベータ,0,9123,10043,1000227,80,20,50,100,250,20,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ }
 20697,child_admin2,ちび管理者アルファ,0,9124,10044,1000227,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ bonus2 bAddSkillDamageRate,"RL_FIREDANCE",20; if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bDef,150; bonus bMdef,15; } }
 21290,pet_kiel,キエル-D-01,0,9126,0,25377,80,20,50,100,250,1,500,0,1,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { skill "AM_CP_WEAPON",5; bonus bNoKnockback,0; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
@@ -128,3 +128,11 @@
 23307,timeholder2,タイムホルダー,0,9188,0,25377,80,20,50,100,250,1,500,0,1,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { bonus2 bResEff,Eff_Stun,10000; skill "AM_CP_HELM",5; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
 1270,c_tower_manager,時計塔管理者,0,9189,0,537,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { bonus2 bAddSkillDamageRate,"WL_CRIMSONROCK",20; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bDef,150; bonus bMdef,15; } }
 1269,clock,クロック,103219,9190,0,25232,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ }
+23438,MOROCC2,魔王モロク,0,9163,0,25377,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { skill "AL_PNEUMA",1; bonus bDef,30*readparam(bVit)/10; bonus bMdef,30*readparam(bVit)/10; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
+3096,MM_MOROCC_KID,再生の半魔神,0,9164,0,537,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { bonus2 bAddSkillDamageRate,"SP_CURSEEXPLOSION",20; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
+23439,MM_MOROCC_ADT2,絶望の神モロク,0,9165,0,25377,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { bonus2 bSubSkillDamageRate,"NPC_RAYOFGENESIS",50; skill "AM_CP_ARMOR",5; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
+22318,ep21_iceseahorse,アイスシーホース,0,9157,0,537,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ }
+2993,XM_HYLOZOIST,プレゼントがない幽霊,0,9166,0,537,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ }
+2994,XM_MARIONETTE,包装されなかった人形,0,9167,0,537,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",20; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
+23440,XM_CELINE_KIMI2,セリーヌ・キミ,0,9168,0,25377,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { skill "SO_PSYCHIC_WAVE",5; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
+21631,BLUEMOON_LOLI_RURI2,ブルームーンロリルリ,0,9140,0,537,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { callfunc "AddSkillHealRate",10; bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
