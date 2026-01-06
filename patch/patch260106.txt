@@ -1,0 +1,228 @@
+patch260106
+2025年のアイテム
+420526,head,甘えた黒猫,4,20,,100,,0:0,,0,1073741824,2,1,,200,2710,0,{ /* 250715 効果実装済み */ },{ bonus2 bSubRace,Rct_Player_Human,7; bonus2 bSubRace,Rct_Player_Doram,7; bonus2 bMagicSubRace,Rct_Player_Human,7; bonus2 bMagicSubRace,Rct_Player_Doram,7; bonus2 bAddSize,Size_Small,BaseLevel/10; bonus2 bAddSize,Size_Medium,BaseLevel/10; bonus2 bAddSize,Size_Big,BaseLevel/10; bonus2 bMagicAddSize,Size_Small,BaseLevel/10; bonus2 bMagicAddSize,Size_Medium,BaseLevel/10; bonus2 bMagicAddSize,Size_Big,BaseLevel/10; }
+450467,armor,桜花白魔の紋服,4,20,,1000,,100:0,,1,536870912,2,16,,200,,1,{ /* 250715 効果実装済み */ },{ bonus2 bSubRace,Rct_Player_Human,7; bonus2 bSubRace,Rct_Player_Doram,7; bonus2 bMagicSubRace,Rct_Player_Human,7; bonus2 bMagicSubRace,Rct_Player_Doram,7; bonus2 bAddSkillDamageRate,"SS_SEKIENHOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_REIKETSUHOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_RAIDENPOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_KINRYUUHOU",BaseLevel/10; bonus2 bAddSkillDamageRate,"SS_ANTENPOU",BaseLevel/10; if(getequiprefinerycnt() >= 7) { bonus2 bMagicAddSize,Size_Small,7*getequiprefinerycnt()/10; bonus2 bMagicAddSize,Size_Medium,7*getequiprefinerycnt()/10; bonus2 bMagicAddSize,Size_Big,7*getequiprefinerycnt()/10; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; } if(getequiprefinerycnt() >= 10) { bonus2 bMagicAddEle,Ele_All,15; } }
+490764,acc,アポテオシス,4,20,,100,,0:0,,1,256,2,128,,200,,0,{ /* 250715 効果実装済み */ },{ bonus bAspdAddRate,15; bonus2 bSubRace,Rct_Player_Human,3; bonus2 bSubRace,Rct_Player_Doram,3; bonus2 bMagicSubRace,Rct_Player_Human,3; bonus2 bMagicSubRace,Rct_Player_Doram,3; bonus2 bAddFixCastRate,"AB_ORATIO",-100; bonus2 bAddFixCastRate,"AB_RENOVATIO",-100; bonus bDef,BaseLevel; bonus bMaxHP,50*BaseLevel; bonus bMdef,BaseLevel/10; bonus bMaxSP,BaseLevel/10; }
+313711,ench,潜在解放(スピリットハンドラーXIV),6,,,,,,,,,,65535,,,,,{ /* 250715 セット効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SH_HYUN_ROK_CANNON",-100; } }
+313797,ench,潜在解放(蜃気楼&不知火XIII),6,,,,,,,,,,65535,,,,,{ /* 250715 セット効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SS_REIKETSUHOU",-200; bonus2 bAddSkillCoolDown,"SS_KINRYUUHOU",-200; } }
+313709,ench,潜在解放(カーディナルXV),6,,,,,,,,,,65535,,,,,{ /* 250715 セット効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddFixCastRate,"CD_PRESENS_ACIES",-100; bonus2 bAddFixCastRate,"CD_ARGUTUS_TELUM",-100; bonus2 bAddFixCastRate,"CD_ARGUTUS_VITA",-100; } }
+314180,ench,潜在覚醒(クリアランスI),6,,,,,,,,,,65535,,,,,{ /* 250715 セット効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"AB_CLEARANCE",-1000; } }
+104828,use,桜花白魔の紋服の箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250715 効果実装済み */ getitem2 450467,1,1,7,0,0,0,0,0,0; },{}
+//--------------------------------------------
+200530,use,[2025]復刻コスたまの箱(Season3),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250722 効果実装済み Gemini作成 */ getitem 23908,1; },{}
+200531,use,[2025]復刻コスたま引換券(Season3)11個の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250722 Gemini作成 */ getitem 23908,11; },{}
+480609,cos,[衣装] 魔剣タルタノス,4,20,,0,,0:0,,0,2074075135,2,8192,,1,273,0,{ /* 250722 効果実装済み*/ },{}
+480610,cos,[衣装] パープルピタヤリュック,4,20,,0,,0:0,,0,2074075135,2,8192,,1,272,0,{ /* 250722 効果実装済み*/ },{}
+//--------------------------------------------
+200725,use,死なない者チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 */ getitem 23746,1; },{}
+200726,use,改良キットII(グレイシア防具)の箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 */ },{ /* NPC */ }
+200727,use,グレイシア防具選択箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 */ },{ /* selectpackageitem.lub */ }
+1002300,item,改良キットII(グレイシア防具),3,0,,0,,,,,,,,,,,,{ /* 250805 */ },{ /* NPC */ }
+1002301,item,死なない者チケット,3,0,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002302,item,クエストスキップチケット(死なない者),3,0,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002303,item,レベルアップチケット(BaseLv260),3,0,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+200655,use,[2025]特別チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 */ getitem2 200251,1,1,0,0,0,0,0,0,3024000; },{}
+1002231,item,キューペットボックス抽選券XII,3,0,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002232,item,キューペットボックス抽選券XIII,3,0,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+200672,use,[2025年]夏得チケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 Gemini作成 */ getitem2 23247,1,1,0,0,0,0,0,0,3024000; },{}
+200709,use,コスたまSeasideVI,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 250805 Gemini作成 */ },{ /* 420545 420546 420349 480470 480619 480462 410351 400692 400953 420547 400952 */ }
+400692,cos,[衣装] オーシャンリゾートハット,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2558,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{ /* 420545 420546 420349 480470 480619 480462 410351 400692 400953 420547 400952 */ }
+400952,cos,[衣装] 疾風の髪飾り,4,20,,0,,0:0,,0,2074075135,2,1024,,1,809,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{}
+400953,cos,[衣装] サマーサングラス,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2720,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{}
+410351,cos,[衣装] ブルーパラソル,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2560,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{}
+420349,cos,[衣装] ブルービーチチェア,4,20,,0,,0:0,,0,2074075135,2,8192,,1,2562,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{}
+420545,cos,[衣装] 教皇の夏休みヘア,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2718,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{}
+420546,cos,[衣装] ミリアムヘア,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2719,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{}
+420547,cos,[衣装] ソーダアイス,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2721,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{}
+480462,cos,[衣装] ポリンとガラパゴの浮き輪,4,20,,0,,0:0,,0,2074075135,2,8192,,1,229,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{}
+480470,cos,[衣装] 真夏のビーチ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{ hateffect HAT_EF_Vacation,true; },{ hateffect HAT_EF_Vacation,false; }
+480619,cos,[衣装] メロンクリームソーダ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,279,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{}
+1002185,item,サマーリーフレット,3,0,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+20620,cos,[衣装] ダブル水鉄砲,4,20,,0,,0:0,,0,2074075135,2,8192,,1,174,0,{ /* 250805 効果実装済み */ },{}
+400160,cos,[衣装] 波うつ素麺,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2138,0,{ /* 250805 効果実装済み */ },{}
+1002267,item,トロピカルサマーチケット(教皇),3,0,,10,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002268,item,トロピカルサマーチケット(限界科学者),3,0,,10,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002269,item,トロピカルサマーチケット(偽神),3,0,,10,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002270,item,討伐証(最大討伐数大会),3,0,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002271,item,討伐証(タイムアタック大会),3,0,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+104873,heal,トロピカルサマーフラッペ,0,0,,30,,,,,2074075135,2,,,1,,,{ /* 250805 効果実装済み */ percentheal 3,3; },{}
+104874,heal,トロピカルサマーフラッペBOX(50杯),0,0,,1500,,,,,2074075135,2,,,1,,,{ /* 250805 効果実装済み */ getitem2 104874,50,1,0,0,0,0,0,0,259200; },{}
+104875,heal,トロピカルサマーフラッペBOX(150杯),0,0,,4500,,,,,2074075135,2,,,1,,,{ /* 250805 効果実装済み */ getitem2 104874,150,1,0,0,0,0,0,0,259200; },{}
+300668,card,偽神の夏休みカード,6,20,,10,,,,,,,2,,,,,{ /* 250805 効果実装済み */ },{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; if(equippeditem(312046)) { callfunc "bonus2bIgnoreMdefRace",50; bonus3 bAutoActiveMagic,300668,100,10000; if(checkactiveitem()) { misceffect 220,""; bonus2 bHPRatePenaltyTime,1000,-10; bonus2 bSPRatePenaltyTime,1000,-10; } } }
+300669,card,限界科学者の夏休みカード,6,20,,10,,,,,,,2,,,,,{ /* 250805 効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; if(equippeditem(312045)) { bonus bAddShortWeaponDamage,10; bonus bAddLongWeaponDamage,10; bonus4 bAutoActiveItem,300669,100,10000,EAS_ATTACK|EAS_WEAPON|EAS_NORMAL|EAS_SKILL; if(checkactiveitem()) { misceffect 220,""; bonus2 bHPDrainRate,100,1; } } }
+9163,pet,魔王モロクの卵,4,20,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+9164,pet,再生の半魔神の卵,4,20,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+9165,pet,絶望の神モロクの卵,4,20,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002225,item,ペット用魔神モロクの忠実な下僕,3,0,,10,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002226,item,[ブランク]再生の半魔神カード,3,0,,10,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002227,item,ペット用魔神の指輪,3,0,,10,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002228,item,魔王モロク交換チケット,3,0,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002229,item,再生の半魔神交換チケット,3,0,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+1002230,item,絶望の神モロク交換チケット,3,0,,0,,,,,,,,,,,,{ /* 250805 効果実装済み */ },{}
+420540,head,インペリアルガーディアン,4,20,,100,,0:0,,0,16384,2,1,,200,2715,0,{ /* 250805 効果実装済み */ },{ bonus2 bSubRace,Rct_Player_Human,3; bonus2 bMagicSubRace,Rct_Player_Human,3; bonus2 bSubRace,Rct_Player_Doram,3; bonus2 bMagicSubRace,Rct_Player_Doram,3; bonus2 bAddSize,Size_Small,BaseLevel/10; bonus2 bAddSize,Size_Medium,BaseLevel/10; bonus2 bAddSize,Size_Big,BaseLevel/10; bonus2 bMagicAddSize,Size_Small,BaseLevel/10; bonus2 bMagicAddSize,Size_Medium,BaseLevel/10; bonus2 bMagicAddSize,Size_Big,BaseLevel/10; }
+420541,head,オープンエアヘッドフォン(赤),4,20,,100,,0:0,,0,1024,2,1,,200,2716,0,{ /* 250805 効果実装済み */ },{ bonus2 bSubRace,Rct_Player_Human,3; bonus2 bMagicSubRace,Rct_Player_Human,3; bonus2 bSubRace,Rct_Player_Doram,3; bonus2 bMagicSubRace,Rct_Player_Doram,3; bonus2 bAddSize,Size_Small,BaseLevel/10; bonus2 bAddSize,Size_Medium,BaseLevel/10; bonus2 bAddSize,Size_Big,BaseLevel/10; bonus2 bMagicAddSize,Size_Small,BaseLevel/10; bonus2 bMagicAddSize,Size_Medium,BaseLevel/10; bonus2 bMagicAddSize,Size_Big,BaseLevel/10; }
+450469,armor,リヴァイアサンスケイル,4,20,,1000,,100:0,,1,128,2,16,,200,,1,{ /* 250805 効果実装済み */ },{ bonus2 bSubRace,Rct_Player_Human,7; bonus2 bMagicSubRace,Rct_Player_Human,7; bonus2 bSubRace,Rct_Player_Doram,7; bonus2 bMagicSubRace,Rct_Player_Doram,7; bonus2 bAddSkillDamageRate,"DK_DRAGONIC_AURA",BaseLevel/10; bonus2 bAddSkillDamageRate,"DK_DRAGONIC_BREATH",BaseLevel/10; bonus2 bAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; bonus2 bMagicAddRace,Rct_Boss,5; bonus2 bMagicAddRace,Rct_NonBoss,5; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; } if(getequiprefinerycnt() >= 10) { bonus2 bAddEle,Ele_All,15; } }
+490781,acc,きらきらさんごのクリアチャーム,4,20,,100,,0:0,,1,1073741824,2,128,,200,,0,{ /* 250805 特性ステ */ },{ bonus bAspdAddRate,15; bonus bSkillDelayRate,-15; bonus2 bSubRace,Rct_Player_Human,3; bonus2 bMagicSubRace,Rct_Player_Human,3; bonus2 bSubRace,Rct_Player_Doram,3; bonus2 bMagicSubRace,Rct_Player_Doram,3; bonus bDef,BaseLevel; bonus bMaxHP,50*BaseLevel; bonus bMdef,BaseLevel/10; bonus bMaxSP,50*(BaseLevel/10); if(getskilllv("SH_COMMUNE_WITH_KI_SUL") >= 1) { skill "AL_PNEUMA",1; } }
+314100,ench,潜在解放(ドラゴンナイトXV),6,,,,,,,,,,65535,,,,,{ /* 250805 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"DK_DRAGONIC_BREATH",-100; } }
+314106,ench,潜在解放(インペリアルガードXIV),6,,,,,,,,,,65535,,,,,{ /* 250805 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"IG_CROSS_RAIN",-500; } }
+313780,ench,潜在解放(マイスターXIV),6,,,,,,,,,,65535,,,,,{ /* 250805 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"MT_SPARK_BLASTER",-100; } }
+314116,ench,潜在解放(スピリットハンドラーXV),6,,,,,,,,,,65535,,,,,{ /* 250805 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddSkillCoolDown,"SH_KI_SUL_WATER_SPRAYING",-200; } }
+314196,ench,潜在覚醒(マグロシールドI),6,,,,,,,,,,65535,,,,,{ /* 250805 効果実装済み */ },{ if(equippeditem(29371)) { bonus2 bAddFixCastRate,"SU_TUNAPARTY",-100; } }
+104906,use,リヴァイアサンスケイルの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 効果実装済み Gemini作成 */ getitem2 450469,1,1,7,0,0,0,0,0; },{}
+104855,use,リヴァイアサンスケイルの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 効果実装済み Gemini作成 */ getitem2 450469,1,1,10,0,0,0,0,0; },{}
+104856,use,ふかふかフォーンローブの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 効果実装済み Gemini作成 */ getitem2 450468,1,1,7,0,0,0,0,0; },{}
+104857,use,カースドプリンスガードの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 効果実装済み Gemini作成 */ getitem2 460119,1,1,7,0,0,0,0,0; },{}
+104858,use,パワーマシンスーツの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 効果実装済み Gemini作成 */ getitem2 450444,1,1,7,0,0,0,0,0; },{}
+104859,use,ストライプリボンハットの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 効果実装済み Gemini作成 */ getitem2 400583,1,1,7,0,0,0,0,0; },{}
+104860,use,クロックワイズの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 効果実装済み Gemini作成 */ getitem2 400408,1,1,7,0,0,0,0,0; },{}
+104861,use,白狐耳の笠の箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250805 効果実装済み Gemini作成 */ getitem2 400602,1,1,7,0,0,0,0,0; },{}
+//--------------------------------------------
+300555,card,ヴィオレンカード,6,20,,10,,,,,,,136,,,,,{ /* 250826 特性ステ */ },{ bonus bDex,5; }
+300556,card,スパイダリンカード,6,20,,10,,,,,,,136,,,,,{ /* 250826 効果実装済み */ },{ bonus2 bAddEleWeaponDamageRate,Ele_Earth,10; }
+300557,card,ガーリンカード,6,20,,10,,,,,,,64,,,,,{ /* 250826 効果実装済み */ },{ bonus2 bAddEleWeaponDamageRate,Ele_Earth,3*getequiprefinerycnt(); }
+300558,card,ジャックオネットカード,6,20,,10,,,,,,,2,,,,,{ /* 250826 物理・魔法攻撃[ニブルヘイムカボチャ農場]map指定効果 */ },{}
+300559,card,リアメットカード,6,20,,10,,,,,,,769,,,,,{ /* 250826 特性ステ */ },{}
+300560,card,悪夢のピアメットカード,6,20,,10,,,,,,,64,,,,,{ /* 250826 セット効果実装済み */ },{ bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; bonus2 bMagicAddRace,Rct_Undead,50; bonus2 bMagicAddRace,Rct_Demon,50; bonus bMaxSPRate,-50; if(equippeditem(311439)) { bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; skill "LG_RAYOFGENESIS",10; } }
+300561,card,メジェドカード,6,20,,10,,,,,,,769,,,,,{ /* 250826 効果実装済み */ },{ if(getequipisequiped(9)) { bonus bAspdAddRate,10; } }
+300562,card,メジャイカード,6,20,,10,,,,,,,2,,,,,{ /* 250826 物理・魔法攻撃[古代神殿アケト]map指定効果 */ },{}
+300563,card,ウプウアウトカード,6,20,,10,,,,,,,16,,,,,{ /* 250826 効果実装済み */ },{ bonus2 bAddRace,Rct_Angel,getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus2 bAddRace,Rct_Angel,10; } }
+300564,card,ヘカカード,6,20,,10,,,,,,,769,,,,,{ /* 250826 効果実装済み */ },{ bonus2 bMagicAddRace,Rct_Boss,x; bonus2 bMagicAddRace,Rct_NonBoss,5; if(getequiprefinerycnt() >= 8) { bonus bNoCastCancel,0; } }
+300565,card,死者の案内人カード,6,20,,10,,,,,,,16,,,,,{ /* 250826 効果実装済み */ },{ bonus2 bAddRace,Rct_Formless,50; bonus2 bAddRace,Rct_Demon,50; bonus2 bAddEle,Ele_Fire,50; bonus2 bAddEle,Ele_Neutral,50; if(equippeditem(311439)) { bonus bMaxHPRate,50; skill "AB_SILENTIUM",3; } }
+1001795,item,鉄鎖に繋がれたクマ人形,3,0,,10,,,,,,,,,,,,{ /* 250826 効果実装済み */ },{}
+1001796,item,審判の羽,3,0,,10,,,,,,,,,,,,{ /* 250826 効果実装済み */ },{}
+1001073,item,エクトプラズミックストーン,3,0,,10,,,,,,,,,,,,{ /* 250826 効果実装済み */ },{}
+1001074,item,重い鎖,3,0,,10,,,,,,,,,,,,{ /* 250826 効果実装済み */ },{}
+1001076,item,小さな針入れ,3,0,,10,,,,,,,,,,,,{ /* 250826 効果実装済み */ },{}
+1001078,item,蒼い月の欠片,3,0,,10,,,,,,,,,,,,{ /* 250826 効果実装済み */ },{}
+1002291,item,古代の陶片,3,0,,10,,,,,,,,,,,,{ /* 250826 効果実装済み */ },{}
+1002292,item,鋭い石のかけら,3,0,,10,,,,,,,,,,,,{ /* 250826 効果実装済み */ },{}
+//--------------------------------------------
+200749,use,コスたまSteampunkIII,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 250902 Gemini作成 */ },{ /* 420570 420571 480629 480630 480631 410471 400930 400993 400994 410470 20233 */ }
+20233,cos,[衣装] 見習い天使の祝福(金),4,20,,0,,0:0,,0,2074075135,2,1024,,1,646,0,{ /* 250902 コスたまSteampunkIII 効果実装済み */ },{}
+400930,cos,[衣装] スチームローラー,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2504,0,{ /* 250902 コスたまSteampunkIII 効果実装済み */ },{}
+400993,cos,[衣装] 白い機械植物帽,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2583,0,{ /* 250902 コスたまSteampunkIII 効果実装済み */ },{}
+400994,cos,[衣装] 機械羽根のブルーヘアバンド,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2659,0,{ /* 250902 コスたまSteampunkIII 効果実装済み */ },{}
+410470,cos,[衣装] アラームの仮面(中段),4,20,,0,,0:0,,0,2074075135,2,2048,,1,170,0,{ /* 250902 コスたまSteampunkIII 効果実装済み */ },{}
+410471,cos,[衣装] 歯車モノクル,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2736,0,{ /* 250902 コスたまSteampunkIII 効果実装済み */ },{}
+420570,cos,[衣装] 羽根つきツートンヘア,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2734,0,{ /* 250902 コスたまSteampunkIII 効果実装済み */ },{}
+420571,cos,[衣装] 羽根つきブロンドヘア,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2735,0,{ /* 250902 コスたまSteampunkIII 効果実装済み */ },{}
+480629,cos,[衣装] クロックロッド,4,20,,0,,0:0,,0,2074075135,2,8192,,1,283,0,{ /* 250902 コスたまSteampunkIII 効果実装済み */ },{}
+480630,cos,[衣装] 機械妖精の羽根,4,20,,0,,0:0,,0,2074075135,2,8192,,1,284,0,{ /* 250902 コスたまSteampunkIII 効果実装済み */ },{}
+480631,cos,[衣装] 名探偵のルーペ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,285,0,{ /* 250902 コスたまSteampunkIII 効果実装済み */ },{}
+//--------------------------------------------
+420567,head,エレメス=ガイルのスカーフ(白),4,20,,100,,0:0,,0,4096,2,1,,200,2731,0,{ /* 250909 効果実装済み */ },{ bonus2 bSubRace,Rct_Player_Human,3; bonus2 bMagicSubRace,Rct_Player_Human,3; bonus2 bSubRace,Rct_Player_Doram,3; bonus2 bMagicSubRace,Rct_Player_Doram,3; bonus2 bAddSize,Size_Small,BaseLevel/10; bonus2 bAddSize,Size_Medium,BaseLevel/10; bonus2 bAddSize,Size_Big,BaseLevel/10; bonus2 bMagicAddSize,Size_Small,BaseLevel/10; bonus2 bMagicAddSize,Size_Medium,BaseLevel/10; bonus2 bMagicAddSize,Size_Big,BaseLevel/10; }
+420568,head,名誉ある夜警のマント,4,20,,100,,0:0,,0,268435456,2,1,,100,2732,0,{ /* 250909 効果実装済み */ },{ bonus2 bSubRace,Rct_Player_Human,3; bonus2 bMagicSubRace,Rct_Player_Human,3; bonus2 bSubRace,Rct_Player_Doram,3; bonus2 bMagicSubRace,Rct_Player_Doram,3; bonus2 bAddSize,Size_Small,BaseLevel/10; bonus2 bAddSize,Size_Medium,BaseLevel/10; bonus2 bAddSize,Size_Big,BaseLevel/10; bonus2 bMagicAddSize,Size_Small,BaseLevel/10; bonus2 bMagicAddSize,Size_Medium,BaseLevel/10; bonus2 bMagicAddSize,Size_Big,BaseLevel/10; }
+450471,armor,プリマヒヤドゥム,4,20,,1000,,100:0,,1,2057297792,2,16,,200,,1,{ /* 250909 効果実装済み */ },{ bonus2 bSubRace,Rct_Player_Human,7; bonus2 bMagicSubRace,Rct_Player_Human,7; bonus2 bSubRace,Rct_Player_Doram,7; bonus2 bMagicSubRace,Rct_Player_Doram,7; bonus2 bAddSkillDamageRate,"BO_MAYHEMIC_THORNS",BaseLevel/10; bonus2 bAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; bonus2 bAddSkillCoolDown,"GN_MANDRAGORA",-16000; } if(getequiprefinerycnt() >= 10) { bonus2 bAddEle,Ele_All,15; } }
+314169,ench,潜在解放(バイオロXV),6,,,,,,,,,,65535,,,,,{ /* 250909 効果実装済み */ },{ if(equippeditem(29509)) {bonus2 bAddSkillCoolDown,"BO_MAYHEMIC_THORNS",-100; } }
+314014,ench,潜在解放(ナイトウォッチXII),6,,,,,,,,,,65535,,,,,{ /* 250909 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"NW_SPIRAL_SHOOTING",-200; } }
+313456,ench,潜在解放(シャドウクロスXIII),6,,,,,,,,,,65535,,,,,{ /* 250909 効果実装済み */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SHC_SAVAGE_IMPACT",-200; } }
+104862,use,プリマヒヤドゥムの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250909 効果実装済み Gemini作成 */ getitem2 450471,1,1,10,0,0,0,0,0; },{}
+104863,use,ティルナノーグの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250909 効果実装済み Gemini作成 */ getitem2 450411,1,1,7,0,0,0,0,0; },{}
+104864,use,白猫の魔女帽子の箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250909 効果実装済み Gemini作成 */ getitem2 400624,1,1,7,0,0,0,0,0; },{}
+104931,use,プラーナスーツの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250909 効果実装済み Gemini作成 */ getitem2 450438,1,1,7,0,0,0,0,0; },{}
+104932,use,星魔術師の三角帽の箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250909 効果実装済み Gemini作成 */ getitem2 400787,1,1,7,0,0,0,0,0; },{}
+104933,use,リヴァイアサンヘルムの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250909 効果実装済み Gemini作成 */ getitem2 400742,1,1,7,0,0,0,0,0; },{}
+104934,use,紫電一閃の箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250909 効果実装済み Gemini作成 */ getitem2 400481,1,1,7,0,0,0,0,0; },{}
+104935,use,プリマヒヤドゥムの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250909 効果実装済み Gemini作成 */ getitem2 450471,1,1,7,0,0,0,0,0; },{}
+//--------------------------------------------
+105237,use,[ペット]ペコペコ変身スクロール,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 250924 ペット変身システム */ },{}
+//--------------------------------------------
+300505,card,シーウィンドカード,6,20,,10,,,,,,,2,,,,,{ /* 250930 物理・魔法攻撃[ヨルンビル][隆起した大地 北部][隆起した大地 南部]map指定効果 */ },{}
+300506,card,スカレッグカード,6,20,,10,,,,,,,769,,,,,{ /* 250930 効果実装済み */ },{ bonus bDef,50; if(getequiprefinerycnt() >= 7) { bonus bDef,50; } if(getequiprefinerycnt() >= 9) { bonus bDef,50; } }
+300507,card,ヴェレリンカード,6,20,,10,,,,,,,16,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bSubEle,Ele_Poison,5; bonus2 bResEff,Eff_Poison,10000; }
+300508,card,スキップスキッパーカード,6,20,,10,,,,,,,64,,,,,{ /* 250930 効果実装済み */ },{ bonus bMdef,getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus bMdef,10; } }
+300509,card,レタースターカード,6,20,,10,,,,,,,64,,,,,{ /* 250930 効果実装済み */ },{ bonus bPerfectHitAddRate,10; }
+300510,card,クリオリマカード,6,20,,10,,,,,,,769,,,,,{ /* 250930 効果実装済み */ },{ callfunc "AddSkillHealRate",getequiprefinerycnt(); }
+300511,card,ロックストライカーカード,6,20,,10,,,,,,,769,,,,,{ /* 250930 効果実装済み */ },{ bonus bCritical,getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus bAddCriticalDamage,8; } }
+300512,card,アイスシーホースカード,6,20,,10,,,,,,,4,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bSubEle,Ele_Water,25; if(getequiprefinerycnt() >= 7) { bonus2 bSubEle,Ele_Neutral,15; } if(getequiprefinerycnt() >= 9) { bonus2 bSubEle,Ele_Water,25; } }
+300513,card,アイスホーンカード,6,20,,10,,,,,,,769,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bSubEle,Ele_Water,10; bonus2 bResEff,Eff_Cold,10000; if(equippeditem(311439)) { bonus2 bSubEle,Ele_Water,10; bonus2 bSubSkillDamageRate,"NPC_JACKFROST",100; } }
+300514,card,ヨスタクリーナーカード,6,20,,10,,,,,,,769,,,,,{ /* 250930 効果実装済み */ },{ callfunc "bonus2bIgnoreDefRace",25; }
+300515,card,ヨスタフィクサーカード,6,20,,10,,,,,,,16,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; if(getequiprefinerycnt() >= 8) { bonus2 bAddRace,Rct_Boss,10; bonus2 bAddRace,Rct_NonBoss,10; } }
+300516,card,ヨスタコレクターカード,6,20,,10,,,,,,,136,,,,,{ /* 250930 効果実装済み */ },{ bonus3 bAutoSpell,"TF_STEAL",5,100; }
+300517,card,ヨスタネゴシエーターカード,6,20,,10,,,,,,,136,,,,,{ /* 250930 効果実装済み */ },{ skill "MC_OVERCHARGE",5; }
+300518,card,ヨスタシェフカード,6,20,,10,,,,,,,2,,,,,{ /* 250930 物理攻撃倒した時HPSP回復 */ },{}
+300519,card,ヨルミカード,6,20,,10,,,,,,,16,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bMagicAddEle,Ele_Dark,getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus2 bMagicAddEle,Ele_Dark,10; } }
+300520,card,ヨルミ宣教師カード,6,20,,10,,,,,,,16,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bMagicAddEle,Ele_Holy,getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus2 bMagicAddEle,Ele_Holy,10;} }
+300521,card,ヨルドス審問官カード,6,20,,10,,,,,,,136,,,,,{ /* 250930 効果実装済み */ },{ bonus bMdef,10; }
+300522,card,ヨルドス裁判官カード,6,20,,10,,,,,,,136,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"MG_LIGHTNINGBOLT",25; bonus2 bAddSkillCastTime,"MG_LIGHTNINGBOLT",5000; }
+300523,card,ヨルドス処刑官カード,6,20,,10,,,,,,,2,,,,,{ /* 250930 物理・魔法攻撃[ギムレー 1階][ギムレー 2階]map指定効果 */ },{}
+300524,card,ヨスコプス守護者カード,6,20,,10,,,,,,,769,,,,,{ /* 250930 効果実装済み */ },{ bonus bMdef,5; if(getequiprefinerycnt() >= 7) { bonus bMdef,5; } if(getequiprefinerycnt() >= 9) { bonus bMdef,5; } }
+300525,card,ヨスコプス魔術師カード,6,20,,10,,,,,,,16,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bMagicAddEle,Ele_Undead,getequiprefinerycnt(); if(getequiprefinerycnt() >= 9) { bonus2 bMagicAddEle,Ele_Undead,10; } }
+300526,card,ヨルカ牧師カード,6,20,,10,,,,,,,769,,,,,{ /* 250930 効果実装済み */ },{ skill "AL_CURE",1; }
+300527,card,ヨルカ商人カード,6,20,,10,,,,,,,136,,,,,{ /* 250930 効果実装済み */ },{ skill "MC_IDENTIFY",1; }
+300528,card,ヨルトゥス司教カード,6,20,,10,,,,,,,136,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bAddEleMagicDamageRate,Ele_Holy,10; }
+300529,card,ヨルトゥス呪術師カード,6,20,,10,,,,,,,136,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bAddEleMagicDamageRate,Ele_Dark,10; }
+300530,card,ヨルトゥス調停官カード,6,20,,10,,,,,,,2,,,,,{ /* 250930 効果実装済み */ },{ bonus bAspd,1; bonus2 bAddEleMagicDamageRate,Ele_Dark,20; bonus2 bAddEleMagicDamageRate,Ele_Neutral,20; if(equippeditem(311439)) { bonus bAspd,1; bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; } }
+300531,card,ヨルトゥス執行官カード,6,20,,10,,,,,,,2,,,,,{ /* 250930 効果実装済み */ },{ bonus bAspd,1; bonus2 bAddEleMagicDamageRate,Ele_Holy,20; bonus2 bAddEleMagicDamageRate,Ele_Neutral,20; if(equippeditem(311439)) { bonus bAspd,1; bonus2 bMagicAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_NonBoss,10; } }
+300532,card,幽霊船の艦長カード,6,20,,10,,,,,,,16,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bHPDrainValue,1,3; if(equippeditem(311439)) { bonus bMaxHPRate,50; bonus2 bSPDrainValue,1,1; } }
+300533,card,侵食されたタンカード,6,20,,10,,,,,,,4,,,,,{ /* 250930 効果実装済み */ },{ bonus2 bAddRace,Rct_Boss,x; bonus2 bAddRace,Rct_NonBoss,15; bonus2 bMagicAddRace,Rct_Boss,x; bonus2 bMagicAddRace,Rct_NonBoss,15; bonus2 bSubEle,Ele_Dark,50; if(getequiprefinerycnt() >= 9) { bonus2 bSubEle,Ele_Fire,50; bonus bLongAtkDef,10; } if(equippeditem(311439)) { bonus2 bSubEle,Ele_Neutral,20; bonus2 bResEff,Eff_Stone,5000; } }
+300585,card,トリスカード,6,20,,10,,,,,,,1023,,,,,{ /* 250930 4次職 ドラゴニックピアース */ },{ bonus bBaseAtk,BaseLevel/2; bonus bMatk,BaseLevel/2; if(equippeditem(311365)) { bonus2 bAddSkillDamageRate,"DK_HACKANDSLASHER",25; bonus2 bAddSkillDamageRate,"DK_MADNESS_CRUSHER",25; bonus2 bAddSkillDamageRate,"DK_STORMSLASH",25; bonus2 bAddSkillDamageRate,"DK_DRAGONIC_AURA",25; bonus2 bAddSkillDamageRate,"DK_DRAGONIC_BREATH",25; bonus2 bAddSkillDamageRate,"DK_SERVANTWEAPON_ATK",25; bonus2 bAddSkillDamageRate,"DK_SERVANT_W_PHANTOM",25; bonus2 bAddSkillDamageRate,"DK_SERVANT_W_DEMOL",25; } }
+300586,card,タンカード,6,20,,10,,,,,,,1023,,,,,{ /* 250930 4次職 クロススラッシュ */ },{ bonus bBaseAtk,BaseLevel/2; bonus bMatk,BaseLevel/2; if(equippeditem(311365)) { bonus2 bAddSkillDamageRate,"SHC_IMPACT_CRATER",25; bonus2 bAddSkillDamageRate,"SHC_SAVAGE_IMPACT",25; bonus2 bAddSkillDamageRate,"SHC_DANCING_KNIFE",25; bonus2 bAddSkillDamageRate,"SHC_SHADOW_STAB",25; bonus2 bAddSkillDamageRate,"SHC_ETERNAL_SLASH",25; bonus2 bAddSkillDamageRate,"SHC_FATAL_SHADOW_CROW",25; } }
+
+200761,use,コスたまHalloweenIX,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 251007 Gemini作成 */ },{ /* 420593 420594 420597 480648 420595 420596 20503 401015 400760 410489 401016 */ }
+
+104936,use,テオフィルスの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251014 効果実装済み Gemini作成 */ getitem2 450483,1,1,10,0,0,0,0,0; },{}
+104937,use,グロズヌイの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251014 効果実装済み Gemini作成 */ getitem2 450484,1,1,10,0,0,0,0,0; },{}
+104938,use,リュカントロポスの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251014 効果実装済み Gemini作成 */ getitem2 450379,1,1,7,0,0,0,0,0; },{}
+104939,use,スペキュレーションの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251014 効果実装済み Gemini作成 */ getitem2 450401,1,1,7,0,0,0,0,0; },{}
+104940,use,百花の愛の箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251014 効果実装済み Gemini作成 */ getitem2 400711,1,1,7,0,0,0,0,0; },{}
+104941,use,白きカーリッツバーグ騎士団のヘルムの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251014 効果実装済み Gemini作成 */ getitem2 400454,1,1,7,0,0,0,0,0; },{}
+104943,use,テオフィルスの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251014 効果実装済み Gemini作成 */ getitem2 450483,1,1,7,0,0,0,0,0; },{}
+104944,use,グロズヌイの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251014 効果実装済み Gemini作成 */ getitem2 450484,1,1,7,0,0,0,0,0; },{}
+
+200778,use,コスたまHeroes,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 251104 Gemini作成 */ },{ /* 480664 420554 420553 480665 480666 420376 420377 410456 440017 400963 440018 400725 430010 */ }
+
+104945,use,ヴァルキリーカースシールドの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251111 効果実装済み Gemini作成  */ getitem2 460134,1,1,10,0,0,0,0,0; },{}
+104946,use,がおがおタイガーパジャマの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251111 効果実装済み Gemini作成 */ getitem2 450368,1,1,7,0,0,0,0,0; },{}
+104947,use,スプンタアールマティの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251111 効果実装済み Gemini作成 */ getitem2 460057,1,1,7,0,0,0,0,0; },{}
+104948,use,リス耳フード帽(アルビノ)の箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251111 効果実装済み Gemini作成 */ getitem2 400416,1,1,7,0,0,0,0,0; },{}
+104949,use,アルタイルハットの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251111 効果実装済み Gemini作成 */ getitem2 400506,1,1,7,0,0,0,0,0; },{}
+104950,use,シックピオニーの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251111 効果実装済み Gemini作成 */ getitem2 400437,1,1,7,0,0,0,0,0; },{}
+104951,use,ヴァルキリーカースシールドの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251111 効果実装済み Gemini作成 */ getitem2 460134,1,1,7,0,0,0,0,0; },{}
+
+200781,use,コスたまHairCollectionXI(明色),2,0,,10,,,,,2074075135,2,,,1,,,{ /* 251202 Gemini作成 */ },{ /* 420647 420648 420651 420652 420653 420654 420659 420660 420661 420662 420667 420668 420669 420670 */ }
+200782,use,コスたまHairCollectionXI(暗色),2,0,,10,,,,,2074075135,2,,,1,,,{ /* 251202 Gemini作成 */ },{ /* 420649 420650 420655 420656 420657 420658 420663 420664 420665 420666 420671 420672 420673 420674 */ }
+104952,use,影走白狐の紋服の箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251218 効果実装済み Gemini作成 */ getitem2 450521,1,1,10,0,0,0,0,0; },{}
+104953,use,鳩のマジックハットの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251218 効果実装済み Gemini作成 */ getitem2 401121,1,1,10,0,0,0,0,0; },{}
+104954,use,レディアントピュリファイの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251218 効果実装済み Gemini作成 */ getitem2 450420,1,1,7,0,0,0,0,0; },{}
+104955,use,グラキエースアラネアの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251218 効果実装済み Gemini作成 */ getitem2 460074,1,1,7,0,0,0,0,0; },{}
+104956,use,濃紺のイビルドルイド帽の箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251218 効果実装済み Gemini作成 */ getitem2 400902,1,1,7,0,0,0,0,0; },{}
+104957,use,影走白狐の紋服の箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251218 効果実装済み Gemini作成 */ getitem2 450521,1,1,7,0,0,0,0,0; },{}
+104958,use,鳩のマジックハットの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251218 効果実装済み Gemini作成 */ getitem2 401121,1,1,7,0,0,0,0,0; },{}
+
+260106 新規実装
+200809,use,コスたまFrozenIX,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 260106 Gemini作成 */ },{ /* 400100 400558 400752 400965 401148 410221 410556 420193 420702 420703 480699 */ }
+400100,cos,[衣装] レオンヘア,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2373,0,{ /* 260106 コスたまFrozenIX 効果実装済み */ },{}
+400558,cos,[衣装] スノーマンの被り物,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2486,0,{ /* 260106 コスたまFrozenIX 効果実装済み */ },{}
+400752,cos,[衣装] ぷにぷにあんよのスタンプフード,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2496,0,{ /* 260106 コスたまFrozenIX 効果実装済み */ },{}
+400965,cos,[衣装] フリーデリケのヴェール,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2729,0,{ /* 260106 コスたまFrozenIX 効果実装済み */ },{}
+401148,cos,[衣装] マーリンヘアピン,4,20,,0,,0:0,,0,2074075135,2,1024,,1,789,0,{ /* 260106 コスたまFrozenIX 効果実装済み */ },{}
+410221,cos,[衣装] 白ウサギマスク,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2341,0,{ /* 260106 コスたまFrozenIX 効果実装済み */ },{}
+410556,cos,[衣装] コウテイペンギン,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2790,0,{ /* 260106 コスたまFrozenIX 効果実装済み */ },{}
+420193,cos,[衣装] 大きいリボンマフラー(青),4,20,,0,,0:0,,0,2074075135,2,4096,,1,2340,0,{ /* 260106 コスたまFrozenIX 効果実装済み */ },{}
+420702,cos,[衣装] エクリプスマフラー,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2688,0,{ /* 260106 コスたまFrozenIX 効果実装済み */ },{}
+420703,cos,[衣装] オーレリーヘア,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2789,0,{ /* 260106 コスたまFrozenIX 効果実装済み */ },{}
+480699,cos,[衣装] 銀の王笏,4,20,,0,,0:0,,0,2074075135,2,8192,,1,296,0,{ /* 260106 コスたまFrozenIX 効果実装済み */ },{}
+//--------------------------------------------
+104959,use,異端審問官のヴェールの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260106 効果実装済み Gemini作成 */ getitem2 400556,1,1,10,0,0,0,0,0; },{}
+104960,use,ドラゴンサークレットの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260106 効果実装済み Gemini作成 */ getitem2 400420,1,1,10,0,0,0,0,0; },{}
+104961,use,桜の白魔女帽子の箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260106 効果実装済み Gemini作成 */ getitem2 400721,1,1,10,0,0,0,0,0; },{}
+104962,use,スチームローラーの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260106 効果実装済み Gemini作成 */ getitem2 400601,1,1,10,0,0,0,0,0; },{}
+104963,use,サタニッククラウンの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260106 効果実装済み Gemini作成 */ getitem2 400649,1,1,10,0,0,0,0,0; },{}
+104964,use,白い機械植物帽の箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260106 効果実装済み Gemini作成 */ getitem2 400722,1,1,10,0,0,0,0,0; },{}
+104965,use,ヤマネコニット帽(白)の箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260106 効果実装済み Gemini作成 */ getitem2 400438,1,1,10,0,0,0,0,0; },{}
+104966,use,マーリン柄の丸帽子の箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260106 効果実装済み Gemini作成 */ getitem2 400672,1,1,10,0,0,0,0,0; },{}
+104967,use,フシャスラワルヤの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260106 効果実装済み Gemini作成 */ getitem2 470312,1,1,7,0,0,0,0,0; },{}
+104968,use,ガーディアンオブソウルの箱(精錬値7),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260106 効果実装済み Gemini作成 */ getitem2 480045,1,1,7,0,0,0,0,0; },{}
+//--------------------------------------------
+200802,use,[2026年]究極精錬お楽しみチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260106 効果実装済み Gemini作成 */ getitem2 1001924,1,1,0,0,0,0,0,0,3628800; },{}
+1002533,item,キューペットボックス抽選券XV,3,0,,0,,,,,,,,,,,,{ /* 260106 効果実装済み */ },{}
+1002534,item,キューペットボックス抽選券XVI,3,0,,0,,,,,,,,,,,,{ /* 260106 効果実装済み */ },{}
+
+Aurigaサイド分の反映
+2796,acc,魔力を秘めた石(スプレンディッド),4,0,,0,,0:0,,0,512,2,136,,90,,0,{ /* 効果実装済み */ },{ bonus3 bAddMonsterIdDropItem,6152,2047,2500; }
+2797,acc,魔力を秘めた石(マヌク),4,0,,0,,0:0,,0,512,2,136,,90,,0,{ /* 効果実装済み */ },{ bonus3 bAddMonsterIdDropItem,6151,2049,2500; }
+12384,use,虹色のルビー(水),2,20,,50,,,,,2074075135,2,,,1,,,{ if(getmapname("") == "job3_war02.gat") itemskill "WL_FROSTMISTY",5,""; },{ /* 効果実装済み */ }
+12385,use,虹色のルビー(地),2,20,,50,,,,,2074075135,2,,,1,,,{ if(getmapname("") == "job3_war02.gat") itemskill "WL_EARTHSTRAIN",5,""; },{ /* 効果実装済み */ }
+12386,use,虹色のルビー(火),2,20,,50,,,,,2074075135,2,,,1,,,{ if(getmapname("") == "job3_war02.gat") itemskill "WL_CRIMSONROCK",5,""; },{ /* 効果実装済み */ }
+12387,use,虹色のルビー(風),2,20,,50,,,,,2074075135,2,,,1,,,{ if(getmapname("") == "job3_war02.gat") itemskill "WL_CHAINLIGHTNING",5,""; },{ /* 効果実装済み */ }
