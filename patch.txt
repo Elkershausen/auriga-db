@@ -1,3 +1,25 @@
+2026/01/14	patch260114
+* 2025/09/30で未実装分のカードをいくつか実装
+* 2025/09/30の収集アイテムと衣装装備に実装済みフラグ追加
+
+* 今回から bonus bBaseAtk,n; bonus bMatk,n; if(equippeditem(311365)) {} 部分の装備ボーナス、条件分岐スクリプトを学習させ、スキルダメージ増加の効果を日本語のアイテム説明文からフルAIで実装しています
+
+{ /* 250930 4次職 ヒットアンドスライディング チェイシングブレイク チェイシングショット アビスフレイム Gemini作成 */ },{ bonus bBaseAtk,BaseLevel/2; bonus bMatk,BaseLevel/2; if(equippeditem(311365)) { bonus2 bAddSkillDamageRate,"ABC_ABYSS_DAGGER",25; bonus2 bAddSkillDamageRate,"ABC_UNLUCKY_RUSH",25; bonus2 bAddSkillDamageRate,"ABC_DEFT_STAB",25; bonus2 bAddSkillDamageRate,"ABC_CHAIN_REACTION_SHOT",25; bonus2 bAddSkillDamageRate,"ABC_FRENZY_SHOT",25; bonus2 bAddSkillDamageRate,"ABC_FROM_THE_ABYSS_ATK",25; bonus2 bAddSkillDamageRate,"ABC_ABYSS_SQUARE",25; bonus2 bAddSkillDamageRate,"ABC_ABYSS_STRIKE",25; } }
+日本語説明文の理解　アイテム名スキル名理解からIDと文字列特定　日付　実装状況によるコメントのパターン変化　Atk Matkのステータス効果　BaseLevelの計算式組み込み　スキルダメージ増加　未実装スキルのコメント化
+
+* 生成AI用学習データに skill_list.json を追加(NLP\skill_list.json)
+* 未実装スキル、傭兵、精霊、ホムンクルス、ギルド、結婚、ノービス、イベント専用、定義のみ職業スキル、アイテム実装に使わないスキル(買い取り露天、周年記念花火、クリスマス限定スキル　音楽が鳴るだけスキル)　は除いています
+* 25夏アップデートスキルはAIが判別しコメント化する際にプロンプトを簡略化するためリストから除外しています
+
+* Jobのビット演算値を表示する簡易アプリを実装したのでコード公開(jobvalue\classnum.json customtinker.txt readme.txt sample.py)
+* サモナーのJob値の計算のために使っています
+* 今後のアップデートに対応できる新しいitem_db作成アプリを作ろうと思ったのですが、AIを使った効果実装が進行しているので今はここまでです
+
+* AI学習用スキルデータベース実装(skill_list.json)
+* item_list.json と skill_list.json を使えば スキルに関する装備効果 セット効果の先頭記述部分 をAIで実装できるようになります
+* AIを使ったアイテムの実装は範囲を広げていきます
+* "rathenaを参照しない" "推測しない" "インターネットを調べない" "一字一句厳密に探すこと" "見つからなければ実装しなくていい" このプロンプトが必須です
+ 
 2026/01/07	patch260107
 * hateffectinfo.lub 更新
 * 2022年環境で動作させるための仮更新です
