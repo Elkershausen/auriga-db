@@ -1,7 +1,6 @@
 [
   {"name": "ノービス", "value": 1, "group": "novice"},
   {"name": "スーパーノービス", "value": 8388608, "group": "special"},
-  {"name": "", "value": 0, "group": "special"},
   {"name": "剣士", "value": 2, "group": "1st"},
   {"name": "マジシャン", "value": 4, "group": "1st"},
   {"name": "アーチャー", "value": 8, "group": "1st"},
