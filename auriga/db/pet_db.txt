@@ -1,4 +1,4 @@
-//2025/12/31 更新
+//2026/03/02 更新
 //[移動速度設定][攻撃][目標変更][アイテムルート][ランダム移動] 存在しないシステムなので全廃止
 //[パフォーマンス] 0を1にしてもエラーは出ない
 //テイミングによる捕獲成功率は実態調査が非常に困難のため、今後実装するペットは全て[500(5%)]に仕様を固定(作業を簡素化するためテイミングアイテムがない場合も500)
@@ -136,3 +136,5 @@
 2994,XM_MARIONETTE,包装されなかった人形,0,9167,0,537,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",20; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
 23440,XM_CELINE_KIMI2,セリーヌ・キミ,0,9168,0,25377,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { skill "SO_PSYCHIC_WAVE",5; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
 21631,BLUEMOON_LOLI_RURI2,ブルームーンロリルリ,0,9140,0,537,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { callfunc "AddSkillHealRate",10; bonus2 bAddSize,Size_Small,10; bonus2 bAddSize,Size_Medium,10; bonus2 bAddSize,Size_Big,10; bonus2 bMagicAddSize,Size_Small,10; bonus2 bMagicAddSize,Size_Medium,10; bonus2 bMagicAddSize,Size_Big,10; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
+23756,knight_of_windstorm2,ストームナイト,0,9172,0,25377,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { bonus2 bAddEleMagicDamageRate,Ele_Wind,10; bonus2 bAddEleMagicDamageRate,Ele_Holy,10; skill "LK_CONCENTRATION",5; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }
+23757,pitaya_boss2,ボスピタヤ,0,9173,0,25377,80,20,50,100,250,1,500,0,0,0,0,0,0,{ /* 2022環境でセリフ不具合 */ if(BaseLevel >= 100) { bonus2 bAddEle,Ele_Holy,10; bonus2 bAddEle,Ele_Ghost,10; bonus2 bMagicAddEle,Ele_Holy,10; bonus2 bMagicAddEle,Ele_Ghost,10; skill "MG_FIREWALL",10; } if(equippeditem(410027) || equippeditem(410028)) { bonus bBaseAtk,200; bonus bMatk,200; bonus bAllStatus,10; } }

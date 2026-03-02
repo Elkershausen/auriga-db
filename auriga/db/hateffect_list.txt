@@ -1,0 +1,139 @@
+﻿hateffect を使う兜・鎧・衣装・エンチャントリスト(2025年末までの全数)
+
+5914,cos,[衣装] 蝶のはためき,4,20,,0,,0:0,,0,2074075135,2,4096,,1,0,0,{},{ hateffect HAT_EF_FLUTTER_BUTTERFLY,TRUE; },{ hateffect HAT_EF_FLUTTER_BUTTERFLY,FALSE; }
+5979,cos,[衣装] 舞い降る天使の羽,4,20,,0,,0:0,,0,2074075135,2,4096,,1,0,0,{},{ hateffect HAT_EF_ANGEL_FLUTTERING,TRUE; },{ hateffect HAT_EF_ANGEL_FLUTTERING,FALSE; }
+15842,cos,[衣装] 懐中時計のマジックハット,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1998,0,{},{ hateffect HAT_EF_C_Disapear_Time_TW,TRUE; },{ hateffect HAT_EF_C_Disapear_Time_TW,FALSE; }
+15952,cos,[衣装] ナーガの金冠,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2296,0,{},{ hateffect HAT_EF_C_15th_Nov_Helmet,TRUE; },{ hateffect HAT_EF_C_15th_Nov_Helmet,FALSE; }
+18742,cos,[衣装] 月と星の煌めき,4,20,,0,,0:0,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_C_MoonStar_Accessory,TRUE; },{ hateffect HAT_EF_C_MoonStar_Accessory,FALSE; }
+18744,cos,[衣装] スーパースター,4,20,,0,,0:0,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_LJOSALFAR,TRUE; },{ hateffect HAT_EF_LJOSALFAR,FALSE; }
+20062,cos,[衣装] エンジェルステアーズ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,0,0,{},{ hateffect HAT_EF_ANGEL_STAIRS,TRUE; },{ hateffect HAT_EF_ANGEL_STAIRS,FALSE; }
+20099,cos,[衣装] リョースアールヴ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1239,0,{},{ hateffect HAT_EF_C_Samba_Carnival,TRUE; },{ hateffect HAT_EF_C_Samba_Carnival,FALSE; }
+20154,cos,[衣装] 舞い落ちる紅葉,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1275,0,{},{ hateffect HAT_EF_C_MAPLE_WHICH_FALLS_RD,TRUE; },{ hateffect HAT_EF_C_MAPLE_WHICH_FALLS_RD,FALSE; }
+20209,cos,[衣装] レインボーバブル,4,20,,0,,0:0,,0,2074075135,2,4096,,1,0,0,{},{ hateffect HAT_EF_MERMAID_LONGING,TRUE; },{ hateffect HAT_EF_MERMAID_LONGING,FALSE; }
+20240,cos,[衣装] 雪の贈り物,4,20,,0,,0:0,,0,2074075135,2,4096,,1,0,0,{},{ hateffect HAT_EF_GIFT_OF_SNOW,TRUE; },{ hateffect HAT_EF_GIFT_OF_SNOW,FALSE; }
+20285,cos,[衣装] 舞い散る桜,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1331,0,{},{ hateffect HAT_EF_BLOSSOM_FLUTTERING,TRUE; },{ hateffect HAT_EF_BLOSSOM_FLUTTERING,FALSE; }
+20323,cos,[衣装] 音の煌めき,4,20,,0,,0:0,,0,2074075135,2,4096,,1,0,0,{},{ hateffect HAT_EF_decoration_of_music,TRUE; },{ hateffect HAT_EF_decoration_of_music,FALSE; }
+20404,cos,[衣装] 天使たちの祝福,4,20,,0,,0:0,,0,2074075135,2,2048,,1,1425,0,{},{ hateffect HAT_EF_BLESSING_OF_ANGELS,TRUE; },{ hateffect HAT_EF_BLESSING_OF_ANGELS,FALSE; }
+20435,cos,[衣装] 山茶花の髪飾り,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1203,0,{},{ hateffect HAT_EF_CAMELLIA_HAIR_PIN,TRUE; },{ hateffect HAT_EF_CAMELLIA_HAIR_PIN,FALSE; }
+20439,cos,[衣装] 新春の輝き,4,20,,0,,0:0,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_GLOW_OF_NEW_YEAR,TRUE; },{ hateffect HAT_EF_GLOW_OF_NEW_YEAR,FALSE; }
+20457,cos,[衣装] 舞い降る虹色の天使の羽,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1461,0,{},{ hateffect HAT_EF_FEATHER_FLUTTERING,TRUE; },{ hateffect HAT_EF_FEATHER_FLUTTERING,FALSE; }
+20459,cos,[衣装] ヴァルハラアイドル,4,20,,0,,0:0,,0,2074075135,2,2048,,1,1423,0,{},{ hateffect HAT_EF_VALHALLA_IDOL,TRUE; },{ hateffect HAT_EF_VALHALLA_IDOL,FALSE; }
+20487,cos,[衣装] はなのワルツ,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1473,0,{},{ hateffect HAT_EF_FLORAL_WALTZ,TRUE; },{ hateffect HAT_EF_FLORAL_WALTZ,FALSE; }
+20515,cos,[衣装] 魔法陣,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_MAGICCIRCLE,TRUE; },{ hateffect HAT_EF_MAGICCIRCLE,FALSE; }
+20519,cos,[衣装] 満開の桜,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_Full_BloomCherry_Tree,TRUE; },{ hateffect HAT_EF_Full_BloomCherry_Tree,FALSE; }
+20522,cos,[衣装] 霊魂の祝福,4,20,,0,,0:0,,0,2074075135,2,8192,,1,80,0,{},{ hateffect HAT_EF_C_Blessings_Of_Soul,TRUE; },{ hateffect HAT_EF_C_Blessings_Of_Soul,FALSE; }
+20524,cos,[衣装] 輝く天使の翼,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_C_Shining_Angel_Wing,TRUE; },{ hateffect HAT_EF_C_Shining_Angel_Wing,FALSE; }
+20532,cos,[衣装] 紅焔の爆裂波動(肩にかける物),4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_DOUBLEGUMGANG,TRUE; },{ hateffect HAT_EF_DOUBLEGUMGANG,FALSE; }
+20535,cos,[衣装] デジタル空間,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_Digital_Space,TRUE; },{ hateffect HAT_Digital_Space,FALSE; }
+20537,cos,[衣装] 舞い落ちる赤い紅葉,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_C_Maple_Which_Falls_Rd,TRUE; },{ hateffect HAT_EF_C_Maple_Which_Falls_Rd,FALSE; }
+20538,cos,[衣装] 虹色の魔法陣,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_MagiccircleRainbow,TRUE; },{ hateffect HAT_EF_MagiccircleRainbow,FALSE; }
+20544,cos,[衣装] ゴールデンシャワー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_gold_shower,TRUE; },{ hateffect HAT_EF_gold_shower,FALSE; }
+20547,cos,[衣装] ウィスパーの祝福,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_C_Ghost_Effect,TRUE; },{ hateffect HAT_EF_C_Ghost_Effect,FALSE; }
+20548,cos,[衣装] はじけるポリンオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_C_Popping_Poring_Aura,TRUE; },{ hateffect HAT_EF_C_Popping_Poring_Aura,FALSE; }
+20549,cos,[衣装] ブルーエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Royal_Guard_Blue,TRUE; },{ hateffect HAT_EF_99LV_Royal_Guard_Blue,FALSE; }
+20550,cos,[衣装] バイオレットエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Warlock_Violet,TRUE; },{ hateffect HAT_EF_99LV_Warlock_Violet,FALSE; }
+20551,cos,[衣装] ライトブルーエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Sorcerer_LBlue,TRUE; },{ hateffect HAT_EF_99LV_Sorcerer_LBlue,FALSE; }
+20552,cos,[衣装] グリーンエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Ranger_Green,TRUE; },{ hateffect HAT_EF_99LV_Ranger_Green,FALSE; }
+20553,cos,[衣装] ピンクエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Minstrel_Pink,TRUE; },{ hateffect HAT_EF_99LV_Minstrel_Pink,FALSE; }
+20554,cos,[衣装] ホワイトエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Archbishop_White,TRUE; },{ hateffect HAT_EF_99LV_Archbishop_White,FALSE; }
+20555,cos,[衣装] シルバーエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Guill_Silver,TRUE; },{ hateffect HAT_EF_99LV_Guill_Silver,FALSE; }
+20556,cos,[衣装] ブラックエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_ShadowC_Black,TRUE; },{ hateffect HAT_EF_99LV_ShadowC_Black,FALSE; }
+20557,cos,[衣装] ゴールドエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Mechanic_Gold,TRUE; },{ hateffect HAT_EF_99LV_Mechanic_Gold,FALSE; }
+20558,cos,[衣装] イエローグリーンエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Genetic_YGreen,TRUE; },{ hateffect HAT_EF_99LV_Genetic_YGreen,FALSE; }
+20559,cos,[衣装] レッドオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Rune_Red,TRUE; },{ hateffect HAT_EF_160LV_Rune_Red,FALSE; }
+20560,cos,[衣装] ブルーオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Royal_G_Blue,TRUE; },{ hateffect HAT_EF_160LV_Royal_G_Blue,FALSE; }
+20561,cos,[衣装] バイオレットオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Warlock_Violet,TRUE; },{ hateffect HAT_EF_160LV_Warlock_Violet,FALSE; }
+20562,cos,[衣装] ライトブルーオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Sorcerer_LBlue,TRUE; },{ hateffect HAT_EF_160LV_Sorcerer_LBlue,FALSE; }
+20563,cos,[衣装] グリーンオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Ranger_Green,TRUE; },{ hateffect HAT_EF_160LV_Ranger_Green,FALSE; }
+20564,cos,[衣装] ピンクオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Minstrel_Pink,TRUE; },{ hateffect HAT_EF_160LV_Minstrel_Pink,FALSE; }
+20565,cos,[衣装] ホワイトオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Archb_White,TRUE; },{ hateffect HAT_EF_160LV_Archb_White,FALSE; }
+20566,cos,[衣装] シルバーオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Guill_Silver,TRUE; },{ hateffect HAT_EF_160LV_Guill_Silver,FALSE; }
+20567,cos,[衣装] ブラックオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_ShadowC_Black,TRUE; },{ hateffect HAT_EF_160LV_ShadowC_Black,FALSE; }
+20568,cos,[衣装] ゴールドオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Mechanic_Gold,TRUE; },{ hateffect HAT_EF_160LV_Mechanic_Gold,FALSE; }
+20569,cos,[衣装] イエローグリーンオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_Genetic_YGreen,TRUE; },{ hateffect HAT_EF_160LV_Genetic_YGreen,FALSE; }
+20571,cos,[衣装] 戦乙女の翼,4,20,,0,,0:0,,0,2074075135,2,8192,,1,48,0,{},{ hateffect HAT_EF_C_Valkyrie_Wing,TRUE; },{ hateffect HAT_EF_C_Valkyrie_Wing,FALSE; }
+20583,cos,[衣装] イリュージョンクリスタル,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_Magic_Star_TW,TRUE; },{ hateffect HAT_EF_Magic_Star_TW,FALSE; }
+20601,cos,[衣装] レッドエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_Rune_Red,TRUE; },{ hateffect HAT_EF_99LV_Rune_Red,FALSE; }
+20608,cos,[衣装] ミッドナイトブルーエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_STAR_E_MBLUE,TRUE; },{ hateffect HAT_EF_99LV_STAR_E_MBLUE,FALSE; }
+20609,cos,[衣装] ミッドナイトブルーオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_STAR_E_MBLUE,TRUE; },{ hateffect HAT_EF_160LV_STAR_E_MBLUE,FALSE; }
+20610,cos,[衣装] グレーエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_99LV_SOUL_R_GRAY,TRUE; },{ hateffect HAT_EF_99LV_SOUL_R_GRAY,FALSE; }
+20611,cos,[衣装] グレーオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_160LV_SOUL_R_GRAY,TRUE; },{ hateffect HAT_EF_160LV_SOUL_R_GRAY,FALSE; }
+20614,cos,[衣装] キエル・ハイルの暗黒,4,20,,0,,0:0,,0,2074075135,2,8192,,1,102,0,{},{ hateffect HAT_EF_C_Kyel_hyre_Ulti_TW,TRUE; },{ hateffect HAT_EF_C_Kyel_hyre_Ulti_TW,FALSE; }
+20621,cos,[衣装] 汚染されたダークロードのマント,4,20,,0,,0:0,,0,2074075135,2,8192,,1,175,0,{},{ hateffect HAT_EF_C_Dark_Lord_Manteau,TRUE; },{ hateffect HAT_EF_C_Dark_Lord_Manteau,FALSE; }
+20950,cos,[衣装] ファイアーレッドオーラ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{ /* オーラ系エフェクトは表示されない */ },{ hateffect HAT_EF_LEVEL99_RED,TRUE; },{ hateffect HAT_EF_LEVEL99_RED,FALSE; }
+20990,cos,[衣装] 回る歯車,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{ /* 効果実装済み */ },{ hateffect HAT_EF_GearWheel,TRUE; },{ hateffect HAT_EF_GearWheel,FALSE; }
+24422,cos,[衣装] ファイアーレッドエナジー,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_LEVEL160_RED,TRUE; },{ hateffect HAT_EF_LEVEL160_RED,FALSE; }
+31040,cos,[衣装] マジカルフェザー,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1279,0,{},{ hateffect HAT_EF_magical_feather,TRUE; },{ hateffect HAT_EF_magical_feather,FALSE; }
+31089,cos,[衣装] 紅焔の爆裂波動,4,20,,0,,0:0,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_DOUBLEGUMGANG,TRUE; },{ hateffect HAT_EF_DOUBLEGUMGANG,FALSE; }
+31142,cos,[衣装] 刻の牢獄,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1309,0,{},{ hateffect HAT_EF_C_Time_Accessory,TRUE; },{ hateffect HAT_EF_C_Time_Accessory,false; }
+31316,cos,[衣装] 黒鳳蝶のはためき,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1665,0,{},{ hateffect HAT_EF_Feather_Fluttering,TRUE; },{ hateffect HAT_EF_Feather_Fluttering,FALSE; }
+31325,cos,[衣装] 女王スカラバの兜,4,20,,0,,0:0,,0,2074075135,2,3072,,1,1231,0,{},{ hateffect HAT_EF_QSCARABA,TRUE; },{ hateffect HAT_EF_QSCARABA,FALSE; }
+31391,cos,[衣装] 浮遊する賢者の石,4,20,,0,,0:0,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_FSTONE,TRUE; },{ hateffect HAT_EF_FSTONE,FALSE; }
+31479,cos,[衣装] 群星,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1729,0,{},{ hateffect HAT_EF_ManyStars,TRUE; },{ hateffect HAT_EF_ManyStars,false; }
+31583,cos,[衣装] ウィルオウィスプ,4,20,,0,,0:0,,0,2074075135,2,4096,,1,880,0,{},{ hateffect HAT_EF_STRANGELIGHTS,TRUE;},{ hateffect HAT_EF_STRANGELIGHTS,FALSE; }
+31588,cos,[衣装] フローズンティアラ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1799,0,{},{ hateffect HAT_EF_SNOWFLAKE_TIARA,TRUE; },{ hateffect HAT_EF_SNOWFLAKE_TIARA,FALSE; }
+31602,cos,[衣装] ルーンミッドガッツの栄光,4,20,,0,,0:0,,0,2074075135,2,1024,,1,0,0,{},{ hateffect HAT_EF_Midgarts_Glory,TRUE; },{ hateffect HAT_EF_Midgarts_Glory,FALSE; }
+31839,cos,[衣装] ウルドの翼,4,20,,0,,0:0,,0,2074075135,2,2048,,1,1826,0,{},{ hateffect HAT_EF_C_Ghost_Effect,TRUE; },{ hateffect HAT_EF_C_Ghost_Effect,FALSE; }
+31942,cos,[衣装] 可憐な薔薇,4,20,,0,,0:0,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_C_Romance_Rose_TW,TRUE; },{ hateffect HAT_EF_C_Romance_Rose_TW,FALSE; }
+400402,cos,[衣装] エンジェリングケーキ帽,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2344,0,{},{ hateffect HAT_EF_C_1st_Evt_Hat_MSP,TRUE; },{ hateffect HAT_EF_C_1st_Evt_Hat_MSP,FALSE; }
+400475,cos,[衣装] ネオンポリンサークレット,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2409,0,{},{ hateffect HAT_EF_C_Bulb_Wreath,TRUE; },{ hateffect HAT_EF_C_Bulb_Wreath,FALSE; }
+400594,cos,[衣装] クロックワイズ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,2350,0,{ /* 240206 */ /* コスたまCuteIII */ },{ hateffect HAT_EF_C_Disapear_Time_TW_2,TRUE; },{ hateffect HAT_EF_C_Disapear_Time_TW_2,FALSE; }
+410021,cos,[衣装] 轟鳴鼓,4,20,,0,,0:0,,0,2074075135,2,2048,,1,1823,0,{},{ hateffect HAT_EF_ResonateTaego,TRUE; },{ hateffect HAT_EF_ResonateTaego,FALSE; }
+410051,cos,[衣装] 舞い降る雪,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2080,0,{},{ hateffect HAT_EF_SnowFlake_Tiara,TRUE; },{ hateffect HAT_EF_SnowFlake_Tiara,FALSE; }
+410081,cos,[衣装] 解放された大地,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2136,0,{},{ hateffect HAT_EF_C_Released_Ground,TRUE; },{ hateffect HAT_EF_C_Released_Ground,FALSE; }
+410127,cos,[衣装] スポットライト,4,20,,0,,0:0,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_C_Spot_Light,TRUE; },{ hateffect HAT_EF_C_Spot_Light,FALSE; }
+410231,cos,[衣装] ティーパーティー,4,20,,0,,0:0,,0,2074075135,2,4096,,1,0,0,{ /* 240206 */ /* コスたまCuteIII */ },{ hateffect HAT_EF_alice_tea,TRUE; },{hateffect HAT_EF_alice_tea,FALSE; }
+410282,cos,[衣装] バルーンリリース,4,20,,0,,0:0,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_C_1st_Evt_Balloon_MSP,TRUE; },{ hateffect HAT_EF_C_1st_Evt_Balloon_MSP,FALSE; }
+410287,cos,[衣装] コズミックコネクション(肩にかける物),4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_Cosmic_Connection,TRUE; },{ hateffect HAT_EF_Cosmic_Connection,FALSE; }
+410325,cos,[衣装] インターディメンショナルリフト,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2529,0,{ /* 240604 効果実装済み */ },{ hateffect HAT_EF_Interdimensional_Rift,TRUE; },{ hateffect HAT_EF_Interdimensional_Rift,FALSE; }
+420205,cos,[衣装] メモリアルクロース,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2310,0,{},{ hateffect HAT_EF_20th_Scarf_J,TRUE; },{ hateffect HAT_EF_20th_Scarf_J,FALSE; }
+420242,cos,[衣装] 棚引く霞,4,20,,0,,0:0,,0,2074075135,2,2048,,1,0,0,{},{ hateffect HAT_EF_C_Fluttering_Haze,TRUE; },{ hateffect HAT_EF_C_Fluttering_Haze,FALSE; }
+420271,cos,[衣装] コズミックコネクション,4,20,,0,,0:0,,0,2074075135,2,4096,,1,0,0,{},{ hateffect HAT_EF_Cosmic_Connection,TRUE; },{ hateffect HAT_EF_Cosmic_Connection,FALSE; }
+440008,cos,[衣装] Master,4,20,,0,,0:0,,0,2074075135,2,1024,,1,0,0,{},{ hateffect HAT_EF_C_Master,TRUE; },{ hateffect HAT_EF_C_Master,FALSE; }
+480092,cos,[衣装] 富豪の輝き,4,20,,0,,0:0,,0,2074075135,2,8192,,1,1997,0,{},{ hateffect HAT_EF_C_Sudden_Wealth_TW,TRUE; },{ hateffect HAT_EF_C_Sudden_Wealth_TW,FALSE; }
+480131,cos,[衣装] 渦巻く炎,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_LEVEL99_LILAC,TRUE; },{ hateffect HAT_EF_LEVEL99_LILAC,FALSE; }
+480203,cos,[衣装] 青の魔法陣,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_LEVEL160_CYAN,TRUE; },{ hateffect HAT_EF_LEVEL160_CYAN,FALSE; }
+480296,cos,[衣装] 桜吹雪,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{},{ hateffect HAT_EF_c_sakura_fubuki,TRUE; },{hateffect HAT_EF_c_sakura_fubuki,FALSE; }
+480458,cos,[衣装] フォーリンヘヴンロストウィング,4,20,,0,,0:0,,0,2074075135,2,8192,,1,225,0,{ /* 240730 効果実装済み */ },{ hateffect HAT_EF_C_FH_Lostwing,TRUE; },{ hateffect HAT_EF_C_FH_Lostwing,FALSE; }
+480286,cos,[衣装] 蛇神の幻影,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{ /* 240926 2024年環境で確認済み 効果実装済み */ },{ hateffect HAT_EF_SERPENT_SHADOW,TRUE; },{ hateffect HAT_EF_SERPENT_SHADOW,FALSE; }
+410367,cos,[衣装] アトクウェ・ポエニテンティア(中段),4,20,,0,,0:0,,0,2074075135,2,2048,,1,2594,0,{ /* 241126 効果実装済み */ },{ hateffect HAT_EF_Atque_Poenitentia,TRUE; },{ hateffect HAT_EF_Atque_Poenitentia,FALSE; }
+410368,cos,[衣装] パーマフロストオブリビオン,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2595,0,{ /* 241126 効果実装済み */ },{ hateffect HAT_EF_Perm_Frost_Oblivion,TRUE; },{ hateffect HAT_EF_Perm_Frost_Oblivion,FALSE; }
+410369,cos,[衣装] パーマフロストオブリビオン(肩にかける物),4,20,,0,,0:0,,0,2074075135,2,8192,,1,2595,0,{ /* 241126 効果実装済み */ },{ hateffect HAT_EF_Perm_Frost_Oblivion,TRUE; },{ hateffect HAT_EF_Perm_Frost_Oblivion,FALSE; }
+420382,cos,[衣装] アトクウェ・ポエニテンティア,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2594,0,{ /* 241126 効果実装済み */ },{ hateffect HAT_EF_Atque_Poenitentia,TRUE; },{ hateffect HAT_EF_Atque_Poenitentia,FALSE; }
+400788,cos,[衣装] 女王スカラバの兜(上段),4,20,,0,,0:0,,0,2074075135,2,1024,,1,1231,0,{ /* 250304 コスたまMonstersXI 効果実装済み */ },{ hateffect HAT_EF_QSCARABA,TRUE; },{ hateffect HAT_EF_QSCARABA,FALSE; }
+480470,cos,[衣装] 真夏のビーチ,4,20,,0,,0:0,,0,2074075135,2,8192,,1,0,0,{ /* 250805 コスたまSeasideVI 効果実装済み */ },{ hateffect HAT_EF_Vacation,true; },{ hateffect HAT_EF_Vacation,false; }
+480608,cos,[衣装] 暴食の魔王ヴェルゼブブの羽,4,20,,0,,0:0,,0,2074075135,2,8192,,1,271,0,{ /* 251028 効果実装済み */ },{ hateffect HAT_EF_C_S_Beelzebub_Wing,true; },{ hateffect HAT_EF_C_S_Beelzebub_Wing,false; }
+480664,cos,[衣装] 呪いの大蛇,4,20,,0,,0:0,,0,2074075135,2,8192,,1,291,0,{ /* 251104 効果実装済み */ },{ hateffect HAT_EF_C_Cursed_Serpent,true; },{ hateffect HAT_EF_C_Cursed_Serpent,false; }
+420618,cos,[衣装] ソリッドステートレコグニション,4,20,,0,,0:0,,0,2074075135,2,4096,,1,2751,0,{ /* 251125 効果実装済み */ },{ hateffect HAT_EF_Solid_State_Recognition,true; },{ hateffect HAT_EF_Solid_State_Recognition,false; }
+420619,cos,[衣装] ソリッドステートレコグニション(肩にかける物),4,20,,0,,0:0,,0,2074075135,2,8192,,1,2751,0,{ /* 251125 効果実装済み */ },{ hateffect HAT_EF_Solid_State_Recognition,true; },{ hateffect HAT_EF_Solid_State_Recognition,false; }
+
+5919,head,山茶花の髪飾り,4,20,,1000,,0:20,,1,2074075135,2,256,,50,1203,1,{ /* 効果実装済み */ },{ hateffect HAT_EF_CAMELLIA_HAIR_PIN,TRUE; bonus3 bAutoSelfSpell,"AL_PNEUMA",1,100*getequiprefinerycnt(); },{ hateffect HAT_EF_CAMELLIA_HAIR_PIN,FALSE; }
+5930,head,マジカルフェザー,4,20,,300,,5:0,,1,2074075135,2,256,,10,1279,1,{ /* 効果実装済み */ },{ hateffect HAT_EF_MAGICAL_FEATHER,TRUE; bonus2 bMagicAddEle,Ele_Holy,5; bonus2 bMagicAddEle,Ele_Dark,5; bonus2 bMagicAddEle,Ele_Ghost,5; bonus2 bMagicAddEle,Ele_Poison,5; bonus2 bMagicAddEle,Ele_Undead,5; if(getequiprefinerycnt() >= 5) { bonus2 bMagicAddEle,Ele_Holy,getequiprefinerycnt()-4; bonus2 bMagicAddEle,Ele_Dark,getequiprefinerycnt()-4; bonus2 bMagicAddEle,Ele_Ghost,getequiprefinerycnt()-4; bonus2 bMagicAddEle,Ele_Poison,getequiprefinerycnt()-4; bonus2 bMagicAddEle,Ele_Undead,getequiprefinerycnt()-4; } bonus3 bAutoSpell,"AL_HOLYLIGHT",1,300+100*getskilllv("AL_DEMONBANE"); bonus2 bAddSkillDamageRate,"AL_HOLYLIGHT",80*getskilllv("PR_IMPOSITIO"); bonus2 bAddSpCost,"AL_HOLYLIGHT",15*getskilllv("PR_IMPOSITIO"); bonus4 bAutoActiveSkill,"NV_FIRSTAID",5930,10000,10000; if(checkactiveitem()) { active_montransform 2449; if(getbaseclass(Class) == CLASS_AL &&(sex) == 1) { showmessage "マジ狩ル†アコキュン ヤッホーリー†(＞ｖ＜)† ライトッ！"; } } },{ hateffect HAT_EF_MAGICAL_FEATHER,FALSE; }
+18719,head,エンジェルステアーズ,4,20,,500,,0:0,,0,2074075135,2,256,,30,0,0,{ /* 効果実装済み */ },{ if(getskilllv("MG_FIREBOLT") >= 6) { bonus3 bAutoSpell2,"MG_FIREBOLT",6,500+100*(getskilllv("MG_FIREBOLT")-5); } else { bonus3 bAutoSpell,"MG_FIREBOLT",5,500; } if(getskilllv("MG_FIREBALL") >= 6) { bonus3 bAutoSpell2,"MG_FIREBALL",6,500+100*(getskilllv("MG_FIREBALL")-5); } else { bonus3 bAutoSpell,"MG_FIREBALL",5,500; } hateffect HAT_EF_ANGEL_STAIRS,TRUE; },{ hateffect HAT_EF_ANGEL_STAIRS,FALSE; }
+19022,head,浮遊する賢者の石,4,20,,100,,0:0,,0,2074075135,2,512,,10,0,0,{ /* セット効果実装済み */ },{ bonus2 bResEff,Eff_Blind,10000; hateffect HAT_EF_FSTONE,TRUE; }
+19023,head,女王スカラバの兜,12,20,,1500,,0:0,,1,2074075135,2,257,,70,1231,1,{ /* セット効果実装済み */ },{ bonus bDefRate,-50; bonus bMdefRate,-50; bonus2 bSubRace,Rct_Insect,getequiprefinerycnt(); bonus2 bMagicSubRace,Rct_Insect,getequiprefinerycnt(); bonus4 bAutoSpell,"NPC_WIDESTONE",2,100,EAS_ATTACK|EAS_WEAPON|EAS_MAGIC|EAS_NOSP; if(equippeditem(4505) && equippeditem(4508)) { bonus4 bAutoSpell,"NPC_WIDESTONE",2,100*getequiprefinerycnt(),EAS_ATTACK|EAS_WEAPON|EAS_MAGIC|EAS_NOSP; } if(equippeditem(4507)) { bonus2 bAddGroup,11,30; bonus2 bResEff,Eff_Confusion,10000; } if(equippeditem(4508)) { bonus2 bSubRace,Rct_Insect,10; bonus2 bMagicSubRace,Rct_Insect,10; } if(equippeditem(300335)) { bonus2 bAddGroup,11,30; bonus2 bResEff,Eff_Confusion,10000; } hateffect HAT_EF_QSCARABA,TRUE; },{ hateffect HAT_EF_QSCARABA,FALSE; }
+19109,head,ヴァルハラアイドル,4,20,,300,,2:0,,0,2074075135,2,512,,70,1423,0,{ /* セット効果 オートスペル以外を19321に記述 */ },{ bonus bMaxSP,50; if(equippeditem(19321)) { bonus3 bAutoSelfSpell,"MG_SAFETYWALL",10,300; } else { bonus3 bAutoSelfSpell,"MG_SAFETYWALL",10,200; } hateffect HAT_EF_VALHALLA_IDOL,TRUE; },{ hateffect HAT_EF_VALHALLA_IDOL,FALSE; }
+19110,head,ヴァルハラアイドル,4,20,,300,,2:0,,1,2074075135,2,512,,70,1423,0,{ /* セット効果 オートスペル以外を19321に記述 */ },{ bonus bMaxSP,50; if(equippeditem(19321)) { bonus3 bAutoSelfSpell,"MG_SAFETYWALL",10,300; } else { bonus3 bAutoSelfSpell,"MG_SAFETYWALL",10,200; } hateffect HAT_EF_VALHALLA_IDOL,TRUE; },{ hateffect HAT_EF_VALHALLA_IDOL,FALSE; }
+19184,head,刻の牢獄,4,20,,100,,0:0,,0,2074075135,2,512,,100,1309,0,{ /* 効果実装済み */ },{ bonus2 bAddSkillDamageRate,"SO_PSYCHIC_WAVE",10; bonus2 bAddSkillDamageRate,"WL_SOULEXPANSION",10; hateffect HAT_EF_C_Time_Accessory,TRUE; },{ hateffect HAT_EF_C_Time_Accessory,false; }
+19307,head,ウィルオウィスプ,4,20,,100,,0:0,,0,2074075135,2,1,,1,880,0,{ /* 効果実装済み */ },{ hateffect HAT_EF_STRANGELIGHTS,TRUE; bonus bCastRate,10; bonus2 bResEff,Eff_Confusion,10000; },{ hateffect HAT_EF_STRANGELIGHTS,FALSE; }
+19402,head,群星,4,20,,300,,0:0,,0,2074075135,2,1,,40,1729,0,{ /* セット効果実装済み */ },{ skill "BS_GREED",1; if(getbaseclass(Class,2) == CLASS_BS) { bonus2 bAddCastRate,"BS_GREED",-100; bonus bSPGainValue,5; } if(equippeditem(410000)) { bonus2 bIgnoreDefRace,Rct_Boss,50; bonus2 bIgnoreDefRace,Rct_NonBoss,50; } hateffect HAT_EF_ManyStars,TRUE; },{ hateffect HAT_EF_ManyStars,false; }
+29041,ench,トゥインクル,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ hateffect HAT_EF_LJOSALFAR,TRUE; },{ hateffect HAT_EF_LJOSALFAR,FALSE; }
+29161,ench,ピンクグロー,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ hateffect HAT_EF_PINKBODY,TRUE; },{ hateffect HAT_EF_PINKBODY,FALSE; }
+29162,ench,シャドウ,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ hateffect HAT_EF_KAGEMUSYA,TRUE; },{ hateffect HAT_EF_KAGEMUSYA,FALSE; }
+29224,ench,ホワイトボディ,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ hateffect HAT_EF_WHITEBODY,TRUE; },{ hateffect HAT_EF_WHITEBODY,FALSE; }
+29722,ench,カース,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ hateffect HAT_EF_Qscaraba,TRUE; },{ hateffect HAT_EF_Qscaraba,FALSE; }
+29723,ench,スター,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ hateffect HAT_EF_ManyStars,TRUE; },{ hateffect HAT_EF_ManyStars,FALSE; }
+300498,ench,コスモ,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ hateffect HAT_EF_Cosmic_Connection,TRUE; },{ hateffect HAT_EF_Cosmic_Connection,FALSE; }
+310850,ench,揚花火,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ hateffect HAT_EF_firework,TRUE; },{ hateffect HAT_EF_firework,FALSE; }
+311459,ench,花火玉,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ hateffect HAT_EF_efst_C_20th_Anniversary_Hat,TRUE; },{ hateffect HAT_EF_efst_C_20th_Anniversary_Hat,TRUE; }
+400408,head,クロックワイズ,4,20,,500,,10:0,,1,2088832,2,256,,200,2350,1,{ /* 25夏スキルダメージ */ },{ hateffect HAT_EF_C_Disapear_Time_TW_2,TRUE; bonus2 bSubRace,Rct_Player,13; bonus2 bMagicSubRace,Rct_Player,13; bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bMagicAddRace,Rct_Boss,40; bonus2 bMagicAddRace,Rct_NonBoss,40; },{ hateffect HAT_EF_C_Disapear_Time_TW_2,FALSE; }
+410000,head,轟鳴鼓,4,20,,300,,0:0,,0,2074075135,2,512,,100,1823,0,{},{ hateffect HAT_EF_ResonateTaego,TRUE; bonus2 bAddRace,Rct_Boss,2; bonus2 bAddRace,Rct_NonBoss,2; if(readparam(bStr) >= 90) { bonus2 bAddRace,Rct_Boss,3; bonus2 bAddRace,Rct_NonBoss,3; } if(readparam(bStr) >= 125) { bonus2 bAddRace,Rct_Boss,5; bonus2 bAddRace,Rct_NonBoss,5; } },{ hateffect HAT_EF_ResonateTaego,FALSE; }
+410322,head,インターディメンショナルリフト,4,20,,100,,2:0,,0,2074075135,2,512,,100,2529,0,{ /* 240604 効果実装済み */ },{ bonus bBaseAtk,BaseLevel; bonus bMatk,BaseLevel; if(equippeditem(313327)) { bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bSubEle,Ele_Holy,5; bonus2 bSubEle,Ele_Poison,5; } hateffect HAT_EF_Interdimensional_Rift,TRUE; },{ hateffect HAT_EF_Interdimensional_Rift,FALSE; }
+410323,head,インターディメンショナルリフト,4,20,,100,,2:0,,1,2074075135,2,512,,100,2529,0,{ /* 240604 効果実装済み */ },{ bonus bBaseAtk,BaseLevel; bonus bMatk,BaseLevel; if(equippeditem(313327)) { bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bSubEle,Ele_Holy,5; bonus2 bSubEle,Ele_Poison,5; } hateffect HAT_EF_Interdimensional_Rift,TRUE; },{ hateffect HAT_EF_Interdimensional_Rift,FALSE; }
+420176,head,メモリアルクロース,4,20,,100,,0:0,,0,2074075135,2,1,,100,2310,0,{},{ hateffect HAT_EF_20th_Scarf_J,TRUE; bonus bMaxHP,2000; bonus2 bAddSize,Size_Small,20; bonus2 bAddSize,Size_Medium,20; bonus2 bAddSize,Size_Big,20; bonus2 bMagicAddSize,Size_Small,20; bonus2 bMagicAddSize,Size_Medium,20; bonus2 bMagicAddSize,Size_Big,20; if(equippeditem(310075)) { skill "BS_GREED",1; } },{ hateffect HAT_EF_20th_Scarf_J,FALSE; }
+410365,head,パーマフロストオブリビオン,4,20,,100,,0:0,,0,2074075135,2,512,,100,2595,0,{ /* 241126 セット 効果実装済み */ },{ bonus bBaseAtk,BaseLevel; bonus bMatk,BaseLevel; if(equippeditem(313522)) { bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bSubEle,Ele_Water,5; bonus2 bSubEle,Ele_Ghost,5; } hateffect HAT_EF_Perm_Frost_Oblivion,TRUE; hateffect HAT_EF_Perm_Frost_Oblivion,FALSE; }
+410366,head,パーマフロストオブリビオン,4,20,,100,,0:0,,1,2074075135,2,512,,100,2595,0,{ /* 241126 セット 効果実装済み */ },{ bonus bBaseAtk,BaseLevel; bonus bMatk,BaseLevel; if(equippeditem(313522)) { bonus2 bSubRace,Rct_Player,5; bonus2 bMagicSubRace,Rct_Player,5; bonus2 bSubEle,Ele_Water,5; bonus2 bSubEle,Ele_Ghost,5; } hateffect HAT_EF_Perm_Frost_Oblivion,TRUE; hateffect HAT_EF_Perm_Frost_Oblivion,FALSE; }
+313521,ench,ペイン,6,,,,,,,,,,65535,,,,,{ /* 241126 効果実装済み */ },{ hateffect HAT_EF_Atque_Poenitentia2,TRUE; },{ hateffect HAT_EF_Atque_Poenitentia2,FALSE; }
+313523,ench,フロスト,6,,,,,,,,,,65535,,,,,{ /* 241126 効果実装済み */ },{ hateffect HAT_EF_Perm_Frost_Oblivion,TRUE; },{ hateffect HAT_EF_Perm_Frost_Oblivion,FALSE; }
+314776,ench,ゴールドフェザー,6,,,,,,,,,,65535,,,,,{ /* 251125 */ },{ hateffect FOOTPRINT_EF_feather,true; },{ hateffect FOOTPRINT_EF_feather,false; }
+313068,ench,イエロースター,6,,,,,,,,,,65535,,,,,{ /* 251125 */ },{ hateffect FOOTPRINT_EF_yellowstar,true; },{ hateffect FOOTPRINT_EF_yellowstar,false; }

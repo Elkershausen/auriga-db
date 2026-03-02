@@ -1,4 +1,4 @@
-//2026/01/14 アップデート
+//2026/03/02 アップデート
 //固有ID,アイテム大分類,日本名,アイテム種類,NPC販売値,NPC売却値(未使用),重量(0.1単位),武器ATK:MATK,防具DEF:MDEF,武器射程,装備スロット,職業class値,消耗装備性別(2 男女固定),装備部位,武器レベル(1-4),装備消耗許可BaseLevel,View値(武器 盾 兜 肩 衣装),装備精錬(0 不可/1 可),{消耗時効果},{装備中効果},{装備解除時効果}
 501,heal,赤ポーション,0,50,,70,,,,,2074075135,2,,,1,,,{ itemheal rand(45,65),0; },{ /* 基礎効果実装済み */ }
 502,heal,紅ポーション,0,200,,100,,,,,2074075135,2,,,1,,,{ itemheal rand(105,145),0; },{ /* 基礎効果実装済み */ }
@@ -6736,7 +6736,7 @@
 20205,cos,[衣装] 装飾用花,4,20,,0,,0:0,,0,2074075135,2,1024,,1,4,0,{},{}
 20207,cos,[衣装] 縞のバンダナ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,133,0,{},{}
 20208,cos,[衣装] 酒豪のネクタイ,4,20,,0,,0:0,,0,2074075135,2,1024,,1,443,0,{ /* 240109 */ },{}
-20209,cos,[衣装] レインボーバブル,4,20,,0,,0:0,,0,2074075135,2,4096,,1,1299,0,{},{ hateffect HAT_EF_MERMAID_LONGING,TRUE; },{ hateffect HAT_EF_MERMAID_LONGING,FALSE; }
+20209,cos,[衣装] レインボーバブル,4,20,,0,,0:0,,0,2074075135,2,4096,,1,0,0,{},{ hateffect HAT_EF_MERMAID_LONGING,TRUE; },{ hateffect HAT_EF_MERMAID_LONGING,FALSE; }
 20211,cos,[衣装] 酉頭巾,4,20,,0,,0:0,,0,2074075135,2,7168,,1,1298,0,{},{}
 20212,cos,[衣装] ニーズヘッグ&ロキ帽,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1304,0,{},{}
 20213,cos,[衣装] フルングニルの魔眼,4,20,,0,,0:0,,0,2074075135,2,2048,,1,345,0,{},{}
@@ -10612,7 +10612,7 @@
 311383,ench,気功Lv2,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ skill "MO_CALLSPIRITS",2; }
 311405,ench,火属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ bonus2 bSubEle,Ele_Fire,5; }
 311408,ench,地属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ bonus2 bSubEle,Ele_Earth,5; }
-311409,ench,無属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{ /* 240130 効果実装済み */ },{ bonus2 bSubEle,Ele_Neutral,5; }
+311409,ench,無属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ bonus2 bSubEle,Ele_Neutral,5; }
 311410,ench,聖属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ bonus2 bSubEle,Ele_Holy,5; }
 311411,ench,闇属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ bonus2 bSubEle,Ele_Dark,5; }
 311412,ench,念属性耐性 + 5%,6,,,,,,,,,,65535,,,,,{ /* 効果実装済み */ },{ bonus2 bSubEle,Ele_Ghost,5; }
@@ -10851,7 +10851,7 @@
 400072,head,[レンタル] ワークキャップ,4,0,,1000,,18:15,,0,2074075135,2,256,,100,1793,1,{ /* レンタル */ },{}
 400077,head,ちゃぷちゃぷニャンプーハット,4,20,,1000,,15:15,,0,2074075135,2,256,,100,507,1,{ /* 効果実装済み */ },{ bonus bMaxHPRate,20; bonus bMaxSPRate,20; if(getskilllv("SU_SPIRITOFSEA") >= 1) { skill "AL_PNEUMA",1; } if(getskilllv("SU_SHRIMPARTY") >= 5) { bonus bMaxHPRate,30; bonus bMaxSPRate,30; } if(getskilllv("SU_GROOMING") >= 5) { bonus2 bResEff,Eff_Confusion,10000; bonus2 bResEff,Eff_Silence,10000; } callfunc "AddSkillHealRate",20*getskilllv("SU_PURRING"); bonus bDef,50*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSkillDelayRate,-10; bonus2 bAddCastRate,"SU_STOOP",-50; bonus2 bAddCastRate,"SU_LOPE",-50; bonus2 bAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_Boss,10; } if(getequiprefinerycnt() >= 9) { bonus bSkillDelayRate,-10; bonus2 bAddCastRate,"SU_STOOP",-50; bonus2 bAddCastRate,"SU_LOPE",-50; bonus2 bAddRace,Rct_Boss,10; bonus2 bMagicAddRace,Rct_Boss,10; } if(getequiprefinerycnt() >= 10) { bonus4 bAutoActiveSkill,"SU_TUNAPARTY",400077,10000,3000; if(checkactiveitem()) { bonus bFlee2,100; } } }
 400096,cos,[衣装] ポリンパーティー帽,4,20,,0,,0:0,,0,2074075135,2,1024,,1,340,0,{},{}
-400101,head,ゲートオブネザーワールド,4,20,,500,,10:10,,1,2074075135,2,256,,100,2016,1,{ /* セット効果実装済み 超越 */ },{ bonus bAgi,5; bonus bInt,5; bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; if(getequiprefinerycnt() >= 7) { bonus2 bAddEle,Ele_All,15; bonus2 bMagicAddEle,Ele_All,15; bonus2 bFixCastRate,-50,0; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,15; bonus2 bFixCastRate,-70,0; } if(equippeditem(4556)) { bonus bInt,30; bonus bDex,30; bonus2 bAddFixCastRate,"WL_TETRAVORTEX",-100; } }
+400101,head,ゲートオブネザーワールド,4,20,,500,,10:10,,1,2074075135,2,256,,100,2016,1,{ /* 超越 セット効果実装済み */ },{ bonus bAgi,5; bonus bInt,5; bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; if(getequiprefinerycnt() >= 7) { bonus2 bAddEle,Ele_All,15; bonus2 bMagicAddEle,Ele_All,15; bonus2 bFixCastRate,-50,0; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,15; bonus2 bFixCastRate,-70,0; } if(equippeditem(4556)) { bonus bInt,30; bonus bDex,30; bonus2 bAddFixCastRate,"WL_TETRAVORTEX",-100; } }
 400103,cos,[衣装] 不死鳥の冠,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1056,0,{},{}
 400104,cos,[衣装] オーディンマスク(中段),4,20,,0,,0:0,,0,2074075135,2,2048,,1,480,0,{},{}
 400108,cos,[衣装] 運命のルーレット帽,4,20,,0,,0:0,,0,2074075135,2,1024,,1,1735,0,{},{}
@@ -14216,7 +14216,7 @@
 300598,card,ギュンターカード,6,20,,10,,,,,,,1023,,,,,{ /* 250930 25夏 ヒットアンドスライディング チェイシングブレイク チェイシングショット アビスフレイム Gemini作成 */ },{ bonus bBaseAtk,BaseLevel/2; bonus bMatk,BaseLevel/2; if(equippeditem(311365)) { bonus2 bAddSkillDamageRate,"ABC_ABYSS_DAGGER",25; bonus2 bAddSkillDamageRate,"ABC_UNLUCKY_RUSH",25; bonus2 bAddSkillDamageRate,"ABC_DEFT_STAB",25; bonus2 bAddSkillDamageRate,"ABC_CHAIN_REACTION_SHOT",25; bonus2 bAddSkillDamageRate,"ABC_FRENZY_SHOT",25; bonus2 bAddSkillDamageRate,"ABC_FROM_THE_ABYSS_ATK",25; bonus2 bAddSkillDamageRate,"ABC_ABYSS_SQUARE",25; bonus2 bAddSkillDamageRate,"ABC_ABYSS_STRIKE",25; } }
 300599,card,ガラシア・ネリウスカード,6,20,,10,,,,,,,1023,,,,,{ /* 250930 25夏 レイディアントスピア インペリアルクロス インペリアルプレッシャー Gemini作成 */ },{ bonus bBaseAtk,BaseLevel/2; bonus bMatk,BaseLevel/2; if(equippeditem(311365)) { bonus2 bAddSkillDamageRate,"IG_OVERSLASH",25; bonus2 bAddSkillDamageRate,"IG_GRAND_JUDGEMENT",25; bonus2 bAddSkillDamageRate,"IG_SHIELD_SHOOTING",25; bonus2 bAddSkillDamageRate,"IG_CROSS_RAIN",25; bonus2 bAddSkillDamageRate,"IG_JUDGEMENT_CROSS",25; } }
 300600,card,イアナ・オペルタカード,6,20,,10,,,,,,,1023,,,,,{ /* 250930 25夏 ミステリーパウダー ダストエクスプロージョン Gemini作成 */ },{ bonus bBaseAtk,BaseLevel/2; bonus bMatk,BaseLevel/2; if(equippeditem(311365)) { bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_FIRE",25; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_WATER",25; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_WIND",25; bonus2 bAddSkillDamageRate,"BO_ACIDIFIED_ZONE_GROUND",25; bonus2 bAddSkillDamageRate,"BO_EXPLOSIVE_POWDER",25; bonus2 bAddSkillDamageRate,"BO_MAYHEMIC_THORNS",25; } }
-300601,card,リーカード,6,20,,10,,,,,,,1023,,,,,{ /* 250930 セット効果実装済み Gemini作成 */ },{  bonus bBaseAtk,BaseLevel/2; bonus bMatk,BaseLevel/2; if(equippeditem(311365)) { bonus2 bAddSkillDamageRate,"HN_DOUBLEBOWLINGBASH",25; bonus2 bAddSkillDamageRate,"HN_MEGA_SONIC_BLOW",25; bonus2 bAddSkillDamageRate,"HN_SHIELD_CHAIN_RUSH",25; bonus2 bAddSkillDamageRate,"HN_SPIRAL_PIERCE_MAX",25; bonus2 bAddSkillDamageRate,"HN_JUPITEL_THUNDER_STORM",25; bonus2 bAddSkillDamageRate,"HN_HELLS_DRIVE",25; bonus2 bAddSkillDamageRate,"HN_NAPALM_VULCAN_STRIKE",25; bonus2 bAddSkillDamageRate,"HN_METEOR_STORM_BUSTER",25; bonus2 bAddSkillDamageRate,"HN_GROUND_GRAVITATION",25; bonus2 bAddSkillDamageRate,"HN_JACK_FROST_NOVA",25; } }
+300601,card,リーカード,6,20,,10,,,,,,,1023,,,,,{ /* 250930 セット効果実装済み Gemini作成 */ },{ bonus bBaseAtk,BaseLevel/2; bonus bMatk,BaseLevel/2; if(equippeditem(311365)) { bonus2 bAddSkillDamageRate,"HN_DOUBLEBOWLINGBASH",25; bonus2 bAddSkillDamageRate,"HN_MEGA_SONIC_BLOW",25; bonus2 bAddSkillDamageRate,"HN_SHIELD_CHAIN_RUSH",25; bonus2 bAddSkillDamageRate,"HN_SPIRAL_PIERCE_MAX",25; bonus2 bAddSkillDamageRate,"HN_JUPITEL_THUNDER_STORM",25; bonus2 bAddSkillDamageRate,"HN_HELLS_DRIVE",25; bonus2 bAddSkillDamageRate,"HN_NAPALM_VULCAN_STRIKE",25; bonus2 bAddSkillDamageRate,"HN_METEOR_STORM_BUSTER",25; bonus2 bAddSkillDamageRate,"HN_GROUND_GRAVITATION",25; bonus2 bAddSkillDamageRate,"HN_JACK_FROST_NOVA",25; } }
 300602,card,ナドヨカード,6,20,,10,,,,,,,1023,,,,,{ /* 250930 25夏 タイガーバトリング ディアースピリットパワー Gemini作成 */ },{ bonus bBaseAtk,BaseLevel/2; bonus bMatk,BaseLevel/2; if(equippeditem(311365)) { bonus2 bAddSkillDamageRate,"SH_CHUL_HO_SONIC_CLAW",25; bonus2 bAddSkillDamageRate,"SH_HOWLING_OF_CHUL_HO",25; bonus2 bAddSkillDamageRate,"SH_HOGOGONG_STRIKE",25; bonus2 bAddSkillDamageRate,"SH_HYUN_ROK_CANNON",25; bonus2 bAddSkillDamageRate,"SH_HYUN_ROKS_BREEZE",25; } }
 1001618,item,ウィグナー商会交換証,3,0,,0,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
 1001619,item,ルナフォーマエビ,3,0,,0,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
@@ -14250,46 +14250,46 @@
 1001647,item,厚い肉,3,0,,10,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
 1001648,item,スターキャンディー,3,0,,10,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
 1001649,item,輝く氷サンゴ,3,0,,10,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
-102881,use,エンハンスキューブ(ゲオルグ),2,0,,10,,,,,2074075135,2,,,1,,,{ /* 250930 */ },{}
-102869,use,ぽっちゃりエビ,2,0,,50,,,,,2074075135,2,,,1,,,{ /* 250930 */ },{}
-102964,use,転移の羽(ルナフォーマ),2,0,,0,,,,,2074075135,2,,,260,,,{ /* 250930 */ },{}
-103501,use,ヨルスキャールヴの鱗,2,0,,50,,,,,2074075135,2,,,1,,,{ /* 250930 */ },{}
-103502,use,巨大なヨルスキャールヴの鱗,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 250930 */ },{}
-450350,armor,ゲオルグアーマー,4,20,,1200,,150:0,,1,2057297792,2,16,,260,,1,{ /* 250930 */ },{}
-470260,shoes,ゲオルグブーツ,4,20,,600,,20:0,,1,2057297792,2,64,,260,,1,{ /* 250930 */ },{}
-480415,robe,ゲオルグマント,4,20,,1000,,60:0,,1,2057297792,2,4,,260,0,1,{ /* 250930 */ },{}
-400723,head,エグゼキューションサークレット,4,20,,500,,10:0,,1,2057297792,2,256,,260,2591,1,{ /* 250930 */ },{}
-400724,head,ジャッジメントサークレット,4,20,,500,,10:0,,1,2057297792,2,256,,260,2592,1,{ /* 250930 */ },{}
-450412,armor,ヨルスキャールヴアーマー,4,20,,1200,,150:0,,1,2057297792,2,16,,260,,1,{ /* 250930 */ },{}
-470303,shoes,ヨルスキャールヴブーツ,4,20,,600,,20:0,,1,2057297792,2,64,,260,,1,{ /* 250930 */ },{}
-480495,robe,ヨルスキャールヴマント,4,20,,1000,,60:0,,1,2057297792,2,4,,260,0,1,{ /* 250930 */ },{}
-410308,cos,[衣装] イルジェのタブレット,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2512,0,{ /* 250930  効果実装済み */ },{}
-410309,cos,[衣装] イルジェのタブレット(ローズ),4,20,,0,,0:0,,0,2074075135,2,2048,,1,2513,0,{ /* 250930  効果実装済み */ },{}
-410310,cos,[衣装] イルジェのタブレット(シルバー),4,20,,0,,0:0,,0,2074075135,2,2048,,1,2514,0,{ /* 250930  効果実装済み */ },{}
-9157,pet,アイスシーホースの卵,4,20,,0,,,,,,,,,,,,{ /* 250930 */ },{}
-1001834,item,堕ちた蛇の象徴,3,0,,10,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001835,item,呪いの象徴,3,0,,10,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001836,item,ヨルスキャールヴの魂,3,0,,10,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001837,item,トリスカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001838,item,タンカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001839,item,ヴィルヘルム・レベンブルグカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001840,item,ラインハルト・レベンブルグカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001841,item,アイヴァン・ウィグナーカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001842,item,ラライラ・ナザール・ウィグナーカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001843,item,リハルト・リハルトカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001844,item,ラウラ・バルダリスカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001845,item,オーレリー・プティカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001846,item,イルジェ・エル・ハイネンカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001847,item,エフェスト・バルター・メガスカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001848,item,マリステラ・バルターカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001849,item,ヨハンカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001850,item,ギュンターカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001851,item,ガラシア・ネリウスカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001852,item,イアナ・オペルタカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001853,item,リーカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
-1001854,item,ナドヨカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
+102881,use,エンハンスキューブ(ゲオルグ),2,0,,10,,,,,2074075135,2,,,1,,,{ /* 250930 ゲオルグ**の精錬値 */ },{}
+102869,use,ぽっちゃりエビ,2,0,,50,,,,,2074075135,2,,,1,,,{ pet 22318; },{ /* 効果実装済み */ }
+102964,use,転移の羽(ルナフォーマ),2,0,,0,,,,,2074075135,2,,,260,,,{ /* 250930 warp "jor_mbase.gat",X,Y; */ },{}
+103501,use,ヨルスキャールヴの鱗,2,0,,50,,,,,2074075135,2,,,1,,,{ /*if(getmapname("") == "jor_sklf1.gat") { warp "Random",0,0; } if(getmapname("") == "jor_sklf2.gat") { warp "Random",0,0; } */ },{ /* 250930 EP21 */ }
+103502,use,巨大なヨルスキャールヴの鱗,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 250930 パーティーリーダー使用時全員がワープする */ },{}
+450350,armor,ゲオルグアーマー,4,20,,1200,,150:0,,1,2057297792,2,16,,260,,1,{ /* 250930 効果実装済み */ },{ bonus2 bSubRace,Rct_Player_Human,7; bonus2 bSubRace,Rct_Player_Doram,7; bonus2 bMagicSubRace,Rct_Player_Human,7; bonus2 bMagicSubRace,Rct_Player_Doram,7; bonus2 bSubEle,Ele_Dark,10; callfunc "bAddRace_All",4*getequiprefinerycnt(); callfunc "bMagicAddRace_All",4*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; } }
+470260,shoes,ゲオルグブーツ,4,20,,600,,20:0,,1,2057297792,2,64,,260,,1,{ /* 250930 効果実装済み */ },{ bonus2 bSubRace,Rct_Player_Human,10; bonus2 bSubRace,Rct_Player_Doram,10; bonus2 bMagicSubRace,Rct_Player_Human,10; bonus2 bMagicSubRace,Rct_Player_Doram,10; bonus2 bSubEle,Ele_Dark,10; bonus2 bAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,4*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,4*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,4*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bMaxHPRate,20; bonus bSkillDelayRate,-15; } if(getequiprefinerycnt() >= 9) { bonus bMaxHPRate,20; bonus bSkillDelayRate,-25; } }
+480415,robe,ゲオルグマント,4,20,,1000,,60:0,,1,2057297792,2,4,,260,0,1,{ /* 250930 効果実装済み */ },{ bonus2 bSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; bonus2 bSubEle,Ele_Dark,50; bonus bMaxHPRate,getequiprefinerycnt(); bonus bMaxSPRate,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSkillDelayRate,-25; bonus2 bAddEle,Ele_All,5; bonus2 bMagicAddEle,Ele_All,5; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,20; bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } }
+400723,head,エグゼキューションサークレット,4,20,,500,,10:0,,1,2057297792,2,256,,260,2591,1,{ /* 250930 効果実装済み */ },{ bonus2 bSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player_Human,13; bonus2 bSubRace,Rct_Player_Doram,13; bonus2 bMagicSubRace,Rct_Player_Human,13; bonus2 bMagicSubRace,Rct_Player_Doram,13; bonus2 bSubEle,Ele_Dark,5; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bMaxHPRate,10; bonus bMaxSPRate,10; bonus bSkillDelayRate,-10; bonus2 bSubEle,Ele_Dark,5; } if(getequiprefinerycnt() >= 9) { bonus bAllStatus,10; bonus bSkillDelayRate,-10; bonus2 bSubEle,Ele_Dark,5; } }
+400724,head,ジャッジメントサークレット,4,20,,500,,10:0,,1,2057297792,2,256,,260,2592,1,{ /* 250930 効果実装済み */ },{ bonus2 bSubRace,Rct_Boss,20; bonus2 bMagicSubRace,Rct_Boss,20; bonus2 bSubRace,Rct_NonBoss,20; bonus2 bMagicSubRace,Rct_NonBoss,20; bonus2 bSubRace,Rct_Player_Human,13; bonus2 bSubRace,Rct_Player_Doram,13; bonus2 bMagicSubRace,Rct_Player_Human,13; bonus2 bMagicSubRace,Rct_Player_Doram,13; bonus2 bSubEle,Ele_Holy,5; bonus2 bAddEle,Ele_All,4*getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,4*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bMaxHPRate,10; bonus bMaxSPRate,10; bonus bSkillDelayRate,-10; bonus2 bSubEle,Ele_Holy,5; } if(getequiprefinerycnt() >= 9) { bonus bAllStatus,10; bonus bSkillDelayRate,-10; bonus2 bSubEle,Ele_Holy,5; } }
+450412,armor,ヨルスキャールヴアーマー,4,20,,1200,,150:0,,1,2057297792,2,16,,260,,1,{ /* 250930 効果実装済み */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player_Human,7; bonus2 bSubRace,Rct_Player_Doram,7; bonus2 bMagicSubRace,Rct_Player_Human,7; bonus2 bMagicSubRace,Rct_Player_Doram,7; bonus2 bSubEle,Ele_Dark,10; bonus2 bAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; } }
+470303,shoes,ヨルスキャールヴブーツ,4,20,,600,,20:0,,1,2057297792,2,64,,260,,1,{ /* 250930 効果実装済み */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player_Human,10; bonus2 bSubRace,Rct_Player_Doram,10; bonus2 bMagicSubRace,Rct_Player_Human,10; bonus2 bMagicSubRace,Rct_Player_Doram,10; bonus2 bSubEle,Ele_Dark,10; bonus bAllStatus,3*getequiprefinerycnt(); bonus2 bAddRace,Rct_Boss,7*getequiprefinerycnt(); bonus2 bAddRace,Rct_NonBoss,7*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_Boss,7*getequiprefinerycnt(); bonus2 bMagicAddRace,Rct_NonBoss,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bMaxHPRate,20; bonus bSkillDelayRate,-15; } if(getequiprefinerycnt() >= 9) { bonus bMaxHPRate,20; bonus bSkillDelayRate,-25; } }
+480495,robe,ヨルスキャールヴマント,4,20,,1000,,60:0,,1,2057297792,2,4,,260,0,1,{ /* 250930 効果実装済み */ },{ bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Player_Human,5; bonus2 bSubRace,Rct_Player_Doram,5; bonus2 bMagicSubRace,Rct_Player_Human,5; bonus2 bMagicSubRace,Rct_Player_Doram,5; bonus2 bSubEle,Ele_Dark,50; bonus bAllStatus,getequiprefinerycnt(); bonus bMaxHPRate,2*getequiprefinerycnt(); bonus bMaxSPRate,2*getequiprefinerycnt(); bonus2 bAddEle,Ele_All,getequiprefinerycnt(); bonus2 bMagicAddEle,Ele_All,getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bSkillDelayRate,-25; bonus2 bAddEle,Ele_All,5; bonus2 bMagicAddEle,Ele_All,5; } if(getequiprefinerycnt() >= 9) { bonus bAspdAddRate,20; bonus2 bAddEle,Ele_All,10; bonus2 bMagicAddEle,Ele_All,10; } }
+410308,cos,[衣装] イルジェのタブレット,4,20,,0,,0:0,,0,2074075135,2,2048,,1,2512,0,{ /* 250930 効果実装済み */ },{}
+410309,cos,[衣装] イルジェのタブレット(ローズ),4,20,,0,,0:0,,0,2074075135,2,2048,,1,2513,0,{ /* 250930 効果実装済み */ },{}
+410310,cos,[衣装] イルジェのタブレット(シルバー),4,20,,0,,0:0,,0,2074075135,2,2048,,1,2514,0,{ /* 250930 効果実装済み */ },{}
+9157,pet,アイスシーホースの卵,4,20,,0,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001834,item,堕ちた蛇の象徴,3,0,,10,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001835,item,呪いの象徴,3,0,,10,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001836,item,ヨルスキャールヴの魂,3,0,,10,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001837,item,トリスカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001838,item,タンカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001839,item,ヴィルヘルム・レベンブルグカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001840,item,ラインハルト・レベンブルグカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001841,item,アイヴァン・ウィグナーカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001842,item,ラライラ・ナザール・ウィグナーカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001843,item,リハルト・リハルトカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001844,item,ラウラ・バルダリスカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001845,item,オーレリー・プティカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001846,item,イルジェ・エル・ハイネンカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001847,item,エフェスト・バルター・メガスカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001848,item,マリステラ・バルターカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001849,item,ヨハンカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001850,item,ギュンターカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001851,item,ガラシア・ネリウスカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001852,item,イアナ・オペルタカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001853,item,リーカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
+1001854,item,ナドヨカードの欠片,3,0,,1,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
 //--------------------------------------------
-1002400,item,暴食の凝固した血液,3,0,,0,,,,,,,,,,,,{ /* 250930  効果実装済み */ },{}
+1002400,item,暴食の凝固した血液,3,0,,0,,,,,,,,,,,,{ /* 250930 効果実装済み */ },{}
 //--------------------------------------------
 200761,use,コスたまHalloweenIX,2,0,,10,,,,,2074075135,2,,,1,,,{ /* 251007 Gemini作成 */ },{ /* 420593 420594 420597 480648 420595 420596 20503 401015 400760 410489 401016 */ }
 20503,cos,[衣装] お菓子の袋,4,20,,0,,0:0,,0,2074075135,2,8192,,1,13,0,{ /* 251007 コスたまHalloweenIX 効果実装済み */ },{}
@@ -14304,10 +14304,10 @@
 420597,cos,[衣装] ハロウィンパンプキン,4,20,,0,,0:0,,0,2074075135,2,8192,,1,2747,0,{ /* 251007 コスたまHalloweenIX 効果実装済み */ },{}
 480648,cos,[衣装] 真紅のニブルブルーム,4,20,,0,,0:0,,0,2074075135,2,8192,,1,288,0,{ /* 251007 コスたまHalloweenIX 効果実装済み */ },{}
 //--------------------------------------------
-200656,use,[2025]特別チケットの箱(Autumn),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251007 */ },{}
-1002238,item,キューペットボックス抽選券XIV,3,0,,0,,,,,,,,,,,,{ /* 251007 */ },{}
-200762,use,[2025年]ハロウィンチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251007 */ },{}
-200763,use,スペシャルキャラクタースロット解放カードの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251007 */ },{}
+200656,use,[2025]特別チケットの箱(Autumn),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251007 効果実装済み */ getitem2 1001803,1,1,0,0,0,0,0,0,3024000; },{}
+1002238,item,キューペットボックス抽選券XIV,3,0,,0,,,,,,,,,,,,{ /* 251007 効果実装済み */ },{}
+200762,use,[2025年]ハロウィンチケットの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251007 効果実装済み */ getitem2 25582,1,1,0,0,0,0,0,0,3024000; },{}
+200763,use,スペシャルキャラクタースロット解放カードの箱,2,0,,0,,,,,2074075135,2,,,1,,,{ /* 251007 効果実装済み */ getitem 103307,1; },{}
 //--------------------------------------------
 420591,head,あったかキジトラマフラー,4,20,,100,,0:0,,0,1073741824,2,512,,200,2741,0,{ /* 251014 */ },{}
 420592,head,マジェスティックフォックス,4,20,,100,,0:0,,0,2074075135,2,1,,100,2742,0,{ /* 251014 */ },{}
