@@ -803,7 +803,7 @@ prt_gld.gat,159,25,0		warp	pronterawarp2002	6,2,prt_castle.gat,102,178
 // arena_room.gat	アリーナ待機室
 // -----
 // prt_fild00.gat	プロンテラフィールド 00 ～ 11
-// 2026/03/04 イズルードマップ仕様変更対応 飛行船リンク凍結 アリーナリンク暫定
+// 2026/03/04 イズルードマップ仕様変更対応 飛行船リンク廃止 剣士協会暫定
 //==============================================================
 izlude.gat,20,98,0		warp	izludewarp0501		3,3,prt_fild08.gat,367,212	//izlude.gat -> prt_ifld08.gat
 izlude_in.gat,116,46,0		warp	izludewarp1004		3,2,izlude.gat,128,98
@@ -814,20 +814,16 @@ izlude_in.gat,74,158,0		warp	izludewarp1008		3,2,izlude.gat,52,168
 izlude_in.gat,43,169,0		warp	izludewarp1015		2,3,izlude_in.gat,63,169	//ソードマン転職NPC
 izlude_in.gat,87,169,0		warp	izludewarp1010		2,3,izlude_in.gat,111,169
 izlude_in.gat,108,169,0		warp	izludewarp1009		2,3,izlude_in.gat,84,169
-izlude_in.gat,148,127,0		warp	izludewarp1006		2,5,izlude.gat,210,161
+izlude_in.gat,148,127,0		warp	izludewarp1006		2,5,izlude.gat,201,167		//剣士協会
 izlude_in.gat,172,139,0		warp	izludewarp1013		3,2,izlude_in.gat,172,161
 izlude_in.gat,172,158,0		warp	izludewarp1014		3,2,izlude_in.gat,172,136
 izlude_in.gat,172,116,0		warp	izludewarp1012		3,2,izlude_in.gat,172,94
 izlude_in.gat,171,97,0		warp	izludewarp1011		3,2,izlude_in.gat,172,119
-izlude.gat,213,162,0		warp	izludewarp1005		3,2,izlude_in.gat,151,127
+izlude.gat,202,171,0		warp	izludewarp1005		3,2,izlude_in.gat,151,127	//協会会員NPCで移動する
 
-// イズルード空港　凍結
-//izlude.gat,149,39,0		warp	izludewarp1016		1,1,izlude.gat,182,56
-//izlude.gat,176,56,0		warp	izludewarp1017		1,1,izlude.gat,145,40
-
-// arena イズルード<->アリーナ 暫定
-izlude.gat,127,256,0		warp	izludewarp1101		1,1,arena_room.gat,100,30
-arena_room.gat,99,24,0		warp	izludewarp1102		1,1,izlude.gat,127,253
+// arena イズルード<->アリーナ
+izlude.gat,213,161,0		warp	izludewarp1101		1,1,arena_room.gat,100,30
+arena_room.gat,99,24,0		warp	izludewarp1102		1,1,izlude.gat,209,161
 arena_room.gat,84,71,0		warp	izludewarp1103		1,1,arena_room.gat,60,50
 arena_room.gat,63,53,0		warp	izludewarp1104		1,1,arena_room.gat,86,74
 arena_room.gat,77,88,0		warp	izludewarp1105		1,1,arena_room.gat,46,87
