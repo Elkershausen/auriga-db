@@ -529,7 +529,7 @@ izlude.gat,134,120,4	script	ƒJƒvƒ‰Eˆõ	115,{
 	cutin "kafra_03",2;
 	setarray '@code,1,5,4,3,8;
 	setarray '@price,600,1200,1200,1200,1800;
-	callfunc "KafraMain",1,0x1ff,"prt_fild08.gat",350,202,"izlude.gat",94,103,30,800,'@code,'@price;
+	callfunc "KafraMain",1,0x1ff,"prt_fild08.gat",350,202,"izlude.gat",128,99,30,800,'@code,'@price;
 	close2;
 	viewpoint 1,136,88,1,0x0000FF;
 	cutin "kafra_03",255;
