@@ -1,3 +1,20 @@
+2026/03/04	patch260304
+* イズルードマップがグローバル版に更新されたため、NPC設置座標を変更
+
+* 今回変更分
+  npc\town\update_npc_town_izlude.sc/npc_photoflame.sc/update_npc_job_28gunslinger.sc
+  npc\misc\npc_misc_board.sc/npc_misc_guide.sc/npc_misc_kafra.sc/npc_misc_questlist.sc
+  npc\warp\npc_warp_town.sc/npc_warp_fild.sc
+  npc\quest\npc_quest_smilegirl.sc
+
+* イズルードに移動するNPC/クエストNPCは全部修正対象となるので何回かに分けて書き換えます(そのままではスタックやNPCにアクセス出来ない不具合が発生します)
+* マップキャッシュの影響でキャラクターが動けなくなるので サーバーフォルダ内の map.info というファイルを一旦削除してください
+
+* ミミック倉庫NPC 削除
+
+* 2026/03/03 までのアイテム捕捉(item_db.txt item_db2.txt item_cardtype.txt)
+* 衣装装備は実装
+
 2026/03/03	patch260303
 * 300000番台のカードとエンチャントの最適化実施
 

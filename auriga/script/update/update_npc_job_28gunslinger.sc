@@ -1,7 +1,8 @@
-//2025/05/07 アップデート
-//ショップNPC更新 / バレット交換NPC更新 / 箱詰めNPC更新 / スラッグ弾交換NPC実装
-//ショップ[シルバーバレット][ブラッドバレット] -> [シルバーバレットC][ブラッドバレットC] 変更 / 新種バレット追加
-//npc_job_28gunslinger.sc 上書き
+// 2026/03/04 アップデート
+// ショップNPC更新 / バレット交換NPC更新 / 箱詰めNPC更新 / スラッグ弾交換NPC実装
+// ショップ[シルバーバレット][ブラッドバレット] -> [シルバーバレットC][ブラッドバレットC] 変更 / 新種バレット追加
+// 2026/03/04 イズルードマップ仕様変更対応
+// npc_job_28gunslinger.sc 上書き
 
 //= 永久フラグ ===================================================================
 // CHANGE_GS -> 0～5
@@ -522,7 +523,7 @@ payon.gat,184,65,3	script	ファンソプル	866,{
 }
 
 que_ng.gat,187,156,3	duplicate(SphereShop)	弾丸屋・トニー	86
-izlude.gat,171,133,3	duplicate(SphereShop)	トニー	86
+izlude.gat,171,165,3	duplicate(SphereShop)	トニー	86
 //prontera.gat,153,151,3		duplicate(SphereShop)	トニー	86
 
 //============================================================
@@ -657,7 +658,7 @@ izlude.gat,171,133,3	duplicate(SphereShop)	トニー	86
 }
 
 que_ng.gat,187,149,3	duplicate(BulletboxShop)	弾丸ケース屋・ケニー	83
-izlude.gat,171,127,3	duplicate(BulletboxShop)	弾丸ケース屋・ケニー	83
+izlude.gat,171,159,3	duplicate(BulletboxShop)	弾丸ケース屋・ケニー	83
 //prontera.gat,153,151,3	duplicate(BulletboxShop)	弾丸ケース屋・ケニー	83
 
 
