@@ -148,7 +148,7 @@ function	script	KafraMain	{
 		set KAFRA_PIT,KAFRA_PIT+('@price['@j]/10);
 		switch ( getelementofarray(getarg(10),'@j) ) {
 			case 1: warp "prontera.gat",116,72; 	break;
-			case 2: warp "izlude.gat",91,105; 	break;
+			case 2: warp "izlude.gat",128,99; 	break;
 			case 3: warp "geffen.gat",120,39; 	break;
 			case 4: warp "payon.gat",160,58; 	break;
 			case 5: warp "morocc.gat",156,46; 	break;
@@ -1057,7 +1057,7 @@ prontera.gat,248,42,0	script	カプラ職員#ProSword	116,{
 		}
 		set Zeny,Zeny-600;
 		set KAFRA_PIT,KAFRA_PIT+60;
-		warp "izlude.gat",94,103;
+		warp "izlude.gat",128,99;
 		end;
 	case 2:	//function内からコピー
 		mes "[カプラ職員]";
