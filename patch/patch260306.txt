@@ -1,0 +1,31 @@
+﻿* AIによる修正
+* コードを日本語に戻し実装して説明文と照らし合わせ
+
+22174,shoes,スカラバハイヒール,4,20,,700,,12:5,,1,2074075135,2,64,,85,,1,{ /* セット効果実装済み Geminiデバッグ */ },{ bonus bMaxHPRate,2; bonus bMaxSPRate,2; if(getequiprefinerycnt() >= 5) { bonus bMaxHPRate,4; bonus bMaxSPRate,4; } if(getequiprefinerycnt() >= 7) { bonus bMaxHPRate,4; bonus bMaxSPRate,4; } if(equippeditem(1746)) { if(getequiprefinerycnt() >= 7) { bonus2 bAddSkillCoolDown,"WM_SEVERE_RAINSTORM",-2000; } if(getequiprefinerycnt(3) >= 8) { bonus2 bAddRace,Rct_Boss,20; bonus2 bAddSkillDamageRate,"WM_SEVERE_RAINSTORM",8; } if(getequiprefinerycnt(3) >= 10) { bonus2 bAddRace,Rct_Boss,30; bonus2 bAddSkillDamageRate,"WM_SEVERE_RAINSTORM",12; } } if(equippeditem(1649) || equippeditem(1679)) { if(getequiprefinerycnt() >= 7) { bonus bCastRate,-20; } if(getequiprefinerycnt(3) >= 8) { bonus2 bMagicAddRace,Rct_Boss,30; callfunc "bonus2bIgnoreMdefRace",20; } if(getequiprefinerycnt(3) >= 10) { bonus2 bMagicAddRace,Rct_Boss,40; callfunc "bonus2bIgnoreMdefRace",30; } } if(equippeditem(1746) && equippeditem(22174) && equippeditem(480064)) { if(getequiprefinerycnt() >= 7) { if(getskilllv("WM_GLOOMYDAY") >= 5) { bonus2 bAddSkillCoolDown,"WM_SEVERE_RAINSTORM",2000; } } } }
+
+射程距離修正
+1721,weapon,連弩,8,89000,,2000,95:0,,9,1,133184,2,34,3,65,11,1,{ /* 効果実装済み */ },{}
+
+* AIによる未実装アイテムの実装
+* 攻撃速度増加/一般・ボスのダメージ増加の解釈/全てのサイズに対するダメージ増加/プレイヤーからダメージ減少ダメージ軽減解釈
+  /詠唱妨害キャンセル/攻撃オートスペル/活性化状態/装備解除効果/sc_start sc_end/再使用待機時間/セット効果/misceffect
+
+420591,head,あったかキジトラマフラー,4,20,,100,,0:0,,0,1073741824,2,512,,200,2741,0,{ /* 251014 セット効果実装済み Gemini作成 */ },{ bonus2 bSubRace,Rct_Player_Human,3; bonus2 bSubRace,Rct_Player_Doram,3; bonus2 bMagicSubRace,Rct_Player_Human,3; bonus2 bMagicSubRace,Rct_Player_Doram,3; bonus2 bAddSize,Size_Small,1*BaseLevel/10; bonus2 bAddSize,Size_Medium,1*BaseLevel/10; bonus2 bAddSize,Size_Big,1*BaseLevel/10; bonus2 bMagicAddSize,Size_Small,1*BaseLevel/10; bonus2 bMagicAddSize,Size_Medium,1*BaseLevel/10; bonus2 bMagicAddSize,Size_Big,1*BaseLevel/10; if(equippeditem(311074)) { bonus bNoCastCancel,0; bonus3 bAutoSpell,"WL_CHAINLIGHTNING",5,100; } }
+420592,head,マジェスティックフォックス,4,20,,100,,0:0,,0,2074075135,2,1,,100,2742,0,{ /* 251014 セット効果実装済み Gemini作成 */ },{ bonus2 bSubRace,Rct_Player_Human,3; bonus2 bSubRace,Rct_Player_Doram,3; bonus2 bMagicSubRace,Rct_Player_Human,3; bonus2 bMagicSubRace,Rct_Player_Doram,3; bonus2 bAddSize,Size_Small,BaseLevel/10; bonus2 bAddSize,Size_Medium,BaseLevel/10; bonus2 bAddSize,Size_Big,BaseLevel/10; bonus2 bMagicAddSize,Size_Small,BaseLevel/10; bonus2 bMagicAddSize,Size_Medium,BaseLevel/10; bonus2 bMagicAddSize,Size_Big,BaseLevel/10; if(equippeditem(311074)) { bonus bNoCastCancel,0; bonus3 bAutoSpell,"WL_CHAINLIGHTNING",5,100; } }
+450483,armor,テオフィルス,4,20,,1000,,100:0,,1,1572864,2,16,,200,,1,{ /* 251014 セット効果実装済み Gemini作成 */ },{ bonus2 bSubRace,Rct_Player_Human,7; bonus2 bSubRace,Rct_Player_Doram,7; bonus2 bMagicSubRace,Rct_Player_Human,7; bonus2 bMagicSubRace,Rct_Player_Doram,7; bonus2 bAddSkillDamageRate,"TR_RHYTHMSHOOTING",1*BaseLevel/10; bonus2 bAddSkillDamageRate,"TR_ROSEBLOSSOM",1*BaseLevel/10; bonus2 bAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bAddSize,Size_Big,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus2 bSubRace,Rct_Boss,5; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus bAspdAddRate,10; } if(getequiprefinerycnt() >= 7) { bonus bUnbreakableArmor,0; bonus4 bAutoActiveSkill,"WM_SEVERE_RAINSTORM",450483,100,1; if(checkactiveitem()) { misceffect 220,""; sc_start 631,20000,5; } } if(getequiprefinerycnt() >= 10) { bonus2 bAddEle,Ele_All,15; },{ sc_end 631; } }
+450484,armor,グロズヌイ,4,20,,1000,,100:0,,1,8388608,2,16,,200,,1,{ /* 251014 セット効果実装済み Gemini作成 */ },{ bonus2 bSubRace,Rct_Player_Human,7; bonus2 bSubRace,Rct_Player_Doram,7; bonus2 bMagicSubRace,Rct_Player_Human,7; bonus2 bMagicSubRace,Rct_Player_Doram,7; bonus2 bAddSkillDamageRate,"HN_JUPITEL_THUNDER_STORM",1*BaseLevel/10; bonus2 bAddSkillDamageRate,"HN_HELLS_DRIVE",1*BaseLevel/10; bonus2 bAddSkillDamageRate,"HN_NAPALM_VULCAN_STRIKE",1*BaseLevel/10; bonus2 bMagicAddSize,Size_Small,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Medium,7*getequiprefinerycnt(); bonus2 bMagicAddSize,Size_Big,7*getequiprefinerycnt(); if(getequiprefinerycnt() >= 7) { bonus bAspdAddRate,10; bonus2 bSubRace,Rct_NonBoss,5; bonus2 bSubRace,Rct_Boss,5; bonus2 bMagicSubRace,Rct_NonBoss,5; bonus2 bMagicSubRace,Rct_Boss,5; } if(getequiprefinerycnt() >= 9) { bonus bUnbreakableArmor,0; skill "SA_VIOLENTGALE",5; } if(getequiprefinerycnt() >= 10) { bonus2 bMagicAddEle,Ele_All,15; } }
+314099,ench,潜在解放(ハイパーノービスXV),6,,,,,,,,,,4129791,,,,,{ /* 251014 セット効果実装済み Gemini作成 */ },{ if(equippeditem(310461)) { bonus2 bAddSkillCoolDown,"HN_JUPITEL_THUNDER_STORM",-200; } }
+314177,ench,潜在解放(スピリットハンドラーXVI),6,,,,,,,,,,4129791,,,,,{ /* 251014 セット効果実装済み Gemini作成 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"SH_HOGOGONG_STRIKE",-100; } }
+314168,ench,潜在解放(トルバドゥール&トルヴェールXI),6,,,,,,,,,,4129791,,,,,{ /* 251014 セット効果実装済み Gemini作成 */ },{ if(equippeditem(29509)) { bonus2 bAddSkillCoolDown,"TR_RHYTHMSHOOTING",-100; } }
+
+104978,use,がおがおタイガーパジャマの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260210 効果実装済み Gemini作成 */ getitem2 450368,1,1,10,0,0,0,0,0; },{}
+104979,use,リヴァイアサンヘルムの箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260210 効果実装済み Gemini作成 */ getitem2 400742,1,1,10,0,0,0,0,0; },{}
+104980,use,天下無敵の紋帽子の箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260210 効果実装済み Gemini作成 */ getitem2 400453,1,1,10,0,0,0,0,0; },{}
+104981,use,リス耳フード帽(アルビノ)の箱(精錬値10),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260210 効果実装済み Gemini作成 */ getitem2 400416,1,1,10,0,0,0,0,0; },{}
+104982,use,パワーマシンスーツの箱(精錬値9),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260210 効果実装済み Gemini作成 */ getitem2 450432,1,1,9,0,0,0,0,0; },{}
+104983,use,ストライプホーリーローブ箱(精錬値9),2,0,,0,,,,,2074075135,2,,,1,,,{ /* 260210 効果実装済み Gemini作成 */ getitem2 450425,1,1,9,0,0,0,0,0; },{}
+
+エンチャント対象部位をシャドウ装備まで拡張(衣装除く)
+装備部位[矢] を対象から削除
+
+AI学習用 sc_xxxx 状態異常リスト作成
