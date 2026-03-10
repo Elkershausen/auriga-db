@@ -1,0 +1,86 @@
+{  "class_id": 0,  "names": {    "display": "ノービス",    "internal": "Job_Novice"  },  "class_info": {    "classname": "CLASS_NV",    "job_id": 0  },  "categories": ["ノービス", "未転生ノービス"]}
+{  "class_id": 1,  "names": {    "display": "ソードマン",    "internal": "Job_Swordman"  },  "class_info": {    "classname": "CLASS_SM",    "job_id": 1  },  "categories": ["1次職", "未転生1次職"]}
+{  "class_id": 2,  "names": {    "display": "マジシャン",    "internal": "Job_Magician"  },  "class_info": {    "classname": "CLASS_MG",    "job_id": 2  },  "categories": ["1次職", "未転生1次職"]}
+{  "class_id": 3,  "names": {    "display": "アーチャー",    "internal": "Job_Archer"  },  "class_info": {    "classname": "CLASS_AC",    "job_id": 3  },  "categories": ["1次職", "未転生1次職"]}
+{  "class_id": 4,  "names": {    "display": "アコライト",    "internal": "Job_Acolyte"  },  "class_info": {    "classname": "CLASS_AL",    "job_id": 4  },  "categories": ["1次職", "未転生1次職"]}
+{  "class_id": 5,  "names": {    "display": "マーチャント",    "internal": "Job_Merchant"  },  "class_info": {    "classname": "CLASS_MC",    "job_id": 5  },  "categories": ["1次職", "未転生1次職"]}
+{  "class_id": 6,  "names": {    "display": "シーフ",    "internal": "Job_Thief"  },  "class_info": {    "classname": "CLASS_TF",    "job_id": 6  },  "categories": ["1次職", "未転生1次職"]}
+{  "class_id": 7,  "names": {    "display": "ナイト",    "internal": "Job_Knight"  },  "class_info": {    "classname": "CLASS_KN",    "job_id": 7  },  "categories": ["2次職", "未転生2-1次職"]}
+{  "class_id": 8,  "names": {    "display": "プリースト",    "internal": "Job_Priest"  },  "class_info": {    "classname": "CLASS_PR",    "job_id": 8  },  "categories": ["2次職", "未転生2-1次職"]}
+{  "class_id": 9,  "names": {    "display": "ウィザード",    "internal": "Job_Wizard"  },  "class_info": {    "classname": "CLASS_WZ",    "job_id": 9  },  "categories": ["2次職", "未転生2-1次職"]}
+{  "class_id": 10,  "names": {    "display": "ブラックスミス",    "internal": "Job_Blacksmith"  },  "class_info": {    "classname": "CLASS_BS",    "job_id": 10  },  "categories": ["2次職", "未転生2-1次職"]}
+{  "class_id": 11,  "names": {    "display": "ハンター",    "internal": "Job_Hunter"  },  "class_info": {    "classname": "CLASS_HT",    "job_id": 11  },  "categories": ["2次職", "未転生2-1次職"]}
+{  "class_id": 12,  "names": {    "display": "アサシン",    "internal": "Job_Assassin"  },  "class_info": {    "classname": "CLASS_AS",    "job_id": 12  },  "categories": ["2次職", "未転生2-1次職"]}
+{  "class_id": 14,  "names": {    "display": "クルセイダー",    "internal": "Job_Crusader"  },  "class_info": {    "classname": "CLASS_CR",    "job_id": 13  },  "categories": ["2次職", "未転生2-2次職"]}
+{  "class_id": 15,  "names": {    "display": "モンク",    "internal": "Job_Monk"  },  "class_info": {    "classname": "CLASS_MO",    "job_id": 14  },  "categories": ["2次職", "未転生2-2次職"]}
+{  "class_id": 16,  "names": {    "display": "セージ",    "internal": "Job_Sage"  },  "class_info": {    "classname": "CLASS_SA",    "job_id": 15  },  "categories": ["2次職", "未転生2-2次職"]}
+{  "class_id": 17,  "names": {    "display": "ローグ",    "internal": "Job_Rogue"  },  "class_info": {    "classname": "CLASS_RG",    "job_id": 16  },  "categories": ["2次職", "未転生2-2次職"]}
+{  "class_id": 18,  "names": {    "display": "アルケミスト",    "internal": "Job_Alchemist"  },  "class_info": {    "classname": "CLASS_AM",    "job_id": 17  },  "categories": ["2次職", "未転生2-2次職"]}
+{  "class_id": 19,  "names": {    "display": "バード",    "internal": "Job_Bard"  },  "class_info": {    "classname": "CLASS_BA",    "job_id": 18  },  "categories": ["2次職", "未転生2-2次職"]}
+{  "class_id": 20,  "names": {    "display": "ダンサー",    "internal": "Job_Dancer"  },  "class_info": {    "classname": "CLASS_DC",    "job_id": 19  },  "categories": ["2次職", "未転生2-2次職"]}
+{  "class_id": 23,  "names": {    "display": "スーパーノービス",    "internal": "Job_SuperNovice"  },  "class_info": {    "classname": "CLASS_SNV",    "job_id": 20  },  "categories": ["特殊1次職", "特殊1次職"]}
+{  "class_id": 24,  "names": {    "display": "ガンスリンガー",    "internal": "Job_Gunslinger  "  },  "class_info": {    "classname": "CLASS_GS",    "job_id": 24  },  "categories": ["特殊1次職", "特殊1次職"]}
+{  "class_id": 25,  "names": {    "display": "忍者",    "internal": "Job_Ninja"  },  "class_info": {    "classname": "CLASS_NJ",    "job_id": 25  },  "categories": ["特殊1次職", "特殊1次職"]}
+{  "class_id": 4001,  "names": {    "display": "転生ノービス",    "internal": "(Job_Novice && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_NV_H",    "job_id": 0  },  "categories": ["転生ノービス", "転生ノービス"]}
+{  "class_id": 4002,  "names": {    "display": "転生ソードマン",    "internal": "(Job_Swordman && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_SM_H",    "job_id": 1  },  "categories": ["転生1次職", "転生1次職"]}
+{  "class_id": 4003,  "names": {    "display": "転生マジシャン",    "internal": "(Job_Magician && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_MG_H",    "job_id": 2  },  "categories": ["転生1次職", "転生1次職"]}
+{  "class_id": 4004,  "names": {    "display": "転生アーチャー",    "internal": "(Job_Archer && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_AC_H",    "job_id": 3  },  "categories": ["転生1次職", "転生1次職"]}
+{  "class_id": 4005,  "names": {    "display": "転生アコライト",    "internal": "(Job_Acolyte && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_AL_H",    "job_id": 4  },  "categories": ["転生1次職", "転生1次職"]}
+{  "class_id": 4006,  "names": {    "display": "転生マーチャント",    "internal": "(Job_Merchant && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_MC_H",    "job_id": 5  },  "categories": ["転生1次職", "転生1次職"]}
+{  "class_id": 4007,  "names": {    "display": "転生シーフ",    "internal": "(Job_Thief && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_TF_H",    "job_id": 6  },  "categories": ["転生1次職", "転生1次職"]}
+{  "class_id": 4008,  "names": {    "display": "ロードナイト",    "internal": "(Job_Knight && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_KN_H",    "job_id": 7  },  "categories": ["転生2次職", "転生2-1次職"]}
+{  "class_id": 4009,  "names": {    "display": "ハイプリースト",    "internal": "(Job_Priest && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_PR_H",    "job_id": 8  },  "categories": ["転生2次職", "転生2-1次職"]}
+{  "class_id": 4010,  "names": {    "display": "ハイウィザード",    "internal": "(Job_Wizard && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_WZ_H",    "job_id": 9  },  "categories": ["転生2次職", "転生2-1次職"]}
+{  "class_id": 4011,  "names": {    "display": "ホワイトスミス",    "internal": "(Job_Blacksmith && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_BS_H",    "job_id": 10  },  "categories": ["転生2次職", "転生2-1次職"]}
+{  "class_id": 4012,  "names": {    "display": "スナイパー",    "internal": "(Job_Hunter && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_HT_H",    "job_id": 11  },  "categories": ["転生2次職", "転生2-1次職"]}
+{  "class_id": 4013,  "names": {    "display": "アサシンクロス",    "internal": "(Job_Assassin && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_AS_H",    "job_id": 12  },  "categories": ["転生2次職", "転生2-1次職"]}
+{  "class_id": 4015,  "names": {    "display": "パラディン",    "internal": "(Job_Crusader && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_CR_H",    "job_id": 13  },  "categories": ["転生2次職", "転生2-2次職"]}
+{  "class_id": 4016,  "names": {    "display": "チャンピオン",    "internal": "(Job_Monk && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_MO_H",    "job_id": 14  },  "categories": ["転生2次職", "転生2-2次職"]}
+{  "class_id": 4017,  "names": {    "display": "プロフェッサー",    "internal": "(Job_Sage && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_SA_H",    "job_id": 15  },  "categories": ["転生2次職", "転生2-2次職"]}
+{  "class_id": 4018,  "names": {    "display": "チェイサー",    "internal": "(Job_Rogue && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_RG_H",    "job_id": 16  },  "categories": ["転生2次職", "転生2-2次職"]}
+{  "class_id": 4019,  "names": {    "display": "クリエイター",    "internal": "(Job_Alchemist && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_AM_H",    "job_id": 17  },  "categories": ["転生2次職", "転生2-2次職"]}
+{  "class_id": 4020,  "names": {    "display": "クラウン",    "internal": "(Job_Bard && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_BA_H",    "job_id": 18  },  "categories": ["転生2次職", "転生2-2次職"]}
+{  "class_id": 4021,  "names": {    "display": "ジプシー",    "internal": "(Job_Dancer && Upper == UPPER_HIGH)"  },  "class_info": {    "classname": "CLASS_DC_H",    "job_id": 19  },  "categories": ["転生2次職", "転生2-2次職"]}
+{  "class_id": 4046,  "names": {    "display": "テコンキッド",    "internal": "Job_Taekwon"  },  "class_info": {    "classname": "CLASS_TK",    "job_id": 21  },  "categories": ["特殊1次職", "拡張特殊1次職"]}
+{  "class_id": 4047,  "names": {    "display": "拳聖",    "internal": "Job_StarGladiator"  },  "class_info": {    "classname": "CLASS_SG",    "job_id": 22  },  "categories": ["特殊2次職", "拡張特殊2次職"]}
+{  "class_id": 4049,  "names": {    "display": "ソウルリンカー",    "internal": "Job_SoulLinker"  },  "class_info": {    "classname": "CLASS_SL",    "job_id": 23  },  "categories": ["特殊2次職", "拡張特殊2次職"]}
+{  "class_id": 4054,  "names": {    "display": "ルーンナイト",    "internal": "Job_RuneKnight"  },  "class_info": {    "classname": "CLASS_RK",    "job_id": 29  },  "categories": ["3次職", "3-1次職"]}
+{  "class_id": 4055,  "names": {    "display": "ウォーロック",    "internal": "Job_Warlock"  },  "class_info": {    "classname": "CLASS_WL",    "job_id": 30  },  "categories": ["3次職", "3-1次職"]}
+{  "class_id": 4056,  "names": {    "display": "レンジャー",    "internal": "Job_Ranger"  },  "class_info": {    "classname": "CLASS_RA",    "job_id": 31  },  "categories": ["3次職", "3-1次職"]}
+{  "class_id": 4057,  "names": {    "display": "アークビショップ",    "internal": "Job_ArchBishop"  },  "class_info": {    "classname": "CLASS_AB",    "job_id": 32  },  "categories": ["3次職", "3-1次職"]}
+{  "class_id": 4058,  "names": {    "display": "メカニック",    "internal": "Job_Mechanic"  },  "class_info": {    "classname": "CLASS_NC",    "job_id": 33  },  "categories": ["3次職", "3-1次職"]}
+{  "class_id": 4059,  "names": {    "display": "ギロチンクロス",    "internal": "Job_Guillotine"  },  "class_info": {    "classname": "CLASS_GC",    "job_id": 34  },  "categories": ["3次職", "3-1次職"]}
+{  "class_id": 4066,  "names": {    "display": "ロイヤルガード",    "internal": "Job_RoyalGuard"  },  "class_info": {    "classname": "CLASS_LG",    "job_id": 35  },  "categories": ["3次職", "3-2次職"]}
+{  "class_id": 4067,  "names": {    "display": "ソーサラー",    "internal": "Job_Sorcerer"  },  "class_info": {    "classname": "CLASS_SO",    "job_id": 36  },  "categories": ["3次職", "3-2次職"]}
+{  "class_id": 4068,  "names": {    "display": "ミンストレル",    "internal": "Job_Minstrel"  },  "class_info": {    "classname": "CLASS_MI",    "job_id": 37  },  "categories": ["3次職", "3-2次職"]}
+{  "class_id": 4069,  "names": {    "display": "ワンダラー",    "internal": "Job_Wanderer"  },  "class_info": {    "classname": "CLASS_WA",    "job_id": 38  },  "categories": ["3次職", "3-2次職"]}
+{  "class_id": 4070,  "names": {    "display": "修羅",    "internal": "Job_Shura"  },  "class_info": {    "classname": "CLASS_SR",    "job_id": 39  },  "categories": ["3次職", "3-2次職"]}
+{  "class_id": 4071,  "names": {    "display": "ジェネティック",    "internal": "Job_Genetic"  },  "class_info": {    "classname": "CLASS_GN",    "job_id": 40  },  "categories": ["3次職", "3-2次職"]}
+{  "class_id": 4072,  "names": {    "display": "シャドウチェイサー",    "internal": "Job_ShadowChaser"  },  "class_info": {    "classname": "CLASS_SC",    "job_id": 41  },  "categories": ["3次職", "3-2次職"]}
+{  "class_id": 4190,  "names": {    "display": "スーパーノービス（限界突破）",    "internal": "Job_ExpandedSuperNovice"  },  "class_info": {    "classname": "CLASS_ESNV",    "job_id": 42  },  "categories": ["上位特殊1次職", "拡張上位特殊1次職"]}
+{  "class_id": 4211,  "names": {    "display": "影狼",    "internal": "Job_Kagerou"  },  "class_info": {    "classname": "CLASS_KG",    "job_id": 43  },  "categories": ["上位特殊1次職", "拡張上位特殊1次職"]}
+{  "class_id": 4212,  "names": {    "display": "朧",    "internal": "Job_Oboro"  },  "class_info": {    "classname": "CLASS_OB",    "job_id": 44  },  "categories": ["上位特殊1次職", "拡張上位特殊1次職"]}
+{  "class_id": 4215,  "names": {    "display": "リベリオン",    "internal": "Job_Rebellion"  },  "class_info": {    "classname": "CLASS_RL",    "job_id": 45  },  "categories": ["上位特殊1次職", "拡張上位特殊1次職"]}
+{  "class_id": 4218,  "names": {    "display": "サモナー",    "internal": "Job_Summoner"  },  "class_info": {    "classname": "CLASS_SUM",    "job_id": 46  },  "categories": ["ドラム形", "1次職ドラム形"]}
+{  "class_id": 4239,  "names": {    "display": "星帝",    "internal": "Job_StarEmperor"  },  "class_info": {    "classname": "CLASS_SJ",    "job_id": 47  },  "categories": ["上位特殊1次職", "拡張上位特殊1次職"]}
+{  "class_id": 4240,  "names": {    "display": "ソウルリーパー",    "internal": "Job_SoulReaper"  },  "class_info": {    "classname": "CLASS_SP",    "job_id": 48  },  "categories": ["上位特殊1次職", "拡張上位特殊1次職"]}
+{  "class_id": 4252,  "names": {    "display": "ドラゴンナイト",    "internal": "Job_DragonKnight"  },  "class_info": {    "classname": "CLASS_DK",    "job_id": 49  },  "categories": ["4次職", "4-1次職"]}
+{  "class_id": 4253,  "names": {    "display": "マイスター",    "internal": "Job_Meister"  },  "class_info": {    "classname": "CLASS_MT",    "job_id": 50  },  "categories": ["4次職", "4-1次職"]}
+{  "class_id": 4254,  "names": {    "display": "シャドウクロス",    "internal": "Job_ShadowCross"  },  "class_info": {    "classname": "CLASS_SHC",    "job_id": 51  },  "categories": ["4次職", "4-1次職"]}
+{  "class_id": 4255,  "names": {    "display": "アークメイジ",    "internal": "Job_ArchMage"  },  "class_info": {    "classname": "CLASS_AG",    "job_id": 52  },  "categories": ["4次職", "4-1次職"]}
+{  "class_id": 4256,  "names": {    "display": "カーディナル",    "internal": "Job_Cardinal"  },  "class_info": {    "classname": "CLASS_CD",    "job_id": 53  },  "categories": ["4次職", "4-1次職"]}
+{  "class_id": 4257,  "names": {    "display": "ウインドホーク",    "internal": "Job_Windhawk"  },  "class_info": {    "classname": "CLASS_WH",    "job_id": 54  },  "categories": ["4次職", "4-1次職"]}
+{  "class_id": 4258,  "names": {    "display": "インペリアルガード",    "internal": "Job_ImperialGuard"  },  "class_info": {    "classname": "CLASS_IG",    "job_id": 55  },  "categories": ["4次職", "4-2次職"]}
+{  "class_id": 4259,  "names": {    "display": "バイオロ",    "internal": "Job_Biolo"  },  "class_info": {    "classname": "CLASS_BO",    "job_id": 56  },  "categories": ["4次職", "4-2次職"]}
+{  "class_id": 4260,  "names": {    "display": "アビスチェイサー",    "internal": "Job_AbyssChaser"  },  "class_info": {    "classname": "CLASS_ABC",    "job_id": 57  },  "categories": ["4次職", "4-2次職"]}
+{  "class_id": 4261,  "names": {    "display": "エレメンタルマスター",    "internal": "Job_ElementalMaster"  },  "class_info": {    "classname": "CLASS_EM",    "job_id": 58  },  "categories": ["4次職", "4-2次職"]}
+{  "class_id": 4262,  "names": {    "display": "インクジター",    "internal": "Job_Inquisitor"  },  "class_info": {    "classname": "CLASS_IQ",    "job_id": 59  },  "categories": ["4次職", "4-2次職"]}
+{  "class_id": 4263,  "names": {    "display": "トルバドゥール",    "internal": "Job_Troubadour"  },  "class_info": {    "classname": "CLASS_TRB",    "job_id": 60  },  "categories": ["4次職", "4-2次職"]}
+{  "class_id": 4264,  "names": {    "display": "トルヴェール",    "internal": "Job_Trouvere"  },  "class_info": {    "classname": "CLASS_TRV",    "job_id": 61  },  "categories": ["4次職", "4-2次職"]}
+{  "class_id": 4302,  "names": {    "display": "天帝",    "internal": "Job_SkyEmperor"  },  "class_info": {    "classname": "CLASS_SKE",    "job_id": 62  },  "categories": ["拡張4次職", "拡張上位特殊2次職"]}
+{  "class_id": 4303,  "names": {    "display": "ソウルアセティック",    "internal": "Job_SoulAscetic"  },  "class_info": {    "classname": "CLASS_SOA",    "job_id": 63  },  "categories": ["拡張4次職", "拡張上位特殊2次職"]}
+{  "class_id": 4304,  "names": {    "display": "蜃気楼",    "internal": "Job_Shinkiro"  },  "class_info": {    "classname": "CLASS_SK",    "job_id": 64  },  "categories": ["拡張4次職", "拡張上位特殊2次職"]}
+{  "class_id": 4305,  "names": {    "display": "不知火",    "internal": "Job_Shiranui"  },  "class_info": {    "classname": "CLASS_SN",    "job_id": 65  },  "categories": ["拡張4次職", "拡張上位特殊2次職"]}
+{  "class_id": 4306,  "names": {    "display": "ナイトウォッチ",    "internal": "Job_NightWatch"  },  "class_info": {    "classname": "CLASS_NW",    "job_id": 66  },  "categories": ["拡張4次職", "拡張上位特殊2次職"]}
+{  "class_id": 4307,  "names": {    "display": "ハイパーノービス",    "internal": "Job_HyperNovice"  },  "class_info": {    "classname": "CLASS_HN",    "job_id": 67  },  "categories": ["拡張4次職", "拡張上位特殊2次職"]}
+{  "class_id": 4308,  "names": {    "display": "スピリットハンドラー",    "internal": "Job_SpiritHandler"  },  "class_info": {    "classname": "CLASS_SH",    "job_id": 68  },  "categories": ["拡張4次職", "2次職ドラム形"]}

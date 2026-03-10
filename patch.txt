@@ -1,3 +1,27 @@
+﻿2026/03/10	patch260310
+** 2026/03/10 [260310 Chapter1：世界樹の詩 ～序曲～] アイテムの定義・基礎効果実装
+	item_db.txt item_db2.txt item_cardtype.txt classnum_db.txt dropeffecttable.txt
+
+* メモ：クリティカルにならなかった 物理攻撃/物理攻撃スキルのダメージ増加効果 [命中物理攻撃で与えるダメージ + x%] 260310 追加
+
+* イズルードマップ仕様変更対応 不要なコメント削除 (セーブポイントとワープポイントを 128,99 に変更)
+* npc_job_00novice.sc npc_job_05merchant.sc npc_job_10blacksmith.sc npc_job_thirdclass.sc npc_job_transmigration.sc
+* まだたくさんあります
+*
+* AIでいくつか効果修正(item_db.txt)
+
+* [アンリミット]状態 [リフレッシュ]状態 定義名で動かないので番号に変更
+
+* 25/11/25 分まで、AIで実装(item_db.txt)
+
+* コメントを [AI実装] という文言に変更
+
+* AI学習用 職業定義値リスト実装(classname.json)
+
+* AI学習用 アイテムリスト更新(item_list.json)
+
+* 使わなくなった学習データを削除
+
 2025/03/06
 * AIを使って難解だった 22174#スカラバハイヒール# を修正
 * 実装スクリプトから日本語に戻す逆方向のデバッグを実施(AIが得意とする分野です)
