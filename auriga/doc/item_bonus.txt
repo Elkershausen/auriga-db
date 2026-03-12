@@ -76,7 +76,6 @@
 1-1 セット効果を使いたい
 * equippeditem(アイテムID)関数
 * 装備しているアイテム数を返す
-* アイテムIDを省略したら 真/偽 の処理になる
 
 ** [英雄の凱歌]と共に装備時、追加で **
 if(equippeditem(311074)) {}
@@ -121,7 +120,7 @@ if(equippeditem(311074)) {}
 * bonus bAspdAddRate,10*getequiprefinerycnt();
 
 1-3 矢のセット効果
-* getequipid(アイテムID)関数
+* getequipid(部位番号)関数
 * 指定した部位に装備しているアイテムのIDを返す
 * 主に 矢/弾丸/投擲 の装備条件に使う
 
@@ -1763,7 +1762,7 @@ bonus4 bAutoSpell,"LK_CONCENTRATION",1,300,EAS_ATTACK|EAS_SHORT|EAS_SELF|EAS_NOS
  item_db.txt内では 同じアイテム同時複数装備の場合、個別発動 個別効果 個別カウント対象 になります
  例) 暴走した魔力が2枚あれば、発動率は同じで効果が Int + 400 となる
 
-// 効果時間の上書きについて //
+<< 効果時間の上書きについて >>
 
 ** 効果時間の間に再度効果発動の条件を満たしても、活性化状態がリセットされない記述例 **
  bonus4 bAutoActiveSkill,"WM_SEVERE_RAINSTORM",450483,100,20000; if(checkactiveitem()) { misceffect 220,""; sc_start 631,20000,5; } }
