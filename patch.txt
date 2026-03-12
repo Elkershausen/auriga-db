@@ -1,4 +1,9 @@
-﻿2026/03/10	patch260310
+﻿2026/03/12	patch260312
+* 実務的な仕様書・設計書となる item_bonus.txt 実装(doc\item_bonus.txt)
+* classname.json item_list.json skill_list.json stat_list.json と一体化して使うことで、生成AIで効果実装できるようになります
+* 生成AIで実装スクリプトから日本語翻訳可能となります
+
+2026/03/10	patch260310
 ** 2026/03/10 [260310 Chapter1：世界樹の詩 ～序曲～] アイテムの定義・基礎効果実装
 	item_db.txt item_db2.txt item_cardtype.txt classnum_db.txt dropeffecttable.txt
 
