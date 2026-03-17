@@ -1,4 +1,18 @@
-﻿2026/03/12	patch260312
+﻿2026/03/18	patch260318
+* 2026/03/17 までのアイテム実装(item_db.txt item_db2.txt item_cardtype.txt item_list.json)
+* AIの実装は9割程度で実装速度は20-50倍です
+
+* 10-20個程度の少数ランダム箱系アイテムをAIを使ったスクリプトで実装を開始
+
+* item_bonus.txt 最適化実施(しばらく改定が続きます)
+
+* エンチャントアイテムから "装備部位" 指定を削除(item_db.txt)
+
+ * 種族の古い記述 [Rct_human] 書き換え(順次進めます)
+
+* callfunc に[全てのサイズのモンスターに与える物理攻撃ダメージ][全てのサイズのモンスターに与える魔法攻撃ダメージ] 追加(function_itemdb.sc)
+
+2026/03/12	patch260312
 * 実務的な仕様書・設計書となる item_bonus.txt 実装(doc\item_bonus.txt)
 * classname.json item_list.json skill_list.json stat_list.json と一体化して使うことで、生成AIで効果実装できるようになります
 * 生成AIで実装スクリプトから日本語翻訳可能となります

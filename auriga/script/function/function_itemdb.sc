@@ -1,5 +1,12 @@
 //2025/05/07 更新
 
+function	script	Ctm	{
+	set '@tmp,rand(0,4);
+	getitem '@cos['@tmp],1;
+	return;
+}
+
+//============================================================
 // 巨大なハエの羽
 function	script	ItemdbPartyCall	{
 	warp "Random",0,0;
@@ -140,9 +147,9 @@ function	script	IgnoreMDefRct_All	{
 
 //============================================================
 //[全ての種族]のモンスターのDEF 防御力 '@val%無視 プレイヤーとドラム形除く
-//{ callfunc "bonus2bIgnoreDefRace",'@val; }
+//{ callfunc "bonus2bIgnoreDefRace_All",'@val; }
 
-function	script	bonus2bIgnoreDefRace	{
+function	script	bonus2bIgnoreDefRace_All	{
 	set '@val,getarg(0);
 		bonus2 bIgnoreDefRace,Rct_Formless,'@val;
 		bonus2 bIgnoreDefRace,Rct_Undead,'@val;
@@ -160,9 +167,9 @@ function	script	bonus2bIgnoreDefRace	{
 
 //============================================================
 //[全ての種族]のモンスターのMDEF 魔法防御力'@val%無視 プレイヤーとドラム形除く
-//{ callfunc "bonus2bIgnoreMdefRace",'@val; }
+//{ callfunc "bonus2bIgnoreMdefRace_All",'@val; }
 
-function	script	bonus2bIgnoreMdefRace	{
+function	script	bonus2bIgnoreMdefRace_All	{
 	set '@val,getarg(0);
 		bonus2 bIgnoreMdefRace,Rct_Formless,'@val;
 		bonus2 bIgnoreMdefRace,Rct_Undead,'@val;
@@ -179,9 +186,9 @@ function	script	bonus2bIgnoreMdefRace	{
 
 //============================================================
 //[すべての種族]のモンスターから受ける物理ダメージ '@val%減 プレイヤー形とドラム形除く
-//{ callfunc "bonus2bSubRace",'@val; }
+//{ callfunc "bonus2bSubRace_All",'@val; }
 
-function	script	bonus2bSubRace	{
+function	script	bonus2bSubRace_All	{
 	set '@val,getarg(0);
 		bonus2 bSubRace,Rct_Formless,'@val;
 		bonus2 bSubRace,Rct_Undead,'@val;
@@ -198,9 +205,9 @@ function	script	bonus2bSubRace	{
 
 //============================================================
 //[すべての種族]のモンスターから受ける魔法ダメージ '@val%減 プレイヤー形とドラム形除く
-//{ callfunc "bonus2bMagicSubRace",'@val; }
+//{ callfunc "bonus2bMagicSubRace_All",'@val; }
 
-function	script	bonus2bMagicSubRace	{
+function	script	bonus2bMagicSubRace_All	{
 	set '@val,getarg(0);
 		bonus2 bMagicSubRace,Rct_Formless,'@val;
 		bonus2 bMagicSubRace,Rct_Undead,'@val;
@@ -212,38 +219,6 @@ function	script	bonus2bMagicSubRace	{
 		bonus2 bMagicSubRace,Rct_Angel,'@val;
 		bonus2 bMagicSubRace,Rct_Dragon,'@val;
 		bonus2 bMagicSubRace,Rct_DemiHuman,'@val;
-	return;
-}
-
-//============================================================
-//一部のダメージを反射する効果で受けるダメージ 精錬値*-10%
-//精錬値は記述されている装備品を参照するので参照が自身のアイテム以外は記述を抜き出して装備ボーナスに書いて下さい
-//主にロイヤル系武器
-//{ callfunc "redamage"; }
-
-function	script	redamage	{
-	bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt();
-	bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt();
-	bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt();
-	bonus2 bSubSkillDamageRate,"SL_KAITE",10*getequiprefinerycnt();
-	bonus2 bSubSkillDamageRate,"SR_CRESCENTELBOW",10*getequiprefinerycnt();
-	bonus2 bSubSkillDamageRate,"ST_REJECTSWORD",10*getequiprefinerycnt();
-	return;
-}
-
-//============================================================
-//一部のダメージを反射する効果で受けるダメージ
-//rate 指定する 
-//ロイヤル系武器 以外
-//{ callfunc "refskllsubdamagerate",'@rate; }
-
-function	script	refskllsubdamagerate	{
-	bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",'@rate;
-	bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",'@rate;
-	bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",'@rate;
-	bonus2 bSubSkillDamageRate,"SL_KAITE",'@rate;
-	bonus2 bSubSkillDamageRate,"SR_CRESCENTELBOW",'@rate;
-	bonus2 bSubSkillDamageRate,"ST_REJECTSWORD",'@rate;
 	return;
 }
 
@@ -335,11 +310,7 @@ if(equippeditem(312417)) {
 	bonus2 bAddRace,Rct_NonBoss,5*getequiprefinerycnt();
 	bonus2 bMagicAddRace,Rct_Boss,5*getequiprefinerycnt();
 	bonus2 bMagicAddRace,Rct_NonBoss,5*getequiprefinerycnt();
-	bonus2 bSubSkillDamageRate,"CR_REFLECTSHIELD",10*getequiprefinerycnt();
-	bonus2 bSubSkillDamageRate,"LG_REFLECTDAMAGE",10*getequiprefinerycnt();
-	bonus2 bSubSkillDamageRate,"NPC_MAGICMIRROR",10*getequiprefinerycnt();
-	bonus2 bSubSkillDamageRate,"SL_KAITE",10*getequiprefinerycnt();
-	bonus2 bSubSkillDamageRate,"SR_CRESCENTELBOW",10*getequiprefinerycnt();
+	bonus bSubReturnDamage,10*getequiprefinerycnt();
 	}
 	return;
 }
@@ -965,3 +936,32 @@ if((getequipid(11) >= 13200) || (getequipid(11) <= 13132)) {
 }
 
 //13130#迅雷銃# 13133#無双銃# 13139#一碧銃# 13143#猟乱銃#のセット効果の属性付与を有効にする場合 ここまで
+
+function	script	bAtkEle	{
+	sc_starte SC_FireWeapon,10800000,1;
+end;
+}
+
+//============================================================
+//[全てのサイズ]のモンスターに与える物理攻撃ダメージ + '@val%
+//{ callfunc "bAddSize_All",'@val; }
+
+function	script	bAddSize_All	{
+	set '@val,getarg(0);
+	bonus2 bAddSize,Size_Small,'@val;
+	bonus2 bAddSize,Size_Medium,'@val;
+	bonus2 bAddSize,Size_Big,'@val;
+	return;
+}
+
+//============================================================
+//[全てのサイズ]のモンスターに与える魔法攻撃ダメージ + '@val%
+//{ callfunc "bMagicAddSize_All,",'@val; }
+
+function	script	bMagicAddSize_All	{
+	set '@val,getarg(0);
+	bonus2 bMagicAddSize,Size_Small,'@val;
+	bonus2 bMagicAddSize,Size_Medium,'@val;
+	bonus2 bMagicAddSize,Size_Big,'@val;
+	return;
+}
