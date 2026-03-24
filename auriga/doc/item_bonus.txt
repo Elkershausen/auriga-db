@@ -126,6 +126,15 @@ if(equippeditem(311074)) {}
 ** 精錬値が1上がる度に追加で攻撃速度 + 10% **
 * bonus bAspdAddRate,10*getequiprefinerycnt();
 
+* 短縮記述の活用(絶対ではないが見やすくなりデータ削減が可能)
+* set '@r,getequiprefinerycnt();	部位指定を省略する場合に使える
+
+** 精錬値が7以上の時、追加で **
+* if('@r >= 7) {}
+
+** 精錬値が1上がる度に追加で攻撃速度 + 10% **
+* bonus bAspdAddRate,10*'@r;
+
 1-3 矢のセット効果
 * getequipid(部位番号)関数
 * 指定した部位に装備しているアイテムのIDを返す
@@ -181,6 +190,21 @@ if(getequipisequiped(9)) {}
 * bonus2 bSubRace,Rct_Player_Doram,3*BaseLevel/10;
 * bonus2 bMagicSubRace,Rct_Player_Human,3*BaseLevel/10;
 * bonus2 bMagicSubRace,Rct_Player_Doram,3*BaseLevel/10;
+
+** "BaseLvが90以上の時、","追加で" **
+* if(BaseLevel >= 90) {}
+
+* 短縮記述の活用(絶対ではないが見やすくなりデータ削減が可能)
+* set '@bl,BaseLevel;
+
+** "BaseLvが10上がる度に","追加でプレイヤーから受けるダメージ - 3%" **
+* bonus2 bSubRace,Rct_Player_Human,3*'@bl/10;
+* bonus2 bSubRace,Rct_Player_Doram,3*'@bl/10;
+* bonus2 bMagicSubRace,Rct_Player_Human,3*'@bl/10;
+* bonus2 bMagicSubRace,Rct_Player_Doram,3*'@bl/10;
+
+** "BaseLvが90以上の時、","追加で" **
+* if('@bl >= 90) {}
 -------------------------------------------------------------------------------------------------------------------------------------------
 2-2 ジョブレベルで条件を作りたい
 * JobLevel	ジョブレベル(JobLv)を返します
@@ -972,11 +996,11 @@ callfunc "bMagicAddRace_All",x;
 Rct_All は使いません(解釈の問題になる)
 
 << 記述例 >>
-** "ボスモンスターに","与えるダメージ - 10%", **
+** "ボスモンスターに","与えるダメージ + 10%", **
 bonus2 bAddRace,Rct_Boss,10;
 bonus2 bMagicAddRace,Rct_Boss,10;
 
-** "一般モンスターに","与えるダメージ - 10%", **
+** "一般モンスターに","与えるダメージ + 10%", **
 bonus2 bAddRace,Rct_NonBoss,10;
 bonus2 bMagicAddRace,Rct_NonBoss,10;
 
@@ -1061,8 +1085,8 @@ bonus2 bAddGroup,8,30;
 	bonus2 bIgnoreDefRace,n,x;		n種族 に対して x% の防御力無視ダメージ	(x% 加算)
 	bonus2 bIgnoreMDefRace,n,x;		n種族 に対して x% の魔法防御力無視ダメージ	(x% 加算)
 	bonus bDefRatioAtkRace,n;		n種族 に対して 相手の防御力が高いほど与えるダメージが増加(モンスターの設定Def値に影響)
-	callfunc "bonus2bIgnoreDefRace",n;	全ての種族の Defを n% 無視	(n% 加算)
-	callfunc "bonus2bIgnoreMdefRace",n;	全ての種族の Mdefを n% 無視	(n% 加算)
+	callfunc "bonus2bIgnoreDefRace_All",n;	全ての種族の Defを n% 無視	(n% 加算)
+	callfunc "bonus2bIgnoreMdefRace_All",n;	全ての種族の Mdefを n% 無視	(n% 加算)
 
 	<< 種族 >>
 	ボス・一般設定(第1分類)
@@ -1082,8 +1106,8 @@ bonus2 bAddGroup,8,30;
 
 << 記述例 >>
 ** "全ての種族のDef・Mdef 100%無視" **
-callfunc "bonus2bIgnoreDefRace",100;
-callfunc "bonus2bIgnoreMdefRace",100;
+callfunc "bonus2bIgnoreDefRace_All",100;
+callfunc "bonus2bIgnoreMdefRace_All",100;
 
 ** "ボスモンスターのDefを無視" ** 
 bonus2 bIgnoreDefRace,Rct_Boss,100;
