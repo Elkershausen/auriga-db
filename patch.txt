@@ -1,4 +1,14 @@
-﻿2026/03/24	patch260324
+﻿2026/03/31	patch260331
+* メロン系武器のエンチャントNPC / 移動NPC / マップフラグ 実装(script\update\sinpi\npc_ench_13_amainioi.sc npc_sinpi_setting.sc)
+
+* 2026/03/31 新規アイテム実装(item-db item_db2 item_list.json)
+
+* miscファイル更新(classnum_db dropeffecttable)
+
+* 衣装装備の不具合報告を募集します https://github.com/Elkershausen/auriga-db/discussions/5
+* 参加したい方はgitのアカウントを取得し、説明をよく読んでから投稿して下さい
+
+2026/03/24	patch260324
 * アイテムの修正(item_db.txt)
 
 * アイテム検索アプリ 実装(search_item_list.py)
