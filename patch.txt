@@ -1,5 +1,11 @@
 ﻿2026/03/31	patch260331
-* メロン系武器のエンチャントNPC / 移動NPC / マップフラグ 実装(script\update\sinpi\npc_ench_13_amainioi.sc npc_sinpi_setting.sc)
+* メロン系武器のエンチャントNPC / 移動NPC / マップフラグ AIで実装(script\update\sinpi\npc_ench_13_amainioi.sc npc_sinpi_setting.sc)
+
+* サンプルとなる汎用エンチャントNPCをAIで実装(npc_ench_sample0001 npc_ench_sample0002)
+* 部位が同じならIDを入れ替えるだけ大抵のものが実装可能です(サンプルは兜中段)
+* リストは自動で伸びるので case を増やす必要ありません
+* メロン系武器NPCはサンプルをベースにAIで拡張実装したので、AIに読み込ませればどのようなエンチャントNPCでも拡張可能です
+* 使い方がわからなければ chatgpt や gemini に聞いて下さい
 
 * 2026/03/31 新規アイテム実装(item-db item_db2 item_list.json)
 
