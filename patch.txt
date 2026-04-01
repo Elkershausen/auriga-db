@@ -1,4 +1,7 @@
-﻿2026/03/31	patch260331
+﻿2026/04/02
+* 衣装装備デバッグ用NPC 更新(script\update\backyard\npc_test_costume.sc / costume)
+
+2026/03/31	patch260331
 * メロン系武器のエンチャントNPC / 移動NPC / マップフラグ AIで実装(script\update\sinpi\npc_ench_13_amainioi.sc npc_sinpi_setting.sc)
 
 * サンプルとなる汎用エンチャントNPCをAIで実装(npc_ench_sample0001 npc_ench_sample0002)
