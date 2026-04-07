@@ -1,4 +1,6 @@
-prontera.gat,155,105,4	script	鍛冶師レイブン	731,{
+// 2026/04/07 アップデート
+
+iz_gimlet.gat,13,73,4	script	鍛冶師レイブン	731,{
 
 	set '@npcname$, "[" + strnpcinfo(1) + "]";
 	set '@cost_id, 6952;
