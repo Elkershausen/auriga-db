@@ -1,8 +1,7 @@
-// 2026/03/31 アップデート
+// 2026/04/07 アップデート
 // [神秘の館] 移動NPC マップフラグ設定
-// 実装情報
-// 追加必要 map: ev_season01.gat
-// NPC [13 甘い匂いのする男] 実装
+// map: ev_season01.gat
+// NPC [01 五欲の壺][02 老練の忍][04 クラピウス][07 王宮交換員][09 アッディーン][13 甘い匂いのする男] 実装
 
 // プロンテラ -> 神秘の館
 prontera.gat,86,63,5	script	神秘の館の案内人	711,{
@@ -26,3 +25,5 @@ ev_season01.gat	mapflag	nobranch	dummy
 ev_season01.gat	mapflag	monster_noteleport	dummy
 ev_season01.gat	mapflag	noicewall	dummy
 ev_season01.gat	mapflag	noabra		dummy
+
+//prontera.gat,155,105,4	script	甘い匂いがする男	100,{}

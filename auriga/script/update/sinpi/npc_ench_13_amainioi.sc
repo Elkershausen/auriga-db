@@ -1,11 +1,9 @@
-// 2026/03/31 メロン武器エンチャントNPC (AI実装)
-// 3段階条件別エンチャント / 精錬値による選択肢変化 / 他要素維持 / 精錬値リセット 仕様通り実装
+// 2026/04/07 メロン武器エンチャントNPC (AI実装)
+// 仕様通り実装
 // ev_season01.gat 必要
-// 関連アイテム効果実装済み
-// 未実装要素：NPCのIDは仮設定 / メッセージ未調査
+// 未実装要素：メッセージ未調査
 
-ev_season01.gat,19,109,4	script	甘い匂いがする男	100,{
-//prontera.gat,155,105,4	script	甘い匂いがする男	100,{
+ev_season01.gat,19,108,4	script	甘い匂いがする男	795,{
 
 set '@npcname$, "[" + strnpcinfo(1) + "]";
 
@@ -55,7 +53,7 @@ L_Group1:
 	mes "精錬値に応じて最大4段階の付与が可能です。";
 	next;
 
-	set '@i, 4; // 鎧
+	set '@i, 4; // 右手武器 pos = 4
 	if (getequipisequiped('@i) == 0) { mes '@npcname$; mes "鎧を装備していません。"; close; }
 	set '@itemid, getequipid('@i);
 	
@@ -154,7 +152,7 @@ L_Group2:
 
 	// --- 2. 装備・条件チェック ---
 	set '@i, 4; // 鎧
-	if (getequipisequiped('@i) == 0) { mes '@npcname$; mes "鎧を装備していません。"; close; }
+	if (getequipisequiped('@i) == 0) { mes '@npcname$; mes "メロン武器を装備していません。"; close; }
 	set '@itemid, getequipid('@i);
 	
 	// 対象判定
@@ -171,7 +169,7 @@ L_Group2:
 	// --- 3. コスト判定ロジック ---
 	if ('@current_refine == 9) {
 		// 精錬値9の場合：パターンA
-		set '@cost_num, 10000;
+		set '@cost_num, 1000;
 	} else if ('@current_refine >= 10) {
 		// 精錬値10以上の場合：パターンB
 		set '@cost_num, 1;
