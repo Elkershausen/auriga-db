@@ -1,4 +1,15 @@
-﻿2026/04/07 patch260407
+﻿2026/04/14	patch260414
+* npc_quest_slotenchant.sc 更新
+
+* ロックリッジエンチャント 実装(update\npc_rockridge_draw.sc)
+
+* 微力の究極精錬[スズメ] 実装(update\cash\npc_cash_ref.sc)
+* 確定精錬チケット[サンバ] 実装(update\cash\npc_cash_ref.sc)
+* 改良濃縮精錬[アビダブ] 実装(update\cash\npc_cash_ref.sc)
+
+* item_db.txt 修正(item_db.txt)
+
+2026/04/07 patch260407
 * 神秘の館 五欲の壺NPC 実装(update\sinpi\npc_ench_01_goyoku.sc)
 * 神秘の館 老練の忍NPC 実装(update\sinpi\npc_ench_02_shinobi.sc)
 * 神秘の館 クラピウスNPC 実装(update\sinpi\npc_ench_04_kurapius.sc)

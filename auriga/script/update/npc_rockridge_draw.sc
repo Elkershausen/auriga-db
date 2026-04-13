@@ -1,7 +1,8 @@
-// 2026/04/07 ロックリッジコイン抽選NPC (AI実装)
+// 2026/04/14 アップデート
+// ロックリッジコイン抽選NPC[ハワード] / ロックリッジエンチャントNPC[目覚めの息吹] 実装
 // 未実装要素：メッセージ未調査 / 最大試行回数制限 / インベントリ最大種類 / 出現率
 
-harboro1.gat,275,206,4	script	ハワード	899,{
+harboro1.gat,275,206,4	script	ハワード#31954	899,{
 
 	set '@npcname$, "[" + strnpcinfo(1) + "]";
 
@@ -113,5 +114,170 @@ L_Exchange_Main:
 	misceffect 12; // 修正: specialeffect2 -> misceffect
 	mes '@npcname$;
 	mes "合計 " + '@success_ct + " 回の抽選が完了しました。";
+	close;
+}
+
+harboro1.gat,275,199,4	script	目覚めの息吹#31989	10217,{
+
+	set '@admin, 0; // 管理用モード (0オフ / 1オン)
+
+	set '@npcname$, "[" + strnpcinfo(1) + "]";
+	set '@cost_id, 25250;
+	set '@cost_num, 5;
+
+	mes '@npcname$;
+	mes "よく来た異邦人。";
+	mes "私の力が必要か？";
+	next;
+
+	switch(select("エンチャントする:説明をする:対象アイテムを聞く:やっぱりやめる")) {
+		case 1: break;
+		case 2:
+			mes '@npcname$;
+			mes "" + getitemname('@cost_id) + " を " + '@cost_num + "個使い";
+			mes "対象のスロットを1つ選びます。";
+			mes "エンチャントはランダムで決定されます。";
+			mes "100％成功し、精錬値も維持されます。";
+			close;
+		case 3:
+			mes '@npcname$;
+			mes "対象アイテムは";
+			mes "ロックリッジコインで交換した";
+			mes "装備品になります。";
+			close;
+		case 4:
+			mes '@npcname$;
+			mes "また来てくれ。";
+			close;
+	}
+
+	setarray '@target_ids[1], 18163, 28615, 28127, 13340, 26204, 1948, 28738, 20901, 20900, 20899, 15241, 15242, 15243, 15244, 15245, 28554, 28555;
+	setarray '@target_pos[1], 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 2, 2, 2, 2, 2, 7, 7;
+
+	set '@menu_str$, "";
+	set '@match_count, 0;
+	cleararray '@match_idx[0], 0, 128;
+
+	for(set '@i, 1; '@i <= 10; set '@i, '@i + 1) {
+		if (getequipisequiped('@i)) {
+			set '@temp_id, getequipid('@i);
+			for(set '@j, 1; '@j <= 17; set '@j, '@j + 1) {
+				if ('@temp_id == '@target_ids['@j]) {
+					set '@match_count, '@match_count + 1;
+					set '@match_idx['@match_count], '@i;
+					set '@menu_str$, '@menu_str$ + getequipname('@i) + ":";
+					break;
+				}
+			}
+		}
+	}
+
+	if ('@match_count == 0) { mes '@npcname$; mes "対象装備を身に着けていないようだ。"; close; }
+
+	mes '@npcname$;
+	mes "どれにエンチャントを施しますか？";
+	next;
+	set '@sel, select('@menu_str$);
+	set '@i, '@match_idx['@sel];
+	set '@current_id, getequipid('@i);
+
+	if (countitem('@cost_id) < '@cost_num) { mes '@npcname$; mes "材料が足りないようだ。"; close; }
+
+	// 部位グループの特定
+	for(set '@j, 1; '@j <= 17; set '@j, '@j + 1) {
+		if ('@current_id == '@target_ids['@j]) { set '@pos_grp, '@target_pos['@j]; break; }
+	}
+
+	// 抽選用乱数
+	set '@r, rand(100);
+
+	// --- 部位グループ別・スロット選択 switch ---
+	mes '@npcname$;
+	mes "強化するスロットを選択するがいい。";
+	next;
+
+	if ('@pos_grp == 4) { // 武器
+		switch(select("第4スロット:やめる")) {
+			case 1:
+				set '@slot, 3;
+				if ('@r < 1) { setarray '@en[0], 29368, 29368; }
+				else if ('@r < 10) { setarray '@en[0], 29367, 4810, 4817, 29136, 4814, 4833, 4872; }
+				else if ('@r < 50) { setarray '@en[0], 29366, 4811, 4818, 29135, 4815, 4832, 4869; }
+				else { setarray '@en[0], 4704, 4705, 4706, 4734, 4735, 4736, 4744, 4745, 4746, 4714, 4715, 4716, 4724, 4725, 4726, 4754, 4755, 4756; }
+				break;
+			case 2: mes '@npcname$; mes "中断します。"; close;
+		}
+	}
+	else if ('@pos_grp == 5) { // 鎧
+		switch(select("第4スロット:第3スロット:やめる")) {
+			case 1: // 第4
+				set '@slot, 3;
+				if ('@r < 1) { setarray '@en[0], 4811, 4818, 29135, 4815, 4832, 4869; }
+				else if ('@r < 10) { setarray '@en[0], 4702, 4732, 4742, 4712, 4722, 4752; }
+				else if ('@r < 50) { setarray '@en[0], 4701, 4731, 4741, 4711, 4721, 4751; }
+				else { setarray '@en[0], 4700, 4730, 4740, 4710, 4720, 4750; }
+				break;
+			case 2: // 第3
+				set '@slot, 2;
+				if ('@r < 25) { setarray '@en[0], 4811, 4818, 29135, 4815, 4832, 4869; }
+				else if ('@r < 50) { setarray '@en[0], 29214, 29215, 29216, 29217, 29218, 29219, 29220, 29221, 29222; }
+				else if ('@r < 75) { setarray '@en[0], 4811, 4818, 29135, 4815, 4832, 4869; }
+				else { setarray '@en[0], 29214, 29215, 29216, 29217, 29218, 29219, 29220, 29221, 29222; }
+				break;
+			case 3: mes '@npcname$; mes "中断します。"; close;
+		}
+	}
+	else if ('@pos_grp == 2) { // 肩
+		switch(select("第4スロット:第3スロット:やめる")) {
+			case 1: // 第4
+				set '@slot, 3;
+				if ('@r < 1) { setarray '@en[0], 4810, 4817, 29136, 4814, 4833; }
+				else if ('@r < 10) { setarray '@en[0], 4702, 4732, 4742, 4712, 4722, 4752; }
+				else if ('@r < 50) { setarray '@en[0], 4701, 4731, 4741, 4711, 4721, 4751; }
+				else { setarray '@en[0], 4700, 4730, 4740, 4710, 4720, 4750; }
+				break;
+			case 2: // 第3
+				set '@slot, 2;
+				if ('@r < 50) { setarray '@en[0], 4811, 4818, 29135, 4815, 4832, 4869; }
+				else { setarray '@en[0], 29214, 29215, 29216, 29217, 29218, 29219, 29220, 29221, 29222; }
+				break;
+			case 3: mes '@npcname$; mes "中断します。"; close;
+		}
+	}
+	else if ('@pos_grp == 7) { // アクセサリー
+		switch(select("第4スロット:第3スロット:やめる")) {
+			case 1: // 第4
+				set '@slot, 3;
+				if ('@r < 50) { setarray '@en[0], 4811, 4818, 29135, 4815, 4832, 4869, 4805; }
+				else { setarray '@en[0], 4811, 4818, 29135, 4815, 4832, 4869, 4805; }
+				break;
+			case 2: // 第3
+				set '@slot, 2;
+				if ('@r < 25) { setarray '@en[0], 4810, 4817, 29136, 4814, 4833, 4872, 4850; }
+				else { setarray '@en[0], 4811, 4818, 29135, 4815, 4832, 4869, 4805; }
+				break;
+			case 3: mes '@npcname$; mes "中断します。"; close;
+		}
+	}
+
+	// 抽選実行
+	set '@final_ench, '@en[rand(getarraysize('@en))];
+
+	// 最終確認
+	// 管理用モード
+	if('@admin == 1) {
+	mes '@npcname$;
+	mes "結果: ^FF0000" + getitemname('@final_ench) + "^000000";
+	mes "よろしいですか？";
+	next;
+	if (select("付与する:やめる") == 2) close;
+	}
+
+	delitem '@cost_id, '@cost_num;
+	setequipcardid '@i, '@slot, '@final_ench, 0x1;
+
+	misceffect 102;
+	mes '@npcname$;
+	mes "エンチャントが完了しました。";
 	close;
 }
