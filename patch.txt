@@ -1,4 +1,25 @@
-﻿2026/04/14	patch260414
+﻿2026/04/21	patch260421
+* スロットエンチャントNPC [エヴォルツィオーネ] [トンノ] 実装(npc\questnpc_quest_slotenchant.sc)
+* スロットエンチャントNPC  2014/07/22 成功率アップデート適用(npc\questnpc_quest_slotenchant.sc)
+
+* 精錬NPCを大幅刷新(script\npc\misc\npc_misc_refine.sc)
+* 進行プロセスを現行仕様に変更
+* 成功率データの refine_db.txt 参照をやめ、NPC内に取り込み拡張性を確保
+* 成功率の分母を0.001% 6桁まで刻めるように変更
+* シャドウ装備対応
+* 安全圏一気に精錬 実装
+* 精錬NPC [ホルグレン] 呼び出しをやめて独立(script\npc\misc\npc_misc_refine.sc)
+* 精錬NPC [ホルグレン] 専用カットイン追加(script\npc\misc\npc_misc_refine.sc)
+* 濃縮精錬NPC [フランツ] シャドウ装備対応(script\npc\misc\npc_misc_refine.sc)
+* 精錬NPC [鍛冶職人] シャドウ装備対応 / 設置マップ追加(script\npc\misc\npc_misc_refine.sc)
+
+* NPC [修理工] 再配置(script\npc\misc\npc_misc_refine.sc)
+
+* 究極精錬[アビダブ] 微力の究極精錬[スズメ] 確定精錬チケット[サンバ] 改良濃縮精錬[アビダブ] 少し修正(update\cash\npc_cash_ref.sc)
+
+* 課金系精錬NPCの成功率を 加算・乗算 選べるように追記(update\cash\npc_cash_ref.sc script\npc\misc\npc_misc_refine.sc)
+
+2026/04/14	patch260414
 * npc_quest_slotenchant.sc 更新
 
 * ロックリッジエンチャント 実装(update\npc_rockridge_draw.sc)

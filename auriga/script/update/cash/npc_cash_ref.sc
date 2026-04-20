@@ -1,5 +1,6 @@
-// 2026/04/14 アップデート
+// 2026/04/21 アップデート
 // 究極精錬[鍛冶師レイブン] / 微力の究極精錬[スズメ] / 確定精錬チケット[サンバ] / 改良濃縮精錬[アビダブ] 実装
+// 成功テーブルに [加算される場合] [乗算される場合] を記述し、選べるように追記(標準は乗算)
 
 // 究極精錬
 iz_gimlet.gat,13,73,5	script	鍛冶師レイブン#35018	731,{
@@ -31,7 +32,7 @@ iz_gimlet.gat,13,73,5	script	鍛冶師レイブン#35018	731,{
 	mes "……何の様だ？";
 	next;
 	switch(select("精錬を依頼する:話を聞きたい:立ち去る")) {
-		case 1: goto L_Check_Equip;
+		case 1: break;
 		case 2:
 			mes '@npcname$;
 			mes "装備は壊れたり";
@@ -51,7 +52,6 @@ iz_gimlet.gat,13,73,5	script	鍛冶師レイブン#35018	731,{
 			close;
 	}
 
-L_Check_Equip:
 	set '@menu_str$, "";
 	set '@match_count, 0;
 	cleararray '@match_idx[0], 0, 128;
@@ -86,7 +86,6 @@ L_Check_Equip:
 	set '@sel, select('@menu_str$);
 	set '@i, '@match_idx['@sel];
 
-L_Refine_Start:
 	if(getequipisenableref('@i) == 0) {
 		mes '@npcname$;
 		mes "その装備は精錬できない。";
@@ -108,11 +107,19 @@ L_Refine_Start:
 
 	// 成功テーブルの定義 (1/100000)
 	switch('@wlv) {
+		// 成功率が倍率で増える場合(防具の+4 -> +5 の場合 60% * 130% = 78%)
 		case 0: setarray '@rate, 100000, 100000, 100000, 100000,  78000,  50000,  48000,  23000,  22000,  10000; break;
 		case 1: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000, 100000,  69000,  44000,  20000; break;
 		case 2: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000,  72000,  46000,  22000,  20000; break;
 		case 3: setarray '@rate, 100000, 100000, 100000, 100000, 100000,  75000,  60000,  23000,  22000,  20000; break;
 		case 4: setarray '@rate, 100000, 100000, 100000, 100000,  78000,  50000,  48000,  23000,  22000,  10000; break;
+
+		// 成功率が上乗せされる場合(防具の+4 -> +5 の場合 60% + 30% = 90%)
+		//case 0: setarray '@rate, 100000, 100000, 100000, 100000,  90000,  60000,  60000,  30000,  30000,  10000; break;
+		//case 1: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000, 100000,  90000,  60000,  20000; break;
+		//case 2: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000, 100000,  60000,  30000,  20000; break;
+		//case 3: setarray '@rate, 100000, 100000, 100000, 100000, 100000,  90000,  90000,  30000,  30000,  20000; break;
+		//case 4: setarray '@rate, 100000, 100000, 100000, 100000,  90000,  60000,  60000,  30000,  30000,  10000; break;
 	}
 		mes '@npcname$;
 		mes "お前が選んだ装備を";
@@ -223,7 +230,7 @@ iz_gimlet.gat,13,77,5	script	スズメ#35017	757,{
 	next;
 
 	switch(select("精錬サービス:話を聞く:立ち去る")) {
-		case 1: goto L_Check_Equip;
+		case 1: break;
 		case 2:
 			mes '@npcname$;
 			mes "スズメは精錬値6以下のアイテムを";
@@ -268,7 +275,6 @@ iz_gimlet.gat,13,77,5	script	スズメ#35017	757,{
 			close;
 	}
 
-L_Check_Equip:
 	set '@menu_str$, "";
 	set '@match_count, 0;
 	cleararray '@match_idx[0], 0, 128;
@@ -297,7 +303,6 @@ L_Check_Equip:
 	set '@sel, select('@menu_str$);
 	set '@i, '@match_idx['@sel];
 
-L_Refine_Start:
 	if(getequipisenableref('@i) == 0) {
 		mes '@npcname$;
 		mes "その装備は精錬できないよ。";
@@ -319,11 +324,19 @@ L_Refine_Start:
 
 	// 成功テーブル
 	switch('@wlv) {
+		// 成功率が倍率で増える場合(防具の+4 -> +5 の場合 60% * 130% = 78%)
 		case 0: setarray '@rate, 100000, 100000, 100000, 100000,  78000,  50000,  48000,  23000,  22000,  10000; break;
 		case 1: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000, 100000,  69000,  44000,  20000; break;
 		case 2: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000,  72000,  46000,  22000,  20000; break;
 		case 3: setarray '@rate, 100000, 100000, 100000, 100000, 100000,  75000,  60000,  23000,  22000,  20000; break;
 		case 4: setarray '@rate, 100000, 100000, 100000, 100000,  78000,  50000,  48000,  23000,  22000,  10000; break;
+
+		// 成功率が上乗せされる場合(防具の+4 -> +5 の場合 60% + 30% = 90%)
+		//case 0: setarray '@rate, 100000, 100000, 100000, 100000,  90000,  60000,  60000,  30000,  30000,  10000; break;
+		//case 1: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000, 100000,  90000,  60000,  20000; break;
+		//case 2: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000, 100000,  60000,  30000,  20000; break;
+		//case 3: setarray '@rate, 100000, 100000, 100000, 100000, 100000,  90000,  90000,  30000,  30000,  20000; break;
+		//case 4: setarray '@rate, 100000, 100000, 100000, 100000,  90000,  60000,  60000,  30000,  30000,  10000; break;
 	}
 
 	emotion 5;
@@ -392,7 +405,7 @@ morocc.gat,131,61,5	script	サンバ#35019	449,{
 	next;
 
 	switch(select("精錬サービス:話を聞く:立ち去る")) {
-		case 1: goto L_Check_Equip;
+		case 1: break;
 		case 2:
 			mes '@npcname$;
 			mes "特定のチケットを消費することで";
@@ -404,7 +417,6 @@ morocc.gat,131,61,5	script	サンバ#35019	449,{
 			close;
 	}
 
-L_Check_Equip:
 	set '@menu_str$, "";
 	set '@match_count, 0;
 	cleararray '@match_idx[0], 0, 128;
@@ -433,7 +445,6 @@ L_Check_Equip:
 	set '@sel, select('@menu_str$);
 	set '@i, '@match_idx['@sel];
 
-L_Refine_Start:
 	if(getequipisenableref('@i) == 0) {
 		mes '@npcname$;
 		mes "その装備は精錬できません。";
@@ -547,7 +558,7 @@ morocc.gat,155,78,5	script	アビダブ#26673	99,{
 	mes "と、手数料が必要だぞ。";
 	next;
 	switch(select("精錬を依頼する:立ち去る")) {
-		case 1: break;;
+		case 1: break;
 		case 2:
 			mes '@npcname$;
 			mes "やめるなら仕方がないな。";
@@ -589,7 +600,6 @@ morocc.gat,155,78,5	script	アビダブ#26673	99,{
 	set '@sel, select('@menu_str$);
 	set '@i, '@match_idx['@sel];
 
-L_Refine_Start:
 	if(getequipisenableref('@i) == 0) {
 		mes '@npcname$; mes "その装備は精錬でません。"; close;
 	}
@@ -648,11 +658,19 @@ L_Refine_Start:
 
 	// 成功テーブル定義
 	switch('@wlv) {
+		// 成功率が倍率で増える場合(防具の+4 -> +5 の場合 60% * 130% = 78%)
 		case 0: setarray '@rate, 100000, 100000, 100000, 100000,  78000,  50000,  48000,  23000,  22000,  10000; break;
 		case 1: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000, 100000,  69000,  44000,  20000; break;
 		case 2: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000,  72000,  46000,  22000,  20000; break;
 		case 3: setarray '@rate, 100000, 100000, 100000, 100000, 100000,  75000,  60000,  23000,  22000,  20000; break;
 		case 4: setarray '@rate, 100000, 100000, 100000, 100000,  78000,  50000,  48000,  23000,  22000,  10000; break;
+
+		// 成功率が上乗せされる場合(防具の+4 -> +5 の場合 60% + 30% = 90%)
+		//case 0: setarray '@rate, 100000, 100000, 100000, 100000,  90000,  60000,  60000,  30000,  30000,  10000; break;
+		//case 1: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000, 100000,  90000,  60000,  20000; break;
+		//case 2: setarray '@rate, 100000, 100000, 100000, 100000, 100000, 100000, 100000,  60000,  30000,  20000; break;
+		//case 3: setarray '@rate, 100000, 100000, 100000, 100000, 100000,  90000,  90000,  30000,  30000,  20000; break;
+		//case 4: setarray '@rate, 100000, 100000, 100000, 100000,  90000,  60000,  60000,  30000,  30000,  10000; break;
 	}
 
 	// 所持チェック
@@ -662,13 +680,13 @@ L_Refine_Start:
 
 	delitem '@cost_item, 1;
 	set Zeny, Zeny - '@cost_zeny;
-	showmessage "カン！カン！カン！","アビダブ";
+	showmessage "カン！カン！カン！";
 
 	if('@rate['@current_ref] > rand(100000)) {
 		successrefitem '@i;
 		emotion 21;
 		mes '@npcname$;
-		mes "さあ、無事に精錬が終わったぜ。";
+		mes "さ！無事に精錬が終わったぜ。";
 		mes "俺の腕はまだまだ使えるぜ！";
 		mes "自分で言うのもなんだが";
 		mes "なかなか良い出来じゃないか！";

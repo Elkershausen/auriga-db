@@ -1,22 +1,143 @@
-// 2026/04/14 アップデート
+// 2026/04/21 アップデート
 // スロットエンチャントNPC
-// セヤブルレム / レアブルレム / プロブルレム / アラブルレム / 青年(説明NPC)
+// セヤブルレム / レアブルレム / プロブルレム / アラブルレム / エヴォルツィオーネ / トンノ / 青年(説明NPC)
 // モロクマップ座標修正
-// 未実装 [エヴォルツィオーネ] [トンノ] 近日中に実装
+// 2014/07/22 成功率アップデート適用 C = 40% B = 35% A = 35% S = 25% SS = 20%
 
 prontera.gat,110,191,6	script	エヴォルツィオーネ#33661	893,{
 
 	set '@npcname$, "[" + strnpcinfo(1) + "]";
 
-	setarray '@pay_items[1], 22134, 22210, 470080;
-	setarray '@pay_pos[1],   6, 6, 6; // 靴
-	setarray '@target_items[1], 22223, 22224, 470081;
-	set '@pay_ref, 8; // 必要な精錬値
-	set '@cost_id, 6941; // ヴァルキリーの力の破片
-	set '@cost_num, 1;
+	// インベントリ空き種類数チェック
+	getinventorylist;
+	if (@inventorylist_count > 99) {
+		mes '@npcname$;
+		mes "現在、インベントリを ^FF0000" + @inventorylist_count + "種類^000000 使用しています。";
+		mes "抽選にはインベントリの空きが ^0000FF1種類以上^000000 必要です。";
+		mes "（所持種類数を99種類以下にして下さい）";
+		close;
+	}
+
+	// --- 配列の初期化 ---
+	cleararray '@pay_items[0], 0, 128;
+	cleararray '@target_items[0], 0, 128;
+
+	// --- 初期設定 ---
+	set '@pay_pos, 6;     // 部位 靴
+	set '@min_ref, 8;     // 最低精錬値
+	set '@cost_id, 6941;  // ヴァルキリーの力の破片
+	set '@cost_num, 50;
+
+	setarray '@pay_items[1],    22210, 22134, 22138, 22120, 22207, 22170, 470006, 470008, 470027, 470025, 470030, 470036, 470034, 22189, 22145, 22198, 22172, 22104, 470056, 470058, 470060, 470062, 470078, 470080, 470082, 470084, 470089, 470091, 470105;
+	setarray '@target_items[1], 22224, 22223, 22221, 22225, 470004, 470005, 470007, 470009, 470028, 470026, 470031, 470037, 470035, 470052, 470050, 470053, 470051, 470049, 470057, 470059, 470061, 470063, 470079, 470081, 470083, 470085, 470090, 470092, 470106;
+
+	mes '@npcname$;
+	mes "私は靴装備に";
+	mes "スロットを付与する";
+	mes "強化をしています。";
+	mes "対象の靴を ^FF0000+" + '@min_ref + " 以上^000000で装備していれば";
+	mes "スロットを付与しましょう。";
+	next;
+
+	switch(select("強化を依頼する:話を聞く:立ち去る")) {
+		case 1: break;
+
+		case 2:
+			mes '@npcname$;
+			mes "特定の靴装備にスロットを付与します。";
+			mes "失敗はしません。";
+			mes "精錬値とエンチャントは維持されます。";
+			mes "交換には手数料として";
+			mes "^FF0000" + getitemname('@cost_id) + " " + '@cost_num + " 個^000000";
+			mes "をいただきます。";
+			close;
+		case 3:
+			mes '@npcname$;
+			mes "またどうぞ。";
+			close;
+	}
+
+	// --- 装備マッチングコア処理ここから ---
+	set '@current_eq, getequipid('@pay_pos);
+	set '@idx, 0;
+
+	// --- 何も装備していない場合 ---
+	if (getequipisequiped('@pay_pos) == 0) {
+		mes '@npcname$; mes "対象の部位に靴を装備していません。"; close;
+	}
+
+	// --- ID・'@idx 配列処理 ---
+	for(set '@i, 1; '@i <= getarraysize('@pay_items); set '@i, '@i + 1) {
+		if('@current_eq == '@pay_items['@i]) {
+			set '@idx, '@i;
+			break;
+		}
+	}
+
+	// --- 対象IDと装備IDと比較 ---
+	if ('@idx == 0) {
+		mes '@npcname$;
+		mes "対象となる靴を装備していないようです。";
+		close;
+	}
+
+	// --- 精錬値条件 ---
+	set '@current_ref, getequiprefinerycnt('@pay_pos);
+	if ('@current_ref < '@min_ref) {
+		mes '@npcname$;
+		mes "精錬値が足りません。";
+		mes "最低でも ^FF0000+" + '@min_ref + "^000000 以上にしてから来てください。";
+		close;
+	}
+	// --- 装備マッチングコア処理ここまで ---
+
+	set '@target_id, '@target_items['@idx];
+	
+	// スロット数の取得
+	set '@pay_slot, getiteminfo('@pay_items['@idx], 10);
+	set '@target_slot, getiteminfo('@target_items['@idx], 10);
+	// 精錬値の取得
+	set '@ref, getequiprefinerycnt('@pay_pos);
+	// カードID取得
+	set '@card0, getequipcardid('@pay_pos, 0);
+	set '@card1, getequipcardid('@pay_pos, 1);
+	set '@card2, getequipcardid('@pay_pos, 2);
+	set '@card3, getequipcardid('@pay_pos, 3);
 	
 	mes '@npcname$;
-	mes "26/04/14 未実装";
+	mes "現在の装備：";
+	mes "^0000FF+" + '@current_ref + " " + getequipname('@pay_pos) + "[" + '@pay_slot + "]^000000 ですね。";
+	mes "スロットエンチャント装備：";
+	mes "^0000FF+" + '@ref + " " + getitemname('@target_id) + "[" + '@target_slot + "] ^000000";
+	mes "と交換します。";
+	next;
+	mes '@npcname$;
+	mes "交換には手数料として";
+	mes "^FF0000" + getitemname('@cost_id) + " が " + '@cost_num + " 個^000000";
+	mes "必要となりますが、よろしいですか？";
+	next;
+
+	if(select("はい:やめます") == 2) { mes '@npcname$; mes "またお越しください。"; close; }
+
+	// コスト所持チェック
+	if (countitem('@cost_id) < '@cost_num) {
+		mes '@npcname$;
+		mes "材料が足りないようです。";
+		close;
+	}
+
+	// --- 実行処理 ---
+	delitem '@cost_id, '@cost_num; // 手数料消費
+	unequip '@pay_pos;           // 装備解除
+	delitem '@current_eq, 1;      // 装備していたアイテムを削除
+
+	// 報酬配布 (精錬値、カード情報を適用)
+	getitem2 '@target_id, 1, 1, '@ref, 0, '@card0, '@card1, '@card2, '@card3;
+
+	emotion 21;
+	misceffect 154;
+	mes '@npcname$;
+	mes "交換が完了しました。";
 	close;
 }
 
@@ -24,15 +145,154 @@ prontera.gat,115,191,6	script	トンノ#34589	555,{
 
 	set '@npcname$, "[" + strnpcinfo(1) + "]";
 
-	setarray '@pay_items[1], 400113, 19391, 18894;
-	setarray '@pay_pos[1],   9, 9, 9; // 兜中段
-	setarray '@target_items[1], 400114, 410010, 410009;
-	set '@pay_ref, 8; // 必要な精錬値
-	set '@cost_id, 6941; // ヴァルキリーの力の破片
-	set '@cost_num, 1;
+	// インベントリ空き種類数チェック
+	getinventorylist;
+	if (@inventorylist_count > 99) {
+		mes '@npcname$;
+		mes "現在、インベントリを ^FF0000" + @inventorylist_count + "種類^000000 使用しています。";
+		mes "抽選にはインベントリの空きが ^0000FF1種類以上^000000 必要です。";
+		mes "（所持種類数を99種類以下にして下さい）";
+	}
+
+	// --- 配列の初期化 ---
+	cleararray '@pay_items[0], 0, 128;
+	cleararray '@target_items[0], 0, 128;
+
+	// --- 初期設定 ---
+	set '@rate, 20;     // 成功率 (%)
+	set '@pay_pos, 9;   // 兜中段
+	set '@min_ref, 0;   // 最低精錬値
+
+	set '@cost_A_id, 25568; // 1000小為替
+	set '@cost_A_num, 10;
+	set '@cost_B_id, 12636; // マラン島特産缶詰
+	set '@cost_B_num, 1;
+
+	setarray '@pay_items[1],    400113, 19391, 18894, 410023, 410057, 410064, 410066, 410088, 410096, 410109, 410124, 410129, 410139, 410185;
+	setarray '@target_items[1], 400114, 410010, 410009, 410024, 410058, 410065, 410067, 410089, 410097, 410110, 410125, 410130, 410140, 410186;
 
 	mes '@npcname$;
-	mes "26/04/14 未実装";
+	mes "私は中段装備に";
+	mes "スロットを付与する強化を";
+	mes "をしています。";
+	next;
+
+	switch(select("強化を依頼する:話を聞く:立ち去る")) {
+		case 1: break;
+
+		case 2:
+			mes '@npcname$;
+			mes "特定の兜中段にスロットを付与します。";
+			mes "一定確率で失敗しますが";
+			mes "装備は失いません。";
+			mes "精錬値とエンチャントは維持されます。";
+			next;
+			mes '@npcname$;
+			mes "成功・失敗に関わらず";
+			mes "交換には手数料として";
+			mes "^FF00001000小為替 10個^000000";
+			mes "^FF0000マラン島特産缶詰 1個^000000";
+			mes "をいただきます。";
+			close;
+		case 3:
+			mes '@npcname$;
+			mes "またどうぞ。";
+			close;
+	}
+
+	// --- 装備マッチングコア処理ここから ---
+	set '@current_eq, getequipid('@pay_pos);
+	set '@idx, 0;
+
+	// --- 何も装備していない場合 ---
+	if (getequipisequiped('@pay_pos) == 0) {
+		mes '@npcname$; mes "対象の部位に兜中段を装備していません。"; close;
+	}
+
+	// --- ID・'@idx 配列処理 ---
+	set '@current_eq_id, getequipid('@pay_pos);
+	set '@idx, 0;
+	for(set '@i, 1; '@i <= getarraysize('@pay_items); set '@i, '@i + 1) {
+		if ('@pay_items['@i] == '@current_eq_id) {
+			set '@idx, '@i;
+			break;
+		}
+	}
+
+	// --- 対象IDと装備IDと比較 ---
+	if ('@idx == 0) {
+		mes '@npcname$;
+		mes "対象となる兜中段を装備していないようです。";
+		close;
+	}
+
+	// --- 精錬値条件 ---
+	set '@current_ref, getequiprefinerycnt('@pay_pos);
+	if ('@current_ref < '@min_ref) {
+		mes '@npcname$;
+		mes "精錬値が足りません。";
+		mes "最低でも ^FF0000+" + '@min_ref + "^000000 以上にしてから来てください。";
+		close;
+	}
+	// --- 装備マッチングコア処理ここまで ---
+
+	set '@target_id, '@target_items['@idx];
+
+	// スロット数の取得
+	set '@pay_slot, getiteminfo('@pay_items['@idx], 10);
+	set '@target_slot, getiteminfo('@target_items['@idx], 10);
+
+	// 精錬値の取得
+	set '@ref, getequiprefinerycnt('@pay_pos);
+	// カードID取得
+	set '@card0, getequipcardid('@pay_pos, 0);
+	set '@card1, getequipcardid('@pay_pos, 1);
+	set '@card2, getequipcardid('@pay_pos, 2);
+	set '@card3, getequipcardid('@pay_pos, 3);
+
+	mes '@npcname$;
+	mes "現在の装備：";
+	mes "^0000FF" + getequipname('@pay_pos) + "[" + '@pay_slot + "]^000000 ですね。";
+	mes "スロットエンチャント装備：";
+	mes "^0000FF" + getitemname('@target_id) + "[" + '@target_slot + "] ^000000";
+	mes "と交換します。";
+	next;
+	mes '@npcname$;
+	mes "交換には手数料として";
+	mes "^FF0000" + getitemname('@cost_A_id) + " " + '@cost_A_num + "個^000000";
+	mes "^FF0000" + getitemname('@cost_B_id) + " " + '@cost_B_num + "個^000000";
+	mes "必要となりますが、よろしいですか？";
+	next;
+
+	if (select("はい:やめます") == 2) { mes '@npcname$; mes "またお越しください。"; close; }
+
+	// コスト所持チェック
+	if (countitem('@cost_A_id) < '@cost_A_num || countitem('@cost_B_id) < '@cost_B_num) {
+		mes '@npcname$;
+		mes "材料が足りないようですね。";
+		close;
+	}
+
+	// --- 実行処理 ---
+	delitem '@cost_A_id, '@cost_A_num;
+	delitem '@cost_B_id, '@cost_B_num;
+
+	// 成功判定
+	if (rand(100) < '@rate) {
+		unequip '@pay_pos;
+		delitem '@current_eq_id, 1;
+		getitem2 '@target_id, 1, 1, '@ref, 0, '@card0, '@card1, '@card2, '@card3;
+
+		misceffect 154;
+		emotion 21;
+		mes '@npcname$;
+		mes "見事に強化が成功しました！";
+	} else {
+		misceffect 155;
+		emotion 23;
+		mes '@npcname$;
+		mes "残念……失敗です。素材だけ頂戴しますね。";
+	}
 	close;
 }
 
@@ -755,11 +1015,12 @@ prontera.gat,115,191,6	script	トンノ#34589	555,{
 	for(set '@i,0; '@amount['@i]!=0; set '@i,'@i+1)
 		delitem '@need['@i],'@amount['@i];
 	set Zeny,Zeny-'@zeny;
+	// 成功率% 2014 成功率上方修正
 	switch('@class) {
-		case 1: set '@success,25; break; //C級
-		case 2: set '@success,20; break; //B級
-		case 3: set '@success,20; break; //A級
-		case 4: set '@success,10; break; //S級
+		case 1: set '@success,40; break; //C級
+		case 2: set '@success,35; break; //B級
+		case 3: set '@success,35; break; //A級
+		case 4: set '@success,25; break; //S級
 	}
 	if(rand(100) < '@success) {
 		if('@class == 4)
@@ -1435,11 +1696,12 @@ lhz_in02.gat,269,33,4	duplicate(青年#slot)	青年	97
 	for(set '@i,0; '@amount['@i]!=0; set '@i,'@i+1)
 		delitem '@need['@i],'@amount['@i];
 	set Zeny,Zeny-'@zeny;
+	// 成功率% 2014 成功率上方修正
 	switch('@class) {
-		case 1: set '@success,25; break; //C級
-		case 2: set '@success,20; break; //B級
-		case 3: set '@success,20; break; //A級
-		case 4: set '@success,10; break; //S級
+		case 1: set '@success,40; break; //C級
+		case 2: set '@success,35; break; //B級
+		case 3: set '@success,35; break; //A級
+		case 4: set '@success,25; break; //S級
 	}
 	if(rand(100) < '@success) {
 		if('@class == 4)
@@ -2060,12 +2322,13 @@ prontera.gat,81,106,6	script	プロブルレム	97,{
 		delitem '@delid,1;
 		delitem '@need,'@amount;
 		set Zeny,Zeny-'@price;
+		// 成功率% 2014 成功率上方修正
 		switch('@class) {
-			case 1: set '@success,25; break; //C級
-			case 2: set '@success,20; break; //B級
-			case 3: set '@success,15; break; //A級
-			case 4: set '@success,10; break; //S級
-			case 5: set '@success,5; break;  //SS級
+			case 1: set '@success,40; break; //C級
+			case 2: set '@success,35; break; //B級
+			case 3: set '@success,35; break; //A級
+			case 4: set '@success,25; break; //S級
+			case 5: set '@success,20; break; //SS級
 		}
 		if(rand(100) < '@success) {
 			if('@class >= 4)
@@ -2442,11 +2705,12 @@ prontera.gat,79,104,6	script	アラブルレム	97,{
 		delitem '@delid,1;
 		delitem '@need,'@amount;
 		set Zeny,Zeny-'@price;
+		// 成功率% 2014 成功率上方修正
 		switch('@class) {
-			case 1: set '@success,25; break; //C級
-			case 2: set '@success,20; break; //B級
-			case 3: set '@success,15; break; //A級
-			case 4: set '@success,10; break; //S級
+			case 1: set '@success,40; break; //C級
+			case 2: set '@success,35; break; //B級
+			case 3: set '@success,30; break; //A級
+			case 4: set '@success,25; break; //S級
 		}
 		if(rand(100) < '@success) {
 			if('@class == 4)
