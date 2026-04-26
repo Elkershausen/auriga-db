@@ -1,4 +1,4 @@
-// 2026/04/07 アップデート
+// 2026/04/28 アップデート
 // map :iz_gimlet.gat 追加
 // マップフラグ追加
 
@@ -35,7 +35,7 @@ iz_gimlet.gat,13,89,3	script	アッキーラ教授#37186	749,{ mes "npc_test_setting"; 
 //マップフラグここから
 //iz_gimlet.gat	mapflag	nosave		SavePoint
 //iz_gimlet.gat	mapflag	nomemo		dummy
-iz_gimletason01.gat	mapflag	noteleport	dummy
+iz_gimlet.gat	mapflag	noteleport	dummy
 iz_gimlet.gat	mapflag	nobranch	dummy
 iz_gimlet.gat	mapflag	monster_noteleport	dummy
 iz_gimlet.gat	mapflag	noicewall	dummy
