@@ -1,7 +1,9 @@
-//= Auriga Script ==============================================================
-// Quest List Script
-// 2026/03/04 イズルード仕様変更対応
+// 2026/04/28 アップデート
+// クエスト管理NPC[エイド] 座標調整
 //==============================================================================
+// 転職クエストフラグ管理NPC [エイド]
+//==============================================================================
+
 -	script	エイド#Quest	468,{
 	misceffect 12,"";
 	emotion 0;
@@ -256,9 +258,9 @@
 	close;
 }
 
-prontera.gat,106,69,5	duplicate(エイド#Quest)	エイド	880
-izlude.gat,133,124,3	duplicate(エイド#Quest)	エイド	880
-geffen.gat,115,65,5	duplicate(エイド#Quest)	エイド	880
-morocc.gat,160,97,3	duplicate(エイド#Quest)	エイド	880
-payon.gat,178,104,3	duplicate(エイド#Quest)	エイド	880
-alberta.gat,122,59,3	duplicate(エイド#Quest)	エイド	880
+alberta.gat,122,59,3	duplicate(エイド#Quest)	エイド#26944	880
+geffen.gat,115,65,5	duplicate(エイド#Quest)	エイド#26939	880
+izlude.gat,133,92,3	duplicate(エイド#Quest)	エイド#26940	880
+morocc.gat,160,97,3	duplicate(エイド#Quest)	エイド#26941	880
+payon.gat,178,104,3	duplicate(エイド#Quest)	エイド#26942	880
+prontera.gat,123,97,5	duplicate(エイド#Quest)	エイド#26943	880

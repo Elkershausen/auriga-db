@@ -1,4 +1,19 @@
-﻿2026/04/21	patch260421
+﻿2026/04/28	patch260428
+* ギムレット部屋移動用NPCを調整 (script\update\cash\npc_cash_setting.sc)
+
+* ギムレット部屋設定用NPCに、現存するNPCを配置し実装準備(script\update\cash\npc_cash_setting.sc)
+
+* [シニアスタイリスト]NPC ギムレット部屋に移動(script\npc\misc\npc_misc_pointshop.sc)
+
+* スペシャルアイテム販売 再配置(script\npc\misc\npc_misc_pointshop.sc)
+
+* クエスト管理NPC [エイド] 座標変更(npc_misc_questlist.sc)
+
+* 開発用環境アップデート(wiki)
+
+* 大型連休は家族旅行に行くので 04/27 - 05/11 期間は休暇となります
+
+2026/04/21	patch260421
 * スロットエンチャントNPC [エヴォルツィオーネ] [トンノ] 実装(npc\questnpc_quest_slotenchant.sc)
 * スロットエンチャントNPC  2014/07/22 成功率アップデート適用(npc\questnpc_quest_slotenchant.sc)
 
