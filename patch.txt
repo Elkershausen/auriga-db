@@ -1,4 +1,14 @@
-﻿2026/04/28	patch260428
+﻿2026/05/12	patch260512
+* イズルードマップ仕様変更対応(npc_town_jawaii.sc npc_town_airport.sc)
+
+* スロットエンチャントNPC [アラブルレム] 更新(npc_quest_slotenchant.sc)
+
+* ギムレット部屋移動用ワープリンクを調整(script\update\cash\npc_cash_setting.sc)
+
+* アイテムの修正(item_db.txt)
+* 兜上中下 盾 靴 の検品完了
+
+2026/04/28	patch260428
 * ギムレット部屋移動用NPCを調整 (script\update\cash\npc_cash_setting.sc)
 
 * ギムレット部屋設定用NPCに、現存するNPCを配置し実装準備(script\update\cash\npc_cash_setting.sc)

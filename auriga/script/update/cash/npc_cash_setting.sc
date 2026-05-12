@@ -1,4 +1,4 @@
-// 2026/04/28 アップデート
+// 2026/05/12 アップデート
 // map :iz_gimlet.gat 追加
 // マップフラグ追加
 
@@ -16,7 +16,7 @@ izlude.gat,122,151,3	script	アイテム配布係#26517	833,{
 }
 
 // ワープで戻る (118,153)
-iz_gimlet.gat,49,86,1		warp	gim001	1,1,izlude.gat,122,149
+iz_gimlet.gat,49,86,1		warp	gim001	1,1,izlude.gat,119,148
 
 // 仮置き
 iz_gimlet.gat,43,95,3	script	カプラ職員#26520	117,{ mes "npc_test_setting"; mes "仮置き";close; }
