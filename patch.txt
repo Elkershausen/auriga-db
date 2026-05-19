@@ -1,4 +1,22 @@
-﻿2026/05/12	patch260512
+﻿2026/05/19	patch260519
+* msgstringtable_decoded.txt 更新(msgstringtable\msgstringtable_decoded.txt)
+* msgstringsは 2026/02/19 までの分全部で DRUID KARNOS ALITEA  のメッセージ定義が実装されています
+
+* csvload csvsave フォルダ実装(script\csvload csvsave)
+* all_costume_list.csv boss_card_list.csv 移動し関連NPC書き換え(npc\quest\npc_quest_cardremover.sc npc\update\backyard\npc_test_costume.sc)
+* [エリートブリーダーシステム] や [キューペットボックス抽選](元に戻さないペットくじ) の実装に csv を使う考えがあります
+* iteminfo_list.csv 実装(script\csvload\iteminfo_list.csv)
+* iteminfo_list.csv はファロスエンチャントや最新のアイテム交換系NPCに使う予定です
+
+* DRUID KARNOS ALITEA の JOB と Class 追加(const.txt)
+
+* 2024/05/02 に実装されたUI [adventure guide] を押すとクラッシュする問題をパケットを追加して修正(packet_db.lua)
+* p(0x0bf3, -1) このパケットです
+
+配信業している家族の希望で引っ越しするので 06/末 まで更新休みます
+百尺竿頭の更新予定しています
+
+2026/05/12	patch260512
 * イズルードマップ仕様変更対応(npc_town_jawaii.sc npc_town_airport.sc)
 
 * スロットエンチャントNPC [アラブルレム] 更新(npc_quest_slotenchant.sc)

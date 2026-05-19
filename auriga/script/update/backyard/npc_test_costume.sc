@@ -1,12 +1,16 @@
-// 26/04/02 アップデート (AI実装)
+// 26/05/19 アップデート (AI実装)
 // costume ファイル(拡張子なしcsv)をdbフォルダに移動し、サーバーに "script_csvload: db\costume load successfully" と出れば使えます
 // 毎回所持アイテムを全部消します
 // 0が先頭で行数 100 単位で costume ファイル に定義のあるアイテムを入手します
 
-prontera.gat,150,140,4	script	衣装実装確認(CSV)	10439,{
+prontera.gat,150,140,4	script	衣装実装確認(CSV)	12000,{
 
     clearitem;
     mes "[アイテム実装確認]";
+    mes "csvファイルを読み込みます。";
+    mes "all_costume_list.csv が";
+    mes "[script / csvload] に";
+    mes "配置されていることを確認したら";
     mes "モードを選択してください。";
     next;
 
@@ -22,7 +26,9 @@ prontera.gat,150,140,4	script	衣装実装確認(CSV)	10439,{
 
 // --- CSV読み込みモード ---
 L_CsvMode:
-	set @file$, "db/costume";
+    //set @file$, "db/costume.csv";
+    set @file$, "script/csvload/all_costume_list.csv";
+
     mes "[CSV一括入手モード]";
     // CSVの総行数を取得 
     set '@rows, csvgetrows(@file$);
@@ -49,7 +55,7 @@ L_CsvMode:
         
         // CSVの指定行(行番号: @start_row + @count) の 0列目からアイテムIDを取得
         set '@target_id, csvread(@file$, '@start_row + '@count, 0);
-        
+	
         if (getitemname('@target_id) != "") {
             getitem '@target_id, 1;
             set '@count, '@count + 1;

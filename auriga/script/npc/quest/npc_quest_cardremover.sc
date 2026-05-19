@@ -1,6 +1,6 @@
-// 2026/04/07 アップデート (AI実装)
+// 2026/05/19 アップデート (AI実装)
 // 座標変更
-// boss_card_list.csv(dbフォルダ) 実装
+// boss_card_list.csv(script\csvloadフォルダ) 実装
 // AIによる要点説明：この方法であれば、boss_card_list.csvファイルに新しいカードIDを1行追加するだけで、NPCの判定ロジックと表示リストの両方が自動的に更新されるようになります
 
 iz_gimlet.gat,38,73,4	script	ツーニャ#31653	555,{
@@ -186,7 +186,7 @@ iz_gimlet.gat,38,73,4	script	ツーニャ#31653	555,{
 
 		// --- 分離コスト判定部分の修正案ここから ---
 		set '@cost, 1; // 基本コスト
-		set '@file$, "db/boss_card_list.csv"; // ファイルパス（Aurigaディレクトリ以下 ）
+		set '@file$, "script/csvload/boss_card_list.csv"; // ファイルパス（Aurigaディレクトリ以下 ）
 		set '@rows, csvgetrows('@file$); // csvの行数を取得 
 
 		for(set '@i, 0; '@i < '@rows; set '@i, '@i + 1) {
@@ -319,6 +319,7 @@ iz_gimlet.gat,38,73,4	script	ツーニャ#31653	555,{
 				close;
 			// --- メッセージ表示部分の修正案ここから ---
 			case 2:
+				// messize 720, 360;	// 表示ウインドウ拡張(縦 * 横)
 				mes "‐必要DHAパワー‐";
 				mes "『消費[^FF00005^000000]リスト』";
 
@@ -327,7 +328,7 @@ iz_gimlet.gat,38,73,4	script	ツーニャ#31653	555,{
 					for(set '@i, 0; '@i < '@rows; set '@i, '@i + 1) {
 						set '@id, csvread('@file$, '@i, 0); // 数値として読み込み 
 				// IDからアイテム名をDB（item_db.txt）より取得して表示 [cite: 66]
-
+				
 				mes "・" + getitemname('@id);
 				}
 			// --- メッセージ表示部分の修正案ここまで ---
