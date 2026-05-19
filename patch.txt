@@ -1,4 +1,8 @@
-﻿2026/05/19	patch260519
+﻿2026/05/20	patch260520
+* 生成AI用学習データ skill_list.json 更新(NLP\skill_list.json)
+* 2025夏の追加4次職スキル、追加NPCスキル、DRUID KARNOS ALITEA スキルまで実装
+
+2026/05/19	patch260519
 * msgstringtable_decoded.txt 更新(msgstringtable\msgstringtable_decoded.txt)
 * msgstringsは 2026/02/19 までの分全部で DRUID KARNOS ALITEA  のメッセージ定義が実装されています
 
