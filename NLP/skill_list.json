@@ -1393,7 +1393,7 @@
 {"id": 6516, "jname": "エナジーコンバージョン", "ename": "AG_ENERGY_CONVERSION"}
 {"id": 6517, "jname": "サイキックストリーム", "ename": "EM_PSYCHIC_STREAM"}
 {"id": 6518, "jname": "ディヴィヌスフロス", "ename": "CD_DIVINUS_FLOS"}
-{"id": 6519, "jname": "IQ_BLAZING_FLAME_BLAST", "ename": "IQ_BLAZING_FLAME_BLAST"}
+{"id": 6519, "jname": "烈火気弾", "ename": "IQ_BLAZING_FLAME_BLAST"}
 {"id": 6520, "jname": "ワイルドウォーク", "ename": "WH_WILD_WALK"}
 {"id": 5502, "jname": "天気身陽", "ename": "SKE_SKY_SUN"}
 {"id": 5503, "jname": "天気身月", "ename": "SKE_SKY_MOON"}
