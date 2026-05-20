@@ -1,0 +1,10736 @@
+-- 2026/05/21 アップデート
+-- 新職業状態異常 ローカライズ仮対応
+
+COLOR_TITLE_BUFF = { 155, 202, 155 }
+COLOR_TITLE_DEBUFF = { 250, 100, 100 }
+COLOR_TITLE_TOGGLE = { 190, 190, 250 }
+COLOR_TITLE_TWOSIDES = { 220, 185, 240 }
+COLOR_TITLE_SYSTEM = { 255, 255, 0 }
+COLOR_TIME = { 255, 176, 98 }
+StateIconList = {}
+StateIconList[EFST_IDs.EFST_TRICKDEAD] = {
+	descript = {
+		{
+			"死んだふり",
+			{ 190, 190, 250 }
+		},
+		{ "モンスターに見つからない" },
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ENDURE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"インデュア",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "一部の攻撃を受けても" },
+		{ "被弾モーションが発生しない" },
+		{ "装備Mdef増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROVOKE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"プロボック",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "追加物理攻撃力増加" },
+		{ "ステータスDef減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RIDING] = {
+	descript = {
+		{
+			"騎乗中",
+			{ 190, 190, 250 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_AUTOBERSERK] = {
+	descript = {
+		{
+			"オートバーサーク",
+			{ 190, 190, 250 }
+		},
+		{ "HP25%未満の場合、" },
+		{ "プロボック状態" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TWOHANDQUICKEN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ツーハンドクイッケン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "基本攻撃速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PARRYING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"パリイング",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "一定確率で物理攻撃を" },
+		{ "剣で受け止める" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JOINTBEAT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ジョイントビート",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃された関節により、" },
+		{ "様々な効果が発生" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TENSIONRELAX] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"テンションリラックス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "HP自然回復と" },
+		{ "HP回復力向上の" },
+		{ "回復速度増加" },
+		{ "所持重量50%以上でも" },
+		{ "HP自然回復と" },
+		{ "HP回復力向上が発生する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FIGHTINGSPIRIT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ファイティングスピリット",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Atk増加" },
+		{ "使用者はAspd増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GIANTGROWTH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ジャイアントグロース",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str + 30" },
+		{ "通常物理攻撃時、一定確率で" },
+		{ "3倍のダメージを与え" },
+		{ "稀に武器が破損する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_REFRESH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"リフレッシュ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "効果発生時、" },
+		{ "多くの状態異常や" },
+		{ "デバフ効果を解除する" },
+		{ "効果中、" },
+		{ "多くの状態異常や" },
+		{ "デバフ効果無効化" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ENCHANTBLADE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"エンチャントブレイド",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "通常物理攻撃ダメージに" },
+		{ "魔法攻撃力を加える" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABUNDANCE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アバンダンス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "10秒毎にSP60回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VITALITYACTIVATION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"バイタリティアクティベーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "受けるヒールHP回復量増加" },
+		{ "一部アイテムHP回復量増加" },
+		{ "一部アイテムSP回復量減少" },
+		{ "SP自然回復量 - 100%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STONEHARDSKIN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ストーンハードスキン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Def増加" },
+		{ "装備Mdef増加" },
+		{ "近接物理攻撃してきた敵の武器を" },
+		{ "一定確率で破損する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AUTOGUARD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オートガード",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "一定確率で物理攻撃を" },
+		{ "盾で受け止める" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CR_SHRINK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"シュリンク",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "オートガードで無効化した場合、" },
+		{ "攻撃してきた対象を一定確率で" },
+		{ "2セルノックバックさせる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SPEARQUICKEN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"スピアクイッケン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "基本攻撃速度増加" },
+		{ "Cri増加" },
+		{ "Flee増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROVIDENCE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"プロヴィデンス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "悪魔形モンスター耐性増加" },
+		{ "聖属性耐性増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DEFENDER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ディフェンダー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "遠距離物理攻撃で受ける" },
+		{ "ダメージ軽減" },
+		{ "移動速度減少" },
+		{ "攻撃速度減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_REFLECTSHIELD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"リフレクトシールド",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "近接物理ダメージの" },
+		{ "一部を反射する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BANDING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"バンディング",
+			{ 190, 190, 250 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "5秒毎にSPを消費" },
+		{ "自身の周辺の敵の" },
+		{ "移動速度を減少" },
+		{ "自身の周辺にバンディング状態の" },
+		{ "ロイヤルガード系の" },
+		{ "パーティーメンバーがいる場合、" },
+		{ "装備Atk・装備Defが増加し、" },
+		{ "HPを共有化する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LG_REFLECTDAMAGE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"リフレクトダメージ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "受けた物理ダメージの一部を" },
+		{ "周囲に反射する" },
+		{ "10秒毎にSP消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FORCEOFVANGUARD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"フォースオブバンガード",
+			{ 190, 190, 250 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP増加" },
+		{ "装備Def増加" },
+		{ "ダメージを受ける度に" },
+		{ "フォースオブレイジ累積" },
+		{ "10秒毎にSP消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHIELDSPELL_DEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"シールドスペルLv1",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_SHIELDSPELL_MDEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"シールドスペルLv2",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_SHIELDSPELL_REF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"シールドスペルLv3",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_INSPIRATION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"インスピレーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "効果発生時、" },
+		{ "バンディング・" },
+		{ "プレスティージ状態解除" },
+		{ "効果中、" },
+		{ "全ての基本ステータス増加" },
+		{ "MaxHP増加" },
+		{ "装備Atk増加" },
+		{ "Hit増加" },
+		{ "多くの状態異常無効化" },
+		{ "攻撃命中時にHP 1%を消費" },
+		{ "5秒毎にHP・SPを消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PRESTIGE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"プレスティージ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Def増加" },
+		{ "一定確率で魔法ダメージ回避" }
+	}
+}
+StateIconList[EFST_IDs.EFST_INC_AGI] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"速度増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Agi増加" },
+		{ "移動速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ANGELUS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"エンジェラス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ステータスDef増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BLESSING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ブレッシング",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str増加" },
+		{ "Int増加" },
+		{ "Dex増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CRUCIS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"シグナムクルシス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Def減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SUFFRAGIUM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"サフラギウム",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "スキル使用時、詠唱時間減少" },
+		{ "その後、" },
+		{ "サフラギウム" },
+		{ "状態は解除される" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DEC_AGI] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"速度減少",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Agi減少" },
+		{ "移動速度減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BENEDICTIO] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"鎧属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "聖属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MAGNIFICAT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マグニフィカート",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "SP回復速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_IMPOSITIO] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"イムポシティオマヌス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "追加Atk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_KYRIE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"キリエエレイソ\ン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "物理ダメージや" },
+		{ "近接・遠距離固定ダメージ" },
+		{ "を受けた時、" },
+		{ "一定回数か耐久値分の" },
+		{ "ダメージを受けない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SLOWPOISON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"スローポイズン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "毒・猛毒のHP減少と" },
+		{ "自然回復停止無効化" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GLORIA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"グロリア",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Luk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LEXAETERNA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"レックスエーテルナ",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃を受けた時、" },
+		{ "ダメージを2倍にして受ける" },
+		{ "その後、" },
+		{ "レックスエーテルナ" },
+		{ "状態は解除される" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ASSUMPTIO] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アスムプティオ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Def増加" },
+		{ "装備Mdef増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ADORAMUS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アドラムス",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Agi減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AB_SECRAMENT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"サクラメント",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "固定詠唱時間減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_EXTREMITYFIST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"阿修羅覇凰拳",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ほとんどのSP回復不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STEELBODY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"金剛",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "受けるダメージが1/10になる" },
+		{ "攻撃速度減少" },
+		{ "移動速度減少" },
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GENTLETOUCH_ENERGYGAIN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"点穴 -球-",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ダメージを与えるか、" },
+		{ "受けた時に一定確率で" },
+		{ "気弾を生成する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RAISINGDRAGON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"潜龍昇天",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "最大気弾数増加" },
+		{ "MaxHP増加" },
+		{ "MaxSP増加" },
+		{ "5秒毎一定量HP減少" },
+		{ "HP自然回復停止" },
+		{ "SP自然回復停止" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GENTLETOUCH_REVITALIZE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"点穴 -活-",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP増加" },
+		{ "ステータスDef増加" },
+		{ "HP自然回復量増加" },
+		{ "移動中でもHPを自然回復する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GENTLETOUCH_CHANGE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"点穴 -反-",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "武器Atk増加" },
+		{ "基本攻撃速度増加" },
+		{ "MaxHP減少" },
+		{ "装備Mdef減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LIGHTNINGWALK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"閃電歩",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "一定確率で遠距離物理ダメージや" },
+		{ "遠距離固定ダメージを無視し、" },
+		{ "瞬時に攻撃した対象に接近する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHOUT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ラウドボイス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERTHRUST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オーバートラスト",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "追加物理攻撃力増加" },
+		{ "物理攻撃時、一定確率で" },
+		{ "自身の武器が破損する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MAXIMIZE] = {
+	descript = {
+		{
+			"マキシマイズパワー",
+			{ 190, 190, 250 }
+		},
+		{ "物理攻撃時、武器ダメージ最大" },
+		{ "SP自然回復停止" },
+		{ "一定時間毎にSP消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WEAPONPERFECT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ウェポンパーフェクション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "全てのモンスターに対し、" },
+		{ "サイズによる武器ダメージの" },
+		{ "ペナルティが発生しない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ADRENALINE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アドレナリンラッシュ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "基本攻撃速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERTHRUSTMAX] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オーバートラストマックス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "追加物理攻撃力増加" },
+		{ "物理攻撃時、一定確率で" },
+		{ "自身の武器が破損する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MELTDOWN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"メルトダウン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "物理攻撃時、一定確率で" },
+		{ "敵の武器・鎧を破損する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CARTBOOST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"カートブースト",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HOVERING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ホバーリング",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "一部のトラップや" },
+		{ "足元への効果系スキルの" },
+		{ "影響を受けない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STEALTHFIELD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ステルスフィールド",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "モンスターに見つからない" },
+		{ "通常物理攻撃や対象指定の" },
+		{ "攻撃系スキルの対象にならない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ACCELERATION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アクセラレーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ANALYZE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アナライズ",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Def減少" },
+		{ "装備Mdef減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHAPESHIFT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"シェイプシフト",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "鎧属性変更" }
+	}
+}
+StateIconList[EFST_IDs.EFST_INFRAREDSCAN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"インフラレッドスキャン",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Flee減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROTECTWEAPON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ケミカルウェポンチャージ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "武器の破損や解除効果を防ぐ" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROTECTSHIELD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ケミカルシールドチャージ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "盾の破損や解除効果を防ぐ" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROTECTARMOR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ケミカルアーマーチャージ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "鎧の破損や解除効果を防ぐ" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROTECTHELM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ケミカルヘルムチャージ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "兜の破損や解除効果を防ぐ" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GN_CARTBOOST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"改造カートブースト",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動速度増加" },
+		{ "追加Atk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_THORNS_TRAP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ソ\ーントラップ",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動不可" },
+		{ "毎秒ダメージを受ける" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HIDING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ハイディング",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "昆虫形・悪魔形・ボスを除く" },
+		{ "モンスターに見つからない" },
+		{ "一定時間毎にSP消費" },
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "一部を除くスキル使用不可" },
+		{ "アイテム使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ENCHANTPOISON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "毒属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_POISONREACT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ポイズンリアクト",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "毒属性の通常物理攻撃や" },
+		{ "毒属性モンスターの通常物理攻撃を" },
+		{ "無効化して反撃し" },
+		{ "一定確率で毒状態にする" },
+		{ "それ以外の物理攻撃を受けた場合" },
+		{ "一定確率で対象に" },
+		{ "インベナム発動" }
+	}
+}
+StateIconList[EFST_IDs.EFST_EDP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"エンチャントデッドリーポイズン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Atk増加" },
+		{ "物理攻撃時、敵を" },
+		{ "一定確率で猛毒状態にする" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CLOAKING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"クローキング",
+			{ 190, 190, 250 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "昆虫形・悪魔形・ボスを除く" },
+		{ "モンスターに見つからない" },
+		{ "一定時間毎にSP消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HALLUCINATIONWALK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ハルシネーションウォーク",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Flee増加" },
+		{ "バキュームエクストリーム" },
+		{ "効果無効化" },
+		{ "一定確率で魔法回避" }
+	}
+}
+StateIconList[EFST_IDs.EFST_POISONINGWEAPON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ポイズニングウェポン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "通常物理攻撃時、一定確率で" },
+		{ "付与した新毒状態にする" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WEAPONBLOCKING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ウェポンブロッキング",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "一定確率で、" },
+		{ "近接物理ダメージを無効化" },
+		{ "5秒毎にSP消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DEATHHURT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"デスハート",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "受けるヒールHP回復量 - 20%" },
+		{ "一部アイテムHP回復量 - 20%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LEECHESEND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"リーチエンド",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "毎秒一定量のダメージを受ける" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PARALYSE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"パラライズ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃速度 - 10%" },
+		{ "Flee - 10%" },
+		{ "移動ディレイ + 10%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MAGICMUSHROOM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マジックマッシュルーム",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "4秒毎にHP - 3%" },
+		{ "特定のランダムなスキルを使用" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TOXIN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"トキシン",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "詠唱が中断されない効果無効化" },
+		{ "10秒毎に1ダメージを受ける" },
+		{ "10秒毎にSP - 3%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CLOAKINGEXCEED] = {
+	descript = {
+		{
+			"クローキングエクシード",
+			{ 155, 202, 155 }
+		},
+		{ "ボスを除くモンスターに見つからない" },
+		{ "毎秒SP消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PYREXIA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"パイアレクシア",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "視野減少" },
+		{ "Hit - 25%" },
+		{ "Flee - 25%" },
+		{ "3秒毎に100ダメージを受ける" },
+		{ "ダメージ表\示の異常" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VENOMBLEED] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ベナムブリード",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP - 15%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OBLIVIONCURSE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オブリビオンカース",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "SP自然回復停止" },
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RG_CCONFINE_M] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"クローズコンファイン",
+			{ 190, 190, 250 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動不可" },
+		{ "Flee増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RG_CCONFINE_S] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"クローズコンファイン",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SWORDREJECT] = {
+	descript = {
+		{
+			"リジェクトソ\ード",
+			{ 155, 202, 155 }
+		},
+		{ "一定確率で物理ダメージを半減し、" },
+		{ "攻撃してきた対象に" },
+		{ "半減した分のダメージを与える" },
+		{ "攻撃してきた対象が" },
+		{ "プレイヤーの場合、対象の武器が" },
+		{ "短剣・片手剣・両手剣で" },
+		{ "攻撃時のみ発動する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOEQUIPWEAPON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器装備不可",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "武器の装備ができない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOEQUIPSHIELD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"盾装備不可",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "盾の装備ができない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOEQUIPARMOR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"鎧装備不可",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "鎧の装備ができない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOEQUIPHELM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"兜装備不可",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "兜の装備ができない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PRESERVE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"プリザーブ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "クローンスキルで" },
+		{ "スキルを覚えないようにする" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHASEWALK2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"チェイスウォーク",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ENERVATION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マスカレード：エナベーション",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃力減少" },
+		{ "気弾が全て消滅する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GROOMY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マスカレード：グルーミー",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃速度減少" },
+		{ "Hit減少" },
+		{ "ホムンクルス使用不可" },
+		{ "携帯卵孵化器使用不可" },
+		{ "騎乗用手綱使用不可" },
+		{ "ファルコンの笛使用不可" },
+		{ "ドラゴンホーン使用不可" },
+		{ "コールオブネメシス使用不可" },
+		{ "ウォーグマスタリー使用不可" },
+		{ "ホークマスタリー使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_IGNORANCE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マスカレード：イグノアランス",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LAZINESS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マスカレード：レイジネス",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Flee減少" },
+		{ "移動速度減少" },
+		{ "詠唱時間増加" },
+		{ "スキル消費SP増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_UNLUCKY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マスカレード：アンラッキー",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Cri減少" },
+		{ "完全回避率減少" },
+		{ "スキル使用時にZeny消費発生" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WEAKNESS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マスカレード：ウィークネス",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "効果発生時、" },
+		{ "武器と盾を解除され、" },
+		{ "一定時間、" },
+		{ "武器装備不可・" },
+		{ "盾装備不可状態になる" },
+		{ "効果中、" },
+		{ "MaxHP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DEADLYINFECT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"デッドリーインフェクト",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "近接攻撃時、または" },
+		{ "近接攻撃を受けた時" },
+		{ "一定確率で現在かかっている" },
+		{ "状態異常を対象に移す" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BODYPAINT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ボディペインティング",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃速度減少" },
+		{ "隠れる系スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_REPRODUCE] = {
+	descript = {
+		{
+			"リプロデュース",
+			{ 155, 202, 155 }
+		},
+		{ "ダメージを受けた" },
+		{ "特定のスキルを覚える" },
+		{ "毎秒SP消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STRIPACCESSARY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アクセサリー解除",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "効果発生時、" },
+		{ "アクセサリー全て解除" },
+		{ "効果中、" },
+		{ "アクセサリー装備不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHADOWFORM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"シャドウフォーム",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "受けたダメージを" },
+		{ "スキル使用時に" },
+		{ "指定した対象に移す" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" },
+		{ "毎秒SP消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AUTOSHADOWSPELL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オートシャドウスペル",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "通常物理攻撃時、" },
+		{ "一定確率で" },
+		{ "選択したスキルが発動" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CONCENTRATION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"集中力向上",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Agi増加" },
+		{ "Dex増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FALCON] = {
+	descript = {
+		{
+			"ファルコンマスタリー",
+			{ 190, 190, 250 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_TRUESIGHT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"トゥルーサイト",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "全ての基本ステータス増加" },
+		{ "追加物理攻撃力増加" },
+		{ "Hit増加" },
+		{ "Cri増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WINDWALK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ウィンドウォーク",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Flee増加" },
+		{ "移動速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WUGRIDER] = {
+	descript = {
+		{
+			"ウォーグ騎乗中",
+			{ 190, 190, 250 }
+		},
+		{ "専用スキル以外使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FEARBREEZE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"フィアーブリーズ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "通常物理攻撃時、" },
+		{ "一定確率で連続攻撃発動" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TAROTCARD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"運命のタロットカード",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "対象に14種類カードの中から" },
+		{ "1つの効果が与えられる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MARIONETTE_MASTER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マリオネットコントロール",
+			{ 190, 190, 250 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "純粋な全ての基本ステータス半減" },
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MARIONETTE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マリオネットコントロール",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "全ての基本ステータス増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ECHOSONG] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"エコーの歌",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Def増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HARMONIZE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ハーモナイズ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "全ての基本ステータス減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RUSH_WINDMILL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"風車に向かって突撃",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "武器Atk増加" },
+		{ "移動ディレイ - 25%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SYMPHONY_LOVE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"恋人たちの為のシンフォニー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Mdef増加" },
+		{ "聖・念属性攻撃で" },
+		{ "受けるダメージが減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SWING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"スイングダンス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "基本攻撃速度増加" },
+		{ "固定詠唱時間減少" },
+		{ "移動ディレイ - 25%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MOONLIT_SERENADE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"月明かりのセレナーデ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Matk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GLOOMYDAY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"メランコリー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "固定詠唱時間増加" },
+		{ "スキル消費SP増加" },
+		{ "攻撃速度減少" },
+		{ "Flee減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SIRCLEOFNATURE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"循環する自然の音",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "HP自然回復量増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BEYOND_OF_WARCRY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ビヨンドオブウォークライ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str減少" },
+		{ "MaxHP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SONG_OF_MANA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マナの歌",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "SP自然回復量増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SATURDAY_NIGHT_FEVER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"狂乱",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "HP自然回復停止" },
+		{ "SP自然回復停止" },
+		{ "Hit減少" },
+		{ "Flee減少" },
+		{ "毎秒HP - 1%" },
+		{ "毎秒SP - 1%" },
+		{ "アイテム使用不可" },
+		{ "狂乱状態解除時、" },
+		{ "座る状態になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MELODYOFSINK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"メロディーオブシンク",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Int減少" },
+		{ "毎秒SP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_UNLIMITED_HUMMING_VOICE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"エンドレスハミングボイス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "詠唱が中断されない" },
+		{ "全ての属性魔法攻撃で" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DANCE_WITH_WUG] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ダンスウィズウォーグ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "基本攻撃速度増加" },
+		{ "固定詠唱時間減少" },
+		{ "ウォーグ関連スキルの威力増大" },
+		{ "遠距離物理攻撃で" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LERADS_DEW] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"レーラズの霧",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ENERGYCOAT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"エナジーコート",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ほとんどの受けるダメージを軽減" },
+		{ "ダメージを受ける度にSP消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_QUAGMIRE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"クァグマイア",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動速度減少" },
+		{ "Agi減少" },
+		{ "Dex減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WZ_SIGHTBLASTER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"サイトブラスター",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "接近した対象にダメージを" },
+		{ "与え弾き飛ばす" },
+		{ "その後、" },
+		{ "サイトブラスター" },
+		{ "状態は解除される" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MARSHOFABYSS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マーシュオブアビス",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動速度減少" },
+		{ "装備Def減少" },
+		{ "Flee減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RECOGNIZEDSPELL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"リコグナイズドスペル",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "魔法攻撃時、武器ダメージ最大" },
+		{ "スキル消費SP増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AUTOSPELL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オートマジシャンスペル",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "通常物理攻撃時、一定確率で" },
+		{ "選択したスキルが発動" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DOUBLECASTING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ダブルキャスティング",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ボルト系スキル使用時、" },
+		{ "一定確率で同一ボルトが" },
+		{ "追加発動する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DEEP_SLEEP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"深い睡眠",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" },
+		{ "チャット使用不可" },
+		{ "2秒毎にHP回復" },
+		{ "2秒毎にSP回復" },
+		{ "ダメージを1.5倍受ける" },
+		{ "ダメージを受けた場合解除" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STRIKING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ストライキング",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Atk増加" },
+		{ "Cri増加" },
+		{ "毎秒SP消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAIN_KILLER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ペインキラー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "受けるダメージ減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LIGHT_OF_REGENE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"再生の光",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "戦闘不能\時" },
+		{ "復活することができる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERED_BOOST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オーバードブースト",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Flee固定" },
+		{ "Aspd固定" },
+		{ "装備Def減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STYLE_CHANGE] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"スタイルチェンジ",
+			{ 155, 202, 155 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_MAGMA_FLOW] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マグマフロー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ホムンクルスが" },
+		{ "ダメージを受けた時" },
+		{ "一定確率で反撃" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GRANITIC_ARMOR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"グラニティックアーマー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "受けるダメージ減少" },
+		{ "効果解除時、HP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PYROCLASTIC] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"パイロクラスティック",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Atk増加" },
+		{ "装備の解除不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GS_MADNESSCANCEL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マッドネスキャンセラー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動不可" },
+		{ "追加Atk増加" },
+		{ "基本攻撃速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GS_ACCURACY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"インクリージングアキュラシー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Hit増加" },
+		{ "Agi増加" },
+		{ "Dex増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GS_ADJUSTMENT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アジャストメント",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Flee増加" },
+		{ "Hit減少" },
+		{ "遠距離物理攻撃耐性増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GS_GATLINGFEVER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ガトリングフィーバー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Atk増加" },
+		{ "攻撃速度増加" },
+		{ "Flee減少" },
+		{ "移動速度減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STORMKICK_ON] = {
+	descript = {
+		{
+			"フェオリチャギの構\え",
+			{ 190, 190, 250 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_PROPERTYTELEKINESIS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "念属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STRUP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"スパート",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TURNKICK_ON] = {
+	descript = {
+		{
+			"トルリョチャギの構\え",
+			{ 190, 190, 250 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_EARTHSCROLL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"楽しい",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "アーススパイクのスクロール使用時、" },
+		{ "SPを 10消費するが、" },
+		{ "スクロールの消費が" },
+		{ "確率に依存する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DODGE_ON] = {
+	descript = {
+		{
+			"落法",
+			{ 155, 202, 155 }
+		},
+		{ "一定確率で攻撃を回避" }
+	}
+}
+StateIconList[EFST_IDs.EFST_COUNTER_ON] = {
+	descript = {
+		{
+			"アプチャオルリギの構\え",
+			{ 190, 190, 250 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_DOWNKICK_ON] = {
+	descript = {
+		{
+			"ネリョチャギの構\え",
+			{ 190, 190, 250 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_PROPERTYWATER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "水属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROPERTYGROUND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "地属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROPERTYWIND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "風属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ASPERSIO] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "聖属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WEAPONPROPERTY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "聖属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROPERTYFIRE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "火属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROPERTYDARK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "闇属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STAR_COMFORT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"星の安楽",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "基本攻撃速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SUN_COMFORT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"太陽の安楽",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Def増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MOON_COMFORT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"月の安楽",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Flee増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_KAUPE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"カウプ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "一定確率で" },
+		{ "ほとんどの受けるダメージ無効化" },
+		{ "その後、" },
+		{ "カウプ" },
+		{ "状態は解除される" }
+	}
+}
+StateIconList[EFST_IDs.EFST_KAIZEL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"カイゼル",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "戦闘不能\時、1度だけ" },
+		{ "一定量のHPで復活し" },
+		{ "2秒間、キリエエレイソ\ン状態になる" },
+		{ "その後、" },
+		{ "カイゼル" },
+		{ "状態は解除される" },
+		{ "アルティメットサクリファイス" },
+		{ "状態になると" },
+		{ "カイゼル状態が解除される" }
+	}
+}
+StateIconList[EFST_IDs.EFST_KAAHI] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"カアヒ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "通常物理攻撃を受けた時、" },
+		{ "SPを消費し、HPを回復" },
+		{ "HPが最大の時は発動しない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ADRENALINE2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"フルアドレナリンラッシュ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "基本攻撃速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ONEHANDQUICKEN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ワンハンドクイッケン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "基本攻撃速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NJ_BUNSINJYUTSU] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"影分身",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "物理ダメージを" },
+		{ "一定回数、無効化" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NJ_UTSUSEMI] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"空蝉",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "物理ダメージを" },
+		{ "一定回数、無効化して" },
+		{ "ノックバックする" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NJ_NEN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"念",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str増加" },
+		{ "Int増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROTECTEXP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ママ、パパ、大好き",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "戦闘不能\時デスペナルティが発生しない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SLOWCAST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"スローキャスト",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "詠唱時間増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CRITICALWOUND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"致命的な傷",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "受けるヒールHP回復量減少" },
+		{ "一部アイテムHP回復量減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HELLPOWER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ヘルの権能\",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "リザレクションなどの" },
+		{ "戦闘不能\から復活する" },
+		{ "効果は発動しない" },
+		{ "ジークフリードの証使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROPERTYUNDEAD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"不死属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "効果発生時、" },
+		{ "ブレッシングや" },
+		{ "速度増加状態を解除" },
+		{ "効果中、" },
+		{ "鎧属性付与" },
+		{ "不死属性" },
+		{ "ブレッシングや" },
+		{ "速度増加の効果を受けず" },
+		{ "代わりに1ダメージを受ける" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SPL_ATK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ピンギキュラの果実ジャム",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "スプレンディットフィールドの" },
+		{ "モンスターに与える" },
+		{ "物理ダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SPL_MATK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"コルヌスの涙",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "スプレンディットフィールドの" },
+		{ "モンスターに与える" },
+		{ "魔法ダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SPL_DEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ルシオラヴェスパのハチ蜜",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "スプレンディットフィールドの" },
+		{ "モンスターから受ける" },
+		{ "ダメージ減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MANU_ATK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マヌクの豪気",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "マヌクフィールドの" },
+		{ "モンスターに与える" },
+		{ "物理ダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MANU_MATK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マヌクの信念",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "マヌクフィールドの" },
+		{ "モンスターに与える" },
+		{ "魔法ダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MANU_DEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マヌクの意志",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "マヌクフィールドの" },
+		{ "モンスターから受ける" },
+		{ "ダメージ減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MORA_BUFF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"モーラベリー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ビフロストフィールドの" },
+		{ "モンスターから受ける" },
+		{ "ダメージ減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ODINS_POWER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オーディンの力",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Atk増加" },
+		{ "装備Matk増加" },
+		{ "装備Def減少" },
+		{ "装備Mdef減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SAVAGE_STEAK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"サベージの丸焼き",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_COCKTAIL_WARG_BLOOD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"カクテルウォーグブラッド",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Int増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MINOR_BBQ] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ミノタウロスのカルビ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Vit増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SIROMA_ICE_TEA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"シロマアイスティー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Dex増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DROCERA_HERB_STEAMED] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ドロセラのハーブ煮",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Agi増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PUTTI_TAILS_NOODLES] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"プティットのしっぽ麺",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Luk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_CRITICALSUCCESSVALUE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"料理",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Cri増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_BASICAVOIDANCE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"料理",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Flee増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_BASICHIT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"料理",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Hit増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PLUSATTACKPOWER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 1,
+	descript = {
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Atk上昇" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PLUSMAGICPOWER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 1,
+	descript = {
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Matkの上昇" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MACRO_PERMIT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マクロ",
+			{ 255, 255, 0 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "マクロ使用中" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MACRO_POSTDELAY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マクロディレイ",
+			{ 255, 255, 0 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "マクロ使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MONSTER_TRANSFORM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"変身中",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_SIT] = {
+	descript = {
+		{
+			"座る",
+			{ 190, 190, 250 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_ALL_RIDING] = {
+	descript = {
+		{
+			"騎乗中",
+			{ 190, 190, 250 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_SKF_MATK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 1,
+	descript = {
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Matk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SKF_ATK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 1,
+	descript = {
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Atk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SKF_ASPD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 1,
+	descript = {
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SKF_CAST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 1,
+	descript = {
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "詠唱時間減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CASH_DEATHPENALTY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"[SP]生命保険証",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "戦闘不能\時デスペナルティが発生しない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CASH_RECEIVEITEM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ドロップ率増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "モンスターを倒した時の" },
+		{ "アイテムドロップ率増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTHASTE_POTION1] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"攻撃速度増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃速度増加量(小)" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTHASTE_POTION2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"攻撃速度増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃速度増加量(中)" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTHASTE_POTION3] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"攻撃速度増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃速度増加量(大)" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MOVHASTE_INFINITY] = {
+	descript = {
+		{
+			"移動速度増加",
+			{ 155, 202, 155 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_MOVHASTE_HORSE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"移動速度増加(馬牌)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_MOVHASTE_POTION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"移動速度増加(速度変化ポーション(UP))",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_CASH_PLUSONLYJOBEXP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"獲得経験値増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Job経験値増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CASH_PLUSEXP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"獲得経験値増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Base経験値増加" },
+		{ "Job経験値増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_REWARD_PLUSONLYJOBEXP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 1,
+	descript = {
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Job経験値増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ASSUMPTIO2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"[SP]アスムプティオ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ダメージ減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SET_NUM_DEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 1,
+	descript = {
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "[SP]Def固定" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SET_NUM_MDEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 1,
+	descript = {
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "[SP]Mdef固定" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SET_PER_DEF] = {
+	descript = {
+		{ "[SP]Def固定" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SET_PER_MDEF] = {
+	descript = {
+		{ "[SP]Mdef固定" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTHASTE_CASH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"[SP]ASPD強化ポーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GM_BATTLE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"戦闘薬",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Atk増加" },
+		{ "Matk増加" },
+		{ "MaxHP減少" },
+		{ "MaxSP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GM_BATTLE2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"高級戦闘薬",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Atk増加" },
+		{ "Matk増加" },
+		{ "MaxHP減少" },
+		{ "MaxSP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MVPCARD_TAOGUNKA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"タオグンカスクロール",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP増加" },
+		{ "Def減少" },
+		{ "Mdef減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MVPCARD_MISTRESS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ミストレススクロール",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ジェムストーンを消費しない" },
+		{ "ただし、一部のスキルを除く" },
+		{ "スキル消費SP増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MVPCARD_ORCHERO] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オークヒーロースクロール",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "スタン状態にならない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MVPCARD_ORCLORD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オークロードスクロール",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "近接物理ダメージの" },
+		{ "一部を反射する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_NORECOVER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"回復不能\",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "HP・SP回復不能\" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAD_READER_ASSASSIN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オートスペル(うずくまる)",
+			{ 250, 100, 100 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAD_READER_WIZARD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オートスペル(アースクエイク)",
+			{ 250, 100, 100 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAD_READER_MONK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オートスペル(フルストリップ)",
+			{ 250, 100, 100 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAD_READER_BARD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"認定戦受付待機時間",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "認定戦受付可能\までの" },
+		{ "待機時間" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAD_READER_DANCER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"旗利用不可時間",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "復帰用旗が利用可能\に" },
+		{ "なるまでの待機時間" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAD_READER_TAEKWON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ガチャドラの加護",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "モンスターを倒した時" },
+		{ "獲得する経験値 + 20%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAD_READER_NINJA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ガチャドラの加護",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "中型モンスターから" },
+		{ "受けるダメージ - 20%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAD_READER_GUNSLINGER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ガチャドラの加護",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "小型モンスターから" },
+		{ "受けるダメージ - 20%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAD_READER_SUPERNOVICE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ガチャドラの加護",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "All Status + 5" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ILLUSION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"幻覚",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ダメージ表\示の異常" },
+		{ "一部のグラフィック表\示が" },
+		{ "反転する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WEIGHTOVER50] = {
+	descript = {
+		{
+			"重量70%以上",
+			{ 250, 100, 100 }
+		},
+		{ "HP自然回復停止" },
+		{ "SP自然回復停止" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERHEAT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オーバーヒート",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "毎秒HP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BLOODING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"出血",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "10秒毎にHP減少" },
+		{ "HP自然回復停止" },
+		{ "SP自然回復停止" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WEIGHTOVER90] = {
+	descript = {
+		{
+			"重量90%以上",
+			{ 250, 100, 100 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_FROSTMISTY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"氷結",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "固定詠唱時間増加" },
+		{ "装備Def減少" },
+		{ "攻撃速度減少" },
+		{ "移動速度減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STOMACHACHE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"腹痛",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "全ての基本ステータス減少" },
+		{ "MaxHP減少" },
+		{ "移動速度減少" },
+		{ "一定時間毎にSP減少" },
+		{ "一定時間毎に座る状態" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VOLCANIC_ASH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"火山灰",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Hit減少" },
+		{ "火属性ダメージを1.5倍受ける" },
+		{ "一定確率でスキル使用失敗" }
+	}
+}
+StateIconList[EFST_IDs.EFST_2011RWC] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"応援爆竹",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "全てのステータス増加" },
+		{ "Atk増加" },
+		{ "MATK増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_2011RWC_SCROLL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"レッドブースター",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ATK,MATK増加" },
+		{ "攻撃速度増加" },
+		{ "変動キャスティング減少" },
+		{ "物理・魔法攻撃時一定確率で" },
+		{ "集中力向上スキル発動" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PHI_DEMON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"古代精霊のお守り",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "悪魔形モンスターに与える" },
+		{ "物理・魔法ダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MEIKYOUSISUI] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"明鏡止水",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "毎秒HP・SP回復" },
+		{ "一定確率で攻撃回避" },
+		{ "移動不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_IZAYOI] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"十\六夜",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "武器Matk増加" },
+		{ "固定詠唱時間減少" },
+		{ "詠唱時間減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_KG_KAGEHUMI] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"幻術 -影踏み-",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動不可" },
+		{ "隠れる系スキル使用不可" },
+		{ "テレポート系スキル使用不可" },
+		{ "テレポート系アイテム使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_KYOMU] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"幻術 -虚無の影-",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "物理反射無効" },
+		{ "魔法反射無効" },
+		{ "一定確率でスキル使用失敗" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ZANGETSU] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"幻術 -残月-",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "武器Atk増減" },
+		{ "武器Matk増減" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GENSOU] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"幻術 -朧幻想-",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "受けた魔法ダメージの一部を" },
+		{ "周囲に反射する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AKAITSUKI] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"幻術 -紅月-",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "HP自然回復停止" },
+		{ "一部のHP回復スキルで" },
+		{ "ダメージを受けるようになる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MYSTICPOWDER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ミスティックパウダー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Luk増加" },
+		{ "Flee増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ACARAJE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アカラジェ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃速度増加増加" },
+		{ "Hit増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_S_LIFEPOTION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"小型生命水",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "5秒毎一定量HP回復" },
+		{ "バーサーク状態中効果なし" }
+	}
+}
+StateIconList[EFST_IDs.EFST_L_LIFEPOTION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"中型生命水",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "4秒毎一定量HP回復" },
+		{ "バーサーク状態中効果なし" }
+	}
+}
+StateIconList[EFST_IDs.EFST_M_LIFEPOTION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"神妙な命の水",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "3秒毎一定量HP回復" },
+		{ "バーサーク状態中効果なし" }
+	}
+}
+StateIconList[EFST_IDs.EFST_G_LIFEPOTION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"迅速な命の水",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "3秒毎一定量HP回復" },
+		{ "バーサーク状態中効果なし" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GROUNDMAGIC] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"属性場活性",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ジェムストーン消費なしで" },
+		{ "デリュージ" },
+		{ "バイオレントゲイル" },
+		{ "ボルケーノが使用できる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TARGET_BLOOD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"状態異常抵抗ポーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "状態異常耐性増加" },
+		{ "スタン・凍氷・石火" },
+		{ "睡眠・沈黙・暗黒" },
+		{ "呪い毒・出血・混乱" }
+	}
+}
+StateIconList[EFST_IDs.EFST_INVISIBILITY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"インビジビリティ",
+			{ 190, 190, 250 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "昆虫形・悪魔形・ボスを除く" },
+		{ "モンスターに見つからない" },
+		{ "武器属性付与" },
+		{ "念属性" },
+		{ "毎秒SPを消費" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_COLD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"冷凍",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" },
+		{ "毎秒HP減少" },
+		{ "毎秒SP減少" },
+		{ "鈍器・片手斧・両手斧" },
+		{ "で受ける物理ダメージ増加" },
+		{ "短剣・片手剣・両手剣・弓" },
+		{ "で受ける物理ダメージ減少" },
+		{ "特定の風属性魔法で" },
+		{ "受けるダメージ増加" },
+		{ "火属性ダメージを受けた場合解除" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROTECT_DEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"物理防御力増加ポーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Def増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROTECT_MDEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"魔法防御力増加ポーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Mdef増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATKER_BLOOD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"SP消費量減少ポーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "スキル使用時の" },
+		{ "SP消費量減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ARMOR_PROPERTY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"鎧属性変更",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "鎧属性変更" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STR_SCROLL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Str増加スクロール",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_INT_SCROLL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Int増加スクロール",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Int増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TARGET_ASPD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"メンタルポーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxSP増加" },
+		{ "スキル使用時の" },
+		{ "SP消費量減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CRITICALPERCENT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"研磨剤",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Cri増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HEALPLUS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"回復力増加ポーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "回復系スキルと" },
+		{ "回復アイテムの" },
+		{ "回復量増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PARTYFLEE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"吹け！春風！",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Flee増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PLUSAVOIDVALUE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"歓迎のさかずき",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "完全回避増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ANGEL_PROTECT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"天使の守護",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "HP回復速度増加" },
+		{ "SP回復速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BROKENWEAPON] = {
+	descript = {
+		{
+			"武器破壊状態",
+			{ 250, 100, 100 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_BROKENARMOR] = {
+	descript = {
+		{
+			"鎧破壊状態",
+			{ 250, 100, 100 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_POPECOOKIE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"教皇のクッキー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Atk増加" },
+		{ "Matk増加" },
+		{ "全属性耐性増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VITALIZE_POTION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"活性化ポーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Atk増加" },
+		{ "Matk増加" },
+		{ "回復系スキルと" },
+		{ "回復アイテムの" },
+		{ "回復量増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NEUTRALBARRIER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ニュートラルバリアー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Def増加" },
+		{ "Mdef増加" },
+		{ "遠距離物理攻撃無効" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WARMER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ウォーマー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "冷凍・凍結・氷結の" },
+		{ "状態異常にかからない" },
+		{ "3秒毎一定量HP回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GRIFFON] = {
+	descript = {
+		{
+			"騎乗中",
+			{ 190, 190, 250 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_MAGIC_CANDY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"魔法キャンデー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Matk上昇" },
+		{ "詠唱が中断されない" },
+		{ "固定キャスティング減少" },
+		{ "10秒毎一定量SP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATKER_ASPD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ディファンダン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP増加" },
+		{ "HP回復力増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATKER_MOVESPEED] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"テチョンダン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxSP増加" },
+		{ "SP回復力増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERLAPEXPUP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"サポート魔法",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP増加" },
+		{ "MaxSP増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JP_EVENT01] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ハッピーハロウィン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ピカタオクミルティーの" },
+		{ "回復量がアップ！" },
+		{ "移動速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JP_EVENT02] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {}
+}
+StateIconList[EFST_IDs.EFST_JP_EVENT03] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"滞在可能\時間",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_JP_EVENT04] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"変身中",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_FLOWER_LEAF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ふんだんなの花つの",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Flee増加" },
+		{ "完全回避増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RAY_OF_PROTECTION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"守護の光",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "特定の状態異常を解除" },
+		{ "特定の" },
+		{ "状態異常にかからない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GLASTHEIM_ATK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"力の加護",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "強い力が体を包み" },
+		{ "ボスへの攻撃を増幅した状態" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GLASTHEIM_DEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"魔法の盾",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "魔法の盾で" },
+		{ "ボスからの攻撃を軽減した状態" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GLASTHEIM_HEAL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"聖なる力",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "聖なる力が" },
+		{ "癒しの能\力を" },
+		{ "増幅させた状態" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GLASTHEIM_HIDDEN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"不思議な力",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "不思議な力で" },
+		{ "能\力が上昇した状態" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GLASTHEIM_STATE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ステータス増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "全てのステータスが増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GLASTHEIM_ITEMDEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"守護の力",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Def増加" },
+		{ "Mdef増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GLASTHEIM_HPSP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"HPSP増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP増加" },
+		{ "MaxSP増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GVG_GIANT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"霜巨人の血",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "プレイヤー形の敵に与える" },
+		{ "物理・魔法ダメージ100%増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GVG_GOLEM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ゴーレムの核",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "プレイヤー形の敵から" },
+		{ "受けるダメージ50%減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GVG_STUN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"妖精の涙（スタン）",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "スタン状態にならない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GVG_STONE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"妖精の涙（石化）",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "石化状態にならない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GVG_FREEZ] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"妖精の涙（凍結）",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "凍結状態にならない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GVG_SLEEP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"妖精の涙（睡眠）",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "睡眠状態にならない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GVG_CURSE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"妖精の涙（呪い）",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "呪い状態にならない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GVG_SILENCE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"妖精の涙（沈黙）",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "沈黙状態にならない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GVG_BLIND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"妖精の涙（暗黒）",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "暗黒状態にならない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_QUEST_BUFF1] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 3,
+	descript = {
+		{
+			"未精製エネルギー",
+			{ 155, 202, 155 }
+		},
+		{
+			"結晶体の蓄積中",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ATK増加" },
+		{ "MATK増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_QUEST_BUFF2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 3,
+	descript = {
+		{
+			"精製されたエネルギー",
+			{ 155, 202, 155 }
+		},
+		{
+			"結晶体の蓄積中",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ATK増加" },
+		{ "MATK増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_QUEST_BUFF3] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 3,
+	descript = {
+		{
+			"高純度エネルギー",
+			{ 155, 202, 155 }
+		},
+		{
+			"結晶体の蓄積中",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ATK増加" },
+		{ "MATK増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JP_OTP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"サポート魔法",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "モンスターを倒した時の" },
+		{ "Base経験値増加" },
+		{ "Job経験値増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPTOLERANCE_LEVELGAP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"リリーフポーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "状態異常に関するBaseLv差を" },
+		{ "緩和するポーション" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DARKCROW] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ダーククロー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "近接物理攻撃で受ける" },
+		{ "ダメージが一定倍率に増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_UNLIMIT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アンリミット",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "遠距離物理攻撃で" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OFFERTORIUM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オフェルトリウム",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ヒール系スキル使用時、" },
+		{ "HP回復量増加" },
+		{ "スキル消費SP増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TELEKINESIS_INTENSE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"テレキネシスインテンス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "特定の念属性魔法の威力増大" },
+		{ "特定の念属性魔法スキル消費SP減少" },
+		{ "詠唱時間減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_KINGS_GRACE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"キングスグレイス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ほとんどの受けるダメージ無効化" },
+		{ "ほとんどの状態異常無効化" },
+		{ "毎秒HP回復" },
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FRIGG_SONG] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"フリッグの歌",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP増加" },
+		{ "毎秒HP回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_2013_VALENTINE1] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "No Text" },
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_2013_VALENTINE2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "No Text" },
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_2013_VALENTINE3] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "No Text" },
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ANTI_M_BLAST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アンチマテリアルブラスト",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "プレイヤー耐性減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ARCWANDCLAN] = {
+	descript = {
+		{
+			"アークワンドクラン",
+			{ 155, 202, 155 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_B_TRAP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"バインド",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動速度減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BEEF_RIB_STEW] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"スペアリブ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BURNT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"獄炎呪",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "火属性モンスターから" },
+		{ "受けるダメージ + 200%" },
+		{ "(プレイヤーのみ)" },
+		{ "火属性攻撃で" },
+		{ "受けるダメージ + 20%" },
+		{ "2秒毎に2000ダメージを受ける" },
+		{ "獄炎呪の増加効果は" },
+		{ "最大5回まで重複する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_C_MARKER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"烙印",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Flee減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHILL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"永久霜",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "獄炎呪状態にならない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHUSEOK_MONDAY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"月の加護",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHUSEOK_TUESDAY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"火の加護",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHUSEOK_WEDNESDAY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"水の加護",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHUSEOK_THURSDAY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"木の加護",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHUSEOK_FRIDAY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"金の加護",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHUSEOK_WEEKEND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"里の加護",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CROSSBOWCLAN] = {
+	descript = {
+		{
+			"クロスボウクラン",
+			{ 155, 202, 155 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CUP_OF_BOZA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ボザのコップ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_E_CHAIN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"エターナルチェーン",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "全ての銃で" },
+		{ "チェーンアクションが" },
+		{ "発動する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FENRIR_CARD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"フェンリルの力",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Matk増加" },
+		{ "固定詠唱時間減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FULL_THROTTLE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"フルスロットル",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "効果発生時、" },
+		{ "HPが 100%回復し、" },
+		{ "フルスロットル状態の" },
+		{ "残り時間と同じ時間の" },
+		{ "移動速度増加(速度変化ポーション(UP))" },
+		{ "状態になる" },
+		{ "効果中、" },
+		{ "全ての基本ステータス増加" },
+		{ "毎秒SP減少" },
+		{ "フルスロットル状態解除時、" },
+		{ "10秒間、リバウンド状態になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GEFFEN_MAGIC1] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"リディアの応援",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Atk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GEFFEN_MAGIC2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ロキの応援",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Matk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GEFFEN_MAGIC3] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ケイオスの応援",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Def増加" },
+		{ "Mdef増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GLASTHEIM_TRANS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"黄昏",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GOLDENMACECLAN] = {
+	descript = {
+		{
+			"ゴールデンメイスクラン",
+			{ 155, 202, 155 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_ICEEXPLO] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"凍結爆弾",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HEAT_BARREL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ヒートバレル",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "追加物理攻撃力増加" },
+		{ "Aspd増加" },
+		{ "固定詠唱時間減少" },
+		{ "Hit減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HEAT_BARREL_AFTER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ヒートバレルペナルティ",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JITTER_BUFF1] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"No Text",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JITTER_BUFF2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"No Text",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JITTER_BUFF3] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"No Text",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JITTER_BUFF4] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"No Text",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JITTER_BUFF5] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"No Text",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JITTER_BUFF6] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"No Text",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JITTER_BUFF7] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"No Text",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JITTER_BUFF8] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"No Text",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JITTER_BUFF9] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"No Text",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JITTER_BUFF10] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"No Text",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JUMPINGCLAN] = {
+	descript = {
+		{
+			"ジャンピングクラン",
+			{ 155, 202, 155 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERSEAEXPUP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 1,
+	descript = {
+		{ "台湾イベントバフ" },
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Base経験値増加" },
+		{ "Job経験値増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_P_ALTER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"プラチナムアルター",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "武器Atk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PACKING_ENVELOPE2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"残影ウォーム",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "今なら残影が" },
+		{ "使える気がする！" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PACKING_ENVELOPE3] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ノピティギウォーム",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "今ならノピティギが" },
+		{ "使える気がする！" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PACKING_ENVELOPE9] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"竜の眷属",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ジラントの眷属である証" },
+		{ "特定のモンスターに対して" },
+		{ "ダメージが増減する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PACKING_ENVELOPE10] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"邪眼の呪い",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "キャラクターの通常移動不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAD_READER_KNIGHT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"皇帝への献身",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "一部のステータスが減少する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PAD_READER_CRUSADER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"魔力空間",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "毎秒一定量HP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PORK_RIB_STEW] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"No Text",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_REBOUND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"リバウンド",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動速度減少" },
+		{ "HP自然回復停止" },
+		{ "SP自然回復停止" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SWORDCLAN] = {
+	descript = {
+		{
+			"ソ\ードクラン",
+			{ 155, 202, 155 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ZONGZI_POUCH_TRANS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 3,
+	descript = {
+		{
+			"端午の節句",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "No Text" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MTF_MARIONETTE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"生存者の証",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "戦闘不能\に" },
+		{ "なっていない証" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MTF_LUDE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"変身中",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_MTF_CRUISER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"生存者の証",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "戦闘不能\に" },
+		{ "なっていない証" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HELM_VERKANA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ベルカナの増幅",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "物理攻撃で与えるダメージ - 50%" },
+		{ "遠距離物理攻撃で与えるダメージ - 50%" },
+		{ "魔法攻撃で与えるダメージ - 50%" },
+		{ "近接物理攻撃を受けた時、" },
+		{ "一定確率でスキル「ミレニアムシールド」が発動" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HELM_RHYDO] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ライゾの増幅",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "絶対にノックバックしない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HELM_TURISUS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"スリサズの増幅",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str + 30" },
+		{ "Int - 30" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HELM_HAGALAS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ハガラズの増幅",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "近接物理攻撃で" },
+		{ "受けたダメージの10%を反射" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HELM_ISIA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"イスの増幅",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "10秒毎にHP500回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HELM_ASIR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"エイシルの増幅",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Atk + 10" },
+		{ "攻撃速度 + 10%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HELM_URJ] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ウルズの増幅",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "10秒毎にSP40回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_EXTRACT_SALAMINE_JUICE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"濃縮サラマインジュース",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROMOTE_HEALTH_RESERCH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"HP増加ポーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ENERGY_DRINK_RESERCH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"SP増加ポーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxSP増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_EXTRACT_WHITE_POTION_Z] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"濃縮ホワイトポーションZ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "HP自然回復量増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VITATA_500] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ビタタ500",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "SP自然回復量増加" },
+		{ "MaxSP増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_EXPIATIO] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"エクスピアティオ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Def一定割合無視" },
+		{ "装備Mdef一定割合無視" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CRUSHSTRIKE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"クラッシュストライク",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "次に与える通常物理攻撃の" },
+		{ "威力増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_EXEEDBREAK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"イクシードブレイク",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "次に与える通常物理攻撃の" },
+		{ "威力増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STASIS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"魔力封印",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "多くのスキルが使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MAGNETICFIELD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マグネティックフィールド",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "毎秒SP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VACUUM_EXTREME] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"バキュームエクストリーム",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BODYSTATE_STONECURSE] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"石化",
+			{ 250, 100, 100 }
+		},
+		{ "鎧属性付与" },
+		{ "地属性" },
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" },
+		{ "装備Def - 50%" },
+		{ "装備Mdef + 25%" },
+		{ "HP自然回復停止" },
+		{ "SP自然回復停止" },
+		{ "MaxHPの25%まで" },
+		{ "5秒毎にHP - 1%" },
+		{ "ダメージを受けた場合解除" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BODYSTATE_FREEZING] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"凍結",
+			{ 250, 100, 100 }
+		},
+		{ "鎧属性付与" },
+		{ "水属性" },
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" },
+		{ "Fleeによる回避不可" },
+		{ "装備Def - 50%" },
+		{ "装備Mdef + 25%" },
+		{ "ダメージを受けた場合解除" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BODYSTATE_STUN] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"スタン",
+			{ 250, 100, 100 }
+		},
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" },
+		{ "Fleeによる回避不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BODYSTATE_SLEEP] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"睡眠",
+			{ 250, 100, 100 }
+		},
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" },
+		{ "Fleeによる回避不可" },
+		{ "クリティカル攻撃を" },
+		{ "受ける確率2倍" },
+		{ "ダメージを受けた場合解除" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BODYSTATE_STONECURSE_ING] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"石化進行中",
+			{ 250, 100, 100 }
+		},
+		{ "一定時間後、石化状態に変わる" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BODYSTATE_BURNNING] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"発火",
+			{ 250, 100, 100 }
+		},
+		{ "3秒毎にダメージを受ける" },
+		{ "装備Mdef - 25%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BODYSTATE_IMPRISON] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"ホワイトインプリズン",
+			{ 250, 100, 100 }
+		},
+		{ "特定の念属性魔法攻撃以外の" },
+		{ "ほとんどの受けるダメージ無効化" },
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "アイテム使用不可" },
+		{ "解除時に固定ダメージを受ける" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HEALTHSTATE_POISON] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"毒",
+			{ 250, 100, 100 }
+		},
+		{ "MaxHPの25%まで" },
+		{ "毎秒一定量HP減少" },
+		{ "装備Def - 25%" },
+		{ "HP自然回復停止" },
+		{ "SP自然回復停止" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HEALTHSTATE_CURSE] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"呪い",
+			{ 250, 100, 100 }
+		},
+		{ "移動速度減少" },
+		{ "追加物理攻撃力 - 25%" },
+		{ "Lukが0になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HEALTHSTATE_SILENCE] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"沈黙",
+			{ 250, 100, 100 }
+		},
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HEALTHSTATE_CONFUSION] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"混乱",
+			{ 250, 100, 100 }
+		},
+		{ "移動時、ランダムな方向へ移動" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HEALTHSTATE_HEAVYPOISON] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"猛毒",
+			{ 250, 100, 100 }
+		},
+		{ "効果発生時、" },
+		{ "一定量HP減少" },
+		{ "効果中、" },
+		{ "毎秒一定量HP減少" },
+		{ "MaxHPの25%まで" },
+		{ "装備Def - 25%" },
+		{ "HP自然回復停止" },
+		{ "SP自然回復停止" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HEALTHSTATE_FEAR] = {
+	haveTimeLimit = 0,
+	descript = {
+		{
+			"恐怖",
+			{ 250, 100, 100 }
+		},
+		{ "効果発生時、" },
+		{ "2秒間移動不可" },
+		{ "効果中、" },
+		{ "Hit - 20%" },
+		{ "Flee - 20%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CURSEDCIRCLE_TARGET] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"呪縛陣",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MANDRAGORA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"精神衝撃",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "効果発生時、SP減少" },
+		{ "効果中、" },
+		{ "Int減少" },
+		{ "固定詠唱増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTACK_PROPERTY_NOTHING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "無属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTACK_PROPERTY_WATER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "水属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTACK_PROPERTY_GROUND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "地属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTACK_PROPERTY_FIRE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "火属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTACK_PROPERTY_WIND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "風属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTACK_PROPERTY_POISON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "毒属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTACK_PROPERTY_SAINT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "聖属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTACK_PROPERTY_DARKNESS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "闇属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTACK_PROPERTY_TELEKINESIS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "念属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTACK_PROPERTY_UNDEAD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"武器属性付与",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "不死属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RESIST_PROPERTY_NOTHING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"無属性攻撃耐性",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_RESIST_PROPERTY_WATER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"水属性攻撃耐性",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_RESIST_PROPERTY_GROUND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"地属性攻撃耐性",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_RESIST_PROPERTY_FIRE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"火属性攻撃耐性",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_RESIST_PROPERTY_WIND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"風属性攻撃耐性",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_RESIST_PROPERTY_POISON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"毒属性攻撃耐性",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_RESIST_PROPERTY_SAINT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"聖属性攻撃耐性",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_RESIST_PROPERTY_DARKNESS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"闇属性攻撃耐性",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_RESIST_PROPERTY_TELEKINESIS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"念属性攻撃耐性",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_RESIST_PROPERTY_UNDEAD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"不死属性攻撃耐性",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_ITEM_ATKMAX] = {
+	descript = {
+		{
+			"MAX ATK",
+			{ 190, 190, 250 }
+		},
+		{ "最大物理ダメージ" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ITEM_ATKMIN] = {
+	descript = {
+		{
+			"MIN ATK",
+			{ 190, 190, 250 }
+		},
+		{ "最小物理ダメージ" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ITEM_MATKMAX] = {
+	descript = {
+		{
+			"MAX MATK",
+			{ 190, 190, 250 }
+		},
+		{ "最大魔法ダメージ" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ITEM_MATKMIN] = {
+	descript = {
+		{
+			"MIN MATK",
+			{ 190, 190, 250 }
+		},
+		{ "最小魔法ダメージ" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GS_MAGICAL_BULLET] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "マジカルバレット", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "通常物理攻撃ダメージに" },
+		{ "魔法攻撃力を加える" }
+	}
+}
+StateIconList[EFST_IDs.EFST_H_MINE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"リモート爆弾",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "爆弾が付着した状態" },
+		{ "フリッカーによって" },
+		{ "追加ダメージが発生する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PRONTERA_JP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"プロンテラ軍丸薬",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "プロンテラ軍ポーションと" },
+		{ "ホワイトスリムポーションを" },
+		{ "使用した時の" },
+		{ "回復量増加" },
+		{ "バトルウォリアー" },
+		{ "デュアルキャノン" },
+		{ "インフィニティ" },
+		{ "マザーネット" },
+		{ "アルドール" },
+		{ "ディルビオ" },
+		{ "プロセラ" },
+		{ "サーペンス" },
+		{ "テレモトゥス" },
+		{ "ヘルツリー" },
+		{ "ウドゥンフェアリー" },
+		{ "ウドゥンウォリアー" },
+		{ "クリーパーから" },
+		{ "受けるダメージ - 90%" },
+		{ "うずくまるの" },
+		{ "再使用待機時間 + 12秒" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABYSS_001] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"死の呪い",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "3秒毎一定量HP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABYSS_002] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"闇の王冠",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "グローザが霧状態の時に" },
+		{ "物理・魔法ダメージを" },
+		{ "与えることができる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABYSS_003] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"光の王冠",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "グローザが闇状態の時に" },
+		{ "物理・魔法ダメージを" },
+		{ "与えることができる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABYSS_004] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"霧の王冠",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "グローザが光状態の時に" },
+		{ "物理・魔法ダメージを" },
+		{ "与えることができる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABYSS_005] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"魔力空間",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "毎秒一定量HP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABYSS_006] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"皇帝への献身",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "一部のステータスが減少する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABYSS_007] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"竜の眷属",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ジラントの眷属である証" },
+		{ "特定のモンスターに対して" },
+		{ "ダメージが増減する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABYSS_008] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"邪眼の呪い",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "キャラクターの通常移動不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SU_STOOP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"うずくまる",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃で受けるダメージ - 80%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CATNIPPOWDER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"イヌハッカシャワー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "武器攻撃力 - 30%" },
+		{ "魔法攻撃の威力 - 30%" },
+		{ "移動速度減少" },
+		{ "HPSP自然回復力 + 50%" },
+		{ "SP自然回復力 + 50%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SV_ROOTTWIST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マタタビの根っこ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動不可" },
+		{ "毎秒ダメージを受ける" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BITESCAR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"タロウの傷",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "効果発生時、" },
+		{ "スタン状態になる" },
+		{ "効果中、" },
+		{ "タロウの傷で" },
+		{ "受けるダメージ2倍" },
+		{ "毎秒HP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ARCLOUSEDASH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"アクラウスダッシュ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動速度増加" },
+		{ "Agi増加" },
+		{ "ドラムの場合、" },
+		{ "遠距離物理攻撃で" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TUNAPARTY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"マグロシールド",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ダメージから身を守る" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHRIMP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"エビ三昧",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "武器攻撃力増加" },
+		{ "魔法攻撃で与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FRESHSHRIMP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"新鮮なエビ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "一定時間毎にHP回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SUHIDE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"かくれる",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ボスを除くモンスターに見つからない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DORAM_BUF_01] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"カルーニャミルク",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "5秒毎にHP + 500" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DORAM_BUF_02] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"バジル",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "5秒毎にSP + 10" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SPRITEMABLE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"にゃん魂",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP + 2000" },
+		{ "MaxSP + 200" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HISS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"警戒",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動速度増加" },
+		{ "一定時間、完全回避増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NYANGGRASS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ニャングラス",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "装備Def減少" },
+		{ "装備Mdef減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHATTERING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"チャタリング",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動速度増加" },
+		{ "装備Atk増加" },
+		{ "装備Matk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GROOMING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"グルーミング",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "効果発生時、" },
+		{ "スタン・凍結・石化進行中・" },
+		{ "石化・睡眠・沈黙・出血・" },
+		{ "毒・恐怖・精神衝撃・" },
+		{ "冷凍・氷結・深い睡眠" },
+		{ "状態を解除" },
+		{ "効果中、" },
+		{ "Flee増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROTECTIONOFSHRIMP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"エビパーティー",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "SP自然回復量増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LEAPIMPAIRED] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"跳躍阻害",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "移動を伴う一部のスキルの" },
+		{ "再使用待機時間が増加する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHEERUP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ママ、パパ、頑張って",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "全ての基本ステータス + 3" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JPNONLY_TACTICS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"猪突猛進",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "HPが1000上がる度に" },
+		{ "アニマル系スキルで" },
+		{ "与えるダメージ + 1%" },
+		{ "ただし、HPは[猪突猛進]状態が" },
+		{ "付与された際の値を参照し、" },
+		{ "ダメージの増加は最大100%まで" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AIRSHIP_PIPE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Atk増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Atk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PIECES_OF_SHADOW] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Def増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Def増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WEAPONBLOCK_ON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "カウンタースラッシュ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "カウンタースラッシュ" },
+		{ "発動可能\" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HELPANGEL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "天使さま助けて", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "毎秒HP1000回復" },
+		{ "毎秒SP350回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_KAGEMUSYA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"幻術 -分身-",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "ダブルアタックが" },
+		{ "全ての武器で使用可能\" },
+		{ "爆裂苦無" },
+		{ "八方苦無" },
+		{ "十\文字斬り" },
+		{ "風魔手裏剣 -乱華-" },
+		{ "で与えるダメージ増加" },
+		{ "毎秒SP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RENOVATIO] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"レノヴァティオ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "5秒毎にHP回復" },
+		{ "不死属性の場合、" },
+		{ "回復しない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ALL_STAT_DOWN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"オールステータスダウン",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "全ての基本ステータスが減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GRADUAL_GRAVITY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"重力増加",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "毎秒HPが大幅に減少する" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BLAZE_BEAD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"破滅の呪印",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "攻撃を受けると" },
+		{ "防御効果が除去される" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BREEZE_BEAD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"属性耐性低下",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "一部または全ての" },
+		{ "属性攻撃から" },
+		{ "受けるダメージが増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PC_STOP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"移動不可",
+			{ 250, 100, 100 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "クリックによる" },
+		{ "キャラクターの移動不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SUNSTANCE] = {
+	descript = {
+		{ "太陽の構\え", COLOR_TITLE_TOGGLE },
+		{ "武器攻撃力増加" },
+		{ "太陽系列スキルの使用条件" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LUNARSTANCE] = {
+	descript = {
+		{ "月の構\え", COLOR_TITLE_TOGGLE },
+		{ "MaxHP増加" },
+		{ "月系列スキルの使用条件" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STARSTANCE] = {
+	descript = {
+		{ "星の構\え", COLOR_TITLE_TOGGLE },
+		{ "攻撃速度増加" },
+		{ "星系列スキルの使用条件" }
+	}
+}
+StateIconList[EFST_IDs.EFST_UNIVERSESTANCE] = {
+	descript = {
+		{ "宇宙の構\え", COLOR_TITLE_TOGGLE },
+		{ "全ての基本ステータス増加" },
+		{ "宇宙系列スキルの使用条件" },
+		{ "太陽の光を除く太陽系列スキルの使用条件" },
+		{ "月の光を除く月系列スキルの使用条件" },
+		{ "星の光を除く星系列スキルの使用条件" },
+		{}
+	}
+}
+StateIconList[EFST_IDs.EFST_LIGHTOFSUN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "太陽の光", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "太陽爆発で与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LIGHTOFMOON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "月の光", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "満月脚で与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LIGHTOFSTAR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "星の光", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "流星落下で与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FLASHKICK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "星の印", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "流星落下の発動対象になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NEWMOON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "朔月", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "%s", COLOR_TIME },
+		{ "ボスを除くモンスターに見つからない" },
+		{ "毎秒SP消費" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CREATINGSTAR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "創星の書", COLOR_TITLE_DEBUFF },
+		{ "移動速度減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GRAVITYCONTROL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "重力調節", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "ほとんどの受けるダメージ無効化" },
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOULCOLLECT] = {
+	descript = {
+		{ "魂の蓄積", COLOR_TITLE_TOGGLE },
+		{ "一定時間毎に" },
+		{ "ソ\ウルエナジーを集める" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOULREAPER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "魂の収穫", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "攻撃命中時、一定確率で" },
+		{ "ソ\ウルエナジーを集める" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOULUNITY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "魂の連結", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "3秒毎にHP回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOULSHADOW] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "影の魂", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Cri増加" },
+		{ "Aspd増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOULFAIRY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "妖精の魂", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "装備Matk増加" },
+		{ "詠唱時間減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOULFALCON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "鷹の魂", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "装備Atk増加" },
+		{ "Hit増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOULGOLEM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ゴーレムの魂", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "装備Def増加" },
+		{ "装備Mdef増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOULDIVISION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "魂の分裂", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "スキルディレイ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FALLINGSTAR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "流星落下", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "通常近接物理攻撃時、" },
+		{ "一定確率で星の印の" },
+		{ "対象に流星が落ちる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DIMENSION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "次元の書", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "新星爆発、星帝降臨の使用時に" },
+		{ "特殊効果発動" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOULLINK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "職業系の魂", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOULCURSE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "死霊憑依", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "闇属性耐性減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DIMENSION1] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "次元の書(新星爆発)", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "新星爆発の再使用待機時間と" },
+		{ "スキル使用不可ペナルティが" },
+		{ "発生しない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOVAEXPLOSING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "新星爆発", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STEAMPACK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"収監中",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		}
+	}
+}
+StateIconList[EFST_IDs.EFST_PACKING_ENVELOPE1] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"福音",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "既婚者に6月の加護を！" },
+		{ "一部の結婚スキルを強化" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_STR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Str増加(料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_AGI] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Agi増加(料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Agi増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_VIT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Vit増加(料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Vit増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_INT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Int増加(料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Int増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_DEX] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Dex増加(料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Dex増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_LUK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Luk増加(料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Luk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_STR_CASH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Str増加(スペシャル料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Str増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_AGI_CASH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Agi増加(スペシャル料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Agi増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_VIT_CASH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Vit増加(スペシャル料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Vit増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_INT_CASH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Int増加(スペシャル料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Int増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_DEX_CASH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Dex増加(スペシャル料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Dex増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FOOD_LUK_CASH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"Luk増加(スペシャル料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Luk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ALMIGHTY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"攻撃力増加(スペシャル料理)",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Atk増加" },
+		{ "Matk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ALL_LIGHTGUARD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"光の盾",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "MaxHP10%相当以上の" },
+		{ "ダメージを約10%に軽減する" },
+		{ "この効果は軽減の発生有無に" },
+		{ "関わらず、" },
+		{ "1秒間は再発動しない" },
+		{ "ダメージの軽減効果は" },
+		{ "固定ダメージなどの" },
+		{ "一部の効果には適用されない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SUB_WEAPONPROPERTY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "属性物理攻撃力増加", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "属性物理攻撃力増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STONESKIN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ストーンスキン", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "物理攻撃で受けるダメージ減少" },
+		{ "魔法攻撃で受けるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AURABLADE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "オーラブレイド", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "追加Atk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LKCONCENTRATION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "コンセントレイション", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "追加物理攻撃力増加" },
+		{ "Hit増加" },
+		{ "装備Def減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NEEDLE_OF_PARALYZE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "麻痺", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "移動不可" },
+		{ "装備Def減少" },
+		{ "装備Mdef減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LOCKON_LASER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ロックオン", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_SERVANTWEAPON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "サーヴァントウェポン", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "通常物理攻撃時、一定確率で" },
+		{ "武器体を1個消費して" },
+		{ "追加攻撃を与える" },
+		{ "一定間隔で武器体を集める" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SERVANT_SIGN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "サーヴァントサイン", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "サーヴァントウェポン：ファントム" },
+		{ "サーヴァントウェポン：デモリッション" },
+		{ "の発動対象になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHARGINGPIERCE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "チャージングピアース", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ピアース" },
+		{ "スパイラルピアース" },
+		{ "ハンドレッドスピア" },
+		{ "マッドネスクラッシャーを使用時、" },
+		{ "チャージングカウンター累積" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DRAGONIC_AURA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ドラゴニックオーラ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ドラゴンブレスで与えるダメージ増加" },
+		{ "ハンドレッドスピアの威力増大" },
+		{ "ドラゴニックブレスの威力増大" },
+		{ "ドラゴニックピアースの威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VIGOR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ヴィゴール", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "攻撃時、HPを消費" },
+		{ "通常近接物理攻撃の" },
+		{ "追加物理攻撃力増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DEADLY_DEFEASANCE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "デッドリープロジェクション", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "魔法無効化効果が発生しない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CLIMAX_DES_HU] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "クライマックスハリケーン", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "装備Matk増加" },
+		{ "風属性魔法で" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CLIMAX] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "クライマックス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "オールブルーム" },
+		{ "クリスタルインパクト" },
+		{ "ディストラクティブハリケーン" },
+		{ "バイオレントクエイク" },
+		{ "にて特殊効果発生" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CLIMAX_EARTH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "クライマックスクエイク", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "地属性耐性減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CLIMAX_BLOOM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "クライマックスブルーム", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "火属性耐性減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CLIMAX_CRYIMP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "クライマックスインパクト", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "装備Def増加" },
+		{ "装備Mdef増加" },
+		{ "水属性耐性増加" },
+		{ "水属性魔法で" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GUARD_STANCE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ガードスタンス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "装備Def増加" },
+		{ "装備Atk減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ATTACK_STANCE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アタックスタンス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "P.Atk増加、" },
+		{ "S.Matk増加" },
+		{ "装備Def減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GUARDIAN_S] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ガーディアンシールド", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "物理ダメージや" },
+		{ "近接・遠距離固定ダメージ" },
+		{ "を受けた時、" },
+		{ "耐久値分のダメージを受けない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_REBOUND_S] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "リバウンドシールド", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ディボーションで" },
+		{ "受けるダメージ減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HOLY_S] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ホーリーシールド", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "闇属性耐性増加" },
+		{ "不死属性耐性増加" },
+		{ "聖属性魔法で" },
+		{ "与えるダメージ増加" },
+		{ "クロスレインの威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ULTIMATE_S] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アルティメットサクリファイス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "戦闘不能\になった時、すぐに復活し、" },
+		{ "HP・SPを 100%回復する" },
+		{ "その後、" },
+		{ "アルティメットサクリファイス" },
+		{ "状態は解除される" },
+		{ "カイゼル状態になると" },
+		{ "アルティメットサクリファイス" },
+		{ "状態が解除される" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SPEAR_SCAR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グランドジャッジメント", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "バニシングポイントの威力増大" },
+		{ "キャノンスピアの威力増大" },
+		{ "レイディアントスピアの威力増大" },
+		{ "インペリアルクロスの威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHIELD_POWER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "シールドシューティング", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "シールドチェーンの威力増大" },
+		{ "シールドプレスの威力増大" },
+		{ "アースドライブの威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_POWERFUL_FAITH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "強靭な信念", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "装備Atk増加" },
+		{ "P.Atk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SINCERE_FAITH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "忠実な信念", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Aspd増加" },
+		{ "必中攻撃の確率増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FIRM_FAITH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "堅固な信念", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "MaxHP増加" },
+		{ "Res増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HOLY_OIL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "聖油洗礼", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "遠距離物理攻撃で受ける" },
+		{ "ダメージが一定倍率に増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FIRST_BRAND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "第一撃：烙印", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "第二撃烙印系スキルの" },
+		{ "発動対象になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SECOND_BRAND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "第二撃：烙印", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "第二撃烙印・第三撃烙印系スキルの" },
+		{ "発動対象になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SECOND_JUDGE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "第二章：審判者", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "大纏崩捶、閃光連撃の" },
+		{ "気弾消費無し" }
+	}
+}
+StateIconList[EFST_IDs.EFST_THIRD_EXOR_FLAME] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "最終章：滅魔の炎", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "大纏崩捶、閃光連撃、號砲の" },
+		{ "気弾消費無し" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FIRST_FAITH_POWER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "第一章：信念の力", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "大纏崩捶の気弾消費無し" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MASSIVE_F_BLASTER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "炎火滅魔神弾", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "雷光弾、爆気散弾の" },
+		{ "気弾消費無し" },
+		{ "烈火気弾の威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHADOW_EXCEED] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "シャドウエクシード", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "サベージインパクトの威力増大" },
+		{ "エターナルスラッシュの威力増大" },
+		{ "クロススラッシュの威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DANCING_KNIFE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ダンシングナイフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "自身の周辺にダメージを与える" }
+	}
+}
+StateIconList[EFST_IDs.EFST_POTENT_VENOM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ポテントベナム", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Res一定割合無視" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHADOW_SCAR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "シャドウペイン", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "受ける近接物理ダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHADOW_WEAPON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "エンチャンティングシャドウ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "一定確率で対象に" },
+		{ "シャドウペインを与える" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MEDIALE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "メディアリボトゥム", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "自身と周辺のパーティーメンバーを" },
+		{ "一定間隔でHP回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_A_VITA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アルグトゥスヴィタ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Mres一定割合無視" }
+	}
+}
+StateIconList[EFST_IDs.EFST_A_TELUM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アルグトゥステルム", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Res一定割合無視" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PRE_ACIES] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "プレセンスアキエース", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "C.Rate増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_COMPETENTIA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "コンペテンティア", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "P.Atk増加" },
+		{ "S.Matk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RELIGIO] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "レリギオ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Sta増加" },
+		{ "Wis増加" },
+		{ "Spl増加" },
+		{ "サンドフェスティバル状態になると" },
+		{ "レリギオ状態が" },
+		{ "解除される" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BENEDICTUM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ベネディクトゥム", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Pow増加" },
+		{ "Con増加" },
+		{ "Crt増加" },
+		{ "マリンフェスティバル状態になると" },
+		{ "ベネディクトゥム状態が" },
+		{ "解除される" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WINDSIGN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ウィンドサイン", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "ウィンドホークから" },
+		{ "弓による通常遠距離物理攻撃を" },
+		{ "受けた時、相手は" },
+		{ "一定確率でAP回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CALAMITYGALE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "カラミティゲイル", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "クレッシブボルトの威力増大" },
+		{ "ゲイルストームが" },
+		{ "自身のクリティカル率で、" },
+		{ "クリティカル攻撃となる" },
+		{ "対象が動物・魚貝形の場合、" },
+		{ "クレッシブボルト、" },
+		{ "ゲイルストームの威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MYSTIC_SYMPHONY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ミスティックシンフォニー", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "サウンドブレンド、" },
+		{ "リズムシューティング、" },
+		{ "ロゼブロッサム" },
+		{ "で与えるダメージ増加" },
+		{ "リズミカルウェーブの威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_KVASIR_SONATA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ソ\ナタオブクヴァシル", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "2次職や3次職の" },
+		{ "合奏を1人で使用できる" },
+		{ "グレートエコーを使用した時、" },
+		{ "パートナーがいる場合と" },
+		{ "同じ効果になる" },
+		{ "4次職の演奏を使用した時、" },
+		{ "トルバドゥールかトルヴェールの" },
+		{ "異性のパーティーメンバーがいる場合と" },
+		{ "同じ効果になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOUNDBLEND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "サウンドブレンド", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "振動残響" },
+		{ "メタリックサウンド" },
+		{ "リズムシューティング" },
+		{ "メタリックフューリーを" },
+		{ "受けた場合、" },
+		{ "相手の威力増大" },
+		{ "ロゼブロッサムの" },
+		{ "指定対象になった場合、" },
+		{ "相手の威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GEF_NOCTURN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ゲフェニアノクターン", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "Mres減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AIN_RHAPSODY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "鉱員のラプソ\ディ", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "Res減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MUSICAL_INTERLUDE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ミュージカルインタールード", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Res増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_JAWAII_SERENADE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "夕焼けのセレナーデ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "S.Matk増加" },
+		{ "移動速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PRON_MARCH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "プロンテラマーチ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "P.Atk増加" },
+		{ "移動速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHADOW_STRIP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ストリップシャドウ", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "効果発生時、" },
+		{ "シャドウ装備全て解除" },
+		{ "効果中、" },
+		{ "シャドウ装備の装備不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABYSS_DAGGER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アビスダガー", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "フェイタルメナスの威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABYSSFORCEWEAPON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "フロムジアビス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "通常物理攻撃時、一定確率で" },
+		{ "アビス球体を1個消費して" },
+		{ "対象と周辺にダメージを与える" },
+		{ "通常物理攻撃時、一定確率で" },
+		{ "アビススクエアが習得レベルで発動" },
+		{ "一定間隔でアビス球体を集める" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ABYSS_SLAYER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アビススレイヤー", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "P.Atk増加" },
+		{ "S.Matk増加" },
+		{ "Hit増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AXE_STOMP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アックスストンプ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "アックストルネードの威力増大" },
+		{ "マイティスマッシュの威力増大" },
+		{ "パワフルスイングの威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_A_MACHINE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "攻撃装置有効化", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "自身の周辺にダメージを与える" }
+	}
+}
+StateIconList[EFST_IDs.EFST_D_MACHINE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "防御装置有効化", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "装備Def増加" },
+		{ "Res増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SPELL_ENCHANTING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "スペルエンチャンティング", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "S.Matk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_CONFLAGRATION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "火災", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "鎧属性付与" },
+		{ "火属性" },
+		{ "3秒毎に現在HP15%減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_DEEPBLIND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "漆黒", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "視野減少" },
+		{ "Fleeが0になる" },
+		{ "完全回避が0になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_DEEPSILENCE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "静寂", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "スキル使用不可" },
+		{ "Aspd - 50" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_LASSITUDE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "無気力", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "Criが0になる" },
+		{ "移動速度減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_FROSTBITE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "急冷", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "鎧属性付与" },
+		{ "水属性" },
+		{ "移動不可" },
+		{ "アイテム使用不可" },
+		{ "スキル使用不可" },
+		{ "Def - 50%" },
+		{ "Mdef - 50%" },
+		{ "ダメージを受けた場合解除" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_SWOONING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "失神", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "移動不可" },
+		{ "アイテム使用不可" },
+		{ "スキル使用不可" },
+		{ "ダメージを5倍受ける" },
+		{ "ダメージを受けた場合解除" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_LIGHTNINGSTRIKE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "激流", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "鎧属性付与" },
+		{ "風属性" },
+		{ "移動不可" },
+		{ "アイテム使用不可" },
+		{ "スキル使用不可" },
+		{ "地属性耐性 - 25%" },
+		{ "ダメージを受けた場合解除" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_CRYSTALLIZATION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "結晶化", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "鎧属性付与" },
+		{ "地属性" },
+		{ "移動不可" },
+		{ "アイテム使用不可" },
+		{ "スキル使用不可" },
+		{ "Mdefが0になる" },
+		{ "ダメージを受けた場合解除" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_MISFORTUNE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "不幸", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "Hitが0になる" },
+		{ "一定確率でスキル使用失敗" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_DEADLYPOISON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "強毒", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "Defが0になる" },
+		{ "毒属性耐性 - 25%" },
+		{ "毎秒現在HP10%減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_DEPRESSION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "憂鬱", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "スキル消費SP量3倍" },
+		{ "3秒毎に現在SP1%減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HANDICAPSTATE_HOLYFLAME] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "聖火", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "魔法ダメージをHP回復に変換する" },
+		{ "魔法以外のダメージを2倍受ける" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PROTECTSHADOWEQUIP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "フルシャドウチャージ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "シャドウ装備の" },
+		{ "破損や解除効果を防ぐ" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RESEARCHREPORT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "リサーチレポート", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "アシディファイドゾーンの" },
+		{ "アイテム消費が1個になる" },
+		{ "アシディファイドゾーンの威力増大" },
+		{ "エクスプロッシブパウダーの威力増大" },
+		{ "メイヘミックソ\ーンズの威力増大" },
+		{ "ダストエクスプロージョンの威力増大" },
+		{ "敵が無・植物形モンスターの場合、" },
+		{ "アシディファイドゾーンの" },
+		{ "威力さらに増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BO_HELL_DUSTY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ヘルダスティ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "無・植物形モンスターに" },
+		{ "与えるダメージ増加" },
+		{ "遠距離物理攻撃で" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RUSH_QUAKE1] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "クエイク", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "物理攻撃で受ける" },
+		{ "ダメージが一定倍率に増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RUSH_QUAKE2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ラッシュ", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "近接・遠距離物理攻撃で" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_EP16_DEF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "神力", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "BaseLvが10上がる度に追加で" },
+		{ "全ての基本ステータス + 1" },
+		{ "MaxHP + 1% , Flee + 10" },
+		{ "Atk + 10 , Matk + 10" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOEQUIPWEAPON2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ストリップシャドウウェポン", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "効果発生時、" },
+		{ "シャドウ装備の" },
+		{ "右手解除" },
+		{ "効果中、" },
+		{ "シャドウ装備の" },
+		{ "右手装備不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOEQUIPARMOR2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ストリップシャドウアーマー", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "効果発生時、" },
+		{ "シャドウ装備の" },
+		{ "鎧解除" },
+		{ "効果中、" },
+		{ "シャドウ装備の" },
+		{ "鎧装備不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOEQUIPSHIELD2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ストリップシャドウシールド", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "効果発生時、" },
+		{ "シャドウ装備の" },
+		{ "左手解除" },
+		{ "効果中、" },
+		{ "シャドウ装備の" },
+		{ "左手装備不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOEQUIPSHOES2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ストリップシャドウシューズ", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "効果発生時、" },
+		{ "シャドウ装備の" },
+		{ "靴解除" },
+		{ "効果中、" },
+		{ "シャドウ装備の" },
+		{ "靴装備不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOEQUIPPENDANT2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ストリップシャドウアクセサリー2", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "効果発生時、" },
+		{ "シャドウ装備の" },
+		{ "アクセサリー2解除" },
+		{ "効果中、" },
+		{ "シャドウ装備の" },
+		{ "アクセサリー2装備不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOEQUIPEARING2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ストリップシャドウアクセサリー1", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "効果発生時、" },
+		{ "シャドウ装備の" },
+		{ "アクセサリー1解除" },
+		{ "効果中、" },
+		{ "シャドウ装備の" },
+		{ "アクセサリー1装備不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOEQUIPFULL2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ストリップシャドウ", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "効果発生時、" },
+		{ "シャドウ装備全て解除" },
+		{ "効果中、" },
+		{ "シャドウ装備の装備不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CURSE_R_CUBE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "カーズオブレッドキューブ", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_CURSE_B_CUBE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "カーズオブブルーキューブ", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_SWEETSFAIR_ATK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ロイヤル・スウィーツ",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "食べたロイヤル・スウィーツに" },
+		{ "応じた効果が得られる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PACKING_ENVELOPE5] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ヒール系スキル使用時、" },
+		{ "HP回復量 + 10%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PACKING_ENVELOPE6] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "無属性魔法攻撃で" },
+		{ "与えるダメージ + 5%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PACKING_ENVELOPE7] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "遠距離物理攻撃で" },
+		{ "与えるダメージ + 5%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PACKING_ENVELOPE8] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "SP自然回復量 + 50%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK001] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ヒール系スキル使用時、" },
+		{ "HP回復量 + 10%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK002] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "無属性魔法攻撃で" },
+		{ "与えるダメージ + 5%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK003] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "遠距離物理攻撃で" },
+		{ "与えるダメージ + 5%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK004] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "SP自然回復量 + 50%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK006] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "近距離物理攻撃で" },
+		{ "与えるダメージ + 5%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK007] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "聖属性魔法攻撃で" },
+		{ "与えるダメージ + 5%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK005] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "攻撃速度 + 5%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK008] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "クリティカル攻撃で" },
+		{ "与えるダメージ + 10%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_VR_BOOK009] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幻想叢書バフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Def + 100" },
+		{ "Mdef + 10" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BATH_FOAM_A] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "特定のモンスターに与えるダメージ増減", COLOR_TITLE_TWOSIDES },
+		{ "%s", COLOR_TIME },
+		{ "特定のモンスターに" },
+		{ "与えるダメージが" },
+		{ "増加または減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BATH_FOAM_B] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "特定のモンスターから受けるダメージ増減", COLOR_TITLE_TWOSIDES },
+		{ "%s", COLOR_TIME },
+		{ "特定のモンスターから" },
+		{ "受けるダメージが" },
+		{ "増加または減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RISING_SUN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "日出", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_NOON_SUN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "正午", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_SUNSET_SUN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "日没", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_RISING_MOON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "月出", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_MIDNIGHT_MOON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "正子", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_DAWN_MOON] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "月没", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_SKY_ENCHANT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "天気の身", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "太天一陽の使用条件" },
+		{ "天陽の使用条件" },
+		{ "太天一月の使用条件" },
+		{ "天月の使用条件" },
+		{ "天気身陽の使用条件" },
+		{ "天気身月の使用条件" },
+		{ "天星の行の使用条件" },
+		{ "太天一陽・天陽が" },
+		{ "クリティカル影響を受ける" },
+		{ "太天一月の威力増大" },
+		{ "天月の威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TALISMAN_OF_PROTECTION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "守護符", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "3秒毎にHP回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TALISMAN_OF_WARRIOR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "武士符", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "P.Atk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TALISMAN_OF_MAGICIAN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "法師符", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "S.Matk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TALISMAN_OF_FIVE_ELEMENTS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "五行符", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "物理・魔法攻撃時、" },
+		{ "火・水・風・地・無属性" },
+		{ "モンスターに与える" },
+		{ "ダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_T_FIRST_GOD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "青龍符", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "白虎符状態の付与条件" }
+	}
+}
+StateIconList[EFST_IDs.EFST_T_SECOND_GOD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "白虎符", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "朱雀符状態の付与条件" }
+	}
+}
+StateIconList[EFST_IDs.EFST_T_THIRD_GOD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "朱雀符", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "玄武符状態の付与条件" }
+	}
+}
+StateIconList[EFST_IDs.EFST_T_FOURTH_GOD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "玄武符", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "四方五行陣の使用条件" }
+	}
+}
+StateIconList[EFST_IDs.EFST_T_FIVETH_GOD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "四方五行陣", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "S.Matk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HEAVEN_AND_EARTH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "天地神霊", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "近接物理・遠距離物理・" },
+		{ "全ての属性魔法攻撃で" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HOGOGONG] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "タイガーハウリング", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "タイガービートの" },
+		{ "発動対象になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MARINE_FESTIVAL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "マリンフェスティバル", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Pow増加" },
+		{ "Con増加" },
+		{ "Crt増加" },
+		{ "ベネディクトゥム状態になると" },
+		{ "マリンフェスティバル状態が" },
+		{ "解除される" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SANDY_FESTIVAL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "サンドフェスティバル", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Sta増加" },
+		{ "Wis増加" },
+		{ "Spl増加" },
+		{ "レリギオ状態になると" },
+		{ "サンドフェスティバル状態が" },
+		{ "解除される" }
+	}
+}
+StateIconList[EFST_IDs.EFST_KI_SUL_RAMPAGE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "タートルランページ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "スキル使用不可" },
+		{ "自身の周辺の" },
+		{ "自身を除く" },
+		{ "パーティーメンバーが" },
+		{ "毎秒AP一定量回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_COLORS_OF_HYUN_ROK_1] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "レインボーホーン", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "イヌハッカメテオ" },
+		{ "ディアーキャノン" },
+		{ "ディアーブリーズ" },
+		{ "ディアースピリットパワー" },
+		{ "の攻撃属性が水属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_COLORS_OF_HYUN_ROK_2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "レインボーホーン", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "イヌハッカメテオ" },
+		{ "ディアーキャノン" },
+		{ "ディアーブリーズ" },
+		{ "ディアースピリットパワー" },
+		{ "の攻撃属性が風属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_COLORS_OF_HYUN_ROK_3] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "レインボーホーン", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "イヌハッカメテオ" },
+		{ "ディアーキャノン" },
+		{ "ディアーブリーズ" },
+		{ "ディアースピリットパワー" },
+		{ "の攻撃属性が地属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_COLORS_OF_HYUN_ROK_4] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "レインボーホーン", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "イヌハッカメテオ" },
+		{ "ディアーキャノン" },
+		{ "ディアーブリーズ" },
+		{ "ディアースピリットパワー" },
+		{ "の攻撃属性が火属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_COLORS_OF_HYUN_ROK_5] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "レインボーホーン", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "イヌハッカメテオ" },
+		{ "ディアーキャノン" },
+		{ "ディアーブリーズ" },
+		{ "ディアースピリットパワー" },
+		{ "の攻撃属性が闇属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_COLORS_OF_HYUN_ROK_6] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "レインボーホーン", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "イヌハッカメテオ" },
+		{ "ディアーキャノン" },
+		{ "ディアーブリーズ" },
+		{ "ディアースピリットパワー" },
+		{ "の攻撃属性が聖属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_COLORS_OF_HYUN_ROK_BUFF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "賢鹿のイヌハッカ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "イヌハッカメテオで" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TEMPORARY_COMMUNION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "三霊一体", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "P.Atk増加" },
+		{ "S.Matk増加" },
+		{ "H.Plus増加" },
+		{ "スピリットハンドラーの" },
+		{ "特定スキルを強化" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BLESSING_OF_M_CREATURES] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "にゃんブレッシング", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "P.Atk増加" },
+		{ "S.Matk増加" },
+		{ "にゃんブレッシング状態解除時" },
+		{ "APが 0になり 10秒間、" },
+		{ "にゃんブレッシングリバウンド" },
+		{ "状態になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BLESSING_OF_M_C_DEBUFF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "にゃんブレッシングリバウンド", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "にゃんブレッシングの発動対象にならない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_INTENSIVE_AIM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "インテンシブエイム", COLOR_TITLE_BUFF },
+		{ "移動不可" },
+		{ "装備Atk + 100" },
+		{ "Hit + 250" },
+		{ "Cri + 50" },
+		{ "0.3秒毎に照準カウンターが" },
+		{ "1個累積" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GRENADE_FRAGMENT_1] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グレネードフラグメント", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ベーシックグレネード" },
+		{ "ヘイスティファイアインザホール" },
+		{ "グレネーズドロッピング" },
+		{ "ミッションボンバード" },
+		{ "の攻撃属性が水属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GRENADE_FRAGMENT_2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グレネードフラグメント", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ベーシックグレネード" },
+		{ "ヘイスティファイアインザホール" },
+		{ "グレネーズドロッピング" },
+		{ "ミッションボンバード" },
+		{ "の攻撃属性が風属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GRENADE_FRAGMENT_3] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グレネードフラグメント", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ベーシックグレネード" },
+		{ "ヘイスティファイアインザホール" },
+		{ "グレネーズドロッピング" },
+		{ "ミッションボンバード" },
+		{ "の攻撃属性が地属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GRENADE_FRAGMENT_4] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グレネードフラグメント", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ベーシックグレネード" },
+		{ "ヘイスティファイアインザホール" },
+		{ "グレネーズドロッピング" },
+		{ "ミッションボンバード" },
+		{ "の攻撃属性が火属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GRENADE_FRAGMENT_5] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グレネードフラグメント", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ベーシックグレネード" },
+		{ "ヘイスティファイアインザホール" },
+		{ "グレネーズドロッピング" },
+		{ "ミッションボンバード" },
+		{ "の攻撃属性が闇属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GRENADE_FRAGMENT_6] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グレネードフラグメント", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ベーシックグレネード" },
+		{ "ヘイスティファイアインザホール" },
+		{ "グレネーズドロッピング" },
+		{ "ミッションボンバード" },
+		{ "の攻撃属性が聖属性" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AUTO_FIRING_LAUNCHEREFST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "オートファイアリングランチャー", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "通常物理攻撃時、" },
+		{ "一定確率でスキルオートスペル" },
+		{ "手榴弾を消費するスキルが" },
+		{ "習得レベルで発動" },
+		{ "スキルオートスペルでは" },
+		{ "手榴弾消費やAP回復は" },
+		{ "発生しない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HIDDEN_CARD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ヒドゥンカード", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "P.Atk増加" },
+		{ "遠距離物理攻撃で" },
+		{ "与えるダメージ増加" },
+		{ "ワイルドショットの威力増大" },
+		{ "ミッドナイトフォーリンの威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NW_GRENADE_MASTERY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グレネードマスタリー", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHIELDCHAINRUSH] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "シールドチェーンラッシュ", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "攻撃で受けるダメージが" },
+		{ "110%に増加(未実装)" },
+		{ "移動速度減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MISTYFROST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ジャックフロストノヴァ", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "水属性攻撃で" },
+		{ "受けるダメージ + 15%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GROUNDGRAVITY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グラウンドグラビテーション", COLOR_TITLE_DEBUFF },
+		{ "攻撃で受けるダメージが" },
+		{ "110%に増加(未実装)" },
+		{ "移動速度減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BREAKINGLIMIT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ブレイキングリミット", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ダブルボウリングバッシュ" },
+		{ "シールドチェーンラッシュ" },
+		{ "メガソ\ニックブロー" },
+		{ "スパイラルピアースマックス" },
+		{ "で与えるダメージが 1.5倍" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RULEBREAK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ルールブレイク", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "メテオストームバスター" },
+		{ "グラウンドグラビテーション" },
+		{ "ユピテルサンダーストーム" },
+		{ "ジャックフロストノヴァ" },
+		{ "ヘルズドライブ" },
+		{ "ナパームバルカンストライク" },
+		{ "で与えるダメージが 3倍" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SHADOW_CLOCK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "影隠れ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "攻撃で受けるダメージが" },
+		{ "85%に減少(未実装)" },
+		{ "移動速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NIGHTMARE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "悪夢", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "幻術 -影縫い-" },
+		{ "幻術 -苦無-" },
+		{ "幻術 -暗黒龍-" },
+		{ "の受けるダメージに" },
+		{ "影響を受ける" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BATH_FOAM_C] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "スキルディレイ増減", COLOR_TITLE_TWOSIDES },
+		{ "%s", COLOR_TIME },
+		{ "スキルディレイが" },
+		{ "増加または減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AROMA_OIL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "一部のスキルの再使用待機時間増減", COLOR_TITLE_TWOSIDES },
+		{ "%s", COLOR_TIME },
+		{ "一部のスキルの" },
+		{ "再使用待機時間が" },
+		{ "増加または減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SP_SHA] = {
+	descript = {
+		{ "エスハ", COLOR_TITLE_SYSTEM }
+	}
+}
+StateIconList[EFST_IDs.EFST_BERSERK] = {
+	descript = {
+		{ "バーサーク", COLOR_TITLE_SYSTEM }
+	}
+}
+StateIconList[EFST_IDs.EFST_DEVOTION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ディボーション",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "受けるほとんどのダメージを" },
+		{ "ディボーションの使用者が" },
+		{ "代わりに受ける" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TARGET_MARKER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ターゲットマーカー", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "エイムドシャワー" },
+		{ "ブレイジングイラプション" },
+		{ "ブロックシール" },
+		{ "の発動対象になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BLOCK_SEAL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ブロックシール", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" },
+		{ "ブロックエクスプロージョン" },
+		{ "の発動対象になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FROST_STORM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "フロストフィールド", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "1度だけ" },
+		{ "ライトニングジャッジメント" },
+		{ "で受けるダメージ増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GROGGY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "待機", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "移動不可" },
+		{ "通常物理攻撃不可" },
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WARM_SHIELD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ウォームシールド", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "1度だけ" },
+		{ "フロストフィールド" },
+		{ "を無効化" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AID_PERIOD_RECEIVEITEM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ドロップ率増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "モンスターを倒した時の" },
+		{ "アイテムドロップ率増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AID_PERIOD_PLUSEXP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"獲得経験値増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Base経験値増加" },
+		{ "Job経験値増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AID_PERIOD_PLUSJOBEXP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"獲得経験値増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Job経験値増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AID_PERIOD_DEADPENALTY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"生命保険証",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "戦闘不能\時デスペナルティ減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AID_PERIOD_ADDSTOREITEMCOUNT] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"倉庫拡張",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "倉庫保管個数増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AID_PERIOD_RECEIVEITEM_2ND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"ドロップ率増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "モンスターを倒した時の" },
+		{ "アイテムドロップ率増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AID_PERIOD_PLUSEXP_2ND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"獲得経験値増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Base経験値増加" },
+		{ "Job経験値増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_AID_PERIOD_PLUSJOBEXP_2ND] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{
+			"獲得経験値増加",
+			{ 155, 202, 155 }
+		},
+		{
+			"%s",
+			{ 255, 176, 98 }
+		},
+		{ "Job経験値増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NPC_SLOWSKILL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "スロースキル", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "スキルディレイ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERSEA_BUFF_04] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "カルマ値", COLOR_TITLE_TWOSIDES },
+		{ "%s", COLOR_TIME },
+		{ "カルマ値の増減によって、" },
+		{ "効果が変化・増減する。" },
+		{ "　" },
+		{ "カルマ値が0よりも低い場合" },
+		{ "聖属性耐性が増加する。" },
+		{ "特定のモンスターに" },
+		{ "与えるダメージが増加。" },
+		{ "　" },
+		{ "カルマ値が0よりも高い場合" },
+		{ "闇属性耐性が増加する。" },
+		{ "特定のモンスターから" },
+		{ "受けるダメージが減少。" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERSEA_BUFF_05] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "特定のモンスターに与えるダメージ増減", COLOR_TITLE_TWOSIDES },
+		{ "%s", COLOR_TIME },
+		{ "特定のモンスターに" },
+		{ "与えるダメージが" },
+		{ "増加または減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERSEA_BUFF_06] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "特定のモンスターから受けるダメージ増減", COLOR_TITLE_TWOSIDES },
+		{ "%s", COLOR_TIME },
+		{ "特定のモンスターから" },
+		{ "受けるダメージが" },
+		{ "増加または減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERSEA_BUFF_07] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "一部のスキルの再使用待機時間増減", COLOR_TITLE_TWOSIDES },
+		{ "%s", COLOR_TIME },
+		{ "一部のスキルの" },
+		{ "再使用待機時間が" },
+		{ "増加または減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERSEA_BUFF_10] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "P.Atk増加", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "P.Atk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERSEA_BUFF_11] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "S.Matk増加", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "S.Matk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HOMUN_TIME] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ホムンクルス召喚", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_RICHMANKIM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ニヨルドの宴", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "全てのモンスターを倒した時、" },
+		{ "獲得する経験値増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_RINGNIBELUNGEN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ニーベルングの指輪", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "特定の効果が発生" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ETERNALCHAOS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "永遠の混沌", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "Defが0になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DRUMBATTLEFIELD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "戦太鼓の響き", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "装備Atk増加" },
+		{ "装備Def増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SIEGFRIED] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "不死身のジークフリード", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "火・水・風・地属性耐性増加" },
+		{ "一部の状態異常耐性増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ROKISWEIL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ロキの叫び", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "スキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ADAPTATION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アドリブ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "特定の演奏や合奏使用時の" },
+		{ "消費SP20%減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_INTOABYSS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "深淵の中に", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ジェムストーンを必要と" },
+		{ "するスキルのコストが" },
+		{ "一部軽減された状態で" },
+		{ "スキルが使用できる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_DONTFORGETME] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "私を忘れないで…", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "基本攻撃速度減少" },
+		{ "移動速度減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SERVICEFORYOU] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "サービスフォーユー", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "MaxSP増加" },
+		{ "スキル消費SP減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FORTUNEKISS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "幸運のキス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Cri増加" },
+		{ "クリティカル攻撃で" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_HUMMING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ハミング", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Hit増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_POEMBRAGI] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ブラギの詩", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "詠唱時間短縮" },
+		{ "スキルディレイ減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ASSASSINCROSS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "夕陽のアサシンクロス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "攻撃速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WHISTLE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "口笛", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Flee増加" },
+		{ "完全回避増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_APPLEIDUN] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "イドゥンの林檎", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "MaxHP増加" },
+		{ "ヒール系スキルを受けた時の" },
+		{ "HP回復量増加" },
+		{ "一部の回復アイテムによる" },
+		{ "HP回復量増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ENSEMBLEFATIGUE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "合奏疲労", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "移動ディレイ + 30%" },
+		{ "攻撃速度 - 30%" },
+		{ "音楽専門家の熟練を除く" },
+		{ "全てのスキル使用不可" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ANCILLA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アンシラ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ヒール系スキル使用時、" },
+		{ "HP回復量 + 15%" },
+		{ "SP自然回復量 + 30%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LAUDAAGNUS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ラウダアグヌス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "MaxHP増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_LAUDARAMUS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ラウダラムス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "クリティカル攻撃で" },
+		{ "与えるダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOUND_OF_DESTRUCTION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "サウンドオブディストラクション", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "攻撃を受けた時、" },
+		{ "ダメージを2倍にして受ける" },
+		{ "レックスエーテルナ状態の場合、" },
+		{ "サウンドオブディストラクション" },
+		{ "状態の効果は適用されない" }
+	}
+}
+StateIconList[EFST_IDs.EFST_POISON_MIST] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ポイズンミスト", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "Fleeが 0になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_STONE_WALL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "シュタインワンド", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "装備Def増加" },
+		{ "装備Mdef増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TOXIN_OF_MANDARA] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "トキシンオブマンドラ", COLOR_TITLE_DEBUFF },
+		{ "%s", COLOR_TIME },
+		{ "Res減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GOLDENE_TONE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ゴールデントーン", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Res増加" },
+		{ "Mres増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TEMPERING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "テンパリング", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "P.Atk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_MYSTERY_POWDER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ミステリーパウダー", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ダストエクスプロージョンの使用条件" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CHASING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ヒットアンドスライディング", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "チェイシングブレイクの威力増大" },
+		{ "チェイシングショットの威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WILD_WALK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ワイルドウォーク", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "Flee増加" },
+		{ "移動速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FIRE_CHARM_POWER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "四色符：火", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "赤炎砲の威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WATER_CHARM_POWER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "四色符：水", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "冷血砲の威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WIND_CHARM_POWER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "四色符：風", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "雷電砲の威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GROUND_CHARM_POWER] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "四色符：地", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "金龍砲の威力増大" }
+	}
+}
+StateIconList[EFST_IDs.EFST_OVERCOMING_CRISIS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "オーバーカミングクライシス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "MaxHP増加" },
+		{ "P.Atk増加" },
+		{ "S.Matk増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PET_TRANSFORM] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ペット変身", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_CONTENTS_37] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "次元魔力耐性", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "破壊されたヴァルキリーレルムに" },
+		{ "進入が可能\になる" }
+	}
+}
+StateIconList[EFST_IDs.EFST_CONTENTS_38] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "次元魔力耐性", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "浸食されたゲフェニアに" },
+		{ "進入が可能\になる" }
+	}
+}
+-- ここから新職業状態異常 --------------------------------------------------------------------------
+StateIconList[EFST_IDs.EFST_WEREWOLF] = {
+	haveTimeLimit = 0,
+	descript = {
+		{ "シェイプシフト：ウェアウルフ", COLOR_TITLE_BUFF },
+		{ "MaxHP +10%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ENRAGE_WOLF] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "エンレイジウルフ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ウェアウルフ系スキルで与えるダメージが増加" },
+		{ "近接物理攻撃で与えるダメージが増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_BLOOD_HOWLING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ブラッドハウリング", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "STR増加" },
+		{ "LUK増加" },
+		{ "HIT増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WERERAPTOR] = {
+	haveTimeLimit = 0,
+	descript = {
+		{ "シェイプシフト：ウェアラプター", COLOR_TITLE_BUFF },
+		{ "移動ディレイ - 25%" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ENRAGE_RAPTOR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "エンレイジラプター", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ウェアラプター系スキルで与えるダメージが増加" },
+		{ "遠距離物理攻撃で与えるダメージが増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PREENING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "プリーニング", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "DEX増加" },
+		{ "AGI増加" },
+		{ "FLEE増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TRUTH_OF_ICE] = {
+	haveTimeLimit = 0,
+	descript = {
+		{ "トゥルースオブアイス", COLOR_TITLE_BUFF },
+		{ "水属性魔法攻撃で与えるダメージ + 10%" },
+		{ "ドルイド系水属性魔法スキルで与えるダメージが増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TRUTH_OF_WIND] = {
+	haveTimeLimit = 0,
+	descript = {
+		{ "トゥルースオブウィンド", COLOR_TITLE_BUFF },
+		{ "風属性魔法攻撃で与えるダメージ + 10%" },
+		{ "ドルイド系風属性魔法スキルで与えるダメージが増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TRUTH_OF_EARTH] = {
+	haveTimeLimit = 0,
+	descript = {
+		{ "トゥルースオブアース", COLOR_TITLE_BUFF },
+		{ "地属性魔法攻撃で与えるダメージ + 10%" },
+		{ "ドルイド系地属性魔法スキルで与えるダメージが増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_TRANSFORM_DELAY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "変身待機状態", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "現在変身できません" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NATURE_SHIELD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ネイチャーシールド", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "DEFとMDEF増加" },
+		{ "INTとVIT増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_IRON_HOWLING] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アイアンハウリング", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "受けるダメージを減少" }
+	}
+}
+StateIconList[EFST_IDs.EFST_WIND_VEIL] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ウィンドヴェール", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "受けるダメージを減少" },
+		{ "移動速度増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ICE_PILLAR] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アイスピラー", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "アイストーテム・アイスクラウド" },
+		{ "アイスピラー・アイススプラッシュで与えるダメージ + 15%." }
+	}
+}
+StateIconList[EFST_IDs.EFST_THUNDERING_ROD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "サンダリングロッド", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "カウンター累積状態" }
+	}
+}
+StateIconList[EFST_IDs.EFST_THUNDERING_ROD_MAX] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "サンダリングロッドマックス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "強化されたスキルの発動条件" }
+	}
+}
+StateIconList[EFST_IDs.EFST_GROUND_GROW] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グラウンドグロウ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "カウンター累積状態" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NATURE_PROTECTION] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ネイチャープロテクション", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "受けるダメージを減少" },
+		{ "HPとSPを回復" }
+	}
+}
+StateIconList[EFST_IDs.EFST_PULSE_OF_MADNESS] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "パルスオブマッドネス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "狂気蓄積状態" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ALPHA_PHASE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "アルファフェーズ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "狂気III状態適用" }
+	}
+}
+StateIconList[EFST_IDs.EFST_APEX_PHASE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "エイペックスフェーズ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "ピニオンショット発動条件" },
+		{ "テンペストフラップ発動条件" },
+		{ "クイールスピア発動条件" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FLIP_FLAP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "フリップフラップ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "遠距離物理攻撃で与えるダメージ増加" },
+		{ "Cri増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_FLIP_FLAP_TARGET] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "エアロシンク", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "遠距離物理攻撃で与えるダメージ増加" },
+		{ "Cri増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_ZEPHYR_CHARGE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ピニオンショット", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_ZEPHYR_LINK] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ゼファーリンク", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "物理攻撃ダメージ増加" },
+		{ "遠距離物理ダメージ増加" },
+		{ "全ての属性のダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_INSANE] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "狂気I", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_INSANE2] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "狂気II", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_INSANE3] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "狂気III", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
+	}
+}
+StateIconList[EFST_IDs.EFST_GLACIER_SHEILD] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グレイシアモノリス", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "グレイシアモノリス状態" }
+	}
+}
+StateIconList[EFST_IDs.EFST_NATURE_HARMONY] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "ネイチャーハーモニー", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "水属性魔法攻撃" },
+		{ "風属性魔法攻撃" },
+		{ "地属性魔法攻撃" },
+		{ "ダメージ増加" }
+	}
+}
+StateIconList[EFST_IDs.EFST_SOLID_STOMP] = {
+	haveTimeLimit = 1,
+	posTimeLimitStr = 2,
+	descript = {
+		{ "グラウンドグロウ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME },
+		{ "物理攻撃で受けるダメージ減少" },
+		{ "地属性魔法攻撃ダメージ増加" }
+	}
+}

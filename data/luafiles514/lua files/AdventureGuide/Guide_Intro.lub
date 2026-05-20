@@ -1,0 +1,10 @@
+GuideIntro.TitleText = "冒険ガイド"
+GuideIntro.MainMenuIndex = 0
+GuideIntro.MainMenuTitle = "目次"
+GuideIntro.NewsImage = "ﾀｯﾀ惕ﾎﾅﾍﾆ菎ﾌｽｺ\\AdventureGuide\\"
+GuideIntro:AddContents(0, "エピソ\ー\ド", "達成可能\なエピソ\ー\ドクエストの情報を確認できます.")
+GuideIntro:AddContents(1, "モンスター", "レベルに合ったモンスターがいる狩場をおすすめします.")
+GuideIntro:AddContents(2, "クエスト", "自分のレベルにあったクエストを確認できます.")
+GuideIntro:AddContents(3, "ダンジョン", "自分のレベルに応じたダンジョンや報酬を確認できます.")
+GuideIntro:AddContents(4, "武器", "レベルに合った武器をおすすめします.")
+GuideIntro:AddContents(5, "防具", "レベルに合った防具をおすすめします.")

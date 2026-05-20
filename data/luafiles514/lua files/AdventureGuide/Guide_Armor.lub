@@ -1,0 +1,14 @@
+GuideArmor.TitleText = "防具"
+GuideArmor.MainMenuIndex = 6
+
+GuideArmor.MainMenuTitle = "防具"
+GuideArmor:AddSubMenu(0, "兜上段", 1, 999)
+GuideArmor:AddSubMenu(1, "兜中段", 1, 999)
+GuideArmor:AddSubMenu(2, "兜下段", 1, 999)
+GuideArmor:AddSubMenu(3, "鎧", 1, 999)
+GuideArmor:AddSubMenu(4, "肩にかける物", 1, 999)
+GuideArmor:AddSubMenu(5, "盾", 1, 999)
+GuideArmor:AddSubMenu(6, "靴", 1, 999)
+GuideArmor:AddSubMenu(7, "アクセサリー", 1, 999)
+GuideArmor:AddSubMenu(8, "アクセサリー（1）", 1, 999)
+GuideArmor:AddSubMenu(9, "アクセサリー（2）", 1, 999)

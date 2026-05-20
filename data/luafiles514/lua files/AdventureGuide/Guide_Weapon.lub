@@ -1,0 +1,26 @@
+GuideWeapon.TitleText = "ïêäÌ"
+GuideWeapon.MainMenuIndex = 5
+GuideWeapon.MainMenuTitle = "ïêäÌ"
+
+GuideWeapon:AddSubMenu(0, "Dagger", 1, 999)
+GuideWeapon:AddSubMenu(1, "One-Handed Sword", 1, 999)
+GuideWeapon:AddSubMenu(2, "Two-Handed Sword", 1, 999)
+GuideWeapon:AddSubMenu(3, "One-Handed Axe", 1, 999)
+GuideWeapon:AddSubMenu(4, "Mace", 1, 999)
+GuideWeapon:AddSubMenu(5, "One-Handed Staff", 1, 999)
+GuideWeapon:AddSubMenu(6, "Knuckle", 1, 999)
+GuideWeapon:AddSubMenu(7, "Musical Instrument", 1, 999)
+GuideWeapon:AddSubMenu(8, "Whip", 1, 999)
+GuideWeapon:AddSubMenu(9, "Book", 1, 999)
+GuideWeapon:AddSubMenu(10, "Two-Handed Sword", 1, 999)
+GuideWeapon:AddSubMenu(11, "Two-Handed Spear", 1, 999)
+GuideWeapon:AddSubMenu(12, "Two-Handed Axe", 1, 999)
+GuideWeapon:AddSubMenu(13, "Katar", 1, 999)
+GuideWeapon:AddSubMenu(14, "Bow", 1, 999)
+GuideWeapon:AddSubMenu(15, "Huuma Shuriken", 1, 999)
+GuideWeapon:AddSubMenu(16, "Two-Handed Staff", 1, 999)
+GuideWeapon:AddSubMenu(17, "Revover", 1, 999)
+GuideWeapon:AddSubMenu(18, "Rifle", 1, 999)
+GuideWeapon:AddSubMenu(19, "Gatling Gun", 1, 999)
+GuideWeapon:AddSubMenu(20, "Shotgun", 1, 999)
+GuideWeapon:AddSubMenu(21, "Grenade Launcher", 1, 999)

@@ -1,0 +1,12 @@
+GuideEpisode.TitleText = "エピソ\ー\ド"
+GuideEpisode.MainMenuIndex = 1
+
+GuideEpisode.MainMenuTitle = "エピソ\ー\ド"
+GuideEpisode:AddSubMenu(0, "16.1", 100, 999, 7698)
+GuideEpisode:AddSubMenu(1, "16.2", 100, 999, 18219)
+GuideEpisode:AddSubMenu(2, "17.1", 110, 999, 16360)
+GuideEpisode:AddSubMenu(3, "17.2", 130, 999, 18018)
+GuideEpisode:AddSubMenu(4, "18", 170, 999, 18085)
+GuideEpisode:AddSubMenu(5, "19", 200, 999, 17649)
+GuideEpisode:AddSubMenu(6, "20", 215, 999, 18233)
+GuideEpisode:AddSubMenu(7, "21", 230, 999, 18360)

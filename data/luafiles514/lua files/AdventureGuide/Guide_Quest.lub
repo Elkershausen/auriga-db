@@ -1,0 +1,7 @@
+GuideQuest.TitleText = "クエスト"
+GuideQuest.MainMenuIndex = 3
+
+GuideQuest.MainMenuTitle = "クエスト"
+GuideQuest:AddSubMenu(0, "Level", 1, 999)
+GuideQuest:AddSubMenu(1, "Region", 1, 999)
+GuideQuest:AddSubMenu(2, "Subjugation", 1, 999)

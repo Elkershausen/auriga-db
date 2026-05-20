@@ -1,0 +1,5 @@
+GuideDungeon.TitleText = "ダンジョン"
+GuideDungeon.MainMenuIndex = 4
+
+GuideDungeon.MainMenuTitle = "ダンジョン"
+GuideDungeon:AddSubMenu(0, "ダンジョン", 1, 999)
