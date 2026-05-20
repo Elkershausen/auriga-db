@@ -1,12 +1,7 @@
 -- 2025/03/21 [装備能力値表示システム] ローカル言語に対応したテストバージョン実装(他国とは定義区分が違います)
 -- ローカル言語固有の文字エラー [ボ] に仮対応(ボス -> ホ゛ス)
--- 2024年以降のテスト環境に適合(2022年以前は使いません)
--- [data\luafiles514\lua files\equipmentproperties\EquipmentPropertiesOrder.lub] に上書きして下さい(read datafolder first 対応)
--- [EquipmentProperties.lub] を最新に更新して下さい
--- サーバーには依存していません(データベースとは無関係で表示のみ)
 -- 2024/07/08 4次職追加スキル[ABC_ABYSS_FLAME]まで対応
--- 間違えやすい箇所に固有番号をつけて、修正対応を容易にしています(間違いが無ければ消します)
--- [Def無視100%]系 使われないものがありますので、固有番号で追跡できるようにしています
+-- 2026/04/28 バグ修正のための固有番号削除 / [命中物理攻撃] コメントアウトして追加(25/08 以降に cmdinfo.lub GameSettings.lub と一体で更新する)
 
 Operation = { ADD = 0, ONE = 1, MAX = 2, DRAIN_ADD = 3, DISABLE_OR_MAX = 4 }
 ValueOption = { MIN = 0, MAX = 1, DIV = 2, FLOAT = 3 }
@@ -57,11 +52,9 @@ Effect = {
 	PlusMagicPower = 25,
 	Clairvoyance = 26
 }
-
 GetExtParamConditionTable = function(value)
   return { [1] = 0, [2] = value }
 end
-
 FunctionPreset = {
 	IncStat = { "AddExtParam", "SubExtParam" },
 	DecStat = { "SubExtParam", "AddExtParam" },
@@ -446,7 +439,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.VAR_MAGICATKPERCENT[1]
 			},
 			[3] = {
-				name = "{sym}{val}%#429 近接物理攻撃で与えるダメージ",
+				name = "{sym}{val}%#近接物理攻撃で与えるダメージ",
 				func = { "AddMeleeAttackDamage", "SubMeleeAttackDamage" },
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Unit.Target },
@@ -454,7 +447,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MELEE_ATTACK_DAMAGE_TARGET[1]
 			},
 			[4] = {
-				name = "{sym}{val}%#421 遠距離物理攻撃で与えるダメージ",
+				name = "{sym}{val}%#遠距離物理攻撃で与えるダメージ",
 				func = { "AddRangeAttackDamage", "SubRangeAttackDamage" },
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Unit.Target },
@@ -462,14 +455,14 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RANGE_ATTACK_DAMAGE_TARGET[1]
 			},
 			[5] = {
-				name = "{sym}{val}%#667 弓装備時、遠距離物理攻撃で与えるダメージ",
+				name = "{sym}{val}%#弓装備時、遠距離物理攻撃で与えるダメージ",
 				func = { "AddBowAttackDamage", "SubBowAttackDamage" },
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Unit.Target },
 				sym = SymbolPreset.IncSign
 			},
 			[6] = {
-				name = "{sym}{val}%#437 クリティカル攻撃で与えるダメージ",
+				name = "{sym}{val}%#クリティカル攻撃で与えるダメージ",
 				func = { "AddDamage_CRI", "SubDamage_CRI" },
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Unit.Target },
@@ -477,7 +470,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_CRI_TARGET[1]
 			},
 			[7] = {
-				name = "{sym}{val}%#469 物理攻撃時、一般モンスターに与えるダメージ ",
+				name = "{sym}{val}%#物理攻撃時、一般モンスターに与えるダメージ ",
 				func = FunctionPreset.IncDmgByUnitClass,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = MonsterClass.Normal, [2] = Unit.Target },
@@ -485,7 +478,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.CLASS_DAMAGE_NORMAL_TARGET[1]
 			},
 			[8] = {
-				name = "{sym}{val}%#477 物理攻撃時、ホ゛スモンスターに与えるダメージ ",
+				name = "{sym}{val}%#物理攻撃時、ホ゛スモンスターに与えるダメージ ",
 				func = FunctionPreset.IncDmgByUnitClass,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = MonsterClass.Boss, [2] = Unit.Target },
@@ -493,7 +486,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.CLASS_DAMAGE_BOSS_TARGET[1]
 			},
 			[9] = {
-				name = "{sym}{val}%#633 魔法攻撃時、一般モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、一般モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitClass,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = MonsterClass.Normal },
@@ -501,7 +494,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.CLASS_MDAMAGE_NORMAL[1]
 			},
 			[10] = {
-				name = "{sym}{val}%#641 魔法攻撃時、ホ゛スモンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、ホ゛スモンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitClass,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = MonsterClass.Boss },
@@ -509,7 +502,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.CLASS_MDAMAGE_BOSS[1]
 			},
 			[11] = {
-				name = "{sym}{val}%#445 物理攻撃時、小型モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、小型モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Size.Small },
@@ -517,7 +510,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_SIZE_SMALL_TARGET[1]
 			},
 			[12] = {
-				name = "{sym}{val}%#453 物理攻撃時、中型モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、中型モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Size.Medium },
@@ -525,7 +518,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_SIZE_MIDIUM_TARGET[1]
 			},
 			[13] = {
-				name = "{sym}{val}%#461 物理攻撃時、大型モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、大型モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Size.Large },
@@ -533,7 +526,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_SIZE_LARGE_TARGET[1]
 			},
 			[14] = {
-				name = "{sym}{val}%#609 魔法攻撃時、小型モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、小型モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Size.Small },
@@ -541,7 +534,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_SIZE_SMALL_TARGET[1]
 			},
 			[15] = {
-				name = "{sym}{val}%#617 魔法攻撃時、中型モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、中型モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Size.Medium },
@@ -549,7 +542,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_SIZE_MIDIUM_TARGET[1]
 			},
 			[16] = {
-				name = "{sym}{val}%#625 魔法攻撃時、大型モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、大型モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Size.Large },
@@ -557,14 +550,14 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_SIZE_LARGE_TARGET[1]
 			},
 			[17] = {
-				name = "{sym}{val}%#1215 物理攻撃時、全ての種族のモンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、全ての種族のモンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.All },
 				sym = SymbolPreset.IncSign
 			},
 			[18] = {
-				name = "{sym}{val}%#1238 物理攻撃時、無形モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、無形モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Nothing },
@@ -572,7 +565,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_NOTHING[1]
 			},
 			[19] = {
-				name = "{sym}{val}%#1230 物理攻撃時、不死形モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、不死形モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Undead },
@@ -580,7 +573,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_UNDEAD[1]
 			},
 			[20] = {
-				name = "{sym}{val}%#1278 物理攻撃時、動物形モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、動物形モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Animal },
@@ -588,7 +581,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_ANIMAL[1]
 			},
 			[21] = {
-				name = "{sym}{val}%#1222 物理攻撃時、植物形モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、植物形モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Plant },
@@ -596,7 +589,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_PLANT[1]
 			},
 			[22] = {
-				name = "{sym}{val}%#1270 物理攻撃時、昆虫形モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、昆虫形モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Insect },
@@ -604,7 +597,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_INSECT[1]
 			},
 			[23] = {
-				name = "{sym}{val}%#1262 物理攻撃時、魚貝形モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、魚貝形モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Fish },
@@ -612,7 +605,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_FISHS[1]
 			},
 			[24] = {
-				name = "{sym}{val}%#1286 物理攻撃時、悪魔形モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、悪魔形モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Demon },
@@ -620,7 +613,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_DEVIL[1]
 			},
 			[25] = {
-				name = "{sym}{val}%#1294 物理攻撃時、人間形モンスターに与えるダメージ（プレイヤーには発動しない）",
+				name = "{sym}{val}%#物理攻撃時、人間形モンスターに与えるダメージ（プレイヤーには発動しない）",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Human },
@@ -628,7 +621,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_HUMAN[1]
 			},
 			[26] = {
-				name = "{sym}{val}%#1246 物理攻撃時、天使形モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、天使形モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Angel },
@@ -636,7 +629,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_ANGEL[1]
 			},
 			[27] = {
-				name = "{sym}{val}%#1254 物理攻撃時、竜形モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、竜形モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Dragon },
@@ -644,7 +637,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_DRAGON[1]
 			},
 			[28] = {
-				name = "{sym}{val}%#1302 物理攻撃時、人間形プレイヤーに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、人間形プレイヤーに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.HumanPlayer },
@@ -652,7 +645,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_PLAYER_HUMAN[1]
 			},
 			[29] = {
-				name = "{sym}{val}%#1310 物理攻撃時、ドラム形プレイヤーに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、ドラム形プレイヤーに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.DoramPlayer },
@@ -660,14 +653,14 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_DAMAGE_PLAYER_DORAM[1]
 			},
 			[30] = {
-				name = "{sym}{val}%#1551 魔法攻撃時、全ての種族のモンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、全ての種族のモンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.All },
 				sym = SymbolPreset.IncSign
 			},
 			[31] = {
-				name = "{sym}{val}%#1574 魔法攻撃時、無形モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、無形モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Nothing },
@@ -675,7 +668,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_NOTHING[1]
 			},
 			[32] = {
-				name = "{sym}{val}%#1566 魔法攻撃時、不死形モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、不死形モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Undead },
@@ -683,7 +676,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_UNDEAD[1]
 			},
 			[33] = {
-				name = "{sym}{val}%#1614 魔法攻撃時、動物形モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、動物形モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Animal },
@@ -691,7 +684,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_ANIMAL[1]
 			},
 			[34] = {
-				name = "{sym}{val}%#1558 魔法攻撃時、植物形モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、植物形モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Plant },
@@ -699,7 +692,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_PLANT[1]
 			},
 			[35] = {
-				name = "{sym}{val}%#1606 魔法攻撃時、昆虫形モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、昆虫形モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Insect },
@@ -707,7 +700,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_INSECT[1]
 			},
 			[36] = {
-				name = "{sym}{val}%#1598 魔法攻撃時、魚貝形モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、魚貝形モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Fish },
@@ -715,7 +708,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_FISHS[1]
 			},
 			[37] = {
-				name = "{sym}{val}%#1622 魔法攻撃時、悪魔形モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、悪魔形モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Demon },
@@ -723,7 +716,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_DEVIL[1]
 			},
 			[38] = {
-				name = "{sym}{val}%#1630 魔法攻撃時、人間形モンスターに与えるダメージ（プレイヤーには発動しない）",
+				name = "{sym}{val}%#魔法攻撃時、人間形モンスターに与えるダメージ（プレイヤーには発動しない）",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Human },
@@ -731,7 +724,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_HUMAN[1]
 			},
 			[39] = {
-				name = "{sym}{val}%#1582 魔法攻撃時、天使形モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、天使形モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Angel },
@@ -739,7 +732,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_ANGEL[1]
 			},
 			[40] = {
-				name = "{sym}{val}%#1590 魔法攻撃時、竜形モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、竜形モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Dragon },
@@ -747,7 +740,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_DRAGON[1]
 			},
 			[41] = {
-				name = "{sym}{val}%#1638 魔法攻撃時、人間形プレイヤーに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、人間形プレイヤーに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.HumanPlayer },
@@ -755,7 +748,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_PLAYER_HUMAN[1]
 			},
 			[42] = {
-				name = "{sym}{val}%#1646 魔法攻撃時、ドラム形プレイヤーに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、ドラム形プレイヤーに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.DoramPlayer },
@@ -763,14 +756,14 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_MDAMAGE_PLAYER_DORAM[1]
 			},
 			[43] = {
-				name = "{sym}{val}%#679 物理攻撃時、全ての属性のモンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、全ての属性のモンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.All },
 				sym = SymbolPreset.IncSign
 			},
 			[44] = {
-				name = "{sym}{val}%#686 物理攻撃時、火属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、火属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Fire },
@@ -778,7 +771,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_FIRE_TARGET[1]
 			},
 			[45] = {
-				name = "{sym}{val}%#694 物理攻撃時、水属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、水属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Water },
@@ -786,7 +779,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_WATER_TARGET[1]
 			},
 			[46] = {
-				name = "{sym}{val}%#710 物理攻撃時、風属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、風属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Wind },
@@ -794,7 +787,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_WIND_TARGET[1]
 			},
 			[47] = {
-				name = "{sym}{val}%#702 物理攻撃時、地属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、地属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Ground },
@@ -802,7 +795,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_GROUND_TARGET[1]
 			},
 			[48] = {
-				name = "{sym}{val}%#734 物理攻撃時、聖属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、聖属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Saint },
@@ -810,7 +803,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_SAINT_TARGET[1]
 			},
 			[49] = {
-				name = "{sym}{val}%#726 物理攻撃時、闇属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、闇属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Darkness },
@@ -818,7 +811,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_DARKNESS_TARGET[1]
 			},
 			[50] = {
-				name = "{sym}{val}%#750 物理攻撃時、念属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、念属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Telekinesis },
@@ -826,7 +819,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_TELEKINESIS_TARGET[1]
 			},
 			[51] = {
-				name = "{sym}{val}%#742 物理攻撃時、無属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、無属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Nothing },
@@ -834,7 +827,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_NOTHING_TARGET[1]
 			},
 			[52] = {
-				name = "{sym}{val}%#718 物理攻撃時、毒属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、毒属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Poison },
@@ -842,7 +835,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_POISON_TARGET[1]
 			},
 			[53] = {
-				name = "{sym}{val}%#758 物理攻撃時、不死属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#物理攻撃時、不死属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Undead },
@@ -850,14 +843,14 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_UNDEAD_TARGET[1]
 			},
 			[54] = {
-				name = "{sym}{val}%#766 魔法攻撃時、全ての属性のモンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、全ての属性のモンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.All },
 				sym = SymbolPreset.IncSign
 			},
 			[55] = {
-				name = "{sym}{val}%#773 魔法攻撃時、火属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、火属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Fire },
@@ -865,7 +858,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_FIRE_TARGET[1]
 			},
 			[56] = {
-				name = "{sym}{val}%#781 魔法攻撃時、水属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、水属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Water },
@@ -873,7 +866,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_WATER_TARGET[1]
 			},
 			[57] = {
-				name = "{sym}{val}%#797 魔法攻撃時、風属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、風属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Wind },
@@ -881,7 +874,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_WIND_TARGET[1]
 			},
 			[58] = {
-				name = "{sym}{val}%#789 魔法攻撃時、地属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、地属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Ground },
@@ -889,7 +882,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_GROUND_TARGET[1]
 			},
 			[59] = {
-				name = "{sym}{val}%#821 魔法攻撃時、聖属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、聖属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Saint },
@@ -897,7 +890,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_SAINT_TARGET[1]
 			},
 			[60] = {
-				name = "{sym}{val}%#813 魔法攻撃時、闇属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、闇属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Darkness },
@@ -905,7 +898,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_DARKNESS_TARGET[1]
 			},
 			[61] = {
-				name = "{sym}{val}%#837 魔法攻撃時、念属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、念属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Telekinesis },
@@ -913,7 +906,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_TELEKINESIS_TARGET[1]
 			},
 			[62] = {
-				name = "{sym}{val}%#829 魔法攻撃時、無属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、無属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Nothing },
@@ -921,7 +914,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_NOTHING_TARGET[1]
 			},
 			[63] = {
-				name = "{sym}{val}%#805 魔法攻撃時、毒属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、毒属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Poison },
@@ -929,7 +922,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_POISON_TARGET[1]
 			},
 			[64] = {
-				name = "{sym}{val}%#845 魔法攻撃時、不死属性モンスターに与えるダメージ",
+				name = "{sym}{val}%#魔法攻撃時、不死属性モンスターに与えるダメージ",
 				func = FunctionPreset.IncMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.Target, [2] = Element.Undead },
@@ -937,7 +930,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_UNDEAD_TARGET[1]
 			},
 			[65] = {
-				name = "{sym}{val}%#853 全ての属性の魔法攻撃で与えるダメージ",
+				name = "{sym}{val}%#全ての属性の魔法攻撃で与えるダメージ",
 				func = FunctionPreset.IncDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.All },
@@ -945,7 +938,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ADDSKILLMDAMAGE_ALL[1]
 			},
 			[66] = {
-				name = "{sym}{val}%#861 火属性魔法攻撃で与えるダメージ",
+				name = "{sym}{val}%#火属性魔法攻撃で与えるダメージ",
 				func = FunctionPreset.IncDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Fire },
@@ -953,7 +946,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ADDSKILLMDAMAGE_FIRE[1]
 			},
 			[67] = {
-				name = "{sym}{val}%#869 水属性魔法攻撃で与えるダメージ",
+				name = "{sym}{val}%#水属性魔法攻撃で与えるダメージ",
 				func = FunctionPreset.IncDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Water },
@@ -961,7 +954,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ADDSKILLMDAMAGE_WATER[1]
 			},
 			[68] = {
-				name = "{sym}{val}%#885 風属性魔法攻撃で与えるダメージ",
+				name = "{sym}{val}%#風属性魔法攻撃で与えるダメージ",
 				func = FunctionPreset.IncDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Wind },
@@ -969,7 +962,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ADDSKILLMDAMAGE_WIND[1]
 			},
 			[69] = {
-				name = "{sym}{val}%#877 地属性魔法攻撃で与えるダメージ",
+				name = "{sym}{val}%#地属性魔法攻撃で与えるダメージ",
 				func = FunctionPreset.IncDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Ground },
@@ -977,7 +970,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ADDSKILLMDAMAGE_GROUND[1]
 			},
 			[70] = {
-				name = "{sym}{val}%#909 聖属性魔法攻撃で与えるダメージ",
+				name = "{sym}{val}%#聖属性魔法攻撃で与えるダメージ",
 				func = FunctionPreset.IncDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Saint },
@@ -985,7 +978,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ADDSKILLMDAMAGE_SAINT[1]
 			},
 			[71] = {
-				name = "{sym}{val}%#901 闇属性魔法攻撃で与えるダメージ",
+				name = "{sym}{val}%#闇属性魔法攻撃で与えるダメージ",
 				func = FunctionPreset.IncDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Darkness },
@@ -993,7 +986,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ADDSKILLMDAMAGE_DARKNESS[1]
 			},
 			[72] = {
-				name = "{sym}{val}%#925 念属性魔法攻撃で与えるダメージ",
+				name = "{sym}{val}%#念属性魔法攻撃で与えるダメージ",
 				func = FunctionPreset.IncDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Telekinesis },
@@ -1001,7 +994,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ADDSKILLMDAMAGE_TELEKINESIS[1]
 			},
 			[73] = {
-				name = "{sym}{val}%#917 無属性魔法攻撃で与えるダメージ",
+				name = "{sym}{val}%#無属性魔法攻撃で与えるダメージ",
 				func = FunctionPreset.IncDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Nothing },
@@ -1009,7 +1002,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ADDSKILLMDAMAGE_NOTHING[1]
 			},
 			[74] = {
-				name = "{sym}{val}%#893 毒属性魔法攻撃で与えるダメージ",
+				name = "{sym}{val}%#毒属性魔法攻撃で与えるダメージ",
 				func = FunctionPreset.IncDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Poison },
@@ -1017,12 +1010,28 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ADDSKILLMDAMAGE_POISON[1]
 			},
 			[75] = {
-				name = "{sym}{val}%#933 不死属性魔法攻撃で与えるダメージ",
+				name = "{sym}{val}%#不死属性魔法攻撃で与えるダメージ",
 				func = FunctionPreset.IncDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Undead },
 				sym = SymbolPreset.IncSign,
 				rndOpt = EnumVAR.ADDSKILLMDAMAGE_UNDEAD[1]
+--			},
+--			[76] = {
+--				name = "{sym}{val}%#命中物理攻撃で与えるダメージ",
+--				func = { "AddDamage_HIT", "SubDamage_HIT" },
+--				val = { [2] = Operation.ADD },
+--				cond = { [1] = Unit.Target },
+--				sym = SymbolPreset.IncSign,
+--				rndOpt = EnumVAR.DAMAGE_HIT_TARGET[1]
+--			},
+--			[77] = {
+--				name = "{sym}{val}%#命中物理攻撃で受けるダメージ",
+--				func = { "SubDamage_HIT", "AddDamage_HIT" },
+--				val = { [2] = Operation.ADD },
+--				cond = { [1] = Unit.User },
+--				sym = SymbolPreset.DecSign,
+--				rndOpt = EnumVAR.DAMAGE_HIT_USER[1]
 			}
 		}
 	},
@@ -1031,7 +1040,7 @@ EquipmentPropertiesOrder = {
 		order = {
 ---------- 近接・遠距離・クリティカル・一般・ボス・サイズ ----------
 			[1] = {
-				name = "{sym}{val}%#493 近接物理攻撃で受けるダメージ",
+				name = "{sym}{val}%#近接物理攻撃で受けるダメージ",
 				func = { "SubMeleeAttackDamage", "AddMeleeAttackDamage" },
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Unit.User },
@@ -1039,7 +1048,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MELEE_ATTACK_DAMAGE_USER[1]
 			},
 			[2] = {
-				name = "{sym}{val}%#485 遠距離物理攻撃で受けるダメージ",
+				name = "{sym}{val}%#遠距離物理攻撃で受けるダメージ",
 				func = { "SubRangeAttackDamage", "AddRangeAttackDamage" },
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Unit.User },
@@ -1047,7 +1056,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RANGE_ATTACK_DAMAGE_USER[1]
 			},
 			[3] = {
-				name = "{sym}{val}%#501 クリティカル攻撃で受けるダメージ",
+				name = "{sym}{val}%#クリティカル攻撃で受けるダメージ",
 				func = { "SubDamage_CRI", "AddDamage_CRI" },
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Unit.User },
@@ -1055,7 +1064,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_CRI_USER[1]
 			},
 			[4] = {
-				name = "{sym}{val}%#557 一般モンスターから受けるダメージ ",
+				name = "{sym}{val}%#一般モンスターから受けるダメージ ",
 				func = FunctionPreset.DecDmgByUnitClass,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = MonsterClass.Normal, [2] = Unit.User },
@@ -1063,7 +1072,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.CLASS_DAMAGE_NORMAL_USER[1]
 			},
 			[5] = {
-				name = "{sym}{val}%#565 ホ゛スモンスターから受けるダメージ ",
+				name = "{sym}{val}%#ホ゛スモンスターから受けるダメージ ",
 				func = FunctionPreset.DecDmgByUnitClass,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = MonsterClass.Boss, [2] = Unit.User },
@@ -1071,7 +1080,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.CLASS_DAMAGE_BOSS_USER[1]
 			},
 			[6] = {
-				name = "{sym}{val}%#509 小型モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#小型モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Size.Small },
@@ -1079,7 +1088,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_SIZE_SMALL_USER[1]
 			},
 			[7] = {
-				name = "{sym}{val}%#517 中型モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#中型モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Size.Medium },
@@ -1087,7 +1096,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_SIZE_MIDIUM_USER[1]
 			},
 			[8] = {
-				name = "{sym}{val}%#525 大型モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#大型モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Size.Large },
@@ -1095,7 +1104,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_SIZE_LARGE_USER[1]
 			},
 			[9] = {
-				name = "{sym}{val}%#533 小型モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#小型モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Size.Small },
@@ -1103,7 +1112,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_SIZE_SMALL_USER[1]
 			},
 			[10] = {
-				name = "{sym}{val}%#541 中型モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#中型モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Size.Medium },
@@ -1111,7 +1120,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_SIZE_MIDIUM_USER[1]
 			},
 			[11] = {
-				name = "{sym}{val}%#549 大型モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#大型モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitSize,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Size.Large },
@@ -1120,14 +1129,14 @@ EquipmentPropertiesOrder = {
 			},
 ---------- 種族を指定し物理・魔法両方から受けるダメージ減少（属性は指定しない） ----------
 			[12] = {
-				name = "{sym}{val}%#1876 全ての種族のモンスターから受けるダメージ",
+				name = "{sym}{val}%#全ての種族のモンスターから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.All },
 				sym = SymbolPreset.DecSign
 			},
 			[13] = {
-				name = "{sym}{val}%#1899 無形モンスターから受けるダメージ",
+				name = "{sym}{val}%#無形モンスターから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Nothing },
@@ -1135,7 +1144,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_TOLERACE_NOTHING[1]
 			},
 			[14] = {
-				name = "{sym}{val}%#1891 不死形モンスターから受けるダメージ",
+				name = "{sym}{val}%#不死形モンスターから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Undead },
@@ -1143,7 +1152,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_TOLERACE_UNDEAD[1]
 			},
 			[15] = {
-				name = "{sym}{val}%#1939 動物形モンスターから受けるダメージ",
+				name = "{sym}{val}%#動物形モンスターから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Animal },
@@ -1151,7 +1160,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_TOLERACE_ANIMAL[1]
 			},
 			[16] = {
-				name = "{sym}{val}%#1883 植物形モンスターから受けるダメージ",
+				name = "{sym}{val}%#植物形モンスターから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Plant },
@@ -1159,7 +1168,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_TOLERACE_PLANT[1]
 			},
 			[17] = {
-				name = "{sym}{val}%#1931 昆虫形モンスターから受けるダメージ",
+				name = "{sym}{val}%#昆虫形モンスターから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Insect },
@@ -1167,7 +1176,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_TOLERACE_INSECT[1]
 			},
 			[18] = {
-				name = "{sym}{val}%#1923 魚貝形モンスターから受けるダメージ",
+				name = "{sym}{val}%#魚貝形モンスターから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Fish },
@@ -1175,7 +1184,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_TOLERACE_FISHS[1]
 			},
 			[19] = {
-				name = "{sym}{val}%#1947 悪魔形モンスターから受けるダメージ",
+				name = "{sym}{val}%#悪魔形モンスターから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Demon },
@@ -1183,7 +1192,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_TOLERACE_DEVIL[1]
 			},
 			[20] = {
-				name = "{sym}{val}%#1955 人間形モンスターから受けるダメージ（プレイヤーには発動しない）",
+				name = "{sym}{val}%#人間形モンスターから受けるダメージ（プレイヤーには発動しない）",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Human },
@@ -1191,7 +1200,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_TOLERACE_HUMAN[1]
 			},
 			[21] = {
-				name = "{sym}{val}%#1907 天使形モンスターから受けるダメージ",
+				name = "{sym}{val}%#天使形モンスターから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Angel },
@@ -1199,7 +1208,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_TOLERACE_ANGEL[1]
 			},
 			[22] = {
-				name = "{sym}{val}%#1915 竜形モンスターから受けるダメージ",
+				name = "{sym}{val}%#竜形モンスターから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Dragon },
@@ -1207,7 +1216,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_TOLERACE_DRAGON[1]
 			},
 			[23] = {
-				name = "{sym}{val}%#1963 人間形プレイヤーから受けるダメージ",
+				name = "{sym}{val}%#人間形プレイヤーから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.HumanPlayer },
@@ -1215,7 +1224,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_TOLERACE_PLAYER_HUMAN[1]
 			},
 			[24] = {
-				name = "{sym}{val}%#1971 ドラム形プレイヤーから受けるダメージ",
+				name = "{sym}{val}%#ドラム形プレイヤーから受けるダメージ",
 				func = FunctionPreset.DecDmgByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.DoramPlayer },
@@ -1224,91 +1233,91 @@ EquipmentPropertiesOrder = {
 			},
 ---------- 種族から受ける物理ダメージ減少（属性は指定しない） ----------
 			[25] = {
-				name = "{sym}{val}%#1979 全ての種族のモンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#全ての種族のモンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.All },
 				sym = SymbolPreset.DecSign
 			},
 			[26] = {
-				name = "{sym}{val}%#2000 無形モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#無形モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Nothing },
 				sym = SymbolPreset.DecSign
 			},
 			[27] = {
-				name = "{sym}{val}%#1993 不死形モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#不死形モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Undead },
 				sym = SymbolPreset.DecSign
 			},
 			[28] = {
-				name = "{sym}{val}%#2035 動物形モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#動物形モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Animal },
 				sym = SymbolPreset.DecSign
 			},
 			[29] = {
-				name = "{sym}{val}%#1986 植物形モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#植物形モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Plant },
 				sym = SymbolPreset.DecSign
 			},
 			[30] = {
-				name = "{sym}{val}%#2028 昆虫形モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#昆虫形モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Insect },
 				sym = SymbolPreset.DecSign
 			},
 			[31] = {
-				name = "{sym}{val}%#2021 魚貝形モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#魚貝形モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Fish },
 				sym = SymbolPreset.DecSign
 			},
 			[32] = {
-				name = "{sym}{val}%#2042 悪魔形モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#悪魔形モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Demon },
 				sym = SymbolPreset.DecSign
 			},
 			[33] = {
-				name = "{sym}{val}%#2049 人間型モンスターから受ける物理ダメージ（プレイヤーには発動しない）",
+				name = "{sym}{val}%#人間型モンスターから受ける物理ダメージ（プレイヤーには発動しない）",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Human },
 				sym = SymbolPreset.DecSign
 			},
 			[34] = {
-				name = "{sym}{val}%#2007 天使形モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#天使形モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Angel },
 				sym = SymbolPreset.DecSign
 			},
 			[35] = {
-				name = "{sym}{val}%#2014 竜形モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#竜形モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Dragon },
 				sym = SymbolPreset.DecSign
 			},
 			[36] = {
-				name = "{sym}{val}%#2056 人間形プレイヤーから受ける物理ダメージ",
+				name = "{sym}{val}%#人間形プレイヤーから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.HumanPlayer },
 				sym = SymbolPreset.DecSign
 			},
 			[37] = {
-				name = "{sym}{val}%#2063 ドラム型形プレイヤーから受ける物理ダメージ",
+				name = "{sym}{val}%#ドラム型形プレイヤーから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitRaceSelf,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.DoramPlayer },
@@ -1317,14 +1326,14 @@ EquipmentPropertiesOrder = {
 ---------- 属性指定ダメージ減少開始 ----------
 ---------- 属性モンスターから受ける物理ダメージ減少（種族は指定しない） ----------
 			[38] = {
-				name = "{sym}{val}%#1036 全ての属性モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#全ての属性モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.All },
 				sym = SymbolPreset.DecSign
 			},
 			[39] = {
-				name = "{sym}{val}%#1043 火属性モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#火属性モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Fire },
@@ -1332,7 +1341,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_FIRE_USER[1]
 			},
 			[40] = {
-				name = "{sym}{val}%#1051 水属性モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#水属性モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Water },
@@ -1340,7 +1349,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_WATER_USER[1]
 			},
 			[41] = {
-				name = "{sym}{val}%#1067 風属性モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#風属性モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Wind },
@@ -1348,7 +1357,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_WIND_USER[1]
 			},
 			[42] = {
-				name = "{sym}{val}%#1091 聖属性モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#聖属性モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Saint },
@@ -1356,7 +1365,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_SAINT_USER[1]
 			},
 			[44] = {
-				name = "{sym}{val}%#1083 闇属性モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#闇属性モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Darkness },
@@ -1364,7 +1373,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_DARKNESS_USER[1]
 			},
 			[45] = {
-				name = "{sym}{val}%#1107 念属性モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#念属性モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Telekinesis },
@@ -1372,7 +1381,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_TELEKINESIS_USER[1]
 			},
 			[46] = {
-				name = "{sym}{val}%#1099 無属性モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#無属性モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Nothing },
@@ -1380,7 +1389,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_NOTHING_USER[1]
 			},
 			[47] = {
-				name = "{sym}{val}%#1075 毒属性モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#毒属性モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Poison },
@@ -1388,7 +1397,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.DAMAGE_PROPERTY_POISON_USER[1]
 			},
 			[48] = {
-				name = "{sym}{val}%#1115 不死属性モンスターから受ける物理ダメージ",
+				name = "{sym}{val}%#不死属性モンスターから受ける物理ダメージ",
 				func = FunctionPreset.DecDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Undead },
@@ -1397,14 +1406,14 @@ EquipmentPropertiesOrder = {
 			},
 ---------- 属性モンスターから受ける魔法ダメージ減少（種族は指定しない） ----------
 			[49] = {
-				name = "{sym}{val}%#1123 全ての属性のモンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#全ての属性のモンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.All },
 				sym = SymbolPreset.DecSign
 			},
 			[50] = {
-				name = "{sym}{val}%#1130 火属性モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#火属性モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Fire },
@@ -1412,7 +1421,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_FIRE_USER[1]
 			},
 			[51] = {
-				name = "{sym}{val}%#1138 水属性モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#水属性モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Water },
@@ -1420,7 +1429,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_WATER_USER[1]
 			},
 			[52] = {
-				name = "{sym}{val}%#1154 風属性モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#風属性モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Wind },
@@ -1428,7 +1437,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_WIND_USER[1]
 			},
 			[53] = {
-				name = "{sym}{val}%#1146 地属性モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#地属性モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Ground },
@@ -1436,7 +1445,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_GROUND_USER[1]
 			},
 			[54] = {
-				name = "{sym}{val}%#1178 聖属性モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#聖属性モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Saint },
@@ -1444,7 +1453,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_SAINT_USER[1]
 			},
 			[55] = {
-				name = "{sym}{val}%#1170 闇属性モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#闇属性モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Darkness },
@@ -1452,7 +1461,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_DARKNESS_USER[1]
 			},
 			[56] = {
-				name = "{sym}{val}%#1194 念属性モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#念属性モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Telekinesis },
@@ -1460,7 +1469,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_TELEKINESIS_USER[1]
 			},
 			[57] = {
-				name = "{sym}{val}%#1186 無属性モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#無属性モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Nothing },
@@ -1468,7 +1477,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_NOTHING_USER[1]
 			},
 			[58] = {
-				name = "{sym}{val}%#1162 毒属性モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#毒属性モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Poison },
@@ -1476,7 +1485,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.MDAMAGE_PROPERTY_POISON_USER[1]
 			},
 			[59] = {
-				name = "{sym}{val}%#1202 不死属性モンスターから受ける魔法ダメージ",
+				name = "{sym}{val}%#不死属性モンスターから受ける魔法ダメージ",
 				func = FunctionPreset.DecMDmgByUnitProp,
 				val = { [3] = Operation.ADD },
 				cond = { [1] = Unit.User, [2] = Element.Undead },
@@ -1485,7 +1494,7 @@ EquipmentPropertiesOrder = {
 			},
 ---------- 属性ダメージ耐性(種族・サイズ・一般・ボス・物理・魔法を指定しない) ----------
 			[60] = {
-				name = "{sym}{val}%#941 全ての属性攻撃に対する耐性",
+				name = "{sym}{val}%#全ての属性攻撃に対する耐性",
 				func = FunctionPreset.DecDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.All },
@@ -1493,14 +1502,14 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ATTR_TOLERACE_ALLBUTNOTHING[1]
 			},
 			[61] = {
-				name = "{sym}{val}%#949 全ての属性の物理攻撃に対する耐性",
+				name = "{sym}{val}%#全ての属性の物理攻撃に対する耐性",
 				func = FunctionPreset.DecPDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.All, [3] = 1 },
 				sym = SymbolPreset.IncSign
 			},
 			[62] = {
-				name = "{sym}{val}%#956 火属性攻撃に対する耐性",
+				name = "{sym}{val}%#火属性攻撃に対する耐性",
 				func = FunctionPreset.DecDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Fire },
@@ -1508,7 +1517,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ATTR_TOLERACE_FIRE[1]
 			},
 			[63] = {
-				name = "{sym}{val}%#964 水属性攻撃に対する耐性",
+				name = "{sym}{val}%#水属性攻撃に対する耐性",
 				func = FunctionPreset.DecDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Water },
@@ -1516,7 +1525,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ATTR_TOLERACE_WATER[1]
 			},
 			[64] = {
-				name = "{sym}{val}%#980 風属性攻撃に対する耐性",
+				name = "{sym}{val}%#風属性攻撃に対する耐性",
 				func = FunctionPreset.DecDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Wind },
@@ -1524,7 +1533,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ATTR_TOLERACE_WIND[1]
 			},
 			[65] = {
-				name = "{sym}{val}%#972 地属性攻撃に対する耐性",
+				name = "{sym}{val}%#地属性攻撃に対する耐性",
 				func = FunctionPreset.DecDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Ground },
@@ -1532,7 +1541,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ATTR_TOLERACE_GROUND[1]
 			},
 			[66] = {
-				name = "{sym}{val}%#1004 聖属性攻撃に対する耐性",
+				name = "{sym}{val}%#聖属性攻撃に対する耐性",
 				func = FunctionPreset.DecDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Saint },
@@ -1540,7 +1549,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ATTR_TOLERACE_SAINT[1]
 			},
 			[67] = {
-				name = "{sym}{val}%#996 闇属性攻撃に対する耐性",
+				name = "{sym}{val}%#闇属性攻撃に対する耐性",
 				func = FunctionPreset.DecDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Darkness },
@@ -1548,7 +1557,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ATTR_TOLERACE_DARKNESS[1]
 			},
 			[68] = {
-				name = "{sym}{val}%#1020 念属性攻撃に対する耐性",
+				name = "{sym}{val}%#念属性攻撃に対する耐性",
 				func = FunctionPreset.DecDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Telekinesis },
@@ -1556,7 +1565,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ATTR_TOLERACE_TELEKINESIS[1]
 			},
 			[69] = {
-				name = "{sym}{val}%#1012 無属性攻撃に対する耐性",
+				name = "{sym}{val}%#無属性攻撃に対する耐性",
 				func = FunctionPreset.DecDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Nothing },
@@ -1564,7 +1573,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ATTR_TOLERACE_NOTHING[1]
 			},
 			[70] = {
-				name = "{sym}{val}%#988 毒属性攻撃に対する耐性",
+				name = "{sym}{val}%#毒属性攻撃に対する耐性",
 				func = FunctionPreset.DecDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Poison },
@@ -1572,7 +1581,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.ATTR_TOLERACE_POISON[1]
 			},
 			[71] = {
-				name = "{sym}{val}%#1028 不死属性攻撃に対する耐性",
+				name = "{sym}{val}%#不死属性攻撃に対する耐性",
 				func = FunctionPreset.DecDmgBySkillProp,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Element.Undead },
@@ -1586,7 +1595,7 @@ EquipmentPropertiesOrder = {
 		name = "モンスター防御",
 		order = {
 			[1] = {
-				name = "{sym}100%#573 一般モンスターのDef無視(100%)",
+				name = "{sym}100%#一般モンスターのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitClass,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = MonsterClass.Normal },
@@ -1594,7 +1603,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_MonsterClass_Normal"
 			},
 			[2] = {
-				name = "{sym}{val}%#581 一般モンスターのDef無視",
+				name = "{sym}{val}%#一般モンスターのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitClass,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = MonsterClass.Normal },
@@ -1603,7 +1612,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_MonsterClass_Normal"
 			},
 			[3] = {
-				name = "{sym}100%#591 ホ゛スモンスターのDef無視(100%)",
+				name = "{sym}100%#ホ゛スモンスターのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitClass,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = MonsterClass.Boss },
@@ -1611,7 +1620,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_MonsterClass_Boss"
 			},
 			[4] = {
-				name = "{sym}{val}%#599 ホ゛スモンスターのDef無視",
+				name = "{sym}{val}%#ホ゛スモンスターのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitClass,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = MonsterClass.Boss },
@@ -1620,7 +1629,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_MonsterClass_Boss"
 			},
 			[5] = {
-				name = "{sym}{val}%#649 一般モンスターのMdef無視",
+				name = "{sym}{val}%#一般モンスターのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitClass,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = MonsterClass.Normal },
@@ -1628,7 +1637,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.CLASS_IGNORE_MDEF_PERCENT_NORMAL[1]
 			},
 			[6] = {
-				name = "{sym}{val}%#658 ホ゛スモンスターのMdef無視",
+				name = "{sym}{val}%#ホ゛スモンスターのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitClass,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = MonsterClass.Boss },
@@ -1636,7 +1645,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.CLASS_IGNORE_MDEF_PERCENT_BOSS[1]
 			},
 			[7] = {
-				name = "{sym}100%#1318 全ての種族のDef無視(100%)",
+				name = "{sym}100%#全ての種族のDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.All },
@@ -1644,7 +1653,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_All"
 			},
 			[8] = {
-				name = "{sym}{val}%#1326 全ての種族のDef無視",
+				name = "{sym}{val}%#全ての種族のDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.All },
@@ -1652,7 +1661,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_All"
 			},
 			[9] = {
-				name = "{sym}100%#1371 無形モンスターのDef無視(100%)",
+				name = "{sym}100%#無形モンスターのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.Nothing },
@@ -1660,7 +1669,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Nothing"
 			},
 			[10] = {
-				name = "{sym}{val}%#1379 無形モンスターのDef無視",
+				name = "{sym}{val}%#無形モンスターのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Nothing },
@@ -1669,7 +1678,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Nothing"
 			},
 			[11] = {
-				name = "{sym}100%#1353 不死形モンスターのDef無視(100%)",
+				name = "{sym}100%#不死形モンスターのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.Undead },
@@ -1677,7 +1686,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Undead"
 			},
 			[12] = {
-				name = "{sym}{val}%#1361 不死形モンスターのDef無視",
+				name = "{sym}{val}%#不死形モンスターのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Undead },
@@ -1686,7 +1695,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Undead"
 			},
 			[13] = {
-				name = "{sym}100%#1461 動物形モンスターのDef無視(100%)",
+				name = "{sym}100%#動物形モンスターのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.Animal },
@@ -1694,7 +1703,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Animal"
 			},
 			[14] = {
-				name = "{sym}{val}%#1469 動物形モンスターのDef無視",
+				name = "{sym}{val}%#動物形モンスターのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Animal },
@@ -1703,7 +1712,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Animal"
 			},
 			[15] = {
-				name = "{sym}100%#1335 植物形モンスターのDef無視(100%)",
+				name = "{sym}100%#植物形モンスターのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.Plant },
@@ -1711,7 +1720,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Plant"
 			},
 			[16] = {
-				name = "{sym}{val}%#1343 植物形モンスターのDef無視",
+				name = "{sym}{val}%#植物形モンスターのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Plant },
@@ -1720,7 +1729,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Plant"
 			},
 			[17] = {
-				name = "{sym}100%#1443 昆虫形モンスターのDef無視(100%)",
+				name = "{sym}100%#昆虫形モンスターのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.Insect },
@@ -1728,7 +1737,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Insect"
 			},
 			[18] = {
-				name = "{sym}{val}%#1451 昆虫形モンスターのDef無視",
+				name = "{sym}{val}%#昆虫形モンスターのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Insect },
@@ -1737,7 +1746,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Insect"
 			},
 			[19] = {
-				name = "{sym}100%#1425 魚貝形モンスターのDef無視(100%)",
+				name = "{sym}100%#魚貝形モンスターのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.Fish },
@@ -1745,7 +1754,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Fish"
 			},
 			[20] = {
-				name = "{sym}{val}%#1433 魚貝形モンスターのDef無視",
+				name = "{sym}{val}%#魚貝形モンスターのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Fish },
@@ -1754,7 +1763,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Fish"
 			},
 			[21] = {
-				name = "{sym}100%#1479 悪魔形モンスターのDef無視(100%)",
+				name = "{sym}100%#悪魔形モンスターのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.Demon },
@@ -1762,7 +1771,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Demon"
 			},
 			[22] = {
-				name = "{sym}{val}%#1487 悪魔形モンスターのDef無視",
+				name = "{sym}{val}%#悪魔形モンスターのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Demon },
@@ -1771,7 +1780,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Demon"
 			},
 			[23] = {
-				name = "{sym}100%#1497 人間形モンスターのDef無視(100%)（プレイヤーには発動しない）",
+				name = "{sym}100%#人間形モンスターのDef無視(100%)（プレイヤーには発動しない）",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.Human },
@@ -1779,7 +1788,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Human"
 			},
 			[24] = {
-				name = "{sym}{val}%#1505 人間形モンスターのDef無視（プレイヤーには発動しない）",
+				name = "{sym}{val}%#人間形モンスターのDef無視（プレイヤーには発動しない）",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Human },
@@ -1788,7 +1797,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Human"
 			},
 			[25] = {
-				name = "{sym}100%#1389 天使形モンスターのDef無視(100%)",
+				name = "{sym}100%#天使形モンスターのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.Angel },
@@ -1796,7 +1805,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Angel"
 			},
 			[26] = {
-				name = "{sym}{val}%#1397 天使形モンスターのDef無視",
+				name = "{sym}{val}%#天使形モンスターのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Angel },
@@ -1805,7 +1814,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Angel"
 			},
 			[27] = {
-				name = "{sym}100%#1407 竜形モンスターのDef無視(100%)",
+				name = "{sym}100%#竜形モンスターのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.Dragon },
@@ -1813,7 +1822,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Dragon"
 			},
 			[28] = {
-				name = "{sym}{val}%#1415 竜形モンスターのDef無視",
+				name = "{sym}{val}%#竜形モンスターのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Dragon },
@@ -1822,7 +1831,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_Dragon"
 			},
 			[29] = {
-				name = "{sym}100%#1515 人間形プレイヤーのDef無視(100%)",
+				name = "{sym}100%#人間形プレイヤーのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.HumanPlayer },
@@ -1830,7 +1839,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_HumanPlayer"
 			},
 			[30] = {
-				name = "{sym}{val}%#1523 人間形プレイヤーのDef無視",
+				name = "{sym}{val}%#人間形プレイヤーのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.HumanPlayer },
@@ -1839,7 +1848,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_HumanPlayer"
 			},
 			[31] = {
-				name = "{sym}100%#1533 ドラム形プレイヤーのDef無視(100%)",
+				name = "{sym}100%#ドラム形プレイヤーのDef無視(100%)",
 				func = FunctionPreset.IgnoreDefByUnitRace,
 				val = { [0] = Operation.ONE },
 				cond = { [1] = Race.DoramPlayer },
@@ -1847,7 +1856,7 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_DoramPlayer"
 			},
 			[32] = {
-				name = "{sym}{val}%#1541 ドラム形プレイヤーのDef無視",
+				name = "{sym}{val}%#ドラム形プレイヤーのDef無視",
 				func = FunctionPreset.IgnoreDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.DoramPlayer },
@@ -1856,14 +1865,14 @@ EquipmentPropertiesOrder = {
 				uniq1 = "IgnoreDEF_Race_DoramPlayer"
 			},
 			[33] = {
-				name = "{sym}{val}%#1654 全ての種族のMdef無視",
+				name = "{sym}{val}%#全ての種族のMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.All },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[34] = {
-				name = "{sym}{val}%#1680 無形モンスターのMdef無視",
+				name = "{sym}{val}%#無形モンスターのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Nothing },
@@ -1871,7 +1880,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_NOTHING[1]
 			},
 			[35] = {
-				name = "{sym}{val}%#1671 不死形モンスターのMdef無視",
+				name = "{sym}{val}%#不死形モンスターのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Undead },
@@ -1879,7 +1888,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_UNDEAD[1]
 			},
 			[36] = {
-				name = "{sym}{val}%#1725 動物形モンスターのMdef無視",
+				name = "{sym}{val}%#動物形モンスターのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Animal },
@@ -1887,7 +1896,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_ANIMAL[1]
 			},
 			[37] = {
-				name = "{sym}{val}%#1662 植物形モンスターのMdef無視",
+				name = "{sym}{val}%#植物形モンスターのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Plant },
@@ -1895,7 +1904,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_PLANT[1]
 			},
 			[38] = {
-				name = "{sym}{val}%#1716 昆虫形モンスターのMdef無視",
+				name = "{sym}{val}%#昆虫形モンスターのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Insect },
@@ -1903,7 +1912,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_INSECT[1]
 			},
 			[39] = {
-				name = "{sym}{val}%#1707 魚貝形モンスターのMdef無視",
+				name = "{sym}{val}%#魚貝形モンスターのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Fish },
@@ -1911,7 +1920,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_FISHS[1]
 			},
 			[40] = {
-				name = "{sym}{val}%#1734 悪魔形モンスターのMdef無視",
+				name = "{sym}{val}%#悪魔形モンスターのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Demon },
@@ -1919,7 +1928,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_DEVIL[1]
 			},
 			[41] = {
-				name = "{sym}{val}%#1743 人間形モンスターのMdef無視（プレイヤーには発動しない）",
+				name = "{sym}{val}%#人間形モンスターのMdef無視（プレイヤーには発動しない）",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Human },
@@ -1927,7 +1936,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_HUMAN[1]
 			},
 			[42] = {
-				name = "{sym}{val}%#1689 天使形モンスターのMdef無視",
+				name = "{sym}{val}%#天使形モンスターのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Angel },
@@ -1935,7 +1944,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_ANGEL[1]
 			},
 			[43] = {
-				name = "{sym}{val}%#1698 竜形モンスターのMdef無視",
+				name = "{sym}{val}%#竜形モンスターのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Dragon },
@@ -1943,7 +1952,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_DRAGON[1]
 			},
 			[44] = {
-				name = "{sym}{val}%#1752 人間形プレイヤーのMdef無視",
+				name = "{sym}{val}%#人間形プレイヤーのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.HumanPlayer },
@@ -1951,7 +1960,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_PLAYER_HUMAN[1]
 			},
 			[45] = {
-				name = "{sym}{val}%#1761 ドラム形プレイヤーのMdef無視",
+				name = "{sym}{val}%#ドラム形プレイヤーのMdef無視",
 				func = FunctionPreset.IgnoreMDefRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.DoramPlayer },
@@ -1959,7 +1968,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.RACE_IGNORE_MDEF_PERCENT_PLAYER_DORAM[1]
 			},
 			[46] = {
-				name = "{sym}{val}#1770 無形モンスターにCri",
+				name = "{sym}{val}#無形モンスターにCri",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Nothing },
@@ -1968,7 +1977,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[47] = {
-				name = "{sym}{val}#1779 不死形モンスターにCri",
+				name = "{sym}{val}#不死形モンスターにCri",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Undead },
@@ -1977,7 +1986,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[48] = {
-				name = "{sym}{val}#1788 動物形モンスターにCri",
+				name = "{sym}{val}#動物形モンスターにCri",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Animal },
@@ -1986,7 +1995,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[49] = {
-				name = "{sym}{val}#1797 植物形モンスターにCri",
+				name = "{sym}{val}#植物形モンスターにCri",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Plant },
@@ -1995,7 +2004,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[50] = {
-				name = "{sym}{val}#1806 昆虫形モンスターにCri",
+				name = "{sym}{val}#昆虫形モンスターにCri",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Insect },
@@ -2004,7 +2013,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[51] = {
-				name = "{sym}{val}#1815 魚貝形モンスターにCri",
+				name = "{sym}{val}#魚貝形モンスターにCri",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Fish },
@@ -2013,7 +2022,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[52] = {
-				name = "{sym}{val}#1824 悪魔形モンスターにCri",
+				name = "{sym}{val}#悪魔形モンスターにCri",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Demon },
@@ -2022,7 +2031,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[53] = {
-				name = "{sym}{val}#1833 人間形モンスターにCri（プレイヤーには発動しない）",
+				name = "{sym}{val}#人間形モンスターにCri（プレイヤーには発動しない）",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Human },
@@ -2031,7 +2040,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[54] = {
-				name = "{sym}{val}#1842 天使形モンスターにCri",
+				name = "{sym}{val}#天使形モンスターにCri",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Angel },
@@ -2040,7 +2049,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[55] = {
-				name = "{sym}{val}#1851 竜形モンスターにCri",
+				name = "{sym}{val}#竜形モンスターにCri",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Dragon },
@@ -2049,7 +2058,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[56] = {
-				name = "{sym}{val}#1860 人間形プレイヤーにCri",
+				name = "{sym}{val}#人間形プレイヤーにCri",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.HumanPlayer },
@@ -2058,7 +2067,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[57] = {
-				name = "{sym}{val}#1868 ドラム形プレイヤーにCri",
+				name = "{sym}{val}#ドラム形プレイヤーにCri",
 				func = FunctionPreset.IncCriByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.DoramPlayer },
@@ -2067,189 +2076,189 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.DIV] = 10, [ValueOption.FLOAT] = 0 }
 			},
 			[58] = {
-				name = "{sym}{val}%#2070 全ての種族のRes無視",
+				name = "{sym}{val}%#全ての種族のRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.All },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[59] = {
-				name = "{sym}{val}%#2094 無形モンスターのRes無視",
+				name = "{sym}{val}%#無形モンスターのRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Nothing },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[60] = {
-				name = "{sym}{val}%#2086 不死形モンスターのRes無視",
+				name = "{sym}{val}%#不死形モンスターのRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Undead },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[61] = {
-				name = "{sym}{val}%#2134 動物形モンスターのRes無視",
+				name = "{sym}{val}%#動物形モンスターのRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Animal },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[62] = {
-				name = "{sym}{val}%#2078 植物形モンスターのRes無視",
+				name = "{sym}{val}%#植物形モンスターのRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Plant },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[63] = {
-				name = "{sym}{val}%#2126 昆虫形モンスターのRes無視",
+				name = "{sym}{val}%#昆虫形モンスターのRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Insect },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[64] = {
-				name = "{sym}{val}%#魚貝形モ? ス? ー? Res? 視",
+				name = "{sym}{val}%#魚貝形モンスターのRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Fish },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[65] = {
-				name = "{sym}{val}%#2118 魚貝形モンスターのRes無視",
+				name = "{sym}{val}%#魚貝形モンスターのRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Demon },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[66] = {
-				name = "{sym}{val}%#2150 人間形モンスターのRes無視（プレイヤーには発動しない）",
+				name = "{sym}{val}%#人間形モンスターのRes無視（プレイヤーには発動しない）",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Human },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[67] = {
-				name = "{sym}{val}%#2102 天使形モンスターのRes無視",
+				name = "{sym}{val}%#天使形モンスターのRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Angel },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[68] = {
-				name = "{sym}{val}%#2110 竜形モンスターのRes無視",
+				name = "{sym}{val}%#竜形モンスターのRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Dragon },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[69] = {
-				name = "{sym}{val}%#2158 人間形プレイヤーのRes無視",
+				name = "{sym}{val}%#人間形プレイヤーのRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.HumanPlayer },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[70] = {
-				name = "{sym}{val}%#2166 ドラム形プレイヤーのRes無視",
+				name = "{sym}{val}%#ドラム形プレイヤーのRes無視",
 				func = FunctionPreset.IgnoreResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.DoramPlayer },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[71] = {
-				name = "{sym}{val}%#2174 全ての種族のMres無視",
+				name = "{sym}{val}%#全ての種族のMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.All },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[72] = {
-				name = "{sym}{val}%#2198 無形モンスターのMres無視",
+				name = "{sym}{val}%#無形モンスターのMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Nothing },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[73] = {
-				name = "{sym}{val}%#2628 不死形モンスターのMres無視",
+				name = "{sym}{val}%#不死形モンスターのMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Undead },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[74] = {
-				name = "{sym}{val}%#2238 動物形モンスターのMres無視",
+				name = "{sym}{val}%#動物形モンスターのMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Animal },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[75] = {
-				name = "{sym}{val}%#2182 植物形モンスターのMres無視",
+				name = "{sym}{val}%#植物形モンスターのMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Plant },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[76] = {
-				name = "{sym}{val}%#2230 昆虫形モンスターのMres無視",
+				name = "{sym}{val}%#昆虫形モンスターのMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Insect },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[77] = {
-				name = "{sym}{val}%#2222 魚貝形モンスターのMres無視",
+				name = "{sym}{val}%#魚貝形モンスターのMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Fish },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[78] = {
-				name = "{sym}{val}%#2246 悪魔形モンスターのMres無視",
+				name = "{sym}{val}%#悪魔形モンスターのMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Demon },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[79] = {
-				name = "{sym}{val}%#2254 人間形モンスターのMres無視（プレイヤーには発動しない）",
+				name = "{sym}{val}%#人間形モンスターのMres無視（プレイヤーには発動しない）",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Human },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[80] = {
-				name = "{sym}{val}%#2206 天使形モンスターのMres無視",
+				name = "{sym}{val}%#天使形モンスターのMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Angel },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[81] = {
-				name = "{sym}{val}%#2214 竜形モンスターのMres無視",
+				name = "{sym}{val}%#竜形モンスターのMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Dragon },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[82] = {
-				name = "{sym}{val}%#2262 人間形プレイヤーのMres無視",
+				name = "{sym}{val}%#人間形プレイヤーのMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.HumanPlayer },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[83] = {
-				name = "{sym}{val}%#2270 ドラム形プレイヤーのMres無視",
+				name = "{sym}{val}%#ドラム形プレイヤーのMres無視",
 				func = FunctionPreset.IgnoreMResRateByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.DoramPlayer },
 				sym = SymbolPreset.OnlyDecSign
 			},
 			[84] = {
-				name = "{sym}{val}%#2278 全てのモンスターを倒した時に獲得する経験値",
+				name = "{sym}{val}%#全てのモンスターを倒した時に獲得する経験値",
 				func = FunctionPreset.IncExpByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.All },
@@ -2258,7 +2267,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.MIN] = 0 }
 			},
 			[85] = {
-				name = "{sym}{val}%#2305 無形モンスターを倒した時に獲得する経験値",
+				name = "{sym}{val}%#無形モンスターを倒した時に獲得する経験値",
 				func = FunctionPreset.IncExpByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Nothing },
@@ -2267,7 +2276,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.MIN] = 0 }
 			},
 			[86] = {
-				name = "{sym}{val}%#2296 不死形モンスターを倒した時に獲得する経験値",
+				name = "{sym}{val}%#不死形モンスターを倒した時に獲得する経験値",
 				func = FunctionPreset.IncExpByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Undead },
@@ -2276,7 +2285,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.MIN] = 0 }
 			},
 			[87] = {
-				name = "{sym}{val}%#2350 動物形モンスターを倒した時に獲得する経験値",
+				name = "{sym}{val}%#動物形モンスターを倒した時に獲得する経験値",
 				func = FunctionPreset.IncExpByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Animal },
@@ -2285,7 +2294,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.MIN] = 0 }
 			},
 			[88] = {
-				name = "{sym}{val}%#2287 植物形モンスターを倒した時に獲得する経験値",
+				name = "{sym}{val}%#植物形モンスターを倒した時に獲得する経験値",
 				func = FunctionPreset.IncExpByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Plant },
@@ -2294,7 +2303,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.MIN] = 0 }
 			},
 			[89] = {
-				name = "{sym}{val}%#2341 昆虫形モンスターを倒した時に獲得する経験値",
+				name = "{sym}{val}%#昆虫形モンスターを倒した時に獲得する経験値",
 				func = FunctionPreset.IncExpByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Insect },
@@ -2303,7 +2312,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.MIN] = 0 }
 			},
 			[90] = {
-				name = "{sym}{val}%#2332 魚貝形モンスターを倒した時に獲得する経験値",
+				name = "{sym}{val}%#魚貝形モンスターを倒した時に獲得する経験値",
 				func = FunctionPreset.IncExpByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Fish },
@@ -2312,7 +2321,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.MIN] = 0 }
 			},
 			[91] = {
-				name = "{sym}{val}%#2359 悪魔形モンスターを倒した時に獲得する経験値",
+				name = "{sym}{val}%#悪魔形モンスターを倒した時に獲得する経験値",
 				func = FunctionPreset.IncExpByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Demon },
@@ -2321,7 +2330,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.MIN] = 0 }
 			},
 			[92] = {
-				name = "{sym}{val}%#2368 人間形モンスターを倒した時に獲得する経験値",
+				name = "{sym}{val}%#人間形モンスターを倒した時に獲得する経験値",
 				func = FunctionPreset.IncExpByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Human },
@@ -2330,7 +2339,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.MIN] = 0 }
 			},
 			[93] = {
-				name = "{sym}{val}%#2314 天使形モンスターを倒した時に獲得する経験値",
+				name = "{sym}{val}%#天使形モンスターを倒した時に獲得する経験値",
 				func = FunctionPreset.IncExpByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Angel },
@@ -2339,7 +2348,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.MIN] = 0 }
 			},
 			[94] = {
-				name = "{sym}{val}%#2323 竜形モンスターを倒した時に獲得する経験値",
+				name = "{sym}{val}%#竜形モンスターを倒した時に獲得する経験値",
 				func = FunctionPreset.IncExpByUnitRace,
 				val = { [2] = Operation.ADD },
 				cond = { [1] = Race.Dragon },
@@ -2439,7 +2448,7 @@ EquipmentPropertiesOrder = {
 				valOpt = { [ValueOption.MIN] = 0 }
 			},
 			[6] = {
-				name = "{sym}{val}%#2486 近接物理攻撃で受けたダメージを反射",
+				name = "{sym}{val}%#近接物理攻撃で受けたダメージを反射",
 				func = { "AddMeleeAttackReflect", "SubMeleeAttackReflect" },
 				val = { [1] = Operation.ADD },
 				sym = SymbolPreset.OnlyDecSign,
@@ -2460,7 +2469,7 @@ EquipmentPropertiesOrder = {
 				rndOpt = EnumVAR.REFLECT_DAMAGE_PERCENT[1]
 			},
 			[9] = {
-				name = "{sym}{val}%#2587 アイテムドロップ率",
+				name = "{sym}{val}%#アイテムドロップ率",
 				func = { "AddReceiveItem_Equip", "SubReceiveItem_Equip" },
 				val = { [1] = Operation.ADD },
 				sym = SymbolPreset.IncSign,
@@ -2474,7 +2483,7 @@ EquipmentPropertiesOrder = {
 				cond = { [1] = Effect.Haste, [2] = 9999, [3] = 100 }
 			},
 			[11] = {
-				name = "2452 詠唱が中断されない{sym}",
+				name = "詠唱が中断されない{sym}",
 				func = { "NoDispell" },
 				sym = SymbolPreset.ApplyWord,
 				val = { [1] = Operation.ONE }
