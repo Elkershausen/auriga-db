@@ -1,6 +1,5 @@
 -- 2026/06/30 実装
--- 2026/02/19 グローバル実装分
--- ローカル + グローバル 混合([64]ペット通知 設定は表示されません)
+-- 2026/04/14 ローカル実装分
 
 OptionTbl = {
 	[1] = {
@@ -256,165 +255,145 @@ OptionTbl = {
 		MSGs = { "MSI_MISS_EFFECT_ON", "MSI_MISS_EFFECT_OFF" }
 	},
 	[29] = {
+		ID = TT_SKILLFAIL_ON_OFF,
+		Tab = ETC,
+		Type = ONOFF,
+		Title = "/skillfail",
+		Default = true,
+		Description = "[スキル使用失敗]メッセージの表\示"
+	},
+	[30] = {
 		ID = TT_SHOPPING_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/shopping",
 		Tooltip = "/sh",
-		TipBoxID = 171,
 		Default = true,
 		Description = "露店の看板を左クリックでリストを表\示し、右クリックでリストを閉じる",
 		MSGs = { "MSI_SHOPPING_ON", "MSI_SHOPPING_OFF" }
 	},
-	[30] = {
+	[31] = {
 		ID = TT_STATEINFO_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/stateinfo",
-		TipBoxID = 172,
 		Default = true,
 		Description = "状態情報アイコンの説明表\示",
 		MSGs = { "MSI_SHOW_STATEINFO_ON", "MSI_SHOW_STATEINFO_OFF" }
 	},
-	[31] = {
+	[32] = {
 		ID = TT_FIXED_CAMERA_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/camera",
-		TipBoxID = 173,
 		Default = false,
 		Description = "画面の中心にキャラクターを固定",
 		MSGs = { "MSI_FIXED_CAMERA_ON", "MSI_FIXED_CAMERA_OFF" }
 	},
-	[32] = {
+	[33] = {
 		ID = TT_MONSTERHP_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/monsterhp",
-		TipBoxID = 174,
 		Default = true,
 		Description = "モンスターのHP情報表\示",
 		MSGs = { "MSI_MONSTER_HP_ON", "MSI_MONSTER_HP_OFF" }
 	},
-	[33] = {
+	[34] = {
 		ID = TT_SHOW_CASHSHOP_BTN_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/cashshop",
-		TipBoxID = 175,
 		Default = true,
 		Description = "スペシャルアイテムショップのアイコン表\示"
 	},
-	[34] = {
-		ID = TT_SHOW_GOLDPCCAFE_ON_OFF,
-		Tab = ETC,
-		Type = ONOFF,
-		Title = "/goldpc",
-		TipBoxID = 176,
-		Default = true,
-		Description = "Displays Gold PC Cafe button."
-	},
-	[35] = {
+	[36] = {
 		ID = TT_SHOW_MINIMAP_BUTTON_ONOFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/minimap",
-		TipBoxID = 177,
 		Default = true,
 		Description = "ミニマップウィンドウ下部の各種ボタン表\示",
 		MSGs = { "MSI_MINIMAP_BUTTON_ON", "MSI_MINIMAP_BUTTON_OFF" }
 	},
-	[36] = {
+	[37] = {
 		ID = TT_MIN_EFFECT_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/mineffect",
-		TipBoxID = 145,
 		Default = false,
 		Description = "一部エフェクトの簡略化表\示",
 		MSGs = { "MSI_MINEFFECT_ON", "MSI_MINEFFECT_OFF" }
 	},
-	[37] = {
+	[38] = {
 		ID = TT_SPRITEMABLE_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/mable",
-		TipBoxID = 178,
 		Default = true,
 		Description = "ドラムの「にゃん魂」エフェクトの表\示",
 		MSGs = { "MSI_SPRITEMABLE_ON", "MSI_SPRITEMABLE_OFF" }
 	},
-	[38] = {
+	[39] = {
 		ID = TT_SHOW_EMBLEM_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/emblem",
-		TipBoxID = 179,
 		Default = true,
 		Description = "ギルドエンブレムの表\示",
 		MSGs = { "MSI_GAME_SETTINGS_EMBLEM_ON", "MSI_GAME_SETTINGS_EMBLEM_OFF" }
 	},
-	[39] = {
+	[40] = {
 		ID = TT_NAME_ABOVE_HEAD_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/font",
-		Tooltip = "/font",
-		TipBoxID = 180,
 		Default = false,
 		Description = "キャラクターの名前表\示位置の切り替え"
 	},
-	[40] = {
+	[41] = {
 		ID = TT_BLOCK_CALL_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/call",
-		Tooltip = "/call",
-		TipBoxID = 181,
 		Default = true,
 		Description = "呼び出し機能\"
 	},
-	[41] = {
+	[42] = {
 		ID = TT_HOMUN_USERAI_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/hoai",
-		Tooltip = "/hoai",
-		TipBoxID = 182,
 		Default = false,
 		Description = "ユーザー指定のホムンクルスAI使用",
 		MSGs = { "MSI_HOMUN_USERAI_ON", "MSI_HOMUN_USERAI_OFF" }
 	},
-	[42] = {
+	[43] = {
 		ID = TT_MER_USERAI_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/merai",
-		TipBoxID = 182,
 		Default = false,
 		Description = "ユーザー指定の傭兵AI使用",
 		MSGs = { "MSI_MER_USERAI_ON", "MSI_MER_USERAI_OFF" }
 	},
-	[43] = {
+	[44] = {
 		ID = TT_SHOW_MERCHANT_SHOP_ON_OFF,
 		Tab = ETC,
 		Type = ONOFF,
 		Title = "/showshop",
-		Tooltip = "/showshop",
-		TipBoxID = 67,
 		Default = true,
 		Description = "露店の看板表\示"
 	},
-	[44] = {
+	[45] = {
 		ID = TT_EX_NO_COS_PLAY,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/nocosplay",
-		Tooltip = "/return\n/changedress",
-		TipBoxID = 46,
+		Tooltip = "/changedress",
 		Description = "結婚衣装やサンタクロース衣装などのコスチュームを解除する"
 	},
-	[45] = {
+	[46] = {
 		ID = TT_EX_HI,
 		Tab = ETC,
 		Type = EXE,
@@ -422,155 +401,126 @@ OptionTbl = {
 		Tooltip = "/hi [メッセージ]",
 		Description = "友達全員に挨拶を送る /hi[半角スペース][メッセージ] の場合、入力したメッセージを送る"
 	},
-	[46] = {
+	[47] = {
 		ID = TT_EX_HELP,
 		Tab = ETC,
 		Type = EXE,
-		Title = "/h",
-		TipBoxID = 2,
+		Title = "/help",
+		Tooltip = "/h",
 		Description = "会話ウィンドウにHELPコマンドのリストを表\示する"
 	},
-	[47] = {
+	[48] = {
 		ID = TT_EX_SIT,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/sit",
-		Tooltip = "/sit\n/stand\nInsert",
-		TipBoxID = 184,
 		Description = "キャラクターの立ち状態、座り状態を切り替える"
 	},
-	[48] = {
+	[49] = {
 		ID = TT_EX_EXIT_CHAT_ROOM,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/q",
-		TipBoxID = 20,
 		Description = "チャットルームから退出する"
 	},
-	[49] = {
+	[50] = {
 		ID = TT_EX_LEAVE_GROUP,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/leave",
-		Tooltip = "/leave",
-		TipBoxID = 29,
 		Description = "パーティから脱退する"
 	},
-	[50] = {
+	[51] = {
 		ID = TT_EX_MAP_POS,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/where",
-		Tooltip = "/where",
-		TipBoxID = 185,
 		Description = "キャラクターの現在位置情報を表\示する"
 	},
-	[51] = {
+	[52] = {
 		ID = TT_EX_REMEMBER_WARPPOINT,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/memo",
-		Tooltip = "/memo",
-		TipBoxID = 186,
 		Description = "スキル「ワープポータル」の転送位置を記憶する"
 	},
-	[52] = {
+	[53] = {
 		ID = TT_EX_MAKE_CHAT_ROOM,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/chat",
-		Tooltip = "/chat",
-		TipBoxID = 20,
 		Description = "チャットルーム作成ウィンドウを開く"
 	},
-	[53] = {
+	[54] = {
 		ID = TT_EX_SAVE_CHAT,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/savechat",
-		Tooltip = "/savechat",
-		TipBoxID = 24,
 		Description = "チャットのログを保存する"
 	},
-	[54] = {
+	[55] = {
 		ID = TT_EX_DORIDORI,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/doridori",
-		TipBoxID = 187,
 		Description = "キャラクターが左右に首を振る"
 	},
-	[55] = {
+	[56] = {
 		ID = TT_EX_BANGBANG,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/bangbang",
-		TipBoxID = 188,
 		Description = "キャラクターが時計回りに回転する"
 	},
-	[56] = {
+	[57] = {
 		ID = TT_EX_BINGBING,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/bingbing",
-		TipBoxID = 189,
 		Description = "キャラクターが反時計回りに回転する"
 	},
-	[57] = {
+	[58] = {
 		ID = TT_EX_WHISPER_BLOCK_LIST,
 		Tab = ETC,
 		Type = EXE,
-		Title = "/ex [名前]",
-		TipBoxID = 28,
+		Title = "/ex",
+		Tooltip = "/ex [名前]",
 		Description = "オープンチャットと耳打ちの受信拒否リストを表\示する /ex[半角スペース][名前] の場合、対象からのオープンチャットと耳打ちの受信を拒否する"
 	},
-	[58] = {
+	[59] = {
 		ID = TT_EX_WHISPER_ALL_ACCEPT,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/inall",
-		TipBoxID = 28,
 		Description = "全キャラクターからのオープンチャットと耳打ちの受信を許可する"
 	},
-	[59] = {
+	[60] = {
 		ID = TT_EX_WHISPER_ALL_BLOCK,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/exall",
-		TipBoxID = 28,
 		Description = "全キャラクターからの耳打ちを拒否する"
 	},
-	[60] = {
+	[61] = {
 		ID = TT_EX_RANK_BLACKSMITH,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/blacksmith",
-		TipBoxID = 190,
 		Description = "ブラックスミスの上位10位ランキングを表\示する"
 	},
-	[61] = {
+	[62] = {
 		ID = TT_EX_RANK_ALCHEMIST,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/alchemist",
-		TipBoxID = 190,
 		Description = "アルケミストの上位10位ランキングを表\示する"
 	},
-	[62] = {
+	[63] = {
 		ID = TT_EX_RANK_TAEKWON,
 		Tab = ETC,
 		Type = EXE,
 		Title = "/taekwon",
-		TipBoxID = 193,
 		Description = "テコンキッドの上位10位ランキングを表\示する"
-	},
-	[63] = {
-		ID = TT_SKILLFAIL_ON_OFF,
-		Tab = ETC,
-		Type = ONOFF,
-		Title = "/skillfail",
-		Default = true,
-		Description = "[スキル使用失敗]メッセージの表\示"
 	},
 	[64] = {
 		ID = TT_PETINFO_ALERT_ONOFF,
