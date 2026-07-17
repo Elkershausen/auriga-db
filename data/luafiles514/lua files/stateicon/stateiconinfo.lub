@@ -1,5 +1,4 @@
--- 2026/05/21 アップデート
--- 新職業状態異常 ローカライズ仮対応
+-- 2026/06/30 アップデート
 
 COLOR_TITLE_BUFF = { 155, 202, 155 }
 COLOR_TITLE_DEBUFF = { 250, 100, 100 }
@@ -785,6 +784,7 @@ StateIconList[EFST_IDs.EFST_STEELBODY] = {
 			"%s",
 			{ 255, 176, 98 }
 		},
+		{ "ほとんどの攻撃で" },
 		{ "受けるダメージが1/10になる" },
 		{ "攻撃速度減少" },
 		{ "移動速度減少" },
@@ -2214,7 +2214,8 @@ StateIconList[EFST_IDs.EFST_ENERGYCOAT] = {
 			"%s",
 			{ 255, 176, 98 }
 		},
-		{ "ほとんどの受けるダメージを軽減" },
+		{ "ほとんどの攻撃で" },
+		{ "受けるダメージを軽減" },
 		{ "ダメージを受ける度にSP消費" }
 	}
 }
@@ -4323,7 +4324,7 @@ StateIconList[EFST_IDs.EFST_COLD] = {
 		{ "で受ける物理ダメージ増加" },
 		{ "短剣・片手剣・両手剣・弓" },
 		{ "で受ける物理ダメージ減少" },
-		{ "特定の風属性魔法で" },
+		{ "特定の風属性魔法攻撃で" },
 		{ "受けるダメージ増加" },
 		{ "火属性ダメージを受けた場合解除" }
 	}
@@ -7049,7 +7050,8 @@ StateIconList[EFST_IDs.EFST_SU_STOOP] = {
 			"%s",
 			{ 255, 176, 98 }
 		},
-		{ "攻撃で受けるダメージ - 80%" }
+		{ "ほとんどの攻撃で" },
+		{ "受けるダメージ - 80%" }
 	}
 }
 StateIconList[EFST_IDs.EFST_CATNIPPOWDER] = {
@@ -8151,7 +8153,7 @@ StateIconList[EFST_IDs.EFST_CLIMAX_DES_HU] = {
 		{ "クライマックスハリケーン", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
 		{ "装備Matk増加" },
-		{ "風属性魔法で" },
+		{ "風属性魔法攻撃で" },
 		{ "与えるダメージ増加" }
 	}
 }
@@ -8195,7 +8197,7 @@ StateIconList[EFST_IDs.EFST_CLIMAX_CRYIMP] = {
 		{ "装備Def増加" },
 		{ "装備Mdef増加" },
 		{ "水属性耐性増加" },
-		{ "水属性魔法で" },
+		{ "水属性魔法攻撃で" },
 		{ "与えるダメージ増加" }
 	}
 }
@@ -8250,7 +8252,7 @@ StateIconList[EFST_IDs.EFST_HOLY_S] = {
 		{ "%s", COLOR_TIME },
 		{ "闇属性耐性増加" },
 		{ "不死属性耐性増加" },
-		{ "聖属性魔法で" },
+		{ "聖属性魔法攻撃で" },
 		{ "与えるダメージ増加" },
 		{ "クロスレインの威力増大" }
 	}
@@ -10445,12 +10447,13 @@ StateIconList[EFST_IDs.EFST_CONTENTS_38] = {
 		{ "進入が可能\になる" }
 	}
 }
--- ここから新職業状態異常 --------------------------------------------------------------------------
 StateIconList[EFST_IDs.EFST_WEREWOLF] = {
 	haveTimeLimit = 0,
 	descript = {
-		{ "シェイプシフト：ウェアウルフ", COLOR_TITLE_BUFF },
-		{ "MaxHP +10%" }
+		{ "ウェアウルフ", COLOR_TITLE_TOGGLE },
+		{ "ウェアウルフに変身する" },
+		{ "ウェアウルフ系列のスキルの使用条件" },
+		{ "MaxHP + 10%" }
 	}
 }
 StateIconList[EFST_IDs.EFST_ENRAGE_WOLF] = {
@@ -10459,8 +10462,10 @@ StateIconList[EFST_IDs.EFST_ENRAGE_WOLF] = {
 	descript = {
 		{ "エンレイジウルフ", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "ウェアウルフ系スキルで与えるダメージが増加" },
-		{ "近接物理攻撃で与えるダメージが増加" }
+		{ "ドルイドやカルノスの" },
+		{ "ウェアウルフ系スキルの威力増大" },
+		{ "近接物理攻撃で" },
+		{ "与えるダメージ増加" }
 	}
 }
 StateIconList[EFST_IDs.EFST_BLOOD_HOWLING] = {
@@ -10469,15 +10474,17 @@ StateIconList[EFST_IDs.EFST_BLOOD_HOWLING] = {
 	descript = {
 		{ "ブラッドハウリング", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "STR増加" },
-		{ "LUK増加" },
-		{ "HIT増加" }
+		{ "Str増加" },
+		{ "Luk増加" },
+		{ "Hit増加" }
 	}
 }
 StateIconList[EFST_IDs.EFST_WERERAPTOR] = {
 	haveTimeLimit = 0,
 	descript = {
-		{ "シェイプシフト：ウェアラプター", COLOR_TITLE_BUFF },
+		{ "ウェアラプター", COLOR_TITLE_TOGGLE },
+		{ "ウェアラプターに変身する" },
+		{ "ウェアラプター系列のスキルの使用条件" },
 		{ "移動ディレイ - 25%" }
 	}
 }
@@ -10487,8 +10494,10 @@ StateIconList[EFST_IDs.EFST_ENRAGE_RAPTOR] = {
 	descript = {
 		{ "エンレイジラプター", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "ウェアラプター系スキルで与えるダメージが増加" },
-		{ "遠距離物理攻撃で与えるダメージが増加" }
+		{ "ドルイドやカルノスの" },
+		{ "ウェアラプター系スキルの威力増大" },
+		{ "遠距離物理攻撃で" },
+		{ "与えるダメージ増加" }
 	}
 }
 StateIconList[EFST_IDs.EFST_PREENING] = {
@@ -10497,42 +10506,54 @@ StateIconList[EFST_IDs.EFST_PREENING] = {
 	descript = {
 		{ "プリーニング", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "DEX増加" },
-		{ "AGI増加" },
-		{ "FLEE増加" }
+		{ "Agi増加" },
+		{ "Dex増加" },
+		{ "Flee増加" }
 	}
 }
 StateIconList[EFST_IDs.EFST_TRUTH_OF_ICE] = {
 	haveTimeLimit = 0,
 	descript = {
-		{ "トゥルースオブアイス", COLOR_TITLE_BUFF },
-		{ "水属性魔法攻撃で与えるダメージ + 10%" },
-		{ "ドルイド系水属性魔法スキルで与えるダメージが増加" }
+		{ "トゥルースオブアイス", COLOR_TITLE_TOGGLE },
+		{ "水属性魔法攻撃で" },
+		{ "与えるダメージ + 10%" },
+		{ "ドルイド系の特定の" },
+		{ "水属性魔法スキル使用時、" },
+		{ "より大きなダメージを与える" },
+		{ "またはステータスの影響を" },
+		{ "受けるようになる" }
 	}
 }
 StateIconList[EFST_IDs.EFST_TRUTH_OF_WIND] = {
 	haveTimeLimit = 0,
 	descript = {
-		{ "トゥルースオブウィンド", COLOR_TITLE_BUFF },
-		{ "風属性魔法攻撃で与えるダメージ + 10%" },
-		{ "ドルイド系風属性魔法スキルで与えるダメージが増加" }
+		{ "トゥルースオブウィンド", COLOR_TITLE_TOGGLE },
+		{ "風属性魔法攻撃で" },
+		{ "与えるダメージ + 10%" },
+		{ "ドルイド系の特定の" },
+		{ "風属性魔法スキル使用時、" },
+		{ "ステータスの影響を受けるようになる" }
 	}
 }
 StateIconList[EFST_IDs.EFST_TRUTH_OF_EARTH] = {
 	haveTimeLimit = 0,
 	descript = {
-		{ "トゥルースオブアース", COLOR_TITLE_BUFF },
-		{ "地属性魔法攻撃で与えるダメージ + 10%" },
-		{ "ドルイド系地属性魔法スキルで与えるダメージが増加" }
+		{ "トゥルースオブアース", COLOR_TITLE_TOGGLE },
+		{ "地属性魔法攻撃で" },
+		{ "与えるダメージ + 10%" },
+		{ "ドルイド系の特定の" },
+		{ "地属性魔法スキル使用時、" },
+		{ "ステータスの影響を受けるようになる" }
 	}
 }
 StateIconList[EFST_IDs.EFST_TRANSFORM_DELAY] = {
 	haveTimeLimit = 1,
 	posTimeLimitStr = 2,
 	descript = {
-		{ "変身待機状態", COLOR_TITLE_BUFF },
+		{ "変身不可", COLOR_TITLE_DEBUFF },
 		{ "%s", COLOR_TIME },
-		{ "現在変身できません" }
+		{ "シェイプシフト：ウェアウルフ使用不可" },
+		{ "シェイプシフト：ウェアラプター使用不可" }
 	}
 }
 StateIconList[EFST_IDs.EFST_NATURE_SHIELD] = {
@@ -10541,8 +10562,10 @@ StateIconList[EFST_IDs.EFST_NATURE_SHIELD] = {
 	descript = {
 		{ "ネイチャーシールド", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "DEFとMDEF増加" },
-		{ "INTとVIT増加" }
+		{ "Vit増加" },
+		{ "Int増加" },
+		{ "装備Def増加" },
+		{ "装備Mdef増加" }
 	}
 }
 StateIconList[EFST_IDs.EFST_IRON_HOWLING] = {
@@ -10551,6 +10574,7 @@ StateIconList[EFST_IDs.EFST_IRON_HOWLING] = {
 	descript = {
 		{ "アイアンハウリング", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
+		{ "ほとんどの攻撃で" },
 		{ "受けるダメージを減少" }
 	}
 }
@@ -10560,7 +10584,6 @@ StateIconList[EFST_IDs.EFST_WIND_VEIL] = {
 	descript = {
 		{ "ウィンドヴェール", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "受けるダメージを減少" },
 		{ "移動速度増加" }
 	}
 }
@@ -10570,8 +10593,11 @@ StateIconList[EFST_IDs.EFST_ICE_PILLAR] = {
 	descript = {
 		{ "アイスピラー", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "アイストーテム・アイスクラウド" },
-		{ "アイスピラー・アイススプラッシュで与えるダメージ + 15%." }
+		{ "アイストーテム" },
+		{ "アイスクラウド" },
+		{ "アイスピラー" },
+		{ "アイススプラッシュで" },
+		{ "与えるダメージ + 15%" }
 	}
 }
 StateIconList[EFST_IDs.EFST_THUNDERING_ROD] = {
@@ -10580,7 +10606,10 @@ StateIconList[EFST_IDs.EFST_THUNDERING_ROD] = {
 	descript = {
 		{ "サンダリングロッド", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "カウンター累積状態" }
+		{ "カウンター累積" },
+		{ "累積最大数 6個" },
+		{ "最大累積時、 3秒間、" },
+		{ "サンダリングロッドマックス状態になる" }
 	}
 }
 StateIconList[EFST_IDs.EFST_THUNDERING_ROD_MAX] = {
@@ -10598,7 +10627,11 @@ StateIconList[EFST_IDs.EFST_GROUND_GROW] = {
 	descript = {
 		{ "グラウンドグロウ", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "カウンター累積状態" }
+		{ "カウンター累積" },
+		{ "累積最大数 12個" },
+		{ "最大累積時、" },
+		{ "特定のスキルを使用した場合、" },
+		{ "グラウンドブルームが発動" }
 	}
 }
 StateIconList[EFST_IDs.EFST_NATURE_PROTECTION] = {
@@ -10607,8 +10640,9 @@ StateIconList[EFST_IDs.EFST_NATURE_PROTECTION] = {
 	descript = {
 		{ "ネイチャープロテクション", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "受けるダメージを減少" },
-		{ "HPとSPを回復" }
+		{ "小さな世界樹に変身する" },
+		{ "ほとんどの攻撃で" },
+		{ "受けるダメージを減少" }
 	}
 }
 StateIconList[EFST_IDs.EFST_PULSE_OF_MADNESS] = {
@@ -10617,7 +10651,13 @@ StateIconList[EFST_IDs.EFST_PULSE_OF_MADNESS] = {
 	descript = {
 		{ "パルスオブマッドネス", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "狂気蓄積状態" }
+		{ "プライマルクロー" },
+		{ "フェラルクロー" },
+		{ "アルファクロー" },
+		{ "フレンジファング" },
+		{ "サベージランジ命中時、" },
+		{ "一定確率で一定時間、" },
+		{ "狂気状態になる" }
 	}
 }
 StateIconList[EFST_IDs.EFST_ALPHA_PHASE] = {
@@ -10626,7 +10666,7 @@ StateIconList[EFST_IDs.EFST_ALPHA_PHASE] = {
 	descript = {
 		{ "アルファフェーズ", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "狂気III状態適用" }
+		{ "狂気III状態の効果適用" }
 	}
 }
 StateIconList[EFST_IDs.EFST_APEX_PHASE] = {
@@ -10635,9 +10675,11 @@ StateIconList[EFST_IDs.EFST_APEX_PHASE] = {
 	descript = {
 		{ "エイペックスフェーズ", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "ピニオンショット発動条件" },
-		{ "テンペストフラップ発動条件" },
-		{ "クイールスピア発動条件" }
+		{ "ピニオンショット" },
+		{ "テンペストフラップが" },
+		{ "自身のクリティカル率で、" },
+		{ "クリティカル攻撃となる" },
+		{ "強化されたクイールスピアの発動条件" }
 	}
 }
 StateIconList[EFST_IDs.EFST_FLIP_FLAP] = {
@@ -10646,8 +10688,9 @@ StateIconList[EFST_IDs.EFST_FLIP_FLAP] = {
 	descript = {
 		{ "フリップフラップ", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "遠距離物理攻撃で与えるダメージ増加" },
-		{ "Cri増加" }
+		{ "Cri増加" },
+		{ "遠距離物理攻撃で" },
+		{ "与えるダメージ増加" }
 	}
 }
 StateIconList[EFST_IDs.EFST_FLIP_FLAP_TARGET] = {
@@ -10656,8 +10699,9 @@ StateIconList[EFST_IDs.EFST_FLIP_FLAP_TARGET] = {
 	descript = {
 		{ "エアロシンク", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "遠距離物理攻撃で与えるダメージ増加" },
-		{ "Cri増加" }
+		{ "Cri増加" },
+		{ "遠距離物理攻撃で" },
+		{ "与えるダメージ増加" }
 	}
 }
 StateIconList[EFST_IDs.EFST_ZEPHYR_CHARGE] = {
@@ -10665,7 +10709,12 @@ StateIconList[EFST_IDs.EFST_ZEPHYR_CHARGE] = {
 	posTimeLimitStr = 2,
 	descript = {
 		{ "ピニオンショット", COLOR_TITLE_BUFF },
-		{ "%s", COLOR_TIME }
+		{ "%s", COLOR_TIME },
+		{ "カウンター累積" },
+		{ "累積最大数 5個" },
+		{ "最大累積時、、" },
+		{ "ピニオンショットを使用した場合、" },
+		{ "ゼファーリンクが発動" }
 	}
 }
 StateIconList[EFST_IDs.EFST_ZEPHYR_LINK] = {
@@ -10674,9 +10723,12 @@ StateIconList[EFST_IDs.EFST_ZEPHYR_LINK] = {
 	descript = {
 		{ "ゼファーリンク", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "物理攻撃ダメージ増加" },
-		{ "遠距離物理ダメージ増加" },
-		{ "全ての属性のダメージ増加" }
+		{ "近接物理攻撃で" },
+		{ "与えるダメージ + 15%" },
+		{ "遠距離物理攻撃で" },
+		{ "与えるダメージ + 15%" },
+		{ "全属性魔法攻撃で" },
+		{ "与えるダメージ + 15%" }
 	}
 }
 StateIconList[EFST_IDs.EFST_INSANE] = {
@@ -10684,7 +10736,12 @@ StateIconList[EFST_IDs.EFST_INSANE] = {
 	posTimeLimitStr = 2,
 	descript = {
 		{ "狂気I", COLOR_TITLE_BUFF },
-		{ "%s", COLOR_TIME }
+		{ "%s", COLOR_TIME },
+		{ "プライマルクロー威力増大" },
+		{ "フェラルクロー威力増大" },
+		{ "アルファクロー威力増大" },
+		{ "フレンジファング威力増大" },
+		{ "サベージランジ威力増大" }
 	}
 }
 StateIconList[EFST_IDs.EFST_INSANE2] = {
@@ -10692,7 +10749,16 @@ StateIconList[EFST_IDs.EFST_INSANE2] = {
 	posTimeLimitStr = 2,
 	descript = {
 		{ "狂気II", COLOR_TITLE_BUFF },
-		{ "%s", COLOR_TIME }
+		{ "%s", COLOR_TIME },
+		{ "プライマルクロー威力増大" },
+		{ "フェラルクロー威力増大" },
+		{ "アルファクロー威力増大" },
+		{ "フレンジファング威力増大" },
+		{ "サベージランジ威力増大" },
+		{ "プライマルクロー範囲拡大" },
+		{ "フェラルクロー範囲拡大" },
+		{ "アルファクロー範囲拡大" },
+		{ "サベージランジ範囲拡大" }
 	}
 }
 StateIconList[EFST_IDs.EFST_INSANE3] = {
@@ -10700,7 +10766,23 @@ StateIconList[EFST_IDs.EFST_INSANE3] = {
 	posTimeLimitStr = 2,
 	descript = {
 		{ "狂気III", COLOR_TITLE_BUFF },
-		{ "%s", COLOR_TIME }
+		{ "%s", COLOR_TIME },
+		{ "プライマルクロー威力増大" },
+		{ "フェラルクロー威力増大" },
+		{ "アルファクロー威力増大" },
+		{ "フレンジファング威力増大" },
+		{ "サベージランジ威力増大" },
+		{ "プライマルクロー範囲拡大" },
+		{ "フェラルクロー範囲拡大" },
+		{ "アルファクロー範囲拡大" },
+		{ "サベージランジ範囲拡大" },
+		{ "プライマルクロー" },
+		{ "フェラルクロー" },
+		{ "アルファクロー" },
+		{ "フレンジファング" },
+		{ "サベージランジが" },
+		{ "自身のクリティカル率で、" },
+		{ "クリティカル攻撃となる" }
 	}
 }
 StateIconList[EFST_IDs.EFST_GLACIER_SHEILD] = {
@@ -10709,7 +10791,9 @@ StateIconList[EFST_IDs.EFST_GLACIER_SHEILD] = {
 	descript = {
 		{ "グレイシアモノリス", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "グレイシアモノリス状態" }
+		{ "特殊効果無し" },
+		{ "（グレイシアモノリスの" },
+		{ "範囲内の目安）" }
 	}
 }
 StateIconList[EFST_IDs.EFST_NATURE_HARMONY] = {
@@ -10718,19 +10802,15 @@ StateIconList[EFST_IDs.EFST_NATURE_HARMONY] = {
 	descript = {
 		{ "ネイチャーハーモニー", COLOR_TITLE_BUFF },
 		{ "%s", COLOR_TIME },
-		{ "水属性魔法攻撃" },
-		{ "風属性魔法攻撃" },
-		{ "地属性魔法攻撃" },
-		{ "ダメージ増加" }
+		{ "水・風・地属性魔法攻撃で" },
+		{ "与えるダメージ増加" }
 	}
 }
 StateIconList[EFST_IDs.EFST_SOLID_STOMP] = {
 	haveTimeLimit = 1,
 	posTimeLimitStr = 2,
 	descript = {
-		{ "グラウンドグロウ", COLOR_TITLE_BUFF },
-		{ "%s", COLOR_TIME },
-		{ "物理攻撃で受けるダメージ減少" },
-		{ "地属性魔法攻撃ダメージ増加" }
+		{ "ソ\リッドストンプ", COLOR_TITLE_BUFF },
+		{ "%s", COLOR_TIME }
 	}
 }

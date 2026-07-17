@@ -1,8 +1,53 @@
--- 2026/05/21 アップデート
--- 廃止スキル AB_EUCHARISTICA 対応
--- 新職業スキル ローカライズ仮対応
+-- 2026/06/30 アップデート
+-- 廃止スキル [SKID.AB_EUCHARISTICA] [SKID.CG_LONGINGFREEDOM] [SKID.WM_DOMINION_IMPULSE] 対応
+-- 新職業スキル ローカライズ対応
 
 SKILL_INFO_LIST = {
+-- 廃止スキル開始 --
+	[SKID.AB_EUCHARISTICA] = {
+		"AB_EUCHARISTICA",
+		SkillName = "エウカリスティカ",
+		MaxLv = 10,
+		SpAmount = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+		bSeperateLv = false,
+		AttackRange = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+		_NeedSkillList = {
+			{ SKID.AB_EXPIATIO, 1 },
+			{ SKID.AB_EPICLESIS, 1 }
+		}
+	},
+	[SKID.CG_LONGINGFREEDOM] = {
+		"CG_LONGINGFREEDOM",
+		SkillName = "私を縛らないで",
+		MaxLv = 5,
+		SpAmount = { 15, 15, 15, 15, 15 },
+		bSeperateLv = false,
+		AttackRange = { 1, 1, 1, 1, 1 },
+		NeedSkillList = {
+			[JOBID.JT_BARD_H] = {
+				{ SKID.CG_MARIONETTE, 1 },
+				{ SKID.BA_DISSONANCE, 3 },
+				{ SKID.BA_MUSICALLESSON, 10 }
+			},
+			[JOBID.JT_DANCER_H] = {
+				{ SKID.CG_MARIONETTE, 1 },
+				{ SKID.DC_UGLYDANCE, 3 },
+				{ SKID.DC_DANCINGLESSON, 10 }
+			}
+		}
+	},
+	[SKID.WM_DOMINION_IMPULSE] = {
+		"WM_DOMINION_IMPULSE",
+		SkillName = "ドミニオンインパルス",
+		MaxLv = 1,
+		SpAmount = { 10 },
+		bSeperateLv = false,
+		AttackRange = { 11 },
+		_NeedSkillList = {
+			{ SKID.WM_REVERBERATION, 1 }
+		}
+	},
+-- 廃止スキルここまで --
 	[SKID.SN_WINDWALK] = {
 		"SN_WINDWALK",
 		SkillName = "ウィンドウォーク",
@@ -6406,18 +6451,6 @@ SKILL_INFO_LIST = {
 		_NeedSkillList = {
 			{ SKID.AL_DP, 5 },
 			{ SKID.AL_HEAL, 5 }
-		}
-	},
-	[SKID.AB_EUCHARISTICA] = {
-		"AB_EUCHARISTICA",
-		SkillName = "エウカリスティカ",
-		MaxLv = 10,
-		SpAmount = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-		bSeperateLv = false,
-		AttackRange = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-		_NeedSkillList = {
-			{ SKID.AB_EXPIATIO, 1 },
-			{ SKID.AB_EPICLESIS, 1 }
 		}
 	},
 	[SKID.CR_DEFENDER] = {
@@ -16114,7 +16147,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.DR_NOMERCY_CLAW, 3 }
 		}
@@ -16176,7 +16209,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.DR_WERERAPTOR, 1 }
 		}
@@ -16187,7 +16220,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 },
 		bSeperateLv = true,
-		AttackRange = { 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.DR_LOW_FLIGHT, 3 }
 		}
@@ -16198,7 +16231,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 30, 30, 30, 30, 30, 30, 30, 30, 30, 30 },
 		bSeperateLv = true,
-		AttackRange = { 5, 5, 5, 5, 5, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.DR_SHOOTING_FEATHER, 3 }
 		}
@@ -16249,7 +16282,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 },
 		_NeedSkillList = {
 			{ SKID.KR_NASTY_SLASH, 3 }
 		}
@@ -16296,7 +16329,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 },
 		bSeperateLv = true,
-		AttackRange = { 6, 6, 6, 6, 6, 6, 6, 6, 6, 6 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {}
 	},
 	[SKID.KR_SHARPEN_HAIL] = {
@@ -16305,7 +16338,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 11, 11, 11, 11, 11, 11, 11, 11, 11, 11 },
 		_NeedSkillList = {
 			{ SKID.KR_SHARPEN_GUST, 5 }
 		}
@@ -16314,7 +16347,7 @@ SKILL_INFO_LIST = {
 		"KR_FEATHER_SPRINKLE",
 		SkillName = "フェザースプリンクル",
 		MaxLv = 5,
-		SpAmount = { 60, 60, 60, 60, 60,},
+		SpAmount = { 60, 60, 60, 60, 60 },
 		bSeperateLv = true,
 		AttackRange = { 1, 1, 1, 1, 1 },
 		_NeedSkillList = {
@@ -16328,7 +16361,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 40, 40, 40, 40, 40, 40, 40, 40, 40, 40 },
 		bSeperateLv = true,
-		AttackRange = { 5, 5, 5, 5, 5, 5, 5, 6, 6, 6 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {}
 	},
 	[SKID.KR_WIND_VEIL] = {
@@ -16361,7 +16394,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 54, 54, 54, 54, 54, 54, 54, 54, 54, 54 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.DR_ICE_TOTEM, 5 }
 		}
@@ -16372,7 +16405,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 54, 54, 54, 54, 54, 54, 54, 54, 54, 54 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 11, 11, 11, 11, 11, 11, 11, 11, 11, 11 },
 		_NeedSkillList = {
 			{ SKID.DR_ICE_CLOUD, 5 }
 		}
@@ -16401,7 +16434,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.DR_WIND_BOMB, 5 },
 			{ SKID.KR_THUNDERING_FOCUS, 1 }
@@ -16413,7 +16446,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {}
 	},
 	[SKID.KR_THUNDERING_CALL] = {
@@ -16422,7 +16455,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 11, 11, 11, 11, 11, 11, 11, 11, 11, 11 },
 		_NeedSkillList = {
 			{ SKID.KR_THUNDERING_FOCUS, 5 },
 			{ SKID.KR_THUNDERING_ORB, 5 }
@@ -16434,7 +16467,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 60, 60, 60, 60, 60, 60, 60, 60, 60, 60 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 11, 11, 11, 11, 11, 11, 11, 11, 11, 11 },
 		_NeedSkillList = {}
 	},
 	[SKID.KR_EARTH_DRILL] = {
@@ -16443,7 +16476,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 54, 54, 54, 54, 54, 54, 54, 54, 54, 54 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 11, 11, 11, 11, 11, 11, 11, 11, 11, 11 },
 		_NeedSkillList = {
 			{ SKID.KR_EARTH_BUD, 1 }
 		}
@@ -16454,7 +16487,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 54, 54, 54, 54, 54, 54, 54, 54, 54, 54 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.KR_EARTH_DRILL, 5 }
 		}
@@ -16496,7 +16529,7 @@ SKILL_INFO_LIST = {
 	},
 	[SKID.KR_GROUND_BLOOM] = {
 		"KR_GROUND_BLOOM",
-		SkillName = "KR_GROUND_BLOOM",
+		SkillName = "グラウンドブルーム",
 		MaxLv = 5,
 		SpAmount = { 0, 0, 0, 0, 0 },
 		bSeperateLv = false,
@@ -16528,7 +16561,7 @@ SKILL_INFO_LIST = {
 		"AT_NATURE_HARMONY",
 		SkillName = "ネイチャーハーモニー",
 		MaxLv = 5,
-		SpAmount = { 32, 32, 32, 32, 32 },
+		SpAmount = { 320, 320, 320, 320, 320 },
 		ApAmount = { 26, 32, 38, 44, 50 },
 		bSeperateLv = true,
 		AttackRange = { 1, 1, 1, 1, 1 },
@@ -16544,13 +16577,13 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 250, 250, 250, 250, 250, 250, 250, 250, 250, 250 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.KR_ICE_PILLAR, 5 }
 		}
 	},
 	[SKID.AT_GLACIER_NOVA] = {
-		"AT_GLACIER_MONOLITH",
+		"AT_GLACIER_NOVA",
 		SkillName = "グレイシアノヴァ",
 		MaxLv = 1,
 		SpAmount = { 0 },
@@ -16564,7 +16597,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 200, 200, 200, 200, 200, 200, 200, 200, 200, 200 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.AT_GLACIER_MONOLITH, 3 }
 		}
@@ -16575,7 +16608,6 @@ SKILL_INFO_LIST = {
 		MaxLv = 5,
 		SpAmount = { 200, 200, 200, 200, 200 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7 },
 		_NeedSkillList = {
 			{ SKID.AT_GLACIER_SHARD, 5 }
 		}
@@ -16585,7 +16617,7 @@ SKILL_INFO_LIST = {
 		SkillName = "チリングブラスト",
 		MaxLv = 5,
 		SpAmount = { 250, 250, 250, 250, 250 },
-		ApAmount = { 15, 14, 13, 12, 10 },
+		ApAmount = { 10, 10, 10, 10, 10 },
 		bSeperateLv = true,
 		AttackRange = { 1, 1, 1, 1, 1 },
 		_NeedSkillList = {
@@ -16619,7 +16651,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 230, 230, 230, 230, 230, 230, 230, 230, 230, 230 },
 		bSeperateLv = true,
-		AttackRange = { 8, 8, 8, 8, 8, 8, 8, 8, 8, 8 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.AT_ROARING_CHARGE, 3 }
 		}
@@ -16630,7 +16662,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 230, 230, 230, 230, 230, 230, 230, 230, 230, 230 },
 		bSeperateLv = true,
-		AttackRange = { 8, 8, 8, 8, 8, 8, 8, 8, 8, 8 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.AT_ROARING_CHARGE, 3 }
 		}
@@ -16655,7 +16687,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 200, 200, 200, 200, 200, 200, 200, 200, 200, 200 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.KR_EARTH_BUD, 5 }
 		}
@@ -16680,7 +16712,6 @@ SKILL_INFO_LIST = {
 		bSeperateLv = true,
 		AttackRange = { 1, 1, 1, 1, 1 },
 		_NeedSkillList = {
-			{ SKID.AT_TERRA_HARVEST, 5 },
 			{ SKID.AT_TERRA_WAVE, 5 }
 		}
 	},
@@ -16722,7 +16753,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 5,
 		SpAmount = { 230, 230, 230, 230, 230 },
 		bSeperateLv = true,
-		AttackRange = { 5, 5, 5, 5, 5 },
+		AttackRange = { 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.AT_SIXTH_SENSE, 3 }
 		}
@@ -16733,7 +16764,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 5,
 		SpAmount = { 230, 230, 230, 230, 230 },
 		bSeperateLv = true,
-		AttackRange = { 3, 3, 3, 3, 3 },
+		AttackRange = { 1, 1, 1, 1, 1 },
 		_NeedSkillList = {
 			{ SKID.AT_PRIMAL_CLAW, 3 }
 		}
@@ -16744,7 +16775,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 5,
 		SpAmount = { 230, 230, 230, 230, 230 },
 		bSeperateLv = true,
-		AttackRange = { 3, 3, 3, 3, 3 },
+		AttackRange = { 1, 1, 1, 1, 1 },
 		_NeedSkillList = {
 			{ SKID.AT_FERAL_CLAW, 3 }
 		}
@@ -16801,7 +16832,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 130, 130, 130, 130, 130, 130, 130, 130, 130, 130 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.AT_SIXTH_SENSE, 3 }
 		}
@@ -16820,7 +16851,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 190, 190, 190, 190, 190, 190, 190, 190, 190, 190 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.AT_PINION_SHOT, 3 }
 		}
@@ -16831,7 +16862,7 @@ SKILL_INFO_LIST = {
 		MaxLv = 10,
 		SpAmount = { 190, 190, 190, 190, 190, 190, 190, 190, 190, 190 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.AT_PINION_SHOT, 3 }
 		}
@@ -16843,7 +16874,7 @@ SKILL_INFO_LIST = {
 		SpAmount = { 280, 280, 280, 280, 280, 280, 280, 280, 280, 280 },
 		ApAmount = { 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9, 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.AT_QUILL_SPEAR, 3 }
 		}
@@ -16855,7 +16886,7 @@ SKILL_INFO_LIST = {
 		SpAmount = { 190, 190, 190, 190, 190 },
 		ApAmount = { 50, 50, 50, 50, 50 },
 		bSeperateLv = true,
-		AttackRange = { 7, 7, 7, 7, 7 },
+		AttackRange = { 9, 9, 9, 9, 9 },
 		_NeedSkillList = {
 			{ SKID.AT_FLIP_FLAP, 3 }
 		}
