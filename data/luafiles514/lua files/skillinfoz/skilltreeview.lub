@@ -1619,4 +1619,5 @@ JobSkillTab.ChangeSkillTabName(JOBID.JT_SUPERNOVICE, "“Áê1ŸE", "ãˆÊ“Áê1ŸE
 JobSkillTab.ChangeSkillTabName(JOBID.JT_TAEKWON, "“Áê1ŸE", "“Áê2ŸE", "ãˆÊ“Áê1ŸE", "ãˆÊ“Áê2ŸE")
 JobSkillTab.ChangeSkillTabName(JOBID.JT_STAR, "“Áê1ŸE", "“Áê2ŸE", "ãˆÊ“Áê1ŸE", "ãˆÊ“Áê2ŸE")
 JobSkillTab.ChangeSkillTabName(JOBID.JT_LINKER, "“Áê1ŸE", "“Áê2ŸE", "ãˆÊ“Áê1ŸE", "ãˆÊ“Áê2ŸE")
+JobSkillTab.ChangeSkillTabName(JOBID.JT_DRUID, "“Áê1ŸE", "ãˆÊ“Áê1ŸE", "ãˆÊ“Áê2ŸE")
 JobSkillTab.ChangeSkillTabName(JOBID.JT_DO_SUMMONER, "ƒTƒ‚ƒib", "ƒXƒsƒŠƒbƒgƒnƒ“ƒhƒ‰b")
